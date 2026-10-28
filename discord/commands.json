@@ -4,10 +4,25 @@
     "type": 1,
     "description": "ORACLE FC scan: best bet (or NO BET) for every Jupiter soccer game on a date",
     "options": [
-      { "type": 3, "name": "date", "description": "YYYY-MM-DD, MM/DD, today or tomorrow (default: today, ET)", "required": false, "max_length": 20 },
-      { "type": 5, "name": "only_bets", "description": "Show only games with a qualifying bet", "required": false }
+      {
+        "type": 3,
+        "name": "date",
+        "description": "Pick a date (default: today)",
+        "required": false,
+        "autocomplete": true
+      },
+      {
+        "type": 5,
+        "name": "only_bets",
+        "description": "Show only games with a qualifying bet",
+        "required": false
+      }
     ],
-    "integration_types": [0],
-    "contexts": [0]
+    "integration_types": [
+      0
+    ],
+    "contexts": [
+      0
+    ]
   }
 ]
