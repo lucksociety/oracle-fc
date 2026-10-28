@@ -78,7 +78,8 @@ def model():
     reg = load_registry()
     p = config.BACKTEST_DIR / "latest_summary.json"
     summ = json.loads(p.read_text()) if p.exists() else None
-    return {"registry": reg, "backtest": summ,
+    cp = config.BACKTEST_DIR / "context_summary.json"
+    return {"registry": reg, "backtest": summ, "context": json.loads(cp.read_text()) if cp.exists() else None,
             "today": datetime.now(ZoneInfo(config.USER_TZ)).date().isoformat()}
 
 

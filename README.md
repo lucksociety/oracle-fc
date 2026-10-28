@@ -33,12 +33,49 @@ Calibration is good overall; the model is slightly *under*-confident on strong f
 (P ≥ 0.60: predicted 67.8%, observed 70.6%) and slightly under-predicts total goals in several leagues —
 see the weakness analysis in the backtest report.
 
+## Match context (lineups, injuries, players, xG, weather, rest, travel)
+
+Each forecast fetches live context. All sources are free and keyless, and every payload is
+allow-list parsed with odds, poll and prediction fields stripped:
+
+* **FotMob**: projected or confirmed XIs and absences.
+* **FPL**: EPL injury status with timestamps.
+* **Open-Meteo**: venue weather.
+* **Understat**: player xG/xA and minutes.
+* **Our own results data**: rest and travel.
+
+Each family went through the same champion/challenger test
+([`docs/CONTEXT_BACKTEST.md`](docs/CONTEXT_BACKTEST.md)), with test window 2023-07-01 →
+2026-10-27 and Δ = challenger − base:
+
+| Family | n | ΔRPS [95% CI] | Δlog loss [95% CI] | Live |
+|---|---|---|---|---|
+| Understat xG component | 40,559 | −0.00007 [−0.00010, −0.00004] | −0.00017 [−0.00028, −0.00007] | **applied** |
+| Lineup / player ratings (XI xG+xA value, continuity, backup GK) | 5,337 | −0.00026 [−0.00069, +0.00020] | −0.00056 [−0.00189, +0.00088] | shown, not applied |
+| Rest / congestion | 40,457 | −0.00003 [−0.00006, +0.00001] | −0.00004 [−0.00014, +0.00007] | shown, not applied |
+| Travel | 37,279 | −0.00002 [−0.00008, +0.00005] | −0.00002 [−0.00021, +0.00018] | shown, not applied |
+| Weather | 38,549 | −0.00000 [−0.00001, +0.00001] | +0.00002 [−0.00004, +0.00009] | shown, not applied |
+
+Every match report lists:
+
+* confirmed, projected or inferred lineups;
+* key absences, with source and timestamp;
+* weather, rest and travel;
+* a per-factor table of how many percentage points each factor moved (or, if not validated,
+  *would have moved*) home/draw/away.
+
+Unconfirmed XIs are simulated as 200 lineup configurations. A `lineups` workflow
+re-forecasts fixtures within 3 h of kickoff every 20 minutes. New lineup stages are frozen
+as new records; earlier ones are never overwritten.
+
 ## Quick start
 
 ```bash
 python -m venv .venv && . .venv/bin/activate
 pip install -r requirements-dev.txt
 python -m oraclefc.cli ingest                     # ~80 s: download + clean permitted results data
+python -m oraclefc.cli ingest-context             # refresh the Understat player/xG snapshot (data/context)
+python -m oraclefc.run_context_backtest           # ~25 min: context-feature champion/challenger
 python -m oraclefc.cli backtest                   # ~15 min: tune, walk-forward, champion/challenger
 python -m oraclefc.cli run --date 2026-10-31 --print   # forecast + freeze every Jupiter game that day
 python -m oraclefc.cli edge --date 2026-10-31     # POST-HOC price comparison (after freezing)
@@ -65,7 +102,12 @@ Architecture: [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) · Roadmap: [`docs/
 
 ## Known gaps (honest)
 
-* No lineups, injuries, suspensions, weather or player data (no free point-in-time feed) — flagged in every report.
+* Lineups, injuries, rest, travel and weather are ingested and shown, but none has yet
+  beaten the champion out of sample, so they do not move the probabilities. The lineup
+  family is directionally better but not significant. Player ratings exist only for the
+  top-5 leagues (Understat).
+* There is no archive of historical injury lists, so injuries act only through the lineup
+  family.
 * Domestic cup results are not in the training data; Copa del Rey ties against Segunda/Tercera RFEF clubs, the
   Saudi Pro League, Qatar, Colombia, Turkey 1. Lig and Brazil Série B cannot be forecast yet.
 * Champions League links come from openfootball 2016–2026; the 2026/27 UCL file isn't published yet, and

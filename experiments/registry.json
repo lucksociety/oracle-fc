@@ -1,25 +1,43 @@
 {
   "champion": {
     "name": "ensemble",
-    "version": "1.0.0+ensemble-hl240-k8-elo22",
+    "version": "1.1.0+ensemble-xg-hl240-k8-elo22",
     "params": {
       "half_life_days": 240.0,
       "kappa": 8.0,
       "elo_k": 22.0
     },
     "ensemble_weights": {
-      "dynamic_dc": 0.5406,
-      "elo": 0.4544,
+      "dynamic_dc": 0.0443,
+      "elo": 0.4375,
       "standard_dc": 0.0032,
-      "home_away_rate": 0.0018
+      "home_away_rate": 0.0015,
+      "xg_dc": 0.5134
     },
     "components": [
       "dynamic_dc",
       "elo",
       "standard_dc",
-      "home_away_rate"
+      "home_away_rate",
+      "xg_dc"
     ],
-    "data_cutoff": "2026-10-27"
+    "data_cutoff": "2026-10-27",
+    "context": {
+      "kept_families": [],
+      "xg_component": true,
+      "coefficients": {},
+      "unvalidated_priors": {
+        "projected_lineup_start_prob": 0.85,
+        "inferred_lineup_start_prob": 0.7,
+        "doubtful_start_prob": "FPL chance_of_playing/100 (EPL), else 0.5 for 'Doubtful'",
+        "non_top5_lineup": "not applied (no player-rating history)",
+        "note": "Projected (unconfirmed) lineups are simulated as 200 XI configurations: each projected starter starts with p=0.85 (doubtful players: FPL chance of playing, else 0.5), otherwise the slot is filled by an available same-position squad player drawn in proportion to recent minutes share. Before any XI is published, the XI is inferred from recent minutes share minus listed absences (p=0.70 per starter). Outside the Understat top-5 leagues no point-in-time player ratings exist, so lineups are shown but NOT applied."
+      },
+      "experiment_id": "66e58abd37c6",
+      "data_cutoff": "2026-10-27",
+      "apply_unvalidated": []
+    },
+    "previous_version": "1.0.0+ensemble-hl240-k8-elo22"
   },
   "challenger": {
     "name": "dynamic_dc"
@@ -679,6 +697,16 @@
       "ts": "2026-10-28T19:25:53+00:00",
       "champion": "ensemble",
       "version": "1.0.0+ensemble-hl240-k8-elo22"
+    },
+    {
+      "ts": "2026-10-28T20:24:16+00:00",
+      "champion": "ensemble",
+      "version": "1.0.0+ensemble-hl240-k8-elo22"
+    },
+    {
+      "ts": "2026-10-28T20:29:02+00:00",
+      "champion": "ensemble",
+      "version": "1.1.0+ensemble-xg-hl240-k8-elo22"
     }
   ]
 }

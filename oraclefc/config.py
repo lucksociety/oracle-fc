@@ -8,6 +8,7 @@ ROOT = Path(os.environ.get("ORACLEFC_ROOT", Path(__file__).resolve().parent.pare
 DATA_DIR = Path(os.environ.get("ORACLEFC_DATA", ROOT / "data"))
 RAW_DIR = DATA_DIR / "raw"            # untouched downloads (gitignored; contain odds columns)
 CLEAN_DIR = DATA_DIR / "clean"        # governance-filtered parquet
+CONTEXT_DIR = DATA_DIR / "context"    # committed allow-listed context snapshots (Understat players, FotMob venues)
 DB_PATH = DATA_DIR / "oraclefc.duckdb"
 FORECAST_DIR = DATA_DIR / "forecasts"         # frozen, immutable forecasts
 MARKET_DIR = DATA_DIR / "market_snapshots"    # post-hoc market snapshots (never read by models)

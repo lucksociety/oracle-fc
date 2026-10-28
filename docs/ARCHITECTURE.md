@@ -58,6 +58,32 @@ confidence intervals of both ΔRPS and Δexact-score log score are below zero. E
 to `experiments/experiments.jsonl` (git SHA, params, metrics) and the decision is written to
 `experiments/registry.json` (history kept).
 
+* **xG Dixon–Coles (1.1.0)**: the dynamic model fitted to 0.5·goals + 0.5·Understat xG
+  where xG exists. It is part of the ensemble after passing the out-of-sample test.
+
+## Match context layer (`oraclefc/context/`)
+
+* `spec.py` defines the pre-specified feature transforms. Backtest and live use the same
+  code.
+* `tilt.py` applies **exponential tilting** P'(h,a) ∝ P(h,a)·e^(dh·h + da·a). This is an
+  exact expected-goals multiplier for Poisson margins, works on the ensemble matrix, and
+  always renormalises.
+* `history.py` builds point-in-time features for the backtest:
+  * Understat `PlayerBook` with decayed xG+xA per 90 and minutes shares;
+  * NASA POWER weather;
+  * FotMob venues and travel;
+  * rest.
+* `live.py` handles live context:
+  * FotMob match lookup, lineups and absences, plus FPL;
+  * Open-Meteo weather;
+  * lineup-configuration simulation (200 sampled XIs when unconfirmed);
+  * per-factor shift accounting.
+* `run_context_backtest.py` runs nested champion/challenger tests per family. Only kept
+  families (registry `champion.context.kept_families`) move probabilities. The others are
+  reported as "would have moved".
+* Frozen forecasts are staged. A new immutable record is written when the context stage
+  (inferred → projected → confirmed) or the 1X2 shift changes.
+
 ## Simulation
 
 The primary engine is the **exact** joint score distribution (0–10 goals each side, renormalised,
@@ -71,6 +97,8 @@ of the joint distribution — never rounded xG (tested).
 * **GitHub Actions `pipeline.yml`** (every 3 h + manual with a date): ingest → discover Jupiter
   fixtures for today…+7 days (ET) → forecast & freeze → post-hoc price snapshot → build static site
   → commit frozen forecasts → deploy GitHub Pages.
+* **GitHub Actions `lineups.yml`** (every 20 min) re-forecasts only fixtures within 3 h of
+  kickoff, to capture confirmed team sheets. It shares the `pipeline` concurrency group.
 * **Static dashboard** (GitHub Pages): date picker loads frozen forecasts; dates the pipeline has not
   reached show the live Jupiter fixture list (fetched in the browser) as *awaiting simulation*.
   The Edge tab can fetch live Jupiter prices in the browser and compare them to the frozen forecasts.

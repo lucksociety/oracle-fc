@@ -40,7 +40,9 @@ def main():
                                        "forecasts": sorted(fcs, key=lambda x: x["fixture"].get("kickoff_utc") or "")},
                                       default=str))
     summ = config.BACKTEST_DIR / "latest_summary.json"
-    model = {"registry": load_registry(), "backtest": json.loads(summ.read_text()) if summ.exists() else None}
+    cs = config.BACKTEST_DIR / "context_summary.json"
+    model = {"registry": load_registry(), "backtest": json.loads(summ.read_text()) if summ.exists() else None,
+             "context": json.loads(cs.read_text()) if cs.exists() else None}
     (data / "model.json").write_text(json.dumps(model, default=str))
     dates = sorted(p.stem for p in (data / "dates").glob("*.json"))
     (data / "index.json").write_text(json.dumps({"dates": dates}))

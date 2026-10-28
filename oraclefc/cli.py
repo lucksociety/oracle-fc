@@ -32,6 +32,16 @@ def cmd_ingest(a):
     print(f"clean matches: {len(df):,}; cutoff {store.data_cutoff(df)}")
 
 
+def cmd_ingest_context(a):
+    """Refresh the committed Understat snapshot (current season). FotMob/FPL/Open-Meteo are
+    fetched live at forecast time. Failures are non-fatal: forecasts fall back to team level."""
+    from .ingest import understat
+    try:
+        understat.update()
+    except Exception as e:  # noqa: BLE001
+        print(f"understat update failed (non-fatal): {e}")
+
+
 def cmd_backtest(a):
     from . import run_backtest
     run_backtest.main(skip_tune=a.skip_tune)
@@ -43,7 +53,7 @@ def cmd_run(a):
     out_dir.mkdir(parents=True, exist_ok=True)
     eng = Engine()
     for d in _dates(a.date, a.days):
-        res = forecast_date(d, eng, freeze=not a.no_freeze, use_cache=not a.refresh)
+        res = forecast_date(d, eng, freeze=not a.no_freeze, use_cache=not a.refresh, within_hours=a.within_hours)
         (out_dir / f"{d}.json").write_text(json.dumps(res, default=str))
         print(f"{d}: {res['n_fixtures']} Jupiter fixtures, {res['n_forecast']} forecast")
         if a.print:
@@ -81,7 +91,10 @@ def main(argv=None):
     r = sp.add_parser("run")
     r.add_argument("--date"); r.add_argument("--days", type=int, default=1)
     r.add_argument("--no-freeze", action="store_true"); r.add_argument("--refresh", action="store_true")
+    r.add_argument("--within-hours", type=float, default=None,
+                   help="only re-forecast fixtures kicking off within N hours (others reuse their frozen forecast)")
     r.add_argument("--print", action="store_true"); r.set_defaults(f=cmd_run)
+    sp.add_parser("ingest-context").set_defaults(f=cmd_ingest_context)
     e = sp.add_parser("edge"); e.add_argument("--date"); e.add_argument("--days", type=int, default=1)
     e.set_defaults(f=cmd_edge)
     pr = sp.add_parser("predict"); pr.add_argument("home"); pr.add_argument("away")

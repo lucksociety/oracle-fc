@@ -41,21 +41,52 @@ team or competition is not covered, ORACLE FC says so and produces no forecast.
 | Separate use | `oraclefc/market/` (physically separate, never imported by forecasting code) fetches prices **after** forecasts are frozen for the post-hoc Edge tab |
 | Limits | Only active/upcoming events are listed — past dates disappear, so ORACLE FC stores frozen forecasts and serves those for past dates. HTTP 429 on rapid paging (handled with back-off + 10-minute cache) |
 
-## 4. Sources assessed and NOT used (yet)
+## 4. Match-context sources (added 2026-10-28; each verified live with curl that day)
 
-| Source | Why not (now) |
+All are free and keyless. Every payload is parsed through an **allow-list**, and
+`governance.assert_no_market_keys` runs on each parsed object. Odds, polls, "predictions",
+tipster fields, fantasy prices and transfer values are never copied. Whether each family
+*moves the probabilities* is decided by the out-of-sample test in
+[CONTEXT_BACKTEST.md](CONTEXT_BACKTEST.md). Families that fail it are shown in reports for
+information only.
+
+| Source | Endpoint | Used for | Point-in-time history? | Stripped |
+|---|---|---|---|---|
+| **Understat** | `understat.com/getLeagueData/{league}/{season}`, `/getMatchData/{id}` (header `X-Requested-With: XMLHttpRequest`) | Match xG (top-5 leagues, 2019→), per-player minutes, position, xG, xA per match; used for player ratings, minutes shares, XI strength, continuity and the backup-GK flag | **Yes**: per-match rows with dates, replayed chronologically | the `forecast` (win-probability) block in `dates[]` |
+| **FotMob** | `fotmob.com/api/data/matchDetails?matchId=`, `matches?date=`, `teams?id=`, `leagues?id=&season=` | Projected (`lineupType=predicted`, source enetpulse) vs confirmed XIs, formation, unavailable players (injury/suspension, expected return), stadium coordinates, exact UTC kickoffs | Partial: confirmed XIs of past matches yes; *projected* XIs and injury lists are not archived, so they are not back-testable | `matchFacts.poll` (incl. `oddspoll`), betting/insight blocks, player market values |
+| **Fantasy Premier League** | `fantasy.premierleague.com/api/bootstrap-static/` | EPL status (injured/suspended/doubtful), `chance_of_playing_next_round`, news text and `news_added` timestamp | No | prices, ownership, transfers, expected points |
+| **Open-Meteo** | `api.open-meteo.com/v1/forecast` (`wind_speed_unit=ms`, UTC) | Live venue weather for the two kickoff hours: temperature, wind, precipitation | n/a (forecast) | — |
+| **NASA POWER** | `power.larc.nasa.gov/api/temporal/hourly/point` (MERRA-2) | Historical kickoff weather at each stadium (backtest). Open-Meteo's archive fair-use weighting made multi-year history for ~500 venues impractical | **Yes** (reanalysis) | — |
+| Our results data | football-data + openfootball | Rest days and matches in the previous 21 days (league + UCL) | Yes | odds columns (see §1) |
+
+Live vs. history mismatch, documented: the backtest uses reanalysis weather (what actually
+happened). Live forecasts use a weather forecast, so the live weather effect carries
+forecast error that the backtest does not.
+
+### Assessed and not used
+
+| Source | Status on 2026-10-28 |
 |---|---|
-| Understat / FBref xG | Scraping terms / anti-bot measures; no stable free API. Roadmap item: add as challenger feature once a terms-compliant feed is confirmed |
-| API-Football, football-data.org, SportMonks free tiers | Require keys; lineups/injuries are limited or paid on free tiers. football-data.org free tier could provide current-season UCL/UEL fixtures & results (roadmap) |
-| Transfermarkt (injuries, values) | No API; scraping not permitted |
-| Weather APIs (Open-Meteo) | Free and feasible, but no validated gain yet → roadmap |
+| Sofascore API | HTTP 403 (anti-bot) |
+| Transfermarkt | HTTP 405; no API |
+| FBref | HTTP 403 (Cloudflare) |
+| ESPN site API | Works (rosters, venue) but has no injury feed and embeds odds/pickcenter blocks. FotMob covers the same data more completely, so ESPN is not ingested |
+| **API-Football** (api-sports.io) | Needs a key (`x-apisports-key`; free tier 100 req/day). It would add injuries and lineups for leagues FotMob covers thinly. **Not integrated**: no key is configured, and the free sources already cover lineups and injuries. If added, the repo secret would be `API_FOOTBALL_KEY` |
 | Any odds/market/tipster/power-ranking data | **Prohibited by Directive Zero** |
 
 ## Lineups & injuries
 
-No free, terms-compliant, point-in-time lineup or injury feed was found that covers the
-leagues ORACLE FC forecasts. Every report therefore states in **DATA QUALITY** that
-lineups, injuries and suspensions are not modelled and typical availability is assumed.
+* Top-5 leagues: Understat player histories give each XI a point-in-time attacking value
+  (shrunk xG+xA per 90), a continuity score (recent minutes share of the starters) and a
+  backup-goalkeeper flag.
+* Live forecasts read FotMob's projected or confirmed XI and absences (plus FPL for the
+  EPL), then simulate 200 XI configurations when the XI is not confirmed.
+* Before any XI is published, the XI is inferred from minutes share minus listed absences.
+* Injuries affect the forecast **only through the lineup** (who is expected to start). No
+  separate injury coefficient exists, because no archive of historical injury lists was
+  available to validate one.
+* Outside the top-5 leagues, lineups and absences are shown but not applied, because no
+  player-rating history exists there.
 
 ## Competitions on Jupiter that ORACLE FC cannot yet forecast
 

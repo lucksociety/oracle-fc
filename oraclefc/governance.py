@@ -30,6 +30,12 @@ PERMITTED_PROVIDERS = {
     "openfootball": "Public-domain UEFA Champions League results (football.txt)",
     "jupiter-fixtures": "Fixture identity only (teams, competition, kickoff). Prices never pass this layer.",
     "user-input": "Manually entered fixture (home, away, date, competition)",
+    # match-context providers (allow-list parsed; any odds / poll / prediction fields are dropped)
+    "understat": "Match xG and per-player minutes/xG/xA (top-5 leagues). The site's 'forecast' field is never read.",
+    "fotmob": "Lineups (projected/confirmed), unavailable players, stadium coordinates, kickoff times. Polls/odds never read.",
+    "fpl": "Fantasy Premier League injury/suspension status, news and chance of playing (EPL). Prices/ownership never read.",
+    "open-meteo": "Weather forecast at the venue for live fixtures.",
+    "nasa-power": "Hourly MERRA-2 reanalysis weather at historical venues (backtest only).",
 }
 
 # ------------------------------------------------------------------- fields

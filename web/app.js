@@ -73,6 +73,7 @@ function card(fc) {
     <div class="kv"><div><span>BTTS</span>${pct(s.btts)}</div><div><span>Over 2.5</span>${pct(s.totals_over["over_2.5"])}</div><div><span>Median total</span>${s.median_total}</div><div><span>Confidence</span>${esc(fc.confidence.tier)}</div></div>
     <div class="tops">${s.top_scores.map((t) => `<span>${t.home}-${t.away} · ${pct(t.p)}</span>`).join("")}</div>
     <div class="muted">Goals 0–1 ${pct(b["0-1"])} · 2 ${pct(b["2"])} · 3 ${pct(b["3"])} · 4 ${pct(b["4"])} · 5+ ${pct(b["5+"])}</div>
+    ${ctxBlock(fc)}
     <details><summary>Score grid (home rows × away cols, %)</summary><table class="grid"><tr><th></th>${[0, 1, 2, 3, 4, 5].map((x) => `<th>${x}</th>`).join("")}</tr>${grid}</table></details>
     <details><summary>Full ORACLE FC report</summary><pre class="report">${esc(fc.report_text)}</pre></details>
     <div class="muted">Matched as ${esc(f.home_matched)} v ${esc(f.away_matched)} · frozen ${fc.frozen_at ? etTime(fc.frozen_at) : "(not frozen)"}</div>`;
@@ -186,6 +187,25 @@ async function loadEdge(date) {
 }
 
 // ---------------------------------------------------------------- model tab
+function ctxBlock(fc) {
+  const c = fc.context; if (!c) return "";
+  const f = fc.fixture, nm = { home: f.home_matched || f.home_name, away: f.away_matched || f.away_name };
+  const badge = (st) => `<span class="lu lu-${esc(st || "none")}">${esc((st || "none").toUpperCase())}</span>`;
+  const lu = ["home", "away"].map((sd) => { const x = (c.lineups || {})[sd] || {};
+    return `<div><b>${esc(nm[sd])}</b> ${badge(x.status)} ${x.formation ? esc(x.formation) : ""}<div class="muted small">${(x.starters || []).map((p) => esc(p.name)).join(", ") || "—"}</div></div>`; }).join("");
+  const ab = ["home", "away"].flatMap((sd) => ((c.absences || {})[sd] || []).map((a) => `<li><b>${esc(nm[sd])}</b>: ${esc(a.player)} — ${esc(a.type || "")}${a.chance_of_playing != null ? ` (${a.chance_of_playing}%)` : ""}, ${esc(a.expected_return || "")} <span class="muted">[${esc(a.source)}, ${a.fetched_at ? etTime(a.fetched_at) : "?"}]</span></li>`));
+  const w = c.weather;
+  const wx = w ? `${w.temp_c.toFixed(1)} °C · wind ${w.wind_ms.toFixed(1)} m/s · rain ${w.precip_mm_2h.toFixed(1)} mm` : "no forecast yet";
+  const sh = (c.factor_shifts || []).filter((x) => x.d_p_home_pp != null).map((x) => `<tr class="${x.applied ? "" : "muted"}"><td class="l">${esc(x.factor)}${x.applied ? "" : " <small>(not applied)</small>"}</td><td>${x.d_p_home_pp.toFixed(2)}</td><td>${x.d_p_draw_pp.toFixed(2)}</td><td>${x.d_p_away_pp.toFixed(2)}</td></tr>`).join("");
+  const t = c.total_shift;
+  return `<details class="ctx"><summary>Match context · lineups ${badge(((c.lineups || {}).home || {}).status)} / ${badge(((c.lineups || {}).away || {}).status)} · ${ab.length} absences</summary>
+    <div class="lineups">${lu}</div>
+    <div class="muted small">Weather: ${wx} · Rest ${c.rest?.home?.rest_days ?? "?"}d / ${c.rest?.away?.rest_days ?? "?"}d · away travel ${c.travel?.away_travel_km ?? "?"} km</div>
+    <ul class="small">${ab.join("") || "<li>No absences listed</li>"}</ul>
+    ${sh ? `<table class="shift"><tr><th class="l">Factor (pp)</th><th>Home</th><th>Draw</th><th>Away</th></tr>${sh}${t && (c.factor_shifts || []).some((x) => x.applied && !x.factor.startsWith("Understat")) ? `<tr><td class="l"><b>All context</b></td><td>${t.d_p_home_pp.toFixed(2)}</td><td>${t.d_p_draw_pp.toFixed(2)}</td><td>${t.d_p_away_pp.toFixed(2)}</td></tr>` : ""}</table>` : `<p class="muted small">No context family passed validation — shown for information only.</p>`}
+  </details>`;
+}
+
 async function loadModel() {
   try {
     const j = MODE === "api" ? await getJSON("api/model") : await getJSON("data/model.json");
@@ -197,8 +217,16 @@ async function loadModel() {
       <table><tr><th class="l">Model</th><th>Log loss</th><th>RPS</th><th>Brier</th><th>Exact log score</th><th>Top-1</th><th>Top-3</th><th>Top-5</th><th>MAE goals</th></tr>
       ${rows.map(([k, m]) => `<tr><td class="l">${esc(k)}</td><td>${m.log_loss.toFixed(4)}</td><td>${m.rps.toFixed(4)}</td><td>${m.brier.toFixed(4)}</td><td>${m.exact_log_score.toFixed(4)}</td><td>${pct(m.top1)}</td><td>${pct(m.top3)}</td><td>${pct(m.top5)}</td><td>${m.mae_goals.toFixed(3)}</td></tr>`).join("")}</table>
       <p>Ensemble weights: ${esc(JSON.stringify(reg.champion?.ensemble_weights))}</p>
-      <p class="muted">${esc(bt.promotion_rule)}</p><p><a href="https://github.com/lucksociety/oracle-fc/blob/main/docs/BACKTEST.md" target="_blank">Full backtest report →</a></p>`;
+      <p class="muted">${esc(bt.promotion_rule)}</p>${ctxModel(j.context)}<p><a href="https://github.com/lucksociety/oracle-fc/blob/main/docs/BACKTEST.md" target="_blank">Full backtest report →</a></p>`;
   } catch (e) { $("#model").innerHTML = `<p class="muted">Model info unavailable (${esc(e.message)})</p>`; }
+}
+
+function ctxModel(cx) {
+  if (!cx || !cx.families) return "";
+  const r = Object.entries(cx.families).map(([k, v]) => `<tr><td class="l">${esc(k)}</td><td>${v.n.toLocaleString()}</td><td>${v.delta.rps.mean_diff.toFixed(5)} [${v.delta.rps.ci95.map((x) => x.toFixed(5)).join(", ")}]</td><td>${v.delta.log_loss.mean_diff.toFixed(5)} [${v.delta.log_loss.ci95.map((x) => x.toFixed(5)).join(", ")}]</td><td>${v.kept ? "<b>kept</b>" : "rejected"}</td></tr>`).join("");
+  return `<h2>Context features (lineups, players, rest, travel, weather, xG)</h2><p class="muted">Champion/challenger, challenger − base (negative = better), test ${esc(cx.test_window?.join(" → "))}.</p>
+    <table><tr><th class="l">Feature</th><th>n</th><th>ΔRPS [95% CI]</th><th>Δlog loss [95% CI]</th><th>Decision</th></tr>${r}</table>
+    <p><a href="https://github.com/lucksociety/oracle-fc/blob/main/docs/CONTEXT_BACKTEST.md" target="_blank">Context backtest report →</a></p>`;
 }
 
 // ---------------------------------------------------------------- wiring

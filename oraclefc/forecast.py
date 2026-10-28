@@ -18,7 +18,7 @@ from . import __version__, config, frozen, store
 from .experiments import load_registry
 from .governance import assert_no_price_keys, now_utc_iso
 from .models.baselines import HomeAwayRate
-from .models.dixon_coles import dynamic_dc, standard_dc
+from .models.dixon_coles import dynamic_dc, standard_dc, xg_dc
 from .models.elo import EloGoals
 from .models.ensemble import combine
 from .report import render
@@ -31,7 +31,8 @@ DEFAULT_WEIGHTS = {"dynamic_dc": 1.0}
 class Engine:
     """Fits the champion's component models once on all data available now."""
 
-    def __init__(self, df: pd.DataFrame | None = None, as_of: pd.Timestamp | None = None):
+    def __init__(self, df: pd.DataFrame | None = None, as_of: pd.Timestamp | None = None, with_context: bool = True):
+        self.with_context = with_context
         self.df = df if df is not None else store.load()
         self.cutoff = store.data_cutoff(self.df)
         self.as_of = as_of or (self.df["date"].max() + pd.Timedelta(days=1))
@@ -45,9 +46,40 @@ class Engine:
         self.models = {"dynamic_dc": dynamic_dc(p["half_life_days"], p["kappa"]),
                        "elo": EloGoals(k=p["elo_k"]), "standard_dc": standard_dc(),
                        "home_away_rate": HomeAwayRate()}
+        ctx_reg = ch.get("context") or {}
+        self.context_kept = {f: list(v) for f, v in (ctx_reg.get("coefficients") or {}).items()
+                             if f in (ctx_reg.get("kept_families") or [])}
+        self.context_reg = ctx_reg
+        # Opt-in only (default empty): families that FAILED validation can be switched on by the
+        # owner via registry champion.context.apply_unvalidated; applied at 50% of the fitted size
+        # and labelled UNVALIDATED in every report.
+        self.context_unvalidated = []
+        opt = ctx_reg.get("apply_unvalidated") or []
+        cs = config.BACKTEST_DIR / "context_summary.json"
+        prod = {}
+        if cs.exists():
+            import json as _json
+            prod = _json.loads(cs.read_text()).get("production", {})
+        self.context_shadow = {f: v["beta"] for f, v in prod.items()}
+        if opt:
+            for fam in opt:
+                if fam in prod and fam not in self.context_kept:
+                    self.context_kept[fam] = [0.5 * b for b in prod[fam]["beta"]]
+                    self.context_unvalidated.append(fam)
+        if "xg_dc" in self.weights:
+            self.models["xg_dc"] = xg_dc(p["half_life_days"], p["kappa"], 0.5)
+        if "xg_dc" in self.weights or self.with_context:
+            from .context import history as H
+            self._us_map = H.map_understat(self.df) if (config.CONTEXT_DIR / "understat_matches.parquet").exists() else None
+            if "xg_dc" in self.models and self._us_map is not None:
+                self.df = H.attach_xg(self.df, self._us_map)
         for m in self.models.values():
             m.fit(self.df, self.as_of)
         self.resolver = Resolver(self.df)
+        self.player_book = None
+        if self.with_context and getattr(self, "_us_map", None) is not None:
+            from .context import history as H
+            _, self.player_book = H.lineup_history(self._us_map)
 
     # ------------------------------------------------------------------
     def matrix(self, fx: pd.DataFrame):
@@ -57,9 +89,67 @@ class Engine:
         comp = {n: m[0] for n, m in zip(names, mats)}
         return combine(mats, w)[0], comp
 
-    def _key_factors(self, r, fx) -> list[dict]:
+    def _context_quality(self, ctx, r) -> list[str]:
+        reg = self.context_reg
+        from .context.spec import FAMILIES
+        tested = list(FAMILIES) if reg else []
+        out = []
+        kept = [f for f in self.context_kept if f not in self.context_unvalidated]
+        if self.context_unvalidated:
+            out.append("UNVALIDATED context applied by owner opt-in at 50% size: " + ", ".join(self.context_unvalidated)
+                       + " (failed the out-of-sample keep rule).")
+        if kept:
+            out.append("Validated context adjustments applied: " + ", ".join(kept) + " (each passed the out-of-sample "
+                       "champion/challenger test; see docs/CONTEXT_BACKTEST.md).")
+        rej = [f for f in tested if f not in self.context_kept]
+        if rej:
+            out.append("Context families tested and NOT applied (failed validation): " + ", ".join(rej) + ".")
+        if reg and not reg.get("xg_component"):
+            out.append("Understat xG as an extra model component: tested, NOT applied (failed validation).")
+        elif reg:
+            out.append("Understat xG component (Dixon–Coles on 0.5·goals + 0.5·xG) is part of the ensemble (validated).")
+        if not reg:
+            out.append("No context backtest in the registry: context shown for information only, nothing applied.")
+        if ctx is None:
+            return out + ["Match context unavailable for this fixture."]
+        for side in ("home", "away"):
+            L = (ctx.get("lineups") or {}).get(side, {})
+            nm = r.home if side == "home" else r.away
+            st = L.get("status")
+            if st == "projected":
+                out.append(f"{nm}: lineup is PROJECTED ({L.get('source')}), not confirmed — {L.get('n_configurations', 0)} "
+                           f"lineup configurations simulated (each projected starter starts with P="
+                           f"{self._prior('projected_start_prob')}, UNVALIDATED prior).")
+            elif st == "inferred":
+                out.append(f"{nm}: no lineup published yet — XI inferred from recent minutes share minus known "
+                           f"absences; {L.get('n_configurations', 0)} configurations simulated (start P="
+                           f"{self._prior('inferred_start_prob')}, UNVALIDATED prior).")
+            elif st == "confirmed":
+                out.append(f"{nm}: lineup CONFIRMED ({L.get('source')}).")
+            else:
+                out.append(f"{nm}: no lineup information.")
+            if L.get("note"):
+                out.append(f"{nm}: {L['note']}")
+            if L.get("unmatched_players"):
+                out.append(f"{nm}: no Understat history for {', '.join(L['unmatched_players'])} — rated at the "
+                           "positional prior.")
+        out += ctx.get("flags", [])
+        return out
+
+    @staticmethod
+    def _prior(k):
+        from .context.live import PRIORS
+        return PRIORS[k]
+
+    def _key_factors(self, r, fx, ctx=None) -> list[dict]:
         dc = self.models["dynamic_dc"]
         f = []
+        for sh in (ctx or {}).get("factor_shifts", []):
+            if sh.get("applied"):
+                eff = max(abs(sh["d_p_home_pp"]), abs(sh["d_p_away_pp"])) / 100
+                f.append({"effect": eff * 3, "text": f"Context — {sh['factor']}: home win {sh['d_p_home_pp']:+.1f} pp, "
+                          f"draw {sh['d_p_draw_pp']:+.1f} pp, away win {sh['d_p_away_pp']:+.1f} pp "
+                          f"(xG {sh['d_xg_home']:+.2f} / {sh['d_xg_away']:+.2f})."})
         att_h, def_h = dc.att.get(r.home_key, np.nan), dc.dfn.get(r.home_key, np.nan)
         att_a, def_a = dc.att.get(r.away_key, np.nan), dc.dfn.get(r.away_key, np.nan)
         if np.isfinite(att_h) and np.isfinite(def_a):
@@ -132,6 +222,25 @@ class Engine:
         m, comps = self.matrix(fx)
         if not np.isfinite(m).all():
             return {**base, "status": "unsupported", "data_quality": dq + ["Component models could not rate this pairing."]}
+        xg_shift = None
+        if "xg_dc" in comps and len(self.weights) > 1:
+            from .context.live import _shift
+            others = [n for n in self.weights if n != "xg_dc" and np.isfinite(comps[n]).all()]
+            w = np.array([self.weights[n] for n in others], float)
+            m_no = combine([comps[n][None] for n in others], w / w.sum())[0]
+            xg_shift = _shift("Understat xG component (validated, in ensemble)", m_no, m, 0.0, 0.0)
+            xg_shift.pop("home_rate_mult"), xg_shift.pop("away_rate_mult")
+        s0 = summarise(m)
+        context = None
+        if self.with_context:
+            try:
+                from .context import live
+                context, m = live.build(self, r, fixture, m, self.context_kept, self.context_shadow)
+                if xg_shift:
+                    context["factor_shifts"].insert(0, xg_shift)
+            except Exception as e:  # context must never block a forecast; it is reported instead
+                dq.append(f"Match context failed ({type(e).__name__}: {e}); team-level forecast only.")
+                context = None
         s = summarise(m)
         assert abs(s["mass_check"] - 1) < 1e-9
         assert abs(s["p_home"] + s["p_draw"] + s["p_away"] - 1) < 1e-9
@@ -157,12 +266,7 @@ class Engine:
             if nm < 8:
                 dq.append(f"{getattr(r, side)}: only {nm:.1f} decay-weighted matches — strength shrunk toward the "
                           "division mean, wide uncertainty.")
-        dq += [
-            "Lineups, injuries and suspensions: NOT ingested (no verified free point-in-time feed); forecast assumes "
-            "typical availability.",
-            "Weather, travel and rest days: not modelled (not yet validated out of sample).",
-            "Team-level only: no player-level ratings yet; xG is stored for 2026/27 but not used by the champion.",
-        ]
+        dq += self._context_quality(context, r)
         if subcategory in ("cdr", "dfb", "efl", "fac", "cdf", "cit"):
             dq.append("Cup tie: rotation risk is not modelled; cup results are not in the training data.")
         ms = s["modal_score"]
@@ -172,7 +276,9 @@ class Engine:
                    f"(DC low-score dependence rho={float(rho[0]):+.3f}). Exact scores are inherently uncertain; "
                    f"the 1X2 split is {s['p_home']:.1%}/{s['p_draw']:.1%}/{s['p_away']:.1%}.")
         out = {**base, "status": "ok", "simulation": s, "monte_carlo": mc, "uncertainty": unc,
-               "components": comp_summary, "key_factors": self._key_factors(r, fx),
+               "components": comp_summary, "key_factors": self._key_factors(r, fx, context),
+               "base_simulation": {k: s0[k] for k in ("p_home", "p_draw", "p_away", "xg_home", "xg_away")},
+               "context": context,
                "confidence": self._confidence(s, r.div), "data_quality": dq, "verdict": verdict,
                "resolved": {"home_key": r.home_key, "away_key": r.away_key, "div": r.div,
                             "home_div": r.home_div, "away_div": r.away_div, "country": r.country}}
@@ -181,7 +287,8 @@ class Engine:
         return out
 
 
-def forecast_date(date: str, engine: Engine | None = None, freeze: bool = True, use_cache: bool = True) -> dict:
+def forecast_date(date: str, engine: Engine | None = None, freeze: bool = True, use_cache: bool = True,
+                  within_hours: float | None = None) -> dict:
     """Discover the date's Jupiter soccer fixtures and forecast each one."""
     from .fixtures.jupiter import fixtures_for_date
 
@@ -200,6 +307,10 @@ def forecast_date(date: str, engine: Engine | None = None, freeze: bool = True, 
                 out.append({"status": "not_forecast_before_kickoff", "fixture": {**f.to_dict()},
                             "data_quality": ["Kick-off passed before any forecast was frozen; none is produced "
                                              "retroactively."]})
+            continue
+        if within_hours is not None and existing and \
+                datetime.fromisoformat(f.kickoff_utc) - now > pd.Timedelta(hours=within_hours):
+            out.append(existing[-1])  # lineup-refresh runs only re-forecast fixtures close to kickoff
             continue
         fc = engine.forecast(f.home_name, f.away_name, f.competition, f.subcategory, f.kickoff_utc, f.event_id)
         if freeze and fc["status"] == "ok":

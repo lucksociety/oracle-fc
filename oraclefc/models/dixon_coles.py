@@ -31,8 +31,9 @@ from .base import GoalModel
 class TeamStrengthModel(GoalModel):
     def __init__(self, name: str = "dynamic_dc", half_life_days: float | None = 240.0,
                  window_days: int = 1100, kappa: float = 6.0, hierarchical: bool = True,
-                 use_rho: bool = True):
+                 use_rho: bool = True, xg_weight: float = 0.0):
         self.name = name
+        self.xg_weight = xg_weight
         self.half_life_days = half_life_days
         self.window_days = window_days
         self.kappa = kappa
@@ -60,6 +61,14 @@ class TeamStrengthModel(GoalModel):
         nonneutral = (~d["neutral"].to_numpy(bool)).astype(float)
         yh = d["hg"].to_numpy(float)
         ya = d["ag"].to_numpy(float)
+        gh_int, ga_int = yh.copy(), ya.copy()
+        if self.xg_weight and "hxg" in d:
+            # observed shot quality (Understat xG) blended into the fitting target where available
+            hx, ax = d["hxg"].to_numpy(float), d["axg"].to_numpy(float)
+            okx = np.isfinite(hx) & np.isfinite(ax)
+            a_ = self.xg_weight
+            yh = np.where(okx, (1 - a_) * yh + a_ * np.nan_to_num(hx), yh)
+            ya = np.where(okx, (1 - a_) * ya + a_ * np.nan_to_num(ax), ya)
         if self.half_life_days:
             age = (as_of - d["date"]).dt.days.to_numpy(float)
             w = 0.5 ** (age / self.half_life_days)
@@ -127,8 +136,8 @@ class TeamStrengthModel(GoalModel):
         self.n_matches_weighted = pd.Series(np.bincount(hi, w, T) + np.bincount(ai, w, T), teams)
         self.rho = 0.0
         if self.use_rho:
-            low = (yh <= 1) & (ya <= 1)
-            lh_l, la_l, yh_l, ya_l, w_l = lh[low], la[low], yh[low], ya[low], w[low]
+            low = (gh_int <= 1) & (ga_int <= 1)
+            lh_l, la_l, yh_l, ya_l, w_l = lh[low], la[low], gh_int[low], ga_int[low], w[low]
 
             def rho_nll(r):
                 t = np.where((yh_l == 0) & (ya_l == 0), 1 - lh_l * la_l * r,
@@ -189,3 +198,9 @@ def standard_dc():
 def dynamic_dc(half_life_days: float = 240.0, kappa: float = 6.0):
     return TeamStrengthModel("dynamic_dc", half_life_days=half_life_days, window_days=1100, kappa=kappa,
                              hierarchical=True, use_rho=True)
+
+
+def xg_dc(half_life_days: float = 240.0, kappa: float = 8.0, xg_weight: float = 0.5):
+    """Dynamic DC whose fitting target blends goals with Understat xG (top-5 leagues)."""
+    return TeamStrengthModel("xg_dc", half_life_days=half_life_days, window_days=1100, kappa=kappa,
+                             hierarchical=True, use_rho=True, xg_weight=xg_weight)

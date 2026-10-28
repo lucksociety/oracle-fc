@@ -9,15 +9,21 @@ under the predefined rule (95% block-bootstrap CI of ΔRPS and Δexact log score
 2. **Domestic cups** (FA Cup, EFL Cup, Copa del Rey, DFB-Pokal) results + a cup-rotation term.
 3. **More leagues** on Jupiter that lack a free results feed today: Saudi Pro League, Qatar, Colombia,
    Turkey 1. Lig, Brazil Série B, Spanish Primera/Segunda RFEF (needed for Copa del Rey ties).
-4. **xG-informed strengths**: football-data now publishes xG for some divisions (2026/27). Add an
-   xG-blended attack/defence challenger once ≥1 season is available out of sample.
+4. ~~xG-informed strengths~~ **Done (1.1.0)**: Understat xG-blended Dixon–Coles is now an ensemble component
+   (validated). Next: extend xG beyond the top-5 leagues (football-data 2026/27 xG columns).
 5. **Shots / shots-on-target** process model (available back to 2016 for European divisions).
 
 ## Medium term
-6. **Lineups & injuries**: only from a terms-compliant, point-in-time feed (e.g. paid API-Football
-   tier) — snapshots must be stored with retrieval timestamps before kickoff.
-7. **Player-level ratings** (minutes-weighted plus-minus / xG chain) aggregated to expected XI strength.
-8. **Rest days, travel distance, congestion, weather** (Open-Meteo), each validated separately.
+6. **Lineups & injuries**: ingested live (FotMob/FPL) and back-tested on confirmed XIs.
+   * Currently directionally positive but not significant.
+   * Re-test each season as history grows.
+   * Frozen pre-kickoff projected/confirmed snapshots now accumulate, which will allow
+     validating *projected*-lineup forecasts directly.
+7. **Player-level ratings**: richer player value (defensive actions, GK shot-stopping
+   above expectation) and coverage outside the top-5 leagues (API-Football key
+   `API_FOOTBALL_KEY` if obtained).
+8. **Rest, travel, congestion and weather**: tested and not kept. Retry with domestic-cup
+   and UEL/UECL fixtures in the rest calculation (currently league + UCL only).
 9. **Bivariate Poisson / Weibull-count / negative binomial** score distributions as challengers;
    in-match state-space model for time-varying strengths.
 

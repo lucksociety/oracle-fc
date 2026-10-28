@@ -39,6 +39,8 @@ jobs:
           restore-keys: raw-
       - name: Ingest permitted data (results only)
         run: python -m oraclefc.cli ingest
+      - name: Refresh match-context snapshot (Understat xG/players; no market data)
+        run: python -m oraclefc.cli ingest-context
       - name: Forecast + freeze (no market data)
         run: python -m oraclefc.cli run --days "$DAYS" --refresh ${DATE:+--date "$DATE"}
       - name: POST-HOC market snapshot + edge (after freezing)
@@ -49,7 +51,7 @@ jobs:
         run: |
           git config user.name "oracle-fc-bot"
           git config user.email "oracle-fc-bot@users.noreply.github.com"
-          git add data/forecasts data/edge || true
+          git add data/forecasts data/edge data/context || true
           if ! git diff --cached --quiet; then
             git commit -m "pipeline: forecasts $(date -u +%Y-%m-%dT%H:%MZ)"
             for i in 1 2 3; do git pull --rebase && git push && break; sleep 5; done
