@@ -1,0 +1,599 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.1.1+ensemble-xg-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-10-27",
+ "generated_at": "2026-10-28T21:54:03+00:00",
+ "fixture": {
+  "event_id": "POLY-1212031",
+  "home_name": "SBV Excelsior",
+  "away_name": "FC Twente",
+  "competition": "Eredivisie 2025",
+  "subcategory": "ere",
+  "kickoff_utc": "2026-11-01T13:30:00+00:00",
+  "kickoff_local": "2026-11-01 08:30 EST",
+  "home_matched": "Excelsior",
+  "away_matched": "Twente",
+  "match_methods": {
+   "home": {
+    "source": "SBV Excelsior",
+    "matched": "Excelsior",
+    "method": "token-subset",
+    "score": 0.9
+   },
+   "away": {
+    "source": "FC Twente",
+    "matched": "Twente",
+    "method": "alias",
+    "score": 1.0
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.24145986238476602,
+  "p_draw": 0.23565283123522723,
+  "p_away": 0.5228873063800067,
+  "xg_home": 1.1669752454203826,
+  "xg_away": 1.81812893521549,
+  "xg_total": 2.9851041806358722,
+  "median_total": 3,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.11003432524383125
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.11003432524383125
+   },
+   {
+    "home": 1,
+    "away": 2,
+    "p": 0.09715047996234774
+   },
+   {
+    "home": 0,
+    "away": 1,
+    "p": 0.08890489391314942
+   },
+   {
+    "home": 0,
+    "away": 2,
+    "p": 0.08330805084196516
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.06252799555815677
+   }
+  ],
+  "btts": 0.5790717946400793,
+  "totals_over": {
+   "over_0.5": 0.9463427488420091,
+   "over_1.5": 0.8010997612025844,
+   "over_2.5": 0.5731549732017371,
+   "over_3.5": 0.349442753321821,
+   "over_4.5": 0.18248605627209796,
+   "over_5.5": 0.08271089826796531,
+   "over_6.5": 0.032974789171320386
+  },
+  "total_buckets": {
+   "0-1": 0.1989002387974156,
+   "2": 0.22794478800084716,
+   "3": 0.22371221987991624,
+   "4": 0.166956697049723,
+   "5+": 0.18248605627209796
+  },
+  "clean_sheet_home": 0.16316381084055648,
+  "clean_sheet_away": 0.31142164567735503,
+  "home_goal_dist": [
+   0.31142164567735503,
+   0.3632029341064829,
+   0.21189204984215226,
+   0.082455856353207,
+   0.024081672465423268,
+   0.00563172091938904,
+   0.001098934667451093,
+   0.00021518596853940068
+  ],
+  "away_goal_dist": [
+   0.16316381084055648,
+   0.2949815436487656,
+   0.2674737071778834,
+   0.16219333097708874,
+   0.0739959896786359,
+   0.02709153065304038,
+   0.008291417421145544,
+   0.0028086696028840306
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    3
+   ],
+   "away_goals_80": [
+    0,
+    4
+   ],
+   "total_goals_80": [
+    1,
+    5
+   ],
+   "goal_diff_80": [
+    -3,
+    1
+   ]
+  },
+  "score_grid": [
+   [
+    0.053657,
+    0.088905,
+    0.083308,
+    0.050551,
+    0.023078,
+    0.008455,
+    0.002589
+   ],
+   [
+    0.056338,
+    0.110034,
+    0.09715,
+    0.058919,
+    0.026883,
+    0.009844,
+    0.003013
+   ],
+   [
+    0.034602,
+    0.062528,
+    0.056671,
+    0.034349,
+    0.015663,
+    0.005732,
+    0.001753
+   ],
+   [
+    0.013482,
+    0.024346,
+    0.02205,
+    0.013355,
+    0.006086,
+    0.002226,
+    0.000681
+   ],
+   [
+    0.003944,
+    0.007115,
+    0.006438,
+    0.003897,
+    0.001775,
+    0.000649,
+    0.000198
+   ],
+   [
+    0.000924,
+    0.001665,
+    0.001505,
+    0.00091,
+    0.000414,
+    0.000151,
+    4.6e-05
+   ],
+   [
+    0.000181,
+    0.000325,
+    0.000294,
+    0.000177,
+    8.1e-05,
+    2.9e-05,
+    9e-06
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.24278,
+  "p_draw": 0.23503499999999997,
+  "p_away": 0.522185,
+  "se": [
+   0.0009587436351809591,
+   0.0009481390952149372,
+   0.001116932911537215
+  ],
+  "max_abs_dev_vs_exact": 0.0013201376152339739,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   0.8745264332457678,
+   1.488755963617577
+  ],
+  "xg_away_80": [
+   1.3778066675775866,
+   2.2887846798098086
+  ],
+  "p_home_80": [
+   0.1612876131681946,
+   0.34043526104532823
+  ],
+  "p_draw_80": [
+   0.19909806126087742,
+   0.27430106767496887
+  ],
+  "p_away_80": [
+   0.3925995551846413,
+   0.6339512121169902
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.21092608911428737,
+   0.18835340394267516
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.25424117478774466,
+   "p_draw": 0.247524535636796,
+   "p_away": 0.4982342895754594,
+   "xg_home": 1.1769412241212918,
+   "xg_away": 1.7306802454596872,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.22444388541656413,
+   "p_draw": 0.22045958205629063,
+   "p_away": 0.5550965325271453,
+   "xg_home": 1.15345784578992,
+   "xg_away": 1.9326272926400756,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.22120306259798622,
+   "p_draw": 0.26807460430614827,
+   "p_away": 0.5107223330958656,
+   "xg_home": 0.9554585777291462,
+   "xg_away": 1.5764821145368486,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.4507422514197028,
+   "p_draw": 0.23057214598813094,
+   "p_away": 0.31868560259216616,
+   "xg_home": 1.7654478235803523,
+   "xg_away": 1.454393430312949,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.25437216460506534,
+   "p_draw": 0.24738832279120504,
+   "p_away": 0.49823951260372956,
+   "xg_home": 1.177204138975601,
+   "xg_away": 1.7306724074913982,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Twente attack vs Excelsior defence: rate multiplier \u00d71.44 for the away side.",
+   "effect": 0.3636
+  },
+  {
+   "text": "Independent results-only Elo: Excelsior 1456 vs Twente 1686 (gap -231 before home advantage).",
+   "effect": 0.3462
+  },
+  {
+   "text": "Excelsior attack vs Twente defence: time-weighted strength gap multiplies Excelsior's scoring rate by \u00d70.85 relative to an average pairing (from 25/30 decay-weighted matches).",
+   "effect": 0.1594
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.24145986238476602,
+  "p_draw": 0.23565283123522723,
+  "p_away": 0.5228873063800067,
+  "xg_home": 1.1669752454203826,
+  "xg_away": 1.81812893521549
+ },
+ "context": {
+  "fetched_at": "2026-10-28T21:54:03+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5781794",
+    "fetched_at": "2026-10-28T21:54:03+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "4-3-3",
+    "starters": [
+     {
+      "name": "Stijn van Gassel",
+      "pos": "G"
+     },
+     {
+      "name": "Rick Meissen",
+      "pos": "D"
+     },
+     {
+      "name": "Casper Widell",
+      "pos": "D"
+     },
+     {
+      "name": "Jan Plug",
+      "pos": "D"
+     },
+     {
+      "name": "Kasey Bos",
+      "pos": "D"
+     },
+     {
+      "name": "Noah Naujoks",
+      "pos": "M"
+     },
+     {
+      "name": "Lennard Hartjes",
+      "pos": "M"
+     },
+     {
+      "name": "Dani\u00ebl van Vianen",
+      "pos": "M"
+     },
+     {
+      "name": "Aymen Sliti",
+      "pos": "F"
+     },
+     {
+      "name": "Nesto Groen",
+      "pos": "F"
+     },
+     {
+      "name": "Irakli Yegoian",
+      "pos": "M"
+     }
+    ],
+    "fetched_at": "2026-10-28T21:54:03+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   },
+   "away": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "4-2-3-1",
+    "starters": [
+     {
+      "name": "Jo\u00ebl Drommel",
+      "pos": "G"
+     },
+     {
+      "name": "Bart van Rooij",
+      "pos": "D"
+     },
+     {
+      "name": "Robin Pr\u00f6pper",
+      "pos": "D"
+     },
+     {
+      "name": "Ruud Nijstad",
+      "pos": "D"
+     },
+     {
+      "name": "Aske Adelgaard",
+      "pos": "D"
+     },
+     {
+      "name": "Ramiz Zerrouki",
+      "pos": "M"
+     },
+     {
+      "name": "Daouda Weidmann",
+      "pos": "M"
+     },
+     {
+      "name": "Daan Rots",
+      "pos": "F"
+     },
+     {
+      "name": "Younes Taha",
+      "pos": "M"
+     },
+     {
+      "name": "Sondre \u00d8rjas\u00e6ter",
+      "pos": "F"
+     },
+     {
+      "name": "Wout Weghorst",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-10-28T21:54:03+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   }
+  },
+  "absences": {
+   "home": [],
+   "away": [
+    {
+     "player": "Daouda Weidmann",
+     "type": "suspension",
+     "expected_return": "Early November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5781794",
+     "fetched_at": "2026-10-28T21:54:03+00:00"
+    },
+    {
+     "player": "Filip Thorvaldsen",
+     "type": "injury",
+     "expected_return": "Early November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5781794",
+     "fetched_at": "2026-10-28T21:54:03+00:00"
+    },
+    {
+     "player": "Lars Unnerstall",
+     "type": "injury",
+     "expected_return": "Day to day",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5781794",
+     "fetched_at": "2026-10-28T21:54:03+00:00"
+    },
+    {
+     "player": "Max Bruns",
+     "type": "injury",
+     "expected_return": "Early November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5781794",
+     "fetched_at": "2026-10-28T21:54:03+00:00"
+    },
+    {
+     "player": "Stav Lemkin",
+     "type": "injury",
+     "expected_return": "Day to day",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5781794",
+     "fetched_at": "2026-10-28T21:54:03+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 7,
+    "n21": 3,
+    "last_match": "2026-10-25"
+   },
+   "away": {
+    "rest_days": 7,
+    "n21": 2,
+    "last_match": "2026-10-25"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 162.3
+  },
+  "venue": {
+   "name": "Stadion Woudestein",
+   "city": "Rotterdam",
+   "lat": 51.917153642,
+   "lon": 4.520670606
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 1.7650000000000001,
+   "temp_c": 12.6,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=51.917&longitude=4.521",
+   "fetched_at": "2026-10-28T21:54:03+00:00",
+   "lat": 51.917153642,
+   "lon": 4.520670606
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": 1.36,
+    "d_p_draw_pp": 1.24,
+    "d_p_away_pp": -2.6,
+    "d_xg_home": 0.011,
+    "d_xg_away": -0.092
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.015,
+    "away_rate_mult": 1.0063,
+    "d_p_home_pp": 0.23,
+    "d_p_draw_pp": -0.1,
+    "d_p_away_pp": -0.13,
+    "d_xg_home": 0.017,
+    "d_xg_away": 0.012,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "reason": "failed validation; no live features"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 7.0,
+   "rest_a": 7.0,
+   "n21_h": 3.0,
+   "n21_a": 2.0,
+   "travel_km": 162.2743394912542,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 1.7650000000000001,
+   "temp_c": 12.6
+  }
+ },
+ "confidence": {
+  "tier": "MODERATE",
+  "p_max": 0.5228873063800067,
+  "entropy_nats": 1.0227731350723355,
+  "text": "Most likely result has P = 52.3%. In the out-of-sample backtest, favourites priced 0.50\u20130.60 won 54.6% \u00b1 0.5% (n=9575, mean forecast 54.3%). Backtest RPS for N1: 0.1917; exact-score top-5 hit rate 44.5% (n=1008). Overall champion RPS 0.2098 vs home/away baseline 0.2283 (1.1.1+ensemble-xg-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-27, n=40,559). Outcome-certainty tier: MODERATE (entropy 1.023 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Excelsior: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Excelsior: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.",
+  "Twente: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Twente: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+ ],
+ "verdict": "Excelsior 1\u20131 Twente is the single most probable scoreline at 11.0%: expected goals 1.17\u20131.82 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.047). Exact scores are inherently uncertain; the 1X2 split is 24.1%/23.6%/52.3%.",
+ "resolved": {
+  "home_key": "Netherlands:Excelsior",
+  "away_key": "Netherlands:Twente",
+  "div": "N1",
+  "home_div": "N1",
+  "away_div": "N1",
+  "country": "Netherlands"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: FC Twente at SBV Excelsior\nCompetition: Eredivisie 2025\nDate: 2026-11-01 08:30 EST\nModel Version: 1.1.1+ensemble-xg-hl240-k8-elo22\nData Cutoff: 2026-10-27\n\nPRIMARY FINAL SCORE PREDICTION\n\nSBV Excelsior 1 \u2013 1 FC Twente\n(modal exact score, probability 11.0%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.17\nAway: 1.82\nExpected Total: 2.99\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 24.1%\nDraw: 23.6%\nAway Win: 52.3%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 11.0%\n2. 1\u20132: 9.7%\n3. 0\u20131: 8.9%\n4. 0\u20132: 8.3%\n5. 2\u20131: 6.3%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 19.9%\nTotal 2 goals: 22.8%\nTotal 3 goals: 22.4%\nTotal 4 goals: 16.7%\nTotal 5+ goals: 18.2%\n\nBoth Teams Score: 57.9%\nClean sheet SBV Excelsior: 16.3% \u00b7 Clean sheet FC Twente: 31.1%\n\nMATCH INTELLIGENCE\n\n1. Twente attack vs Excelsior defence: rate multiplier \u00d71.44 for the away side.\n2. Independent results-only Elo: Excelsior 1456 vs Twente 1686 (gap -231 before home advantage).\n3. Excelsior attack vs Twente defence: time-weighted strength gap multiplies Excelsior's scoring rate by \u00d70.85 relative to an average pairing (from 25/30 decay-weighted matches).\n\nMODEL CONFIDENCE\n\nMost likely result has P = 52.3%. In the out-of-sample backtest, favourites priced 0.50\u20130.60 won 54.6% \u00b1 0.5% (n=9575, mean forecast 54.3%). Backtest RPS for N1: 0.1917; exact-score top-5 hit rate 44.5% (n=1008). Overall champion RPS 0.2098 vs home/away baseline 0.2283 (1.1.1+ensemble-xg-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-27, n=40,559). Outcome-certainty tier: MODERATE (entropy 1.023 nats of max 1.099).\nParameter-uncertainty 80% bands: xG SBV Excelsior 0.87\u20131.49, xG FC Twente 1.38\u20132.29; P(home win) 16.1%\u201334.0%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0013 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nExcelsior: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-10-28 17:54 EDT (4-3-3)\n  Stijn van Gassel (G), Rick Meissen (D), Casper Widell (D), Jan Plug (D), Kasey Bos (D), Noah Naujoks (M), Lennard Hartjes (M), Dani\u00ebl van Vianen (M), Aymen Sliti (F), Nesto Groen (F), Irakli Yegoian (M)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\nTwente: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-10-28 17:54 EDT (4-2-3-1)\n  Jo\u00ebl Drommel (G), Bart van Rooij (D), Robin Pr\u00f6pper (D), Ruud Nijstad (D), Aske Adelgaard (D), Ramiz Zerrouki (M), Daouda Weidmann (M), Daan Rots (F), Younes Taha (M), Sondre \u00d8rjas\u00e6ter (F), Wout Weghorst (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nKEY ABSENCES\n\n- Twente: Daouda Weidmann \u2014 suspension, Early November 2026 [FotMob, 2026-10-28 17:54 EDT]\n- Twente: Filip Thorvaldsen \u2014 injury, Early November 2026 [FotMob, 2026-10-28 17:54 EDT]\n- Twente: Lars Unnerstall \u2014 injury, Day to day [FotMob, 2026-10-28 17:54 EDT]\n- Twente: Max Bruns \u2014 injury, Early November 2026 [FotMob, 2026-10-28 17:54 EDT]\n- Twente: Stav Lemkin \u2014 injury, Day to day [FotMob, 2026-10-28 17:54 EDT]\n\nWEATHER AT VENUE\n\nStadion Woudestein, Rotterdam: 12.6 \u00b0C, wind 1.8 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-10-28 17:54 EDT]\n\nREST & TRAVEL\n\nExcelsior: 7 days' rest, 3 matches in previous 21 days \u00b7 Twente: 7 days' rest, 2 in 21 days \u00b7 away travel 162.3 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 24.1% / 23.6% / 52.3%, xG 1.17\u20131.82\n- Understat xG component (validated, in ensemble): home +1.36 pp, draw +1.24 pp, away -2.60 pp; xG +0.011 / -0.092\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.23 pp, draw -0.10 pp, away -0.13 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- lineup: not applied (failed validation; no live features)\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Excelsior: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Excelsior: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n- Twente: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Twente: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nFINAL VERDICT\n\nExcelsior 1\u20131 Twente is the single most probable scoreline at 11.0%: expected goals 1.17\u20131.82 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.047). Exact scores are inherently uncertain; the 1X2 split is 24.1%/23.6%/52.3%.\n",
+ "frozen_at": "2026-10-28T21:54:03+00:00",
+ "sha256": "72b68e10597040cba3f403ef7622a18c85c81927a314417d84a5a526b7e48933"
+}

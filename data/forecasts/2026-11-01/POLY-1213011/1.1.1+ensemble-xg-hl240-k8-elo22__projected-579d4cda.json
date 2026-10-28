@@ -1,0 +1,584 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.1.1+ensemble-xg-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-10-27",
+ "generated_at": "2026-10-28T21:54:08+00:00",
+ "fixture": {
+  "event_id": "POLY-1213011",
+  "home_name": "FC Arouca",
+  "away_name": "CD Nacional",
+  "competition": "Primeira Liga",
+  "subcategory": "por",
+  "kickoff_utc": "2026-11-01T15:30:00+00:00",
+  "kickoff_local": "2026-11-01 10:30 EST",
+  "home_matched": "Arouca",
+  "away_matched": "Nacional",
+  "match_methods": {
+   "home": {
+    "source": "FC Arouca",
+    "matched": "Arouca",
+    "method": "core-tokens",
+    "score": 0.97
+   },
+   "away": {
+    "source": "CD Nacional",
+    "matched": "Nacional",
+    "method": "core-tokens",
+    "score": 0.97
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.5272909337549152,
+  "p_draw": 0.2482243679635509,
+  "p_away": 0.224484698281534,
+  "xg_home": 1.6741301027691047,
+  "xg_away": 1.0054704799930358,
+  "xg_total": 2.6796005827621405,
+  "median_total": 3,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.11816862677818915
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.11816862677818915
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.11178522919795239
+   },
+   {
+    "home": 2,
+    "away": 0,
+    "p": 0.09633211130774186
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.09623229646847715
+   },
+   {
+    "home": 0,
+    "away": 0,
+    "p": 0.07167060798745886
+   }
+  ],
+  "btts": 0.5168931548767667,
+  "totals_over": {
+   "over_0.5": 0.9283293920125412,
+   "over_1.5": 0.7506925772592679,
+   "over_2.5": 0.5013665837031004,
+   "over_3.5": 0.28141868156501,
+   "over_4.5": 0.13407429897770284,
+   "over_5.5": 0.05510819007621216,
+   "over_6.5": 0.0198410650156411
+  },
+  "total_buckets": {
+   "0-1": 0.24930742274073217,
+   "2": 0.24932599355616752,
+   "3": 0.21994790213809043,
+   "4": 0.14734438258730714,
+   "5+": 0.13407429897770284
+  },
+  "clean_sheet_home": 0.36688677010084514,
+  "clean_sheet_away": 0.18789068300984726,
+  "home_goal_dist": [
+   0.18789068300984726,
+   0.313713396786484,
+   0.26231512934832796,
+   0.14646020989193448,
+   0.061429574958185386,
+   0.020645560469658646,
+   0.005791551962471644,
+   0.0017538935730906978
+  ],
+  "away_goal_dist": [
+   0.36688677010084514,
+   0.3668587980486415,
+   0.18443738535012602,
+   0.0621539317164986,
+   0.015791947367623568,
+   0.003226153228580155,
+   0.0005518689853859489,
+   9.314520229919148e-05
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    3
+   ],
+   "away_goals_80": [
+    0,
+    2
+   ],
+   "total_goals_80": [
+    1,
+    5
+   ],
+   "goal_diff_80": [
+    -1,
+    3
+   ]
+  },
+  "score_grid": [
+   [
+    0.071671,
+    0.065852,
+    0.034825,
+    0.011792,
+    0.00301,
+    0.000618,
+    0.000106
+   ],
+   [
+    0.111785,
+    0.118169,
+    0.057977,
+    0.019576,
+    0.004983,
+    0.00102,
+    0.000175
+   ],
+   [
+    0.096332,
+    0.096232,
+    0.048335,
+    0.016273,
+    0.004131,
+    0.000843,
+    0.000144
+   ],
+   [
+    0.053947,
+    0.053729,
+    0.026907,
+    0.009033,
+    0.002286,
+    0.000465,
+    7.9e-05
+   ],
+   [
+    0.022695,
+    0.022535,
+    0.011252,
+    0.003766,
+    0.000951,
+    0.000193,
+    3.3e-05
+   ],
+   [
+    0.00765,
+    0.007574,
+    0.00377,
+    0.001258,
+    0.000317,
+    6.4e-05,
+    1.1e-05
+   ],
+   [
+    0.002152,
+    0.002125,
+    0.001054,
+    0.000351,
+    8.8e-05,
+    1.8e-05,
+    3e-06
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.5266,
+  "p_draw": 0.24830000000000002,
+  "p_away": 0.22510000000000002,
+  "se": [
+   0.0011164507154370945,
+   0.0009660411740707536,
+   0.0009338896883465413
+  ],
+  "max_abs_dev_vs_exact": 0.0006909337549152461,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   1.2692480089248166,
+   2.1180414124759515
+  ],
+  "xg_away_80": [
+   0.7306721465697129,
+   1.3037674540094981
+  ],
+  "p_home_80": [
+   0.4064381911371706,
+   0.643667565581293
+  ],
+  "p_draw_80": [
+   0.21068985588852737,
+   0.2939381830646847
+  ],
+  "p_away_80": [
+   0.14096020112751487,
+   0.31283912580216666
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.2030179848981058,
+   0.21489600424661026
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.49481066243617033,
+   "p_draw": 0.2589929437006974,
+   "p_away": 0.24619639386313208,
+   "xg_home": 1.6154409075679639,
+   "xg_away": 1.0705456226545653,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.5690332889723414,
+   "p_draw": 0.2345650515929414,
+   "p_away": 0.19640165943471719,
+   "xg_home": 1.7497328148885818,
+   "xg_away": 0.921652417560306,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.5254201622883086,
+   "p_draw": 0.25515515985511467,
+   "p_away": 0.21942467785657688,
+   "xg_home": 1.698202809594572,
+   "xg_away": 1.019559785194177,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.41664385889871103,
+   "p_draw": 0.2586690572952817,
+   "p_away": 0.3246870838060073,
+   "xg_home": 1.4315926829792502,
+   "xg_away": 1.2328982192782296,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.49485726155540966,
+   "p_draw": 0.2588614101118475,
+   "p_away": 0.24628132833274294,
+   "xg_home": 1.6153270608193238,
+   "xg_away": 1.070529588113102,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Independent results-only Elo: Arouca 1551 vs Nacional 1400 (gap +151 before home advantage).",
+   "effect": 0.2265
+  },
+  {
+   "text": "Arouca attack vs Nacional defence: time-weighted strength gap multiplies Arouca's scoring rate by \u00d71.16 relative to an average pairing (from 29/28 decay-weighted matches).",
+   "effect": 0.1518
+  },
+  {
+   "text": "Home advantage (Portugal, fitted from results): \u00d71.15 on Arouca's scoring rate.",
+   "effect": 0.1428
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.5272909337549152,
+  "p_draw": 0.24822436796355088,
+  "p_away": 0.22448469828153397,
+  "xg_home": 1.6741301027691045,
+  "xg_away": 1.0054704799930358
+ },
+ "context": {
+  "fetched_at": "2026-10-28T21:54:08+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5887664",
+    "fetched_at": "2026-10-28T21:54:08+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "4-2-3-1",
+    "starters": [
+     {
+      "name": "Ignacio de Arruabarrena",
+      "pos": "G"
+     },
+     {
+      "name": "Tiago Esgaio",
+      "pos": "D"
+     },
+     {
+      "name": "Javi S\u00e1nchez",
+      "pos": "D"
+     },
+     {
+      "name": "Jose Font\u00e1n",
+      "pos": "D"
+     },
+     {
+      "name": "Orest Lebedenko",
+      "pos": "D"
+     },
+     {
+      "name": "Espen van Ee",
+      "pos": "M"
+     },
+     {
+      "name": "Taichi Fukui",
+      "pos": "M"
+     },
+     {
+      "name": "Alfonso Trezza",
+      "pos": "F"
+     },
+     {
+      "name": "Pedro Santos",
+      "pos": "M"
+     },
+     {
+      "name": "Na\u00efs Djouahra",
+      "pos": "F"
+     },
+     {
+      "name": "Barbero",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-10-28T21:54:08+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   },
+   "away": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "5-4-1",
+    "starters": [
+     {
+      "name": "Renato Marin",
+      "pos": "G"
+     },
+     {
+      "name": "Francisco Gon\u00e7alves",
+      "pos": "D"
+     },
+     {
+      "name": "Matheus Dias",
+      "pos": "M"
+     },
+     {
+      "name": "Z\u00e9 V\u00edtor",
+      "pos": "D"
+     },
+     {
+      "name": "Markus Gustav Jensen",
+      "pos": "F"
+     },
+     {
+      "name": "William Kokolo",
+      "pos": "M"
+     },
+     {
+      "name": "Stavros Gavriel",
+      "pos": "M"
+     },
+     {
+      "name": "Chiheb Labidi",
+      "pos": "M"
+     },
+     {
+      "name": "Miguel Baeza",
+      "pos": "M"
+     },
+     {
+      "name": "Min-Kyu Song",
+      "pos": "F"
+     },
+     {
+      "name": "Njoya Kader",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-10-28T21:54:08+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Miguel Puche",
+     "type": "injury",
+     "expected_return": "Day to day",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5887664",
+     "fetched_at": "2026-10-28T21:54:08+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "L\u00e9o Santos",
+     "type": "injury",
+     "expected_return": "Day to day",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5887664",
+     "fetched_at": "2026-10-28T21:54:08+00:00"
+    },
+    {
+     "player": "Ulisses Rocha",
+     "type": "injury",
+     "expected_return": "Day to day",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5887664",
+     "fetched_at": "2026-10-28T21:54:08+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 8,
+    "n21": 2,
+    "last_match": "2026-10-24"
+   },
+   "away": {
+    "rest_days": 7,
+    "n21": 2,
+    "last_match": "2026-10-25"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 1196.5
+  },
+  "venue": {
+   "name": "Est\u00e1dio Municipal de Arouca",
+   "city": "Arouca",
+   "lat": 40.932887309,
+   "lon": -8.250399828
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 1.79,
+   "temp_c": 22.6,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=40.933&longitude=-8.25",
+   "fetched_at": "2026-10-28T21:54:08+00:00",
+   "lat": 40.932887309,
+   "lon": -8.250399828
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": -3.42,
+    "d_p_draw_pp": 1.12,
+    "d_p_away_pp": 2.3,
+    "d_xg_home": -0.062,
+    "d_xg_away": 0.069
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0402,
+    "away_rate_mult": 1.0168,
+    "d_p_home_pp": 1.22,
+    "d_p_draw_pp": -0.67,
+    "d_p_away_pp": -0.54,
+    "d_xg_home": 0.067,
+    "d_xg_away": 0.017,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "reason": "failed validation; no live features"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 8.0,
+   "rest_a": 7.0,
+   "n21_h": 2.0,
+   "n21_a": 2.0,
+   "travel_km": 1196.5482570287995,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 1.79,
+   "temp_c": 22.6
+  }
+ },
+ "confidence": {
+  "tier": "MODERATE",
+  "p_max": 0.5272909337549152,
+  "entropy_nats": 1.018717446947056,
+  "text": "Most likely result has P = 52.7%. In the out-of-sample backtest, favourites priced 0.50\u20130.60 won 54.6% \u00b1 0.5% (n=9575, mean forecast 54.3%). Backtest RPS for P1: 0.1843; exact-score top-5 hit rate 54.1% (n=999). Overall champion RPS 0.2098 vs home/away baseline 0.2283 (1.1.1+ensemble-xg-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-27, n=40,559). Outcome-certainty tier: MODERATE (entropy 1.019 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Arouca: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Arouca: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.",
+  "Nacional: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Nacional: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+ ],
+ "verdict": "Arouca 1\u20131 Nacional is the single most probable scoreline at 11.8%: expected goals 1.67\u20131.01 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.047). Exact scores are inherently uncertain; the 1X2 split is 52.7%/24.8%/22.4%.",
+ "resolved": {
+  "home_key": "Portugal:Arouca",
+  "away_key": "Portugal:Nacional",
+  "div": "P1",
+  "home_div": "P1",
+  "away_div": "P1",
+  "country": "Portugal"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: CD Nacional at FC Arouca\nCompetition: Primeira Liga\nDate: 2026-11-01 10:30 EST\nModel Version: 1.1.1+ensemble-xg-hl240-k8-elo22\nData Cutoff: 2026-10-27\n\nPRIMARY FINAL SCORE PREDICTION\n\nFC Arouca 1 \u2013 1 CD Nacional\n(modal exact score, probability 11.8%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.67\nAway: 1.01\nExpected Total: 2.68\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 52.7%\nDraw: 24.8%\nAway Win: 22.4%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 11.8%\n2. 1\u20130: 11.2%\n3. 2\u20130: 9.6%\n4. 2\u20131: 9.6%\n5. 0\u20130: 7.2%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 24.9%\nTotal 2 goals: 24.9%\nTotal 3 goals: 22.0%\nTotal 4 goals: 14.7%\nTotal 5+ goals: 13.4%\n\nBoth Teams Score: 51.7%\nClean sheet FC Arouca: 36.7% \u00b7 Clean sheet CD Nacional: 18.8%\n\nMATCH INTELLIGENCE\n\n1. Independent results-only Elo: Arouca 1551 vs Nacional 1400 (gap +151 before home advantage).\n2. Arouca attack vs Nacional defence: time-weighted strength gap multiplies Arouca's scoring rate by \u00d71.16 relative to an average pairing (from 29/28 decay-weighted matches).\n3. Home advantage (Portugal, fitted from results): \u00d71.15 on Arouca's scoring rate.\n\nMODEL CONFIDENCE\n\nMost likely result has P = 52.7%. In the out-of-sample backtest, favourites priced 0.50\u20130.60 won 54.6% \u00b1 0.5% (n=9575, mean forecast 54.3%). Backtest RPS for P1: 0.1843; exact-score top-5 hit rate 54.1% (n=999). Overall champion RPS 0.2098 vs home/away baseline 0.2283 (1.1.1+ensemble-xg-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-27, n=40,559). Outcome-certainty tier: MODERATE (entropy 1.019 nats of max 1.099).\nParameter-uncertainty 80% bands: xG FC Arouca 1.27\u20132.12, xG CD Nacional 0.73\u20131.30; P(home win) 40.6%\u201364.4%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0007 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nArouca: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-10-28 17:54 EDT (4-2-3-1)\n  Ignacio de Arruabarrena (G), Tiago Esgaio (D), Javi S\u00e1nchez (D), Jose Font\u00e1n (D), Orest Lebedenko (D), Espen van Ee (M), Taichi Fukui (M), Alfonso Trezza (F), Pedro Santos (M), Na\u00efs Djouahra (F), Barbero (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\nNacional: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-10-28 17:54 EDT (5-4-1)\n  Renato Marin (G), Francisco Gon\u00e7alves (D), Matheus Dias (M), Z\u00e9 V\u00edtor (D), Markus Gustav Jensen (F), William Kokolo (M), Stavros Gavriel (M), Chiheb Labidi (M), Miguel Baeza (M), Min-Kyu Song (F), Njoya Kader (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nKEY ABSENCES\n\n- Arouca: Miguel Puche \u2014 injury, Day to day [FotMob, 2026-10-28 17:54 EDT]\n- Nacional: L\u00e9o Santos \u2014 injury, Day to day [FotMob, 2026-10-28 17:54 EDT]\n- Nacional: Ulisses Rocha \u2014 injury, Day to day [FotMob, 2026-10-28 17:54 EDT]\n\nWEATHER AT VENUE\n\nEst\u00e1dio Municipal de Arouca, Arouca: 22.6 \u00b0C, wind 1.8 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-10-28 17:54 EDT]\n\nREST & TRAVEL\n\nArouca: 8 days' rest, 2 matches in previous 21 days \u00b7 Nacional: 7 days' rest, 2 in 21 days \u00b7 away travel 1196.5 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 52.7% / 24.8% / 22.4%, xG 1.67\u20131.01\n- Understat xG component (validated, in ensemble): home -3.42 pp, draw +1.12 pp, away +2.30 pp; xG -0.062 / +0.069\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +1.22 pp, draw -0.67 pp, away -0.54 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- lineup: not applied (failed validation; no live features)\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Arouca: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Arouca: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n- Nacional: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Nacional: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nFINAL VERDICT\n\nArouca 1\u20131 Nacional is the single most probable scoreline at 11.8%: expected goals 1.67\u20131.01 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.047). Exact scores are inherently uncertain; the 1X2 split is 52.7%/24.8%/22.4%.\n",
+ "frozen_at": "2026-10-28T21:54:08+00:00",
+ "sha256": "52992eaadf17a4bb3e07ed18252532f2dc70eb5b07d930f73bd05cc980474881"
+}

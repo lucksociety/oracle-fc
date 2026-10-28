@@ -1,0 +1,616 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.1.1+ensemble-xg-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-10-27",
+ "generated_at": "2026-10-28T21:53:01+00:00",
+ "fixture": {
+  "event_id": "POLY-1209169",
+  "home_name": "Wolverhampton Wanderers FC",
+  "away_name": "Cardiff City FC",
+  "competition": "EFL Championship",
+  "subcategory": "elc",
+  "kickoff_utc": "2026-10-31T15:00:00+00:00",
+  "kickoff_local": "2026-10-31 11:00 EDT",
+  "home_matched": "Wolves",
+  "away_matched": "Cardiff",
+  "match_methods": {
+   "home": {
+    "source": "Wolverhampton Wanderers FC",
+    "matched": "Wolves",
+    "method": "alias",
+    "score": 1.0
+   },
+   "away": {
+    "source": "Cardiff City FC",
+    "matched": "Cardiff",
+    "method": "token-subset",
+    "score": 0.9
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.5218150587739578,
+  "p_draw": 0.24392552118418087,
+  "p_away": 0.2342594200418614,
+  "xg_home": 1.7232268594953286,
+  "xg_away": 1.0792847462013775,
+  "xg_total": 2.802511605696706,
+  "median_total": 3,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.11522643439623528
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.11522643439623528
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.10229798295376143
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.0967267171032717
+   },
+   {
+    "home": 2,
+    "away": 0,
+    "p": 0.09031098201019801
+   },
+   {
+    "home": 0,
+    "away": 0,
+    "p": 0.06416239999656179
+   }
+  ],
+  "btts": 0.5440342953491203,
+  "totals_over": {
+   "over_0.5": 0.9358376000034382,
+   "over_1.5": 0.7710761664463078,
+   "over_2.5": 0.5304455692986035,
+   "over_3.5": 0.3087980504190404,
+   "over_4.5": 0.1534148853240082,
+   "over_5.5": 0.0660414328389774,
+   "over_6.5": 0.02499319569416085
+  },
+  "total_buckets": {
+   "0-1": 0.22892383355369217,
+   "2": 0.2406305971477043,
+   "3": 0.22164751887956316,
+   "4": 0.15538316509503222,
+   "5+": 0.1534148853240082
+  },
+  "clean_sheet_home": 0.341362747872938,
+  "clean_sheet_away": 0.17876535677450364,
+  "home_goal_dist": [
+   0.17876535677450364,
+   0.30749353579299377,
+   0.2647473528222126,
+   0.1521228636941615,
+   0.06562418219024459,
+   0.022670254976512556,
+   0.006532649716796029,
+   0.002043804032575398
+  ],
+  "away_goal_dist": [
+   0.341362747872938,
+   0.36536756106795093,
+   0.19706519955043275,
+   0.07140243658193535,
+   0.01954643081793765,
+   0.004310650624155392,
+   0.000797412657940745,
+   0.00014756082670926894
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    3
+   ],
+   "away_goals_80": [
+    0,
+    2
+   ],
+   "total_goals_80": [
+    1,
+    5
+   ],
+   "goal_diff_80": [
+    -1,
+    3
+   ]
+  },
+  "score_grid": [
+   [
+    0.064162,
+    0.062463,
+    0.035093,
+    0.012666,
+    0.003455,
+    0.000759,
+    0.00014
+   ],
+   [
+    0.102298,
+    0.115226,
+    0.060498,
+    0.021884,
+    0.005982,
+    0.001317,
+    0.000243
+   ],
+   [
+    0.090311,
+    0.096727,
+    0.052204,
+    0.018927,
+    0.005184,
+    0.001144,
+    0.000212
+   ],
+   [
+    0.051757,
+    0.055571,
+    0.030064,
+    0.010924,
+    0.002998,
+    0.000663,
+    0.000123
+   ],
+   [
+    0.022269,
+    0.023969,
+    0.012998,
+    0.004734,
+    0.001302,
+    0.000288,
+    5.4e-05
+   ],
+   [
+    0.007673,
+    0.008279,
+    0.0045,
+    0.001643,
+    0.000453,
+    0.0001,
+    1.9e-05
+   ],
+   [
+    0.002205,
+    0.002385,
+    0.0013,
+    0.000475,
+    0.000131,
+    2.9e-05,
+    5e-06
+   ]
+  ],
+  "mass_check": 1.0000000000000002
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.5219400000000001,
+  "p_draw": 0.24379,
+  "p_away": 0.23427000000000003,
+  "se": [
+   0.0011169571083976323,
+   0.0009600948804675504,
+   0.0009470680205243972
+  ],
+  "max_abs_dev_vs_exact": 0.00013552118418086456,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   1.3201855390837445,
+   2.1637000576007774
+  ],
+  "xg_away_80": [
+   0.8406708581744072,
+   1.331716478738407
+  ],
+  "p_home_80": [
+   0.4064344123158524,
+   0.6289103728636214
+  ],
+  "p_draw_80": [
+   0.20884280393643825,
+   0.2852947241109505
+  ],
+  "p_away_80": [
+   0.1580964800057509,
+   0.3116204826944735
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.19587374592907558,
+   0.1707236319980921
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.49937861226638885,
+   "p_draw": 0.2481144353629179,
+   "p_away": 0.25250695237069326,
+   "xg_home": 1.72494595391128,
+   "xg_away": 1.1659554977313673,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.5366245070336666,
+   "p_draw": 0.24339312238461142,
+   "p_away": 0.21998237058172182,
+   "xg_home": 1.6672410049610853,
+   "xg_away": 0.9729973600346531,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.3809866184010543,
+   "p_draw": 0.26901497402278346,
+   "p_away": 0.3499984075761623,
+   "xg_home": 1.4248862400156384,
+   "xg_away": 1.356748084626415,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.43362929859923616,
+   "p_draw": 0.26159331450305645,
+   "p_away": 0.30477738689770745,
+   "xg_home": 1.4320617984640485,
+   "xg_away": 1.1567024686904,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.5122664234333227,
+   "p_draw": 0.2438097588889564,
+   "p_away": 0.2439238176777208,
+   "xg_home": 1.773497784797212,
+   "xg_away": 1.1604246135338074,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Home advantage (England, fitted from results): \u00d71.21 on Wolves's scoring rate.",
+   "effect": 0.1924
+  },
+  {
+   "text": "Wolves attack vs Cardiff defence: time-weighted strength gap multiplies Wolves's scoring rate by \u00d71.18 relative to an average pairing (from 35/39 decay-weighted matches).",
+   "effect": 0.1678
+  },
+  {
+   "text": "Independent results-only Elo: Wolves 1507 vs Cardiff 1409 (gap +98 before home advantage).",
+   "effect": 0.1471
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.5218150587739577,
+  "p_draw": 0.24392552118418084,
+  "p_away": 0.23425942004186134,
+  "xg_home": 1.7232268594953284,
+  "xg_away": 1.0792847462013773
+ },
+ "context": {
+  "fetched_at": "2026-10-28T21:53:01+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5836909",
+    "fetched_at": "2026-10-28T21:53:01+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "4-2-3-1",
+    "starters": [
+     {
+      "name": "Jos\u00e9 S\u00e1",
+      "pos": "G"
+     },
+     {
+      "name": "Kieran Trippier",
+      "pos": "D"
+     },
+     {
+      "name": "Yerson Mosquera",
+      "pos": "D"
+     },
+     {
+      "name": "Ladislav Krejc\u00ed",
+      "pos": "D"
+     },
+     {
+      "name": "Hugo Bueno",
+      "pos": "D"
+     },
+     {
+      "name": "Andr\u00e9",
+      "pos": "M"
+     },
+     {
+      "name": "Marshall Munetsi",
+      "pos": "M"
+     },
+     {
+      "name": "Jean-Ricner Bellegarde",
+      "pos": "F"
+     },
+     {
+      "name": "Jordan James",
+      "pos": "M"
+     },
+     {
+      "name": "Rafiki Sa\u00efd",
+      "pos": "F"
+     },
+     {
+      "name": "Adam Armstrong",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-10-28T21:53:01+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   },
+   "away": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "4-2-3-1",
+    "starters": [
+     {
+      "name": "Nathan Trott",
+      "pos": "G"
+     },
+     {
+      "name": "Perry Ng",
+      "pos": "D"
+     },
+     {
+      "name": "William Fish",
+      "pos": "D"
+     },
+     {
+      "name": "Joel Bagan",
+      "pos": "D"
+     },
+     {
+      "name": "Calum Scanlon",
+      "pos": "D"
+     },
+     {
+      "name": "Alex Robertson",
+      "pos": "M"
+     },
+     {
+      "name": "Jack Moylan",
+      "pos": "M"
+     },
+     {
+      "name": "Ollie Tanner",
+      "pos": "F"
+     },
+     {
+      "name": "Joel Colwill",
+      "pos": "M"
+     },
+     {
+      "name": "Cian Ashford",
+      "pos": "F"
+     },
+     {
+      "name": "Yousef Salech",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-10-28T21:53:01+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Bertrand Traor\u00e9",
+     "type": "injury",
+     "expected_return": "Early November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836909",
+     "fetched_at": "2026-10-28T21:53:01+00:00"
+    },
+    {
+     "player": "Boubacar Traor\u00e9",
+     "type": "injury",
+     "expected_return": "Early November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836909",
+     "fetched_at": "2026-10-28T21:53:01+00:00"
+    },
+    {
+     "player": "Rodrigo Gomes",
+     "type": "injury",
+     "expected_return": "Early November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836909",
+     "fetched_at": "2026-10-28T21:53:01+00:00"
+    },
+    {
+     "player": "Raul Jim\u00e9nez",
+     "type": "injury",
+     "expected_return": "Early January 2027",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836909",
+     "fetched_at": "2026-10-28T21:53:01+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "Dylan Lawlor",
+     "type": "injury",
+     "expected_return": "Early November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836909",
+     "fetched_at": "2026-10-28T21:53:01+00:00"
+    },
+    {
+     "player": "Rubin Colwill",
+     "type": "injury",
+     "expected_return": "Early November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836909",
+     "fetched_at": "2026-10-28T21:53:01+00:00"
+    },
+    {
+     "player": "Calum Chambers",
+     "type": "injury",
+     "expected_return": "Early November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836909",
+     "fetched_at": "2026-10-28T21:53:01+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 7,
+    "n21": 5,
+    "last_match": "2026-10-24"
+   },
+   "away": {
+    "rest_days": 7,
+    "n21": 4,
+    "last_match": "2026-10-24"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 144.3
+  },
+  "venue": {
+   "name": "Molineux Stadium",
+   "city": "Wolverhampton, West Midlands",
+   "lat": 52.590238498,
+   "lon": -2.130433023
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 1.25,
+   "temp_c": 8.5,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=52.59&longitude=-2.13",
+   "fetched_at": "2026-10-28T21:53:01+00:00",
+   "lat": 52.590238498,
+   "lon": -2.130433023
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": -1.01,
+    "d_p_draw_pp": -0.01,
+    "d_p_away_pp": 1.02,
+    "d_xg_home": 0.053,
+    "d_xg_away": 0.086
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 0.9702,
+    "away_rate_mult": 1.034,
+    "d_p_home_pp": -2.1,
+    "d_p_draw_pp": 0.44,
+    "d_p_away_pp": 1.65,
+    "d_xg_home": -0.051,
+    "d_xg_away": 0.037,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0138,
+    "away_rate_mult": 1.0058,
+    "d_p_home_pp": 0.42,
+    "d_p_draw_pp": -0.23,
+    "d_p_away_pp": -0.19,
+    "d_xg_home": 0.024,
+    "d_xg_away": 0.006,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "reason": "failed validation; no live features"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 7.0,
+   "rest_a": 7.0,
+   "n21_h": 5.0,
+   "n21_a": 4.0,
+   "travel_km": 144.29826779886778,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 1.25,
+   "temp_c": 8.5
+  }
+ },
+ "confidence": {
+  "tier": "MODERATE",
+  "p_max": 0.5218150587739578,
+  "entropy_nats": 1.0235499259242722,
+  "text": "Most likely result has P = 52.2%. In the out-of-sample backtest, favourites priced 0.50\u20130.60 won 54.6% \u00b1 0.5% (n=9575, mean forecast 54.3%). Backtest RPS for E1: 0.2179; exact-score top-5 hit rate 50.7% (n=1800). Overall champion RPS 0.2098 vs home/away baseline 0.2283 (1.1.1+ensemble-xg-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-27, n=40,559). Outcome-certainty tier: MODERATE (entropy 1.024 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Wolves: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Wolves: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.",
+  "Cardiff: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Cardiff: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+ ],
+ "verdict": "Wolves 1\u20131 Cardiff is the single most probable scoreline at 11.5%: expected goals 1.72\u20131.08 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.047). Exact scores are inherently uncertain; the 1X2 split is 52.2%/24.4%/23.4%.",
+ "resolved": {
+  "home_key": "England:Wolves",
+  "away_key": "England:Cardiff",
+  "div": "E1",
+  "home_div": "E1",
+  "away_div": "E1",
+  "country": "England"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: Cardiff City FC at Wolverhampton Wanderers FC\nCompetition: EFL Championship\nDate: 2026-10-31 11:00 EDT\nModel Version: 1.1.1+ensemble-xg-hl240-k8-elo22\nData Cutoff: 2026-10-27\n\nPRIMARY FINAL SCORE PREDICTION\n\nWolverhampton Wanderers FC 1 \u2013 1 Cardiff City FC\n(modal exact score, probability 11.5%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.72\nAway: 1.08\nExpected Total: 2.80\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 52.2%\nDraw: 24.4%\nAway Win: 23.4%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 11.5%\n2. 1\u20130: 10.2%\n3. 2\u20131: 9.7%\n4. 2\u20130: 9.0%\n5. 0\u20130: 6.4%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 22.9%\nTotal 2 goals: 24.1%\nTotal 3 goals: 22.2%\nTotal 4 goals: 15.5%\nTotal 5+ goals: 15.3%\n\nBoth Teams Score: 54.4%\nClean sheet Wolverhampton Wanderers FC: 34.1% \u00b7 Clean sheet Cardiff City FC: 17.9%\n\nMATCH INTELLIGENCE\n\n1. Home advantage (England, fitted from results): \u00d71.21 on Wolves's scoring rate.\n2. Wolves attack vs Cardiff defence: time-weighted strength gap multiplies Wolves's scoring rate by \u00d71.18 relative to an average pairing (from 35/39 decay-weighted matches).\n3. Independent results-only Elo: Wolves 1507 vs Cardiff 1409 (gap +98 before home advantage).\n\nMODEL CONFIDENCE\n\nMost likely result has P = 52.2%. In the out-of-sample backtest, favourites priced 0.50\u20130.60 won 54.6% \u00b1 0.5% (n=9575, mean forecast 54.3%). Backtest RPS for E1: 0.2179; exact-score top-5 hit rate 50.7% (n=1800). Overall champion RPS 0.2098 vs home/away baseline 0.2283 (1.1.1+ensemble-xg-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-27, n=40,559). Outcome-certainty tier: MODERATE (entropy 1.024 nats of max 1.099).\nParameter-uncertainty 80% bands: xG Wolverhampton Wanderers FC 1.32\u20132.16, xG Cardiff City FC 0.84\u20131.33; P(home win) 40.6%\u201362.9%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0001 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nWolves: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-10-28 17:53 EDT (4-2-3-1)\n  Jos\u00e9 S\u00e1 (G), Kieran Trippier (D), Yerson Mosquera (D), Ladislav Krejc\u00ed (D), Hugo Bueno (D), Andr\u00e9 (M), Marshall Munetsi (M), Jean-Ricner Bellegarde (F), Jordan James (M), Rafiki Sa\u00efd (F), Adam Armstrong (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\nCardiff: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-10-28 17:53 EDT (4-2-3-1)\n  Nathan Trott (G), Perry Ng (D), William Fish (D), Joel Bagan (D), Calum Scanlon (D), Alex Robertson (M), Jack Moylan (M), Ollie Tanner (F), Joel Colwill (M), Cian Ashford (F), Yousef Salech (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nKEY ABSENCES\n\n- Wolves: Bertrand Traor\u00e9 \u2014 injury, Early November 2026 [FotMob, 2026-10-28 17:53 EDT]\n- Wolves: Boubacar Traor\u00e9 \u2014 injury, Early November 2026 [FotMob, 2026-10-28 17:53 EDT]\n- Wolves: Rodrigo Gomes \u2014 injury, Early November 2026 [FotMob, 2026-10-28 17:53 EDT]\n- Wolves: Raul Jim\u00e9nez \u2014 injury, Early January 2027 [FotMob, 2026-10-28 17:53 EDT]\n- Cardiff: Dylan Lawlor \u2014 injury, Early November 2026 [FotMob, 2026-10-28 17:53 EDT]\n- Cardiff: Rubin Colwill \u2014 injury, Early November 2026 [FotMob, 2026-10-28 17:53 EDT]\n- Cardiff: Calum Chambers \u2014 injury, Early November 2026 [FotMob, 2026-10-28 17:53 EDT]\n\nWEATHER AT VENUE\n\nMolineux Stadium, Wolverhampton, West Midlands: 8.5 \u00b0C, wind 1.2 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-10-28 17:53 EDT]\n\nREST & TRAVEL\n\nWolves: 7 days' rest, 5 matches in previous 21 days \u00b7 Cardiff: 7 days' rest, 4 in 21 days \u00b7 away travel 144.3 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 52.2% / 24.4% / 23.4%, xG 1.72\u20131.08\n- Understat xG component (validated, in ensemble): home -1.01 pp, draw -0.01 pp, away +1.02 pp; xG +0.053 / +0.086\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home -2.10 pp, draw +0.44 pp, away +1.65 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.42 pp, draw -0.23 pp, away -0.19 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- lineup: not applied (failed validation; no live features)\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Wolves: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Wolves: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n- Cardiff: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Cardiff: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nFINAL VERDICT\n\nWolves 1\u20131 Cardiff is the single most probable scoreline at 11.5%: expected goals 1.72\u20131.08 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.047). Exact scores are inherently uncertain; the 1X2 split is 52.2%/24.4%/23.4%.\n",
+ "frozen_at": "2026-10-28T21:53:01+00:00",
+ "sha256": "e0af4fd119dd9ede0bd853c8eb86ec40f70b5ef02d08c34836fdea67a4026f11"
+}

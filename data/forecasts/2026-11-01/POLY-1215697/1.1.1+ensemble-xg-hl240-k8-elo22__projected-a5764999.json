@@ -1,0 +1,592 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.1.1+ensemble-xg-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-10-27",
+ "generated_at": "2026-10-28T21:53:58+00:00",
+ "fixture": {
+  "event_id": "POLY-1215697",
+  "home_name": "Hannover 96",
+  "away_name": "SG Dynamo Dresden",
+  "competition": "Bundesliga 2",
+  "subcategory": "bl2",
+  "kickoff_utc": "2026-11-01T12:30:00+00:00",
+  "kickoff_local": "2026-11-01 07:30 EST",
+  "home_matched": "Hannover",
+  "away_matched": "Dresden",
+  "match_methods": {
+   "home": {
+    "source": "Hannover 96",
+    "matched": "Hannover",
+    "method": "token-subset",
+    "score": 0.9
+   },
+   "away": {
+    "source": "SG Dynamo Dresden",
+    "matched": "Dresden",
+    "method": "token-subset",
+    "score": 0.9
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.5185172365369507,
+  "p_draw": 0.23628259782997846,
+  "p_away": 0.24520016563307098,
+  "xg_home": 1.8102300628666528,
+  "xg_away": 1.1794020280002855,
+  "xg_total": 2.9896320908669383,
+  "median_total": 3,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.1102380565204233
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.1102380565204233
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.0971165692980494
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.08816772675842321
+   },
+   {
+    "home": 2,
+    "away": 0,
+    "p": 0.0823574303070373
+   },
+   {
+    "home": 1,
+    "away": 2,
+    "p": 0.06333215324465091
+   }
+  ],
+  "btts": 0.5818672652115287,
+  "totals_over": {
+   "over_0.5": 0.9467790026904006,
+   "over_1.5": 0.8020597080164115,
+   "over_2.5": 0.5744100562648623,
+   "over_3.5": 0.3504508615469117,
+   "over_4.5": 0.18305993235340212,
+   "over_5.5": 0.08294755607940618,
+   "over_6.5": 0.03304009178168107
+  },
+  "total_buckets": {
+   "0-1": 0.19794029198358878,
+   "2": 0.22764965175154908,
+   "3": 0.22395919471795056,
+   "4": 0.1673909291935096,
+   "5+": 0.18305993235340212
+  },
+  "clean_sheet_home": 0.30748284200908615,
+  "clean_sheet_away": 0.1638708900889848,
+  "home_goal_dist": [
+   0.1638708900889848,
+   0.29613193270391963,
+   0.2678274532299911,
+   0.16164150334152286,
+   0.07323744539268702,
+   0.026572110130855066,
+   0.008041938829552583,
+   0.002676726282487024
+  ],
+  "away_goal_dist": [
+   0.30748284200908615,
+   0.3626052588271357,
+   0.2138249652241943,
+   0.08406845927723591,
+   0.024791980781792965,
+   0.005849546074210386,
+   0.0011502582078561896,
+   0.00022668959848852694
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    4
+   ],
+   "away_goals_80": [
+    0,
+    3
+   ],
+   "total_goals_80": [
+    1,
+    5
+   ],
+   "goal_diff_80": [
+    -1,
+    3
+   ]
+  },
+  "score_grid": [
+   [
+    0.053221,
+    0.056552,
+    0.035054,
+    0.013789,
+    0.004068,
+    0.00096,
+    0.000189
+   ],
+   [
+    0.088168,
+    0.110238,
+    0.063332,
+    0.024906,
+    0.007346,
+    0.001734,
+    0.000341
+   ],
+   [
+    0.082357,
+    0.097117,
+    0.057266,
+    0.022514,
+    0.006639,
+    0.001566,
+    0.000308
+   ],
+   [
+    0.049721,
+    0.058616,
+    0.034554,
+    0.013581,
+    0.004004,
+    0.000944,
+    0.000186
+   ],
+   [
+    0.022535,
+    0.026559,
+    0.015652,
+    0.00615,
+    0.001813,
+    0.000427,
+    8.4e-05
+   ],
+   [
+    0.008179,
+    0.009637,
+    0.005678,
+    0.00223,
+    0.000657,
+    0.000155,
+    3e-05
+   ],
+   [
+    0.002476,
+    0.002917,
+    0.001718,
+    0.000675,
+    0.000199,
+    4.7e-05,
+    9e-06
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.5192000000000001,
+  "p_draw": 0.236345,
+  "p_away": 0.24445500000000003,
+  "se": [
+   0.0011172093805549611,
+   0.0009499632650134425,
+   0.0009609806266907778
+  ],
+  "max_abs_dev_vs_exact": 0.0007451656330709489,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   1.3653120290965037,
+   2.298814794822259
+  ],
+  "xg_away_80": [
+   0.8612991429907454,
+   1.524088489566992
+  ],
+  "p_home_80": [
+   0.3926634666471143,
+   0.6438593562700092
+  ],
+  "p_draw_80": [
+   0.199497534079155,
+   0.27597184480064557
+  ],
+  "p_away_80": [
+   0.15262885112675983,
+   0.3435174498362089
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.20656378991414512,
+   0.2118013839611541
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.4993538569119075,
+   "p_draw": 0.24496862730316693,
+   "p_away": 0.25567751578492565,
+   "xg_home": 1.7584723229541461,
+   "xg_away": 1.2010591549084906,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.5387006116048877,
+   "p_draw": 0.22541140396166967,
+   "p_away": 0.23588798443344272,
+   "xg_home": 1.8737868538191729,
+   "xg_away": 1.1676576572572501,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.5077035280721718,
+   "p_draw": 0.24384244804626823,
+   "p_away": 0.24845402388156007,
+   "xg_home": 1.815449902496792,
+   "xg_away": 1.2150548081933317,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.4539302869182808,
+   "p_draw": 0.24270459977321962,
+   "p_away": 0.30336511330849975,
+   "xg_home": 1.6318290201309804,
+   "xg_away": 1.2918726970166408,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.5032273951202819,
+   "p_draw": 0.24473123765879778,
+   "p_away": 0.2520413672209203,
+   "xg_home": 1.761024121911615,
+   "xg_away": 1.1869905682766828,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Home advantage (Germany, fitted from results): \u00d71.30 on Hannover's scoring rate.",
+   "effect": 0.2618
+  },
+  {
+   "text": "Independent results-only Elo: Hannover 1398 vs Dresden 1310 (gap +89 before home advantage).",
+   "effect": 0.1331
+  },
+  {
+   "text": "Hannover attack vs Dresden defence: time-weighted strength gap multiplies Hannover's scoring rate by \u00d71.12 relative to an average pairing (from 29/23 decay-weighted matches).",
+   "effect": 0.1177
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.5185172365369506,
+  "p_draw": 0.23628259782997843,
+  "p_away": 0.24520016563307095,
+  "xg_home": 1.8102300628666526,
+  "xg_away": 1.1794020280002853
+ },
+ "context": {
+  "fetched_at": "2026-10-28T21:53:58+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5881712",
+    "fetched_at": "2026-10-28T21:53:58+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "4-3-1-2",
+    "starters": [
+     {
+      "name": "Leo Weinkauf",
+      "pos": "G"
+     },
+     {
+      "name": "Virgil Ghi\u021b\u0103",
+      "pos": "D"
+     },
+     {
+      "name": "Boris Tomiak",
+      "pos": "D"
+     },
+     {
+      "name": "Jean Hugonet",
+      "pos": "D"
+     },
+     {
+      "name": "Maurice Neubauer",
+      "pos": "M"
+     },
+     {
+      "name": "Husseyn Chakroun",
+      "pos": "F"
+     },
+     {
+      "name": "Stef\u00e1n Th\u00f3rdarson",
+      "pos": "M"
+     },
+     {
+      "name": "Kolja Oudenne",
+      "pos": "M"
+     },
+     {
+      "name": "Waniss Ta\u00efbi",
+      "pos": "F"
+     },
+     {
+      "name": "Benjamin K\u00e4llman",
+      "pos": "F"
+     },
+     {
+      "name": "Marcel Hartel",
+      "pos": "M"
+     }
+    ],
+    "fetched_at": "2026-10-28T21:53:58+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   },
+   "away": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "4-2-3-1",
+    "starters": [
+     {
+      "name": "Lennart Grill",
+      "pos": "G"
+     },
+     {
+      "name": "Jonas Sterner",
+      "pos": "D"
+     },
+     {
+      "name": "Nicolai Rapp",
+      "pos": "M"
+     },
+     {
+      "name": "Friedrich M\u00fcller",
+      "pos": "D"
+     },
+     {
+      "name": "Simon Straudi",
+      "pos": "D"
+     },
+     {
+      "name": "Robert Wagner",
+      "pos": "M"
+     },
+     {
+      "name": "Tobias Raschl",
+      "pos": "M"
+     },
+     {
+      "name": "Patrice \u010covi\u0107",
+      "pos": "M"
+     },
+     {
+      "name": "Niklas Hauptmann",
+      "pos": "M"
+     },
+     {
+      "name": "Ben Bobzien",
+      "pos": "F"
+     },
+     {
+      "name": "Vincent Vermeij",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-10-28T21:53:58+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Mustapha Bundu",
+     "type": "injury",
+     "expected_return": "Unknown",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881712",
+     "fetched_at": "2026-10-28T21:53:58+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "Thomas Leon Keller",
+     "type": "injury",
+     "expected_return": "Late October 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881712",
+     "fetched_at": "2026-10-28T21:53:58+00:00"
+    },
+    {
+     "player": "Lars B\u00fcnning",
+     "type": "injury",
+     "expected_return": "Unknown",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881712",
+     "fetched_at": "2026-10-28T21:53:58+00:00"
+    },
+    {
+     "player": "Kenneth Schmidt",
+     "type": "injury",
+     "expected_return": "Early November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881712",
+     "fetched_at": "2026-10-28T21:53:58+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 7,
+    "n21": 2,
+    "last_match": "2026-10-25"
+   },
+   "away": {
+    "rest_days": 7,
+    "n21": 2,
+    "last_match": "2026-10-25"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 313.2
+  },
+  "venue": {
+   "name": "Heinz von Heiden-Arena",
+   "city": "Hannover",
+   "lat": 52.359990781,
+   "lon": 9.731213897
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 0.96,
+   "temp_c": 10.4,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=52.36&longitude=9.731",
+   "fetched_at": "2026-10-28T21:53:58+00:00",
+   "lat": 52.359990781,
+   "lon": 9.731213897
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": -1.61,
+    "d_p_draw_pp": 0.89,
+    "d_p_away_pp": 0.72,
+    "d_xg_home": -0.052,
+    "d_xg_away": 0.008
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0221,
+    "away_rate_mult": 1.0093,
+    "d_p_home_pp": 0.67,
+    "d_p_draw_pp": -0.34,
+    "d_p_away_pp": -0.33,
+    "d_xg_home": 0.04,
+    "d_xg_away": 0.011,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "reason": "failed validation; no live features"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 7.0,
+   "rest_a": 7.0,
+   "n21_h": 2.0,
+   "n21_a": 2.0,
+   "travel_km": 313.2259570076558,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 0.96,
+   "temp_c": 10.4
+  }
+ },
+ "confidence": {
+  "tier": "MODERATE",
+  "p_max": 0.5185172365369507,
+  "entropy_nats": 1.0261170815005014,
+  "text": "Most likely result has P = 51.9%. In the out-of-sample backtest, favourites priced 0.50\u20130.60 won 54.6% \u00b1 0.5% (n=9575, mean forecast 54.3%). Backtest RPS for D2: 0.2217; exact-score top-5 hit rate 42.8% (n=999). Overall champion RPS 0.2098 vs home/away baseline 0.2283 (1.1.1+ensemble-xg-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-27, n=40,559). Outcome-certainty tier: MODERATE (entropy 1.026 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Hannover: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Hannover: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.",
+  "Dresden: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Dresden: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+ ],
+ "verdict": "Hannover 1\u20131 Dresden is the single most probable scoreline at 11.0%: expected goals 1.81\u20131.18 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.047). Exact scores are inherently uncertain; the 1X2 split is 51.9%/23.6%/24.5%.",
+ "resolved": {
+  "home_key": "Germany:Hannover",
+  "away_key": "Germany:Dresden",
+  "div": "D2",
+  "home_div": "D2",
+  "away_div": "D2",
+  "country": "Germany"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: SG Dynamo Dresden at Hannover 96\nCompetition: Bundesliga 2\nDate: 2026-11-01 07:30 EST\nModel Version: 1.1.1+ensemble-xg-hl240-k8-elo22\nData Cutoff: 2026-10-27\n\nPRIMARY FINAL SCORE PREDICTION\n\nHannover 96 1 \u2013 1 SG Dynamo Dresden\n(modal exact score, probability 11.0%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.81\nAway: 1.18\nExpected Total: 2.99\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 51.9%\nDraw: 23.6%\nAway Win: 24.5%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 11.0%\n2. 2\u20131: 9.7%\n3. 1\u20130: 8.8%\n4. 2\u20130: 8.2%\n5. 1\u20132: 6.3%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 19.8%\nTotal 2 goals: 22.8%\nTotal 3 goals: 22.4%\nTotal 4 goals: 16.7%\nTotal 5+ goals: 18.3%\n\nBoth Teams Score: 58.2%\nClean sheet Hannover 96: 30.7% \u00b7 Clean sheet SG Dynamo Dresden: 16.4%\n\nMATCH INTELLIGENCE\n\n1. Home advantage (Germany, fitted from results): \u00d71.30 on Hannover's scoring rate.\n2. Independent results-only Elo: Hannover 1398 vs Dresden 1310 (gap +89 before home advantage).\n3. Hannover attack vs Dresden defence: time-weighted strength gap multiplies Hannover's scoring rate by \u00d71.12 relative to an average pairing (from 29/23 decay-weighted matches).\n\nMODEL CONFIDENCE\n\nMost likely result has P = 51.9%. In the out-of-sample backtest, favourites priced 0.50\u20130.60 won 54.6% \u00b1 0.5% (n=9575, mean forecast 54.3%). Backtest RPS for D2: 0.2217; exact-score top-5 hit rate 42.8% (n=999). Overall champion RPS 0.2098 vs home/away baseline 0.2283 (1.1.1+ensemble-xg-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-27, n=40,559). Outcome-certainty tier: MODERATE (entropy 1.026 nats of max 1.099).\nParameter-uncertainty 80% bands: xG Hannover 96 1.37\u20132.30, xG SG Dynamo Dresden 0.86\u20131.52; P(home win) 39.3%\u201364.4%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0007 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nHannover: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-10-28 17:53 EDT (4-3-1-2)\n  Leo Weinkauf (G), Virgil Ghi\u021b\u0103 (D), Boris Tomiak (D), Jean Hugonet (D), Maurice Neubauer (M), Husseyn Chakroun (F), Stef\u00e1n Th\u00f3rdarson (M), Kolja Oudenne (M), Waniss Ta\u00efbi (F), Benjamin K\u00e4llman (F), Marcel Hartel (M)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\nDresden: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-10-28 17:53 EDT (4-2-3-1)\n  Lennart Grill (G), Jonas Sterner (D), Nicolai Rapp (M), Friedrich M\u00fcller (D), Simon Straudi (D), Robert Wagner (M), Tobias Raschl (M), Patrice \u010covi\u0107 (M), Niklas Hauptmann (M), Ben Bobzien (F), Vincent Vermeij (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nKEY ABSENCES\n\n- Hannover: Mustapha Bundu \u2014 injury, Unknown [FotMob, 2026-10-28 17:53 EDT]\n- Dresden: Thomas Leon Keller \u2014 injury, Late October 2026 [FotMob, 2026-10-28 17:53 EDT]\n- Dresden: Lars B\u00fcnning \u2014 injury, Unknown [FotMob, 2026-10-28 17:53 EDT]\n- Dresden: Kenneth Schmidt \u2014 injury, Early November 2026 [FotMob, 2026-10-28 17:53 EDT]\n\nWEATHER AT VENUE\n\nHeinz von Heiden-Arena, Hannover: 10.4 \u00b0C, wind 1.0 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-10-28 17:53 EDT]\n\nREST & TRAVEL\n\nHannover: 7 days' rest, 2 matches in previous 21 days \u00b7 Dresden: 7 days' rest, 2 in 21 days \u00b7 away travel 313.2 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 51.9% / 23.6% / 24.5%, xG 1.81\u20131.18\n- Understat xG component (validated, in ensemble): home -1.61 pp, draw +0.89 pp, away +0.72 pp; xG -0.052 / +0.008\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.67 pp, draw -0.34 pp, away -0.33 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- lineup: not applied (failed validation; no live features)\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Hannover: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Hannover: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n- Dresden: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Dresden: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nFINAL VERDICT\n\nHannover 1\u20131 Dresden is the single most probable scoreline at 11.0%: expected goals 1.81\u20131.18 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.047). Exact scores are inherently uncertain; the 1X2 split is 51.9%/23.6%/24.5%.\n",
+ "frozen_at": "2026-10-28T21:53:58+00:00",
+ "sha256": "fc404e4a82e58f6a66a8fd9cdb5b2557acac8ae0d2fae37a11de8273bedc8358"
+}

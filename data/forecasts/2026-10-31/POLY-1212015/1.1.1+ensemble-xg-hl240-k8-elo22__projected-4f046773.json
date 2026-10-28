@@ -1,0 +1,632 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.1.1+ensemble-xg-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-10-27",
+ "generated_at": "2026-10-28T21:53:14+00:00",
+ "fixture": {
+  "event_id": "POLY-1212015",
+  "home_name": "PSV",
+  "away_name": "Willem II Tilburg",
+  "competition": "Eredivisie 2025",
+  "subcategory": "ere",
+  "kickoff_utc": "2026-10-31T17:45:00+00:00",
+  "kickoff_local": "2026-10-31 13:45 EDT",
+  "home_matched": "PSV Eindhoven",
+  "away_matched": "Willem II",
+  "match_methods": {
+   "home": {
+    "source": "PSV",
+    "matched": "PSV Eindhoven",
+    "method": "alias",
+    "score": 1.0
+   },
+   "away": {
+    "source": "Willem II Tilburg",
+    "matched": "Willem II",
+    "method": "token-subset",
+    "score": 0.9
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.9197546010967025,
+  "p_draw": 0.05509279672869462,
+  "p_away": 0.025152602174603127,
+  "xg_home": 4.199403809842308,
+  "xg_away": 0.7550945463999713,
+  "xg_total": 4.954498356242279,
+  "median_total": 5,
+  "modal_score": {
+   "home": 4,
+   "away": 0,
+   "p": 0.09157211231536388
+  },
+  "top_scores": [
+   {
+    "home": 4,
+    "away": 0,
+    "p": 0.09157211231536388
+   },
+   {
+    "home": 3,
+    "away": 0,
+    "p": 0.08774818566000592
+   },
+   {
+    "home": 5,
+    "away": 0,
+    "p": 0.07684780235990861
+   },
+   {
+    "home": 4,
+    "away": 1,
+    "p": 0.06747890384892374
+   },
+   {
+    "home": 3,
+    "away": 1,
+    "p": 0.06392812951998886
+   }
+  ],
+  "btts": 0.5187295387949263,
+  "totals_over": {
+   "over_0.5": 0.9920228142537989,
+   "over_1.5": 0.9569555571472198,
+   "over_2.5": 0.869191720900833,
+   "over_3.5": 0.7271651633965582,
+   "over_4.5": 0.5525181282570076,
+   "over_5.5": 0.37942164786930405,
+   "over_6.5": 0.2354013454501353
+  },
+  "total_buckets": {
+   "0-1": 0.04304444285278041,
+   "2": 0.08776383624638674,
+   "3": 0.14202655750427495,
+   "4": 0.17464703513955054,
+   "5+": 0.5525181282570076
+  },
+  "clean_sheet_home": 0.4738588535050348,
+  "clean_sheet_away": 0.015388793446240489,
+  "home_goal_dist": [
+   0.015388793446240489,
+   0.06327885933602631,
+   0.13143732676046527,
+   0.18331824767540886,
+   0.1928891945436173,
+   0.1632371274462204,
+   0.11571138357271123,
+   0.1347390672193104
+  ],
+  "away_goal_dist": [
+   0.4738588535050348,
+   0.34999935858252446,
+   0.13314291706864342,
+   0.0347149026953995,
+   0.006960829428902554,
+   0.0011419396708426317,
+   0.00015937654451154786,
+   2.182250414121684e-05
+  ],
+  "intervals": {
+   "home_goals_80": [
+    2,
+    7
+   ],
+   "away_goals_80": [
+    0,
+    2
+   ],
+   "total_goals_80": [
+    2,
+    8
+   ],
+   "goal_diff_80": [
+    1,
+    6
+   ]
+  },
+  "score_grid": [
+   [
+    0.007977,
+    0.004832,
+    0.001956,
+    0.000501,
+    0.000101,
+    1.7e-05,
+    3e-06
+   ],
+   [
+    0.030235,
+    0.022407,
+    0.008088,
+    0.002061,
+    0.000409,
+    6.8e-05,
+    1e-05
+   ],
+   [
+    0.0634,
+    0.045689,
+    0.016985,
+    0.004343,
+    0.000858,
+    0.00014,
+    2e-05
+   ],
+   [
+    0.087748,
+    0.063928,
+    0.024001,
+    0.006183,
+    0.001227,
+    0.0002,
+    2.8e-05
+   ],
+   [
+    0.091572,
+    0.067479,
+    0.025603,
+    0.006655,
+    0.001329,
+    0.000217,
+    3e-05
+   ],
+   [
+    0.076848,
+    0.057283,
+    0.021966,
+    0.005762,
+    0.001159,
+    0.00019,
+    2.6e-05
+   ],
+   [
+    0.054023,
+    0.040727,
+    0.015779,
+    0.004176,
+    0.000846,
+    0.000139,
+    1.9e-05
+   ]
+  ],
+  "mass_check": 1.0000000000000002
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.920515,
+  "p_draw": 0.054565,
+  "p_away": 0.024919999999999998,
+  "se": [
+   0.0006048435118896458,
+   0.0005078762682730903,
+   0.00034856128299052375
+  ],
+  "max_abs_dev_vs_exact": 0.0007603989032974878,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   3.277094874275805,
+   5.201597757779922
+  ],
+  "xg_away_80": [
+   0.5253521759868465,
+   1.0084025775453251
+  ],
+  "p_home_80": [
+   0.8440716591862634,
+   0.9619328861006039
+  ],
+  "p_draw_80": [
+   0.0292222545280332,
+   0.10336195165880437
+  ],
+  "p_away_80": [
+   0.0098553229235065,
+   0.053691332432397466
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.18317134740897012,
+   0.2419896935388361
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.9213897625395902,
+   "p_draw": 0.05298956261482648,
+   "p_away": 0.0256206748455833,
+   "xg_home": 4.440487174257615,
+   "xg_away": 0.8658898793551721,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.9190458073967147,
+   "p_draw": 0.05734567053812947,
+   "p_away": 0.02360852206515592,
+   "xg_home": 3.8928233696678407,
+   "xg_away": 0.6119603043984536,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.9786702147575422,
+   "p_draw": 0.015770711164655477,
+   "p_away": 0.00555907407780225,
+   "xg_home": 5.855781116420656,
+   "xg_away": 0.7354616556119207,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.4507422514197028,
+   "p_draw": 0.23057214598813094,
+   "p_away": 0.31868560259216616,
+   "xg_home": 1.7654478235803523,
+   "xg_away": 1.454393430312949,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.9212206084060622,
+   "p_draw": 0.053086861063584324,
+   "p_away": 0.025692530530353315,
+   "xg_home": 4.436644706085146,
+   "xg_away": 0.8655870951931168,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "PSV Eindhoven attack vs Willem II defence: time-weighted strength gap multiplies PSV Eindhoven's scoring rate by \u00d73.25 relative to an average pairing (from 35/14 decay-weighted matches).",
+   "effect": 1.1788
+  },
+  {
+   "text": "Independent results-only Elo: PSV Eindhoven 1827 vs Willem II 1288 (gap +538 before home advantage).",
+   "effect": 0.8073
+  },
+  {
+   "text": "Willem II attack vs PSV Eindhoven defence: rate multiplier \u00d70.72 for the away side.",
+   "effect": 0.329
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.9197546010967022,
+  "p_draw": 0.055092796728694604,
+  "p_away": 0.025152602174603127,
+  "xg_home": 4.199403809842307,
+  "xg_away": 0.7550945463999713
+ },
+ "context": {
+  "fetched_at": "2026-10-28T21:53:14+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5781793",
+    "fetched_at": "2026-10-28T21:53:15+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "4-2-3-1",
+    "starters": [
+     {
+      "name": "Mat\u011bj Kov\u00e1r",
+      "pos": "G"
+     },
+     {
+      "name": "Sergi\u00f1o Dest",
+      "pos": "D"
+     },
+     {
+      "name": "Lutsharel Geertruida",
+      "pos": "D"
+     },
+     {
+      "name": "Armando Obispo",
+      "pos": "D"
+     },
+     {
+      "name": "Filip Kosti\u0107",
+      "pos": "D"
+     },
+     {
+      "name": "Kodai Sano",
+      "pos": "M"
+     },
+     {
+      "name": "Mauro J\u00fanior",
+      "pos": "D"
+     },
+     {
+      "name": "Esmir Bajraktarevi\u0107",
+      "pos": "F"
+     },
+     {
+      "name": "Guus Til",
+      "pos": "M"
+     },
+     {
+      "name": "Ivan Peri\u0161i\u0107",
+      "pos": "F"
+     },
+     {
+      "name": "Ruben van Bommel",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-10-28T21:53:15+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   },
+   "away": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "4-2-3-1",
+    "starters": [
+     {
+      "name": "Maxime Delanghe",
+      "pos": "G"
+     },
+     {
+      "name": "Hidde ter Avest",
+      "pos": "D"
+     },
+     {
+      "name": "Finn Stam",
+      "pos": "D"
+     },
+     {
+      "name": "Mats Lemmens",
+      "pos": "D"
+     },
+     {
+      "name": "Nathan Tjoe-A-On",
+      "pos": "D"
+     },
+     {
+      "name": "Calvin Twigt",
+      "pos": "M"
+     },
+     {
+      "name": "Anass Zarrouk",
+      "pos": "M"
+     },
+     {
+      "name": "Eser G\u00fcrb\u00fcz",
+      "pos": "F"
+     },
+     {
+      "name": "Jari Schuurman",
+      "pos": "M"
+     },
+     {
+      "name": "Vito van Crooij",
+      "pos": "M"
+     },
+     {
+      "name": "Devin Haen",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-10-28T21:53:15+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Paul Wanner",
+     "type": "injury",
+     "expected_return": "About a week",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5781793",
+     "fetched_at": "2026-10-28T21:53:15+00:00"
+    },
+    {
+     "player": "Ricardo Pepi",
+     "type": "injury",
+     "expected_return": "Day to day",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5781793",
+     "fetched_at": "2026-10-28T21:53:15+00:00"
+    },
+    {
+     "player": "Sam Lammers",
+     "type": "injury",
+     "expected_return": "Day to day",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5781793",
+     "fetched_at": "2026-10-28T21:53:15+00:00"
+    },
+    {
+     "player": "Adamo Nagalo",
+     "type": "injury",
+     "expected_return": "Out for season",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5781793",
+     "fetched_at": "2026-10-28T21:53:15+00:00"
+    },
+    {
+     "player": "Jerdy Schouten",
+     "type": "injury",
+     "expected_return": "Day to day",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5781793",
+     "fetched_at": "2026-10-28T21:53:15+00:00"
+    },
+    {
+     "player": "Alassane Pl\u00e9a",
+     "type": "injury",
+     "expected_return": "Early January 2027",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5781793",
+     "fetched_at": "2026-10-28T21:53:15+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "Wouter van der Steen",
+     "type": "injury",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5781793",
+     "fetched_at": "2026-10-28T21:53:15+00:00"
+    },
+    {
+     "player": "Justin Hoogma",
+     "type": "injury",
+     "expected_return": "Late October 2027",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5781793",
+     "fetched_at": "2026-10-28T21:53:15+00:00"
+    },
+    {
+     "player": "Amine Lachkar",
+     "type": "injury",
+     "expected_return": "Day to day",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5781793",
+     "fetched_at": "2026-10-28T21:53:15+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 6,
+    "n21": 2,
+    "last_match": "2026-10-25"
+   },
+   "away": {
+    "rest_days": 7,
+    "n21": 3,
+    "last_match": "2026-10-24"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 29.9
+  },
+  "venue": {
+   "name": "Philips Stadion",
+   "city": "Eindhoven",
+   "lat": 51.441630196,
+   "lon": 5.467452407
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 1.7650000000000001,
+   "temp_c": 9.5,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=51.442&longitude=5.467",
+   "fetched_at": "2026-10-28T21:53:15+00:00",
+   "lat": 51.441630196,
+   "lon": 5.467452407
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": 0.15,
+    "d_p_draw_pp": -0.21,
+    "d_p_away_pp": 0.06,
+    "d_xg_home": 0.25,
+    "d_xg_away": 0.117
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.004,
+    "away_rate_mult": 1.0017,
+    "d_p_home_pp": 0.08,
+    "d_p_draw_pp": -0.05,
+    "d_p_away_pp": -0.02,
+    "d_xg_home": 0.017,
+    "d_xg_away": 0.001,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "reason": "failed validation; no live features"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 6.0,
+   "rest_a": 7.0,
+   "n21_h": 2.0,
+   "n21_a": 3.0,
+   "travel_km": 29.927240569110552,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 1.7650000000000001,
+   "temp_c": 9.5
+  }
+ },
+ "confidence": {
+  "tier": "HIGH",
+  "p_max": 0.9197546010967025,
+  "entropy_nats": 0.32926732491114485,
+  "text": "Most likely result has P = 92.0%. In the out-of-sample backtest, favourites priced 0.80\u20131.00 won 88.1% \u00b1 1.8% (n=337, mean forecast 84.0%). Backtest RPS for N1: 0.1917; exact-score top-5 hit rate 44.5% (n=1008). Overall champion RPS 0.2098 vs home/away baseline 0.2283 (1.1.1+ensemble-xg-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-27, n=40,559). Outcome-certainty tier: HIGH (entropy 0.329 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "PSV Eindhoven: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "PSV Eindhoven: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.",
+  "Willem II: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Willem II: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+ ],
+ "verdict": "PSV Eindhoven 4\u20130 Willem II is the single most probable scoreline at 9.2%: expected goals 4.20\u20130.76 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.047). Exact scores are inherently uncertain; the 1X2 split is 92.0%/5.5%/2.5%.",
+ "resolved": {
+  "home_key": "Netherlands:PSV Eindhoven",
+  "away_key": "Netherlands:Willem II",
+  "div": "N1",
+  "home_div": "N1",
+  "away_div": "N1",
+  "country": "Netherlands"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: Willem II Tilburg at PSV\nCompetition: Eredivisie 2025\nDate: 2026-10-31 13:45 EDT\nModel Version: 1.1.1+ensemble-xg-hl240-k8-elo22\nData Cutoff: 2026-10-27\n\nPRIMARY FINAL SCORE PREDICTION\n\nPSV 4 \u2013 0 Willem II Tilburg\n(modal exact score, probability 9.2%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 4.20\nAway: 0.76\nExpected Total: 4.95\nMedian Total: 5\n\nRESULT PROBABILITIES\n\nHome Win: 92.0%\nDraw: 5.5%\nAway Win: 2.5%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 4\u20130: 9.2%\n2. 3\u20130: 8.8%\n3. 5\u20130: 7.7%\n4. 4\u20131: 6.7%\n5. 3\u20131: 6.4%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 4.3%\nTotal 2 goals: 8.8%\nTotal 3 goals: 14.2%\nTotal 4 goals: 17.5%\nTotal 5+ goals: 55.3%\n\nBoth Teams Score: 51.9%\nClean sheet PSV: 47.4% \u00b7 Clean sheet Willem II Tilburg: 1.5%\n\nMATCH INTELLIGENCE\n\n1. PSV Eindhoven attack vs Willem II defence: time-weighted strength gap multiplies PSV Eindhoven's scoring rate by \u00d73.25 relative to an average pairing (from 35/14 decay-weighted matches).\n2. Independent results-only Elo: PSV Eindhoven 1827 vs Willem II 1288 (gap +538 before home advantage).\n3. Willem II attack vs PSV Eindhoven defence: rate multiplier \u00d70.72 for the away side.\n\nMODEL CONFIDENCE\n\nMost likely result has P = 92.0%. In the out-of-sample backtest, favourites priced 0.80\u20131.00 won 88.1% \u00b1 1.8% (n=337, mean forecast 84.0%). Backtest RPS for N1: 0.1917; exact-score top-5 hit rate 44.5% (n=1008). Overall champion RPS 0.2098 vs home/away baseline 0.2283 (1.1.1+ensemble-xg-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-27, n=40,559). Outcome-certainty tier: HIGH (entropy 0.329 nats of max 1.099).\nParameter-uncertainty 80% bands: xG PSV 3.28\u20135.20, xG Willem II Tilburg 0.53\u20131.01; P(home win) 84.4%\u201396.2%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0008 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nPSV Eindhoven: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-10-28 17:53 EDT (4-2-3-1)\n  Mat\u011bj Kov\u00e1r (G), Sergi\u00f1o Dest (D), Lutsharel Geertruida (D), Armando Obispo (D), Filip Kosti\u0107 (D), Kodai Sano (M), Mauro J\u00fanior (D), Esmir Bajraktarevi\u0107 (F), Guus Til (M), Ivan Peri\u0161i\u0107 (F), Ruben van Bommel (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\nWillem II: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-10-28 17:53 EDT (4-2-3-1)\n  Maxime Delanghe (G), Hidde ter Avest (D), Finn Stam (D), Mats Lemmens (D), Nathan Tjoe-A-On (D), Calvin Twigt (M), Anass Zarrouk (M), Eser G\u00fcrb\u00fcz (F), Jari Schuurman (M), Vito van Crooij (M), Devin Haen (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nKEY ABSENCES\n\n- PSV Eindhoven: Paul Wanner \u2014 injury, About a week [FotMob, 2026-10-28 17:53 EDT]\n- PSV Eindhoven: Ricardo Pepi \u2014 injury, Day to day [FotMob, 2026-10-28 17:53 EDT]\n- PSV Eindhoven: Sam Lammers \u2014 injury, Day to day [FotMob, 2026-10-28 17:53 EDT]\n- PSV Eindhoven: Adamo Nagalo \u2014 injury, Out for season [FotMob, 2026-10-28 17:53 EDT]\n- PSV Eindhoven: Jerdy Schouten \u2014 injury, Day to day [FotMob, 2026-10-28 17:53 EDT]\n- PSV Eindhoven: Alassane Pl\u00e9a \u2014 injury, Early January 2027 [FotMob, 2026-10-28 17:53 EDT]\n- Willem II: Wouter van der Steen \u2014 injury, Mid November 2026 [FotMob, 2026-10-28 17:53 EDT]\n- Willem II: Justin Hoogma \u2014 injury, Late October 2027 [FotMob, 2026-10-28 17:53 EDT]\n- Willem II: Amine Lachkar \u2014 injury, Day to day [FotMob, 2026-10-28 17:53 EDT]\n\nWEATHER AT VENUE\n\nPhilips Stadion, Eindhoven: 9.5 \u00b0C, wind 1.8 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-10-28 17:53 EDT]\n\nREST & TRAVEL\n\nPSV Eindhoven: 6 days' rest, 2 matches in previous 21 days \u00b7 Willem II: 7 days' rest, 3 in 21 days \u00b7 away travel 29.9 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 92.0% / 5.5% / 2.5%, xG 4.20\u20130.76\n- Understat xG component (validated, in ensemble): home +0.15 pp, draw -0.21 pp, away +0.06 pp; xG +0.250 / +0.117\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.08 pp, draw -0.05 pp, away -0.02 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- lineup: not applied (failed validation; no live features)\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- PSV Eindhoven: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- PSV Eindhoven: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n- Willem II: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Willem II: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nFINAL VERDICT\n\nPSV Eindhoven 4\u20130 Willem II is the single most probable scoreline at 9.2%: expected goals 4.20\u20130.76 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.047). Exact scores are inherently uncertain; the 1X2 split is 92.0%/5.5%/2.5%.\n",
+ "frozen_at": "2026-10-28T21:53:15+00:00",
+ "sha256": "c30525a40575a8d2bd4fdf0596dbe62cd92d5f97dc4a6aa047adf22599f2e3fb"
+}
