@@ -132,7 +132,6 @@ function betEmbed(g, dash) {
   return {
     color: COLORS.gold,
     title: clip(`🍀 ${g.home} v ${g.away}`, 256),
-    url: dash,
     description: `**${clip(b.label, 200)}** · buy **${b.side}**\n${g.competition || ""}${ko ? ` · <t:${ko}:f>` : ""}`,
     fields: [
       { name: "Price (ask)", value: cents(b.ask), inline: true },
@@ -194,7 +193,6 @@ function scoreEmbeds(scan, games, dash) {
   return groups.map((lines, i) => ({
     color: COLORS.goldBright,
     title: `🔮 Score predictions${groups.length > 1 ? ` (${i + 1}/${groups.length})` : ""}`,
-    url: dash,
     description: lines.join("\n"),
     ...(i === groups.length - 1 ? { footer: { text: "Most likely exact score · home/draw/away · expected goals · best bet" } } : {}),
   }));
