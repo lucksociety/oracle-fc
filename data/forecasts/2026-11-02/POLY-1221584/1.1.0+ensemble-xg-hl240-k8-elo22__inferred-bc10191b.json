@@ -1,0 +1,658 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.1.0+ensemble-xg-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-10-27",
+ "generated_at": "2026-10-28T20:40:38+00:00",
+ "fixture": {
+  "event_id": "POLY-1221584",
+  "home_name": "Newcastle United FC",
+  "away_name": "Everton FC",
+  "competition": "Premier League 2025",
+  "subcategory": "epl",
+  "kickoff_utc": "2026-11-02T20:00:00+00:00",
+  "kickoff_local": "2026-11-02 15:00 EST",
+  "home_matched": "Newcastle",
+  "away_matched": "Everton",
+  "match_methods": {
+   "home": {
+    "source": "Newcastle United FC",
+    "matched": "Newcastle",
+    "method": "alias",
+    "score": 1.0
+   },
+   "away": {
+    "source": "Everton FC",
+    "matched": "Everton",
+    "method": "core-tokens",
+    "score": 0.97
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.4698270634003441,
+  "p_draw": 0.24930862053026176,
+  "p_away": 0.2808643160693941,
+  "xg_home": 1.6443140851747147,
+  "xg_away": 1.2203673723458517,
+  "xg_total": 2.8646814575205664,
+  "median_total": 3,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.11735743500319341
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.11735743500319341
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.09400715397657844
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.09075341536890821
+   },
+   {
+    "home": 2,
+    "away": 0,
+    "p": 0.07704943176301511
+   },
+   {
+    "home": 1,
+    "away": 2,
+    "p": 0.06977102972235083
+   }
+  ],
+  "btts": 0.5716637541416691,
+  "totals_over": {
+   "over_0.5": 0.9399536050720292,
+   "over_1.5": 0.7826162516392959,
+   "over_2.5": 0.5457667815351983,
+   "over_3.5": 0.32249731787421076,
+   "over_4.5": 0.16259026203363147,
+   "over_5.5": 0.07095094504133025,
+   "over_6.5": 0.027179034787178834
+  },
+  "total_buckets": {
+   "0-1": 0.21738374836070384,
+   "2": 0.2368494701040978,
+   "3": 0.22326946366098752,
+   "4": 0.15990705584057932,
+   "5+": 0.16259026203363147
+  },
+  "clean_sheet_home": 0.29517542839478317,
+  "clean_sheet_away": 0.1932072123915182,
+  "home_goal_dist": [
+   0.1932072123915182,
+   0.3175645278599826,
+   0.2610513826658605,
+   0.1430988959151491,
+   0.05884479431070713,
+   0.019362578288182702,
+   0.005310361447404346,
+   0.0015602471211953292
+  ],
+  "away_goal_dist": [
+   0.29517542839478317,
+   0.36011387323911853,
+   0.21972530276636504,
+   0.08939936120207147,
+   0.027286673970061303,
+   0.006664275030914824,
+   0.0013566443888137236,
+   0.0002784410078717913
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    3
+   ],
+   "away_goals_80": [
+    0,
+    3
+   ],
+   "total_goals_80": [
+    1,
+    5
+   ],
+   "goal_diff_80": [
+    -2,
+    3
+   ]
+  },
+  "score_grid": [
+   [
+    0.060046,
+    0.066584,
+    0.042443,
+    0.017264,
+    0.005268,
+    0.001286,
+    0.000262
+   ],
+   [
+    0.090753,
+    0.117357,
+    0.069771,
+    0.028385,
+    0.008663,
+    0.002116,
+    0.000431
+   ],
+   [
+    0.077049,
+    0.094007,
+    0.057363,
+    0.023341,
+    0.007124,
+    0.00174,
+    0.000354
+   ],
+   [
+    0.042227,
+    0.05153,
+    0.031448,
+    0.012798,
+    0.003907,
+    0.000954,
+    0.000194
+   ],
+   [
+    0.017361,
+    0.021189,
+    0.012934,
+    0.005264,
+    0.001607,
+    0.000393,
+    8e-05
+   ],
+   [
+    0.005712,
+    0.006972,
+    0.004256,
+    0.001733,
+    0.000529,
+    0.000129,
+    2.6e-05
+   ],
+   [
+    0.001566,
+    0.001912,
+    0.001167,
+    0.000475,
+    0.000145,
+    3.5e-05,
+    7e-06
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.47113999999999995,
+  "p_draw": 0.24774,
+  "p_away": 0.28112000000000004,
+  "se": [
+   0.0011161700148274905,
+   0.0009653105521022755,
+   0.0010052152645080555
+  ],
+  "max_abs_dev_vs_exact": 0.0015686205302617717,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   1.2737410863896552,
+   2.0479143459302342
+  ],
+  "xg_away_80": [
+   0.9164260764392701,
+   1.5463493119409317
+  ],
+  "p_home_80": [
+   0.3591855086895084,
+   0.5805787789785445
+  ],
+  "p_draw_80": [
+   0.22005926505985302,
+   0.2840185036463614
+  ],
+  "p_away_80": [
+   0.19073984989542545,
+   0.3740913743462905
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.18826795956124687,
+   0.1941586864065579
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.4593635156181174,
+   "p_draw": 0.2646904013020383,
+   "p_away": 0.2759460830798444,
+   "xg_home": 1.539070630064673,
+   "xg_away": 1.1398230204845046,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.472055259442891,
+   "p_draw": 0.2427786860538038,
+   "p_away": 0.2851660545033053,
+   "xg_home": 1.6490961127872021,
+   "xg_away": 1.2290261543653838,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.4021172061180104,
+   "p_draw": 0.268280650358966,
+   "p_away": 0.3296021435230235,
+   "xg_home": 1.4700786248192301,
+   "xg_away": 1.3105201027086892,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.4228904171224199,
+   "p_draw": 0.24977313804598375,
+   "p_away": 0.3273364448315963,
+   "xg_home": 1.519993969003253,
+   "xg_away": 1.307998571550038,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.4693903199466212,
+   "p_draw": 0.2534263185698708,
+   "p_away": 0.2771833614835078,
+   "xg_home": 1.6507694447935422,
+   "xg_away": 1.219120707207452,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Home advantage (England, fitted from results): \u00d71.21 on Newcastle's scoring rate.",
+   "effect": 0.1924
+  },
+  {
+   "text": "Independent results-only Elo: Newcastle 1707 vs Everton 1662 (gap +45 before home advantage).",
+   "effect": 0.0675
+  },
+  {
+   "text": "Everton attack vs Newcastle defence: rate multiplier \u00d70.95 for the away side.",
+   "effect": 0.0541
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.4698270634003441,
+  "p_draw": 0.24930862053026176,
+  "p_away": 0.2808643160693941,
+  "xg_home": 1.6443140851747147,
+  "xg_away": 1.2203673723458517
+ },
+ "context": {
+  "fetched_at": "2026-10-28T20:40:38+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5795503",
+    "fetched_at": "2026-10-28T20:40:38+00:00"
+   },
+   {
+    "name": "Fantasy Premier League availability",
+    "url": "https://fantasy.premierleague.com/api/bootstrap-static/",
+    "fetched_at": "2026-10-28T20:40:38+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "inferred",
+    "source": null,
+    "formation": "",
+    "starters": [
+     {
+      "name": "Luk\u00e1s Horn\u00edcek",
+      "pos": "G"
+     },
+     {
+      "name": "Lewis Hall",
+      "pos": "D"
+     },
+     {
+      "name": "Harvey Barnes",
+      "pos": "F"
+     },
+     {
+      "name": "Malick Thiaw",
+      "pos": "D"
+     },
+     {
+      "name": "Sven Botman",
+      "pos": "D"
+     },
+     {
+      "name": "Yoane Wissa",
+      "pos": "F"
+     },
+     {
+      "name": "Joe Willock",
+      "pos": "F"
+     },
+     {
+      "name": "Lewis Miley",
+      "pos": "D"
+     },
+     {
+      "name": "Nico Gonz\u00e1lez",
+      "pos": "M"
+     },
+     {
+      "name": "Jacob Murphy",
+      "pos": "F"
+     },
+     {
+      "name": "Amar Dedic",
+      "pos": "D"
+     }
+    ],
+    "fetched_at": "2026-10-28T20:40:38+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [],
+    "mean_xi_attack_index": -0.062,
+    "mean_continuity": -0.503,
+    "p_backup_gk": 0.25
+   },
+   "away": {
+    "status": "inferred",
+    "source": null,
+    "formation": "",
+    "starters": [
+     {
+      "name": "Jordan Pickford",
+      "pos": "G"
+     },
+     {
+      "name": "James Tarkowski",
+      "pos": "D"
+     },
+     {
+      "name": "Kiernan Dewsbury-Hall",
+      "pos": "F"
+     },
+     {
+      "name": "James Garner",
+      "pos": "M"
+     },
+     {
+      "name": "Thierno Barry",
+      "pos": "F"
+     },
+     {
+      "name": "Harrison Armstrong",
+      "pos": "M"
+     },
+     {
+      "name": "Vitalii Mykolenko",
+      "pos": "D"
+     },
+     {
+      "name": "Jarrad Branthwaite",
+      "pos": "D"
+     },
+     {
+      "name": "Merlin R\u00f6hl",
+      "pos": "D"
+     },
+     {
+      "name": "Tyrique George",
+      "pos": "F"
+     },
+     {
+      "name": "Brennan Johnson",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-10-28T20:40:38+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [],
+    "mean_xi_attack_index": -0.004,
+    "mean_continuity": -0.616,
+    "p_backup_gk": 0.0
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Lewis Miley",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795503",
+     "fetched_at": "2026-10-28T20:40:38+00:00",
+     "chance_of_playing": 75,
+     "fpl_status": "doubtful",
+     "fpl_news": "Muscular injury - 75% chance of playing",
+     "fpl_news_added": "2026-10-27T16:00:07.981816Z"
+    },
+    {
+     "player": "Matias Fernandez-Pardo",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795503",
+     "fetched_at": "2026-10-28T20:40:38+00:00",
+     "chance_of_playing": 75,
+     "fpl_status": "doubtful",
+     "fpl_news": "Illness - 75% chance of playing",
+     "fpl_news_added": "2026-10-23T14:30:10.429365Z"
+    },
+    {
+     "player": "Ewen Jaouen",
+     "type": "injury",
+     "expected_return": "Early December 2026",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795503",
+     "fetched_at": "2026-10-28T20:40:38+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Hamstring injury - Unknown return date",
+     "fpl_news_added": "2026-09-10T16:00:09.127466Z"
+    },
+    {
+     "player": "Valentino Livramento",
+     "type": "injury",
+     "expected_return": "Early November 2026",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795503",
+     "fetched_at": "2026-10-28T20:40:38+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Knee injury - Expected back 7 Nov",
+     "fpl_news_added": "2026-09-19T14:00:09.046677Z"
+    }
+   ],
+   "away": [
+    {
+     "player": "Vitaliy Mykolenko",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795503",
+     "fetched_at": "2026-10-28T20:40:38+00:00",
+     "chance_of_playing": 75,
+     "fpl_status": "doubtful",
+     "fpl_news": "Unspecified injury - 75% chance of playing",
+     "fpl_news_added": "2026-10-24T19:00:09.907289Z"
+    },
+    {
+     "player": "Jarrad Branthwaite",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5795503",
+     "fetched_at": "2026-10-28T20:40:38+00:00"
+    },
+    {
+     "player": "Jack Grealish",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795503",
+     "fetched_at": "2026-10-28T20:40:38+00:00",
+     "chance_of_playing": 75,
+     "fpl_status": "doubtful",
+     "fpl_news": "Illness - 75% chance of playing",
+     "fpl_news_added": "2026-10-24T14:30:09.610430Z"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 8,
+    "n21": 3,
+    "last_match": "2026-10-25"
+   },
+   "away": {
+    "rest_days": 9,
+    "n21": 2,
+    "last_match": "2026-10-24"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 194.4
+  },
+  "venue": {
+   "name": "St. James' Park",
+   "city": "Newcastle upon Tyne",
+   "lat": 54.975540166,
+   "lon": -1.621620655
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 2.8,
+   "temp_c": 8.3,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=54.976&longitude=-1.622",
+   "fetched_at": "2026-10-28T20:40:38+00:00",
+   "lat": 54.975540166,
+   "lon": -1.621620655
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": -0.05,
+    "d_p_draw_pp": 0.43,
+    "d_p_away_pp": -0.39,
+    "d_xg_home": 0.007,
+    "d_xg_away": -0.001
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0168,
+    "away_rate_mult": 1.0071,
+    "d_p_home_pp": 0.48,
+    "d_p_draw_pp": -0.24,
+    "d_p_away_pp": -0.24,
+    "d_xg_home": 0.028,
+    "d_xg_away": 0.009,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "home_rate_mult": 0.9809,
+    "away_rate_mult": 1.0007,
+    "d_p_home_pp": -0.79,
+    "d_p_draw_pp": 0.23,
+    "d_p_away_pp": 0.57,
+    "d_xg_home": -0.031,
+    "d_xg_away": 0.002,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 8.0,
+   "rest_a": 9.0,
+   "n21_h": 3.0,
+   "n21_a": 2.0,
+   "travel_km": 194.40308537025564,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 2.8,
+   "temp_c": 8.3
+  }
+ },
+ "confidence": {
+  "tier": "LOW",
+  "p_max": 0.4698270634003441,
+  "entropy_nats": 1.0578734909618404,
+  "text": "Most likely result has P = 47.0%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.1% \u00b1 0.4% (n=17605, mean forecast 44.6%). Backtest RPS for E0: 0.2024; exact-score top-5 hit rate 45.7% (n=1220). Overall champion RPS 0.2099 vs home/away baseline 0.2283. Outcome-certainty tier: LOW (entropy 1.058 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Newcastle: no lineup published yet \u2014 XI inferred from recent minutes share minus known absences; 200 configurations simulated (start P=0.7, UNVALIDATED prior).",
+  "Everton: no lineup published yet \u2014 XI inferred from recent minutes share minus known absences; 200 configurations simulated (start P=0.7, UNVALIDATED prior)."
+ ],
+ "verdict": "Newcastle 1\u20131 Everton is the single most probable scoreline at 11.7%: expected goals 1.64\u20131.22 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.047). Exact scores are inherently uncertain; the 1X2 split is 47.0%/24.9%/28.1%.",
+ "resolved": {
+  "home_key": "England:Newcastle",
+  "away_key": "England:Everton",
+  "div": "E0",
+  "home_div": "E0",
+  "away_div": "E0",
+  "country": "England"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: Everton FC at Newcastle United FC\nCompetition: Premier League 2025\nDate: 2026-11-02 15:00 EST\nModel Version: 1.1.0+ensemble-xg-hl240-k8-elo22\nData Cutoff: 2026-10-27\n\nPRIMARY FINAL SCORE PREDICTION\n\nNewcastle United FC 1 \u2013 1 Everton FC\n(modal exact score, probability 11.7%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.64\nAway: 1.22\nExpected Total: 2.86\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 47.0%\nDraw: 24.9%\nAway Win: 28.1%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 11.7%\n2. 2\u20131: 9.4%\n3. 1\u20130: 9.1%\n4. 2\u20130: 7.7%\n5. 1\u20132: 7.0%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 21.7%\nTotal 2 goals: 23.7%\nTotal 3 goals: 22.3%\nTotal 4 goals: 16.0%\nTotal 5+ goals: 16.3%\n\nBoth Teams Score: 57.2%\nClean sheet Newcastle United FC: 29.5% \u00b7 Clean sheet Everton FC: 19.3%\n\nMATCH INTELLIGENCE\n\n1. Home advantage (England, fitted from results): \u00d71.21 on Newcastle's scoring rate.\n2. Independent results-only Elo: Newcastle 1707 vs Everton 1662 (gap +45 before home advantage).\n3. Everton attack vs Newcastle defence: rate multiplier \u00d70.95 for the away side.\n\nMODEL CONFIDENCE\n\nMost likely result has P = 47.0%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.1% \u00b1 0.4% (n=17605, mean forecast 44.6%). Backtest RPS for E0: 0.2024; exact-score top-5 hit rate 45.7% (n=1220). Overall champion RPS 0.2099 vs home/away baseline 0.2283. Outcome-certainty tier: LOW (entropy 1.058 nats of max 1.099).\nParameter-uncertainty 80% bands: xG Newcastle United FC 1.27\u20132.05, xG Everton FC 0.92\u20131.55; P(home win) 35.9%\u201358.1%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0016 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nNewcastle: INFERRED, fetched 2026-10-28 16:40 EDT\n  Luk\u00e1s Horn\u00edcek (G), Lewis Hall (D), Harvey Barnes (F), Malick Thiaw (D), Sven Botman (D), Yoane Wissa (F), Joe Willock (F), Lewis Miley (D), Nico Gonz\u00e1lez (M), Jacob Murphy (F), Amar Dedic (D)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs -0.062 (log) \u00b7 continuity -0.50 \u00b7 P(backup GK) 25%\nEverton: INFERRED, fetched 2026-10-28 16:40 EDT\n  Jordan Pickford (G), James Tarkowski (D), Kiernan Dewsbury-Hall (F), James Garner (M), Thierno Barry (F), Harrison Armstrong (M), Vitalii Mykolenko (D), Jarrad Branthwaite (D), Merlin R\u00f6hl (D), Tyrique George (F), Brennan Johnson (F)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs -0.004 (log) \u00b7 continuity -0.62 \u00b7 P(backup GK) 0%\n\nKEY ABSENCES\n\n- Newcastle: Lewis Miley \u2014 injury, Doubtful, 75% chance of playing [FotMob + FPL, 2026-10-28 16:40 EDT] \u2014 FPL: Muscular injury - 75% chance of playing (updated 2026-10-27 12:00 EDT)\n- Newcastle: Matias Fernandez-Pardo \u2014 injury, Doubtful, 75% chance of playing [FotMob + FPL, 2026-10-28 16:40 EDT] \u2014 FPL: Illness - 75% chance of playing (updated 2026-10-23 10:30 EDT)\n- Newcastle: Ewen Jaouen \u2014 injury, Early December 2026, 0% chance of playing [FotMob + FPL, 2026-10-28 16:40 EDT] \u2014 FPL: Hamstring injury - Unknown return date (updated 2026-09-10 12:00 EDT)\n- Newcastle: Valentino Livramento \u2014 injury, Early November 2026, 0% chance of playing [FotMob + FPL, 2026-10-28 16:40 EDT] \u2014 FPL: Knee injury - Expected back 7 Nov (updated 2026-09-19 10:00 EDT)\n- Everton: Vitaliy Mykolenko \u2014 injury, Doubtful, 75% chance of playing [FotMob + FPL, 2026-10-28 16:40 EDT] \u2014 FPL: Unspecified injury - 75% chance of playing (updated 2026-10-24 15:00 EDT)\n- Everton: Jarrad Branthwaite \u2014 injury, Doubtful [FotMob, 2026-10-28 16:40 EDT]\n- Everton: Jack Grealish \u2014 injury, Doubtful, 75% chance of playing [FotMob + FPL, 2026-10-28 16:40 EDT] \u2014 FPL: Illness - 75% chance of playing (updated 2026-10-24 10:30 EDT)\n\nWEATHER AT VENUE\n\nSt. James' Park, Newcastle upon Tyne: 8.3 \u00b0C, wind 2.8 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-10-28 16:40 EDT]\n\nREST & TRAVEL\n\nNewcastle: 8 days' rest, 3 matches in previous 21 days \u00b7 Everton: 9 days' rest, 2 in 21 days \u00b7 away travel 194.4 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 47.0% / 24.9% / 28.1%, xG 1.64\u20131.22\n- Understat xG component (validated, in ensemble): home -0.05 pp, draw +0.43 pp, away -0.39 pp; xG +0.007 / -0.001\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.48 pp, draw -0.24 pp, away -0.24 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- lineup: NOT APPLIED (failed out-of-sample validation); would have moved home -0.79 pp, draw +0.23 pp, away +0.57 pp\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Newcastle: no lineup published yet \u2014 XI inferred from recent minutes share minus known absences; 200 configurations simulated (start P=0.7, UNVALIDATED prior).\n- Everton: no lineup published yet \u2014 XI inferred from recent minutes share minus known absences; 200 configurations simulated (start P=0.7, UNVALIDATED prior).\n\nFINAL VERDICT\n\nNewcastle 1\u20131 Everton is the single most probable scoreline at 11.7%: expected goals 1.64\u20131.22 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.047). Exact scores are inherently uncertain; the 1X2 split is 47.0%/24.9%/28.1%.\n",
+ "frozen_at": "2026-10-28T20:40:38+00:00",
+ "sha256": "89e7cec76269b9895dbfd4b73de83e20a98165b69aaf3871d322e40e69fab85f"
+}

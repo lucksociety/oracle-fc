@@ -1,0 +1,762 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.1.0+ensemble-xg-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-10-27",
+ "generated_at": "2026-10-28T20:40:13+00:00",
+ "fixture": {
+  "event_id": "POLY-1215681",
+  "home_name": "Liverpool FC",
+  "away_name": "Arsenal FC",
+  "competition": "Premier League 2025",
+  "subcategory": "epl",
+  "kickoff_utc": "2026-11-01T16:30:00+00:00",
+  "kickoff_local": "2026-11-01 11:30 EST",
+  "home_matched": "Liverpool",
+  "away_matched": "Arsenal",
+  "match_methods": {
+   "home": {
+    "source": "Liverpool FC",
+    "matched": "Liverpool",
+    "method": "core-tokens",
+    "score": 0.97
+   },
+   "away": {
+    "source": "Arsenal FC",
+    "matched": "Arsenal",
+    "method": "core-tokens",
+    "score": 0.97
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.28530290490986937,
+  "p_draw": 0.26389268037543206,
+  "p_away": 0.4508044147146984,
+  "xg_home": 1.137446000655278,
+  "xg_away": 1.499046348723028,
+  "xg_total": 2.6364923493783063,
+  "median_total": 2,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.12483167783531517
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.12483167783531517
+   },
+   {
+    "home": 0,
+    "away": 1,
+    "p": 0.10385257582467651
+   },
+   {
+    "home": 1,
+    "away": 2,
+    "p": 0.0904521990569303
+   },
+   {
+    "home": 0,
+    "away": 2,
+    "p": 0.07952326696463681
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.07921715910004493
+   }
+  ],
+  "btts": 0.5290820714496092,
+  "totals_over": {
+   "over_0.5": 0.9235551220990981,
+   "over_1.5": 0.7404853871743767,
+   "over_2.5": 0.4894315598100649,
+   "over_3.5": 0.2725751801458962,
+   "over_4.5": 0.12933616031467574,
+   "over_5.5": 0.053190585577508075,
+   "over_6.5": 0.01925725531844986
+  },
+  "total_buckets": {
+   "0-1": 0.25951461282562327,
+   "2": 0.25105382736431175,
+   "3": 0.21685637966416876,
+   "4": 0.14323901983122042,
+   "5+": 0.12933616031467574
+  },
+  "clean_sheet_home": 0.22639835738645292,
+  "clean_sheet_away": 0.3209644490648397,
+  "home_goal_dist": [
+   0.3209644490648397,
+   0.36442183113626114,
+   0.20721466508624523,
+   0.07867224670707108,
+   0.022436164934417625,
+   0.005126609591871506,
+   0.0009777039480495602,
+   0.00018632953124406902
+  ],
+  "away_goal_dist": [
+   0.22639835738645292,
+   0.3332956551024477,
+   0.24826336616659558,
+   0.12479507861309215,
+   0.04762643906974736,
+   0.01471561860622142,
+   0.0038325421214301324,
+   0.0010729429340126722
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    3
+   ],
+   "away_goals_80": [
+    0,
+    3
+   ],
+   "total_goals_80": [
+    1,
+    5
+   ],
+   "goal_diff_80": [
+    -2,
+    2
+   ]
+  },
+  "score_grid": [
+   [
+    0.076445,
+    0.103853,
+    0.079523,
+    0.03981,
+    0.015131,
+    0.004657,
+    0.001208
+   ],
+   [
+    0.079217,
+    0.124832,
+    0.090452,
+    0.045447,
+    0.017336,
+    0.005354,
+    0.001394
+   ],
+   [
+    0.046699,
+    0.068956,
+    0.051523,
+    0.02598,
+    0.009945,
+    0.003082,
+    0.000805
+   ],
+   [
+    0.017638,
+    0.026134,
+    0.019595,
+    0.009915,
+    0.003808,
+    0.001184,
+    0.00031
+   ],
+   [
+    0.005005,
+    0.00744,
+    0.005598,
+    0.002842,
+    0.001095,
+    0.000342,
+    9e-05
+   ],
+   [
+    0.001138,
+    0.001697,
+    0.001281,
+    0.000653,
+    0.000252,
+    7.9e-05,
+    2.1e-05
+   ],
+   [
+    0.000216,
+    0.000323,
+    0.000245,
+    0.000125,
+    4.8e-05,
+    1.5e-05,
+    4e-06
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.28459999999999996,
+  "p_draw": 0.26399,
+  "p_away": 0.45141,
+  "se": [
+   0.0010089668973757265,
+   0.0009856451691658617,
+   0.0011127421352227118
+  ],
+  "max_abs_dev_vs_exact": 0.0007029049098694062,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   0.8718989155900386,
+   1.4276051774275387
+  ],
+  "xg_away_80": [
+   1.1602197028579913,
+   1.8583586823104394
+  ],
+  "p_home_80": [
+   0.20462437625805815,
+   0.3776257649429578
+  ],
+  "p_draw_80": [
+   0.2352887965822538,
+   0.29545201244590275
+  ],
+  "p_away_80": [
+   0.34131058296689065,
+   0.5507344483889851
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.19549022879439545,
+   0.17482840358229043
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.2858317178738633,
+   "p_draw": 0.28989620931571897,
+   "p_away": 0.4242720728104178,
+   "xg_home": 1.0253779750969871,
+   "xg_away": 1.308382206637506,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.2665584485069681,
+   "p_draw": 0.2405567707747478,
+   "p_away": 0.492884780718284,
+   "xg_home": 1.17791149372297,
+   "xg_away": 1.6873086750613078,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.2363400665441736,
+   "p_draw": 0.29889303198203576,
+   "p_away": 0.4647669014737905,
+   "xg_home": 0.8647059812977216,
+   "xg_away": 1.3217391111150134,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.4228904171224199,
+   "p_draw": 0.24977313804598375,
+   "p_away": 0.3273364448315963,
+   "xg_home": 1.519993969003253,
+   "xg_away": 1.307998571550038,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.30113378351605524,
+   "p_draw": 0.2813579750902699,
+   "p_away": 0.4175082413936747,
+   "xg_home": 1.1132151989890124,
+   "xg_away": 1.3567316010555102,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Liverpool attack vs Arsenal defence: time-weighted strength gap multiplies Liverpool's scoring rate by \u00d70.70 relative to an average pairing (from 38/41 decay-weighted matches).",
+   "effect": 0.3523
+  },
+  {
+   "text": "Independent results-only Elo: Liverpool 1815 vs Arsenal 1982 (gap -167 before home advantage).",
+   "effect": 0.2504
+  },
+  {
+   "text": "Home advantage (England, fitted from results): \u00d71.21 on Liverpool's scoring rate.",
+   "effect": 0.1924
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.28530290490986937,
+  "p_draw": 0.26389268037543206,
+  "p_away": 0.4508044147146984,
+  "xg_home": 1.137446000655278,
+  "xg_away": 1.499046348723028
+ },
+ "context": {
+  "fetched_at": "2026-10-28T20:40:13+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5795501",
+    "fetched_at": "2026-10-28T20:40:13+00:00"
+   },
+   {
+    "name": "Fantasy Premier League availability",
+    "url": "https://fantasy.premierleague.com/api/bootstrap-static/",
+    "fetched_at": "2026-10-28T20:40:13+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "4-2-3-1",
+    "starters": [
+     {
+      "name": "Alisson Becker",
+      "pos": "G"
+     },
+     {
+      "name": "Ronald Araujo",
+      "pos": "D"
+     },
+     {
+      "name": "J\u00e9r\u00e9my Jacquet",
+      "pos": "D"
+     },
+     {
+      "name": "Virgil van Dijk",
+      "pos": "D"
+     },
+     {
+      "name": "Milo\u0161 Kerkez",
+      "pos": "D"
+     },
+     {
+      "name": "Ryan Gravenberch",
+      "pos": "M"
+     },
+     {
+      "name": "Alexis Mac Allister",
+      "pos": "M"
+     },
+     {
+      "name": "Bradley Barcola",
+      "pos": "F"
+     },
+     {
+      "name": "Florian Wirtz",
+      "pos": "F"
+     },
+     {
+      "name": "Cody Gakpo",
+      "pos": "F"
+     },
+     {
+      "name": "Alexander Isak",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-10-28T20:40:13+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [
+     "Alisson Becker"
+    ],
+    "mean_xi_attack_index": -0.053,
+    "mean_continuity": -0.559,
+    "p_backup_gk": 0.845
+   },
+   "away": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "4-2-3-1",
+    "starters": [
+     {
+      "name": "Illan Meslier",
+      "pos": "G"
+     },
+     {
+      "name": "Jurri\u00ebn Timber",
+      "pos": "D"
+     },
+     {
+      "name": "Cristhian Mosquera",
+      "pos": "D"
+     },
+     {
+      "name": "Marli Salmon",
+      "pos": "D"
+     },
+     {
+      "name": "Piero Hincapi\u00e9",
+      "pos": "D"
+     },
+     {
+      "name": "Mart\u00edn Zubimendi",
+      "pos": "M"
+     },
+     {
+      "name": "Myles Lewis-Skelly",
+      "pos": "M"
+     },
+     {
+      "name": "Max Dowman",
+      "pos": "F"
+     },
+     {
+      "name": "Kai Havertz",
+      "pos": "F"
+     },
+     {
+      "name": "Ceadach O'Neill",
+      "pos": "F"
+     },
+     {
+      "name": "Viktor Gy\u00f6keres",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-10-28T20:40:13+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [
+     "Illan Meslier",
+     "Marli Salmon",
+     "Ceadach O'Neill"
+    ],
+    "mean_xi_attack_index": -0.154,
+    "mean_continuity": -3.779,
+    "p_backup_gk": 0.84
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Florian Wirtz",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5795501",
+     "fetched_at": "2026-10-28T20:40:13+00:00"
+    },
+    {
+     "player": "Conor Bradley",
+     "type": "injury",
+     "expected_return": "Early January 2027",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795501",
+     "fetched_at": "2026-10-28T20:40:13+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Knee injury - Unknown return date",
+     "fpl_news_added": "2026-07-23T12:01:23.565711Z"
+    },
+    {
+     "player": "Giovanni Leoni",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795501",
+     "fetched_at": "2026-10-28T20:40:13+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Knee injury - Unknown return date",
+     "fpl_news_added": "2026-07-23T12:01:23.596909Z"
+    },
+    {
+     "player": "Jeremie Frimpong",
+     "type": "injury",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795501",
+     "fetched_at": "2026-10-28T20:40:13+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Hamstring injury - Unknown return date",
+     "fpl_news_added": "2026-10-17T15:30:09.979166Z"
+    },
+    {
+     "player": "Dominik Szoboszlai",
+     "type": "injury",
+     "expected_return": "Early November 2026",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795501",
+     "fetched_at": "2026-10-28T20:40:13+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Hamstring injury - Unknown return date",
+     "fpl_news_added": "2026-10-17T15:00:08.293301Z"
+    },
+    {
+     "player": "Hugo Ekitik\u00e9",
+     "type": "injury",
+     "expected_return": "Early January 2027",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795501",
+     "fetched_at": "2026-10-28T20:40:13+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Achilles injury - Unknown return date",
+     "fpl_news_added": "2026-07-23T12:01:23.643771Z"
+    },
+    {
+     "player": "V\u00edctor Mu\u00f1oz",
+     "type": "injury",
+     "expected_return": "Early November 2026",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795501",
+     "fetched_at": "2026-10-28T20:40:13+00:00",
+     "chance_of_playing": 25,
+     "fpl_status": "doubtful",
+     "fpl_news": "Knee injury - 25% chance of playing",
+     "fpl_news_added": "2026-10-20T18:30:09.999223Z"
+    },
+    {
+     "player": "Vitezslav Jaros",
+     "type": "injured",
+     "expected_return": "Knee injury - Unknown return date",
+     "chance_of_playing": 0,
+     "source": "FPL",
+     "source_url": "https://fantasy.premierleague.com/api/bootstrap-static/",
+     "fetched_at": "2026-07-29T18:00:10.351066Z"
+    }
+   ],
+   "away": [
+    {
+     "player": "Max Dowman",
+     "type": "suspension",
+     "expected_return": "Early November 2026",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795501",
+     "fetched_at": "2026-10-28T20:40:13+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "suspended",
+     "fpl_news": "Suspended until 29 Nov",
+     "fpl_news_added": "2026-10-27T22:30:09.534466Z"
+    },
+    {
+     "player": "Riccardo Calafiori",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795501",
+     "fetched_at": "2026-10-28T20:40:13+00:00",
+     "chance_of_playing": 75,
+     "fpl_status": "doubtful",
+     "fpl_news": "Hip injury - 75% chance of playing",
+     "fpl_news_added": "2026-10-24T18:30:08.735545Z"
+    },
+    {
+     "player": "Bukayo Saka",
+     "type": "injury",
+     "expected_return": "Early December 2026",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795501",
+     "fetched_at": "2026-10-28T20:40:13+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Thigh injury - Unknown return date",
+     "fpl_news_added": "2026-10-21T20:30:09.540957Z"
+    },
+    {
+     "player": "Christos Tzolis",
+     "type": "injury",
+     "expected_return": "Early November 2026",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795501",
+     "fetched_at": "2026-10-28T20:40:13+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Hamstring injury - Expected back 1 Nov",
+     "fpl_news_added": "2026-10-02T15:00:11.091226Z"
+    },
+    {
+     "player": "William Saliba",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795501",
+     "fetched_at": "2026-10-28T20:40:13+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Back injury - Unknown return date",
+     "fpl_news_added": "2026-07-23T12:01:23.289376Z"
+    },
+    {
+     "player": "Declan Rice",
+     "type": "doubtful",
+     "expected_return": "Unspecified injury - 75% chance of playing",
+     "chance_of_playing": 75,
+     "source": "FPL",
+     "source_url": "https://fantasy.premierleague.com/api/bootstrap-static/",
+     "fetched_at": "2026-10-28T00:00:08.477333Z"
+    },
+    {
+     "player": "Noni Madueke",
+     "type": "doubtful",
+     "expected_return": "Ankle injury - 75% chance of playing",
+     "chance_of_playing": 75,
+     "source": "FPL",
+     "source_url": "https://fantasy.premierleague.com/api/bootstrap-static/",
+     "fetched_at": "2026-10-28T00:00:08.492716Z"
+    },
+    {
+     "player": "Reiss Nelson",
+     "type": "unavailable",
+     "expected_return": "has departed the club as a free agent.",
+     "chance_of_playing": 0,
+     "source": "FPL",
+     "source_url": "https://fantasy.premierleague.com/api/bootstrap-static/",
+     "fetched_at": "2026-08-29T00:33:08.556767Z"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 7,
+    "n21": 3,
+    "last_match": "2026-10-25"
+   },
+   "away": {
+    "rest_days": 8,
+    "n21": 2,
+    "last_match": "2026-10-24"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 284.2
+  },
+  "venue": {
+   "name": "Anfield",
+   "city": "Liverpool",
+   "lat": 53.430827885,
+   "lon": -2.960852981
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 2.9000000000000004,
+   "temp_c": 11.7,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=53.431&longitude=-2.961",
+   "fetched_at": "2026-10-28T20:40:13+00:00",
+   "lat": 53.430827885,
+   "lon": -2.960852981
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": 1.67,
+    "d_p_draw_pp": 1.84,
+    "d_p_away_pp": -3.51,
+    "d_xg_home": -0.026,
+    "d_xg_away": -0.15
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0209,
+    "away_rate_mult": 1.0088,
+    "d_p_home_pp": 0.38,
+    "d_p_draw_pp": -0.19,
+    "d_p_away_pp": -0.19,
+    "d_xg_home": 0.024,
+    "d_xg_away": 0.014,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "home_rate_mult": 1.0669,
+    "away_rate_mult": 0.9061,
+    "d_p_home_pp": 4.55,
+    "d_p_draw_pp": 0.82,
+    "d_p_away_pp": -5.37,
+    "d_xg_home": 0.076,
+    "d_xg_away": -0.142,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 7.0,
+   "rest_a": 8.0,
+   "n21_h": 3.0,
+   "n21_a": 2.0,
+   "travel_km": 284.201847907215,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 2.9000000000000004,
+   "temp_c": 11.7
+  }
+ },
+ "confidence": {
+  "tier": "LOW",
+  "p_max": 0.4508044147146984,
+  "entropy_nats": 1.0685548592384722,
+  "text": "Most likely result has P = 45.1%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.1% \u00b1 0.4% (n=17605, mean forecast 44.6%). Backtest RPS for E0: 0.2024; exact-score top-5 hit rate 45.7% (n=1220). Overall champion RPS 0.2099 vs home/away baseline 0.2283. Outcome-certainty tier: LOW (entropy 1.069 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Liverpool: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Liverpool: no Understat history for Alisson Becker \u2014 rated at the positional prior.",
+  "Arsenal: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Arsenal: no Understat history for Illan Meslier, Marli Salmon, Ceadach O'Neill \u2014 rated at the positional prior."
+ ],
+ "verdict": "Liverpool 1\u20131 Arsenal is the single most probable scoreline at 12.5%: expected goals 1.14\u20131.50 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.047). Exact scores are inherently uncertain; the 1X2 split is 28.5%/26.4%/45.1%.",
+ "resolved": {
+  "home_key": "England:Liverpool",
+  "away_key": "England:Arsenal",
+  "div": "E0",
+  "home_div": "E0",
+  "away_div": "E0",
+  "country": "England"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: Arsenal FC at Liverpool FC\nCompetition: Premier League 2025\nDate: 2026-11-01 11:30 EST\nModel Version: 1.1.0+ensemble-xg-hl240-k8-elo22\nData Cutoff: 2026-10-27\n\nPRIMARY FINAL SCORE PREDICTION\n\nLiverpool FC 1 \u2013 1 Arsenal FC\n(modal exact score, probability 12.5%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.14\nAway: 1.50\nExpected Total: 2.64\nMedian Total: 2\n\nRESULT PROBABILITIES\n\nHome Win: 28.5%\nDraw: 26.4%\nAway Win: 45.1%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 12.5%\n2. 0\u20131: 10.4%\n3. 1\u20132: 9.0%\n4. 0\u20132: 8.0%\n5. 1\u20130: 7.9%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 26.0%\nTotal 2 goals: 25.1%\nTotal 3 goals: 21.7%\nTotal 4 goals: 14.3%\nTotal 5+ goals: 12.9%\n\nBoth Teams Score: 52.9%\nClean sheet Liverpool FC: 22.6% \u00b7 Clean sheet Arsenal FC: 32.1%\n\nMATCH INTELLIGENCE\n\n1. Liverpool attack vs Arsenal defence: time-weighted strength gap multiplies Liverpool's scoring rate by \u00d70.70 relative to an average pairing (from 38/41 decay-weighted matches).\n2. Independent results-only Elo: Liverpool 1815 vs Arsenal 1982 (gap -167 before home advantage).\n3. Home advantage (England, fitted from results): \u00d71.21 on Liverpool's scoring rate.\n\nMODEL CONFIDENCE\n\nMost likely result has P = 45.1%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.1% \u00b1 0.4% (n=17605, mean forecast 44.6%). Backtest RPS for E0: 0.2024; exact-score top-5 hit rate 45.7% (n=1220). Overall champion RPS 0.2099 vs home/away baseline 0.2283. Outcome-certainty tier: LOW (entropy 1.069 nats of max 1.099).\nParameter-uncertainty 80% bands: xG Liverpool FC 0.87\u20131.43, xG Arsenal FC 1.16\u20131.86; P(home win) 20.5%\u201337.8%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0007 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nLiverpool: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-10-28 16:40 EDT (4-2-3-1)\n  Alisson Becker (G), Ronald Araujo (D), J\u00e9r\u00e9my Jacquet (D), Virgil van Dijk (D), Milo\u0161 Kerkez (D), Ryan Gravenberch (M), Alexis Mac Allister (M), Bradley Barcola (F), Florian Wirtz (F), Cody Gakpo (F), Alexander Isak (F)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs -0.053 (log) \u00b7 continuity -0.56 \u00b7 P(backup GK) 84%\nArsenal: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-10-28 16:40 EDT (4-2-3-1)\n  Illan Meslier (G), Jurri\u00ebn Timber (D), Cristhian Mosquera (D), Marli Salmon (D), Piero Hincapi\u00e9 (D), Mart\u00edn Zubimendi (M), Myles Lewis-Skelly (M), Max Dowman (F), Kai Havertz (F), Ceadach O'Neill (F), Viktor Gy\u00f6keres (F)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs -0.154 (log) \u00b7 continuity -3.78 \u00b7 P(backup GK) 84%\n\nKEY ABSENCES\n\n- Liverpool: Florian Wirtz \u2014 injury, Doubtful [FotMob, 2026-10-28 16:40 EDT]\n- Liverpool: Conor Bradley \u2014 injury, Early January 2027, 0% chance of playing [FotMob + FPL, 2026-10-28 16:40 EDT] \u2014 FPL: Knee injury - Unknown return date (updated 2026-07-23 08:01 EDT)\n- Liverpool: Giovanni Leoni \u2014 injury, Late November 2026, 0% chance of playing [FotMob + FPL, 2026-10-28 16:40 EDT] \u2014 FPL: Knee injury - Unknown return date (updated 2026-07-23 08:01 EDT)\n- Liverpool: Jeremie Frimpong \u2014 injury, Mid November 2026, 0% chance of playing [FotMob + FPL, 2026-10-28 16:40 EDT] \u2014 FPL: Hamstring injury - Unknown return date (updated 2026-10-17 11:30 EDT)\n- Liverpool: Dominik Szoboszlai \u2014 injury, Early November 2026, 0% chance of playing [FotMob + FPL, 2026-10-28 16:40 EDT] \u2014 FPL: Hamstring injury - Unknown return date (updated 2026-10-17 11:00 EDT)\n- Liverpool: Hugo Ekitik\u00e9 \u2014 injury, Early January 2027, 0% chance of playing [FotMob + FPL, 2026-10-28 16:40 EDT] \u2014 FPL: Achilles injury - Unknown return date (updated 2026-07-23 08:01 EDT)\n- Liverpool: V\u00edctor Mu\u00f1oz \u2014 injury, Early November 2026, 25% chance of playing [FotMob + FPL, 2026-10-28 16:40 EDT] \u2014 FPL: Knee injury - 25% chance of playing (updated 2026-10-20 14:30 EDT)\n- Liverpool: Vitezslav Jaros \u2014 injured, Knee injury - Unknown return date, 0% chance of playing [FPL, 2026-07-29 14:00 EDT]\n- Arsenal: Max Dowman \u2014 suspension, Early November 2026, 0% chance of playing [FotMob + FPL, 2026-10-28 16:40 EDT] \u2014 FPL: Suspended until 29 Nov (updated 2026-10-27 18:30 EDT)\n- Arsenal: Riccardo Calafiori \u2014 injury, Doubtful, 75% chance of playing [FotMob + FPL, 2026-10-28 16:40 EDT] \u2014 FPL: Hip injury - 75% chance of playing (updated 2026-10-24 14:30 EDT)\n- Arsenal: Bukayo Saka \u2014 injury, Early December 2026, 0% chance of playing [FotMob + FPL, 2026-10-28 16:40 EDT] \u2014 FPL: Thigh injury - Unknown return date (updated 2026-10-21 16:30 EDT)\n- Arsenal: Christos Tzolis \u2014 injury, Early November 2026, 0% chance of playing [FotMob + FPL, 2026-10-28 16:40 EDT] \u2014 FPL: Hamstring injury - Expected back 1 Nov (updated 2026-10-02 11:00 EDT)\n- Arsenal: William Saliba \u2014 injury, Late November 2026, 0% chance of playing [FotMob + FPL, 2026-10-28 16:40 EDT] \u2014 FPL: Back injury - Unknown return date (updated 2026-07-23 08:01 EDT)\n- Arsenal: Declan Rice \u2014 doubtful, Unspecified injury - 75% chance of playing, 75% chance of playing [FPL, 2026-10-27 20:00 EDT]\n- Arsenal: Noni Madueke \u2014 doubtful, Ankle injury - 75% chance of playing, 75% chance of playing [FPL, 2026-10-27 20:00 EDT]\n- Arsenal: Reiss Nelson \u2014 unavailable, has departed the club as a free agent., 0% chance of playing [FPL, 2026-08-28 20:33 EDT]\n\nWEATHER AT VENUE\n\nAnfield, Liverpool: 11.7 \u00b0C, wind 2.9 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-10-28 16:40 EDT]\n\nREST & TRAVEL\n\nLiverpool: 7 days' rest, 3 matches in previous 21 days \u00b7 Arsenal: 8 days' rest, 2 in 21 days \u00b7 away travel 284.2 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 28.5% / 26.4% / 45.1%, xG 1.14\u20131.50\n- Understat xG component (validated, in ensemble): home +1.67 pp, draw +1.84 pp, away -3.51 pp; xG -0.026 / -0.150\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.38 pp, draw -0.19 pp, away -0.19 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- lineup: NOT APPLIED (failed out-of-sample validation); would have moved home +4.55 pp, draw +0.82 pp, away -5.37 pp\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Liverpool: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Liverpool: no Understat history for Alisson Becker \u2014 rated at the positional prior.\n- Arsenal: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Arsenal: no Understat history for Illan Meslier, Marli Salmon, Ceadach O'Neill \u2014 rated at the positional prior.\n\nFINAL VERDICT\n\nLiverpool 1\u20131 Arsenal is the single most probable scoreline at 12.5%: expected goals 1.14\u20131.50 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.047). Exact scores are inherently uncertain; the 1X2 split is 28.5%/26.4%/45.1%.\n",
+ "frozen_at": "2026-10-28T20:40:13+00:00",
+ "sha256": "9f421fd78e730020efc48a7f8e1d3ac217d03c31e17cbe9aba6d43a4bd6240ee"
+}

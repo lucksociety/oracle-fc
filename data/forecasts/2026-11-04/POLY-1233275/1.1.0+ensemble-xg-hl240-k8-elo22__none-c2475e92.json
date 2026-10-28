@@ -1,0 +1,502 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.1.0+ensemble-xg-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-10-27",
+ "generated_at": "2026-10-28T20:41:23+00:00",
+ "fixture": {
+  "event_id": "POLY-1233275",
+  "home_name": "Cardiff City FC",
+  "away_name": "West Ham United FC",
+  "competition": "EFL Championship",
+  "subcategory": "elc",
+  "kickoff_utc": "2026-11-04T19:45:00+00:00",
+  "kickoff_local": "2026-11-04 14:45 EST",
+  "home_matched": "Cardiff",
+  "away_matched": "West Ham",
+  "match_methods": {
+   "home": {
+    "source": "Cardiff City FC",
+    "matched": "Cardiff",
+    "method": "token-subset",
+    "score": 0.9
+   },
+   "away": {
+    "source": "West Ham United FC",
+    "matched": "West Ham",
+    "method": "alias",
+    "score": 1.0
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.25064747212740934,
+  "p_draw": 0.2369500146190303,
+  "p_away": 0.5124025132535601,
+  "xg_home": 1.2122898562239397,
+  "xg_away": 1.817305752362601,
+  "xg_total": 3.0295956085865408,
+  "median_total": 3,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.10765900767984696
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.10765900767984696
+   },
+   {
+    "home": 1,
+    "away": 2,
+    "p": 0.09417675729517155
+   },
+   {
+    "home": 0,
+    "away": 1,
+    "p": 0.08829663453055707
+   },
+   {
+    "home": 0,
+    "away": 2,
+    "p": 0.07967200380511906
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.06255746409599769
+   }
+  ],
+  "btts": 0.5856978308392907,
+  "totals_over": {
+   "over_0.5": 0.9451077341018507,
+   "over_1.5": 0.7995800218828263,
+   "over_2.5": 0.5774406143169776,
+   "over_3.5": 0.35947968202058445,
+   "over_4.5": 0.19428035298483295,
+   "over_5.5": 0.09234429769330323,
+   "over_6.5": 0.03908035896260945
+  },
+  "total_buckets": {
+   "0-1": 0.2004199781171735,
+   "2": 0.2221394075658488,
+   "3": 0.21796093229639302,
+   "4": 0.16519932903575155,
+   "5+": 0.19428035298483295
+  },
+  "clean_sheet_home": 0.16641262581435015,
+  "clean_sheet_away": 0.30278180924450826,
+  "home_goal_dist": [
+   0.30278180924450826,
+   0.3564151839143511,
+   0.21509274393897146,
+   0.08861520947167664,
+   0.02797518804996164,
+   0.007198006104544343,
+   0.0015675889370713543,
+   0.0003542703389150661
+  ],
+  "away_goal_dist": [
+   0.16641262581435015,
+   0.2944032795277845,
+   0.26442736801690625,
+   0.1607067693385414,
+   0.0742904316211969,
+   0.027832581110904572,
+   0.008791387106200749,
+   0.0031355574641152902
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    3
+   ],
+   "away_goals_80": [
+    0,
+    4
+   ],
+   "total_goals_80": [
+    1,
+    5
+   ],
+   "goal_diff_80": [
+    -3,
+    2
+   ]
+  },
+  "score_grid": [
+   [
+    0.054892,
+    0.088297,
+    0.079672,
+    0.047345,
+    0.021419,
+    0.007865,
+    0.002439
+   ],
+   [
+    0.057231,
+    0.107659,
+    0.094177,
+    0.057046,
+    0.026288,
+    0.00982,
+    0.003094
+   ],
+   [
+    0.034808,
+    0.062557,
+    0.057064,
+    0.035196,
+    0.016493,
+    0.006256,
+    0.001997
+   ],
+   [
+    0.013882,
+    0.025416,
+    0.023597,
+    0.014793,
+    0.007034,
+    0.002703,
+    0.000873
+   ],
+   [
+    0.004255,
+    0.007924,
+    0.007474,
+    0.004752,
+    0.002287,
+    0.000888,
+    0.000289
+   ],
+   [
+    0.001067,
+    0.002017,
+    0.001928,
+    0.00124,
+    0.000603,
+    0.000236,
+    7.7e-05
+   ],
+   [
+    0.000227,
+    0.000435,
+    0.000421,
+    0.000273,
+    0.000134,
+    5.3e-05,
+    1.7e-05
+   ]
+  ],
+  "mass_check": 0.9999999999999998
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.249395,
+  "p_draw": 0.2376,
+  "p_away": 0.513005,
+  "se": [
+   0.0009674635237956002,
+   0.0009516991121147481,
+   0.0011176557385326664
+  ],
+  "max_abs_dev_vs_exact": 0.0012524721274093376,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   0.960427193579567,
+   1.4846677741047223
+  ],
+  "xg_away_80": [
+   1.3915010788341486,
+   2.2706864022345408
+  ],
+  "p_home_80": [
+   0.17691013517946128,
+   0.34324790139154304
+  ],
+  "p_draw_80": [
+   0.20242376306523674,
+   0.27128931959762614
+  ],
+  "p_away_80": [
+   0.39019087756043014,
+   0.6153677278904524
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.17268859135420872,
+   0.18173671423142482
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.255201351762728,
+   "p_draw": 0.22462313717245522,
+   "p_away": 0.5201755110648165,
+   "xg_home": 1.3662376330181918,
+   "xg_away": 2.0113228994641283,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.24099381208409143,
+   "p_draw": 0.2526419401030087,
+   "p_away": 0.5063642478128999,
+   "xg_home": 1.0011679774618332,
+   "xg_away": 1.5729772337332961,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.2870717368397198,
+   "p_draw": 0.22433836532225518,
+   "p_away": 0.4885898978380251,
+   "xg_home": 1.5460470701729951,
+   "xg_away": 2.0475517138106394,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.43362929859923616,
+   "p_draw": 0.26159331450305645,
+   "p_away": 0.30477738689770745,
+   "xg_home": 1.4320617984640485,
+   "xg_away": 1.1567024686904,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.25771936346811813,
+   "p_draw": 0.2246482140728021,
+   "p_away": 0.5176324224590798,
+   "xg_home": 1.3761937410085896,
+   "xg_away": 2.009266962204047,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "West Ham attack vs Cardiff defence: rate multiplier \u00d71.67 for the away side.",
+   "effect": 0.5139
+  },
+  {
+   "text": "Independent results-only Elo: Cardiff 1409 vs West Ham 1633 (gap -223 before home advantage).",
+   "effect": 0.3347
+  },
+  {
+   "text": "Home advantage (England, fitted from results): \u00d71.21 on Cardiff's scoring rate.",
+   "effect": 0.1924
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.2506474721274094,
+  "p_draw": 0.23695001461903037,
+  "p_away": 0.5124025132535603,
+  "xg_home": 1.21228985622394,
+  "xg_away": 1.8173057523626015
+ },
+ "context": {
+  "fetched_at": "2026-10-28T20:41:23+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5836919",
+    "fetched_at": "2026-10-28T20:41:23+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "none",
+    "source": null,
+    "formation": null,
+    "starters": [],
+    "fetched_at": "2026-10-28T20:41:23+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   },
+   "away": {
+    "status": "none",
+    "source": null,
+    "formation": null,
+    "starters": [],
+    "fetched_at": "2026-10-28T20:41:23+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Dylan Lawlor",
+     "type": "injury",
+     "expected_return": "Early November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836919",
+     "fetched_at": "2026-10-28T20:41:23+00:00"
+    },
+    {
+     "player": "Rubin Colwill",
+     "type": "injury",
+     "expected_return": "Early November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836919",
+     "fetched_at": "2026-10-28T20:41:23+00:00"
+    },
+    {
+     "player": "Calum Chambers",
+     "type": "injury",
+     "expected_return": "Early November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836919",
+     "fetched_at": "2026-10-28T20:41:23+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "Keiber Lamadrid",
+     "type": "injury",
+     "expected_return": "Early November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836919",
+     "fetched_at": "2026-10-28T20:41:23+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 11,
+    "n21": 2,
+    "last_match": "2026-10-24"
+   },
+   "away": {
+    "rest_days": 11,
+    "n21": 3,
+    "last_match": "2026-10-24"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 220.7
+  },
+  "venue": {
+   "name": "Cardiff City Stadium",
+   "city": "Cardiff (Caerdydd)",
+   "lat": 51.472829314,
+   "lon": -3.203115455
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 4.5649999999999995,
+   "temp_c": 10.4,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=51.473&longitude=-3.203",
+   "fetched_at": "2026-10-28T20:41:23+00:00",
+   "lat": 51.472829314,
+   "lon": -3.203115455
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": 0.75,
+    "d_p_draw_pp": -1.3,
+    "d_p_away_pp": 0.55,
+    "d_xg_home": 0.173,
+    "d_xg_away": 0.203
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": -0.0,
+    "d_p_draw_pp": -0.0,
+    "d_p_away_pp": -0.0,
+    "d_xg_home": -0.0,
+    "d_xg_away": -0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0181,
+    "away_rate_mult": 1.0076,
+    "d_p_home_pp": 0.3,
+    "d_p_draw_pp": -0.14,
+    "d_p_away_pp": -0.17,
+    "d_xg_home": 0.023,
+    "d_xg_away": 0.015,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": -0.0,
+    "d_p_draw_pp": -0.0,
+    "d_p_away_pp": -0.0,
+    "d_xg_home": -0.0,
+    "d_xg_away": -0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "reason": "failed validation; no live features"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": -0.0,
+   "d_p_draw_pp": -0.0,
+   "d_p_away_pp": -0.0,
+   "d_xg_home": -0.0,
+   "d_xg_away": -0.0
+  },
+  "features": {
+   "rest_h": 11.0,
+   "rest_a": 11.0,
+   "n21_h": 2.0,
+   "n21_a": 3.0,
+   "travel_km": 220.65514994963212,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 4.5649999999999995,
+   "temp_c": 10.4
+  }
+ },
+ "confidence": {
+  "tier": "MODERATE",
+  "p_max": 0.5124025132535601,
+  "entropy_nats": 1.0306239095609795,
+  "text": "Most likely result has P = 51.2%. In the out-of-sample backtest, favourites priced 0.50\u20130.60 won 54.7% \u00b1 0.5% (n=9483, mean forecast 54.3%). Backtest RPS for E1: 0.2181; exact-score top-5 hit rate 50.7% (n=1800). Overall champion RPS 0.2099 vs home/away baseline 0.2283. Outcome-certainty tier: MODERATE (entropy 1.031 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Cardiff: no lineup information.",
+  "Cardiff: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.",
+  "West Ham: no lineup information.",
+  "West Ham: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+ ],
+ "verdict": "Cardiff 1\u20131 West Ham is the single most probable scoreline at 10.8%: expected goals 1.21\u20131.82 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.047). Exact scores are inherently uncertain; the 1X2 split is 25.1%/23.7%/51.2%.",
+ "resolved": {
+  "home_key": "England:Cardiff",
+  "away_key": "England:West Ham",
+  "div": "E1",
+  "home_div": "E1",
+  "away_div": "E1",
+  "country": "England"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: West Ham United FC at Cardiff City FC\nCompetition: EFL Championship\nDate: 2026-11-04 14:45 EST\nModel Version: 1.1.0+ensemble-xg-hl240-k8-elo22\nData Cutoff: 2026-10-27\n\nPRIMARY FINAL SCORE PREDICTION\n\nCardiff City FC 1 \u2013 1 West Ham United FC\n(modal exact score, probability 10.8%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.21\nAway: 1.82\nExpected Total: 3.03\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 25.1%\nDraw: 23.7%\nAway Win: 51.2%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 10.8%\n2. 1\u20132: 9.4%\n3. 0\u20131: 8.8%\n4. 0\u20132: 8.0%\n5. 2\u20131: 6.3%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 20.0%\nTotal 2 goals: 22.2%\nTotal 3 goals: 21.8%\nTotal 4 goals: 16.5%\nTotal 5+ goals: 19.4%\n\nBoth Teams Score: 58.6%\nClean sheet Cardiff City FC: 16.6% \u00b7 Clean sheet West Ham United FC: 30.3%\n\nMATCH INTELLIGENCE\n\n1. West Ham attack vs Cardiff defence: rate multiplier \u00d71.67 for the away side.\n2. Independent results-only Elo: Cardiff 1409 vs West Ham 1633 (gap -223 before home advantage).\n3. Home advantage (England, fitted from results): \u00d71.21 on Cardiff's scoring rate.\n\nMODEL CONFIDENCE\n\nMost likely result has P = 51.2%. In the out-of-sample backtest, favourites priced 0.50\u20130.60 won 54.7% \u00b1 0.5% (n=9483, mean forecast 54.3%). Backtest RPS for E1: 0.2181; exact-score top-5 hit rate 50.7% (n=1800). Overall champion RPS 0.2099 vs home/away baseline 0.2283. Outcome-certainty tier: MODERATE (entropy 1.031 nats of max 1.099).\nParameter-uncertainty 80% bands: xG Cardiff City FC 0.96\u20131.48, xG West Ham United FC 1.39\u20132.27; P(home win) 17.7%\u201334.3%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0013 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nCardiff: NONE, fetched 2026-10-28 16:41 EDT\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\nWest Ham: NONE, fetched 2026-10-28 16:41 EDT\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nKEY ABSENCES\n\n- Cardiff: Dylan Lawlor \u2014 injury, Early November 2026 [FotMob, 2026-10-28 16:41 EDT]\n- Cardiff: Rubin Colwill \u2014 injury, Early November 2026 [FotMob, 2026-10-28 16:41 EDT]\n- Cardiff: Calum Chambers \u2014 injury, Early November 2026 [FotMob, 2026-10-28 16:41 EDT]\n- West Ham: Keiber Lamadrid \u2014 injury, Early November 2026 [FotMob, 2026-10-28 16:41 EDT]\n\nWEATHER AT VENUE\n\nCardiff City Stadium, Cardiff (Caerdydd): 10.4 \u00b0C, wind 4.6 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-10-28 16:41 EDT]\n\nREST & TRAVEL\n\nCardiff: 11 days' rest, 2 matches in previous 21 days \u00b7 West Ham: 11 days' rest, 3 in 21 days \u00b7 away travel 220.7 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 25.1% / 23.7% / 51.2%, xG 1.21\u20131.82\n- Understat xG component (validated, in ensemble): home +0.75 pp, draw -1.30 pp, away +0.55 pp; xG +0.173 / +0.203\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home -0.00 pp, draw -0.00 pp, away -0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.30 pp, draw -0.14 pp, away -0.17 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home -0.00 pp, draw -0.00 pp, away -0.00 pp\n- lineup: not applied (failed validation; no live features)\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Cardiff: no lineup information.\n- Cardiff: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n- West Ham: no lineup information.\n- West Ham: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nFINAL VERDICT\n\nCardiff 1\u20131 West Ham is the single most probable scoreline at 10.8%: expected goals 1.21\u20131.82 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.047). Exact scores are inherently uncertain; the 1X2 split is 25.1%/23.7%/51.2%.\n",
+ "frozen_at": "2026-10-28T20:41:23+00:00",
+ "sha256": "66f41fcaebd3f14b2604063bc728acf95037872270a3386ae89e397fa7875350"
+}

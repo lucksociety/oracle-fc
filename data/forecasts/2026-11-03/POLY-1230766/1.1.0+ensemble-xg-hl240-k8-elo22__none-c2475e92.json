@@ -1,0 +1,550 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.1.0+ensemble-xg-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-10-27",
+ "generated_at": "2026-10-28T20:41:01+00:00",
+ "fixture": {
+  "event_id": "POLY-1230766",
+  "home_name": "FC Barcelona",
+  "away_name": "Aston Villa FC",
+  "competition": "UEFA Champions League 2025",
+  "subcategory": "ucl",
+  "kickoff_utc": "2026-11-03T20:00:00+00:00",
+  "kickoff_local": "2026-11-03 15:00 EST",
+  "home_matched": "Barcelona",
+  "away_matched": "Aston Villa",
+  "match_methods": {
+   "home": {
+    "source": "FC Barcelona",
+    "matched": "Barcelona",
+    "method": "alias",
+    "score": 1.0
+   },
+   "away": {
+    "source": "Aston Villa FC",
+    "matched": "Aston Villa",
+    "method": "core-tokens",
+    "score": 0.97
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.6278570788489519,
+  "p_draw": 0.18975825601687935,
+  "p_away": 0.18238466513416873,
+  "xg_home": 2.3855778127193905,
+  "xg_away": 1.2343498578594934,
+  "xg_total": 3.6199276705788836,
+  "median_total": 3,
+  "modal_score": {
+   "home": 2,
+   "away": 1,
+   "p": 0.09290063210946815
+  },
+  "top_scores": [
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.09290063210946815
+   },
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.07991779431602082
+   },
+   {
+    "home": 2,
+    "away": 0,
+    "p": 0.07775960318774135
+   },
+   {
+    "home": 3,
+    "away": 1,
+    "p": 0.07381420335735514
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.06360813245158697
+   }
+  ],
+  "btts": 0.6407974985837211,
+  "totals_over": {
+   "over_0.5": 0.9704507185383195,
+   "over_1.5": 0.8760008836588068,
+   "over_2.5": 0.698380305618537,
+   "over_3.5": 0.4879750356710611,
+   "over_4.5": 0.2980784390339656,
+   "over_5.5": 0.16031026064723725,
+   "over_6.5": 0.07662871193498391
+  },
+  "total_buckets": {
+   "0-1": 0.12399911634119329,
+   "2": 0.1776205780402696,
+   "3": 0.21040526994747608,
+   "4": 0.1898965966370955,
+   "5+": 0.2980784390339656
+  },
+  "clean_sheet_home": 0.29658475839734444,
+  "clean_sheet_away": 0.09216702448061491,
+  "home_goal_dist": [
+   0.09216702448061491,
+   0.21957964772757452,
+   0.26173204817871815,
+   0.20811387897182798,
+   0.12418533531299847,
+   0.059318137763901435,
+   0.023625231034598525,
+   0.011278696529765962
+  ],
+  "away_goal_dist": [
+   0.29658475839734444,
+   0.3548440823179442,
+   0.2178876054184323,
+   0.09142694101585433,
+   0.029421512698984565,
+   0.007721646650606246,
+   0.0017160310877591598,
+   0.00039742241307482595
+  ],
+  "intervals": {
+   "home_goals_80": [
+    1,
+    4
+   ],
+   "away_goals_80": [
+    0,
+    3
+   ],
+   "total_goals_80": [
+    1,
+    6
+   ],
+   "goal_diff_80": [
+    -1,
+    4
+   ]
+  },
+  "score_grid": [
+   [
+    0.029549,
+    0.030842,
+    0.019943,
+    0.008301,
+    0.002652,
+    0.000692,
+    0.000153
+   ],
+   [
+    0.063608,
+    0.079918,
+    0.047652,
+    0.019901,
+    0.006378,
+    0.001668,
+    0.00037
+   ],
+   [
+    0.07776,
+    0.092901,
+    0.056965,
+    0.023872,
+    0.007673,
+    0.002012,
+    0.000447
+   ],
+   [
+    0.061552,
+    0.073814,
+    0.045427,
+    0.019101,
+    0.006158,
+    0.001619,
+    0.00036
+   ],
+   [
+    0.036564,
+    0.044014,
+    0.027185,
+    0.011469,
+    0.003708,
+    0.000977,
+    0.000218
+   ],
+   [
+    0.017387,
+    0.021008,
+    0.013022,
+    0.005512,
+    0.001787,
+    0.000472,
+    0.000105
+   ],
+   [
+    0.006894,
+    0.008361,
+    0.005201,
+    0.002209,
+    0.000718,
+    0.00019,
+    4.3e-05
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.629885,
+  "p_draw": 0.18853,
+  "p_away": 0.181585,
+  "se": [
+   0.001079652459764252,
+   0.0008746040221151513,
+   0.0008620089552174038
+  ],
+  "max_abs_dev_vs_exact": 0.0020279211510481066,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   1.911375856192919,
+   2.896569108547437
+  ],
+  "xg_away_80": [
+   0.93578132551335,
+   1.553439292625284
+  ],
+  "p_home_80": [
+   0.5146761255952436,
+   0.7298208079740521
+  ],
+  "p_draw_80": [
+   0.15532945685760363,
+   0.2291597528606187
+  ],
+  "p_away_80": [
+   0.11242854647281221,
+   0.257873847420991
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.16481297005819742,
+   0.18809982637301628
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.600802149513565,
+   "p_draw": 0.1964177525332381,
+   "p_away": 0.20278009795319685,
+   "xg_home": 2.395741953906645,
+   "xg_away": 1.357494204418288,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.6661316097496952,
+   "p_draw": 0.183530935065105,
+   "p_away": 0.1503374551851998,
+   "xg_home": 2.3237486072561198,
+   "xg_away": 1.0151244763054985,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.607377465036467,
+   "p_draw": 0.19401800942563785,
+   "p_away": 0.1986045255378953,
+   "xg_home": 2.474328238713963,
+   "xg_away": 1.3909914559613064,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.4832416938369637,
+   "p_draw": 0.22060600873606262,
+   "p_away": 0.2961522974269736,
+   "xg_home": 1.9289572439516407,
+   "xg_away": 1.4753041001490228,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.5981256490519133,
+   "p_draw": 0.19437363268368846,
+   "p_away": 0.2075007182643983,
+   "xg_home": 2.438170207393241,
+   "xg_away": 1.4088592567686442,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Barcelona attack vs Aston Villa defence: time-weighted strength gap multiplies Barcelona's scoring rate by \u00d71.51 relative to an average pairing (from 41/33 decay-weighted matches).",
+   "effect": 0.4143
+  },
+  {
+   "text": "Home advantage (Europe, fitted from results): \u00d71.32 on Barcelona's scoring rate.",
+   "effect": 0.2745
+  },
+  {
+   "text": "Independent results-only Elo: Barcelona 1931 vs Aston Villa 1758 (gap +173 before home advantage).",
+   "effect": 0.2602
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.6278570788489519,
+  "p_draw": 0.18975825601687935,
+  "p_away": 0.18238466513416873,
+  "xg_home": 2.3855778127193905,
+  "xg_away": 1.2343498578594934
+ },
+ "context": {
+  "fetched_at": "2026-10-28T20:41:01+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/6106263",
+    "fetched_at": "2026-10-28T20:41:01+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "none",
+    "source": null,
+    "formation": "",
+    "starters": [],
+    "fetched_at": "2026-10-28T20:41:01+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   },
+   "away": {
+    "status": "none",
+    "source": null,
+    "formation": "",
+    "starters": [],
+    "fetched_at": "2026-10-28T20:41:01+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Xavi Espart",
+     "type": "injury",
+     "expected_return": "Mid December 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6106263",
+     "fetched_at": "2026-10-28T20:41:01+00:00"
+    },
+    {
+     "player": "Dani Olmo",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6106263",
+     "fetched_at": "2026-10-28T20:41:01+00:00"
+    },
+    {
+     "player": "Jules Kound\u00e9",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6106263",
+     "fetched_at": "2026-10-28T20:41:01+00:00"
+    },
+    {
+     "player": "Eric Garc\u00eda",
+     "type": "injury",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6106263",
+     "fetched_at": "2026-10-28T20:41:01+00:00"
+    },
+    {
+     "player": "Andreas Christensen",
+     "type": "injury",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6106263",
+     "fetched_at": "2026-10-28T20:41:01+00:00"
+    },
+    {
+     "player": "Roony Bardghji",
+     "type": "injury",
+     "expected_return": "Late February 2027",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6106263",
+     "fetched_at": "2026-10-28T20:41:01+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "Aaron Wan-Bissaka",
+     "type": "injury",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6106263",
+     "fetched_at": "2026-10-28T20:41:01+00:00"
+    },
+    {
+     "player": "Matteo Ruggeri",
+     "type": "injury",
+     "expected_return": "Mid December 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6106263",
+     "fetched_at": "2026-10-28T20:41:01+00:00"
+    },
+    {
+     "player": "Modou K\u00e9ba Ciss\u00e9",
+     "type": "injury",
+     "expected_return": "Back in training",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6106263",
+     "fetched_at": "2026-10-28T20:41:01+00:00"
+    },
+    {
+     "player": "Amadou Onana",
+     "type": "injury",
+     "expected_return": "Mid April 2027",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6106263",
+     "fetched_at": "2026-10-28T20:41:01+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 9,
+    "n21": 2,
+    "last_match": "2026-10-25"
+   },
+   "away": {
+    "rest_days": 10,
+    "n21": 2,
+    "last_match": "2026-10-24"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 1273.7
+  },
+  "venue": {
+   "name": "Spotify Camp Nou",
+   "city": "Barcelona",
+   "lat": 41.380890137,
+   "lon": 2.122812867
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 1.495,
+   "temp_c": 9.6,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=41.381&longitude=2.123",
+   "fetched_at": "2026-10-28T20:41:01+00:00",
+   "lat": 41.380890137,
+   "lon": 2.122812867
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": -3.14,
+    "d_p_draw_pp": 0.49,
+    "d_p_away_pp": 2.65,
+    "d_xg_home": 0.056,
+    "d_xg_away": 0.184
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0411,
+    "away_rate_mult": 1.0172,
+    "d_p_home_pp": 1.33,
+    "d_p_draw_pp": -0.68,
+    "d_p_away_pp": -0.65,
+    "d_xg_home": 0.098,
+    "d_xg_away": 0.022,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "reason": "failed validation; no live features"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 9.0,
+   "rest_a": 10.0,
+   "n21_h": 2.0,
+   "n21_a": 2.0,
+   "travel_km": 1273.734817753897,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 1.495,
+   "temp_c": 9.6
+  }
+ },
+ "confidence": {
+  "tier": "MODERATE",
+  "p_max": 0.6278570788489519,
+  "entropy_nats": 0.9179630991692695,
+  "text": "Most likely result has P = 62.8%. In the out-of-sample backtest, favourites priced 0.60\u20130.70 won 66.9% \u00b1 0.8% (n=3811, mean forecast 64.1%). Backtest RPS for UCL: 0.1971; exact-score top-5 hit rate 42.8% (n=495). Overall champion RPS 0.2099 vs home/away baseline 0.2283. Outcome-certainty tier: MODERATE (entropy 0.918 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Barcelona: no lineup information.",
+  "Barcelona: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.",
+  "Aston Villa: no lineup information.",
+  "Aston Villa: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+ ],
+ "verdict": "Barcelona 2\u20131 Aston Villa is the single most probable scoreline at 9.3%: expected goals 2.39\u20131.23 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.047). Exact scores are inherently uncertain; the 1X2 split is 62.8%/19.0%/18.2%.",
+ "resolved": {
+  "home_key": "Spain:Barcelona",
+  "away_key": "England:Aston Villa",
+  "div": "UCL",
+  "home_div": "SP1",
+  "away_div": "E0",
+  "country": "Europe"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: Aston Villa FC at FC Barcelona\nCompetition: UEFA Champions League 2025\nDate: 2026-11-03 15:00 EST\nModel Version: 1.1.0+ensemble-xg-hl240-k8-elo22\nData Cutoff: 2026-10-27\n\nPRIMARY FINAL SCORE PREDICTION\n\nFC Barcelona 2 \u2013 1 Aston Villa FC\n(modal exact score, probability 9.3%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 2.39\nAway: 1.23\nExpected Total: 3.62\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 62.8%\nDraw: 19.0%\nAway Win: 18.2%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 2\u20131: 9.3%\n2. 1\u20131: 8.0%\n3. 2\u20130: 7.8%\n4. 3\u20131: 7.4%\n5. 1\u20130: 6.4%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 12.4%\nTotal 2 goals: 17.8%\nTotal 3 goals: 21.0%\nTotal 4 goals: 19.0%\nTotal 5+ goals: 29.8%\n\nBoth Teams Score: 64.1%\nClean sheet FC Barcelona: 29.7% \u00b7 Clean sheet Aston Villa FC: 9.2%\n\nMATCH INTELLIGENCE\n\n1. Barcelona attack vs Aston Villa defence: time-weighted strength gap multiplies Barcelona's scoring rate by \u00d71.51 relative to an average pairing (from 41/33 decay-weighted matches).\n2. Home advantage (Europe, fitted from results): \u00d71.32 on Barcelona's scoring rate.\n3. Independent results-only Elo: Barcelona 1931 vs Aston Villa 1758 (gap +173 before home advantage).\n\nMODEL CONFIDENCE\n\nMost likely result has P = 62.8%. In the out-of-sample backtest, favourites priced 0.60\u20130.70 won 66.9% \u00b1 0.8% (n=3811, mean forecast 64.1%). Backtest RPS for UCL: 0.1971; exact-score top-5 hit rate 42.8% (n=495). Overall champion RPS 0.2099 vs home/away baseline 0.2283. Outcome-certainty tier: MODERATE (entropy 0.918 nats of max 1.099).\nParameter-uncertainty 80% bands: xG FC Barcelona 1.91\u20132.90, xG Aston Villa FC 0.94\u20131.55; P(home win) 51.5%\u201373.0%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0020 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nBarcelona: NONE, fetched 2026-10-28 16:41 EDT\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\nAston Villa: NONE, fetched 2026-10-28 16:41 EDT\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nKEY ABSENCES\n\n- Barcelona: Xavi Espart \u2014 injury, Mid December 2026 [FotMob, 2026-10-28 16:41 EDT]\n- Barcelona: Dani Olmo \u2014 injury, Late November 2026 [FotMob, 2026-10-28 16:41 EDT]\n- Barcelona: Jules Kound\u00e9 \u2014 injury, Doubtful [FotMob, 2026-10-28 16:41 EDT]\n- Barcelona: Eric Garc\u00eda \u2014 injury, Mid November 2026 [FotMob, 2026-10-28 16:41 EDT]\n- Barcelona: Andreas Christensen \u2014 injury, Mid November 2026 [FotMob, 2026-10-28 16:41 EDT]\n- Barcelona: Roony Bardghji \u2014 injury, Late February 2027 [FotMob, 2026-10-28 16:41 EDT]\n- Aston Villa: Aaron Wan-Bissaka \u2014 injury, Mid November 2026 [FotMob, 2026-10-28 16:41 EDT]\n- Aston Villa: Matteo Ruggeri \u2014 injury, Mid December 2026 [FotMob, 2026-10-28 16:41 EDT]\n- Aston Villa: Modou K\u00e9ba Ciss\u00e9 \u2014 injury, Back in training [FotMob, 2026-10-28 16:41 EDT]\n- Aston Villa: Amadou Onana \u2014 injury, Mid April 2027 [FotMob, 2026-10-28 16:41 EDT]\n\nWEATHER AT VENUE\n\nSpotify Camp Nou, Barcelona: 9.6 \u00b0C, wind 1.5 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-10-28 16:41 EDT]\n\nREST & TRAVEL\n\nBarcelona: 9 days' rest, 2 matches in previous 21 days \u00b7 Aston Villa: 10 days' rest, 2 in 21 days \u00b7 away travel 1273.7 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 62.8% / 19.0% / 18.2%, xG 2.39\u20131.23\n- Understat xG component (validated, in ensemble): home -3.14 pp, draw +0.49 pp, away +2.65 pp; xG +0.056 / +0.184\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +1.33 pp, draw -0.68 pp, away -0.65 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- lineup: not applied (failed validation; no live features)\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Barcelona: no lineup information.\n- Barcelona: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n- Aston Villa: no lineup information.\n- Aston Villa: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nFINAL VERDICT\n\nBarcelona 2\u20131 Aston Villa is the single most probable scoreline at 9.3%: expected goals 2.39\u20131.23 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.047). Exact scores are inherently uncertain; the 1X2 split is 62.8%/19.0%/18.2%.\n",
+ "frozen_at": "2026-10-28T20:41:01+00:00",
+ "sha256": "cbc5fd5b27835a34304d88b0aec50402b0be0082e5812ece1a1e7af8d3696e19"
+}

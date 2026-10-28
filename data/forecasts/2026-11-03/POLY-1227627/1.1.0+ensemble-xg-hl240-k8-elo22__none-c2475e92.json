@@ -1,0 +1,590 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.1.0+ensemble-xg-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-10-27",
+ "generated_at": "2026-10-28T20:40:59+00:00",
+ "fixture": {
+  "event_id": "POLY-1227627",
+  "home_name": "Derby County FC",
+  "away_name": "Norwich City FC",
+  "competition": "EFL Championship",
+  "subcategory": "elc",
+  "kickoff_utc": "2026-11-03T19:45:00+00:00",
+  "kickoff_local": "2026-11-03 14:45 EST",
+  "home_matched": "Derby",
+  "away_matched": "Norwich",
+  "match_methods": {
+   "home": {
+    "source": "Derby County FC",
+    "matched": "Derby",
+    "method": "core-tokens",
+    "score": 0.97
+   },
+   "away": {
+    "source": "Norwich City FC",
+    "matched": "Norwich",
+    "method": "token-subset",
+    "score": 0.9
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.3789080931158302,
+  "p_draw": 0.26555184634102313,
+  "p_away": 0.3555400605431467,
+  "xg_home": 1.3668427988520138,
+  "xg_away": 1.3166488362528161,
+  "xg_total": 2.68349163510483,
+  "median_total": 3,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.12581270032514283
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.12581270032514283
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.09058074803678683
+   },
+   {
+    "home": 0,
+    "away": 1,
+    "p": 0.08697377666387725
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.08373253983609441
+   },
+   {
+    "home": 1,
+    "away": 2,
+    "p": 0.08062148443461047
+   }
+  ],
+  "btts": 0.5478887722702588,
+  "totals_over": {
+   "over_0.5": 0.9279263506125267,
+   "over_1.5": 0.7503718259118627,
+   "over_2.5": 0.501751312621751,
+   "over_3.5": 0.28252159164361373,
+   "over_4.5": 0.13531894136519707,
+   "over_5.5": 0.056045354339868306,
+   "over_6.5": 0.02038027253408241
+  },
+  "total_buckets": {
+   "0-1": 0.24962817408813734,
+   "2": 0.2486205132901116,
+   "3": 0.2192297209781373,
+   "4": 0.14720265027841672,
+   "5+": 0.13531894136519707
+  },
+  "clean_sheet_home": 0.2688064936171744,
+  "clean_sheet_away": 0.2553783835000402,
+  "home_goal_dist": [
+   0.2553783835000402,
+   0.3481233472902879,
+   0.2377469658557573,
+   0.10845733169808297,
+   0.03717961442441336,
+   0.010215651657182623,
+   0.00234343563951182,
+   0.0005552699347238588
+  ],
+  "away_goal_dist": [
+   0.2688064936171744,
+   0.35236878939795047,
+   0.23173589747442952,
+   0.10193964074066156,
+   0.03374172699273654,
+   0.008963022763470817,
+   0.001990151312737963,
+   0.00045427770083876864
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    3
+   ],
+   "away_goals_80": [
+    0,
+    3
+   ],
+   "total_goals_80": [
+    1,
+    5
+   ],
+   "goal_diff_80": [
+    -2,
+    2
+   ]
+  },
+  "score_grid": [
+   [
+    0.072074,
+    0.086974,
+    0.059037,
+    0.025881,
+    0.008538,
+    0.002261,
+    0.0005
+   ],
+   [
+    0.090581,
+    0.125813,
+    0.080621,
+    0.035433,
+    0.011718,
+    0.00311,
+    0.00069
+   ],
+   [
+    0.06377,
+    0.083733,
+    0.055157,
+    0.024302,
+    0.008056,
+    0.002143,
+    0.000477
+   ],
+   [
+    0.028995,
+    0.038168,
+    0.025206,
+    0.011133,
+    0.003699,
+    0.000986,
+    0.00022
+   ],
+   [
+    0.009907,
+    0.013074,
+    0.008655,
+    0.003832,
+    0.001276,
+    0.000341,
+    7.6e-05
+   ],
+   [
+    0.002713,
+    0.00359,
+    0.002382,
+    0.001057,
+    0.000353,
+    9.5e-05,
+    2.1e-05
+   ],
+   [
+    0.00062,
+    0.000823,
+    0.000547,
+    0.000243,
+    8.1e-05,
+    2.2e-05,
+    5e-06
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.38042,
+  "p_draw": 0.265135,
+  "p_away": 0.354445,
+  "se": [
+   0.0010855888346883455,
+   0.0009870117318831627,
+   0.001069611476132806
+  ],
+  "max_abs_dev_vs_exact": 0.0015119068841698002,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   1.0655757705068134,
+   1.694306758256853
+  ],
+  "xg_away_80": [
+   1.0138339529623568,
+   1.638394074534867
+  ],
+  "p_home_80": [
+   0.28490234463114406,
+   0.4783027093382937
+  ],
+  "p_draw_80": [
+   0.24042392581920688,
+   0.2967703380092731
+  ],
+  "p_away_80": [
+   0.2580942923464187,
+   0.44670317514324176
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.1838651114819834,
+   0.1781288102737057
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.3765204713792468,
+   "p_draw": 0.2635533674554254,
+   "p_away": 0.3599261611653277,
+   "xg_home": 1.4220691185975025,
+   "xg_away": 1.3854360922240687,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.3819102678807894,
+   "p_draw": 0.26799291545346265,
+   "p_away": 0.35009681666574805,
+   "xg_home": 1.2984389516273465,
+   "xg_away": 1.2313360013354162,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.3854158647933741,
+   "p_draw": 0.2619804552020572,
+   "p_away": 0.3526036800045685,
+   "xg_home": 1.4912364897138255,
+   "xg_away": 1.417639923964292,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.43362929859923616,
+   "p_draw": 0.26159331450305645,
+   "p_away": 0.30477738689770745,
+   "xg_home": 1.4320617984640485,
+   "xg_away": 1.1567024686904,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.3763553340696044,
+   "p_draw": 0.26367792956529523,
+   "p_away": 0.35996673636510007,
+   "xg_home": 1.4194027304567878,
+   "xg_away": 1.3832515590956345,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Home advantage (England, fitted from results): \u00d71.21 on Derby's scoring rate.",
+   "effect": 0.1924
+  },
+  {
+   "text": "Norwich attack vs Derby defence: rate multiplier \u00d71.15 for the away side.",
+   "effect": 0.141
+  },
+  {
+   "text": "Independent results-only Elo: Derby 1367 vs Norwich 1426 (gap -59 before home advantage).",
+   "effect": 0.0891
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.37890809311583007,
+  "p_draw": 0.265551846341023,
+  "p_away": 0.35554006054314663,
+  "xg_home": 1.3668427988520135,
+  "xg_away": 1.316648836252816
+ },
+ "context": {
+  "fetched_at": "2026-10-28T20:40:59+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5836912",
+    "fetched_at": "2026-10-28T20:40:59+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "none",
+    "source": null,
+    "formation": null,
+    "starters": [],
+    "fetched_at": "2026-10-28T20:40:59+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   },
+   "away": {
+    "status": "none",
+    "source": null,
+    "formation": null,
+    "starters": [],
+    "fetched_at": "2026-10-28T20:40:59+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Henrik Meister",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836912",
+     "fetched_at": "2026-10-28T20:40:59+00:00"
+    },
+    {
+     "player": "Lewis Travis",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836912",
+     "fetched_at": "2026-10-28T20:40:59+00:00"
+    },
+    {
+     "player": "Sondre Klingen Lang\u00e5s",
+     "type": "injury",
+     "expected_return": "Early January 2027",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836912",
+     "fetched_at": "2026-10-28T20:40:59+00:00"
+    },
+    {
+     "player": "Eiran Cashin",
+     "type": "injury",
+     "expected_return": "Early November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836912",
+     "fetched_at": "2026-10-28T20:40:59+00:00"
+    },
+    {
+     "player": "Charlie Taylor",
+     "type": "injury",
+     "expected_return": "Early November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836912",
+     "fetched_at": "2026-10-28T20:40:59+00:00"
+    },
+    {
+     "player": "Craig Forsyth",
+     "type": "injury",
+     "expected_return": "Early January 2027",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836912",
+     "fetched_at": "2026-10-28T20:40:59+00:00"
+    },
+    {
+     "player": "Derry Murkin",
+     "type": "injury",
+     "expected_return": "Early December 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836912",
+     "fetched_at": "2026-10-28T20:40:59+00:00"
+    },
+    {
+     "player": "Matthew Clarke",
+     "type": "injury",
+     "expected_return": "Unknown",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836912",
+     "fetched_at": "2026-10-28T20:40:59+00:00"
+    },
+    {
+     "player": "Patrick Agyemang",
+     "type": "injury",
+     "expected_return": "Unknown",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836912",
+     "fetched_at": "2026-10-28T20:40:59+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "Edmond-Paris Maghoma",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836912",
+     "fetched_at": "2026-10-28T20:40:59+00:00"
+    },
+    {
+     "player": "Papa Diallo",
+     "type": "injury",
+     "expected_return": "Early November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836912",
+     "fetched_at": "2026-10-28T20:40:59+00:00"
+    },
+    {
+     "player": "Mohamed Tour\u00e9",
+     "type": "injury",
+     "expected_return": "Early January 2027",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836912",
+     "fetched_at": "2026-10-28T20:40:59+00:00"
+    },
+    {
+     "player": "Gabriel Forsyth",
+     "type": "injury",
+     "expected_return": "Early November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836912",
+     "fetched_at": "2026-10-28T20:40:59+00:00"
+    },
+    {
+     "player": "Ali Ahmed",
+     "type": "injury",
+     "expected_return": "Early November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836912",
+     "fetched_at": "2026-10-28T20:40:59+00:00"
+    },
+    {
+     "player": "Mirko Topi\u0107",
+     "type": "injury",
+     "expected_return": "Unknown",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836912",
+     "fetched_at": "2026-10-28T20:40:59+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 10,
+    "n21": 3,
+    "last_match": "2026-10-24"
+   },
+   "away": {
+    "rest_days": 10,
+    "n21": 3,
+    "last_match": "2026-10-24"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 188.3
+  },
+  "venue": {
+   "name": "Pride Park Stadium",
+   "city": "Derby",
+   "lat": 52.914904941,
+   "lon": -1.44723013
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 0.6499999999999999,
+   "temp_c": 6.7,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=52.915&longitude=-1.447",
+   "fetched_at": "2026-10-28T20:40:59+00:00",
+   "lat": 52.914904941,
+   "lon": -1.44723013
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": -0.27,
+    "d_p_draw_pp": -0.2,
+    "d_p_away_pp": 0.47,
+    "d_xg_home": 0.055,
+    "d_xg_away": 0.07
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0164,
+    "away_rate_mult": 1.0069,
+    "d_p_home_pp": 0.4,
+    "d_p_draw_pp": -0.19,
+    "d_p_away_pp": -0.2,
+    "d_xg_home": 0.023,
+    "d_xg_away": 0.009,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "reason": "failed validation; no live features"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 10.0,
+   "rest_a": 10.0,
+   "n21_h": 3.0,
+   "n21_a": 3.0,
+   "travel_km": 188.26349906165984,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 0.6499999999999999,
+   "temp_c": 6.7
+  }
+ },
+ "confidence": {
+  "tier": "LOW",
+  "p_max": 0.3789080931158302,
+  "entropy_nats": 1.0874930900194124,
+  "text": "Most likely result has P = 37.9%. In the out-of-sample backtest, favourites priced 0.33\u20130.40 won 37.9% \u00b1 0.6% (n=7778, mean forecast 38.0%). Backtest RPS for E1: 0.2181; exact-score top-5 hit rate 50.7% (n=1800). Overall champion RPS 0.2099 vs home/away baseline 0.2283. Outcome-certainty tier: LOW (entropy 1.087 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Derby: no lineup information.",
+  "Derby: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.",
+  "Norwich: no lineup information.",
+  "Norwich: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+ ],
+ "verdict": "Derby 1\u20131 Norwich is the single most probable scoreline at 12.6%: expected goals 1.37\u20131.32 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.047). Exact scores are inherently uncertain; the 1X2 split is 37.9%/26.6%/35.6%.",
+ "resolved": {
+  "home_key": "England:Derby",
+  "away_key": "England:Norwich",
+  "div": "E1",
+  "home_div": "E1",
+  "away_div": "E1",
+  "country": "England"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: Norwich City FC at Derby County FC\nCompetition: EFL Championship\nDate: 2026-11-03 14:45 EST\nModel Version: 1.1.0+ensemble-xg-hl240-k8-elo22\nData Cutoff: 2026-10-27\n\nPRIMARY FINAL SCORE PREDICTION\n\nDerby County FC 1 \u2013 1 Norwich City FC\n(modal exact score, probability 12.6%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.37\nAway: 1.32\nExpected Total: 2.68\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 37.9%\nDraw: 26.6%\nAway Win: 35.6%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 12.6%\n2. 1\u20130: 9.1%\n3. 0\u20131: 8.7%\n4. 2\u20131: 8.4%\n5. 1\u20132: 8.1%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 25.0%\nTotal 2 goals: 24.9%\nTotal 3 goals: 21.9%\nTotal 4 goals: 14.7%\nTotal 5+ goals: 13.5%\n\nBoth Teams Score: 54.8%\nClean sheet Derby County FC: 26.9% \u00b7 Clean sheet Norwich City FC: 25.5%\n\nMATCH INTELLIGENCE\n\n1. Home advantage (England, fitted from results): \u00d71.21 on Derby's scoring rate.\n2. Norwich attack vs Derby defence: rate multiplier \u00d71.15 for the away side.\n3. Independent results-only Elo: Derby 1367 vs Norwich 1426 (gap -59 before home advantage).\n\nMODEL CONFIDENCE\n\nMost likely result has P = 37.9%. In the out-of-sample backtest, favourites priced 0.33\u20130.40 won 37.9% \u00b1 0.6% (n=7778, mean forecast 38.0%). Backtest RPS for E1: 0.2181; exact-score top-5 hit rate 50.7% (n=1800). Overall champion RPS 0.2099 vs home/away baseline 0.2283. Outcome-certainty tier: LOW (entropy 1.087 nats of max 1.099).\nParameter-uncertainty 80% bands: xG Derby County FC 1.07\u20131.69, xG Norwich City FC 1.01\u20131.64; P(home win) 28.5%\u201347.8%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0015 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nDerby: NONE, fetched 2026-10-28 16:40 EDT\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\nNorwich: NONE, fetched 2026-10-28 16:40 EDT\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nKEY ABSENCES\n\n- Derby: Henrik Meister \u2014 injury, Doubtful [FotMob, 2026-10-28 16:40 EDT]\n- Derby: Lewis Travis \u2014 injury, Doubtful [FotMob, 2026-10-28 16:40 EDT]\n- Derby: Sondre Klingen Lang\u00e5s \u2014 injury, Early January 2027 [FotMob, 2026-10-28 16:40 EDT]\n- Derby: Eiran Cashin \u2014 injury, Early November 2026 [FotMob, 2026-10-28 16:40 EDT]\n- Derby: Charlie Taylor \u2014 injury, Early November 2026 [FotMob, 2026-10-28 16:40 EDT]\n- Derby: Craig Forsyth \u2014 injury, Early January 2027 [FotMob, 2026-10-28 16:40 EDT]\n- Derby: Derry Murkin \u2014 injury, Early December 2026 [FotMob, 2026-10-28 16:40 EDT]\n- Derby: Matthew Clarke \u2014 injury, Unknown [FotMob, 2026-10-28 16:40 EDT]\n- Derby: Patrick Agyemang \u2014 injury, Unknown [FotMob, 2026-10-28 16:40 EDT]\n- Norwich: Edmond-Paris Maghoma \u2014 injury, Doubtful [FotMob, 2026-10-28 16:40 EDT]\n- Norwich: Papa Diallo \u2014 injury, Early November 2026 [FotMob, 2026-10-28 16:40 EDT]\n- Norwich: Mohamed Tour\u00e9 \u2014 injury, Early January 2027 [FotMob, 2026-10-28 16:40 EDT]\n- Norwich: Gabriel Forsyth \u2014 injury, Early November 2026 [FotMob, 2026-10-28 16:40 EDT]\n- Norwich: Ali Ahmed \u2014 injury, Early November 2026 [FotMob, 2026-10-28 16:40 EDT]\n- Norwich: Mirko Topi\u0107 \u2014 injury, Unknown [FotMob, 2026-10-28 16:40 EDT]\n\nWEATHER AT VENUE\n\nPride Park Stadium, Derby: 6.7 \u00b0C, wind 0.6 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-10-28 16:40 EDT]\n\nREST & TRAVEL\n\nDerby: 10 days' rest, 3 matches in previous 21 days \u00b7 Norwich: 10 days' rest, 3 in 21 days \u00b7 away travel 188.3 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 37.9% / 26.6% / 35.6%, xG 1.37\u20131.32\n- Understat xG component (validated, in ensemble): home -0.27 pp, draw -0.20 pp, away +0.47 pp; xG +0.055 / +0.070\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.40 pp, draw -0.19 pp, away -0.20 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- lineup: not applied (failed validation; no live features)\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Derby: no lineup information.\n- Derby: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n- Norwich: no lineup information.\n- Norwich: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nFINAL VERDICT\n\nDerby 1\u20131 Norwich is the single most probable scoreline at 12.6%: expected goals 1.37\u20131.32 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.047). Exact scores are inherently uncertain; the 1X2 split is 37.9%/26.6%/35.6%.\n",
+ "frozen_at": "2026-10-28T20:40:59+00:00",
+ "sha256": "13c672b0cf2da35097d30c221b2e63a6db7735e2bb732f17bf249e6b809c8267"
+}

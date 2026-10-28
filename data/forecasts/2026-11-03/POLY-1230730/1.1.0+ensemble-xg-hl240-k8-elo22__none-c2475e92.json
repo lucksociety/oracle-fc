@@ -1,0 +1,558 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.1.0+ensemble-xg-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-10-27",
+ "generated_at": "2026-10-28T20:41:02+00:00",
+ "fixture": {
+  "event_id": "POLY-1230730",
+  "home_name": "Feyenoord Rotterdam",
+  "away_name": "FC Internazionale Milano",
+  "competition": "UEFA Champions League 2025",
+  "subcategory": "ucl",
+  "kickoff_utc": "2026-11-03T20:00:00+00:00",
+  "kickoff_local": "2026-11-03 15:00 EST",
+  "home_matched": "Feyenoord",
+  "away_matched": "Inter",
+  "match_methods": {
+   "home": {
+    "source": "Feyenoord Rotterdam",
+    "matched": "Feyenoord",
+    "method": "token-subset",
+    "score": 0.9
+   },
+   "away": {
+    "source": "FC Internazionale Milano",
+    "matched": "Inter",
+    "method": "alias",
+    "score": 1.0
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.3044966505611498,
+  "p_draw": 0.2278057026950588,
+  "p_away": 0.46769764674379144,
+  "xg_home": 1.4874574637044031,
+  "xg_away": 1.887800513793177,
+  "xg_total": 3.37525797749758,
+  "median_total": 3,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.09822018806400505
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.09822018806400505
+   },
+   {
+    "home": 1,
+    "away": 2,
+    "p": 0.08916029480566814
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.07097707281139849
+   },
+   {
+    "home": 2,
+    "away": 2,
+    "p": 0.06629597042472724
+   },
+   {
+    "home": 0,
+    "away": 1,
+    "p": 0.06284744323560555
+   }
+  ],
+  "btts": 0.655900867233718,
+  "totals_over": {
+   "over_0.5": 0.9619777654045382,
+   "over_1.5": 0.8488257248070737,
+   "over_2.5": 0.6519078713633548,
+   "over_3.5": 0.4352156147397429,
+   "over_4.5": 0.25285023326395345,
+   "over_5.5": 0.129084032407903,
+   "over_6.5": 0.05854744158918291
+  },
+  "total_buckets": {
+   "0-1": 0.15117427519292637,
+   "2": 0.19691785344371887,
+   "3": 0.2166922566236119,
+   "4": 0.18236538147578948,
+   "5+": 0.25285023326395345
+  },
+  "clean_sheet_home": 0.1556308870201887,
+  "clean_sheet_away": 0.2264904803415553,
+  "home_goal_dist": [
+   0.2264904803415553,
+   0.3358063082453215,
+   0.24948399594844659,
+   0.12383704348792317,
+   0.04620240001394123,
+   0.013820152972256932,
+   0.0034524307410762406,
+   0.000907188249479138
+  ],
+  "away_goal_dist": [
+   0.1556308870201887,
+   0.2852205667556454,
+   0.26561588052397117,
+   0.16754098607956802,
+   0.08046311689228405,
+   0.03134783350191638,
+   0.01030546753049426,
+   0.003875261695931995
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    3
+   ],
+   "away_goals_80": [
+    0,
+    4
+   ],
+   "total_goals_80": [
+    1,
+    6
+   ],
+   "goal_diff_80": [
+    -3,
+    2
+   ]
+  },
+  "score_grid": [
+   [
+    0.038022,
+    0.062847,
+    0.060085,
+    0.037588,
+    0.017912,
+    0.006928,
+    0.002263
+   ],
+   [
+    0.050305,
+    0.09822,
+    0.08916,
+    0.056091,
+    0.026872,
+    0.010445,
+    0.003427
+   ],
+   [
+    0.038613,
+    0.070977,
+    0.066296,
+    0.041938,
+    0.020195,
+    0.007887,
+    0.002599
+   ],
+   [
+    0.018967,
+    0.035063,
+    0.032934,
+    0.020946,
+    0.010137,
+    0.003977,
+    0.001315
+   ],
+   [
+    0.007004,
+    0.01302,
+    0.012297,
+    0.007862,
+    0.003823,
+    0.001506,
+    0.0005
+   ],
+   [
+    0.002074,
+    0.003877,
+    0.003681,
+    0.002365,
+    0.001155,
+    0.000457,
+    0.000152
+   ],
+   [
+    0.000513,
+    0.000964,
+    0.00092,
+    0.000594,
+    0.000292,
+    0.000116,
+    3.9e-05
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.30517,
+  "p_draw": 0.227185,
+  "p_away": 0.467645,
+  "se": [
+   0.0010296632243117164,
+   0.0009369417692018005,
+   0.0011156907142550754
+  ],
+  "max_abs_dev_vs_exact": 0.0006733494388502237,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   1.1648261197835894,
+   1.8376494462761668
+  ],
+  "xg_away_80": [
+   1.4576641045268506,
+   2.3443493140676437
+  ],
+  "p_home_80": [
+   0.2156707674744411,
+   0.40825289417070854
+  ],
+  "p_draw_80": [
+   0.20128475132412602,
+   0.25541712001900363
+  ],
+  "p_away_80": [
+   0.34705235236309473,
+   0.5776670145876683
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.18075564678322412,
+   0.17634567828482592
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.2803177086524517,
+   "p_draw": 0.21602810640669137,
+   "p_away": 0.5036541849408568,
+   "xg_home": 1.5675482042272058,
+   "xg_away": 2.131968081147262,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.33331741872466075,
+   "p_draw": 0.23991571493262842,
+   "p_away": 0.42676686634271077,
+   "xg_home": 1.4106166002970115,
+   "xg_away": 1.6245701491473294,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.2572132536409387,
+   "p_draw": 0.2098313144596966,
+   "p_away": 0.5329554318993647,
+   "xg_home": 1.5624731442523112,
+   "xg_away": 2.2754002919304033,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.4832416938369637,
+   "p_draw": 0.22060600873606262,
+   "p_away": 0.2961522974269736,
+   "xg_home": 1.9289572439516407,
+   "xg_away": 1.4753041001490228,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.2817955020614422,
+   "p_draw": 0.2186353379598224,
+   "p_away": 0.4995691599787353,
+   "xg_home": 1.544270003804616,
+   "xg_away": 2.08983613247101,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Inter attack vs Feyenoord defence: rate multiplier \u00d71.77 for the away side.",
+   "effect": 0.5721
+  },
+  {
+   "text": "Home advantage (Europe, fitted from results): \u00d71.32 on Feyenoord's scoring rate.",
+   "effect": 0.2745
+  },
+  {
+   "text": "Independent results-only Elo: Feyenoord 1762 vs Inter 1903 (gap -141 before home advantage).",
+   "effect": 0.2115
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.3044966505611497,
+  "p_draw": 0.22780570269505876,
+  "p_away": 0.4676976467437914,
+  "xg_home": 1.4874574637044027,
+  "xg_away": 1.8878005137931766
+ },
+ "context": {
+  "fetched_at": "2026-10-28T20:41:02+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/6106306",
+    "fetched_at": "2026-10-28T20:41:02+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "none",
+    "source": null,
+    "formation": "",
+    "starters": [],
+    "fetched_at": "2026-10-28T20:41:02+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   },
+   "away": {
+    "status": "none",
+    "source": null,
+    "formation": "",
+    "starters": [],
+    "fetched_at": "2026-10-28T20:41:02+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Reiss Nelson",
+     "type": "injury",
+     "expected_return": "Early November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6106306",
+     "fetched_at": "2026-10-28T20:41:02+00:00"
+    },
+    {
+     "player": "Shaqueel van Persie",
+     "type": "injury",
+     "expected_return": "Day to day",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6106306",
+     "fetched_at": "2026-10-28T20:41:02+00:00"
+    },
+    {
+     "player": "Gijs Smal",
+     "type": "injury",
+     "expected_return": "Day to day",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6106306",
+     "fetched_at": "2026-10-28T20:41:02+00:00"
+    },
+    {
+     "player": "Jordan Bos",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6106306",
+     "fetched_at": "2026-10-28T20:41:02+00:00"
+    },
+    {
+     "player": "Bart Nieuwkoop",
+     "type": "injury",
+     "expected_return": "Day to day",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6106306",
+     "fetched_at": "2026-10-28T20:41:02+00:00"
+    },
+    {
+     "player": "Thomas Beelen",
+     "type": "injury",
+     "expected_return": "Unknown",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6106306",
+     "fetched_at": "2026-10-28T20:41:02+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "Luis Henrique",
+     "type": "injury",
+     "expected_return": "Early November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6106306",
+     "fetched_at": "2026-10-28T20:41:02+00:00"
+    },
+    {
+     "player": "Benjamin Pavard",
+     "type": "injury",
+     "expected_return": "Early November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6106306",
+     "fetched_at": "2026-10-28T20:41:02+00:00"
+    },
+    {
+     "player": "Lautaro Mart\u00ednez",
+     "type": "injury",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6106306",
+     "fetched_at": "2026-10-28T20:41:02+00:00"
+    },
+    {
+     "player": "Curtis Jones",
+     "type": "injury",
+     "expected_return": "Early November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6106306",
+     "fetched_at": "2026-10-28T20:41:02+00:00"
+    },
+    {
+     "player": "John Stones",
+     "type": "injury",
+     "expected_return": "Early November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6106306",
+     "fetched_at": "2026-10-28T20:41:02+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 9,
+    "n21": 2,
+    "last_match": "2026-10-25"
+   },
+   "away": {
+    "rest_days": 9,
+    "n21": 2,
+    "last_match": "2026-10-25"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 788.9
+  },
+  "venue": {
+   "name": "Stadion Feijenoord",
+   "city": "Rotterdam",
+   "lat": 51.89385454,
+   "lon": 4.523191452
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 1.19,
+   "temp_c": 10.4,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=51.894&longitude=4.523",
+   "fetched_at": "2026-10-28T20:41:02+00:00",
+   "lat": 51.89385454,
+   "lon": 4.523191452
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": -2.4,
+    "d_p_draw_pp": -0.97,
+    "d_p_away_pp": 3.36,
+    "d_xg_home": 0.06,
+    "d_xg_away": 0.213
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0342,
+    "away_rate_mult": 1.0143,
+    "d_p_home_pp": 0.68,
+    "d_p_draw_pp": -0.26,
+    "d_p_away_pp": -0.42,
+    "d_xg_home": 0.051,
+    "d_xg_away": 0.028,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "reason": "failed validation; no live features"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 9.0,
+   "rest_a": 9.0,
+   "n21_h": 2.0,
+   "n21_a": 2.0,
+   "travel_km": 788.9187655174233,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 1.19,
+   "temp_c": 10.4
+  }
+ },
+ "confidence": {
+  "tier": "LOW",
+  "p_max": 0.46769764674379144,
+  "entropy_nats": 1.0544788575067825,
+  "text": "Most likely result has P = 46.8%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.1% \u00b1 0.4% (n=17605, mean forecast 44.6%). Backtest RPS for UCL: 0.1971; exact-score top-5 hit rate 42.8% (n=495). Overall champion RPS 0.2099 vs home/away baseline 0.2283. Outcome-certainty tier: LOW (entropy 1.054 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Feyenoord: no lineup information.",
+  "Feyenoord: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.",
+  "Inter: no lineup information.",
+  "Inter: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+ ],
+ "verdict": "Feyenoord 1\u20131 Inter is the single most probable scoreline at 9.8%: expected goals 1.49\u20131.89 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.047). Exact scores are inherently uncertain; the 1X2 split is 30.4%/22.8%/46.8%.",
+ "resolved": {
+  "home_key": "Netherlands:Feyenoord",
+  "away_key": "Italy:Inter",
+  "div": "UCL",
+  "home_div": "N1",
+  "away_div": "I1",
+  "country": "Europe"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: FC Internazionale Milano at Feyenoord Rotterdam\nCompetition: UEFA Champions League 2025\nDate: 2026-11-03 15:00 EST\nModel Version: 1.1.0+ensemble-xg-hl240-k8-elo22\nData Cutoff: 2026-10-27\n\nPRIMARY FINAL SCORE PREDICTION\n\nFeyenoord Rotterdam 1 \u2013 1 FC Internazionale Milano\n(modal exact score, probability 9.8%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.49\nAway: 1.89\nExpected Total: 3.38\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 30.4%\nDraw: 22.8%\nAway Win: 46.8%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 9.8%\n2. 1\u20132: 8.9%\n3. 2\u20131: 7.1%\n4. 2\u20132: 6.6%\n5. 0\u20131: 6.3%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 15.1%\nTotal 2 goals: 19.7%\nTotal 3 goals: 21.7%\nTotal 4 goals: 18.2%\nTotal 5+ goals: 25.3%\n\nBoth Teams Score: 65.6%\nClean sheet Feyenoord Rotterdam: 15.6% \u00b7 Clean sheet FC Internazionale Milano: 22.6%\n\nMATCH INTELLIGENCE\n\n1. Inter attack vs Feyenoord defence: rate multiplier \u00d71.77 for the away side.\n2. Home advantage (Europe, fitted from results): \u00d71.32 on Feyenoord's scoring rate.\n3. Independent results-only Elo: Feyenoord 1762 vs Inter 1903 (gap -141 before home advantage).\n\nMODEL CONFIDENCE\n\nMost likely result has P = 46.8%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.1% \u00b1 0.4% (n=17605, mean forecast 44.6%). Backtest RPS for UCL: 0.1971; exact-score top-5 hit rate 42.8% (n=495). Overall champion RPS 0.2099 vs home/away baseline 0.2283. Outcome-certainty tier: LOW (entropy 1.054 nats of max 1.099).\nParameter-uncertainty 80% bands: xG Feyenoord Rotterdam 1.16\u20131.84, xG FC Internazionale Milano 1.46\u20132.34; P(home win) 21.6%\u201340.8%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0007 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nFeyenoord: NONE, fetched 2026-10-28 16:41 EDT\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\nInter: NONE, fetched 2026-10-28 16:41 EDT\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nKEY ABSENCES\n\n- Feyenoord: Reiss Nelson \u2014 injury, Early November 2026 [FotMob, 2026-10-28 16:41 EDT]\n- Feyenoord: Shaqueel van Persie \u2014 injury, Day to day [FotMob, 2026-10-28 16:41 EDT]\n- Feyenoord: Gijs Smal \u2014 injury, Day to day [FotMob, 2026-10-28 16:41 EDT]\n- Feyenoord: Jordan Bos \u2014 injury, Late November 2026 [FotMob, 2026-10-28 16:41 EDT]\n- Feyenoord: Bart Nieuwkoop \u2014 injury, Day to day [FotMob, 2026-10-28 16:41 EDT]\n- Feyenoord: Thomas Beelen \u2014 injury, Unknown [FotMob, 2026-10-28 16:41 EDT]\n- Inter: Luis Henrique \u2014 injury, Early November 2026 [FotMob, 2026-10-28 16:41 EDT]\n- Inter: Benjamin Pavard \u2014 injury, Early November 2026 [FotMob, 2026-10-28 16:41 EDT]\n- Inter: Lautaro Mart\u00ednez \u2014 injury, Mid November 2026 [FotMob, 2026-10-28 16:41 EDT]\n- Inter: Curtis Jones \u2014 injury, Early November 2026 [FotMob, 2026-10-28 16:41 EDT]\n- Inter: John Stones \u2014 injury, Early November 2026 [FotMob, 2026-10-28 16:41 EDT]\n\nWEATHER AT VENUE\n\nStadion Feijenoord, Rotterdam: 10.4 \u00b0C, wind 1.2 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-10-28 16:41 EDT]\n\nREST & TRAVEL\n\nFeyenoord: 9 days' rest, 2 matches in previous 21 days \u00b7 Inter: 9 days' rest, 2 in 21 days \u00b7 away travel 788.9 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 30.4% / 22.8% / 46.8%, xG 1.49\u20131.89\n- Understat xG component (validated, in ensemble): home -2.40 pp, draw -0.97 pp, away +3.36 pp; xG +0.060 / +0.213\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.68 pp, draw -0.26 pp, away -0.42 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- lineup: not applied (failed validation; no live features)\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Feyenoord: no lineup information.\n- Feyenoord: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n- Inter: no lineup information.\n- Inter: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nFINAL VERDICT\n\nFeyenoord 1\u20131 Inter is the single most probable scoreline at 9.8%: expected goals 1.49\u20131.89 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.047). Exact scores are inherently uncertain; the 1X2 split is 30.4%/22.8%/46.8%.\n",
+ "frozen_at": "2026-10-28T20:41:02+00:00",
+ "sha256": "8ed8131d4cd057afa6589fe82ef1f6aea2f7828ef53a0c51a7f3187373f9353a"
+}

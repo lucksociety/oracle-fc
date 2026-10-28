@@ -1,0 +1,625 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.1.0+ensemble-xg-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-10-27",
+ "generated_at": "2026-10-28T20:39:05+00:00",
+ "fixture": {
+  "event_id": "POLY-1203173",
+  "home_name": "FC Energie Cottbus",
+  "away_name": "VfL Bochum",
+  "competition": "Bundesliga 2",
+  "subcategory": "bl2",
+  "kickoff_utc": "2026-10-30T17:30:00+00:00",
+  "kickoff_local": "2026-10-30 13:30 EDT",
+  "home_matched": "Cottbus",
+  "away_matched": "Bochum",
+  "match_methods": {
+   "home": {
+    "source": "FC Energie Cottbus",
+    "matched": "Cottbus",
+    "method": "token-subset",
+    "score": 0.9
+   },
+   "away": {
+    "source": "VfL Bochum",
+    "matched": "Bochum",
+    "method": "core-tokens",
+    "score": 0.97
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.46311217157700085,
+  "p_draw": 0.24284203077451774,
+  "p_away": 0.2940457976484814,
+  "xg_home": 1.699763414395287,
+  "xg_away": 1.3110555775363497,
+  "xg_total": 3.010818991931637,
+  "median_total": 3,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.11241400351839916
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.11241400351839916
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.09304091139665571
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.08081361216032419
+   },
+   {
+    "home": 1,
+    "away": 2,
+    "p": 0.07190600676783922
+   },
+   {
+    "home": 2,
+    "away": 0,
+    "p": 0.07106460432999581
+   }
+  ],
+  "btts": 0.5990242216573193,
+  "totals_over": {
+   "over_0.5": 0.9478909054383435,
+   "over_1.5": 0.8051425458615676,
+   "over_2.5": 0.5791421369014865,
+   "over_3.5": 0.35519448996933634,
+   "over_4.5": 0.18662715989679168,
+   "over_5.5": 0.08509427999275157,
+   "over_6.5": 0.034117229130224004
+  },
+  "total_buckets": {
+   "0-1": 0.19485745413843242,
+   "2": 0.22600040896008114,
+   "3": 0.2239476469321501,
+   "4": 0.16856733007254468,
+   "5+": 0.18662715989679168
+  },
+  "clean_sheet_home": 0.26970638106758443,
+  "clean_sheet_away": 0.18337849183675284,
+  "home_goal_dist": [
+   0.18337849183675284,
+   0.3103887963329948,
+   0.26334469779996317,
+   0.14932454175991275,
+   0.06365927705608257,
+   0.021763229545373162,
+   0.006214683104887426,
+   0.0019262825640333446
+  ],
+  "away_goal_dist": [
+   0.26970638106758443,
+   0.35325819093645733,
+   0.23151695357608784,
+   0.10122868138326216,
+   0.033220685235098024,
+   0.008728257517557184,
+   0.001912448597026807,
+   0.0004284016869263096
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    3
+   ],
+   "away_goals_80": [
+    0,
+    3
+   ],
+   "total_goals_80": [
+    1,
+    5
+   ],
+   "goal_diff_80": [
+    -2,
+    3
+   ]
+  },
+  "score_grid": [
+   [
+    0.052109,
+    0.061935,
+    0.042522,
+    0.018635,
+    0.00613,
+    0.001614,
+    0.000354
+   ],
+   [
+    0.080814,
+    0.112414,
+    0.071906,
+    0.03147,
+    0.010337,
+    0.002718,
+    0.000596
+   ],
+   [
+    0.071065,
+    0.093041,
+    0.060951,
+    0.026639,
+    0.008739,
+    0.002295,
+    0.000503
+   ],
+   [
+    0.040366,
+    0.052779,
+    0.03453,
+    0.015071,
+    0.004937,
+    0.001295,
+    0.000283
+   ],
+   [
+    0.017238,
+    0.02251,
+    0.014707,
+    0.006411,
+    0.002097,
+    0.000549,
+    0.00012
+   ],
+   [
+    0.005903,
+    0.007698,
+    0.005024,
+    0.002187,
+    0.000715,
+    0.000187,
+    4.1e-05
+   ],
+   [
+    0.001688,
+    0.002199,
+    0.001433,
+    0.000623,
+    0.000203,
+    5.3e-05,
+    1.2e-05
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.464265,
+  "p_draw": 0.24131500000000003,
+  "p_away": 0.29442,
+  "se": [
+   0.0011151748960925368,
+   0.0009567707948484841,
+   0.001019158632402238
+  ],
+  "max_abs_dev_vs_exact": 0.0015270307745177125,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   1.188147746130628,
+   2.274432514475705
+  ],
+  "xg_away_80": [
+   0.8859724979280057,
+   1.784544867376965
+  ],
+  "p_home_80": [
+   0.3164920519481482,
+   0.6183227176310673
+  ],
+  "p_draw_80": [
+   0.20088572232021176,
+   0.2866876477752607
+  ],
+  "p_away_80": [
+   0.1695893854243078,
+   0.42518567616805686
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.25744020933369915,
+   0.2598697955712902
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.48052147212012225,
+   "p_draw": 0.2450776939982871,
+   "p_away": 0.27440083388159076,
+   "xg_home": 1.746826863323808,
+   "xg_away": 1.2727237972338348,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.43446469081619365,
+   "p_draw": 0.24292342111216794,
+   "p_away": 0.32261188807163854,
+   "xg_home": 1.6045915680084186,
+   "xg_away": 1.3513257287951836,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.46433735526890285,
+   "p_draw": 0.24769433658146317,
+   "p_away": 0.2879683081496339,
+   "xg_home": 1.7467686766887633,
+   "xg_away": 1.3381355143125055,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.4539302869182808,
+   "p_draw": 0.24270459977321962,
+   "p_away": 0.30336511330849975,
+   "xg_home": 1.6318290201309804,
+   "xg_away": 1.2918726970166408,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.4860414529520825,
+   "p_draw": 0.2425499205571137,
+   "p_away": 0.2714086264908038,
+   "xg_home": 1.7767097656979334,
+   "xg_away": 1.279933694433033,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Home advantage (Germany, fitted from results): \u00d71.30 on Cottbus's scoring rate.",
+   "effect": 0.2618
+  },
+  {
+   "text": "Cottbus attack vs Bochum defence: time-weighted strength gap multiplies Cottbus's scoring rate by \u00d71.12 relative to an average pairing (from 8/29 decay-weighted matches).",
+   "effect": 0.1111
+  },
+  {
+   "text": "Context \u2014 Understat xG component (validated, in ensemble): home win +2.4 pp, draw -0.0 pp, away win -2.4 pp (xG +0.08 / -0.03).",
+   "effect": 0.0726
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.46311217157700085,
+  "p_draw": 0.24284203077451774,
+  "p_away": 0.2940457976484814,
+  "xg_home": 1.699763414395287,
+  "xg_away": 1.3110555775363497
+ },
+ "context": {
+  "fetched_at": "2026-10-28T20:39:05+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5881709",
+    "fetched_at": "2026-10-28T20:39:05+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "4-2-3-1",
+    "starters": [
+     {
+      "name": "Marcel Lotka",
+      "pos": "G"
+     },
+     {
+      "name": "Luca Erlein",
+      "pos": "D"
+     },
+     {
+      "name": "King Manu",
+      "pos": "D"
+     },
+     {
+      "name": "Tim Campulka",
+      "pos": "D"
+     },
+     {
+      "name": "Leon Guwara",
+      "pos": "D"
+     },
+     {
+      "name": "Lukas Michelbrink",
+      "pos": "M"
+     },
+     {
+      "name": "Fousseny Doumbia",
+      "pos": "D"
+     },
+     {
+      "name": "Henry Rorig",
+      "pos": "D"
+     },
+     {
+      "name": "Tolcay Ci\u011ferci",
+      "pos": "M"
+     },
+     {
+      "name": "Lucas Copado",
+      "pos": "F"
+     },
+     {
+      "name": "Dmytro Bogdanov",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-10-28T20:39:05+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   },
+   "away": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "4-2-3-1",
+    "starters": [
+     {
+      "name": "Timo Horn",
+      "pos": "G"
+     },
+     {
+      "name": "Sean Klaiber",
+      "pos": "D"
+     },
+     {
+      "name": "Michael Steinwender",
+      "pos": "D"
+     },
+     {
+      "name": "Karol Mets",
+      "pos": "D"
+     },
+     {
+      "name": "Maximilian Wittek",
+      "pos": "D"
+     },
+     {
+      "name": "Tom Meyer",
+      "pos": "M"
+     },
+     {
+      "name": "Mats Pannewig",
+      "pos": "M"
+     },
+     {
+      "name": "Jarne Steuckers",
+      "pos": "F"
+     },
+     {
+      "name": "Berkan Taz",
+      "pos": "F"
+     },
+     {
+      "name": "Gerrit Holtmann",
+      "pos": "F"
+     },
+     {
+      "name": "Christian Rasmussen",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-10-28T20:39:05+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Axel Borgmann",
+     "type": "injury",
+     "expected_return": "Early November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881709",
+     "fetched_at": "2026-10-28T20:39:05+00:00"
+    },
+    {
+     "player": "Erik Engelhardt",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881709",
+     "fetched_at": "2026-10-28T20:39:05+00:00"
+    },
+    {
+     "player": "Julian Guttau",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881709",
+     "fetched_at": "2026-10-28T20:39:05+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "Oliver Olsen",
+     "type": "injury",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881709",
+     "fetched_at": "2026-10-28T20:39:05+00:00"
+    },
+    {
+     "player": "Philipp Strompf",
+     "type": "injury",
+     "expected_return": "Unknown",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881709",
+     "fetched_at": "2026-10-28T20:39:05+00:00"
+    },
+    {
+     "player": "Enis \u00c7okaj",
+     "type": "injury",
+     "expected_return": "Early November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881709",
+     "fetched_at": "2026-10-28T20:39:05+00:00"
+    },
+    {
+     "player": "Babis Drakas",
+     "type": "injury",
+     "expected_return": "Early November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881709",
+     "fetched_at": "2026-10-28T20:39:05+00:00"
+    },
+    {
+     "player": "Jean Manuel Mbom",
+     "type": "injury",
+     "expected_return": "Early November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881709",
+     "fetched_at": "2026-10-28T20:39:05+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 6,
+    "n21": 3,
+    "last_match": "2026-10-24"
+   },
+   "away": {
+    "rest_days": 7,
+    "n21": 3,
+    "last_match": "2026-10-23"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 491.5
+  },
+  "venue": {
+   "name": "LEAG Energie Stadion",
+   "city": "Cottbus",
+   "lat": 51.751590024,
+   "lon": 14.345548153
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 1.425,
+   "temp_c": 8.1,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=51.752&longitude=14.346",
+   "fetched_at": "2026-10-28T20:39:05+00:00",
+   "lat": 51.751590024,
+   "lon": 14.345548153
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": 2.42,
+    "d_p_draw_pp": -0.03,
+    "d_p_away_pp": -2.39,
+    "d_xg_home": 0.081,
+    "d_xg_away": -0.033
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0277,
+    "away_rate_mult": 1.0116,
+    "d_p_home_pp": 0.79,
+    "d_p_draw_pp": -0.37,
+    "d_p_away_pp": -0.42,
+    "d_xg_home": 0.047,
+    "d_xg_away": 0.015,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "reason": "failed validation; no live features"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 6.0,
+   "rest_a": 7.0,
+   "n21_h": 3.0,
+   "n21_a": 3.0,
+   "travel_km": 491.45070354603354,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 1.425,
+   "temp_c": 8.1
+  }
+ },
+ "confidence": {
+  "tier": "LOW",
+  "p_max": 0.46311217157700085,
+  "entropy_nats": 1.0601201636503417,
+  "text": "Most likely result has P = 46.3%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.1% \u00b1 0.4% (n=17605, mean forecast 44.6%). Backtest RPS for D2: 0.2219; exact-score top-5 hit rate 43.0% (n=989). Overall champion RPS 0.2099 vs home/away baseline 0.2283. Outcome-certainty tier: LOW (entropy 1.060 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Cottbus: only 8.0 decay-weighted matches \u2014 strength shrunk toward the division mean, wide uncertainty.",
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Cottbus: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Cottbus: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.",
+  "Bochum: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Bochum: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+ ],
+ "verdict": "Cottbus 1\u20131 Bochum is the single most probable scoreline at 11.2%: expected goals 1.70\u20131.31 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.047). Exact scores are inherently uncertain; the 1X2 split is 46.3%/24.3%/29.4%.",
+ "resolved": {
+  "home_key": "Germany:Cottbus",
+  "away_key": "Germany:Bochum",
+  "div": "D2",
+  "home_div": "D2",
+  "away_div": "D2",
+  "country": "Germany"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: VfL Bochum at FC Energie Cottbus\nCompetition: Bundesliga 2\nDate: 2026-10-30 13:30 EDT\nModel Version: 1.1.0+ensemble-xg-hl240-k8-elo22\nData Cutoff: 2026-10-27\n\nPRIMARY FINAL SCORE PREDICTION\n\nFC Energie Cottbus 1 \u2013 1 VfL Bochum\n(modal exact score, probability 11.2%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.70\nAway: 1.31\nExpected Total: 3.01\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 46.3%\nDraw: 24.3%\nAway Win: 29.4%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 11.2%\n2. 2\u20131: 9.3%\n3. 1\u20130: 8.1%\n4. 1\u20132: 7.2%\n5. 2\u20130: 7.1%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 19.5%\nTotal 2 goals: 22.6%\nTotal 3 goals: 22.4%\nTotal 4 goals: 16.9%\nTotal 5+ goals: 18.7%\n\nBoth Teams Score: 59.9%\nClean sheet FC Energie Cottbus: 27.0% \u00b7 Clean sheet VfL Bochum: 18.3%\n\nMATCH INTELLIGENCE\n\n1. Home advantage (Germany, fitted from results): \u00d71.30 on Cottbus's scoring rate.\n2. Cottbus attack vs Bochum defence: time-weighted strength gap multiplies Cottbus's scoring rate by \u00d71.12 relative to an average pairing (from 8/29 decay-weighted matches).\n3. Context \u2014 Understat xG component (validated, in ensemble): home win +2.4 pp, draw -0.0 pp, away win -2.4 pp (xG +0.08 / -0.03).\n\nMODEL CONFIDENCE\n\nMost likely result has P = 46.3%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.1% \u00b1 0.4% (n=17605, mean forecast 44.6%). Backtest RPS for D2: 0.2219; exact-score top-5 hit rate 43.0% (n=989). Overall champion RPS 0.2099 vs home/away baseline 0.2283. Outcome-certainty tier: LOW (entropy 1.060 nats of max 1.099).\nParameter-uncertainty 80% bands: xG FC Energie Cottbus 1.19\u20132.27, xG VfL Bochum 0.89\u20131.78; P(home win) 31.6%\u201361.8%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0015 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nCottbus: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-10-28 16:39 EDT (4-2-3-1)\n  Marcel Lotka (G), Luca Erlein (D), King Manu (D), Tim Campulka (D), Leon Guwara (D), Lukas Michelbrink (M), Fousseny Doumbia (D), Henry Rorig (D), Tolcay Ci\u011ferci (M), Lucas Copado (F), Dmytro Bogdanov (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\nBochum: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-10-28 16:39 EDT (4-2-3-1)\n  Timo Horn (G), Sean Klaiber (D), Michael Steinwender (D), Karol Mets (D), Maximilian Wittek (D), Tom Meyer (M), Mats Pannewig (M), Jarne Steuckers (F), Berkan Taz (F), Gerrit Holtmann (F), Christian Rasmussen (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nKEY ABSENCES\n\n- Cottbus: Axel Borgmann \u2014 injury, Early November 2026 [FotMob, 2026-10-28 16:39 EDT]\n- Cottbus: Erik Engelhardt \u2014 injury, Doubtful [FotMob, 2026-10-28 16:39 EDT]\n- Cottbus: Julian Guttau \u2014 injury, Doubtful [FotMob, 2026-10-28 16:39 EDT]\n- Bochum: Oliver Olsen \u2014 injury, Mid November 2026 [FotMob, 2026-10-28 16:39 EDT]\n- Bochum: Philipp Strompf \u2014 injury, Unknown [FotMob, 2026-10-28 16:39 EDT]\n- Bochum: Enis \u00c7okaj \u2014 injury, Early November 2026 [FotMob, 2026-10-28 16:39 EDT]\n- Bochum: Babis Drakas \u2014 injury, Early November 2026 [FotMob, 2026-10-28 16:39 EDT]\n- Bochum: Jean Manuel Mbom \u2014 injury, Early November 2026 [FotMob, 2026-10-28 16:39 EDT]\n\nWEATHER AT VENUE\n\nLEAG Energie Stadion, Cottbus: 8.1 \u00b0C, wind 1.4 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-10-28 16:39 EDT]\n\nREST & TRAVEL\n\nCottbus: 6 days' rest, 3 matches in previous 21 days \u00b7 Bochum: 7 days' rest, 3 in 21 days \u00b7 away travel 491.5 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 46.3% / 24.3% / 29.4%, xG 1.70\u20131.31\n- Understat xG component (validated, in ensemble): home +2.42 pp, draw -0.03 pp, away -2.39 pp; xG +0.081 / -0.033\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.79 pp, draw -0.37 pp, away -0.42 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- lineup: not applied (failed validation; no live features)\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Cottbus: only 8.0 decay-weighted matches \u2014 strength shrunk toward the division mean, wide uncertainty.\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Cottbus: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Cottbus: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n- Bochum: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Bochum: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nFINAL VERDICT\n\nCottbus 1\u20131 Bochum is the single most probable scoreline at 11.2%: expected goals 1.70\u20131.31 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.047). Exact scores are inherently uncertain; the 1X2 split is 46.3%/24.3%/29.4%.\n",
+ "frozen_at": "2026-10-28T20:39:05+00:00",
+ "sha256": "80a671712a81959c7fcb289d094828107a9b22e70414c2857179d473e51f4e67"
+}

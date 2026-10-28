@@ -1,0 +1,568 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.1.0+ensemble-xg-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-10-27",
+ "generated_at": "2026-10-28T20:40:14+00:00",
+ "fixture": {
+  "event_id": "POLY-1218878",
+  "home_name": "CS Mar\u00edtimo",
+  "away_name": "CD Santa Clara",
+  "competition": "Primeira Liga",
+  "subcategory": "por",
+  "kickoff_utc": "2026-11-01T18:00:00+00:00",
+  "kickoff_local": "2026-11-01 13:00 EST",
+  "home_matched": "Maritimo",
+  "away_matched": "Santa Clara",
+  "match_methods": {
+   "home": {
+    "source": "CS Mar\u00edtimo",
+    "matched": "Maritimo",
+    "method": "token-subset",
+    "score": 0.9
+   },
+   "away": {
+    "source": "CD Santa Clara",
+    "matched": "Santa Clara",
+    "method": "core-tokens",
+    "score": 0.97
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.26899095729159883,
+  "p_draw": 0.2716352875615353,
+  "p_away": 0.459373755146866,
+  "xg_home": 1.0369592344472374,
+  "xg_away": 1.4371589793965387,
+  "xg_total": 2.4741182138437763,
+  "median_total": 2,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.12873038231987546
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.12873038231987546
+   },
+   {
+    "home": 0,
+    "away": 1,
+    "p": 0.11787627364471161
+   },
+   {
+    "home": 1,
+    "away": 2,
+    "p": 0.09013154218624411
+   },
+   {
+    "home": 0,
+    "away": 0,
+    "p": 0.08764495933369194
+   },
+   {
+    "home": 0,
+    "away": 2,
+    "p": 0.08704090184276815
+   }
+  ],
+  "btts": 0.49519170587625083,
+  "totals_over": {
+   "over_0.5": 0.9123550406663081,
+   "over_1.5": 0.7104755113365676,
+   "over_2.5": 0.44946381966392873,
+   "over_3.5": 0.23696730850180175,
+   "over_4.5": 0.10550143501456243,
+   "over_5.5": 0.040404889863365136,
+   "over_6.5": 0.013531891499030536
+  },
+  "total_buckets": {
+   "0-1": 0.28952448866343244,
+   "2": 0.26101169167263893,
+   "3": 0.21249651116212695,
+   "4": 0.13146587348723934,
+   "5+": 0.10550143501456243
+  },
+  "clean_sheet_home": 0.2376334983295608,
+  "clean_sheet_away": 0.35481975512788055,
+  "home_goal_dist": [
+   0.35481975512788055,
+   0.36736131591551036,
+   0.19045166042373823,
+   0.06592472381967975,
+   0.01714238456451123,
+   0.0035721244362011398,
+   0.0006214426251478931,
+   0.00010659308733109669
+  ],
+  "away_goal_dist": [
+   0.2376334983295608,
+   0.341452614473113,
+   0.2453479480083155,
+   0.11754395482247602,
+   0.04224106133216037,
+   0.012145439715261077,
+   0.0029104696897974728,
+   0.0007250136293160596
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    2
+   ],
+   "away_goals_80": [
+    0,
+    3
+   ],
+   "total_goals_80": [
+    1,
+    5
+   ],
+   "goal_diff_80": [
+    -2,
+    2
+   ]
+  },
+  "score_grid": [
+   [
+    0.087645,
+    0.117876,
+    0.087041,
+    0.041688,
+    0.014977,
+    0.004305,
+    0.001031
+   ],
+   [
+    0.084003,
+    0.12873,
+    0.090132,
+    0.043181,
+    0.015518,
+    0.004462,
+    0.001069
+   ],
+   [
+    0.04524,
+    0.065022,
+    0.046734,
+    0.022396,
+    0.008051,
+    0.002315,
+    0.000555
+   ],
+   [
+    0.015655,
+    0.022505,
+    0.016179,
+    0.007755,
+    0.002789,
+    0.000802,
+    0.000192
+   ],
+   [
+    0.00407,
+    0.005851,
+    0.004207,
+    0.002017,
+    0.000726,
+    0.000209,
+    5e-05
+   ],
+   [
+    0.000848,
+    0.001219,
+    0.000877,
+    0.00042,
+    0.000151,
+    4.4e-05,
+    1e-05
+   ],
+   [
+    0.000147,
+    0.000212,
+    0.000153,
+    7.3e-05,
+    2.6e-05,
+    8e-06,
+    2e-06
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.269115,
+  "p_draw": 0.270875,
+  "p_away": 0.46001000000000003,
+  "se": [
+   0.00099169581216974,
+   0.0009937347090018542,
+   0.0011144523316409724
+  ],
+  "max_abs_dev_vs_exact": 0.0007602875615353444,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   0.6818642369484244,
+   1.4427496347674709
+  ],
+  "xg_away_80": [
+   0.966994216682353,
+   1.9616493478983394
+  ],
+  "p_home_80": [
+   0.161350016035929,
+   0.40173561088656284
+  ],
+  "p_draw_80": [
+   0.22352336077917812,
+   0.32208929348381105
+  ],
+  "p_away_80": [
+   0.3028652307431941,
+   0.5972086464591895
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.29714265316776245,
+   0.2625105351949359
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.25948541955458165,
+   "p_draw": 0.2791010775988433,
+   "p_away": 0.461413502846575,
+   "xg_home": 1.0028286392959873,
+   "xg_away": 1.4244128742878015,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.2807471759032998,
+   "p_draw": 0.2623880127080769,
+   "p_away": 0.45686481138862317,
+   "xg_home": 1.0791531624532291,
+   "xg_away": 1.452957083981465,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.24705909752881391,
+   "p_draw": 0.27516413631345155,
+   "p_away": 0.4777767661577345,
+   "xg_home": 1.0124974291523317,
+   "xg_away": 1.5029313953635792,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.41664385889871103,
+   "p_draw": 0.2586690572952817,
+   "p_away": 0.3246870838060073,
+   "xg_home": 1.4315926829792502,
+   "xg_away": 1.2328982192782296,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.2594982659748105,
+   "p_draw": 0.2788871482532541,
+   "p_away": 0.4616145857719354,
+   "xg_home": 1.0029476829605306,
+   "xg_away": 1.4249830953090719,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Maritimo attack vs Santa Clara defence: time-weighted strength gap multiplies Maritimo's scoring rate by \u00d70.72 relative to an average pairing (from 8/28 decay-weighted matches).",
+   "effect": 0.325
+  },
+  {
+   "text": "Independent results-only Elo: Maritimo 1387 vs Santa Clara 1541 (gap -153 before home advantage).",
+   "effect": 0.23
+  },
+  {
+   "text": "Santa Clara attack vs Maritimo defence: rate multiplier \u00d71.18 for the away side.",
+   "effect": 0.1688
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.2689909572915987,
+  "p_draw": 0.27163528756153527,
+  "p_away": 0.459373755146866,
+  "xg_home": 1.0369592344472371,
+  "xg_away": 1.4371589793965385
+ },
+ "context": {
+  "fetched_at": "2026-10-28T20:40:14+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5887668",
+    "fetched_at": "2026-10-28T20:40:14+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "5-4-1",
+    "starters": [
+     {
+      "name": "Goncalo Tabuaco",
+      "pos": "G"
+     },
+     {
+      "name": "Rafael Fernandes",
+      "pos": "D"
+     },
+     {
+      "name": "Romain Correia",
+      "pos": "D"
+     },
+     {
+      "name": "G\u00e1bor Szalai",
+      "pos": "D"
+     },
+     {
+      "name": "Igor Juli\u00e3o",
+      "pos": "D"
+     },
+     {
+      "name": "Paulo Henrique",
+      "pos": "D"
+     },
+     {
+      "name": "Simo Bouzaidi",
+      "pos": "F"
+     },
+     {
+      "name": "Rodrigo Andrade",
+      "pos": "M"
+     },
+     {
+      "name": "Raphael Guzzo",
+      "pos": "M"
+     },
+     {
+      "name": "Mons Bassouamina",
+      "pos": "F"
+     },
+     {
+      "name": "Maurice Boakye",
+      "pos": "M"
+     }
+    ],
+    "fetched_at": "2026-10-28T20:40:14+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   },
+   "away": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "4-2-3-1",
+    "starters": [
+     {
+      "name": "Lucas Fran\u00e7a",
+      "pos": "G"
+     },
+     {
+      "name": "Lucas Soares",
+      "pos": "D"
+     },
+     {
+      "name": "Pedro Pacheco",
+      "pos": "D"
+     },
+     {
+      "name": "Emanuel Moreira",
+      "pos": "D"
+     },
+     {
+      "name": "Guilherme Rom\u00e3o",
+      "pos": "D"
+     },
+     {
+      "name": "Pedro Ferreira",
+      "pos": "M"
+     },
+     {
+      "name": "Daniel Borges",
+      "pos": "M"
+     },
+     {
+      "name": "Vin\u00edcius",
+      "pos": "F"
+     },
+     {
+      "name": "Tiago Ribeiro",
+      "pos": "M"
+     },
+     {
+      "name": "Brenner",
+      "pos": "F"
+     },
+     {
+      "name": "Luis Fernando",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-10-28T20:40:14+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Yellu Santiago",
+     "type": "injury",
+     "expected_return": "Day to day",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5887668",
+     "fetched_at": "2026-10-28T20:40:14+00:00"
+    }
+   ],
+   "away": []
+  },
+  "rest": {
+   "home": {
+    "rest_days": 9,
+    "n21": 1,
+    "last_match": "2026-10-23"
+   },
+   "away": {
+    "rest_days": 6,
+    "n21": 1,
+    "last_match": "2026-10-26"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 972.9
+  },
+  "venue": {
+   "name": "Est\u00e1dio do Mar\u00edtimo",
+   "city": "Funchal (Ilha da Madeira)",
+   "lat": 32.645576883,
+   "lon": -16.928290129
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 0.415,
+   "temp_c": 20.7,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=32.646&longitude=-16.928",
+   "fetched_at": "2026-10-28T20:40:14+00:00",
+   "lat": 32.645576883,
+   "lon": -16.928290129
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": -1.0,
+    "d_p_draw_pp": 0.77,
+    "d_p_away_pp": 0.24,
+    "d_xg_home": -0.036,
+    "d_xg_away": -0.013
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0372,
+    "away_rate_mult": 1.0156,
+    "d_p_home_pp": 0.64,
+    "d_p_draw_pp": -0.34,
+    "d_p_away_pp": -0.3,
+    "d_xg_home": 0.039,
+    "d_xg_away": 0.023,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "reason": "failed validation; no live features"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 9.0,
+   "rest_a": 6.0,
+   "n21_h": 1.0,
+   "n21_a": 1.0,
+   "travel_km": 972.8593110741302,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 0.415,
+   "temp_c": 20.7
+  }
+ },
+ "confidence": {
+  "tier": "LOW",
+  "p_max": 0.459373755146866,
+  "entropy_nats": 1.0645696455381186,
+  "text": "Most likely result has P = 45.9%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.1% \u00b1 0.4% (n=17605, mean forecast 44.6%). Backtest RPS for P1: 0.1840; exact-score top-5 hit rate 54.0% (n=990). Overall champion RPS 0.2099 vs home/away baseline 0.2283. Outcome-certainty tier: LOW (entropy 1.065 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Maritimo: only 7.8 decay-weighted matches \u2014 strength shrunk toward the division mean, wide uncertainty.",
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Maritimo: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Maritimo: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.",
+  "Santa Clara: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Santa Clara: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+ ],
+ "verdict": "Maritimo 1\u20131 Santa Clara is the single most probable scoreline at 12.9%: expected goals 1.04\u20131.44 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.047). Exact scores are inherently uncertain; the 1X2 split is 26.9%/27.2%/45.9%.",
+ "resolved": {
+  "home_key": "Portugal:Maritimo",
+  "away_key": "Portugal:Santa Clara",
+  "div": "P1",
+  "home_div": "P1",
+  "away_div": "P1",
+  "country": "Portugal"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: CD Santa Clara at CS Mar\u00edtimo\nCompetition: Primeira Liga\nDate: 2026-11-01 13:00 EST\nModel Version: 1.1.0+ensemble-xg-hl240-k8-elo22\nData Cutoff: 2026-10-27\n\nPRIMARY FINAL SCORE PREDICTION\n\nCS Mar\u00edtimo 1 \u2013 1 CD Santa Clara\n(modal exact score, probability 12.9%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.04\nAway: 1.44\nExpected Total: 2.47\nMedian Total: 2\n\nRESULT PROBABILITIES\n\nHome Win: 26.9%\nDraw: 27.2%\nAway Win: 45.9%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 12.9%\n2. 0\u20131: 11.8%\n3. 1\u20132: 9.0%\n4. 0\u20130: 8.8%\n5. 0\u20132: 8.7%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 29.0%\nTotal 2 goals: 26.1%\nTotal 3 goals: 21.2%\nTotal 4 goals: 13.1%\nTotal 5+ goals: 10.6%\n\nBoth Teams Score: 49.5%\nClean sheet CS Mar\u00edtimo: 23.8% \u00b7 Clean sheet CD Santa Clara: 35.5%\n\nMATCH INTELLIGENCE\n\n1. Maritimo attack vs Santa Clara defence: time-weighted strength gap multiplies Maritimo's scoring rate by \u00d70.72 relative to an average pairing (from 8/28 decay-weighted matches).\n2. Independent results-only Elo: Maritimo 1387 vs Santa Clara 1541 (gap -153 before home advantage).\n3. Santa Clara attack vs Maritimo defence: rate multiplier \u00d71.18 for the away side.\n\nMODEL CONFIDENCE\n\nMost likely result has P = 45.9%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.1% \u00b1 0.4% (n=17605, mean forecast 44.6%). Backtest RPS for P1: 0.1840; exact-score top-5 hit rate 54.0% (n=990). Overall champion RPS 0.2099 vs home/away baseline 0.2283. Outcome-certainty tier: LOW (entropy 1.065 nats of max 1.099).\nParameter-uncertainty 80% bands: xG CS Mar\u00edtimo 0.68\u20131.44, xG CD Santa Clara 0.97\u20131.96; P(home win) 16.1%\u201340.2%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0008 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nMaritimo: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-10-28 16:40 EDT (5-4-1)\n  Goncalo Tabuaco (G), Rafael Fernandes (D), Romain Correia (D), G\u00e1bor Szalai (D), Igor Juli\u00e3o (D), Paulo Henrique (D), Simo Bouzaidi (F), Rodrigo Andrade (M), Raphael Guzzo (M), Mons Bassouamina (F), Maurice Boakye (M)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\nSanta Clara: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-10-28 16:40 EDT (4-2-3-1)\n  Lucas Fran\u00e7a (G), Lucas Soares (D), Pedro Pacheco (D), Emanuel Moreira (D), Guilherme Rom\u00e3o (D), Pedro Ferreira (M), Daniel Borges (M), Vin\u00edcius (F), Tiago Ribeiro (M), Brenner (F), Luis Fernando (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nKEY ABSENCES\n\n- Maritimo: Yellu Santiago \u2014 injury, Day to day [FotMob, 2026-10-28 16:40 EDT]\n\nWEATHER AT VENUE\n\nEst\u00e1dio do Mar\u00edtimo, Funchal (Ilha da Madeira): 20.7 \u00b0C, wind 0.4 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-10-28 16:40 EDT]\n\nREST & TRAVEL\n\nMaritimo: 9 days' rest, 1 matches in previous 21 days \u00b7 Santa Clara: 6 days' rest, 1 in 21 days \u00b7 away travel 972.9 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 26.9% / 27.2% / 45.9%, xG 1.04\u20131.44\n- Understat xG component (validated, in ensemble): home -1.00 pp, draw +0.77 pp, away +0.24 pp; xG -0.036 / -0.013\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.64 pp, draw -0.34 pp, away -0.30 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- lineup: not applied (failed validation; no live features)\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Maritimo: only 7.8 decay-weighted matches \u2014 strength shrunk toward the division mean, wide uncertainty.\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Maritimo: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Maritimo: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n- Santa Clara: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Santa Clara: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nFINAL VERDICT\n\nMaritimo 1\u20131 Santa Clara is the single most probable scoreline at 12.9%: expected goals 1.04\u20131.44 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.047). Exact scores are inherently uncertain; the 1X2 split is 26.9%/27.2%/45.9%.\n",
+ "frozen_at": "2026-10-28T20:40:14+00:00",
+ "sha256": "eea27f1392ea8ff550cb290e17f77f1585ddaeccd7850ec4c058abe255d40d36"
+}
