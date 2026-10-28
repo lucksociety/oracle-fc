@@ -109,6 +109,7 @@ export async function loadScan(site, date) {
     modelVersion: dates?.model_version || edge?.events?.[0]?.model_version || null,
     hasEdge: !!edge,
     hasDates: !!dates,
+    forecasts,
   };
 }
 
@@ -169,6 +170,36 @@ function noBetEmbeds(games, dash) {
   }));
 }
 
+function scoreLine(f, g) {
+  const fx = f.fixture || {}, sm = f.simulation || {};
+  const ko = unix(fx.kickoff_utc);
+  const m = sm.modal_score;
+  const home = fx.home_name || fx.home, away = fx.away_name || fx.away;
+  let pick = "NO BET";
+  if (g && g.verdict === "BET" && g.bet) pick = `🍀 ${clip(g.bet.label, 60)} (${g.bet.side}) @ ${cents(g.bet.ask)} · EV ${evp(g.bet.ev_per_dollar)}`;
+  else if (!g) pick = "NO BET (no prices)";
+  return `**${home} ${m ? m.home + "–" + m.away : "?"} ${away}**${ko ? ` · <t:${ko}:t>` : ""}\n> ${pct(sm.p_home, 0)}/${pct(sm.p_draw, 0)}/${pct(sm.p_away, 0)} · xG ${Number(sm.xg_home).toFixed(2)}–${Number(sm.xg_away).toFixed(2)} · ${pick}`;
+}
+function scoreEmbeds(scan, games, dash) {
+  const byId = new Map(games.map((g) => [g.event_id, g]));
+  const fs = (scan.forecasts || []).filter((f) => f.status === "ok" && f.simulation)
+    .sort((a, b) => (a.fixture?.kickoff_utc || "").localeCompare(b.fixture?.kickoff_utc || ""));
+  const groups = []; let cur = [], len = 0;
+  for (const f of fs) {
+    const line = clip(scoreLine(f, byId.get(f.fixture?.event_id)), 400);
+    if (cur.length && len + line.length + 1 > 3500) { groups.push(cur); cur = []; len = 0; }
+    cur.push(line); len += line.length + 1;
+  }
+  if (cur.length) groups.push(cur);
+  return groups.map((lines, i) => ({
+    color: COLORS.goldBright,
+    title: `🔮 Score predictions${groups.length > 1 ? ` (${i + 1}/${groups.length})` : ""}`,
+    url: dash,
+    description: lines.join("\n"),
+    ...(i === groups.length - 1 ? { footer: { text: "Most likely exact score · home/draw/away · expected goals · best bet" } } : {}),
+  }));
+}
+
 export function buildEmbeds(scan, site, opts = {}) {
   const dash = `${site}/?date=${scan.date}`;
   const now = opts.now ?? Date.now();
@@ -187,7 +218,7 @@ export function buildEmbeds(scan, site, opts = {}) {
     footer: { text: `${dash.replace(/^https?:\/\//, "")}${scan.modelVersion ? ` · model ${scan.modelVersion}` : ""}` },
   };
   const embeds = [summary, ...bets.map((g) => betEmbed(g, dash))];
-  if (!opts.onlyBets) embeds.push(...noBetEmbeds(nobets, dash));
+  if (!opts.onlyBets) embeds.push(...scoreEmbeds(scan, games, dash));
   return embeds;
 }
 
