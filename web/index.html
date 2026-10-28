@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ORACLE FC · Luck Society</title>
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="stylesheet" href="assets/theme.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hero" style="background-image:linear-gradient(90deg,var(--bg) 25%,rgba(1,20,25,.55)),url(assets/banner.jpg)">
+  <div class="brand">
+    <img src="assets/logo.jpg" alt="Luck Society logo" class="logo">
+    <div>
+      <h1>ORACLE <span>FC</span></h1>
+      <p class="tag">Independent football match simulation · <a href="https://x.com/lucksociety" target="_blank" rel="noopener">@lucksociety</a></p>
+    </div>
+  </div>
+  <div class="controls">
+    <label>Match date (ET)<input type="date" id="date"></label>
+    <button id="go">Run</button>
+  </div>
+</header>
+
+<nav class="tabs">
+  <button data-tab="forecasts" class="active">Forecasts</button>
+  <button data-tab="edge">Edge <small>post-hoc</small></button>
+  <button data-tab="model">Model &amp; Backtest</button>
+</nav>
+
+<main>
+  <section id="status" class="status"></section>
+
+  <section id="tab-forecasts" class="tab active">
+    <div class="directive">🍀 <b>Directive Zero:</b> forecasts are built only from historical results. No odds, market prices or third-party predictions are ever model inputs. Jupiter is used here only to list which games are on.</div>
+    <div id="summary" class="summary"></div>
+    <div id="cards" class="cards"></div>
+    <div id="unsupported"></div>
+  </section>
+
+  <section id="tab-edge" class="tab">
+    <div class="posthoc">⚠️ <b>POST-HOC COMPARISON.</b> Market prices below were fetched <i>after</i> the forecasts were frozen and are never fed back into the model. Edge = model probability − market price (mid of bid/ask; illiquid books without a two-sided quote are skipped). This is a research comparison, not betting advice.</div>
+    <div class="edge-controls">
+      <button id="live-edge">Fetch live Jupiter prices now</button>
+      <label>Min |edge| <input type="number" id="min-edge" value="0.03" step="0.01" min="0" max="1"></label>
+      <label class="chk"><input type="checkbox" id="only-1x2" checked> 1X2 / BTTS / totals only</label>
+      <label class="chk"><input type="checkbox" id="pre-only" checked> Pre-kickoff prices only</label>
+    </div>
+    <div id="edge-meta" class="muted"></div>
+    <div id="edge-table"></div>
+  </section>
+
+  <section id="tab-model" class="tab"><div id="model"></div></section>
+</main>
+
+<footer>
+  ORACLE FC · data: football-data.co.uk, openfootball · fixtures: Jupiter Prediction API ·
+  <a href="https://github.com/lucksociety/oracle-fc" target="_blank" rel="noopener">source</a>
+</footer>
+
+<template id="card-tpl"><article class="card"></article></template>
+<script src="app.js"></script>
+</body>
+</html>

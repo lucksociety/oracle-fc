@@ -1,0 +1,225 @@
+// ORACLE FC dashboard. Forecast views never read market prices.
+// The Edge tab fetches prices only to compare against already-frozen forecasts.
+const JUP = "https://api.jup.ag/prediction/v1";
+const $ = (s) => document.querySelector(s);
+const pct = (x, d = 1) => (x == null ? "–" : (100 * x).toFixed(d) + "%");
+const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+let MODE = "static", CURRENT = null;
+
+function todayET() {
+  return new Intl.DateTimeFormat("en-CA", { timeZone: "America/New_York" }).format(new Date());
+}
+function etTime(iso) {
+  return new Date(iso).toLocaleString("en-US", { timeZone: "America/New_York", hour: "numeric", minute: "2-digit", month: "short", day: "numeric" }) + " ET";
+}
+async function getJSON(url) {
+  const r = await fetch(url, { cache: "no-store" });
+  if (!r.ok) throw new Error(`${r.status} ${url}`);
+  return r.json();
+}
+async function detectMode() {
+  try { const h = await getJSON("api/health"); if (h.mode === "api") MODE = "api"; } catch (_) {}
+}
+
+// ---------------------------------------------------------------- fixtures (live, prices stripped)
+async function jupiterFixturesLive(date) {
+  const now = Math.floor(Date.now() / 1000);
+  let start = 0, out = [];
+  for (let page = 0; page < 12; page++) {
+    const u = `${JUP}/events?category=sports&tags=soccer&start=${start}&end=${start + 100}&sortBy=beginAt&sortDirection=asc`;
+    const j = await getJSON(u);
+    for (const ev of j.data || []) {
+      const t = ev.metadata?.title || "";
+      const m = t.match(/^(.+?)\s+vs\.?\s+(.+)$/);
+      if (!m || !ev.beginAt) continue;
+      const iso = new Date(Number(ev.beginAt) * 1000).toISOString();
+      if (new Intl.DateTimeFormat("en-CA", { timeZone: "America/New_York" }).format(new Date(iso)) !== date) continue;
+      // allow-list: identity fields only; prices/volumes are deliberately not copied
+      out.push({ event_id: ev.eventId, home_name: m[1], away_name: m[2], competition: ev.metadata?.league || ev.subcategory, subcategory: ev.subcategory, kickoff_utc: iso });
+    }
+    if (!j.pagination?.hasNext) break;
+    start += 100;
+    await new Promise((r) => setTimeout(r, 600));
+  }
+  return out;
+}
+
+// ---------------------------------------------------------------- forecasts
+async function loadForecasts(date) {
+  $("#status").textContent = MODE === "api" ? "Running ORACLE FC for every Jupiter game on " + date + "…" : "Loading frozen forecasts…";
+  if (MODE === "api") return getJSON(`api/forecasts?date=${date}`);
+  try { return await getJSON(`data/dates/${date}.json`); }
+  catch (_) {
+    const fx = await jupiterFixturesLive(date).catch(() => []);
+    return { date, live_only: true, n_fixtures: fx.length, n_forecast: 0,
+      forecasts: fx.map((f) => ({ status: "pending_pipeline", fixture: f, data_quality: ["Not yet simulated: the scheduled pipeline forecasts today → +7 days every 3 hours (or run the 'pipeline' workflow with this date)."] })) };
+  }
+}
+
+function card(fc) {
+  const f = fc.fixture, s = fc.simulation, el = document.createElement("article");
+  el.className = "card";
+  const head = `<div class="comp">${esc(f.competition)} · ${f.kickoff_utc ? etTime(f.kickoff_utc) : ""}</div>`;
+  if (fc.status !== "ok") {
+    el.innerHTML = `${head}<h3>${esc(f.home_name)} vs ${esc(f.away_name)}</h3><p class="warn">${fc.status === "pending_pipeline" ? "Awaiting simulation" : "No forecast"}</p><ul class="muted">${(fc.data_quality || []).map((d) => `<li>${esc(d)}</li>`).join("")}</ul>`;
+    return el;
+  }
+  const ms = s.modal_score, b = s.total_buckets;
+  const grid = s.score_grid.slice(0, 6).map((row, i) => `<tr><th>${i}</th>${row.slice(0, 6).map((p) => `<td style="background:rgba(214,156,8,${Math.min(0.9, p * 6)})">${(100 * p).toFixed(1)}</td>`).join("")}</tr>`).join("");
+  el.innerHTML = `${head}
+    <div class="score"><div class="team">${esc(f.home_name)}</div><b>${ms.home}</b>–<b>${ms.away}</b><div class="team">${esc(f.away_name)}</div></div>
+    <div class="modal-p">Most likely exact score · ${pct(ms.p)} · xG ${s.xg_home.toFixed(2)} – ${s.xg_away.toFixed(2)}</div>
+    <div class="bar"><div class="h" style="width:${100 * s.p_home}%">${pct(s.p_home, 0)}</div><div class="d" style="width:${100 * s.p_draw}%">${pct(s.p_draw, 0)}</div><div class="a" style="width:${100 * s.p_away}%">${pct(s.p_away, 0)}</div></div>
+    <div class="kv"><div><span>BTTS</span>${pct(s.btts)}</div><div><span>Over 2.5</span>${pct(s.totals_over["over_2.5"])}</div><div><span>Median total</span>${s.median_total}</div><div><span>Confidence</span>${esc(fc.confidence.tier)}</div></div>
+    <div class="tops">${s.top_scores.map((t) => `<span>${t.home}-${t.away} · ${pct(t.p)}</span>`).join("")}</div>
+    <div class="muted">Goals 0–1 ${pct(b["0-1"])} · 2 ${pct(b["2"])} · 3 ${pct(b["3"])} · 4 ${pct(b["4"])} · 5+ ${pct(b["5+"])}</div>
+    <details><summary>Score grid (home rows × away cols, %)</summary><table class="grid"><tr><th></th>${[0, 1, 2, 3, 4, 5].map((x) => `<th>${x}</th>`).join("")}</tr>${grid}</table></details>
+    <details><summary>Full ORACLE FC report</summary><pre class="report">${esc(fc.report_text)}</pre></details>
+    <div class="muted">Matched as ${esc(f.home_matched)} v ${esc(f.away_matched)} · frozen ${fc.frozen_at ? etTime(fc.frozen_at) : "(not frozen)"}</div>`;
+  return el;
+}
+
+function render(res) {
+  CURRENT = res;
+  const ok = res.forecasts.filter((f) => f.status === "ok");
+  const bad = res.forecasts.filter((f) => f.status !== "ok");
+  $("#status").textContent = "";
+  $("#summary").innerHTML = [
+    `<span class="pill">${res.n_fixtures} Jupiter soccer games on ${esc(res.date)} (ET)</span>`,
+    `<span class="pill">${ok.length} simulated</span>`,
+    `<span class="pill">${bad.length} without forecast</span>`,
+    res.model_version ? `<span class="pill">model ${esc(res.model_version)}</span>` : "",
+    res.data_cutoff ? `<span class="pill">data cutoff ${esc(res.data_cutoff)}</span>` : "",
+    res.live_only ? `<span class="pill warn">live fixture list · not yet simulated</span>` : "",
+  ].join("");
+  const cards = $("#cards"); cards.innerHTML = "";
+  ok.forEach((f) => cards.appendChild(card(f)));
+  bad.filter((f) => f.status === "pending_pipeline").forEach((f) => cards.appendChild(card(f)));
+  const uns = bad.filter((f) => f.status !== "pending_pipeline");
+  $("#unsupported").innerHTML = uns.length ? `<div class="unsup"><h3>Not forecast (${uns.length}) — honest gaps</h3><ul>${uns.map((f) => `<li><b>${esc(f.fixture.home_name)} vs ${esc(f.fixture.away_name)}</b> (${esc(f.fixture.competition)}): ${esc((f.data_quality || []).filter((d) => /UNMATCHED|UNSUPPORTED|Kick-off/.test(d)).join(" ") || f.status)}</li>`).join("")}</ul></div>` : "";
+  if (!res.forecasts.length) $("#status").textContent = "No Jupiter soccer games found for this date (Jupiter only lists active/upcoming events).";
+}
+
+// ---------------------------------------------------------------- post-hoc edge
+function mid(pr) {
+  const ask = (pr?.buyYesPriceUsd || 0) / 1e6, bid = (pr?.sellYesPriceUsd || 0) / 1e6;
+  return { ask: ask || null, bid: bid || null, mid: ask && bid && ask - bid <= 0.15 ? (ask + bid) / 2 : null };
+}
+function parseMarkets(ev, home, away) {
+  const out = { moneyline: {}, btts: null, totals: {}, exact: {} };
+  for (const m of ev.markets || []) {
+    if (m.status && m.status !== "open") continue;
+    const t = m.sportsMarketType, title = (m.title || "").trim(), p = mid(m.pricing);
+    if (t === "moneyline" && !m.isTeamMarket) {
+      if (title.toLowerCase() === "draw") out.moneyline.draw = p;
+      else if (title === home) out.moneyline.home = p;
+      else if (title === away) out.moneyline.away = p;
+    } else if (t === "both_teams_to_score") out.btts = p;
+    else if (t === "totals" && (title === "Over" || title === "Under") && m.sportsLine != null && p.mid != null) {
+      const line = Number(m.sportsLine), po = title === "Over" ? p.mid : 1 - p.mid;
+      if (title === "Over" || !(line in out.totals)) out.totals[line] = { p_over: po };
+    } else if (t === "soccer_exact_score") {
+      const em = title.match(/(\d+)\s*-\s*(\d+)/);
+      if (em && title !== "Any Other Score") out.exact[`${em[1]}-${em[2]}`] = p;
+    }
+  }
+  return out;
+}
+function edges(fc, mk) {
+  const s = fc.simulation, f = fc.fixture, rows = [];
+  const push = (market, sel, model, m) => { if (m && m.mid != null) rows.push({ market, sel, model, mkt: m.mid, ask: m.ask, edge: model - m.mid }); };
+  push("1X2", f.home_name, s.p_home, mk.moneyline.home);
+  push("1X2", "Draw", s.p_draw, mk.moneyline.draw);
+  push("1X2", f.away_name, s.p_away, mk.moneyline.away);
+  push("BTTS", "Yes", s.btts, mk.btts);
+  for (const [line, v] of Object.entries(mk.totals)) {
+    const k = `over_${Number(line)}`;
+    if (k in s.totals_over) rows.push({ market: "Total", sel: `Over ${line}`, model: s.totals_over[k], mkt: v.p_over, ask: null, edge: s.totals_over[k] - v.p_over });
+  }
+  for (const [sc, p] of Object.entries(mk.exact)) {
+    const [h, a] = sc.split("-").map(Number);
+    if (h < s.score_grid.length && a < s.score_grid.length) push("Exact", sc, s.score_grid[h][a], p);
+  }
+  return rows;
+}
+function renderEdge(events, meta) {
+  const min = Number($("#min-edge").value) || 0, only = $("#only-1x2").checked;
+  $("#edge-meta").innerHTML = meta;
+  const rows = [];
+  const pre = $("#pre-only").checked;
+  for (const e of events) for (const r of e.rows) {
+    if (pre && e.market_after_kickoff) continue;
+    if (only && r.market === "Exact") continue;
+    if (Math.abs(r.edge) < min) continue;
+    rows.push({ ...r, e });
+  }
+  rows.sort((a, b) => b.edge - a.edge);
+  $("#edge-table").innerHTML = rows.length ? `<table><tr><th class="l">Match</th><th class="l">Market</th><th class="l">Selection</th><th>Model</th><th>Market mid</th><th>Ask</th><th>Edge (model − mid)</th><th class="l">Forecast frozen</th></tr>${rows.map((r) => `<tr><td class="l">${esc(r.e.home)} v ${esc(r.e.away)}<div class="muted">${esc(r.e.competition)}</div></td><td class="l">${r.market}</td><td class="l">${esc(r.sel)}</td><td>${pct(r.model)}</td><td>${pct(r.mkt)}</td><td>${r.ask ? pct(r.ask) : "–"}</td><td class="${r.edge > 0 ? "pos" : "neg"}">${(100 * r.edge).toFixed(1)} pp</td><td class="l muted">${etTime(r.e.frozen_at)}</td></tr>`).join("")}</table>` : `<p class="muted">No comparisons above the threshold.</p>`;
+}
+async function liveEdge() {
+  if (!CURRENT) return;
+  const fcs = CURRENT.forecasts.filter((f) => f.status === "ok" && f.frozen_at && f.fixture.event_id);
+  const fetchedAt = new Date().toISOString(), events = [];
+  $("#edge-meta").textContent = `Fetching live prices for ${fcs.length} frozen forecasts…`;
+  for (const fc of fcs) {
+    if (fc.frozen_at > fetchedAt) continue; // only forecasts frozen before the price snapshot
+    try {
+      const ev = await getJSON(`${JUP}/events/${encodeURIComponent(fc.fixture.event_id)}?includeMarkets=true&includeAllMarkets=true`);
+      const mk = parseMarkets(ev.data || ev, fc.fixture.home_name, fc.fixture.away_name);
+      events.push({ home: fc.fixture.home_name, away: fc.fixture.away_name, competition: fc.fixture.competition, frozen_at: fc.frozen_at, market_after_kickoff: fetchedAt >= fc.fixture.kickoff_utc, rows: edges(fc, mk) });
+    } catch (e) { console.warn(e); }
+    await new Promise((r) => setTimeout(r, 350));
+  }
+  window.EDGE = { events, meta: `Live Jupiter prices fetched ${etTime(fetchedAt)} for ${events.length} events · compared against forecasts frozen earlier.` };
+  renderEdge(EDGE.events, EDGE.meta);
+}
+async function loadEdge(date) {
+  try {
+    const j = MODE === "api" ? await getJSON(`api/edge?date=${date}`) : await getJSON(`data/edge/${date}.json`);
+    const events = j.events.map((e) => ({ ...e, rows: e.rows.map((r) => ({ market: r.market === "Exact score" ? "Exact" : r.market, sel: r.selection, model: r.model_p, mkt: r.market_mid, ask: r.market_ask, edge: r.edge_vs_mid })) }));
+    window.EDGE = { events, meta: `Pipeline price snapshot ${j.market_fetched_at ? etTime(j.market_fetched_at) : ""} · ${events.length} events.` };
+    renderEdge(EDGE.events, EDGE.meta);
+  } catch (_) {
+    $("#edge-meta").textContent = "No stored post-hoc snapshot for this date yet. Use “Fetch live Jupiter prices now”.";
+    $("#edge-table").innerHTML = "";
+  }
+}
+
+// ---------------------------------------------------------------- model tab
+async function loadModel() {
+  try {
+    const j = MODE === "api" ? await getJSON("api/model") : await getJSON("data/model.json");
+    const bt = j.backtest, reg = j.registry || {};
+    if (!bt) { $("#model").innerHTML = "<p>No backtest yet.</p>"; return; }
+    const rows = Object.entries(bt.models).sort((a, b) => a[1].rps - b[1].rps);
+    $("#model").innerHTML = `<h2>Champion: ${esc(reg.champion?.name)} <small class="muted">${esc(reg.champion?.version)}</small></h2>
+      <p class="muted">Walk-forward out-of-sample test ${esc(bt.test_window?.join(" → "))}, n = ${bt.n_matches?.toLocaleString()} matches. Lower is better for log loss / RPS / Brier / MAE.</p>
+      <table><tr><th class="l">Model</th><th>Log loss</th><th>RPS</th><th>Brier</th><th>Exact log score</th><th>Top-1</th><th>Top-3</th><th>Top-5</th><th>MAE goals</th></tr>
+      ${rows.map(([k, m]) => `<tr><td class="l">${esc(k)}</td><td>${m.log_loss.toFixed(4)}</td><td>${m.rps.toFixed(4)}</td><td>${m.brier.toFixed(4)}</td><td>${m.exact_log_score.toFixed(4)}</td><td>${pct(m.top1)}</td><td>${pct(m.top3)}</td><td>${pct(m.top5)}</td><td>${m.mae_goals.toFixed(3)}</td></tr>`).join("")}</table>
+      <p>Ensemble weights: ${esc(JSON.stringify(reg.champion?.ensemble_weights))}</p>
+      <p class="muted">${esc(bt.promotion_rule)}</p><p><a href="https://github.com/lucksociety/oracle-fc/blob/main/docs/BACKTEST.md" target="_blank">Full backtest report →</a></p>`;
+  } catch (e) { $("#model").innerHTML = `<p class="muted">Model info unavailable (${esc(e.message)})</p>`; }
+}
+
+// ---------------------------------------------------------------- wiring
+async function run() {
+  const d = $("#date").value;
+  history.replaceState(null, "", `?date=${d}`);
+  try { render(await loadForecasts(d)); } catch (e) { $("#status").textContent = "Error: " + e.message; }
+  loadEdge(d);
+}
+document.querySelectorAll(".tabs button").forEach((b) => b.addEventListener("click", () => {
+  document.querySelectorAll(".tabs button").forEach((x) => x.classList.toggle("active", x === b));
+  document.querySelectorAll(".tab").forEach((t) => t.classList.toggle("active", t.id === "tab-" + b.dataset.tab));
+}));
+$("#go").addEventListener("click", run);
+$("#live-edge").addEventListener("click", liveEdge);
+$("#min-edge").addEventListener("input", () => window.EDGE && renderEdge(EDGE.events, EDGE.meta));
+$("#pre-only").addEventListener("change", () => window.EDGE && renderEdge(EDGE.events, EDGE.meta));
+$("#only-1x2").addEventListener("change", () => window.EDGE && renderEdge(EDGE.events, EDGE.meta));
+(async () => {
+  await detectMode();
+  $("#date").value = new URLSearchParams(location.search).get("date") || todayET();
+  loadModel();
+  run();
+})();

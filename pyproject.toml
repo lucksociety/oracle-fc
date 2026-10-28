@@ -1,0 +1,16 @@
+[project]
+name = "oraclefc"
+version = "1.0.0"
+description = "ORACLE FC: independent football match simulation (no odds as inputs)"
+requires-python = ">=3.11"
+dependencies = ["numpy>=2.0", "scipy>=1.13", "pandas>=2.2", "pyarrow>=16", "duckdb>=1.0", "requests>=2.31",
+                "fastapi>=0.110", "uvicorn>=0.29", "pillow>=10"]
+
+[project.scripts]
+oraclefc = "oraclefc.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["oraclefc*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

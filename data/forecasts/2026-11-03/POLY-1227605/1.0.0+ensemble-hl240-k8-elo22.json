@@ -1,0 +1,310 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.0.0+ensemble-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-10-27",
+ "generated_at": "2026-10-28T19:29:49+00:00",
+ "fixture": {
+  "event_id": "POLY-1227605",
+  "home_name": "Watford FC",
+  "away_name": "Lincoln City FC",
+  "competition": "EFL Championship",
+  "subcategory": "elc",
+  "kickoff_utc": "2026-11-03T19:45:00+00:00",
+  "kickoff_local": "2026-11-03 14:45 EST",
+  "home_matched": "Watford",
+  "away_matched": "Lincoln",
+  "match_methods": {
+   "home": {
+    "source": "Watford FC",
+    "matched": "Watford",
+    "method": "core-tokens",
+    "score": 0.97
+   },
+   "away": {
+    "source": "Lincoln City FC",
+    "matched": "Lincoln",
+    "method": "token-subset",
+    "score": 0.9
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.31788001723133985,
+  "p_draw": 0.27085988881235806,
+  "p_away": 0.4112600939563019,
+  "xg_home": 1.1775087517250686,
+  "xg_away": 1.3757975739736854,
+  "xg_total": 2.5533063256987543,
+  "median_total": 2,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.12892989964411025
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.12892989964411025
+   },
+   {
+    "home": 0,
+    "away": 1,
+    "p": 0.10389296326535717
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.08833878724915602
+   },
+   {
+    "home": 1,
+    "away": 2,
+    "p": 0.0864362489280842
+   },
+   {
+    "home": 0,
+    "away": 0,
+    "p": 0.08106978546839848
+   }
+  ],
+  "btts": 0.5190178296788477,
+  "totals_over": {
+   "over_0.5": 0.9189302145316015,
+   "over_1.5": 0.7266984640170883,
+   "over_2.5": 0.4697823247431683,
+   "over_3.5": 0.25388059983885075,
+   "over_4.5": 0.1160631275855152,
+   "over_5.5": 0.04568250116319143,
+   "over_6.5": 0.015730112123069975
+  },
+  "total_buckets": {
+   "0-1": 0.2733015359829117,
+   "2": 0.25691613927391993,
+   "3": 0.21590172490431755,
+   "4": 0.13781747225333554,
+   "5+": 0.1160631275855152
+  },
+  "clean_sheet_home": 0.2531448053767292,
+  "clean_sheet_away": 0.3089071504128214,
+  "home_goal_dist": [
+   0.3089071504128214,
+   0.36201349042303166,
+   0.21298929555842494,
+   0.08387782040071295,
+   0.024872206186849845,
+   0.005923054531659096,
+   0.0011798264810031394,
+   0.00023715600549691242
+  ],
+  "away_goal_dist": [
+   0.2531448053767292,
+   0.34726277932030014,
+   0.23869052027161594,
+   0.10960803320624857,
+   0.03782970536122287,
+   0.010467255237257247,
+   0.002418602678178805,
+   0.0005782985484472831
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    3
+   ],
+   "away_goals_80": [
+    0,
+    3
+   ],
+   "total_goals_80": [
+    1,
+    5
+   ],
+   "goal_diff_80": [
+    -2,
+    2
+   ]
+  },
+  "score_grid": [
+   [
+    0.08107,
+    0.103893,
+    0.073891,
+    0.034048,
+    0.011791,
+    0.003274,
+    0.000759
+   ],
+   [
+    0.088339,
+    0.12893,
+    0.086436,
+    0.039712,
+    0.013713,
+    0.003796,
+    0.000878
+   ],
+   [
+    0.054095,
+    0.074031,
+    0.050762,
+    0.023254,
+    0.008006,
+    0.00221,
+    0.000509
+   ],
+   [
+    0.021387,
+    0.029186,
+    0.019955,
+    0.009115,
+    0.003129,
+    0.000861,
+    0.000198
+   ],
+   [
+    0.006366,
+    0.008664,
+    0.005907,
+    0.00269,
+    0.000921,
+    0.000253,
+    5.8e-05
+   ],
+   [
+    0.001522,
+    0.002065,
+    0.001404,
+    0.000638,
+    0.000218,
+    6e-05,
+    1.4e-05
+   ],
+   [
+    0.000304,
+    0.000412,
+    0.000279,
+    0.000126,
+    4.3e-05,
+    1.2e-05,
+    3e-06
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.31793,
+  "p_draw": 0.271695,
+  "p_away": 0.410375,
+  "se": [
+   0.00104127449575028,
+   0.0009946779050903866,
+   0.001099925814259762
+  ],
+  "max_abs_dev_vs_exact": 0.00088509395630193,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   0.899736311081924,
+   1.4813256016483682
+  ],
+  "xg_away_80": [
+   1.071914907614656,
+   1.6972452117553598
+  ],
+  "p_home_80": [
+   0.2297688418097163,
+   0.4110477982072398
+  ],
+  "p_draw_80": [
+   0.24622559290464377,
+   0.304340309888287
+  ],
+  "p_away_80": [
+   0.3088517457030249,
+   0.5027926021485098
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.19767507648203406,
+   0.170551443801641
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.343808063627946,
+   "p_draw": 0.2777755079302411,
+   "p_away": 0.3784164284418126,
+   "xg_home": 1.245086474918518,
+   "xg_away": 1.3185102327917209,
+   "weight": 0.5406
+  },
+  "elo": {
+   "p_home": 0.28687349736508316,
+   "p_draw": 0.26266384095549133,
+   "p_away": 0.45046266167942556,
+   "xg_home": 1.0964504078082027,
+   "xg_away": 1.4438625691760492,
+   "weight": 0.4544
+  },
+  "standard_dc": {
+   "p_home": 0.27547752934370984,
+   "p_draw": 0.27160372780904374,
+   "p_away": 0.4529187428472464,
+   "xg_home": 1.1281958871359794,
+   "xg_away": 1.5117894528879747,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.43362929859923616,
+   "p_draw": 0.26159331450305645,
+   "p_away": 0.30477738689770745,
+   "xg_home": 1.4320617984640485,
+   "xg_away": 1.1567024686904,
+   "weight": 0.0018
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Independent results-only Elo: Watford 1304 vs Lincoln 1470 (gap -166 before home advantage).",
+   "effect": 0.2489
+  },
+  {
+   "text": "Home advantage (England, fitted from results): \u00d71.21 on Watford's scoring rate.",
+   "effect": 0.1923
+  },
+  {
+   "text": "Watford attack vs Lincoln defence: time-weighted strength gap multiplies Watford's scoring rate by \u00d70.85 relative to an average pairing (from 39/39 decay-weighted matches).",
+   "effect": 0.1582
+  }
+ ],
+ "confidence": {
+  "tier": "LOW",
+  "p_max": 0.4112600939563019,
+  "entropy_nats": 1.083517653176072,
+  "text": "Most likely result has P = 41.1%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.1% \u00b1 0.4% (n=17605, mean forecast 44.6%). Backtest RPS for E1: 0.2181; exact-score top-5 hit rate 50.7% (n=1800). Overall champion RPS 0.2099 vs home/away baseline 0.2283. Outcome-certainty tier: LOW (entropy 1.084 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Lineups, injuries and suspensions: NOT ingested (no verified free point-in-time feed); forecast assumes typical availability.",
+  "Weather, travel and rest days: not modelled (not yet validated out of sample).",
+  "Team-level only: no player-level ratings yet; xG is stored for 2026/27 but not used by the champion."
+ ],
+ "verdict": "Watford 1\u20131 Lincoln is the single most probable scoreline at 12.9%: expected goals 1.18\u20131.38 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.047). Exact scores are inherently uncertain; the 1X2 split is 31.8%/27.1%/41.1%.",
+ "resolved": {
+  "home_key": "England:Watford",
+  "away_key": "England:Lincoln",
+  "div": "E1",
+  "home_div": "E1",
+  "away_div": "E1",
+  "country": "England"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: Lincoln City FC at Watford FC\nCompetition: EFL Championship\nDate: 2026-11-03 14:45 EST\nModel Version: 1.0.0+ensemble-hl240-k8-elo22\nData Cutoff: 2026-10-27\n\nPRIMARY FINAL SCORE PREDICTION\n\nWatford FC 1 \u2013 1 Lincoln City FC\n(modal exact score, probability 12.9%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.18\nAway: 1.38\nExpected Total: 2.55\nMedian Total: 2\n\nRESULT PROBABILITIES\n\nHome Win: 31.8%\nDraw: 27.1%\nAway Win: 41.1%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 12.9%\n2. 0\u20131: 10.4%\n3. 1\u20130: 8.8%\n4. 1\u20132: 8.6%\n5. 0\u20130: 8.1%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 27.3%\nTotal 2 goals: 25.7%\nTotal 3 goals: 21.6%\nTotal 4 goals: 13.8%\nTotal 5+ goals: 11.6%\n\nBoth Teams Score: 51.9%\nClean sheet Watford FC: 25.3% \u00b7 Clean sheet Lincoln City FC: 30.9%\n\nMATCH INTELLIGENCE\n\n1. Independent results-only Elo: Watford 1304 vs Lincoln 1470 (gap -166 before home advantage).\n2. Home advantage (England, fitted from results): \u00d71.21 on Watford's scoring rate.\n3. Watford attack vs Lincoln defence: time-weighted strength gap multiplies Watford's scoring rate by \u00d70.85 relative to an average pairing (from 39/39 decay-weighted matches).\n\nMODEL CONFIDENCE\n\nMost likely result has P = 41.1%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.1% \u00b1 0.4% (n=17605, mean forecast 44.6%). Backtest RPS for E1: 0.2181; exact-score top-5 hit rate 50.7% (n=1800). Overall champion RPS 0.2099 vs home/away baseline 0.2283. Outcome-certainty tier: LOW (entropy 1.084 nats of max 1.099).\nParameter-uncertainty 80% bands: xG Watford FC 0.90\u20131.48, xG Lincoln City FC 1.07\u20131.70; P(home win) 23.0%\u201341.1%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0009 (sampling error only; it does not measure model error).\n\nDATA QUALITY\n\n- Lineups, injuries and suspensions: NOT ingested (no verified free point-in-time feed); forecast assumes typical availability.\n- Weather, travel and rest days: not modelled (not yet validated out of sample).\n- Team-level only: no player-level ratings yet; xG is stored for 2026/27 but not used by the champion.\n\nFINAL VERDICT\n\nWatford 1\u20131 Lincoln is the single most probable scoreline at 12.9%: expected goals 1.18\u20131.38 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.047). Exact scores are inherently uncertain; the 1X2 split is 31.8%/27.1%/41.1%.\n",
+ "frozen_at": "2026-10-28T19:29:49+00:00",
+ "sha256": "aea3408a053f7fe428276f2dd32253b8b1b2bcb4d2104d76e96ad8cfd88b358a"
+}

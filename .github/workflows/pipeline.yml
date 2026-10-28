@@ -1,0 +1,67 @@
+name: pipeline
+# Discover Jupiter soccer fixtures -> forecast -> FREEZE -> (post-hoc) market snapshot -> static site.
+on:
+  schedule:
+    - cron: "17 */3 * * *"
+  workflow_dispatch:
+    inputs:
+      date:
+        description: "First date to forecast (YYYY-MM-DD, America/New_York). Empty = today."
+        required: false
+      days:
+        description: "Number of days"
+        required: false
+        default: "8"
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+concurrency:
+  group: pipeline
+  cancel-in-progress: false
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      JUPITER_API_KEY: ${{ secrets.JUPITER_API_KEY }}
+      DATE: ${{ github.event.inputs.date }}
+      DAYS: ${{ github.event.inputs.days || '8' }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12", cache: pip }
+      - run: pip install -r requirements.txt
+      - uses: actions/cache@v4
+        with:
+          path: data/raw
+          key: raw-${{ github.run_id }}
+          restore-keys: raw-
+      - name: Ingest permitted data (results only)
+        run: python -m oraclefc.cli ingest
+      - name: Forecast + freeze (no market data)
+        run: python -m oraclefc.cli run --days "$DAYS" --refresh ${DATE:+--date "$DATE"}
+      - name: POST-HOC market snapshot + edge (after freezing)
+        run: python -m oraclefc.cli edge --days "$DAYS" ${DATE:+--date "$DATE"} || echo "edge snapshot failed (non-fatal)"
+      - name: Build site
+        run: python scripts/build_site.py
+      - name: Commit frozen forecasts
+        run: |
+          git config user.name "oracle-fc-bot"
+          git config user.email "oracle-fc-bot@users.noreply.github.com"
+          git add data/forecasts data/edge || true
+          if ! git diff --cached --quiet; then
+            git commit -m "pipeline: forecasts $(date -u +%Y-%m-%dT%H:%MZ)"
+            for i in 1 2 3; do git pull --rebase && git push && break; sleep 5; done
+          fi
+      - uses: actions/upload-pages-artifact@v3
+        with: { path: site }
+  deploy:
+    needs: run
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

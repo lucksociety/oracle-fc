@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+# raw downloads contain bookmaker odds columns: never commit them
+data/raw/
+data/clean/
+data/cache/
+data/*.duckdb
+data/*.duckdb.wal
+data/models/
+site/
+# derived per-run outputs (rebuilt by the pipeline; frozen forecasts + edge are committed)
+data/dates/
+data/market_snapshots/
