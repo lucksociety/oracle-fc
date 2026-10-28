@@ -192,7 +192,10 @@ class Engine:
         elif overall:
             parts.append(f"No division-specific backtest (n<150); overall backtest RPS {overall['rps']:.4f}.")
         if overall and base:
-            parts.append(f"Overall champion RPS {overall['rps']:.4f} vs home/away baseline {base['rps']:.4f}.")
+            src = self.confidence.get("source") or {}
+            tag = (f" ({src['model_version']}, OOS {src['test_window'][0]}→{src['test_window'][1]}, n={src['n']:,})"
+                   if src.get("model_version") else "")
+            parts.append(f"Overall champion RPS {overall['rps']:.4f} vs home/away baseline {base['rps']:.4f}{tag}.")
         if not self.confidence:
             parts.append("No backtest registry found — confidence is UNVALIDATED.")
         ent = -sum(p * math.log(p) for p in (s["p_home"], s["p_draw"], s["p_away"]) if p > 0)

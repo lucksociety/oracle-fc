@@ -5,6 +5,7 @@ const $ = (s) => document.querySelector(s);
 const pct = (x, d = 1) => (x == null ? "–" : (100 * x).toFixed(d) + "%");
 const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 let MODE = "static", CURRENT = null;
+const CURRENT_DATE = () => (CURRENT && CURRENT.date) || null;
 
 function todayET() {
   return new Intl.DateTimeFormat("en-CA", { timeZone: "America/New_York" }).format(new Date());
@@ -66,7 +67,9 @@ function card(fc) {
   }
   const ms = s.modal_score, b = s.total_buckets;
   const grid = s.score_grid.slice(0, 6).map((row, i) => `<tr><th>${i}</th>${row.slice(0, 6).map((p) => `<td style="background:rgba(214,156,8,${Math.min(0.9, p * 6)})">${(100 * p).toFixed(1)}</td>`).join("")}</tr>`).join("");
+  el.dataset.eid = f.event_id || "";
   el.innerHTML = `${head}
+    <div class="bb" data-bb>${bbBanner(window.BB && window.BB.date === CURRENT_DATE() ? window.BB.byId[f.event_id] : null)}</div>
     <div class="score"><div class="team">${esc(f.home_name)}</div><b>${ms.home}</b>–<b>${ms.away}</b><div class="team">${esc(f.away_name)}</div></div>
     <div class="modal-p">Most likely exact score · ${pct(ms.p)} · xG ${s.xg_home.toFixed(2)} – ${s.xg_away.toFixed(2)}</div>
     <div class="bar"><div class="h" style="width:${100 * s.p_home}%">${pct(s.p_home, 0)}</div><div class="d" style="width:${100 * s.p_draw}%">${pct(s.p_draw, 0)}</div><div class="a" style="width:${100 * s.p_away}%">${pct(s.p_away, 0)}</div></div>
@@ -98,7 +101,44 @@ function render(res) {
   bad.filter((f) => f.status === "pending_pipeline").forEach((f) => cards.appendChild(card(f)));
   const uns = bad.filter((f) => f.status !== "pending_pipeline");
   $("#unsupported").innerHTML = uns.length ? `<div class="unsup"><h3>Not forecast (${uns.length}) — honest gaps</h3><ul>${uns.map((f) => `<li><b>${esc(f.fixture.home_name)} vs ${esc(f.fixture.away_name)}</b> (${esc(f.fixture.competition)}): ${esc((f.data_quality || []).filter((d) => /UNMATCHED|UNSUPPORTED|Kick-off/.test(d)).join(" ") || f.status)}</li>`).join("")}</ul></div>` : "";
+  renderBestBets();
   if (!res.forecasts.length) $("#status").textContent = "No Jupiter soccer games found for this date (Jupiter only lists active/upcoming events).";
+}
+
+// ---------------------------------------------------------------- post-hoc BEST BET (after freezing)
+const cents = (x) => (x == null ? "–" : (100 * x).toFixed(1) + "¢");
+const evp = (x) => (x >= 0 ? "+" : "") + (100 * x).toFixed(1) + "%";
+function bbBanner(g) {
+  if (!window.BB || window.BB.date !== CURRENT_DATE()) return `<div class="bb-wait muted">Best bet: waiting for post-hoc Jupiter prices…</div>`;
+  if (!g) return `<div class="bb-no"><b>NO BET</b> <span class="muted">— no Jupiter prices captured for this game</span></div>`;
+  if (g.verdict !== "BET") {
+    const c = g.closest;
+    return `<div class="bb-no"><b>NO BET</b> <span class="muted">— ${esc(g.reason || "no selection with model P > 50% and positive EV at the ask after fees")}${c ? ` · closest: ${esc(c.label)} (P ${pct(c.model_p)}, ask ${cents(c.ask)}, EV ${evp(c.ev_per_dollar)})` : ""}</span></div>`;
+  }
+  const b = g.bet;
+  return `<div class="bb-yes"><div class="bb-tag">BEST BET</div><div class="bb-sel">${esc(b.label)} <span class="bb-side">${esc(b.side)}</span></div>
+    <div class="bb-nums"><span><i>EV</i>${evp(b.ev_per_dollar)}</span><span><i>Model</i>${pct(b.model_p)}</span><span><i>Ask</i>${cents(b.ask)}</span><span><i>Edge</i>${b.edge_pp >= 0 ? "+" : ""}${b.edge_pp.toFixed(1)} pp</span></div>
+    <div class="muted small">Cost ${cents(b.cost_per_contract)}/contract incl. ${cents(b.fee_per_contract)} fee · ${g.n_eligible} eligible of ${g.n_priced} priced sides${b.thin_book ? " · ⚠ thin book" : ""}${b.volume != null ? ` · vol ${Number(b.volume).toLocaleString()}` : ""}</div></div>`;
+}
+function setBestBets(date, games, fetchedAt, source) {
+  window.BB = { date, games, fetchedAt, source, byId: Object.fromEntries(games.map((g) => [g.event_id, g])) };
+  document.querySelectorAll("#cards .card").forEach((el) => { const s = el.querySelector("[data-bb]"); if (s) s.innerHTML = bbBanner(window.BB.byId[el.dataset.eid]); });
+  renderBestBets();
+}
+function renderBestBets() {
+  const box = $("#best-bets"); if (!box) return;
+  const B = window.BB;
+  if (!B || B.date !== CURRENT_DATE() || !B.games || !B.games.length) { if (!B || B.date !== CURRENT_DATE()) box.innerHTML = ""; return; }
+  const n = B.games.length, nb = B.games.filter((g) => g.verdict === "BET").length;
+  const rows = B.games.map((g) => {
+    const b = g.bet;
+    return `<tr class="${b ? "" : "muted"}"><td class="l">${g.kickoff_utc ? etTime(g.kickoff_utc) : ""}</td><td class="l">${esc(g.home)} v ${esc(g.away)}<div class="muted small">${esc(g.competition || "")}</div></td>
+      ${b ? `<td class="l"><b>${esc(b.label)}</b> <span class="bb-side">${esc(b.side)}</span></td><td class="pos">${evp(b.ev_per_dollar)}</td><td>${pct(b.model_p)}</td><td>${cents(b.ask)}</td><td>${cents(b.cost_per_contract)}</td><td>${b.edge_pp >= 0 ? "+" : ""}${b.edge_pp.toFixed(1)}</td>`
+          : `<td class="l"><b>NO BET</b> <span class="small">${esc(g.reason || "")}</span></td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td>`}</tr>`;
+  }).join("");
+  box.innerHTML = `<h2>Best Bets · ${esc(B.date)} <small class="muted">${nb} bet · ${n - nb} no bet</small></h2>
+    <p class="posthoc small">⚠️ POST-HOC: prices ${esc(B.source)} ${B.fetchedAt ? etTime(B.fetchedAt) : ""}, after the forecasts were frozen; they never feed the model. Eligible = model P &gt; 50% and EV &gt; 0 buying at the Jupiter ask (YES or NO) incl. Jupiter 2% builder fee + Polymarket sports taker fee 0.05·p(1−p). EV per $1 = P / (ask + fee) − 1. Highest EV per game. Research comparison, not betting advice.</p>
+    <details open><summary>Summary table (${n} games)</summary><table><tr><th class="l">Kick-off</th><th class="l">Match</th><th class="l">Best bet</th><th>EV</th><th>Model P</th><th>Ask</th><th>Cost incl. fee</th><th>Edge pp</th></tr>${rows}</table></details>`;
 }
 
 // ---------------------------------------------------------------- post-hoc edge
@@ -160,7 +200,7 @@ function renderEdge(events, meta) {
 async function liveEdge() {
   if (!CURRENT) return;
   const fcs = CURRENT.forecasts.filter((f) => f.status === "ok" && f.frozen_at && f.fixture.event_id);
-  const fetchedAt = new Date().toISOString(), events = [];
+  const fetchedAt = new Date().toISOString(), events = [], games = [];
   $("#edge-meta").textContent = `Fetching live prices for ${fcs.length} frozen forecasts…`;
   for (const fc of fcs) {
     if (fc.frozen_at > fetchedAt) continue; // only forecasts frozen before the price snapshot
@@ -168,9 +208,15 @@ async function liveEdge() {
       const ev = await getJSON(`${JUP}/events/${encodeURIComponent(fc.fixture.event_id)}?includeMarkets=true&includeAllMarkets=true`);
       const mk = parseMarkets(ev.data || ev, fc.fixture.home_name, fc.fixture.away_name);
       events.push({ home: fc.fixture.home_name, away: fc.fixture.away_name, competition: fc.fixture.competition, frozen_at: fc.frozen_at, market_after_kickoff: fetchedAt >= fc.fixture.kickoff_utc, rows: edges(fc, mk) });
+      const g = { event_id: fc.fixture.event_id, home: fc.fixture.home_name, away: fc.fixture.away_name, competition: fc.fixture.competition, kickoff_utc: fc.fixture.kickoff_utc };
+      if (fetchedAt >= fc.fixture.kickoff_utc) Object.assign(g, { verdict: "NO BET", reason: "prices fetched after kick-off (in-play), not pre-match" });
+      else Object.assign(g, BestBet.bestBet(BestBet.selectionsFromEvent(ev.data || ev, fc.fixture.home_name, fc.fixture.away_name), fc.simulation.score_grid, fc.simulation));
+      games.push(g);
     } catch (e) { console.warn(e); }
     await new Promise((r) => setTimeout(r, 350));
   }
+  games.sort((a, b) => (a.kickoff_utc || "").localeCompare(b.kickoff_utc || ""));
+  setBestBets(CURRENT.date, games, fetchedAt, "fetched live in your browser at");
   window.EDGE = { events, meta: `Live Jupiter prices fetched ${etTime(fetchedAt)} for ${events.length} events · compared against forecasts frozen earlier.` };
   renderEdge(EDGE.events, EDGE.meta);
 }
@@ -178,9 +224,13 @@ async function loadEdge(date) {
   try {
     const j = MODE === "api" ? await getJSON(`api/edge?date=${date}`) : await getJSON(`data/edge/${date}.json`);
     const events = j.events.map((e) => ({ ...e, rows: e.rows.map((r) => ({ market: r.market === "Exact score" ? "Exact" : r.market, sel: r.selection, model: r.model_p, mkt: r.market_mid, ask: r.market_ask, edge: r.edge_vs_mid })) }));
+    if (j.best_bets && j.best_bets.games) setBestBets(date, j.best_bets.games, j.market_fetched_at, "snapshot by the pipeline at");
+    else setBestBets(date, [], null, "not captured");
     window.EDGE = { events, meta: `Pipeline price snapshot ${j.market_fetched_at ? etTime(j.market_fetched_at) : ""} · ${events.length} events.` };
     renderEdge(EDGE.events, EDGE.meta);
   } catch (_) {
+    setBestBets(date, [], null, "not captured");
+    $("#best-bets").innerHTML = `<p class="muted">Best bets: no stored post-hoc price snapshot for this date yet — use “Fetch live Jupiter prices now” on the Edge tab.</p>`;
     $("#edge-meta").textContent = "No stored post-hoc snapshot for this date yet. Use “Fetch live Jupiter prices now”.";
     $("#edge-table").innerHTML = "";
   }

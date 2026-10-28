@@ -33,6 +33,16 @@ Calibration is good overall; the model is slightly *under*-confident on strong f
 (P ≥ 0.60: predicted 67.8%, observed 70.6%) and slightly under-predicts total goals in several leagues —
 see the weakness analysis in the backtest report.
 
+## Best Bets (post-hoc, after freezing)
+
+For every game the Edge layer (`oraclefc/market/best_bet.py`, mirrored in `web/bestbet.js`) prices every **buyable** Jupiter side we can model from the frozen score grid — 1X2 (YES and NO), BTTS, match totals, team totals, spreads, exact score — and picks **one** best bet:
+
+* **Eligible** only if model P > 50% **and** EV > 0 buying at the Jupiter **ask** (not mid).
+* **EV per $1** = P / (ask + fee) − 1. Fee per contract = Jupiter builder fee 2%·ask + Polymarket sports taker fee 0.05·ask·(1−ask) ([Jupiter fees](https://docs.jup.ag/user-docs/trade/predict/fees), [Polymarket fees](https://docs.polymarket.com/trading/fees), market `feeSchedule` `sports_fees_v3`, checked 2026-10-28). Jupiter rounds each order's fee up to the cent, so tiny orders cost slightly more.
+* Highest EV wins; otherwise **NO BET** (with the closest miss shown). Prices fetched after kick-off, or forecasts frozen after the snapshot, are always NO BET.
+* Shown as a banner on every game card and as a **Best Bets** table per date. Half-time, corners and first-to-score markets are not modelled and never selected.
+* There is no backtest of betting returns (Directive Zero forbids historical odds), so these are research flags, not advice.
+
 ## Match context (lineups, injuries, players, xG, weather, rest, travel)
 
 Each forecast fetches live context. All sources are free and keyless, and every payload is

@@ -6,6 +6,7 @@ frozen. Refuses to compare a forecast frozen after the snapshot.
 from __future__ import annotations
 
 from .. import frozen
+from .best_bet import FEES, MIN_P, best_bet
 from .jupiter_prices import snapshot
 
 
@@ -58,19 +59,48 @@ def edge_for_date(date: str, take_snapshot: bool = True) -> dict:
     snap = snapshot(list(fixtures), date, fixtures) if take_snapshot else None
     out = {"date": date, "label": "POST-HOC COMPARISON — market prices were fetched after the forecasts were "
            "frozen and are never used by the model.", "market_fetched_at": snap["fetched_at"] if snap else None,
-           "events": []}
+           "events": [], "best_bets": best_bets_meta()}
+    rows = []
     for fc in fcs:
         eid = fc["fixture"]["event_id"]
         mk = (snap or {}).get("events", {}).get(eid)
+        bb_row = {"event_id": eid, "home": fc["fixture"]["home_name"], "away": fc["fixture"]["away_name"],
+                  "competition": fc["fixture"]["competition"], "kickoff_utc": fc["fixture"]["kickoff_utc"],
+                  "frozen_at": fc["frozen_at"], "model_version": fc["model_version"]}
+        rows.append(bb_row)
         if not mk or "error" in mk:
+            bb_row.update(verdict="NO BET", reason="no Jupiter prices captured for this game")
             continue
         if fc["frozen_at"] > snap["fetched_at"]:
+            bb_row.update(verdict="NO BET", reason="forecast frozen after the price snapshot")
             continue  # forecast frozen after the snapshot: not a valid post-hoc comparison
+        after = snap["fetched_at"] >= fc["fixture"]["kickoff_utc"]
         e = compute_edges(fc, mk)
         e.update({"home": fc["fixture"]["home_name"], "away": fc["fixture"]["away_name"],
                   "competition": fc["fixture"]["competition"], "kickoff_utc": fc["fixture"]["kickoff_utc"],
                   "frozen_at": fc["frozen_at"], "model_version": fc["model_version"],
                   # prices fetched after kickoff are in-play/settled and not a pre-match comparison
-                  "market_after_kickoff": snap["fetched_at"] >= fc["fixture"]["kickoff_utc"]})
+                  "market_after_kickoff": after})
+        if after:
+            bb_row.update(verdict="NO BET", reason="prices were fetched after kick-off (in-play), not pre-match")
+        elif "selections" not in mk:
+            bb_row.update(verdict="NO BET", reason="snapshot has no buyable-side data")
+        else:
+            bb_row.update(best_bet(mk["selections"], fc["simulation"]["score_grid"], fc["simulation"]))
+        e["best_bet"] = {k: v for k, v in bb_row.items() if k not in ("home", "away", "competition", "kickoff_utc")}
         out["events"].append(e)
+    rows.sort(key=lambda r: r.get("kickoff_utc") or "")
+    out["best_bets"]["games"] = rows
+    out["best_bets"]["n_games"] = len(rows)
+    out["best_bets"]["n_bet"] = sum(r.get("verdict") == "BET" for r in rows)
+    out["best_bets"]["n_no_bet"] = len(rows) - out["best_bets"]["n_bet"]
     return out
+
+
+def best_bets_meta() -> dict:
+    return {"rule": f"Per game, the single selection with the highest EV among those with model P > {MIN_P:.0%} "
+                    "and EV > 0 when buying at the Jupiter ask (YES or NO) including trading fees; otherwise NO BET.",
+            "ev_formula": "EV per $1 = p_model / (ask + fee per contract) - 1",
+            "fees": FEES,
+            "markets": "full-time goals markets priced from the frozen score grid: 1X2 (YES/NO), BTTS, totals, "
+                       "team totals, spreads, exact score. Half-time, corners and first-to-score are not modelled."}

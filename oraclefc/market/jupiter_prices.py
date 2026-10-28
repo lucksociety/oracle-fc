@@ -10,6 +10,7 @@ import requests
 
 from .. import config
 from ..governance import now_utc_iso
+from .best_bet import selections_from_event
 
 BASE = os.environ.get("JUPITER_API_BASE", "https://api.jup.ag/prediction/v1")
 GOALS_RE = re.compile(r"(\d+)\s+or more goals", re.IGNORECASE)
@@ -90,6 +91,7 @@ def snapshot(event_ids: list[str], date: str, fixtures: dict[str, dict]) -> dict
             continue
         ev = ev.get("data", ev)
         snap["events"][eid] = parse_event_markets(ev, fx["home_name"], fx["away_name"])
+        snap["events"][eid]["selections"] = selections_from_event(ev, fx["home_name"], fx["away_name"])
         time.sleep(0.4)
     d = config.MARKET_DIR / date
     d.mkdir(parents=True, exist_ok=True)

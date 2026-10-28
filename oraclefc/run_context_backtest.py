@@ -235,6 +235,8 @@ def main():
         reg["champion"]["components"] = BASE_COMPONENTS + ["xg_dc"]
         w_all = nested_weights_prod(wf, BASE_COMPONENTS + ["xg_dc"])
         reg["champion"]["ensemble_weights"] = w_all
+    # confidence tables quoted in every report must describe the CURRENT champion
+    reg["confidence"] = champion_confidence(wf, champion_base, test, reg["champion"].get("version"))
     save_registry(reg)
     write_markdown(results, rec["id"])
     return results
@@ -253,6 +255,40 @@ PRIORS = {
              "Outside the Understat top-5 leagues no point-in-time player ratings exist, so lineups are shown but "
              "NOT applied."),
 }
+
+
+def champion_confidence(wf, champ, test_mask, version):
+    """Report-confidence tables (calibration, per-division, overall vs baseline) for the champion matrices."""
+    fx = wf.fx
+    m = test_mask & np.isfinite(champ[:, 0, 0]) & np.isfinite(wf.mats["home_away_rate"][:, 0, 0])
+    hg, ag = fx["hg"].to_numpy(int)[m], fx["ag"].to_numpy(int)[m]
+    pm = _pm(champ[m], hg, ag)
+    divs = fx["div"].to_numpy()[m]
+    conf = {"overall": metrics.favourite_calibration(pm), "by_division": {}}
+    for d in sorted(set(divs)):
+        sel = divs == d
+        if sel.sum() >= 150:
+            conf["by_division"][d] = {"summary": metrics.summary({k: v[sel] for k, v in pm.items()})}
+    conf["overall_summary"] = metrics.summary(pm)
+    conf["baseline_summary"] = metrics.summary(_pm(wf.mats["home_away_rate"][m], hg, ag))
+    conf["source"] = {"model_version": version, "test_window": [TEST_START, str(fx["date"].max().date())],
+                      "n": int(m.sum()), "protocol": "walk-forward OOS, nested ensemble weights"}
+    return conf
+
+
+def refresh_confidence():
+    """Recompute registry confidence for the current champion from the cached walk-forward (no refit)."""
+    z = np.load(CACHE, allow_pickle=True)
+    fx = pd.read_parquet(CACHE.with_suffix(".parquet"))
+    wf = WalkForward(list(z["names"]), fx, {n: z[n] for n in z["names"]})
+    reg = load_registry()
+    comps = reg["champion"].get("components") or BASE_COMPONENTS
+    seasons = sorted({s for s in fx["date"].map(season_of) if s >= "2022/23"})
+    ens, _ = nested_ensemble(wf, comps, seasons)
+    test = (fx["date"] >= pd.Timestamp(TEST_START)).to_numpy()
+    reg["confidence"] = champion_confidence(wf, ens, test, reg["champion"].get("version"))
+    save_registry(reg)
+    return reg["confidence"]
 
 
 def nested_weights_prod(wf, comps):
@@ -313,4 +349,5 @@ def write_markdown(res, exp_id):
 
 
 if __name__ == "__main__":
-    main()
+    import sys
+    refresh_confidence() if "--confidence-only" in sys.argv else main()
