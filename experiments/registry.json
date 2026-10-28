@@ -1,7 +1,7 @@
 {
   "champion": {
     "name": "ensemble",
-    "version": "1.1.0+ensemble-xg-hl240-k8-elo22",
+    "version": "1.1.1+ensemble-xg-hl240-k8-elo22",
     "params": {
       "half_life_days": 240.0,
       "kappa": 8.0,
@@ -37,7 +37,8 @@
       "data_cutoff": "2026-10-27",
       "apply_unvalidated": []
     },
-    "previous_version": "1.0.0+ensemble-hl240-k8-elo22"
+    "previous_version": "1.1.0+ensemble-xg-hl240-k8-elo22",
+    "version_note": "1.1.1 = same fitted model as 1.1.0; report confidence paragraph now quotes the 1.1.0/xG champion backtest (RPS 0.2098, n=40,559) instead of the pre-xG 1.0.0 figure (0.2099)."
   },
   "challenger": {
     "name": "dynamic_dc"
@@ -692,13 +693,14 @@
       "n": 40559
     },
     "source": {
-      "model_version": "1.1.0+ensemble-xg-hl240-k8-elo22",
+      "model_version": "1.1.1+ensemble-xg-hl240-k8-elo22",
       "test_window": [
         "2023-07-01",
         "2026-10-27"
       ],
       "n": 40559,
-      "protocol": "walk-forward OOS, nested ensemble weights"
+      "protocol": "walk-forward OOS, nested ensemble weights",
+      "note": "Computed from the 1.1.0 walk-forward OOS predictions (1.1.1 is the identical model)."
     }
   },
   "history": [
@@ -721,6 +723,11 @@
       "ts": "2026-10-28T21:40:02+00:00",
       "champion": "ensemble",
       "version": "1.1.0+ensemble-xg-hl240-k8-elo22"
+    },
+    {
+      "ts": "2026-10-28T21:46:11+00:00",
+      "champion": "ensemble",
+      "version": "1.1.1+ensemble-xg-hl240-k8-elo22"
     }
   ]
 }
