@@ -1,0 +1,567 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-10-27",
+ "generated_at": "2026-10-29T15:05:59+00:00",
+ "fixture": {
+  "event_id": "POLY-1253030",
+  "home_name": "FC Inter Turku",
+  "away_name": "HJK Helsinki",
+  "competition": "Veikkausliiga",
+  "subcategory": "fin1",
+  "kickoff_utc": "2026-10-29T16:00:00+00:00",
+  "kickoff_local": "2026-10-29 12:00 EDT",
+  "home_matched": "Inter Turku",
+  "away_matched": "HJK",
+  "match_methods": {
+   "home": {
+    "source": "FC Inter Turku",
+    "matched": "Inter Turku",
+    "method": "core-tokens",
+    "score": 0.97
+   },
+   "away": {
+    "source": "HJK Helsinki",
+    "matched": "HJK",
+    "method": "token-subset",
+    "score": 0.9
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.44251521458526233,
+  "p_draw": 0.270591339723507,
+  "p_away": 0.2868934456912306,
+  "xg_home": 1.5458891403710342,
+  "xg_away": 1.2087139162224247,
+  "xg_total": 2.754603056593459,
+  "median_total": 3,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.13093976451038347
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.13093976451038347
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.09412252068899843
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.09247311606867045
+   },
+   {
+    "home": 2,
+    "away": 0,
+    "p": 0.07462271043364836
+   },
+   {
+    "home": 1,
+    "away": 2,
+    "p": 0.07276416579911106
+   }
+  ],
+  "btts": 0.5696724989180139,
+  "totals_over": {
+   "over_0.5": 0.9339797442754622,
+   "over_1.5": 0.7706084155676283,
+   "over_2.5": 0.5203909954698275,
+   "over_3.5": 0.29807657950534766,
+   "over_4.5": 0.1421685163909191,
+   "over_5.5": 0.05907089520290008,
+   "over_6.5": 0.02104875413970395
+  },
+  "total_buckets": {
+   "0-1": 0.2293915844323717,
+   "2": 0.2502174200978008,
+   "3": 0.22231441596447976,
+   "4": 0.15590806311442856,
+   "5+": 0.1421685163909191
+  },
+  "clean_sheet_home": 0.29077326674017284,
+  "clean_sheet_away": 0.2055744900663512,
+  "home_goal_dist": [
+   0.2055744900663512,
+   0.3353765648577276,
+   0.259603198530128,
+   0.13118319717989865,
+   0.04915756468799215,
+   0.014605413405513256,
+   0.003587679560794153,
+   0.0009118917115950038
+  ],
+  "away_goal_dist": [
+   0.29077326674017284,
+   0.36887095872871895,
+   0.22174731608697146,
+   0.08660038696071604,
+   0.025007142226123342,
+   0.005719309646600113,
+   0.0010804871494037181,
+   0.00020113246129344756
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    3
+   ],
+   "away_goals_80": [
+    0,
+    3
+   ],
+   "total_goals_80": [
+    1,
+    5
+   ],
+   "goal_diff_80": [
+    -2,
+    2
+   ]
+  },
+  "score_grid": [
+   [
+    0.06602,
+    0.070898,
+    0.044655,
+    0.017516,
+    0.005068,
+    0.001158,
+    0.000218
+   ],
+   [
+    0.092473,
+    0.13094,
+    0.072764,
+    0.028591,
+    0.008286,
+    0.001897,
+    0.000358
+   ],
+   [
+    0.074623,
+    0.094123,
+    0.060122,
+    0.022405,
+    0.006505,
+    0.001492,
+    0.000282
+   ],
+   [
+    0.037912,
+    0.047902,
+    0.02902,
+    0.012086,
+    0.003328,
+    0.000764,
+    0.000145
+   ],
+   [
+    0.014226,
+    0.018006,
+    0.010927,
+    0.004316,
+    0.001328,
+    0.000289,
+    5.5e-05
+   ],
+   [
+    0.004222,
+    0.005354,
+    0.003255,
+    0.001288,
+    0.000376,
+    9.2e-05,
+    1.6e-05
+   ],
+   [
+    0.001035,
+    0.001315,
+    0.000801,
+    0.000317,
+    9.3e-05,
+    2.1e-05,
+    4e-06
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.44438,
+  "p_draw": 0.26933,
+  "p_away": 0.28629,
+  "se": [
+   0.001111094990538613,
+   0.0009919459438396832,
+   0.0010107621775175405
+  ],
+  "max_abs_dev_vs_exact": 0.0018647854147376686,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   1.1832155351588323,
+   1.9423604245234565
+  ],
+  "xg_away_80": [
+   0.8984408319845864,
+   1.5427467681220575
+  ],
+  "p_home_80": [
+   0.3367558239387064,
+   0.560904267947951
+  ],
+  "p_draw_80": [
+   0.22743797628443882,
+   0.2921176162716687
+  ],
+  "p_away_80": [
+   0.20025565019765587,
+   0.3911627264409377
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.19651631104671677,
+   0.20064886494325393
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.43254693735818356,
+   "p_draw": 0.27151117536405617,
+   "p_away": 0.29594188727776016,
+   "xg_home": 1.4523348990526193,
+   "xg_away": 1.1591689493010242,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.45917987468109966,
+   "p_draw": 0.24603639568638483,
+   "p_away": 0.29478372963251537,
+   "xg_home": 1.6034478228407985,
+   "xg_away": 1.236706040604245,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.4707681332324146,
+   "p_draw": 0.2860777644041737,
+   "p_away": 0.2431541023634116,
+   "xg_home": 1.4141808766475594,
+   "xg_away": 0.9438583212329812,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.41929483176833504,
+   "p_draw": 0.24544337693198948,
+   "p_away": 0.3352617912996756,
+   "xg_home": 1.5558664049744069,
+   "xg_away": 1.3667599935014132,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.4325495419482104,
+   "p_draw": 0.2713835715137281,
+   "p_away": 0.29606688653806157,
+   "xg_home": 1.4520853179107118,
+   "xg_away": 1.1591949491537155,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Home advantage (Finland, fitted from results): \u00d71.23 on Inter Turku's scoring rate.",
+   "effect": 0.2051
+  },
+  {
+   "text": "Independent results-only Elo: Inter Turku 1727 vs HJK 1699 (gap +28 before home advantage).",
+   "effect": 0.0422
+  },
+  {
+   "text": "Context \u2014 Understat xG component (validated, in ensemble): home win -1.3 pp, draw +1.2 pp, away win +0.1 pp (xG -0.07 / -0.04).",
+   "effect": 0.039
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.44251521458526233,
+  "p_draw": 0.270591339723507,
+  "p_away": 0.2868934456912306,
+  "xg_home": 1.5458891403710342,
+  "xg_away": 1.2087139162224247
+ },
+ "context": {
+  "fetched_at": "2026-10-29T15:05:59+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/6145888",
+    "fetched_at": "2026-10-29T15:05:59+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "confirmed",
+    "source": "FotMob official team sheet",
+    "formation": "4-3-3",
+    "starters": [
+     {
+      "name": "Eetu Huuhtanen",
+      "pos": "G"
+     },
+     {
+      "name": "Seth Saarinen",
+      "pos": "D"
+     },
+     {
+      "name": "Robert Ivanov",
+      "pos": "D"
+     },
+     {
+      "name": "Juuso H\u00e4m\u00e4l\u00e4inen",
+      "pos": "D"
+     },
+     {
+      "name": "Jussi Niska",
+      "pos": "D"
+     },
+     {
+      "name": "Jasse Tuominen",
+      "pos": "M"
+     },
+     {
+      "name": "Johannes Yli-Kokko",
+      "pos": "M"
+     },
+     {
+      "name": "Eeli Kiiskilae",
+      "pos": "M"
+     },
+     {
+      "name": "Lauri Laine",
+      "pos": "F"
+     },
+     {
+      "name": "Alie Conteh",
+      "pos": "F"
+     },
+     {
+      "name": "Clinton Jephta",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-10-29T15:05:59+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   },
+   "away": {
+    "status": "confirmed",
+    "source": "FotMob official team sheet",
+    "formation": "4-2-3-1",
+    "starters": [
+     {
+      "name": "Jasper Samooja",
+      "pos": "G"
+     },
+     {
+      "name": "Nikolai Alho",
+      "pos": "D"
+     },
+     {
+      "name": "Mihailo Bogi\u0107evi\u0107",
+      "pos": "D"
+     },
+     {
+      "name": "Ville Tikkanen",
+      "pos": "D"
+     },
+     {
+      "name": "Leonel Montano",
+      "pos": "D"
+     },
+     {
+      "name": "Alexander Ring",
+      "pos": "M"
+     },
+     {
+      "name": "Pyry Mentu",
+      "pos": "M"
+     },
+     {
+      "name": "Liam M\u00f6ller",
+      "pos": "F"
+     },
+     {
+      "name": "Santeri Haarala",
+      "pos": "F"
+     },
+     {
+      "name": "Alfie Cicale",
+      "pos": "F"
+     },
+     {
+      "name": "Mads Borchers",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-10-29T15:05:59+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   }
+  },
+  "absences": {
+   "home": [],
+   "away": [
+    {
+     "player": "Amara Nallo",
+     "type": "injury",
+     "expected_return": "Early December 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6145888",
+     "fetched_at": "2026-10-29T15:05:59+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 5,
+    "n21": 3,
+    "last_match": "2026-10-24"
+   },
+   "away": {
+    "rest_days": 4,
+    "n21": 4,
+    "last_match": "2026-10-25"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 147.6
+  },
+  "venue": {
+   "name": "Veritas Stadion",
+   "city": "Turku (\u00c5bo)",
+   "lat": 60.442738205,
+   "lon": 22.291844487
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 3.8,
+   "temp_c": 9.9,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=60.443&longitude=22.292",
+   "fetched_at": "2026-10-29T15:05:59+00:00",
+   "lat": 60.442738205,
+   "lon": 22.291844487
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": -1.3,
+    "d_p_draw_pp": 1.22,
+    "d_p_away_pp": 0.08,
+    "d_xg_home": -0.073,
+    "d_xg_away": -0.037
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 0.9939,
+    "away_rate_mult": 1.0172,
+    "d_p_home_pp": -0.67,
+    "d_p_draw_pp": 0.01,
+    "d_p_away_pp": 0.66,
+    "d_xg_home": -0.009,
+    "d_xg_away": 0.02,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0141,
+    "away_rate_mult": 1.0059,
+    "d_p_home_pp": 0.38,
+    "d_p_draw_pp": -0.19,
+    "d_p_away_pp": -0.18,
+    "d_xg_home": 0.021,
+    "d_xg_away": 0.007,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "reason": "failed validation; no live features"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 5.0,
+   "rest_a": 4.0,
+   "n21_h": 3.0,
+   "n21_a": 4.0,
+   "travel_km": 147.61355415333503,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 3.8,
+   "temp_c": 9.9
+  }
+ },
+ "confidence": {
+  "tier": "LOW",
+  "p_max": 0.44251521458526233,
+  "entropy_nats": 1.0727041604461647,
+  "text": "Most likely result has P = 44.3%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.3% \u00b1 0.4% (n=16754, mean forecast 44.6%). Backtest RPS for FIN: 0.2105; exact-score top-5 hit rate 47.2% (n=608). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: LOW (entropy 1.073 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Inter Turku: lineup CONFIRMED (FotMob official team sheet).",
+  "Inter Turku: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.",
+  "HJK: lineup CONFIRMED (FotMob official team sheet).",
+  "HJK: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+ ],
+ "verdict": "Inter Turku 1\u20131 HJK is the single most probable scoreline at 13.1%: expected goals 1.55\u20131.21 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.047). Exact scores are inherently uncertain; the 1X2 split is 44.3%/27.1%/28.7%.",
+ "resolved": {
+  "home_key": "Finland:Inter Turku",
+  "away_key": "Finland:HJK",
+  "div": "FIN",
+  "home_div": "FIN",
+  "away_div": "FIN",
+  "country": "Finland"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: HJK Helsinki at FC Inter Turku\nCompetition: Veikkausliiga\nDate: 2026-10-29 12:00 EDT\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-10-27\n\nPRIMARY FINAL SCORE PREDICTION\n\nFC Inter Turku 1 \u2013 1 HJK Helsinki\n(modal exact score, probability 13.1%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.55\nAway: 1.21\nExpected Total: 2.75\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 44.3%\nDraw: 27.1%\nAway Win: 28.7%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 13.1%\n2. 2\u20131: 9.4%\n3. 1\u20130: 9.2%\n4. 2\u20130: 7.5%\n5. 1\u20132: 7.3%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 22.9%\nTotal 2 goals: 25.0%\nTotal 3 goals: 22.2%\nTotal 4 goals: 15.6%\nTotal 5+ goals: 14.2%\n\nBoth Teams Score: 57.0%\nClean sheet FC Inter Turku: 29.1% \u00b7 Clean sheet HJK Helsinki: 20.6%\n\nMATCH INTELLIGENCE\n\n1. Home advantage (Finland, fitted from results): \u00d71.23 on Inter Turku's scoring rate.\n2. Independent results-only Elo: Inter Turku 1727 vs HJK 1699 (gap +28 before home advantage).\n3. Context \u2014 Understat xG component (validated, in ensemble): home win -1.3 pp, draw +1.2 pp, away win +0.1 pp (xG -0.07 / -0.04).\n\nMODEL CONFIDENCE\n\nMost likely result has P = 44.3%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.3% \u00b1 0.4% (n=16754, mean forecast 44.6%). Backtest RPS for FIN: 0.2105; exact-score top-5 hit rate 47.2% (n=608). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: LOW (entropy 1.073 nats of max 1.099).\nParameter-uncertainty 80% bands: xG FC Inter Turku 1.18\u20131.94, xG HJK Helsinki 0.90\u20131.54; P(home win) 33.7%\u201356.1%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0019 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nInter Turku: CONFIRMED \u2014 FotMob official team sheet, fetched 2026-10-29 11:05 EDT (4-3-3)\n  Eetu Huuhtanen (G), Seth Saarinen (D), Robert Ivanov (D), Juuso H\u00e4m\u00e4l\u00e4inen (D), Jussi Niska (D), Jasse Tuominen (M), Johannes Yli-Kokko (M), Eeli Kiiskilae (M), Lauri Laine (F), Alie Conteh (F), Clinton Jephta (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\nHJK: CONFIRMED \u2014 FotMob official team sheet, fetched 2026-10-29 11:05 EDT (4-2-3-1)\n  Jasper Samooja (G), Nikolai Alho (D), Mihailo Bogi\u0107evi\u0107 (D), Ville Tikkanen (D), Leonel Montano (D), Alexander Ring (M), Pyry Mentu (M), Liam M\u00f6ller (F), Santeri Haarala (F), Alfie Cicale (F), Mads Borchers (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nKEY ABSENCES\n\n- HJK: Amara Nallo \u2014 injury, Early December 2026 [FotMob, 2026-10-29 11:05 EDT]\n\nWEATHER AT VENUE\n\nVeritas Stadion, Turku (\u00c5bo): 9.9 \u00b0C, wind 3.8 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-10-29 11:05 EDT]\n\nREST & TRAVEL\n\nInter Turku: 5 days' rest, 3 matches in previous 21 days \u00b7 HJK: 4 days' rest, 4 in 21 days \u00b7 away travel 147.6 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 44.3% / 27.1% / 28.7%, xG 1.55\u20131.21\n- Understat xG component (validated, in ensemble): home -1.30 pp, draw +1.22 pp, away +0.08 pp; xG -0.073 / -0.037\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home -0.67 pp, draw +0.01 pp, away +0.66 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.38 pp, draw -0.19 pp, away -0.18 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- lineup: not applied (failed validation; no live features)\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Inter Turku: lineup CONFIRMED (FotMob official team sheet).\n- Inter Turku: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n- HJK: lineup CONFIRMED (FotMob official team sheet).\n- HJK: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nFINAL VERDICT\n\nInter Turku 1\u20131 HJK is the single most probable scoreline at 13.1%: expected goals 1.55\u20131.21 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.047). Exact scores are inherently uncertain; the 1X2 split is 44.3%/27.1%/28.7%.\n",
+ "frozen_at": "2026-10-29T15:05:59+00:00",
+ "sha256": "d219c5442206dfc306f5cdde243c5a7ebc4a772c6bc34878da4b5bde567e046a"
+}
