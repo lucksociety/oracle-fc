@@ -8,6 +8,8 @@ Protocol (fixed before results were seen):
 3. A variant is eligible only if ΔRPS, Δ1X2 log loss and Δexact-score log score are all < 0 on
    the full test window and the 95% block-bootstrap CIs (blocks = refit weeks) of ΔRPS and
    Δexact-score log score lie entirely below 0 (the ensemble promotion rule).
+   (A fifth, post-hoc variant with a total-goals regression term was tried once and dropped:
+   no material gain over global+sharpen. Selection bias: 5 variants tried, best reported.)
 4. Among eligible variants the one with the lowest exact-score log score is adopted; the
    production layer is refitted on all OOS matches to the cutoff.
 No odds, prices or market data are used anywhere (results only).
@@ -31,6 +33,9 @@ VARIANTS = {
     "div_goals+sharpen": dict(per_div=("h", "a"), sharpen=True),
     "div_goals_draw+sharpen": dict(per_div=("h", "a", "draw"), sharpen=True),
 }
+# Tried once on 2026-10-29 after inspecting the base reliability table (post-hoc idea):
+#   "global+tot+sharpen" (adds the total-goals regression term) -> ΔRPS -0.00008, Δexact -0.00108,
+#   i.e. indistinguishable from global+sharpen (-0.00106); dropped for parsimony.
 
 
 def load_wf() -> WalkForward:

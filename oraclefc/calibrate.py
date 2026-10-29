@@ -1,11 +1,14 @@
 """Results-only post-ensemble calibration of the joint score matrix (Directive Zero safe).
 
-    Q(h, a) ∝ P(h, a)^(1+t) · exp(dh·h + da·a + dd·1[h=a] + d0·1[h=a=0])
+    Q(h, a) ∝ P(h, a)^(1+t) · exp(dh·h + da·a + dd·1[h=a] + d0·1[h=a=0] + g·z·(h+a))
 
 * dh / da  — log-multipliers of home / away expected goals (total-goals level and home
              advantage), global + per-division deviations shrunk toward 0 by a ridge prior;
 * dd / d0  — draw and 0-0 inflation (low-score dependence the Poisson-type Elo component
              lacks), global + per-division;
+* g        — total-goals regression: z = log(E_P[h+a] / 2.7) is the match's own predicted
+             total (from P, no other input); g < 0 pulls very low / very high totals toward
+             the mean (the base ensemble over-states unders in low-total games);
 * t        — global sharpening (t > 0) / flattening (t < 0) of the whole distribution.
 
 Fitted by maximum likelihood of the observed exact score on walk-forward OUT-OF-SAMPLE
@@ -17,22 +20,35 @@ from __future__ import annotations
 import numpy as np
 from scipy.optimize import minimize
 
-TERMS = ("h", "a", "draw", "nil")
+TERMS = ("h", "a", "draw", "nil", "tot")
+BASE_TERMS = ("h", "a", "draw", "nil")
+TOT_CENTRE = 2.7
+
+
+def total_z(P: np.ndarray) -> np.ndarray:
+    G = P.shape[-1]
+    k = np.arange(G, dtype=float)
+    tot = (P * (k[:, None] + k[None, :])[None]).sum(axis=(1, 2))
+    return np.log(np.clip(tot, 0.05, None) / TOT_CENTRE)
 
 
 def _cells(G: int):
     k = np.arange(G, dtype=float)
     H, A = np.meshgrid(k, k, indexing="ij")
-    return {"h": H, "a": A, "draw": (H == A).astype(float), "nil": ((H == 0) & (A == 0)).astype(float)}
+    return {"h": H, "a": A, "draw": (H == A).astype(float), "nil": ((H == 0) & (A == 0)).astype(float),
+            "tot": H + A}
 
 
-def design(divs, levels: list[str], terms=TERMS, per_div=("h", "a")) -> tuple[np.ndarray, list[tuple]]:
-    """Per-match coefficient-selection matrix: columns = (term, None) global + (term, div) deviations."""
+def design(divs, levels: list[str], terms=BASE_TERMS, per_div=("h", "a"), z=None) -> tuple[np.ndarray, list[tuple]]:
+    """Per-match coefficient-selection matrix: columns = (term, None) global + (term, div) deviations.
+    The "tot" term's column carries the match's own predicted-total z instead of 1."""
     divs = np.asarray(divs)
     cols = [(t, None) for t in terms] + [(t, d) for t in per_div for d in levels]
     X = np.zeros((len(divs), len(cols)))
     for j, (t, d) in enumerate(cols):
         X[:, j] = 1.0 if d is None else (divs == d)
+        if t == "tot":
+            X[:, j] *= z
     return X, cols
 
 
@@ -43,11 +59,16 @@ def apply(P: np.ndarray, coef: dict, divs, sharpen: float = 0.0) -> np.ndarray:
     cells = _cells(G)
     divs = np.asarray(divs)
     logw = np.zeros((n, G, G))
+    z = total_z(P) if any(t == "tot" for t, _ in coef) else None
     for t in TERMS:
         v = np.full(n, coef.get((t, None), 0.0))
         for (tt, d), b in coef.items():
             if tt == t and d is not None:
                 v = v + b * (divs == d)
+        if t == "tot":
+            if z is None:
+                continue
+            v = v * z
         logw += v[:, None, None] * cells[t][None]
     logP = np.log(np.clip(P, 1e-300, None))
     L = (1.0 + sharpen) * logP + logw
@@ -56,7 +77,7 @@ def apply(P: np.ndarray, coef: dict, divs, sharpen: float = 0.0) -> np.ndarray:
     return (Q / Q.sum(axis=(1, 2), keepdims=True)).astype(P.dtype)
 
 
-def fit(P: np.ndarray, hg, ag, divs, levels=None, terms=TERMS, per_div=("h", "a"), ridge_global: float = 1.0,
+def fit(P: np.ndarray, hg, ag, divs, levels=None, terms=BASE_TERMS, per_div=("h", "a"), ridge_global: float = 1.0,
         ridge_div: float = 50.0, sharpen: bool = True, max_n: int | None = None, seed: int = 0) -> dict:
     """ML fit with ridge (global terms lightly, per-division deviations strongly shrunk)."""
     P = np.asarray(P, float)
@@ -72,7 +93,7 @@ def fit(P: np.ndarray, hg, ag, divs, levels=None, terms=TERMS, per_div=("h", "a"
     if levels is None:
         u, c = np.unique(divs, return_counts=True)
         levels = [d for d, k in zip(u, c) if k >= 300]
-    X, cols = design(divs, levels, terms, per_div)
+    X, cols = design(divs, levels, terms, per_div, z=total_z(P) if "tot" in terms else None)
     cells = _cells(G)
     F = np.stack([cells[t] for t, _ in cols], 0)          # (K, G, G) cell features per column
     term_idx = {t: [j for j, (tt, _) in enumerate(cols) if tt == t] for t in terms}

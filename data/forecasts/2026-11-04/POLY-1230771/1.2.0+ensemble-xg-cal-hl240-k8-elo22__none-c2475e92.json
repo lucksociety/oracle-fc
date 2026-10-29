@@ -1,0 +1,558 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-10-28",
+ "generated_at": "2026-10-29T13:53:37+00:00",
+ "fixture": {
+  "event_id": "POLY-1230771",
+  "home_name": "Fenerbah\u00e7e SK",
+  "away_name": "Liverpool FC",
+  "competition": "UEFA Champions League 2025",
+  "subcategory": "ucl",
+  "kickoff_utc": "2026-11-04T17:45:00+00:00",
+  "kickoff_local": "2026-11-04 12:45 EST",
+  "home_matched": "Fenerbahce",
+  "away_matched": "Liverpool",
+  "match_methods": {
+   "home": {
+    "source": "Fenerbah\u00e7e SK",
+    "matched": "Fenerbahce",
+    "method": "alias",
+    "score": 1.0
+   },
+   "away": {
+    "source": "Liverpool FC",
+    "matched": "Liverpool",
+    "method": "core-tokens",
+    "score": 0.97
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.34901975943155467,
+  "p_draw": 0.2379055271367012,
+  "p_away": 0.4130747134317441,
+  "xg_home": 1.5728781844141162,
+  "xg_away": 1.736074920751633,
+  "xg_total": 3.3089531051657493,
+  "median_total": 3,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.106194179101036
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.106194179101036
+   },
+   {
+    "home": 1,
+    "away": 2,
+    "p": 0.08526603081544915
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.07849998887776047
+   },
+   {
+    "home": 2,
+    "away": 2,
+    "p": 0.07011401254468536
+   },
+   {
+    "home": 0,
+    "away": 1,
+    "p": 0.057220484449903644
+   }
+  ],
+  "btts": 0.6556589226401237,
+  "totals_over": {
+   "over_0.5": 0.9621077366594153,
+   "over_1.5": 0.850917553289349,
+   "over_2.5": 0.6448315404677103,
+   "over_3.5": 0.4233851254775351,
+   "over_4.5": 0.23601756289227607,
+   "over_5.5": 0.11539783107159725,
+   "over_6.5": 0.048840426891847
+  },
+  "total_buckets": {
+   "0-1": 0.14908244671065102,
+   "2": 0.2060860128216387,
+   "3": 0.22144641499017517,
+   "4": 0.18736756258525902,
+   "5+": 0.23601756289227607
+  },
+  "clean_sheet_home": 0.1787291321014962,
+  "clean_sheet_away": 0.20350420859896473,
+  "home_goal_dist": [
+   0.20350420859896473,
+   0.33027165396223573,
+   0.25864848784627065,
+   0.13376314330595418,
+   0.05202137695376946,
+   0.016298539054452596,
+   0.0042860905640237455,
+   0.0012064997143288326
+  ],
+  "away_goal_dist": [
+   0.1787291321014962,
+   0.3073184275613563,
+   0.26172587209139486,
+   0.15104760047305663,
+   0.06695382427723545,
+   0.02425102872088767,
+   0.007431102329661786,
+   0.0025430124449110293
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    3
+   ],
+   "away_goals_80": [
+    0,
+    4
+   ],
+   "total_goals_80": [
+    1,
+    6
+   ],
+   "goal_diff_80": [
+    -2,
+    2
+   ]
+  },
+  "score_grid": [
+   [
+    0.037892,
+    0.05722,
+    0.053377,
+    0.032291,
+    0.014861,
+    0.005532,
+    0.001729
+   ],
+   [
+    0.05397,
+    0.106194,
+    0.085266,
+    0.050342,
+    0.022713,
+    0.008327,
+    0.002573
+   ],
+   [
+    0.046515,
+    0.0785,
+    0.070114,
+    0.038158,
+    0.016828,
+    0.006058,
+    0.001846
+   ],
+   [
+    0.025389,
+    0.041676,
+    0.034225,
+    0.020196,
+    0.00822,
+    0.002897,
+    0.000868
+   ],
+   [
+    0.010375,
+    0.016599,
+    0.013247,
+    0.007188,
+    0.003175,
+    0.001034,
+    0.000304
+   ],
+   [
+    0.003393,
+    0.005305,
+    0.004122,
+    0.002172,
+    0.000882,
+    0.000312,
+    8.5e-05
+   ],
+   [
+    0.000926,
+    0.001418,
+    0.001075,
+    0.000551,
+    0.000217,
+    7.1e-05,
+    2.1e-05
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.348835,
+  "p_draw": 0.239465,
+  "p_away": 0.41169999999999995,
+  "se": [
+   0.0010657137110289048,
+   0.000954257600899778,
+   0.0011004615168191934
+  ],
+  "max_abs_dev_vs_exact": 0.0015594728632987997,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   1.2375787925206763,
+   1.9362768347866919
+  ],
+  "xg_away_80": [
+   1.3030102486527677,
+   2.2006339559606567
+  ],
+  "p_home_80": [
+   0.2534641478063358,
+   0.46243255251041726
+  ],
+  "p_draw_80": [
+   0.2091332598048589,
+   0.26313290565815145
+  ],
+  "p_away_80": [
+   0.2935243463157167,
+   0.5298761924308562
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.17746283757234638,
+   0.19449179305609227
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.2574267722261504,
+   "p_draw": 0.22644831953222083,
+   "p_away": 0.5161249082416288,
+   "xg_home": 1.3601814786786497,
+   "xg_away": 1.986934569552975,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.4818809959868906,
+   "p_draw": 0.23231441346052328,
+   "p_away": 0.2858045905525861,
+   "xg_home": 1.774562622435828,
+   "xg_away": 1.3189987767250162,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.3011170326510575,
+   "p_draw": 0.23268218950128927,
+   "p_away": 0.46620077784765335,
+   "xg_home": 1.5166303204229101,
+   "xg_away": 1.9178820176931144,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.4832416938369637,
+   "p_draw": 0.22060600873606262,
+   "p_away": 0.2961522974269736,
+   "xg_home": 1.9289572439516407,
+   "xg_away": 1.4753041001490228,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.254871031375959,
+   "p_draw": 0.22531684941496033,
+   "p_away": 0.5198121192090807,
+   "xg_home": 1.3577622206438005,
+   "xg_away": 2.0011306612980286,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Liverpool attack vs Fenerbahce defence: rate multiplier \u00d71.65 for the away side.",
+   "effect": 0.5011
+  },
+  {
+   "text": "Context \u2014 Understat xG component (validated, in ensemble): home win -11.0 pp, draw -0.3 pp, away win +11.3 pp (xG -0.20 / +0.33).",
+   "effect": 0.3402
+  },
+  {
+   "text": "Home advantage (Europe, fitted from results): \u00d71.32 on Fenerbahce's scoring rate.",
+   "effect": 0.2754
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.3490197594315546,
+  "p_draw": 0.23790552713670118,
+  "p_away": 0.41307471343174407,
+  "xg_home": 1.5728781844141162,
+  "xg_away": 1.7360749207516326
+ },
+ "context": {
+  "fetched_at": "2026-10-29T13:53:37+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/6106330",
+    "fetched_at": "2026-10-29T13:53:37+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "none",
+    "source": null,
+    "formation": "",
+    "starters": [],
+    "fetched_at": "2026-10-29T13:53:37+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   },
+   "away": {
+    "status": "none",
+    "source": null,
+    "formation": "",
+    "starters": [],
+    "fetched_at": "2026-10-29T13:53:37+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Archie Brown",
+     "type": "suspension",
+     "expected_return": "Late November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6106330",
+     "fetched_at": "2026-10-29T13:53:37+00:00"
+    },
+    {
+     "player": "Nathan Ak\u00e9",
+     "type": "injury",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6106330",
+     "fetched_at": "2026-10-29T13:53:37+00:00"
+    },
+    {
+     "player": "Marco Asensio",
+     "type": "injury",
+     "expected_return": "Early January 2027",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6106330",
+     "fetched_at": "2026-10-29T13:53:37+00:00"
+    },
+    {
+     "player": "Amara Diouf",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6106330",
+     "fetched_at": "2026-10-29T13:53:37+00:00"
+    },
+    {
+     "player": "Jayden Oosterwolde",
+     "type": "injury",
+     "expected_return": "Unknown",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6106330",
+     "fetched_at": "2026-10-29T13:53:37+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "V\u00edctor Mu\u00f1oz",
+     "type": "injury",
+     "expected_return": "Early November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6106330",
+     "fetched_at": "2026-10-29T13:53:37+00:00"
+    },
+    {
+     "player": "Jeremie Frimpong",
+     "type": "injury",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6106330",
+     "fetched_at": "2026-10-29T13:53:37+00:00"
+    },
+    {
+     "player": "Dominik Szoboszlai",
+     "type": "injury",
+     "expected_return": "Early November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6106330",
+     "fetched_at": "2026-10-29T13:53:37+00:00"
+    },
+    {
+     "player": "Hugo Ekitik\u00e9",
+     "type": "injury",
+     "expected_return": "Early January 2027",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6106330",
+     "fetched_at": "2026-10-29T13:53:37+00:00"
+    },
+    {
+     "player": "Conor Bradley",
+     "type": "injury",
+     "expected_return": "Early January 2027",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6106330",
+     "fetched_at": "2026-10-29T13:53:37+00:00"
+    },
+    {
+     "player": "Giovanni Leoni",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6106330",
+     "fetched_at": "2026-10-29T13:53:37+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 9,
+    "n21": 2,
+    "last_match": "2026-10-26"
+   },
+   "away": {
+    "rest_days": 10,
+    "n21": 2,
+    "last_match": "2026-10-25"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 2751.5
+  },
+  "venue": {
+   "name": "Chobani Stadyumu Fenerbah\u00e7e \u015e\u00fckr\u00fc Saraco\u011flu Spor Kompleksi",
+   "city": "\u0130stanbul",
+   "lat": 40.98779878,
+   "lon": 29.03685987
+  },
+  "weather": {
+   "precip_mm_2h": 2.0,
+   "wind_ms": 2.9050000000000002,
+   "temp_c": 15.8,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=40.988&longitude=29.037",
+   "fetched_at": "2026-10-29T13:53:37+00:00",
+   "lat": 40.98779878,
+   "lon": 29.03685987
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": -11.02,
+    "d_p_draw_pp": -0.32,
+    "d_p_away_pp": 11.34,
+    "d_xg_home": -0.201,
+    "d_xg_away": 0.328
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0529,
+    "away_rate_mult": 1.0221,
+    "d_p_home_pp": 1.19,
+    "d_p_draw_pp": -0.47,
+    "d_p_away_pp": -0.72,
+    "d_xg_home": 0.081,
+    "d_xg_away": 0.036,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.045,
+    "away_rate_mult": 1.045,
+    "d_p_home_pp": 0.17,
+    "d_p_draw_pp": -0.63,
+    "d_p_away_pp": 0.45,
+    "d_xg_home": 0.067,
+    "d_xg_away": 0.077,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "reason": "failed validation; no live features"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 9.0,
+   "rest_a": 10.0,
+   "n21_h": 2.0,
+   "n21_a": 2.0,
+   "travel_km": 2751.4782862786997,
+   "neutral": 0.0,
+   "precip_mm_2h": 2.0,
+   "wind_ms": 2.9050000000000002,
+   "temp_c": 15.8
+  }
+ },
+ "confidence": {
+  "tier": "LOW",
+  "p_max": 0.4130747134317441,
+  "entropy_nats": 1.074202131582896,
+  "text": "Most likely result has P = 41.3%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.3% \u00b1 0.4% (n=16754, mean forecast 44.6%). Backtest RPS for UCL: 0.1961; exact-score top-5 hit rate 40.2% (n=503). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: LOW (entropy 1.074 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Fenerbahce: no lineup information.",
+  "Fenerbahce: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.",
+  "Liverpool: no lineup information.",
+  "Liverpool: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+ ],
+ "verdict": "Fenerbahce 1\u20131 Liverpool is the single most probable scoreline at 10.6%: expected goals 1.57\u20131.74 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.047). Exact scores are inherently uncertain; the 1X2 split is 34.9%/23.8%/41.3%.",
+ "resolved": {
+  "home_key": "Turkey:Fenerbahce",
+  "away_key": "England:Liverpool",
+  "div": "UCL",
+  "home_div": "T1",
+  "away_div": "E0",
+  "country": "Europe"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: Liverpool FC at Fenerbah\u00e7e SK\nCompetition: UEFA Champions League 2025\nDate: 2026-11-04 12:45 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-10-28\n\nPRIMARY FINAL SCORE PREDICTION\n\nFenerbah\u00e7e SK 1 \u2013 1 Liverpool FC\n(modal exact score, probability 10.6%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.57\nAway: 1.74\nExpected Total: 3.31\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 34.9%\nDraw: 23.8%\nAway Win: 41.3%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 10.6%\n2. 1\u20132: 8.5%\n3. 2\u20131: 7.8%\n4. 2\u20132: 7.0%\n5. 0\u20131: 5.7%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 14.9%\nTotal 2 goals: 20.6%\nTotal 3 goals: 22.1%\nTotal 4 goals: 18.7%\nTotal 5+ goals: 23.6%\n\nBoth Teams Score: 65.6%\nClean sheet Fenerbah\u00e7e SK: 17.9% \u00b7 Clean sheet Liverpool FC: 20.4%\n\nMATCH INTELLIGENCE\n\n1. Liverpool attack vs Fenerbahce defence: rate multiplier \u00d71.65 for the away side.\n2. Context \u2014 Understat xG component (validated, in ensemble): home win -11.0 pp, draw -0.3 pp, away win +11.3 pp (xG -0.20 / +0.33).\n3. Home advantage (Europe, fitted from results): \u00d71.32 on Fenerbahce's scoring rate.\n\nMODEL CONFIDENCE\n\nMost likely result has P = 41.3%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.3% \u00b1 0.4% (n=16754, mean forecast 44.6%). Backtest RPS for UCL: 0.1961; exact-score top-5 hit rate 40.2% (n=503). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: LOW (entropy 1.074 nats of max 1.099).\nParameter-uncertainty 80% bands: xG Fenerbah\u00e7e SK 1.24\u20131.94, xG Liverpool FC 1.30\u20132.20; P(home win) 25.3%\u201346.2%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0016 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nFenerbahce: NONE, fetched 2026-10-29 09:53 EDT\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\nLiverpool: NONE, fetched 2026-10-29 09:53 EDT\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nKEY ABSENCES\n\n- Fenerbahce: Archie Brown \u2014 suspension, Late November 2026 [FotMob, 2026-10-29 09:53 EDT]\n- Fenerbahce: Nathan Ak\u00e9 \u2014 injury, Mid November 2026 [FotMob, 2026-10-29 09:53 EDT]\n- Fenerbahce: Marco Asensio \u2014 injury, Early January 2027 [FotMob, 2026-10-29 09:53 EDT]\n- Fenerbahce: Amara Diouf \u2014 injury, Doubtful [FotMob, 2026-10-29 09:53 EDT]\n- Fenerbahce: Jayden Oosterwolde \u2014 injury, Unknown [FotMob, 2026-10-29 09:53 EDT]\n- Liverpool: V\u00edctor Mu\u00f1oz \u2014 injury, Early November 2026 [FotMob, 2026-10-29 09:53 EDT]\n- Liverpool: Jeremie Frimpong \u2014 injury, Mid November 2026 [FotMob, 2026-10-29 09:53 EDT]\n- Liverpool: Dominik Szoboszlai \u2014 injury, Early November 2026 [FotMob, 2026-10-29 09:53 EDT]\n- Liverpool: Hugo Ekitik\u00e9 \u2014 injury, Early January 2027 [FotMob, 2026-10-29 09:53 EDT]\n- Liverpool: Conor Bradley \u2014 injury, Early January 2027 [FotMob, 2026-10-29 09:53 EDT]\n- Liverpool: Giovanni Leoni \u2014 injury, Late November 2026 [FotMob, 2026-10-29 09:53 EDT]\n\nWEATHER AT VENUE\n\nChobani Stadyumu Fenerbah\u00e7e \u015e\u00fckr\u00fc Saraco\u011flu Spor Kompleksi, \u0130stanbul: 15.8 \u00b0C, wind 2.9 m/s, precipitation 2.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-10-29 09:53 EDT]\n\nREST & TRAVEL\n\nFenerbahce: 9 days' rest, 2 matches in previous 21 days \u00b7 Liverpool: 10 days' rest, 2 in 21 days \u00b7 away travel 2751.5 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 34.9% / 23.8% / 41.3%, xG 1.57\u20131.74\n- Understat xG component (validated, in ensemble): home -11.02 pp, draw -0.32 pp, away +11.34 pp; xG -0.201 / +0.328\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +1.19 pp, draw -0.47 pp, away -0.72 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.17 pp, draw -0.63 pp, away +0.45 pp\n- lineup: not applied (failed validation; no live features)\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Fenerbahce: no lineup information.\n- Fenerbahce: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n- Liverpool: no lineup information.\n- Liverpool: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nFINAL VERDICT\n\nFenerbahce 1\u20131 Liverpool is the single most probable scoreline at 10.6%: expected goals 1.57\u20131.74 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.047). Exact scores are inherently uncertain; the 1X2 split is 34.9%/23.8%/41.3%.\n",
+ "frozen_at": "2026-10-29T13:53:37+00:00",
+ "sha256": "349edcc0cbcf0c34882ef4f9a6a7e7444d4942ed70e7009d373d4dcf8c3a5bb1"
+}

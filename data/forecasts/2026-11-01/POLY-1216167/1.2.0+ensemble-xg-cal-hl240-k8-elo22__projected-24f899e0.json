@@ -1,0 +1,658 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-10-28",
+ "generated_at": "2026-10-29T13:52:27+00:00",
+ "fixture": {
+  "event_id": "POLY-1216167",
+  "home_name": "Elche CF",
+  "away_name": "Valencia CF",
+  "competition": "La Liga 2025",
+  "subcategory": "lal",
+  "kickoff_utc": "2026-11-01T17:30:00+00:00",
+  "kickoff_local": "2026-11-01 12:30 EST",
+  "home_matched": "Elche",
+  "away_matched": "Valencia",
+  "match_methods": {
+   "home": {
+    "source": "Elche CF",
+    "matched": "Elche",
+    "method": "core-tokens",
+    "score": 0.97
+   },
+   "away": {
+    "source": "Valencia CF",
+    "matched": "Valencia",
+    "method": "alias",
+    "score": 1.0
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.44865661086520703,
+  "p_draw": 0.2753363362929496,
+  "p_away": 0.27600705284184335,
+  "xg_home": 1.505572066818864,
+  "xg_away": 1.138236156723498,
+  "xg_total": 2.643808223542362,
+  "median_total": 2,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.1342473058879238
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.1342473058879238
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.10109787023180705
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.0941555588580047
+   },
+   {
+    "home": 2,
+    "away": 0,
+    "p": 0.07943971801113095
+   },
+   {
+    "home": 0,
+    "away": 1,
+    "p": 0.07460818554135858
+   }
+  ],
+  "btts": 0.5465694497633734,
+  "totals_over": {
+   "over_0.5": 0.9268327432616128,
+   "over_1.5": 0.7511266874884474,
+   "over_2.5": 0.4932546811056273,
+   "over_3.5": 0.2732093453168019,
+   "over_4.5": 0.12536608624315196,
+   "over_5.5": 0.049968176368650176,
+   "over_6.5": 0.017026206127731956
+  },
+  "total_buckets": {
+   "0-1": 0.2488733125115525,
+   "2": 0.25787200638282015,
+   "3": 0.22004533578882535,
+   "4": 0.14784325907364995,
+   "5+": 0.12536608624315196
+  },
+  "clean_sheet_home": 0.3127095270446716,
+  "clean_sheet_away": 0.21388827993034176,
+  "home_goal_dist": [
+   0.21388827993034176,
+   0.3404547164803409,
+   0.2566379158342069,
+   0.12610086899232173,
+   0.04584829463417716,
+   0.013184099305271833,
+   0.0031266447951969014,
+   0.000759180028142787
+  ],
+  "away_goal_dist": [
+   0.3127095270446716,
+   0.37295291817126014,
+   0.21065611108725082,
+   0.07728454021629541,
+   0.0209606775655128,
+   0.004500518913779917,
+   0.0007977816015752821,
+   0.00013792539965401085
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    3
+   ],
+   "away_goals_80": [
+    0,
+    3
+   ],
+   "total_goals_80": [
+    1,
+    5
+   ],
+   "goal_diff_80": [
+    -2,
+    2
+   ]
+  },
+  "score_grid": [
+   [
+    0.073167,
+    0.074608,
+    0.044185,
+    0.016325,
+    0.004447,
+    0.000956,
+    0.00017
+   ],
+   [
+    0.101098,
+    0.134247,
+    0.070244,
+    0.025957,
+    0.007071,
+    0.001521,
+    0.00027
+   ],
+   [
+    0.07944,
+    0.094156,
+    0.056492,
+    0.019766,
+    0.005385,
+    0.001159,
+    0.000206
+   ],
+   [
+    0.03932,
+    0.046607,
+    0.026478,
+    0.010336,
+    0.002667,
+    0.000574,
+    0.000102
+   ],
+   [
+    0.014341,
+    0.016999,
+    0.009658,
+    0.00357,
+    0.001028,
+    0.000209,
+    3.7e-05
+   ],
+   [
+    0.004127,
+    0.004893,
+    0.00278,
+    0.001028,
+    0.00028,
+    6.4e-05,
+    1.1e-05
+   ],
+   [
+    0.000979,
+    0.001161,
+    0.000659,
+    0.000244,
+    6.6e-05,
+    1.4e-05,
+    3e-06
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.45031000000000004,
+  "p_draw": 0.27504999999999996,
+  "p_away": 0.27464,
+  "se": [
+   0.001112499222246919,
+   0.0009984926076341276,
+   0.0009980302360149216
+  ],
+  "max_abs_dev_vs_exact": 0.0016533891347930152,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   1.1627573936765943,
+   1.879290768244824
+  ],
+  "xg_away_80": [
+   0.84736350751768,
+   1.4512045586426154
+  ],
+  "p_home_80": [
+   0.3459549038026626,
+   0.5618790277532983
+  ],
+  "p_draw_80": [
+   0.23288479673263446,
+   0.2982634065304245
+  ],
+  "p_away_80": [
+   0.19363548467131034,
+   0.37374371209012647
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.19034411370512103,
+   0.19966932460731782
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.4836934523721321,
+   "p_draw": 0.2683036665177002,
+   "p_away": 0.2480028811101675,
+   "xg_home": 1.5274390404429101,
+   "xg_away": 1.0231476587247084,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.45264516631107843,
+   "p_draw": 0.26106278068873173,
+   "p_away": 0.2862920530001898,
+   "xg_home": 1.459406820586689,
+   "xg_away": 1.1046246657465515,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.49332908823529587,
+   "p_draw": 0.2589847021020562,
+   "p_away": 0.24768620966264787,
+   "xg_home": 1.652064507028275,
+   "xg_away": 1.1073627327097042,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.45848263072470963,
+   "p_draw": 0.2519052737562372,
+   "p_away": 0.2896120955190531,
+   "xg_home": 1.5460543311068884,
+   "xg_away": 1.1762344731697738,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.444884565882502,
+   "p_draw": 0.2682877502612598,
+   "p_away": 0.28682768385623814,
+   "xg_home": 1.4928229422406862,
+   "xg_away": 1.1513387542823414,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Home advantage (Spain, fitted from results): \u00d71.32 on Elche's scoring rate.",
+   "effect": 0.276
+  },
+  {
+   "text": "Valencia attack vs Elche defence: rate multiplier \u00d70.85 for the away side.",
+   "effect": 0.1626
+  },
+  {
+   "text": "Elche attack vs Valencia defence: time-weighted strength gap multiplies Elche's scoring rate by \u00d70.96 relative to an average pairing (from 34/33 decay-weighted matches).",
+   "effect": 0.0379
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.44865661086520703,
+  "p_draw": 0.2753363362929496,
+  "p_away": 0.27600705284184335,
+  "xg_home": 1.505572066818864,
+  "xg_away": 1.138236156723498
+ },
+ "context": {
+  "fetched_at": "2026-10-29T13:52:27+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5868114",
+    "fetched_at": "2026-10-29T13:52:27+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "3-4-2-1",
+    "starters": [
+     {
+      "name": "Alejandro Iturbe",
+      "pos": "G"
+     },
+     {
+      "name": "Kevin Lom\u00f3naco",
+      "pos": "D"
+     },
+     {
+      "name": "Matia Barzi\u0107",
+      "pos": "D"
+     },
+     {
+      "name": "Pedro Bigas",
+      "pos": "D"
+     },
+     {
+      "name": "Josan",
+      "pos": "M"
+     },
+     {
+      "name": "Martim Neto",
+      "pos": "M"
+     },
+     {
+      "name": "Ali Houary",
+      "pos": "M"
+     },
+     {
+      "name": "Tete Morente",
+      "pos": "M"
+     },
+     {
+      "name": "Adam Boayar",
+      "pos": "M"
+     },
+     {
+      "name": "Grady Diangana",
+      "pos": "M"
+     },
+     {
+      "name": "Ezequiel Ponce",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-10-29T13:52:27+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [
+     "Alejandro Iturbe",
+     "Kevin Lom\u00f3naco",
+     "Adam Boayar"
+    ],
+    "mean_xi_attack_index": 0.108,
+    "mean_continuity": -3.81,
+    "p_backup_gk": 0.815
+   },
+   "away": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "4-4-2",
+    "starters": [
+     {
+      "name": "Stole Dimitrievski",
+      "pos": "G"
+     },
+     {
+      "name": "Pablo Maffeo",
+      "pos": "D"
+     },
+     {
+      "name": "C\u00e9sar T\u00e1rrega",
+      "pos": "D"
+     },
+     {
+      "name": "Justin De Haas",
+      "pos": "D"
+     },
+     {
+      "name": "Jos\u00e9 Gay\u00e0",
+      "pos": "D"
+     },
+     {
+      "name": "David Otorbi",
+      "pos": "M"
+     },
+     {
+      "name": "Guido Rodr\u00edguez",
+      "pos": "M"
+     },
+     {
+      "name": "Pepelu",
+      "pos": "M"
+     },
+     {
+      "name": "Luis Rioja",
+      "pos": "M"
+     },
+     {
+      "name": "Javier Guerra",
+      "pos": "M"
+     },
+     {
+      "name": "Arnaut Danjuma",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-10-29T13:52:27+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [],
+    "mean_xi_attack_index": -0.078,
+    "mean_continuity": 0.572,
+    "p_backup_gk": 0.0
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Pedro Bigas",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868114",
+     "fetched_at": "2026-10-29T13:52:27+00:00"
+    },
+    {
+     "player": "Fer Ni\u00f1o",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868114",
+     "fetched_at": "2026-10-29T13:52:27+00:00"
+    },
+    {
+     "player": "Marc Aguado",
+     "type": "injury",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868114",
+     "fetched_at": "2026-10-29T13:52:27+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "Harvey Elliott",
+     "type": "suspension",
+     "expected_return": "Early November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868114",
+     "fetched_at": "2026-10-29T13:52:27+00:00"
+    },
+    {
+     "player": "David Otorbi",
+     "type": "injury",
+     "expected_return": "Early December 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868114",
+     "fetched_at": "2026-10-29T13:52:27+00:00"
+    },
+    {
+     "player": "Dimitri Foulquier",
+     "type": "injury",
+     "expected_return": "Back in training",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868114",
+     "fetched_at": "2026-10-29T13:52:27+00:00"
+    },
+    {
+     "player": "Jos\u00e9 Copete",
+     "type": "injury",
+     "expected_return": "Back in training",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868114",
+     "fetched_at": "2026-10-29T13:52:27+00:00"
+    },
+    {
+     "player": "Diego L\u00f3pez",
+     "type": "injury",
+     "expected_return": "Mid February 2027",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868114",
+     "fetched_at": "2026-10-29T13:52:27+00:00"
+    },
+    {
+     "player": "Sergi Can\u00f3s",
+     "type": "injury",
+     "expected_return": "Early November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868114",
+     "fetched_at": "2026-10-29T13:52:27+00:00"
+    },
+    {
+     "player": "Umar Sadiq",
+     "type": "injury",
+     "expected_return": "Back in training",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868114",
+     "fetched_at": "2026-10-29T13:52:27+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 8,
+    "n21": 3,
+    "last_match": "2026-10-24"
+   },
+   "away": {
+    "rest_days": 8,
+    "n21": 3,
+    "last_match": "2026-10-24"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 136.8
+  },
+  "venue": {
+   "name": "Estadio Manuel Mart\u00ednez Valero",
+   "city": "Elche",
+   "lat": 38.267129205,
+   "lon": -0.663299561
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 1.2149999999999999,
+   "temp_c": 21.6,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=38.267&longitude=-0.663",
+   "fetched_at": "2026-10-29T13:52:27+00:00",
+   "lat": 38.267129205,
+   "lon": -0.663299561
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": -0.59,
+    "d_p_draw_pp": 0.37,
+    "d_p_away_pp": 0.22,
+    "d_xg_home": 0.014,
+    "d_xg_away": 0.029
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0134,
+    "away_rate_mult": 1.0056,
+    "d_p_home_pp": 0.36,
+    "d_p_draw_pp": -0.19,
+    "d_p_away_pp": -0.17,
+    "d_xg_home": 0.019,
+    "d_xg_away": 0.006,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "home_rate_mult": 0.9268,
+    "away_rate_mult": 1.0897,
+    "d_p_home_pp": -4.97,
+    "d_p_draw_pp": 0.5,
+    "d_p_away_pp": 4.47,
+    "d_xg_home": -0.105,
+    "d_xg_away": 0.098,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 8.0,
+   "rest_a": 8.0,
+   "n21_h": 3.0,
+   "n21_a": 3.0,
+   "travel_km": 136.8369459070921,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 1.2149999999999999,
+   "temp_c": 21.6
+  }
+ },
+ "confidence": {
+  "tier": "LOW",
+  "p_max": 0.44865661086520703,
+  "entropy_nats": 1.0700272961014334,
+  "text": "Most likely result has P = 44.9%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.3% \u00b1 0.4% (n=16754, mean forecast 44.6%). Backtest RPS for SP1: 0.1930; exact-score top-5 hit rate 55.1% (n=1239). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: LOW (entropy 1.070 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Elche: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Elche: no Understat history for Alejandro Iturbe, Kevin Lom\u00f3naco, Adam Boayar \u2014 rated at the positional prior.",
+  "Valencia: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior)."
+ ],
+ "verdict": "Elche 1\u20131 Valencia is the single most probable scoreline at 13.4%: expected goals 1.51\u20131.14 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.047). Exact scores are inherently uncertain; the 1X2 split is 44.9%/27.5%/27.6%.",
+ "resolved": {
+  "home_key": "Spain:Elche",
+  "away_key": "Spain:Valencia",
+  "div": "SP1",
+  "home_div": "SP1",
+  "away_div": "SP1",
+  "country": "Spain"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: Valencia CF at Elche CF\nCompetition: La Liga 2025\nDate: 2026-11-01 12:30 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-10-28\n\nPRIMARY FINAL SCORE PREDICTION\n\nElche CF 1 \u2013 1 Valencia CF\n(modal exact score, probability 13.4%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.51\nAway: 1.14\nExpected Total: 2.64\nMedian Total: 2\n\nRESULT PROBABILITIES\n\nHome Win: 44.9%\nDraw: 27.5%\nAway Win: 27.6%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 13.4%\n2. 1\u20130: 10.1%\n3. 2\u20131: 9.4%\n4. 2\u20130: 7.9%\n5. 0\u20131: 7.5%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 24.9%\nTotal 2 goals: 25.8%\nTotal 3 goals: 22.0%\nTotal 4 goals: 14.8%\nTotal 5+ goals: 12.5%\n\nBoth Teams Score: 54.7%\nClean sheet Elche CF: 31.3% \u00b7 Clean sheet Valencia CF: 21.4%\n\nMATCH INTELLIGENCE\n\n1. Home advantage (Spain, fitted from results): \u00d71.32 on Elche's scoring rate.\n2. Valencia attack vs Elche defence: rate multiplier \u00d70.85 for the away side.\n3. Elche attack vs Valencia defence: time-weighted strength gap multiplies Elche's scoring rate by \u00d70.96 relative to an average pairing (from 34/33 decay-weighted matches).\n\nMODEL CONFIDENCE\n\nMost likely result has P = 44.9%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.3% \u00b1 0.4% (n=16754, mean forecast 44.6%). Backtest RPS for SP1: 0.1930; exact-score top-5 hit rate 55.1% (n=1239). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: LOW (entropy 1.070 nats of max 1.099).\nParameter-uncertainty 80% bands: xG Elche CF 1.16\u20131.88, xG Valencia CF 0.85\u20131.45; P(home win) 34.6%\u201356.2%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0017 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nElche: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-10-29 09:52 EDT (3-4-2-1)\n  Alejandro Iturbe (G), Kevin Lom\u00f3naco (D), Matia Barzi\u0107 (D), Pedro Bigas (D), Josan (M), Martim Neto (M), Ali Houary (M), Tete Morente (M), Adam Boayar (M), Grady Diangana (M), Ezequiel Ponce (F)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs +0.108 (log) \u00b7 continuity -3.81 \u00b7 P(backup GK) 82%\nValencia: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-10-29 09:52 EDT (4-4-2)\n  Stole Dimitrievski (G), Pablo Maffeo (D), C\u00e9sar T\u00e1rrega (D), Justin De Haas (D), Jos\u00e9 Gay\u00e0 (D), David Otorbi (M), Guido Rodr\u00edguez (M), Pepelu (M), Luis Rioja (M), Javier Guerra (M), Arnaut Danjuma (F)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs -0.078 (log) \u00b7 continuity +0.57 \u00b7 P(backup GK) 0%\n\nKEY ABSENCES\n\n- Elche: Pedro Bigas \u2014 injury, Doubtful [FotMob, 2026-10-29 09:52 EDT]\n- Elche: Fer Ni\u00f1o \u2014 injury, Doubtful [FotMob, 2026-10-29 09:52 EDT]\n- Elche: Marc Aguado \u2014 injury, Mid November 2026 [FotMob, 2026-10-29 09:52 EDT]\n- Valencia: Harvey Elliott \u2014 suspension, Early November 2026 [FotMob, 2026-10-29 09:52 EDT]\n- Valencia: David Otorbi \u2014 injury, Early December 2026 [FotMob, 2026-10-29 09:52 EDT]\n- Valencia: Dimitri Foulquier \u2014 injury, Back in training [FotMob, 2026-10-29 09:52 EDT]\n- Valencia: Jos\u00e9 Copete \u2014 injury, Back in training [FotMob, 2026-10-29 09:52 EDT]\n- Valencia: Diego L\u00f3pez \u2014 injury, Mid February 2027 [FotMob, 2026-10-29 09:52 EDT]\n- Valencia: Sergi Can\u00f3s \u2014 injury, Early November 2026 [FotMob, 2026-10-29 09:52 EDT]\n- Valencia: Umar Sadiq \u2014 injury, Back in training [FotMob, 2026-10-29 09:52 EDT]\n\nWEATHER AT VENUE\n\nEstadio Manuel Mart\u00ednez Valero, Elche: 21.6 \u00b0C, wind 1.2 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-10-29 09:52 EDT]\n\nREST & TRAVEL\n\nElche: 8 days' rest, 3 matches in previous 21 days \u00b7 Valencia: 8 days' rest, 3 in 21 days \u00b7 away travel 136.8 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 44.9% / 27.5% / 27.6%, xG 1.51\u20131.14\n- Understat xG component (validated, in ensemble): home -0.59 pp, draw +0.37 pp, away +0.22 pp; xG +0.014 / +0.029\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.36 pp, draw -0.19 pp, away -0.17 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- lineup: NOT APPLIED (failed out-of-sample validation); would have moved home -4.97 pp, draw +0.50 pp, away +4.47 pp\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Elche: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Elche: no Understat history for Alejandro Iturbe, Kevin Lom\u00f3naco, Adam Boayar \u2014 rated at the positional prior.\n- Valencia: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n\nFINAL VERDICT\n\nElche 1\u20131 Valencia is the single most probable scoreline at 13.4%: expected goals 1.51\u20131.14 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.047). Exact scores are inherently uncertain; the 1X2 split is 44.9%/27.5%/27.6%.\n",
+ "frozen_at": "2026-10-29T13:52:27+00:00",
+ "sha256": "9e5c8b020a345d790d5d1d023b1ae30d6a48558cfec6584947dbf7020fca1a79"
+}

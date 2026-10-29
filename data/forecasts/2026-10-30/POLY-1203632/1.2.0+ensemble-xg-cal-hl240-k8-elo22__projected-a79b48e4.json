@@ -1,0 +1,650 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-10-28",
+ "generated_at": "2026-10-29T13:51:16+00:00",
+ "fixture": {
+  "event_id": "POLY-1203632",
+  "home_name": "Villarreal CF",
+  "away_name": "RCD Espanyol de Barcelona",
+  "competition": "La Liga 2025",
+  "subcategory": "lal",
+  "kickoff_utc": "2026-10-30T20:00:00+00:00",
+  "kickoff_local": "2026-10-30 16:00 EDT",
+  "home_matched": "Villarreal",
+  "away_matched": "Barcelona",
+  "match_methods": {
+   "home": {
+    "source": "Villarreal CF",
+    "matched": "Villarreal",
+    "method": "alias",
+    "score": 1.0
+   },
+   "away": {
+    "source": "RCD Espanyol de Barcelona",
+    "matched": "Barcelona",
+    "method": "token-subset",
+    "score": 0.9
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.24127400732822307,
+  "p_draw": 0.2292037173580638,
+  "p_away": 0.5295222753137132,
+  "xg_home": 1.396326156891851,
+  "xg_away": 2.0835004002046746,
+  "xg_total": 3.4798265570965254,
+  "median_total": 3,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.09516007821885107
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.09516007821885107
+   },
+   {
+    "home": 1,
+    "away": 2,
+    "p": 0.09005707121374783
+   },
+   {
+    "home": 0,
+    "away": 1,
+    "p": 0.06933287395536736
+   },
+   {
+    "home": 0,
+    "away": 2,
+    "p": 0.06924428853954473
+   },
+   {
+    "home": 2,
+    "away": 2,
+    "p": 0.06488486521139664
+   }
+  ],
+  "btts": 0.6571330980520234,
+  "totals_over": {
+   "over_0.5": 0.9599924039105501,
+   "over_1.5": 0.8499301148957474,
+   "over_2.5": 0.6592796296181781,
+   "over_3.5": 0.4554786515845904,
+   "over_4.5": 0.27649961486530067,
+   "over_5.5": 0.1514590115296032,
+   "over_6.5": 0.07383389223491182
+  },
+  "total_buckets": {
+   "0-1": 0.1500698851042527,
+   "2": 0.19065048527756934,
+   "3": 0.20380097803358777,
+   "4": 0.1789790367192897,
+   "5+": 0.27649961486530067
+  },
+  "clean_sheet_home": 0.12418783423259953,
+  "clean_sheet_away": 0.2586866638048272,
+  "home_goal_dist": [
+   0.2586866638048272,
+   0.3391549558113096,
+   0.2316228433353591,
+   0.11122933475870864,
+   0.04188905287331268,
+   0.013016122199904686,
+   0.0034311852616697603,
+   0.0009698419549083963
+  ],
+  "away_goal_dist": [
+   0.12418783423259953,
+   0.2616766547689208,
+   0.26958750905862255,
+   0.18582438011674834,
+   0.09707558822009367,
+   0.041026820570168994,
+   0.014585487615003489,
+   0.006035725417842619
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    3
+   ],
+   "away_goals_80": [
+    0,
+    4
+   ],
+   "total_goals_80": [
+    1,
+    6
+   ],
+   "goal_diff_80": [
+    -3,
+    2
+   ]
+  },
+  "score_grid": [
+   [
+    0.040008,
+    0.069333,
+    0.069244,
+    0.044978,
+    0.022133,
+    0.008836,
+    0.002985
+   ],
+   [
+    0.040729,
+    0.09516,
+    0.090057,
+    0.061515,
+    0.031803,
+    0.013296,
+    0.004679
+   ],
+   [
+    0.026246,
+    0.057224,
+    0.064885,
+    0.043975,
+    0.023713,
+    0.010279,
+    0.003728
+   ],
+   [
+    0.011541,
+    0.026383,
+    0.029568,
+    0.023207,
+    0.012223,
+    0.005434,
+    0.00201
+   ],
+   [
+    0.004064,
+    0.009653,
+    0.011174,
+    0.008524,
+    0.005113,
+    0.002187,
+    0.000819
+   ],
+   [
+    0.001206,
+    0.002943,
+    0.003481,
+    0.002701,
+    0.001554,
+    0.000748,
+    0.000267
+   ],
+   [
+    0.000308,
+    0.000766,
+    0.000919,
+    0.00072,
+    0.000417,
+    0.000191,
+    7.7e-05
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.243425,
+  "p_draw": 0.22855,
+  "p_away": 0.5280250000000001,
+  "se": [
+   0.0009596073920489567,
+   0.0009389219815831344,
+   0.0011162763980641175
+  ],
+  "max_abs_dev_vs_exact": 0.00215099267177693,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   1.0940638792182138,
+   1.7243522273634182
+  ],
+  "xg_away_80": [
+   1.6510405512828097,
+   2.538011989046099
+  ],
+  "p_home_80": [
+   0.17688662821555623,
+   0.3472157775628232
+  ],
+  "p_draw_80": [
+   0.18690575794562433,
+   0.24627750058839898
+  ],
+  "p_away_80": [
+   0.4125555710090441,
+   0.6324318317620904
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.1803738125695485,
+   0.15957209756452537
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.2563903270060605,
+   "p_draw": 0.2053917720595551,
+   "p_away": 0.5382179009343843,
+   "xg_home": 1.5725400039335156,
+   "xg_away": 2.305269260379014,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.21123898803043795,
+   "p_draw": 0.24276949551134203,
+   "p_away": 0.5459915164582199,
+   "xg_home": 0.9399160266160227,
+   "xg_away": 1.672206255394729,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.22040833716248331,
+   "p_draw": 0.2000463462521148,
+   "p_away": 0.5795453165854019,
+   "xg_home": 1.4630893636793163,
+   "xg_away": 2.4066955102483156,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.45848263072470963,
+   "p_draw": 0.2519052737562372,
+   "p_away": 0.2896120955190531,
+   "xg_home": 1.5460543311068884,
+   "xg_away": 1.1762344731697738,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.28194411316793877,
+   "p_draw": 0.20488166127728347,
+   "p_away": 0.5131742255547778,
+   "xg_home": 1.707699957417784,
+   "xg_away": 2.3156754945157103,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Barcelona attack vs Villarreal defence: rate multiplier \u00d71.92 for the away side.",
+   "effect": 0.6498
+  },
+  {
+   "text": "Independent results-only Elo: Villarreal 1658 vs Barcelona 1931 (gap -274 before home advantage).",
+   "effect": 0.4109
+  },
+  {
+   "text": "Home advantage (Spain, fitted from results): \u00d71.32 on Villarreal's scoring rate.",
+   "effect": 0.276
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.24127400732822307,
+  "p_draw": 0.2292037173580638,
+  "p_away": 0.5295222753137132,
+  "xg_home": 1.396326156891851,
+  "xg_away": 2.0835004002046746
+ },
+ "context": {
+  "fetched_at": "2026-10-29T13:51:16+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5868120",
+    "fetched_at": "2026-10-29T13:51:16+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "projected",
+    "source": "FotMob projected XI (enetpulse)",
+    "formation": "4-4-2",
+    "starters": [
+     {
+      "name": "P\u00e9ter Gul\u00e1csi",
+      "pos": "G"
+     },
+     {
+      "name": "Santiago Mouri\u00f1o",
+      "pos": "D"
+     },
+     {
+      "name": "Juan Foyth",
+      "pos": "D"
+     },
+     {
+      "name": "Renato Veiga",
+      "pos": "D"
+     },
+     {
+      "name": "Sergi Cardona",
+      "pos": "D"
+     },
+     {
+      "name": "Tajon Buchanan",
+      "pos": "M"
+     },
+     {
+      "name": "Carlos Maci\u00e1",
+      "pos": "M"
+     },
+     {
+      "name": "Santi Comesa\u00f1a",
+      "pos": "M"
+     },
+     {
+      "name": "Alberto Moleiro",
+      "pos": "M"
+     },
+     {
+      "name": "Gerard Moreno",
+      "pos": "F"
+     },
+     {
+      "name": "Ayoze P\u00e9rez",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-10-29T13:51:16+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [],
+    "mean_xi_attack_index": 0.12,
+    "mean_continuity": 0.18,
+    "p_backup_gk": 0.16
+   },
+   "away": {
+    "status": "projected",
+    "source": "FotMob projected XI (enetpulse)",
+    "formation": "4-4-2",
+    "starters": [
+     {
+      "name": "\u00c1ngel Fortuno",
+      "pos": "G"
+     },
+     {
+      "name": "Omar El Hilali",
+      "pos": "D"
+     },
+     {
+      "name": "Unai N\u00fa\u00f1ez",
+      "pos": "D"
+     },
+     {
+      "name": "Leandro Cabrera",
+      "pos": "D"
+     },
+     {
+      "name": "Quilindschy Hartman",
+      "pos": "D"
+     },
+     {
+      "name": "Javi Hern\u00e1ndez",
+      "pos": "M"
+     },
+     {
+      "name": "Edu Exp\u00f3sito",
+      "pos": "M"
+     },
+     {
+      "name": "Pol Lozano",
+      "pos": "M"
+     },
+     {
+      "name": "Bryan Zaragoza",
+      "pos": "F"
+     },
+     {
+      "name": "Roberto Fern\u00e1ndez",
+      "pos": "F"
+     },
+     {
+      "name": "\u00c1lex Calatrava",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-10-29T13:51:16+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [
+     "\u00c1ngel Fortuno",
+     "Omar El Hilali",
+     "Unai N\u00fa\u00f1ez",
+     "Leandro Cabrera",
+     "Quilindschy Hartman",
+     "Javi Hern\u00e1ndez",
+     "Edu Exp\u00f3sito",
+     "Pol Lozano",
+     "Bryan Zaragoza",
+     "Roberto Fern\u00e1ndez",
+     "\u00c1lex Calatrava"
+    ],
+    "mean_xi_attack_index": -0.525,
+    "mean_continuity": -3.991,
+    "p_backup_gk": 0.925
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Carlos Romero",
+     "type": "injury",
+     "expected_return": "About 1-2 weeks",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868120",
+     "fetched_at": "2026-10-29T13:51:16+00:00"
+    },
+    {
+     "player": "Nathan Saliba",
+     "type": "injury",
+     "expected_return": "Early November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868120",
+     "fetched_at": "2026-10-29T13:51:16+00:00"
+    },
+    {
+     "player": "Nicolas P\u00e9p\u00e9",
+     "type": "injury",
+     "expected_return": "Unknown",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868120",
+     "fetched_at": "2026-10-29T13:51:16+00:00"
+    },
+    {
+     "player": "Pape Gueye",
+     "type": "suspension",
+     "expected_return": "Late October 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868120",
+     "fetched_at": "2026-10-29T13:51:16+00:00"
+    },
+    {
+     "player": "Ilias Akhomach",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868120",
+     "fetched_at": "2026-10-29T13:51:16+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "Eder Sarabia",
+     "type": "suspension",
+     "expected_return": "Early November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868120",
+     "fetched_at": "2026-10-29T13:51:16+00:00"
+    },
+    {
+     "player": "Jofre Carreras",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868120",
+     "fetched_at": "2026-10-29T13:51:16+00:00"
+    },
+    {
+     "player": "Kike Garc\u00eda",
+     "type": "injury",
+     "expected_return": "Unknown",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868120",
+     "fetched_at": "2026-10-29T13:51:16+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 6,
+    "n21": 3,
+    "last_match": "2026-10-24"
+   },
+   "away": {
+    "rest_days": 5,
+    "n21": 3,
+    "last_match": "2026-10-25"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 246.5
+  },
+  "venue": {
+   "name": "Estadio de la Cer\u00e1mica",
+   "city": "Villarreal",
+   "lat": 39.944119181,
+   "lon": -0.103474259
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 1.15,
+   "temp_c": 17.8,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=39.944&longitude=-0.103",
+   "fetched_at": "2026-10-29T13:51:16+00:00",
+   "lat": 39.944119181,
+   "lon": -0.103474259
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": 3.47,
+    "d_p_draw_pp": -1.75,
+    "d_p_away_pp": -1.72,
+    "d_xg_home": 0.382,
+    "d_xg_away": 0.318
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0193,
+    "away_rate_mult": 1.0081,
+    "d_p_home_pp": 0.35,
+    "d_p_draw_pp": -0.13,
+    "d_p_away_pp": -0.22,
+    "d_xg_home": 0.03,
+    "d_xg_away": 0.02,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "home_rate_mult": 1.1471,
+    "away_rate_mult": 0.785,
+    "d_p_home_pp": 11.29,
+    "d_p_draw_pp": 2.52,
+    "d_p_away_pp": -13.81,
+    "d_xg_home": 0.187,
+    "d_xg_away": -0.433,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 6.0,
+   "rest_a": 5.0,
+   "n21_h": 3.0,
+   "n21_a": 3.0,
+   "travel_km": 246.5328977122867,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 1.15,
+   "temp_c": 17.8
+  }
+ },
+ "confidence": {
+  "tier": "MODERATE",
+  "p_max": 0.5295222753137132,
+  "entropy_nats": 1.0173584942207003,
+  "text": "Most likely result has P = 53.0%. In the out-of-sample backtest, favourites priced 0.50\u20130.60 won 53.9% \u00b1 0.5% (n=9522, mean forecast 54.4%). Backtest RPS for SP1: 0.1930; exact-score top-5 hit rate 55.1% (n=1239). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: MODERATE (entropy 1.017 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Villarreal: lineup is PROJECTED (FotMob projected XI (enetpulse)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Barcelona: lineup is PROJECTED (FotMob projected XI (enetpulse)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Barcelona: no Understat history for \u00c1ngel Fortuno, Omar El Hilali, Unai N\u00fa\u00f1ez, Leandro Cabrera, Quilindschy Hartman, Javi Hern\u00e1ndez, Edu Exp\u00f3sito, Pol Lozano, Bryan Zaragoza, Roberto Fern\u00e1ndez, \u00c1lex Calatrava \u2014 rated at the positional prior."
+ ],
+ "verdict": "Villarreal 1\u20131 Barcelona is the single most probable scoreline at 9.5%: expected goals 1.40\u20132.08 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.047). Exact scores are inherently uncertain; the 1X2 split is 24.1%/22.9%/53.0%.",
+ "resolved": {
+  "home_key": "Spain:Villarreal",
+  "away_key": "Spain:Barcelona",
+  "div": "SP1",
+  "home_div": "SP1",
+  "away_div": "SP1",
+  "country": "Spain"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: RCD Espanyol de Barcelona at Villarreal CF\nCompetition: La Liga 2025\nDate: 2026-10-30 16:00 EDT\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-10-28\n\nPRIMARY FINAL SCORE PREDICTION\n\nVillarreal CF 1 \u2013 1 RCD Espanyol de Barcelona\n(modal exact score, probability 9.5%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.40\nAway: 2.08\nExpected Total: 3.48\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 24.1%\nDraw: 22.9%\nAway Win: 53.0%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 9.5%\n2. 1\u20132: 9.0%\n3. 0\u20131: 6.9%\n4. 0\u20132: 6.9%\n5. 2\u20132: 6.5%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 15.0%\nTotal 2 goals: 19.1%\nTotal 3 goals: 20.4%\nTotal 4 goals: 17.9%\nTotal 5+ goals: 27.6%\n\nBoth Teams Score: 65.7%\nClean sheet Villarreal CF: 12.4% \u00b7 Clean sheet RCD Espanyol de Barcelona: 25.9%\n\nMATCH INTELLIGENCE\n\n1. Barcelona attack vs Villarreal defence: rate multiplier \u00d71.92 for the away side.\n2. Independent results-only Elo: Villarreal 1658 vs Barcelona 1931 (gap -274 before home advantage).\n3. Home advantage (Spain, fitted from results): \u00d71.32 on Villarreal's scoring rate.\n\nMODEL CONFIDENCE\n\nMost likely result has P = 53.0%. In the out-of-sample backtest, favourites priced 0.50\u20130.60 won 53.9% \u00b1 0.5% (n=9522, mean forecast 54.4%). Backtest RPS for SP1: 0.1930; exact-score top-5 hit rate 55.1% (n=1239). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: MODERATE (entropy 1.017 nats of max 1.099).\nParameter-uncertainty 80% bands: xG Villarreal CF 1.09\u20131.72, xG RCD Espanyol de Barcelona 1.65\u20132.54; P(home win) 17.7%\u201334.7%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0022 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nVillarreal: PROJECTED \u2014 FotMob projected XI (enetpulse), fetched 2026-10-29 09:51 EDT (4-4-2)\n  P\u00e9ter Gul\u00e1csi (G), Santiago Mouri\u00f1o (D), Juan Foyth (D), Renato Veiga (D), Sergi Cardona (D), Tajon Buchanan (M), Carlos Maci\u00e1 (M), Santi Comesa\u00f1a (M), Alberto Moleiro (M), Gerard Moreno (F), Ayoze P\u00e9rez (F)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs +0.120 (log) \u00b7 continuity +0.18 \u00b7 P(backup GK) 16%\nBarcelona: PROJECTED \u2014 FotMob projected XI (enetpulse), fetched 2026-10-29 09:51 EDT (4-4-2)\n  \u00c1ngel Fortuno (G), Omar El Hilali (D), Unai N\u00fa\u00f1ez (D), Leandro Cabrera (D), Quilindschy Hartman (D), Javi Hern\u00e1ndez (M), Edu Exp\u00f3sito (M), Pol Lozano (M), Bryan Zaragoza (F), Roberto Fern\u00e1ndez (F), \u00c1lex Calatrava (F)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs -0.525 (log) \u00b7 continuity -3.99 \u00b7 P(backup GK) 92%\n\nKEY ABSENCES\n\n- Villarreal: Carlos Romero \u2014 injury, About 1-2 weeks [FotMob, 2026-10-29 09:51 EDT]\n- Villarreal: Nathan Saliba \u2014 injury, Early November 2026 [FotMob, 2026-10-29 09:51 EDT]\n- Villarreal: Nicolas P\u00e9p\u00e9 \u2014 injury, Unknown [FotMob, 2026-10-29 09:51 EDT]\n- Villarreal: Pape Gueye \u2014 suspension, Late October 2026 [FotMob, 2026-10-29 09:51 EDT]\n- Villarreal: Ilias Akhomach \u2014 injury, Doubtful [FotMob, 2026-10-29 09:51 EDT]\n- Barcelona: Eder Sarabia \u2014 suspension, Early November 2026 [FotMob, 2026-10-29 09:51 EDT]\n- Barcelona: Jofre Carreras \u2014 injury, Doubtful [FotMob, 2026-10-29 09:51 EDT]\n- Barcelona: Kike Garc\u00eda \u2014 injury, Unknown [FotMob, 2026-10-29 09:51 EDT]\n\nWEATHER AT VENUE\n\nEstadio de la Cer\u00e1mica, Villarreal: 17.8 \u00b0C, wind 1.1 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-10-29 09:51 EDT]\n\nREST & TRAVEL\n\nVillarreal: 6 days' rest, 3 matches in previous 21 days \u00b7 Barcelona: 5 days' rest, 3 in 21 days \u00b7 away travel 246.5 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 24.1% / 22.9% / 53.0%, xG 1.40\u20132.08\n- Understat xG component (validated, in ensemble): home +3.47 pp, draw -1.75 pp, away -1.72 pp; xG +0.382 / +0.318\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.35 pp, draw -0.13 pp, away -0.22 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- lineup: NOT APPLIED (failed out-of-sample validation); would have moved home +11.29 pp, draw +2.52 pp, away -13.81 pp\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Villarreal: lineup is PROJECTED (FotMob projected XI (enetpulse)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Barcelona: lineup is PROJECTED (FotMob projected XI (enetpulse)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Barcelona: no Understat history for \u00c1ngel Fortuno, Omar El Hilali, Unai N\u00fa\u00f1ez, Leandro Cabrera, Quilindschy Hartman, Javi Hern\u00e1ndez, Edu Exp\u00f3sito, Pol Lozano, Bryan Zaragoza, Roberto Fern\u00e1ndez, \u00c1lex Calatrava \u2014 rated at the positional prior.\n\nFINAL VERDICT\n\nVillarreal 1\u20131 Barcelona is the single most probable scoreline at 9.5%: expected goals 1.40\u20132.08 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.047). Exact scores are inherently uncertain; the 1X2 split is 24.1%/22.9%/53.0%.\n",
+ "frozen_at": "2026-10-29T13:51:16+00:00",
+ "sha256": "c1437b7eda13eb0e32e5f44400ecf2361b99f59d77fe926a14d14a30ef09af77"
+}

@@ -33,6 +33,10 @@ Calibration is good overall; the model is slightly *under*-confident on strong f
 (P ≥ 0.60: predicted 67.8%, observed 70.6%) and slightly under-predicts total goals in several leagues —
 see the weakness analysis in the backtest report.
 
+### Calibration layer (v1.2.0)
+
+On top of the ensemble, `oraclefc/calibrate.py` reshapes each score matrix as Q ∝ P^(1+t)·exp(dh·h + da·a + dd·1[draw] + d0·1[0-0]), fitted by maximum likelihood on walk-forward **out-of-sample** matrices and **results only** (`python -m oraclefc.run_calibration`, weekly in the backtest workflow; season-ahead nested in the backtest). Adopted variant `global+sharpen`: about +4.7% home and away goals, a small draw lift (+5.6% relative) and slight sharpening (t = 0.06). Over 2023-07-01 → 2026-10-28 (n = 40,603): ΔRPS −0.00008 [−0.00014, −0.00002], Δ1X2 log loss −0.00058 [−0.00082, −0.00033], Δexact-score log score −0.00106 [−0.00156, −0.00052]. Why it was needed: the base ensemble **over-stated unders and BTTS-No by 1–3 pp** in exactly the probability bands the best-bet rule trades, and slightly under-stated draws. Per-division variants overfit and were rejected. See [docs/CALIBRATION.md](docs/CALIBRATION.md).
+
 ## Best Bets (post-hoc, after freezing)
 
 For every game the Edge layer (`oraclefc/market/best_bet.py`, mirrored in `web/bestbet.js`) prices every **buyable** Jupiter side we can model from the frozen score grid — 1X2 (YES and NO), BTTS, match totals, team totals, spreads, exact score — and picks **one** best bet:

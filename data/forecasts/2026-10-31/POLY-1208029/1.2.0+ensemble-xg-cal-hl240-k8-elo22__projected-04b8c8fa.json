@@ -1,0 +1,645 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-10-28",
+ "generated_at": "2026-10-29T13:51:49+00:00",
+ "fixture": {
+  "event_id": "POLY-1208029",
+  "home_name": "Udinese Calcio",
+  "away_name": "AS Roma",
+  "competition": "Serie A 2025",
+  "subcategory": "sea",
+  "kickoff_utc": "2026-10-31T17:00:00+00:00",
+  "kickoff_local": "2026-10-31 13:00 EDT",
+  "home_matched": "Udinese",
+  "away_matched": "Roma",
+  "match_methods": {
+   "home": {
+    "source": "Udinese Calcio",
+    "matched": "Udinese",
+    "method": "core-tokens",
+    "score": 0.97
+   },
+   "away": {
+    "source": "AS Roma",
+    "matched": "Roma",
+    "method": "alias",
+    "score": 1.0
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.17822358227723134,
+  "p_draw": 0.23847732123181914,
+  "p_away": 0.5832990964909496,
+  "xg_home": 0.9554067329895656,
+  "xg_away": 1.8680222390806114,
+  "xg_total": 2.823428972070177,
+  "median_total": 3,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.11535701139286644
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.11535701139286644
+   },
+   {
+    "home": 0,
+    "away": 1,
+    "p": 0.10646122454389945
+   },
+   {
+    "home": 0,
+    "away": 2,
+    "p": 0.10386852038368195
+   },
+   {
+    "home": 1,
+    "away": 2,
+    "p": 0.1013132730235148
+   },
+   {
+    "home": 0,
+    "away": 3,
+    "p": 0.0642320703152916
+   }
+  ],
+  "btts": 0.5341026014538776,
+  "totals_over": {
+   "over_0.5": 0.9385401357950474,
+   "over_1.5": 0.7813377964476776,
+   "over_2.5": 0.5369470737715061,
+   "over_3.5": 0.3134104639752922,
+   "over_4.5": 0.15319995303121,
+   "over_5.5": 0.06516298187182254,
+   "over_6.5": 0.02391234722811674
+  },
+  "total_buckets": {
+   "0-1": 0.21866220355232233,
+   "2": 0.24439072267617165,
+   "3": 0.22353660979621376,
+   "4": 0.16021051094408223,
+   "5+": 0.15319995303121
+  },
+  "clean_sheet_home": 0.14737921082921418,
+  "clean_sheet_away": 0.379978051921861,
+  "home_goal_dist": [
+   0.379978051921861,
+   0.37343844323472825,
+   0.17644930894558575,
+   0.05470794527967966,
+   0.01266350477229173,
+   0.0023458580682216104,
+   0.0003625865681401021,
+   5.4301209491938466e-05
+  ],
+  "away_goal_dist": [
+   0.14737921082921418,
+   0.29202734747002035,
+   0.2750568241805552,
+   0.16941886934355108,
+   0.07727588646295355,
+   0.02788005532297664,
+   0.008297822556730705,
+   0.0026639838339983187
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    2
+   ],
+   "away_goals_80": [
+    0,
+    4
+   ],
+   "total_goals_80": [
+    1,
+    5
+   ],
+   "goal_diff_80": [
+    -3,
+    1
+   ]
+  },
+  "score_grid": [
+   [
+    0.06146,
+    0.106461,
+    0.103869,
+    0.064232,
+    0.029285,
+    0.010542,
+    0.003129
+   ],
+   [
+    0.050741,
+    0.115357,
+    0.101313,
+    0.062837,
+    0.028734,
+    0.010375,
+    0.003089
+   ],
+   [
+    0.025165,
+    0.050182,
+    0.050668,
+    0.029838,
+    0.013684,
+    0.004955,
+    0.00148
+   ],
+   [
+    0.00781,
+    0.015612,
+    0.014963,
+    0.009857,
+    0.004292,
+    0.001558,
+    0.000467
+   ],
+   [
+    0.001809,
+    0.003625,
+    0.003482,
+    0.002177,
+    0.00106,
+    0.000365,
+    0.00011
+   ],
+   [
+    0.000335,
+    0.000672,
+    0.000647,
+    0.000405,
+    0.000187,
+    7.2e-05,
+    2.1e-05
+   ],
+   [
+    5.2e-05,
+    0.000104,
+    0.0001,
+    6.3e-05,
+    2.9e-05,
+    1.1e-05,
+    3e-06
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.17799500000000001,
+  "p_draw": 0.23840499999999998,
+  "p_away": 0.5836,
+  "se": [
+   0.0008553150880669649,
+   0.0009528065280396645,
+   0.0011022954231965222
+  ],
+  "max_abs_dev_vs_exact": 0.00030090350905043195,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   0.7079202416038592,
+   1.228651245487008
+  ],
+  "xg_away_80": [
+   1.4266285137466748,
+   2.3384588829618638
+  ],
+  "p_home_80": [
+   0.12097657569031972,
+   0.27081594648739293
+  ],
+  "p_draw_80": [
+   0.18663741573548775,
+   0.2766798784646999
+  ],
+  "p_away_80": [
+   0.45611812872361784,
+   0.6856301725680384
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.21858871895888693,
+   0.18339897513662412
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.18249260697304925,
+   "p_draw": 0.24128093890794586,
+   "p_away": 0.576226454119005,
+   "xg_home": 0.9019301293484068,
+   "xg_away": 1.7818284877618313,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.17081264352727654,
+   "p_draw": 0.2290335969038175,
+   "p_away": 0.6001537595689058,
+   "xg_home": 0.8300007701070745,
+   "xg_away": 1.7844900386783193,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.1764989924579592,
+   "p_draw": 0.2378742120791254,
+   "p_away": 0.5856267954629155,
+   "xg_home": 0.91942088487811,
+   "xg_away": 1.8491743462411234,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.3862465739893667,
+   "p_draw": 0.26813143135294326,
+   "p_away": 0.3456219946576903,
+   "xg_home": 1.3056639452168979,
+   "xg_away": 1.2200256252781476,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.20302253447729723,
+   "p_draw": 0.2336363279138279,
+   "p_away": 0.563341137608875,
+   "xg_home": 1.0466722765583867,
+   "xg_away": 1.8792155419908756,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Udinese attack vs Roma defence: time-weighted strength gap multiplies Udinese's scoring rate by \u00d70.65 relative to an average pairing (from 32/32 decay-weighted matches).",
+   "effect": 0.4368
+  },
+  {
+   "text": "Independent results-only Elo: Udinese 1528 vs Roma 1812 (gap -284 before home advantage).",
+   "effect": 0.4258
+  },
+  {
+   "text": "Roma attack vs Udinese defence: rate multiplier \u00d71.48 for the away side.",
+   "effect": 0.3921
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.17822358227723134,
+  "p_draw": 0.23847732123181914,
+  "p_away": 0.5832990964909496,
+  "xg_home": 0.9554067329895656,
+  "xg_away": 1.8680222390806114
+ },
+ "context": {
+  "fetched_at": "2026-10-29T13:51:49+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5749739",
+    "fetched_at": "2026-10-29T13:51:49+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "projected",
+    "source": "FotMob projected XI (enetpulse)",
+    "formation": "3-4-2-1",
+    "starters": [
+     {
+      "name": "Maduka Okoye",
+      "pos": "G"
+     },
+     {
+      "name": "James Abankwah",
+      "pos": "D"
+     },
+     {
+      "name": "Christian Kabasele",
+      "pos": "D"
+     },
+     {
+      "name": "Matteo Palma",
+      "pos": "D"
+     },
+     {
+      "name": "M\u00ebrgim Vojvoda",
+      "pos": "M"
+     },
+     {
+      "name": "Jakub Piotrowski",
+      "pos": "M"
+     },
+     {
+      "name": "Jesper Karlstr\u00f6m",
+      "pos": "M"
+     },
+     {
+      "name": "Hassane Kamara",
+      "pos": "M"
+     },
+     {
+      "name": "Jurgen Ekkelenkamp",
+      "pos": "M"
+     },
+     {
+      "name": "Giorgi Chakvetadze",
+      "pos": "M"
+     },
+     {
+      "name": "Keinan Davis",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-10-29T13:51:49+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [],
+    "mean_xi_attack_index": -0.105,
+    "mean_continuity": 0.081,
+    "p_backup_gk": 0.0
+   },
+   "away": {
+    "status": "projected",
+    "source": "FotMob projected XI (enetpulse)",
+    "formation": "3-5-2",
+    "starters": [
+     {
+      "name": "Pierluigi Gollini",
+      "pos": "G"
+     },
+     {
+      "name": "Gianluca Mancini",
+      "pos": "D"
+     },
+     {
+      "name": "Evan N'Dicka",
+      "pos": "D"
+     },
+     {
+      "name": "Konstantinos Koulierakis",
+      "pos": "D"
+     },
+     {
+      "name": "Emanuele Lulli",
+      "pos": "M"
+     },
+     {
+      "name": "Bryan Cristante",
+      "pos": "M"
+     },
+     {
+      "name": "Marten de Roon",
+      "pos": "M"
+     },
+     {
+      "name": "Niccol\u00f2 Pisilli",
+      "pos": "M"
+     },
+     {
+      "name": "Nahuel Molina",
+      "pos": "D"
+     },
+     {
+      "name": "Matias Soul\u00e9",
+      "pos": "M"
+     },
+     {
+      "name": "Santiago Castro",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-10-29T13:51:49+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [],
+    "mean_xi_attack_index": -0.205,
+    "mean_continuity": 0.096,
+    "p_backup_gk": 0.0
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "David Alaba",
+     "type": "injury",
+     "expected_return": "Early November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5749739",
+     "fetched_at": "2026-10-29T13:51:49+00:00"
+    },
+    {
+     "player": "Oumar Solet",
+     "type": "injury",
+     "expected_return": "Early November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5749739",
+     "fetched_at": "2026-10-29T13:51:49+00:00"
+    },
+    {
+     "player": "Alessandro Zanoli",
+     "type": "injury",
+     "expected_return": "Early November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5749739",
+     "fetched_at": "2026-10-29T13:51:49+00:00"
+    },
+    {
+     "player": "Idrissa Gueye",
+     "type": "injury",
+     "expected_return": "Late December 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5749739",
+     "fetched_at": "2026-10-29T13:51:49+00:00"
+    },
+    {
+     "player": "Vakoun Issouf Bayo",
+     "type": "injury",
+     "expected_return": "Early November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5749739",
+     "fetched_at": "2026-10-29T13:51:49+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "Mile Svilar",
+     "type": "injury",
+     "expected_return": "Early November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5749739",
+     "fetched_at": "2026-10-29T13:51:49+00:00"
+    },
+    {
+     "player": "Lorenzo Pellegrini",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5749739",
+     "fetched_at": "2026-10-29T13:51:49+00:00"
+    },
+    {
+     "player": "Manu Kon\u00e9",
+     "type": "injury",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5749739",
+     "fetched_at": "2026-10-29T13:51:49+00:00"
+    },
+    {
+     "player": "Paulo Dybala",
+     "type": "injury",
+     "expected_return": "Back in training",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5749739",
+     "fetched_at": "2026-10-29T13:51:49+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 3,
+    "n21": 4,
+    "last_match": "2026-10-28"
+   },
+   "away": {
+    "rest_days": 4,
+    "n21": 4,
+    "last_match": "2026-10-27"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 465.0
+  },
+  "venue": {
+   "name": "Bluenergy Stadium",
+   "city": "Udine",
+   "lat": 46.081644302,
+   "lon": 13.200062513
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 0.97,
+   "temp_c": 11.6,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=46.082&longitude=13.2",
+   "fetched_at": "2026-10-29T13:51:49+00:00",
+   "lat": 46.081644302,
+   "lon": 13.200062513
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": 1.57,
+    "d_p_draw_pp": 0.26,
+    "d_p_away_pp": -1.83,
+    "d_xg_home": 0.111,
+    "d_xg_away": 0.052
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0283,
+    "away_rate_mult": 1.0048,
+    "d_p_home_pp": 0.47,
+    "d_p_draw_pp": -0.03,
+    "d_p_away_pp": -0.44,
+    "d_xg_home": 0.027,
+    "d_xg_away": 0.009,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.027,
+    "away_rate_mult": 1.0113,
+    "d_p_home_pp": 0.31,
+    "d_p_draw_pp": -0.16,
+    "d_p_away_pp": -0.15,
+    "d_xg_home": 0.025,
+    "d_xg_away": 0.021,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "home_rate_mult": 0.972,
+    "away_rate_mult": 0.9463,
+    "d_p_home_pp": 0.61,
+    "d_p_draw_pp": 1.0,
+    "d_p_away_pp": -1.61,
+    "d_xg_home": -0.027,
+    "d_xg_away": -0.097,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 3.0,
+   "rest_a": 4.0,
+   "n21_h": 4.0,
+   "n21_a": 4.0,
+   "travel_km": 465.03233865247455,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 0.97,
+   "temp_c": 11.6
+  }
+ },
+ "confidence": {
+  "tier": "MODERATE",
+  "p_max": 0.5832990964909496,
+  "entropy_nats": 0.9636682732717825,
+  "text": "Most likely result has P = 58.3%. In the out-of-sample backtest, favourites priced 0.50\u20130.60 won 53.9% \u00b1 0.5% (n=9522, mean forecast 54.4%). Backtest RPS for I1: 0.1939; exact-score top-5 hit rate 54.8% (n=1228). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: MODERATE (entropy 0.964 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Udinese: lineup is PROJECTED (FotMob projected XI (enetpulse)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Roma: lineup is PROJECTED (FotMob projected XI (enetpulse)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior)."
+ ],
+ "verdict": "Udinese 1\u20131 Roma is the single most probable scoreline at 11.5%: expected goals 0.96\u20131.87 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.047). Exact scores are inherently uncertain; the 1X2 split is 17.8%/23.8%/58.3%.",
+ "resolved": {
+  "home_key": "Italy:Udinese",
+  "away_key": "Italy:Roma",
+  "div": "I1",
+  "home_div": "I1",
+  "away_div": "I1",
+  "country": "Italy"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: AS Roma at Udinese Calcio\nCompetition: Serie A 2025\nDate: 2026-10-31 13:00 EDT\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-10-28\n\nPRIMARY FINAL SCORE PREDICTION\n\nUdinese Calcio 1 \u2013 1 AS Roma\n(modal exact score, probability 11.5%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 0.96\nAway: 1.87\nExpected Total: 2.82\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 17.8%\nDraw: 23.8%\nAway Win: 58.3%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 11.5%\n2. 0\u20131: 10.6%\n3. 0\u20132: 10.4%\n4. 1\u20132: 10.1%\n5. 0\u20133: 6.4%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 21.9%\nTotal 2 goals: 24.4%\nTotal 3 goals: 22.4%\nTotal 4 goals: 16.0%\nTotal 5+ goals: 15.3%\n\nBoth Teams Score: 53.4%\nClean sheet Udinese Calcio: 14.7% \u00b7 Clean sheet AS Roma: 38.0%\n\nMATCH INTELLIGENCE\n\n1. Udinese attack vs Roma defence: time-weighted strength gap multiplies Udinese's scoring rate by \u00d70.65 relative to an average pairing (from 32/32 decay-weighted matches).\n2. Independent results-only Elo: Udinese 1528 vs Roma 1812 (gap -284 before home advantage).\n3. Roma attack vs Udinese defence: rate multiplier \u00d71.48 for the away side.\n\nMODEL CONFIDENCE\n\nMost likely result has P = 58.3%. In the out-of-sample backtest, favourites priced 0.50\u20130.60 won 53.9% \u00b1 0.5% (n=9522, mean forecast 54.4%). Backtest RPS for I1: 0.1939; exact-score top-5 hit rate 54.8% (n=1228). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: MODERATE (entropy 0.964 nats of max 1.099).\nParameter-uncertainty 80% bands: xG Udinese Calcio 0.71\u20131.23, xG AS Roma 1.43\u20132.34; P(home win) 12.1%\u201327.1%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0003 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nUdinese: PROJECTED \u2014 FotMob projected XI (enetpulse), fetched 2026-10-29 09:51 EDT (3-4-2-1)\n  Maduka Okoye (G), James Abankwah (D), Christian Kabasele (D), Matteo Palma (D), M\u00ebrgim Vojvoda (M), Jakub Piotrowski (M), Jesper Karlstr\u00f6m (M), Hassane Kamara (M), Jurgen Ekkelenkamp (M), Giorgi Chakvetadze (M), Keinan Davis (F)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs -0.105 (log) \u00b7 continuity +0.08 \u00b7 P(backup GK) 0%\nRoma: PROJECTED \u2014 FotMob projected XI (enetpulse), fetched 2026-10-29 09:51 EDT (3-5-2)\n  Pierluigi Gollini (G), Gianluca Mancini (D), Evan N'Dicka (D), Konstantinos Koulierakis (D), Emanuele Lulli (M), Bryan Cristante (M), Marten de Roon (M), Niccol\u00f2 Pisilli (M), Nahuel Molina (D), Matias Soul\u00e9 (M), Santiago Castro (F)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs -0.205 (log) \u00b7 continuity +0.10 \u00b7 P(backup GK) 0%\n\nKEY ABSENCES\n\n- Udinese: David Alaba \u2014 injury, Early November 2026 [FotMob, 2026-10-29 09:51 EDT]\n- Udinese: Oumar Solet \u2014 injury, Early November 2026 [FotMob, 2026-10-29 09:51 EDT]\n- Udinese: Alessandro Zanoli \u2014 injury, Early November 2026 [FotMob, 2026-10-29 09:51 EDT]\n- Udinese: Idrissa Gueye \u2014 injury, Late December 2026 [FotMob, 2026-10-29 09:51 EDT]\n- Udinese: Vakoun Issouf Bayo \u2014 injury, Early November 2026 [FotMob, 2026-10-29 09:51 EDT]\n- Roma: Mile Svilar \u2014 injury, Early November 2026 [FotMob, 2026-10-29 09:51 EDT]\n- Roma: Lorenzo Pellegrini \u2014 injury, Late November 2026 [FotMob, 2026-10-29 09:51 EDT]\n- Roma: Manu Kon\u00e9 \u2014 injury, Mid November 2026 [FotMob, 2026-10-29 09:51 EDT]\n- Roma: Paulo Dybala \u2014 injury, Back in training [FotMob, 2026-10-29 09:51 EDT]\n\nWEATHER AT VENUE\n\nBluenergy Stadium, Udine: 11.6 \u00b0C, wind 1.0 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-10-29 09:51 EDT]\n\nREST & TRAVEL\n\nUdinese: 3 days' rest, 4 matches in previous 21 days \u00b7 Roma: 4 days' rest, 4 in 21 days \u00b7 away travel 465.0 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 17.8% / 23.8% / 58.3%, xG 0.96\u20131.87\n- Understat xG component (validated, in ensemble): home +1.57 pp, draw +0.26 pp, away -1.83 pp; xG +0.111 / +0.052\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.47 pp, draw -0.03 pp, away -0.44 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.31 pp, draw -0.16 pp, away -0.15 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- lineup: NOT APPLIED (failed out-of-sample validation); would have moved home +0.61 pp, draw +1.00 pp, away -1.61 pp\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Udinese: lineup is PROJECTED (FotMob projected XI (enetpulse)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Roma: lineup is PROJECTED (FotMob projected XI (enetpulse)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n\nFINAL VERDICT\n\nUdinese 1\u20131 Roma is the single most probable scoreline at 11.5%: expected goals 0.96\u20131.87 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.047). Exact scores are inherently uncertain; the 1X2 split is 17.8%/23.8%/58.3%.\n",
+ "frozen_at": "2026-10-29T13:51:49+00:00",
+ "sha256": "c2474213de25cb81a8f7d9205141d43344cffc30fc85d64ea1b4ef0402916aac"
+}

@@ -1,0 +1,667 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-10-28",
+ "generated_at": "2026-10-29T13:51:43+00:00",
+ "fixture": {
+  "event_id": "POLY-1209177",
+  "home_name": "AFC Bournemouth",
+  "away_name": "Leeds United FC",
+  "competition": "Premier League 2025",
+  "subcategory": "epl",
+  "kickoff_utc": "2026-10-31T15:00:00+00:00",
+  "kickoff_local": "2026-10-31 11:00 EDT",
+  "home_matched": "Bournemouth",
+  "away_matched": "Leeds",
+  "match_methods": {
+   "home": {
+    "source": "AFC Bournemouth",
+    "matched": "Bournemouth",
+    "method": "core-tokens",
+    "score": 0.97
+   },
+   "away": {
+    "source": "Leeds United FC",
+    "matched": "Leeds",
+    "method": "alias",
+    "score": 1.0
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.4595565093938666,
+  "p_draw": 0.2620324536752136,
+  "p_away": 0.27841103693091973,
+  "xg_home": 1.6404685582291558,
+  "xg_away": 1.2399110646079055,
+  "xg_total": 2.8803796228370615,
+  "median_total": 3,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.12559484112032376
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.12559484112032376
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.09615334107085559
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.08624848120611085
+   },
+   {
+    "home": 2,
+    "away": 0,
+    "p": 0.07424123406404291
+   },
+   {
+    "home": 1,
+    "away": 2,
+    "p": 0.07170937969312143
+   }
+  ],
+  "btts": 0.590734922161314,
+  "totals_over": {
+   "over_0.5": 0.9420748949483896,
+   "over_1.5": 0.7921775676442955,
+   "over_2.5": 0.5510186213569329,
+   "over_3.5": 0.32635541413127234,
+   "over_4.5": 0.16147855485275192,
+   "over_5.5": 0.0696137090635619,
+   "over_6.5": 0.025755900287295214
+  },
+  "total_buckets": {
+   "0-1": 0.20782243235570436,
+   "2": 0.24115894628736273,
+   "3": 0.22466320722566047,
+   "4": 0.16487685927852042,
+   "5+": 0.16147855485275192
+  },
+  "clean_sheet_home": 0.2812690792299948,
+  "clean_sheet_away": 0.1859211036603016,
+  "home_goal_dist": [
+   0.1859211036603016,
+   0.32352898359270416,
+   0.2666609926131636,
+   0.14318174437395578,
+   0.05690420082169492,
+   0.01789859457923272,
+   0.004645589568153544,
+   0.0012587907907935865
+  ],
+  "away_goal_dist": [
+   0.2812690792299948,
+   0.36684481590950335,
+   0.22658042665288367,
+   0.09074991527417182,
+   0.026834304731689216,
+   0.0062780975069145605,
+   0.001212220137251795,
+   0.00023114055759072773
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    3
+   ],
+   "away_goals_80": [
+    0,
+    3
+   ],
+   "total_goals_80": [
+    1,
+    5
+   ],
+   "goal_diff_80": [
+    -2,
+    2
+   ]
+  },
+  "score_grid": [
+   [
+    0.057925,
+    0.063649,
+    0.041323,
+    0.016653,
+    0.004945,
+    0.001159,
+    0.000224
+   ],
+   [
+    0.086248,
+    0.125595,
+    0.071709,
+    0.028911,
+    0.008589,
+    0.002013,
+    0.000389
+   ],
+   [
+    0.074241,
+    0.096153,
+    0.062999,
+    0.024056,
+    0.007149,
+    0.001676,
+    0.000324
+   ],
+   [
+    0.040147,
+    0.052015,
+    0.032277,
+    0.013754,
+    0.003871,
+    0.000908,
+    0.000176
+   ],
+   [
+    0.016007,
+    0.020745,
+    0.012877,
+    0.005197,
+    0.001632,
+    0.000363,
+    7e-05
+   ],
+   [
+    0.005039,
+    0.006532,
+    0.004056,
+    0.001637,
+    0.000487,
+    0.000121,
+    2.2e-05
+   ],
+   [
+    0.001308,
+    0.001696,
+    0.001053,
+    0.000425,
+    0.000127,
+    3e-05,
+    6e-06
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.461685,
+  "p_draw": 0.26124499999999995,
+  "p_away": 0.27707000000000004,
+  "se": [
+   0.0011147465200102668,
+   0.0009823340826190445,
+   0.0010007552525467954
+  ],
+  "max_abs_dev_vs_exact": 0.002128490606133404,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   1.244433202396727,
+   2.0746046956734836
+  ],
+  "xg_away_80": [
+   0.9320868013865505,
+   1.5699281749781764
+  ],
+  "p_home_80": [
+   0.34786184167374784,
+   0.5839957518508304
+  ],
+  "p_draw_80": [
+   0.21809650442583567,
+   0.2847996141354984
+  ],
+  "p_away_80": [
+   0.1908457530405698,
+   0.3836380589204545
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.20263074193289876,
+   0.19348638931014694
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.4208911312517165,
+   "p_draw": 0.27453783041582064,
+   "p_away": 0.304571038332463,
+   "xg_home": 1.4135727791708645,
+   "xg_away": 1.1655484070259632,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.466526029189766,
+   "p_draw": 0.24361849631062632,
+   "p_away": 0.2898554744996076,
+   "xg_home": 1.6353745078646078,
+   "xg_away": 1.2388160158252992,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.40513176493524095,
+   "p_draw": 0.26978519231190984,
+   "p_away": 0.3250830427528493,
+   "xg_home": 1.4611636776914676,
+   "xg_away": 1.2859294894035207,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.4228904171224199,
+   "p_draw": 0.24977313804598375,
+   "p_away": 0.3273364448315963,
+   "xg_home": 1.519993969003253,
+   "xg_away": 1.307998571550038,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.45949545818839,
+   "p_draw": 0.25738334376768307,
+   "p_away": 0.2831211980439271,
+   "xg_home": 1.604490697129909,
+   "xg_away": 1.2121550640448877,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Home advantage (England, fitted from results): \u00d71.22 on Bournemouth's scoring rate.",
+   "effect": 0.1965
+  },
+  {
+   "text": "Independent results-only Elo: Bournemouth 1748 vs Leeds 1709 (gap +40 before home advantage).",
+   "effect": 0.0595
+  },
+  {
+   "text": "Bournemouth attack vs Leeds defence: time-weighted strength gap multiplies Bournemouth's scoring rate by \u00d70.96 relative to an average pairing (from 31/32 decay-weighted matches).",
+   "effect": 0.0359
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.4595565093938666,
+  "p_draw": 0.2620324536752136,
+  "p_away": 0.27841103693091973,
+  "xg_home": 1.6404685582291558,
+  "xg_away": 1.2399110646079055
+ },
+ "context": {
+  "fetched_at": "2026-10-29T13:51:43+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5795495",
+    "fetched_at": "2026-10-29T13:51:43+00:00"
+   },
+   {
+    "name": "Fantasy Premier League availability",
+    "url": "https://fantasy.premierleague.com/api/bootstrap-static/",
+    "fetched_at": "2026-10-29T13:51:44+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "projected",
+    "source": "FotMob projected XI (enetpulse)",
+    "formation": "4-2-3-1",
+    "starters": [
+     {
+      "name": "Djordje Petrovi\u0107",
+      "pos": "G"
+     },
+     {
+      "name": "Adam Smith",
+      "pos": "D"
+     },
+     {
+      "name": "James Hill",
+      "pos": "D"
+     },
+     {
+      "name": "Ant\u00f3nio Silva",
+      "pos": "D"
+     },
+     {
+      "name": "Adrien Truffert",
+      "pos": "D"
+     },
+     {
+      "name": "Tyler Adams",
+      "pos": "M"
+     },
+     {
+      "name": "Lewis Cook",
+      "pos": "M"
+     },
+     {
+      "name": "Rayan",
+      "pos": "F"
+     },
+     {
+      "name": "Justin Kluivert",
+      "pos": "M"
+     },
+     {
+      "name": "Marcus Tavernier",
+      "pos": "F"
+     },
+     {
+      "name": "Evanilson",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-10-29T13:51:43+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [],
+    "mean_xi_attack_index": 0.062,
+    "mean_continuity": -0.491,
+    "p_backup_gk": 0.0
+   },
+   "away": {
+    "status": "projected",
+    "source": "FotMob projected XI (enetpulse)",
+    "formation": "3-4-2-1",
+    "starters": [
+     {
+      "name": "James Trafford",
+      "pos": "G"
+     },
+     {
+      "name": "James Justin",
+      "pos": "D"
+     },
+     {
+      "name": "Jaka Bijol",
+      "pos": "D"
+     },
+     {
+      "name": "Tarik Muharemovi\u0107",
+      "pos": "D"
+     },
+     {
+      "name": "Jayden Bogle",
+      "pos": "M"
+     },
+     {
+      "name": "Ethan Ampadu",
+      "pos": "M"
+     },
+     {
+      "name": "Ao Tanaka",
+      "pos": "M"
+     },
+     {
+      "name": "Gabriel Gudmundsson",
+      "pos": "M"
+     },
+     {
+      "name": "Harry Wilson",
+      "pos": "F"
+     },
+     {
+      "name": "Brenden Aaronson",
+      "pos": "M"
+     },
+     {
+      "name": "Dominic Calvert-Lewin",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-10-29T13:51:43+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [],
+    "mean_xi_attack_index": -0.029,
+    "mean_continuity": -0.41,
+    "p_backup_gk": 0.18
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Juli\u00e1n Araujo",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795495",
+     "fetched_at": "2026-10-29T13:51:43+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Thigh injury - Unknown return date",
+     "fpl_news_added": "2026-08-09T08:00:05.645826Z"
+    },
+    {
+     "player": "Veljko Milosavljevi\u0107",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795495",
+     "fetched_at": "2026-10-29T13:51:43+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Thigh injury - Expected back 31 Oct",
+     "fpl_news_added": "2026-08-06T10:00:10.456051Z"
+    },
+    {
+     "player": "Alex Scott",
+     "type": "injury",
+     "expected_return": "Early November 2026",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795495",
+     "fetched_at": "2026-10-29T13:51:43+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Thigh injury - Expected back 8 Nov",
+     "fpl_news_added": "2026-10-05T09:30:09.910752Z"
+    },
+    {
+     "player": "Alex T\u00f3th",
+     "type": "injury",
+     "expected_return": "Early November 2026",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795495",
+     "fetched_at": "2026-10-29T13:51:43+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Hamstring injury - Unknown return date",
+     "fpl_news_added": "2026-10-23T11:30:09.133819Z"
+    }
+   ],
+   "away": [
+    {
+     "player": "Joe Rodon",
+     "type": "injury",
+     "expected_return": "Early November 2026",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795495",
+     "fetched_at": "2026-10-29T13:51:43+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Hamstring injury - Expected back 21 Nov",
+     "fpl_news_added": "2026-08-30T16:00:08.564382Z"
+    },
+    {
+     "player": "Daniel James",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5795495",
+     "fetched_at": "2026-10-29T13:51:43+00:00"
+    },
+    {
+     "player": "Mateo Joseph",
+     "type": "injury",
+     "expected_return": "Early January 2027",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795495",
+     "fetched_at": "2026-10-29T13:51:43+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Knee injury - Unknown return date",
+     "fpl_news_added": "2026-07-29T18:00:10.338170Z"
+    },
+    {
+     "player": "Nico Elvedi",
+     "type": "doubtful",
+     "expected_return": "Illness - 75% chance of playing",
+     "chance_of_playing": 75,
+     "source": "FPL",
+     "source_url": "https://fantasy.premierleague.com/api/bootstrap-static/",
+     "fetched_at": "2026-10-25T17:00:10.080582Z"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 6,
+    "n21": 3,
+    "last_match": "2026-10-25"
+   },
+   "away": {
+    "rest_days": 6,
+    "n21": 3,
+    "last_match": "2026-10-25"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 338.8
+  },
+  "venue": {
+   "name": "Vitality Stadium",
+   "city": "Bournemouth, Dorset",
+   "lat": 50.735240532,
+   "lon": -1.838309616
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 2.075,
+   "temp_c": 12.3,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=50.735&longitude=-1.838",
+   "fetched_at": "2026-10-29T13:51:44+00:00",
+   "lat": 50.735240532,
+   "lon": -1.838309616
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": -0.13,
+    "d_p_draw_pp": 0.57,
+    "d_p_away_pp": -0.44,
+    "d_xg_home": -0.005,
+    "d_xg_away": -0.011
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.023,
+    "away_rate_mult": 1.0097,
+    "d_p_home_pp": 0.64,
+    "d_p_draw_pp": -0.32,
+    "d_p_away_pp": -0.32,
+    "d_xg_home": 0.036,
+    "d_xg_away": 0.012,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "home_rate_mult": 1.0181,
+    "away_rate_mult": 0.9902,
+    "d_p_home_pp": 0.97,
+    "d_p_draw_pp": -0.23,
+    "d_p_away_pp": -0.74,
+    "d_xg_home": 0.029,
+    "d_xg_away": -0.011,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 6.0,
+   "rest_a": 6.0,
+   "n21_h": 3.0,
+   "n21_a": 3.0,
+   "travel_km": 338.8044475323612,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 2.075,
+   "temp_c": 12.3
+  }
+ },
+ "confidence": {
+  "tier": "LOW",
+  "p_max": 0.4595565093938666,
+  "entropy_nats": 1.064230912640474,
+  "text": "Most likely result has P = 46.0%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.3% \u00b1 0.4% (n=16754, mean forecast 44.6%). Backtest RPS for E0: 0.2018; exact-score top-5 hit rate 46.6% (n=1220). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: LOW (entropy 1.064 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Bournemouth: lineup is PROJECTED (FotMob projected XI (enetpulse)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Leeds: lineup is PROJECTED (FotMob projected XI (enetpulse)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior)."
+ ],
+ "verdict": "Bournemouth 1\u20131 Leeds is the single most probable scoreline at 12.6%: expected goals 1.64\u20131.24 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.047). Exact scores are inherently uncertain; the 1X2 split is 46.0%/26.2%/27.8%.",
+ "resolved": {
+  "home_key": "England:Bournemouth",
+  "away_key": "England:Leeds",
+  "div": "E0",
+  "home_div": "E0",
+  "away_div": "E0",
+  "country": "England"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: Leeds United FC at AFC Bournemouth\nCompetition: Premier League 2025\nDate: 2026-10-31 11:00 EDT\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-10-28\n\nPRIMARY FINAL SCORE PREDICTION\n\nAFC Bournemouth 1 \u2013 1 Leeds United FC\n(modal exact score, probability 12.6%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.64\nAway: 1.24\nExpected Total: 2.88\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 46.0%\nDraw: 26.2%\nAway Win: 27.8%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 12.6%\n2. 2\u20131: 9.6%\n3. 1\u20130: 8.6%\n4. 2\u20130: 7.4%\n5. 1\u20132: 7.2%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 20.8%\nTotal 2 goals: 24.1%\nTotal 3 goals: 22.5%\nTotal 4 goals: 16.5%\nTotal 5+ goals: 16.1%\n\nBoth Teams Score: 59.1%\nClean sheet AFC Bournemouth: 28.1% \u00b7 Clean sheet Leeds United FC: 18.6%\n\nMATCH INTELLIGENCE\n\n1. Home advantage (England, fitted from results): \u00d71.22 on Bournemouth's scoring rate.\n2. Independent results-only Elo: Bournemouth 1748 vs Leeds 1709 (gap +40 before home advantage).\n3. Bournemouth attack vs Leeds defence: time-weighted strength gap multiplies Bournemouth's scoring rate by \u00d70.96 relative to an average pairing (from 31/32 decay-weighted matches).\n\nMODEL CONFIDENCE\n\nMost likely result has P = 46.0%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.3% \u00b1 0.4% (n=16754, mean forecast 44.6%). Backtest RPS for E0: 0.2018; exact-score top-5 hit rate 46.6% (n=1220). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: LOW (entropy 1.064 nats of max 1.099).\nParameter-uncertainty 80% bands: xG AFC Bournemouth 1.24\u20132.07, xG Leeds United FC 0.93\u20131.57; P(home win) 34.8%\u201358.4%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0021 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nBournemouth: PROJECTED \u2014 FotMob projected XI (enetpulse), fetched 2026-10-29 09:51 EDT (4-2-3-1)\n  Djordje Petrovi\u0107 (G), Adam Smith (D), James Hill (D), Ant\u00f3nio Silva (D), Adrien Truffert (D), Tyler Adams (M), Lewis Cook (M), Rayan (F), Justin Kluivert (M), Marcus Tavernier (F), Evanilson (F)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs +0.062 (log) \u00b7 continuity -0.49 \u00b7 P(backup GK) 0%\nLeeds: PROJECTED \u2014 FotMob projected XI (enetpulse), fetched 2026-10-29 09:51 EDT (3-4-2-1)\n  James Trafford (G), James Justin (D), Jaka Bijol (D), Tarik Muharemovi\u0107 (D), Jayden Bogle (M), Ethan Ampadu (M), Ao Tanaka (M), Gabriel Gudmundsson (M), Harry Wilson (F), Brenden Aaronson (M), Dominic Calvert-Lewin (F)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs -0.029 (log) \u00b7 continuity -0.41 \u00b7 P(backup GK) 18%\n\nKEY ABSENCES\n\n- Bournemouth: Juli\u00e1n Araujo \u2014 injury, Late November 2026, 0% chance of playing [FotMob + FPL, 2026-10-29 09:51 EDT] \u2014 FPL: Thigh injury - Unknown return date (updated 2026-08-09 04:00 EDT)\n- Bournemouth: Veljko Milosavljevi\u0107 \u2014 injury, Doubtful, 0% chance of playing [FotMob + FPL, 2026-10-29 09:51 EDT] \u2014 FPL: Thigh injury - Expected back 31 Oct (updated 2026-08-06 06:00 EDT)\n- Bournemouth: Alex Scott \u2014 injury, Early November 2026, 0% chance of playing [FotMob + FPL, 2026-10-29 09:51 EDT] \u2014 FPL: Thigh injury - Expected back 8 Nov (updated 2026-10-05 05:30 EDT)\n- Bournemouth: Alex T\u00f3th \u2014 injury, Early November 2026, 0% chance of playing [FotMob + FPL, 2026-10-29 09:51 EDT] \u2014 FPL: Hamstring injury - Unknown return date (updated 2026-10-23 07:30 EDT)\n- Leeds: Joe Rodon \u2014 injury, Early November 2026, 0% chance of playing [FotMob + FPL, 2026-10-29 09:51 EDT] \u2014 FPL: Hamstring injury - Expected back 21 Nov (updated 2026-08-30 12:00 EDT)\n- Leeds: Daniel James \u2014 injury, Doubtful [FotMob, 2026-10-29 09:51 EDT]\n- Leeds: Mateo Joseph \u2014 injury, Early January 2027, 0% chance of playing [FotMob + FPL, 2026-10-29 09:51 EDT] \u2014 FPL: Knee injury - Unknown return date (updated 2026-07-29 14:00 EDT)\n- Leeds: Nico Elvedi \u2014 doubtful, Illness - 75% chance of playing, 75% chance of playing [FPL, 2026-10-25 13:00 EDT]\n\nWEATHER AT VENUE\n\nVitality Stadium, Bournemouth, Dorset: 12.3 \u00b0C, wind 2.1 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-10-29 09:51 EDT]\n\nREST & TRAVEL\n\nBournemouth: 6 days' rest, 3 matches in previous 21 days \u00b7 Leeds: 6 days' rest, 3 in 21 days \u00b7 away travel 338.8 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 46.0% / 26.2% / 27.8%, xG 1.64\u20131.24\n- Understat xG component (validated, in ensemble): home -0.13 pp, draw +0.57 pp, away -0.44 pp; xG -0.005 / -0.011\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.64 pp, draw -0.32 pp, away -0.32 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- lineup: NOT APPLIED (failed out-of-sample validation); would have moved home +0.97 pp, draw -0.23 pp, away -0.74 pp\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Bournemouth: lineup is PROJECTED (FotMob projected XI (enetpulse)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Leeds: lineup is PROJECTED (FotMob projected XI (enetpulse)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n\nFINAL VERDICT\n\nBournemouth 1\u20131 Leeds is the single most probable scoreline at 12.6%: expected goals 1.64\u20131.24 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.047). Exact scores are inherently uncertain; the 1X2 split is 46.0%/26.2%/27.8%.\n",
+ "frozen_at": "2026-10-29T13:51:44+00:00",
+ "sha256": "8dc013192587a6a4660d4961d49baef275031434144da96e30ddb54955157e1a"
+}

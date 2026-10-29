@@ -36,3 +36,12 @@ def test_json_roundtrip():
     cal = {"coef": {("h", None): 0.1, ("a", "E0"): -0.02}, "sharpen": 0.01, "n": 5, "levels": ["E0"]}
     back = calibrate.from_json(calibrate.to_json(cal))
     assert back["coef"] == {("h", None): 0.1, ("a", "E0"): -0.02}
+
+
+def test_tot_term_identity_when_absent_and_normalised():
+    P = _mats(np.array([0.7, 2.2]), np.array([0.5, 1.6]))
+    Q = calibrate.apply(P, {("tot", None): -0.2}, np.array(["E0", "E0"]), 0.0)
+    assert np.allclose(Q.sum((1, 2)), 1.0)
+    k = np.arange(P.shape[-1])
+    tot = lambda M: (M * (k[:, None] + k[None, :])).sum()
+    assert tot(Q[0]) > tot(P[0]) and tot(Q[1]) < tot(P[1])   # g < 0 pulls totals toward the centre
