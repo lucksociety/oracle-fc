@@ -36,7 +36,15 @@ def fit_weights(mats: list[np.ndarray], hg, ag, shrink: float = 1.0) -> np.ndarr
 
 
 def combine(mats: list[np.ndarray], w: np.ndarray) -> np.ndarray:
-    out = sum(wi * np.nan_to_num(m, nan=0.0) for wi, m in zip(w, mats))
-    avail = sum(wi * np.isfinite(m[..., 0, 0]) for wi, m in zip(w, mats))
-    avail = np.where(avail > 0, avail, np.nan)
-    return out / avail[..., None, None]
+    stack = np.stack(mats)
+    weights = np.asarray(w, float)
+    if len(weights) != len(mats) or not np.isfinite(weights).all() or (weights < 0).any() or weights.sum() <= 0:
+        raise ValueError("ensemble weights must be finite, nonnegative and have positive mass")
+    valid = np.isfinite(stack).all(axis=(-2, -1)) & (stack >= 0).all(axis=(-2, -1))
+    mass = np.where(np.isfinite(stack), stack, 0).sum(axis=(-2, -1))
+    valid &= np.isclose(mass, 1.0, atol=1e-6)
+    effective = weights.reshape((-1,) + (1,) * (valid.ndim - 1)) * valid
+    denom = effective.sum(axis=0)
+    numerator = (np.where(valid[..., None, None], stack, 0) * effective[..., None, None]).sum(axis=0)
+    return np.divide(numerator, denom[..., None, None], out=np.full_like(numerator, np.nan),
+                     where=denom[..., None, None] > 0)

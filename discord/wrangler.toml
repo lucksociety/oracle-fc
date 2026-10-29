@@ -7,6 +7,11 @@ workers_dev = true
 enabled = true
 
 [vars]
+GITHUB_REPO = "lucksociety/oracle-fc"
+GITHUB_REF = "main"
+RUN_MODE = "workflow"
+# Secrets: GITHUB_TOKEN (Actions:write), RELAY_KEY (same value in Actions secrets).
+# Set RUN_MODE = "snapshot" only for explicitly cached-report operation.
 DISCORD_APPLICATION_ID = "1565128574128754708"
 SITE_URL = "https://lucksociety.github.io/oracle-fc"
 SOCCER_CHANNEL_ID = "1337811266541977631"   # Luck Society › SOCCER › ⚽-soccer-bets
