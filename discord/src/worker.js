@@ -1,3 +1,35 @@
+// Encrypt short-lived interaction credentials before putting them in public workflow inputs.
+export async function dispatchModel(env, interaction, date, workflow, repo) {
+  const app = env.DISCORD_APPLICATION_ID || interaction.application_id;
+  const edit = async content => {
+    const r = await fetch(`https://discord.com/api/v10/webhooks/${app}/${interaction.token}/messages/@original`, {
+      method: 'PATCH', headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({ content, allowed_mentions: { parse: [] } }),
+    });
+    if (!r.ok) throw new Error(`Discord reply HTTP ${r.status}`);
+  };
+  try {
+    if (!env.GITHUB_TOKEN || !env.RELAY_KEY) throw new Error('configure GITHUB_TOKEN and RELAY_KEY on the Worker, plus the same RELAY_KEY in Actions');
+    const keyBytes = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(env.RELAY_KEY));
+    const key = await crypto.subtle.importKey('raw', keyBytes, 'AES-GCM', false, ['encrypt']);
+    const iv = crypto.getRandomValues(new Uint8Array(12));
+    const msg = { token: interaction.token, app, ts: Date.now(), date,
+      only_bets: (interaction.data?.options || []).some(o => o.name === 'only_bets' && o.value === true) };
+    const ct = new Uint8Array(await crypto.subtle.encrypt({ name: 'AES-GCM', iv }, key, new TextEncoder().encode(JSON.stringify(msg))));
+    const bytes = new Uint8Array(iv.length + ct.length); bytes.set(iv); bytes.set(ct, iv.length);
+    const relay = btoa(String.fromCharCode(...bytes)).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+    const r = await fetch(`https://api.github.com/repos/${env.GITHUB_REPO || repo}/actions/workflows/${workflow}/dispatches`, {
+      method: 'POST', headers: { authorization: `Bearer ${env.GITHUB_TOKEN}`, accept: 'application/vnd.github+json',
+        'content-type': 'application/json', 'user-agent': 'oracle-discord', 'x-github-api-version': '2022-11-28' },
+      body: JSON.stringify({ ref: env.GITHUB_REF || 'main', inputs: { date, relay } }),
+    });
+    if (r.status !== 204) throw new Error(`GitHub dispatch HTTP ${r.status}`);
+    // The workflow owns the deferred reply from here. A progress PATCH here could race its result.
+  } catch (e) {
+    await edit(`⚠️ Could not start the model for ${date}: ${e.message}.`);
+  }
+}
+
 // ORACLE FC · Discord /soccer interactions endpoint (Cloudflare Worker).
 // Relays the post-hoc Best Bets that the ORACLE FC pipeline publishes to GitHub Pages.
 // The Worker never feeds prices into the model; it only reads the published snapshot.
@@ -418,7 +450,10 @@ export default {
     if (i.type === 1) return json({ type: 1 }); // PING -> PONG
     if (i.type === 4) return json({ type: 8, data: { choices: dateChoices() } }); // date picker
     if (i.type === 2 && i.data?.name === "soccer") {
-      ctx.waitUntil(runSoccer(i, env));
+      const rawDate = (i.data.options || []).find(o => o.name === 'date')?.value;
+      const date = parseDate(rawDate);
+      if (!date) return json({ type: 4, data: { content: 'Invalid date. Use YYYY-MM-DD or today/tomorrow.', flags: EPHEMERAL } });
+      ctx.waitUntil(env.RUN_MODE === 'snapshot' ? runSoccer(i, env) : dispatchModel(env, i, date, 'discord-soccer.yml', 'lucksociety/oracle-fc'));
       return json({ type: 5 }); // deferred reply, follow-ups carry the embeds
     }
     return json({ type: 4, data: { content: "Unknown command.", flags: EPHEMERAL } });

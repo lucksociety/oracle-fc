@@ -4,7 +4,8 @@ import worker, { parseDate } from "../src/worker.js";
 const kp = await crypto.subtle.generateKey({ name: "Ed25519" }, true, ["sign", "verify"]);
 const pubHex = Buffer.from(await crypto.subtle.exportKey("raw", kp.publicKey)).toString("hex");
 const env = { DISCORD_PUBLIC_KEY: pubHex, DISCORD_APPLICATION_ID: "1565128574128754708" };
-const ctx = { waitUntil: () => {} };
+const ctx = { waitUntil: p => p.catch(() => {}) };
+globalThis.fetch = async () => new Response('{}', { status: 200 });
 
 async function signed(obj, tamper = false) {
   const body = JSON.stringify(obj), ts = String(Math.floor(Date.now() / 1000));
