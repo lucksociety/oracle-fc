@@ -200,4 +200,7 @@ def best_bet(selections: list[dict], score_grid, sim: dict | None = None) -> dic
 def _public(r: dict) -> dict:
     keys = ("market_id", "market_type", "label", "side", "ask", "bid", "volume", "model_p", "fee_per_contract",
             "cost_per_contract", "ev_per_dollar", "edge_pp", "thin_book", "fee_assumed")
-    return {k: (round(r[k], 6) if isinstance(r[k], float) else r[k]) for k in keys}
+    out = {k: (round(r[k], 6) if isinstance(r[k], float) else r[k]) for k in keys}
+    if r.get("outcome") is not None:
+        out["outcome"] = r["outcome"]  # settlement spec, used by post-match grading
+    return out

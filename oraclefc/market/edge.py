@@ -5,7 +5,9 @@ frozen. Refuses to compare a forecast frozen after the snapshot.
 """
 from __future__ import annotations
 
-from .. import frozen
+import json
+
+from .. import config, frozen
 from .best_bet import FEES, MIN_P, best_bet
 from .jupiter_prices import snapshot
 
@@ -89,11 +91,45 @@ def edge_for_date(date: str, take_snapshot: bool = True) -> dict:
             bb_row.update(best_bet(mk["selections"], fc["simulation"]["score_grid"], fc["simulation"]))
         e["best_bet"] = {k: v for k, v in bb_row.items() if k not in ("home", "away", "competition", "kickoff_utc")}
         out["events"].append(e)
+    for r in rows:
+        r["priced_at"] = out["market_fetched_at"]
+    rows = lock_pre_kickoff(rows, _previous_games(date))
     rows.sort(key=lambda r: r.get("kickoff_utc") or "")
     out["best_bets"]["games"] = rows
     out["best_bets"]["n_games"] = len(rows)
     out["best_bets"]["n_bet"] = sum(r.get("verdict") == "BET" for r in rows)
     out["best_bets"]["n_no_bet"] = len(rows) - out["best_bets"]["n_bet"]
+    return out
+
+
+def _previous_games(date: str) -> dict:
+    p = config.DATA_DIR / "edge" / f"{date}.json"
+    if not p.exists():
+        return {}
+    try:
+        prev = json.loads(p.read_text())
+    except ValueError:
+        return {}
+    fetched = prev.get("market_fetched_at")
+    return {g["event_id"]: {**g, "priced_at": g.get("priced_at") or fetched}
+            for g in (prev.get("best_bets") or {}).get("games", []) if g.get("event_id")}
+
+
+def _pre_kickoff(g: dict) -> bool:
+    return bool(g.get("priced_at") and g.get("kickoff_utc") and g["priced_at"] < g["kickoff_utc"]
+                and "after kick-off" not in (g.get("reason") or ""))
+
+
+def lock_pre_kickoff(rows: list[dict], prev: dict) -> list[dict]:
+    """Once a game kicks off its best bet is LOCKED at the last pre-kick-off verdict: later (in-play
+    or settled) snapshots never overwrite it, so bets can be graded against what was published."""
+    out = []
+    for r in rows:
+        p = prev.get(r["event_id"])
+        started_now = not _pre_kickoff(r)
+        if started_now and p and _pre_kickoff(p):
+            r = {**p, "locked": True, "locked_from_snapshot": p["priced_at"]}
+        out.append(r)
     return out
 
 

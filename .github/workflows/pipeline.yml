@@ -45,13 +45,15 @@ jobs:
         run: python -m oraclefc.cli run --days "$DAYS" --refresh ${DATE:+--date "$DATE"}
       - name: POST-HOC market snapshot + edge (after freezing)
         run: python -m oraclefc.cli edge --days "$DAYS" ${DATE:+--date "$DATE"} || echo "edge snapshot failed (non-fatal)"
+      - name: POST-MATCH grading of the last 3 days (results vs frozen forecasts + locked best bets)
+        run: python -m oraclefc.cli grade --days 3 || echo "grading failed (non-fatal)"
       - name: Build site
         run: python scripts/build_site.py
       - name: Commit frozen forecasts
         run: |
           git config user.name "oracle-fc-bot"
           git config user.email "oracle-fc-bot@users.noreply.github.com"
-          git add data/forecasts data/edge data/context || true
+          git add data/forecasts data/edge data/context data/results || true
           if ! git diff --cached --quiet; then
             git commit -m "pipeline: forecasts $(date -u +%Y-%m-%dT%H:%MZ)"
             for i in 1 2 3; do git pull --rebase && git push && break; sleep 5; done

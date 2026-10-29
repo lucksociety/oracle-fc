@@ -218,3 +218,47 @@ def _is_current(season: str) -> bool:
 if __name__ == "__main__":
     from .. import store
     build_venues(store.load())
+
+
+# ------------------------------------------------------------------ final results (post-match grading)
+def _regulation_score(mid: int):
+    """90-minute (regulation + stoppage) score from the match timeline; None if unavailable.
+    Prediction markets on full-time goals settle on regulation time, so extra time and
+    penalties are excluded."""
+    d = match_details_raw(mid, max_age_h=24 * 365)
+    evs = (((d or {}).get("content") or {}).get("matchFacts") or {}).get("events") or {}
+    for e in evs.get("events") or []:
+        if e.get("type") == "Half" and e.get("halfStrShort") == "FT":
+            return int(e["homeScore"]), int(e["awayScore"])
+    return None
+
+
+def day_results(date: str, max_age_h: float = 1.0) -> list[dict]:
+    """Finished matches on a FotMob day with the 90-minute score (allow-list: ids, names, kickoff,
+    score, status only)."""
+    d = matches_on(date, max_age_h=max_age_h)
+    rows = []
+    for lg in (d or {}).get("leagues", []):
+        for m in lg.get("matches", []):
+            st = m.get("status") or {}
+            reason = ((st.get("reason") or {}).get("short") or "").upper()
+            row = {"fm_match_id": int(m["id"]), "league_name": lg.get("name"), "ccode": lg.get("ccode"),
+                   "home": m["home"].get("longName") or m["home"]["name"],
+                   "away": m["away"].get("longName") or m["away"]["name"],
+                   "utc": st.get("utcTime"), "finished": bool(st.get("finished")),
+                   "cancelled": bool(st.get("cancelled")), "status": reason or None,
+                   "score_ft": None, "score_note": None}
+            if row["finished"] and not row["cancelled"]:
+                hs, as_ = m["home"].get("score"), m["away"].get("score")
+                if reason in ("AET", "PEN"):
+                    reg = _regulation_score(row["fm_match_id"])
+                    row["score_ft"] = list(reg) if reg else None
+                    row["score_note"] = (f"went to {'extra time' if reason == 'AET' else 'extra time/penalties'}; "
+                                         f"final {hs}-{as_}" + ("" if reg else "; 90-minute score unavailable"))
+                    if reason == "PEN" and reg is None and hs is not None:
+                        row["score_note"] += " (no timeline)"
+                else:
+                    row["score_ft"] = [int(hs), int(as_)] if hs is not None and as_ is not None else None
+            rows.append(row)
+    assert_no_market_keys(rows, "fotmob results")
+    return rows

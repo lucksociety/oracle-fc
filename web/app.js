@@ -267,8 +267,17 @@ async function loadModel() {
       <table><tr><th class="l">Model</th><th>Log loss</th><th>RPS</th><th>Brier</th><th>Exact log score</th><th>Top-1</th><th>Top-3</th><th>Top-5</th><th>MAE goals</th></tr>
       ${rows.map(([k, m]) => `<tr><td class="l">${esc(k)}</td><td>${m.log_loss.toFixed(4)}</td><td>${m.rps.toFixed(4)}</td><td>${m.brier.toFixed(4)}</td><td>${m.exact_log_score.toFixed(4)}</td><td>${pct(m.top1)}</td><td>${pct(m.top3)}</td><td>${pct(m.top5)}</td><td>${m.mae_goals.toFixed(3)}</td></tr>`).join("")}</table>
       <p>Ensemble weights: ${esc(JSON.stringify(reg.champion?.ensemble_weights))}</p>
-      <p class="muted">${esc(bt.promotion_rule)}</p>${ctxModel(j.context)}<p><a href="https://github.com/lucksociety/oracle-fc/blob/main/docs/BACKTEST.md" target="_blank">Full backtest report →</a></p>`;
+      <p class="muted">${esc(bt.promotion_rule)}</p>${ctxModel(j.context)}${calModel(j.calibration)}<p><a href="https://github.com/lucksociety/oracle-fc/blob/main/docs/BACKTEST.md" target="_blank">Full backtest report →</a></p>`;
   } catch (e) { $("#model").innerHTML = `<p class="muted">Model info unavailable (${esc(e.message)})</p>`; }
+}
+
+function calModel(c) {
+  if (!c || !c.variants) return "";
+  const ci = (d) => `${d.mean_diff >= 0 ? "+" : ""}${d.mean_diff.toFixed(5)} [${d.ci95.map((x) => x.toFixed(5)).join(", ")}]`;
+  const r = Object.entries(c.variants).map(([k, v]) => `<tr><td class="l">${esc(k)}${k === c.chosen ? " <b>(adopted)</b>" : ""}</td><td>${v.summary.rps.toFixed(5)}</td><td>${ci(v.delta.rps)}</td><td>${ci(v.delta.log_loss)}</td><td>${ci(v.delta.exact_log_score)}</td><td>${v.eligible ? "pass" : "fail"}</td></tr>`).join("");
+  return `<h2>Calibration layer (results only)</h2><p class="muted">Total goals / home advantage per division, draw &amp; 0-0 inflation and sharpening, fitted season-ahead on out-of-sample ensemble forecasts. Δ = calibrated − base (negative = better), test ${esc(c.test_window?.join(" → "))}, n = ${c.n_test?.toLocaleString()}. Base RPS ${c.base?.rps.toFixed(5)}.</p>
+    <table><tr><th class="l">Variant</th><th>RPS</th><th>ΔRPS [95% CI]</th><th>Δlog loss [95% CI]</th><th>Δexact log score [95% CI]</th><th>Rule</th></tr>${r}</table>
+    <p><a href="https://github.com/lucksociety/oracle-fc/blob/main/docs/CALIBRATION.md" target="_blank">Calibration report →</a></p>`;
 }
 
 function ctxModel(cx) {
@@ -279,12 +288,44 @@ function ctxModel(cx) {
     <p><a href="https://github.com/lucksociety/oracle-fc/blob/main/docs/CONTEXT_BACKTEST.md" target="_blank">Context backtest report →</a></p>`;
 }
 
+// ---------------------------------------------------------------- results tab (post-match)
+const units = (u) => (u == null ? "–" : `${u >= 0 ? "+" : ""}${u.toFixed(2)}u`);
+async function loadRecord() {
+  try {
+    const r = await getJSON("data/results/record.json");
+    const b = r.overall.bets, f = r.overall.forecast || {};
+    const days = r.by_day.slice().reverse().map((d) => `<tr><td class="l"><a href="?date=${d.date}" data-date="${d.date}" class="rdate">${d.date}</a></td><td>${d.n_final}</td><td>${d.bets.wins}-${d.bets.losses}</td><td class="${d.bets.units >= 0 ? "pos" : "neg"}">${units(d.bets.units)}</td><td>${d.rps == null ? "–" : d.rps.toFixed(4)}</td></tr>`).join("");
+    $("#record").innerHTML = `<h2>Running record</h2>
+      <div class="summary"><span class="pill">Bets <b>${b.wins}-${b.losses}</b></span><span class="pill">P&amp;L <b class="${b.units >= 0 ? "pos" : "neg"}">${units(b.units)}</b></span><span class="pill">ROI <b>${b.roi == null ? "–" : pct(b.roi)}</b></span><span class="pill">Model-expected <b>${units(b.expected_units)}</b></span><span class="pill">1X2 RPS <b>${f.rps == null ? "–" : f.rps.toFixed(4)}</b> (${r.overall.n_final} games)</span><span class="pill">Exact-score hits <b>${f.exact_hits ?? "–"}/${r.overall.n_final}</b></span></div>
+      <table><tr><th class="l">Date</th><th>Graded games</th><th>Bets W-L</th><th>Units</th><th>RPS</th></tr>${days}</table>
+      <p class="muted">${esc(r.caveat)}</p>`;
+    document.querySelectorAll(".rdate").forEach((a) => a.addEventListener("click", (e) => { e.preventDefault(); loadResults(a.dataset.date); }));
+  } catch (_) { $("#record").innerHTML = `<p class="muted">No graded results yet.</p>`; }
+}
+async function loadResults(date) {
+  try {
+    const r = await getJSON(`data/results/${date}.json`);
+    const rows = r.games.map((g) => {
+      const p = g.prediction || {}, m = g.metrics || {};
+      const bet = g.bet ? `${esc(g.bet.label)} <span class="muted">@ ${g.bet.ask?.toFixed(2)} · P ${pct(g.bet.model_p)} · EV ${pct(g.bet.ev_per_dollar)}</span>` : `<span class="muted">NO BET</span>`;
+      const res = g.status === "final" ? `<b>${esc(g.result.score_90)}</b>${g.result.note ? `<div class="muted">${esc(g.result.note)}</div>` : ""}` : `<span class="muted">${esc(g.status)}</span>`;
+      const br = g.bet_result ? `<span class="${g.bet_result === "WIN" ? "pos" : "neg"}">${g.bet_result} ${units(g.pnl_units)}</span>` : "–";
+      return `<tr><td class="l">${esc(g.home)} v ${esc(g.away)}<div class="muted">${esc(g.competition)} · ${etTime(g.kickoff_utc)}</div></td><td>${esc(p.modal_score || "–")}${m.exact_hit ? " ✅" : ""}</td><td>${pct(p.p_home, 0)} / ${pct(p.p_draw, 0)} / ${pct(p.p_away, 0)}</td><td>${res}</td><td class="l">${bet}</td><td>${br}</td><td>${m.rps == null ? "–" : m.rps.toFixed(3)}</td></tr>`;
+    }).join("");
+    const s = r.summary, b = s.bets, f = s.forecast || {};
+    $("#results").innerHTML = `<h2>${esc(date)} <small class="muted">graded ${etTime(r.graded_at)}</small></h2>
+      <p>Bets <b>${b.wins}-${b.losses}</b> · <b class="${b.units >= 0 ? "pos" : "neg"}">${units(b.units)}</b> (model expected ${units(b.expected_units)}) · 1X2 RPS ${f.rps?.toFixed(4) ?? "–"} · log loss ${f.log_loss?.toFixed(3) ?? "–"} · exact ${f.exact_hits ?? "–"}/${s.n_final} · top-5 ${f.top5_hits ?? "–"}/${s.n_final} · goals/game predicted ${f.mean_pred_total?.toFixed(2) ?? "–"} vs actual ${f.mean_actual_total?.toFixed(2) ?? "–"}</p>
+      <table><tr><th class="l">Match</th><th>Modal</th><th>H / D / A</th><th>Result (90′)</th><th class="l">Best bet</th><th>Bet</th><th>RPS</th></tr>${rows}</table>`;
+  } catch (_) { $("#results").innerHTML = `<p class="muted">No graded results for ${esc(date)} yet (games are graded after they finish).</p>`; }
+}
+
 // ---------------------------------------------------------------- wiring
 async function run() {
   const d = $("#date").value;
   history.replaceState(null, "", `?date=${d}`);
   try { render(await loadForecasts(d)); } catch (e) { $("#status").textContent = "Error: " + e.message; }
   loadEdge(d);
+  loadResults(d);
 }
 document.querySelectorAll(".tabs button").forEach((b) => b.addEventListener("click", () => {
   document.querySelectorAll(".tabs button").forEach((x) => x.classList.toggle("active", x === b));
@@ -299,5 +340,6 @@ $("#only-1x2").addEventListener("change", () => window.EDGE && renderEdge(EDGE.e
   await detectMode();
   $("#date").value = new URLSearchParams(location.search).get("date") || todayET();
   loadModel();
+  loadRecord();
   run();
 })();

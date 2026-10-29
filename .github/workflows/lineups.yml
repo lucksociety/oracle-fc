@@ -42,13 +42,15 @@ jobs:
         run: python -m oraclefc.cli ingest
       - name: Forecast + freeze (no market data)
         run: python -m oraclefc.cli run --days "$DAYS" --refresh --within-hours 3 ${DATE:+--date "$DATE"}
+      - name: POST-HOC price refresh near kick-off (best bets lock at the last pre-kick-off snapshot)
+        run: python -m oraclefc.cli edge --days 2 ${DATE:+--date "$DATE"} || echo "edge snapshot failed (non-fatal)"
       - name: Build site
         run: python scripts/build_site.py
       - name: Commit frozen forecasts
         run: |
           git config user.name "oracle-fc-bot"
           git config user.email "oracle-fc-bot@users.noreply.github.com"
-          git add data/forecasts || true
+          git add data/forecasts data/edge || true
           if ! git diff --cached --quiet; then
             git commit -m "lineups: forecasts $(date -u +%Y-%m-%dT%H:%MZ)"
             for i in 1 2 3; do git pull --rebase && git push && break; sleep 5; done

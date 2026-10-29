@@ -5,7 +5,7 @@ from pathlib import Path
 PKG = Path(__file__).resolve().parent.parent / "oraclefc"
 FORECASTING = ["models", "simulate.py", "forecast.py", "backtest.py", "run_backtest.py", "ingest", "store.py",
                "resolve.py", "fixtures", "metrics.py", "teams.py", "governance.py", "report.py", "frozen.py",
-               "experiments.py", "context", "run_context_backtest.py"]
+               "experiments.py", "context", "run_context_backtest.py", "calibrate.py", "run_calibration.py"]
 
 
 def _py_files():

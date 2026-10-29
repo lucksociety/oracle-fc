@@ -14,7 +14,7 @@ permissions:
 jobs:
   backtest:
     runs-on: ubuntu-latest
-    timeout-minutes: 120
+    timeout-minutes: 300
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -22,8 +22,13 @@ jobs:
       - run: pip install -r requirements.txt
       - run: python -m oraclefc.cli ingest
       - run: python -m oraclefc.cli backtest ${{ github.event.inputs.skip_tune == 'true' && '--skip-tune' || '' }}
+      - run: python -m oraclefc.cli ingest-context
+      - name: Context + xG champion/challenger
+        run: python -m oraclefc.run_context_backtest
+      - name: Calibration layer champion/challenger (results only)
+        run: python -m oraclefc.run_calibration
       - run: |
           git config user.name "oracle-fc-bot"
           git config user.email "oracle-fc-bot@users.noreply.github.com"
-          git add docs/BACKTEST.md experiments/
+          git add docs/BACKTEST.md docs/CONTEXT_BACKTEST.md docs/CALIBRATION.md experiments/
           git diff --cached --quiet || (git commit -m "backtest: weekly walk-forward $(date -u +%F)" && git pull --rebase && git push)

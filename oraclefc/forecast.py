@@ -21,6 +21,7 @@ from .models.baselines import HomeAwayRate
 from .models.dixon_coles import dynamic_dc, standard_dc, xg_dc
 from .models.elo import EloGoals
 from .models.ensemble import combine
+from . import calibrate
 from .report import render
 from .resolve import Resolver
 from .simulate import monte_carlo, param_uncertainty, summarise
@@ -43,6 +44,8 @@ class Engine:
         self.weights = ch.get("ensemble_weights", DEFAULT_WEIGHTS) if self.champion == "ensemble" else DEFAULT_WEIGHTS
         self.version = ch.get("version", f"{__version__}+dynamic_dc-untuned")
         self.confidence = reg.get("confidence", {})
+        # results-only calibration layer (validated in docs/CALIBRATION.md); None = not adopted
+        self.calibration = calibrate.from_json(ch["calibration"]) if ch.get("calibration") else None
         self.models = {"dynamic_dc": dynamic_dc(p["half_life_days"], p["kappa"]),
                        "elo": EloGoals(k=p["elo_k"]), "standard_dc": standard_dc(),
                        "home_away_rate": HomeAwayRate()}
@@ -87,7 +90,13 @@ class Engine:
         mats = [self.models[n].predict_matrix(fx) for n in names]
         w = np.array([self.weights[n] for n in names], float)
         comp = {n: m[0] for n, m in zip(names, mats)}
-        return combine(mats, w)[0], comp
+        return self.calibrated(combine(mats, w), fx)[0], comp
+
+    def calibrated(self, m: np.ndarray, fx: pd.DataFrame) -> np.ndarray:
+        if not self.calibration:
+            return m
+        return calibrate.apply(m, self.calibration["coef"], fx["div"].astype(str).to_numpy(),
+                               self.calibration.get("sharpen", 0.0))
 
     def _context_quality(self, ctx, r) -> list[str]:
         reg = self.context_reg
@@ -230,7 +239,7 @@ class Engine:
             from .context.live import _shift
             others = [n for n in self.weights if n != "xg_dc" and np.isfinite(comps[n]).all()]
             w = np.array([self.weights[n] for n in others], float)
-            m_no = combine([comps[n][None] for n in others], w / w.sum())[0]
+            m_no = self.calibrated(combine([comps[n][None] for n in others], w / w.sum()), fx)[0]
             xg_shift = _shift("Understat xG component (validated, in ensemble)", m_no, m, 0.0, 0.0)
             xg_shift.pop("home_rate_mult"), xg_shift.pop("away_rate_mult")
         s0 = summarise(m)

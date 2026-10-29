@@ -4,6 +4,7 @@
   python -m oraclefc.cli backtest [--skip-tune]  # walk-forward validation, champion/challenger
   python -m oraclefc.cli run [--date D] [--days N]   # discover Jupiter fixtures, forecast, freeze
   python -m oraclefc.cli edge [--date D]         # POST-HOC: snapshot market prices, compare to frozen forecasts
+  python -m oraclefc.cli grade [--date D] [--days N]  # POST-MATCH: grade forecasts + bets vs results
   python -m oraclefc.cli predict HOME AWAY --comp epl
   python -m oraclefc.cli serve                   # FastAPI dashboard on :8000
 """
@@ -72,6 +73,24 @@ def cmd_edge(a):
         print(f"{d}: post-hoc edge for {len(res['events'])} events")
 
 
+def cmd_grade(a):
+    """POST-MATCH: grade frozen forecasts + best bets against final 90-minute scores."""
+    from .market import grade
+    if a.date:
+        dates = _dates(a.date, a.days)
+    else:  # default: the last N days before today (their games are finished)
+        d0 = datetime.fromisoformat(_today()).date()
+        dates = [(d0 - timedelta(days=i)).isoformat() for i in range(a.days, 0, -1)]
+    for d in dates:
+        if not (config.FORECAST_DIR / d).exists():
+            continue
+        res = grade.grade_date(d)
+        grade.write(d, res)
+        s = res["summary"]
+        b = s["bets"]
+        print(f"{d}: {s['n_final']}/{s['n_games']} final, bets {b['wins']}-{b['losses']} ({b['units']:+.2f}u)")
+
+
 def cmd_predict(a):
     from .forecast import Engine
     fc = Engine().forecast(a.home, a.away, competition=a.comp, subcategory=a.comp)
@@ -97,6 +116,8 @@ def main(argv=None):
     sp.add_parser("ingest-context").set_defaults(f=cmd_ingest_context)
     e = sp.add_parser("edge"); e.add_argument("--date"); e.add_argument("--days", type=int, default=1)
     e.set_defaults(f=cmd_edge)
+    g = sp.add_parser("grade"); g.add_argument("--date"); g.add_argument("--days", type=int, default=2)
+    g.set_defaults(f=cmd_grade)
     pr = sp.add_parser("predict"); pr.add_argument("home"); pr.add_argument("away")
     pr.add_argument("--comp", default="epl"); pr.set_defaults(f=cmd_predict)
     s = sp.add_parser("serve"); s.add_argument("--host", default="127.0.0.1"); s.add_argument("--port", type=int, default=8000)

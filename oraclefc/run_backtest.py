@@ -9,7 +9,7 @@ import pandas as pd
 
 from . import __version__, config, metrics, store
 from .backtest import default_models, evaluate, nested_ensemble, season_of, tune, walk_forward
-from .experiments import log_experiment, save_registry
+from .experiments import load_registry, log_experiment, save_registry
 from .models.ensemble import fit_weights
 
 VALID_START, TEST_START = "2021-07-01", "2023-07-01"
@@ -72,6 +72,12 @@ def main(skip_tune: bool = False):
                         "data_cutoff": str(cutoff.date())},
            "challenger": {"name": "ensemble" if champion != "ensemble" else "dynamic_dc"},
            "confidence": conf}
+    # keep the layers validated by the later weekly steps (context backtest, calibration); they are
+    # re-validated (and replaced or removed) when those steps run right after this one
+    prev = (load_registry().get("champion") or {})
+    for k in ("context", "calibration"):
+        if k in prev:
+            reg["champion"][k] = prev[k]
     save_registry(reg)
     config.BACKTEST_DIR.mkdir(parents=True, exist_ok=True)
     (config.BACKTEST_DIR / "latest_summary.json").write_text(json.dumps(res, indent=1, default=float))

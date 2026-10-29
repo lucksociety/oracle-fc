@@ -42,6 +42,16 @@ For every game the Edge layer (`oraclefc/market/best_bet.py`, mirrored in `web/b
 * Highest EV wins; otherwise **NO BET** (with the closest miss shown). Prices fetched after kick-off, or forecasts frozen after the snapshot, are always NO BET.
 * Shown as a banner on every game card and as a **Best Bets** table per date. Half-time, corners and first-to-score markets are not modelled and never selected.
 * There is no backtest of betting returns (Directive Zero forbids historical odds), so these are research flags, not advice.
+* **Locking.** The lineups job re-prices every 20 min; once a game kicks off, its last **pre-kick-off** verdict is kept (`locked: true`) instead of being overwritten by an in-play NO BET.
+
+## Results grading (post-match)
+
+`python -m oraclefc.cli grade` (run by the daily pipeline for the last 3 days) fetches final scores from FotMob (allow-listed fields only, no odds), takes the **90-minute** score (extra time / penalties ignored, as Jupiter soccer markets settle on regulation time), and grades:
+
+* the forecast frozen **before kick-off**: modal score, 1X2 RPS and log loss, exact-score / top-5 hit, predicted vs actual goals;
+* the locked best bet: WIN/LOSS and P&L for 1 unit bought at the recorded ask + fees (win = 1/cost − 1, loss = −1), plus the model-expected units.
+
+Output: `data/results/<date>.json` per day and a running `data/results/record.json`, shown on the dashboard's **Results & Record** tab. Unfinished, postponed or unmatched games are marked as such and never guessed.
 
 ## Match context (lineups, injuries, players, xG, weather, rest, travel)
 
@@ -89,6 +99,8 @@ python -m oraclefc.run_context_backtest           # ~25 min: context-feature cha
 python -m oraclefc.cli backtest                   # ~15 min: tune, walk-forward, champion/challenger
 python -m oraclefc.cli run --date 2026-10-31 --print   # forecast + freeze every Jupiter game that day
 python -m oraclefc.cli edge --date 2026-10-31     # POST-HOC price comparison (after freezing)
+python -m oraclefc.run_calibration                # season-ahead calibration layer (needs the context backtest cache)
+python -m oraclefc.cli grade --date 2026-10-31    # POST-MATCH grading vs final scores
 python -m oraclefc.cli serve                      # dashboard at http://127.0.0.1:8000 (on-demand runs)
 python -m pytest -q
 ```

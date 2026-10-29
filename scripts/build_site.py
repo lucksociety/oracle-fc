@@ -19,7 +19,7 @@ def main():
         shutil.rmtree(SITE)
     shutil.copytree(ROOT / "web", SITE)
     data = SITE / "data"
-    for sub in ("dates", "edge"):
+    for sub in ("dates", "edge", "results"):
         src = config.DATA_DIR / sub
         (data / sub).mkdir(parents=True, exist_ok=True)
         if src.exists():
@@ -41,8 +41,15 @@ def main():
                                       default=str))
     summ = config.BACKTEST_DIR / "latest_summary.json"
     cs = config.BACKTEST_DIR / "context_summary.json"
+    cal = config.BACKTEST_DIR / "calibration_summary.json"
+    cal_js = None
+    if cal.exists():
+        c = json.loads(cal.read_text())
+        cal_js = {k: c.get(k) for k in ("experiment_id", "test_window", "n_test", "base", "chosen", "production")}
+        cal_js["variants"] = {n: {"summary": v["summary"], "delta": v["delta"], "eligible": v["eligible"]}
+                              for n, v in (c.get("variants") or {}).items()}
     model = {"registry": load_registry(), "backtest": json.loads(summ.read_text()) if summ.exists() else None,
-             "context": json.loads(cs.read_text()) if cs.exists() else None}
+             "context": json.loads(cs.read_text()) if cs.exists() else None, "calibration": cal_js}
     (data / "model.json").write_text(json.dumps(model, default=str))
     dates = sorted(p.stem for p in (data / "dates").glob("*.json"))
     (data / "index.json").write_text(json.dumps({"dates": dates}))
