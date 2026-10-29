@@ -21,6 +21,14 @@ Flow: Ed25519 signature check → PING returns PONG → `/soccer` returns a defe
 `ctx.waitUntil` edits the original response and posts follow-ups (≤10 embeds / ≤6000 chars each)
 through the interaction webhook. The model never sees prices here; this only relays the post-hoc comparison.
 
+## What /soccer and the daily post show
+
+Every fixture on the date (all of `data/dates/<date>.json`, plus any edge-only game), sorted by kick-off ET:
+one card per forecast game with the modal score (+ next 3 scores), H/D/A %, xG and the best bet (ask, model P, EV,
+🔒 if locked, WIN/LOSS once graded) or **NO BET**; games the model can't forecast (unsupported competition /
+kicked off before freezing) are listed compactly as **NO BET** with the reason. `only_bets` defaults to false.
+Messages are chunked to ≤10 embeds / ≤5800 chars, with as many follow-ups as needed. `GET /scan?date=` returns the same per-game list as JSON.
+
 ## Daily auto-post (09:00 America/New_York)
 
 A Cron Trigger (`0 13 * * *` and `0 14 * * *` UTC) runs `scheduled()`: it posts only when the ET hour is 9

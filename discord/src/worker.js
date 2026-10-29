@@ -140,124 +140,116 @@ const pp = (x) => (x == null ? "–" : (x >= 0 ? "+" : "") + Number(x).toFixed(1
 const units = (u) => (u == null ? "–" : `${u >= 0 ? "+" : ""}${Number(u).toFixed(2)}u`);
 const clip = (s, n) => (String(s).length > n ? String(s).slice(0, n - 1) + "…" : String(s));
 
-function betEmbed(g, dash) {
-  const b = g.bet;
-  const ko = unix(g.kickoff_utc);
-  const flags = [
-    b.thin_book ? "⚠️ thin book" : null,
-    b.volume != null ? `vol ${Number(b.volume).toLocaleString("en-US")}` : null,
-    b.fee_assumed ? "fee assumed" : null,
-    g.locked ? `🔒 locked at the pre-kick-off price (${String(g.locked_from_snapshot || "").slice(11, 16)} UTC)` : g.started ? "⏱️ already kicked off" : null,
-    g.model_version ? `model ${g.model_version}` : null,
-  ].filter(Boolean).join(" · ");
-  const res = g.graded;
-  const resField = res && res.status === "final"
-    ? [{ name: "Result", value: `${res.score ?? "?"} · ${res.bet_result ? `**${res.bet_result}** ${units(res.pnl)}` : "ungraded"}`, inline: false }]
-    : [];
+// Every fixture on the date: union of data/dates forecasts (incl. unsupported / not forecast) and edge games.
+const STATUS_WHY = {
+  unsupported: "no forecast: competition not covered by the model's data",
+  not_forecast_before_kickoff: "no forecast: kicked off before one was frozen",
+};
+export function allGames(scan) {
+  const byId = new Map(scan.games.map((g) => [g.event_id, g]));
+  const rows = new Map();
+  for (const f of scan.forecasts || []) {
+    const fx = f.fixture || {};
+    const id = fx.event_id;
+    if (!id) continue;
+    const ok = f.status === "ok" && f.simulation;
+    rows.set(id, { event_id: id, home: fx.home_name || fx.home, away: fx.away_name || fx.away, competition: fx.competition,
+      kickoff_utc: fx.kickoff_utc, sim: ok ? f.simulation : null,
+      why: ok ? null : STATUS_WHY[f.status] || `no forecast (${f.status || "unknown"})`, g: byId.get(id) || null });
+  }
+  for (const g of scan.games) if (!rows.has(g.event_id)) {
+    rows.set(g.event_id, { event_id: g.event_id, home: g.home, away: g.away, competition: g.competition, kickoff_utc: g.kickoff_utc,
+      sim: null, why: "forecast not in the published date file", g });
+  }
+  return [...rows.values()].sort((x, y) => (x.kickoff_utc || "").localeCompare(y.kickoff_utc || "") || String(x.home).localeCompare(String(y.home)));
+}
+export const koET = (iso) => (iso ? new Intl.DateTimeFormat("en-US", { timeZone: TZ, weekday: "short", hour: "numeric", minute: "2-digit" }).format(new Date(iso)) + " ET" : "");
+const isBet = (g) => !!g && g.verdict === "BET" && !!g.bet;
+const sc = (s) => `${s.home}–${s.away}`;
+function pickText(g) {
+  if (isBet(g)) {
+    const b = g.bet;
+    return `**BET** 🍀 ${clip(b.label, 90)} (buy ${b.side}) @ ${cents(b.ask)} · model ${pct(b.model_p)} · EV ${evp(b.ev_per_dollar)}${g.locked ? " 🔒" : ""}`;
+  }
+  if (!g) return "**NO BET** · no Jupiter prices for this game";
+  const c = g.closest;
+  return `**NO BET** · ${c ? `closest: ${clip(c.label, 60)} (P ${pct(c.model_p)}, ask ${cents(c.ask)}, EV ${evp(c.ev_per_dollar)})` : clip(g.reason || "no side with model P > 50% and +EV at the ask", 120)}`;
+}
+function resultText(r) {
+  const res = r.g?.graded;
+  if (res?.status !== "final") return null;
+  return `FT **${res.score ?? "?"}**${res.bet_result ? ` · **${res.bet_result}** ${res.bet_result === "WIN" ? "✅" : "❌"} ${units(res.pnl)}` : ""}`;
+}
+export function gameEmbed(r, now = Date.now()) {
+  const ko = unix(r.kickoff_utc);
+  const s = r.sim, g = r.g, res = g?.graded;
+  const lines = [`${clip(r.competition || "", 80)}${ko ? ` · **${koET(r.kickoff_utc)}** (<t:${ko}:R>)` : ""}`];
+  if (s) {
+    const top = (s.top_scores || []).slice(1, 4).map((t) => `${sc(t)} ${pct(t.p, 0)}`).join(", ");
+    lines.push(`🔮 **${s.modal_score ? sc(s.modal_score) : "?"}**${s.modal_score?.p != null ? ` (${pct(s.modal_score.p)})` : ""}${top ? ` · next: ${top}` : ""}`);
+    lines.push(`H/D/A **${pct(s.p_home, 0)} / ${pct(s.p_draw, 0)} / ${pct(s.p_away, 0)}** · xG ${Number(s.xg_home).toFixed(2)}–${Number(s.xg_away).toFixed(2)}`);
+  } else lines.push(`🔮 ${r.why}`);
+  lines.push(pickText(g));
+  const rt = resultText(r);
+  if (rt) lines.push(rt);
+  else if (g?.locked) lines.push(`🔒 locked at the pre-kick-off price (${String(g.locked_from_snapshot || "").slice(11, 16)} UTC)`);
+  const icon = res?.bet_result === "WIN" ? "✅" : res?.bet_result === "LOSS" ? "❌" : isBet(g) ? "🍀" : "⚽";
   return {
-    color: res?.bet_result === "WIN" ? COLORS.greenBright : res?.bet_result === "LOSS" ? COLORS.danger : COLORS.gold,
-    title: clip(`${res?.bet_result === "WIN" ? "✅" : res?.bet_result === "LOSS" ? "❌" : "🍀"} ${g.home} v ${g.away}`, 256),
-    description: `**${clip(b.label, 200)}** · buy **${b.side}**\n${g.competition || ""}${ko ? ` · <t:${ko}:f>` : ""}`,
-    fields: [
-      { name: "Price (ask)", value: cents(b.ask), inline: true },
-      { name: "Model", value: pct(b.model_p), inline: true },
-      { name: "EV / $1", value: evp(b.ev_per_dollar), inline: true },
-      { name: "Edge", value: pp(b.edge_pp), inline: true },
-      { name: "Cost incl. fee", value: cents(b.cost_per_contract), inline: true },
-      { name: "Eligible sides", value: `${g.n_eligible ?? "?"} of ${g.n_priced ?? "?"}`, inline: true },
-      ...resField,
-    ],
-    ...(flags ? { footer: { text: flags } } : {}),
+    color: res?.bet_result === "WIN" ? COLORS.greenBright : res?.bet_result === "LOSS" ? COLORS.danger : isBet(g) ? COLORS.gold : COLORS.border,
+    title: clip(`${icon} ${r.home} v ${r.away}`, 256),
+    description: clip(lines.join("\n"), 1000),
   };
 }
-function noBetLine(g) {
-  const ko = unix(g.kickoff_utc);
-  const c = g.closest;
-  const why = c
-    ? `closest: ${c.label} (P ${pct(c.model_p)}, ask ${cents(c.ask)}, EV ${evp(c.ev_per_dollar)})`
-    : g.reason || "no side with model P > 50% and +EV at the ask";
-  const ft = g.graded?.status === "final" ? ` · FT ${g.graded.score}` : "";
-  return `**${g.home} v ${g.away}**${ko ? ` · <t:${ko}:t>` : ""}${ft}\n> NO BET · ${why}`;
-}
-function noBetEmbeds(games, dash) {
-  const groups = [];
-  let cur = [], len = 0;
-  for (const g of games) {
-    const line = clip(noBetLine(g), 400);
-    if (cur.length && len + line.length + 1 > 3500) { groups.push(cur); cur = []; len = 0; }
+// Games without a forecast are listed compactly (they can't have a score prediction or a bet).
+function unforecastEmbeds(rows) {
+  const groups = []; let cur = [], len = 0;
+  for (const r of rows) {
+    const ko = unix(r.kickoff_utc);
+    const line = clip(`**${r.home} v ${r.away}**${ko ? ` · ${koET(r.kickoff_utc)}` : ""} · ${r.competition || ""}${resultText(r) ? ` · ${resultText(r)}` : ""}\n> **NO BET** · ${r.why}`, 300);
+    if (cur.length && len + line.length + 1 > 3800) { groups.push(cur); cur = []; len = 0; }
     cur.push(line); len += line.length + 1;
   }
   if (cur.length) groups.push(cur);
   return groups.map((lines, i) => ({
     color: COLORS.border,
-    title: `🚫 No bet${groups.length > 1 ? ` (${i + 1}/${groups.length})` : ""}`,
-    url: dash,
+    title: `📋 No forecast · NO BET${groups.length > 1 ? ` (${i + 1}/${groups.length})` : ""}`,
     description: lines.join("\n"),
-  }));
-}
-
-function scoreLine(f, g) {
-  const fx = f.fixture || {}, sm = f.simulation || {};
-  const ko = unix(fx.kickoff_utc);
-  const m = sm.modal_score;
-  const home = fx.home_name || fx.home, away = fx.away_name || fx.away;
-  let pick = "NO BET";
-  if (g && g.verdict === "BET" && g.bet) pick = `🍀 ${clip(g.bet.label, 60)} (${g.bet.side}) @ ${cents(g.bet.ask)} · EV ${evp(g.bet.ev_per_dollar)}`;
-  else if (!g) pick = "NO BET (no prices)";
-  if (g?.graded?.status === "final") pick += ` · FT ${g.graded.score}${g.graded.bet_result ? ` ${g.graded.bet_result === "WIN" ? "✅" : "❌"} ${units(g.graded.pnl)}` : ""}`;
-  return `**${home} ${m ? m.home + "–" + m.away : "?"} ${away}**${ko ? ` · <t:${ko}:t>` : ""}\n> ${pct(sm.p_home, 0)}/${pct(sm.p_draw, 0)}/${pct(sm.p_away, 0)} · xG ${Number(sm.xg_home).toFixed(2)}–${Number(sm.xg_away).toFixed(2)} · ${pick}`;
-}
-function scoreEmbeds(scan, games, dash) {
-  const byId = new Map(games.map((g) => [g.event_id, g]));
-  const fs = (scan.forecasts || []).filter((f) => f.status === "ok" && f.simulation)
-    .sort((a, b) => (a.fixture?.kickoff_utc || "").localeCompare(b.fixture?.kickoff_utc || ""));
-  const groups = []; let cur = [], len = 0;
-  for (const f of fs) {
-    const line = clip(scoreLine(f, byId.get(f.fixture?.event_id)), 400);
-    if (cur.length && len + line.length + 1 > 3500) { groups.push(cur); cur = []; len = 0; }
-    cur.push(line); len += line.length + 1;
-  }
-  if (cur.length) groups.push(cur);
-  return groups.map((lines, i) => ({
-    color: COLORS.goldBright,
-    title: `🔮 Score predictions${groups.length > 1 ? ` (${i + 1}/${groups.length})` : ""}`,
-    description: lines.join("\n"),
-    ...(i === groups.length - 1 ? { footer: { text: "Most likely exact score · home/draw/away · expected goals · best bet" } } : {}),
   }));
 }
 
 export function buildEmbeds(scan, site, opts = {}) {
   const dash = `${site}/?date=${scan.date}`;
   const now = opts.now ?? Date.now();
-  const games = scan.games.map((g) => ({ ...g, started: !!g.kickoff_utc && new Date(g.kickoff_utc).getTime() <= now }));
-  const isBet = (g) => g.verdict === "BET" && g.bet;
-  const bets = games.filter(isBet).sort((a, b) => b.bet.ev_per_dollar - a.bet.ev_per_dollar);
-  const nobets = games.filter((g) => !isBet(g)).sort((a, b) => (a.kickoff_utc || "").localeCompare(b.kickoff_utc || ""));
-  const lines = summaryLines(scan, games, bets, nobets, opts);
+  const onlyBets = opts.onlyBets === true; // default: every game
+  const rows = allGames(scan).map((r) => ({ ...r, g: r.g ? { ...r.g, started: !!r.kickoff_utc && new Date(r.kickoff_utc).getTime() <= now } : null }));
+  const games = rows.map((r) => r.g).filter(Boolean);
+  const bets = rows.filter((r) => isBet(r.g));
+  const nobets = rows.filter((r) => !isBet(r.g));
+  const lines = summaryLines(scan, games, rows, bets, nobets, { ...opts, onlyBets });
   const summary = {
     color: COLORS.goldBright,
     author: { name: "ORACLE FC · Luck Society", url: site + "/", icon_url: `${site}/assets/logo.jpg` },
     title: `⚽ Best Bets · ${scan.date}`,
-    url: dash,
+    url: dash, // only the summary carries the url, so Discord never merges the game embeds
     description: lines.join("\n"),
     thumbnail: { url: `${site}/assets/logo.jpg` },
     footer: { text: `${dash.replace(/^https?:\/\//, "")}${scan.modelVersion ? ` · model ${scan.modelVersion}` : ""}` },
   };
-  const embeds = [summary, ...bets.map((g) => betEmbed(g, dash))];
-  if (!opts.onlyBets) embeds.push(...scoreEmbeds(scan, games, dash));
-  return embeds;
+  const shown = onlyBets ? bets : rows;
+  return [summary, ...shown.filter((r) => r.sim || isBet(r.g)).map((r) => gameEmbed(r, now)),
+    ...unforecastEmbeds(shown.filter((r) => !r.sim && !isBet(r.g)))];
 }
 
-function summaryLines(scan, games, bets, nobets, opts) {
+function summaryLines(scan, games, rows, bets, nobets, opts) {
   const lines = [];
-  if (!scan.hasEdge) {
+  const nFc = rows.filter((r) => r.sim).length;
+  if (!scan.hasEdge && !rows.length) {
     lines.push(scan.hasDates
       ? `Forecasts are frozen for **${scan.nForecast}** games, but the pipeline hasn't captured Jupiter prices for ${scan.date} yet, so there are no picks. It snapshots every 3 hours, or open the dashboard and hit **Fetch live Jupiter prices now**.`
       : `No ORACLE FC scan stored for **${scan.date}**. The pipeline covers today to +7 days, because Jupiter only lists upcoming games.`);
   } else {
-    const nf = scan.nFixtures || games.length;
-    const unforecast = scan.nForecast && scan.nForecast < nf ? ` (${nf - scan.nForecast} not forecast)` : "";
-    lines.push(`**${bets.length}** bet · **${nobets.length}** no bet · ${nf} Jupiter games${unforecast}`);
+    lines.push(`**${rows.length}** games · **${bets.length}** bet · **${nobets.length}** NO BET · score predictions for **${nFc}**${rows.length > nFc ? ` (${rows.length - nFc} not forecast)` : ""}`);
+    if (!scan.hasEdge) lines.push("Jupiter prices not captured yet for this date, so every game is NO BET for now.");
     if (scan.fetchedAt) lines.push(`Prices: Jupiter snapshot <t:${unix(scan.fetchedAt)}:f> (<t:${unix(scan.fetchedAt)}:R>)`);
     if (scan.modelVersion) lines.push(`Model: **${scan.modelVersion}**`);
     const locked = games.filter((g) => g.started && g.locked).length;
@@ -266,7 +258,7 @@ function summaryLines(scan, games, bets, nobets, opts) {
     if (stale) lines.push(`⏱️ ${stale} game(s) already kicked off without a pre-kick-off lock.`);
     const day = scan.results;
     if (day && day.bets && (day.bets.wins + day.bets.losses) > 0) lines.push(`📊 ${scan.date} graded: bets **${day.bets.wins}-${day.bets.losses}** · **${units(day.bets.units)}** (${day.n_final}/${day.n_games} final)`);
-    if (opts.onlyBets && nobets.length) lines.push(`_Showing bets only; ${nobets.length} NO BET games hidden._`);
+    if (opts.onlyBets && nobets.length) lines.push(`_Showing bets only (only_bets: true); ${nobets.length} NO BET games hidden._`);
   }
   const rec = scan.record?.bets;
   if (rec && (rec.wins + rec.losses) > 0) lines.push(`📒 Running record${scan.recordSince ? ` since ${scan.recordSince}` : ""}: **${rec.wins}-${rec.losses}** · **${units(rec.units)}** · ROI ${rec.roi == null ? "–" : (100 * rec.roi).toFixed(1) + "%"} (1u per bet at ask + fees)`);
@@ -322,7 +314,7 @@ export async function runSoccer(interaction, env) {
       return;
     }
     const scan = await loadScan(site, date);
-    const msgs = chunkEmbeds(buildEmbeds(scan, site, { onlyBets: !!opts.only_bets }));
+    const msgs = chunkEmbeds(buildEmbeds(scan, site, { onlyBets: opts.only_bets === true }));
     const dash = `${site}/?date=${date}`;
     for (let i = 0; i < msgs.length; i++) {
       const payload = { embeds: msgs[i], allowed_mentions: { parse: [] } };
@@ -404,11 +396,17 @@ export default {
         const date = parseDate(url.searchParams.get("date"));
         if (!date) return json({ error: "bad date" }, 400);
         const scan = await loadScan((env.SITE_URL || DEFAULT_SITE).replace(/\/$/, ""), date);
-        const bets = scan.games.filter((g) => g.verdict === "BET" && g.bet);
-        return json({ date, model_version: scan.modelVersion, prices_at: scan.fetchedAt, n_games: scan.games.length,
-          n_bet: bets.length, n_locked: scan.games.filter((g) => g.locked).length,
-          bets: bets.map((g) => ({ match: `${g.home} v ${g.away}`, pick: g.bet.label, ask: g.bet.ask, model_p: g.bet.model_p,
-            ev: g.bet.ev_per_dollar, model_version: g.model_version, locked: !!g.locked, result: g.graded?.bet_result || null })),
+        const rows = allGames(scan);
+        const bets = rows.filter((r) => isBet(r.g));
+        return json({ date, model_version: scan.modelVersion, prices_at: scan.fetchedAt, n_games: rows.length,
+          n_fixtures_file: scan.nFixtures, n_forecast_file: scan.nForecast, n_score_predictions: rows.filter((r) => r.sim).length,
+          n_bet: bets.length, n_no_bet: rows.length - bets.length, n_locked: scan.games.filter((g) => g.locked).length,
+          embeds_per_message: chunkEmbeds(buildEmbeds(scan, (env.SITE_URL || DEFAULT_SITE).replace(/\/$/, ""))).map((m) => m.length),
+          games: rows.map((r) => ({ match: `${r.home} v ${r.away}`, kickoff_utc: r.kickoff_utc,
+            modal_score: r.sim?.modal_score ? `${r.sim.modal_score.home}-${r.sim.modal_score.away}` : null,
+            p_hda: r.sim ? [r.sim.p_home, r.sim.p_draw, r.sim.p_away] : null, xg: r.sim ? [r.sim.xg_home, r.sim.xg_away] : null,
+            pick: isBet(r.g) ? r.g.bet.label : "NO BET", ask: isBet(r.g) ? r.g.bet.ask : null, ev: isBet(r.g) ? r.g.bet.ev_per_dollar : null,
+            locked: !!r.g?.locked, result: r.g?.graded?.bet_result || null, note: r.why })),
           day: scan.results?.bets || null, record: scan.record?.bets || null });
       }
       return new Response("ORACLE FC Discord interactions endpoint. POST only.");
