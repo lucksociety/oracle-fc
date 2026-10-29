@@ -21,6 +21,14 @@ Flow: Ed25519 signature check → PING returns PONG → `/soccer` returns a defe
 `ctx.waitUntil` edits the original response and posts follow-ups (≤10 embeds / ≤6000 chars each)
 through the interaction webhook. The model never sees prices here; this only relays the post-hoc comparison.
 
+## Daily auto-post (09:00 America/New_York)
+
+A Cron Trigger (`0 13 * * *` and `0 14 * * *` UTC) runs `scheduled()`: it posts only when the ET hour is 9
+(13:00 UTC in EDT, 14:00 UTC in EST), skips if this bot already posted today's `⚽ Best Bets · <date>` report in the
+channel, and otherwise posts the same embeds as `/soccer` for today's ET date to `SOCCER_CHANNEL_ID` with Bot auth.
+`GET /daily-preview?at=<ISO time>` is a dry run that returns the exact payloads and whether it would post; it never posts.
+The bot needs **View Channel, Send Messages, Embed Links, Read Message History** in that channel.
+
 ## Config
 
 | Name | Kind | Value |
@@ -28,9 +36,10 @@ through the interaction webhook. The model never sees prices here; this only rel
 | `DISCORD_APPLICATION_ID` | var | `1565128574128754708` |
 | `DISCORD_PUBLIC_KEY` | var | the app's Public Key (Developer Portal → General Information) |
 | `SITE_URL` | var | `https://lucksociety.github.io/oracle-fc` |
+| `SOCCER_CHANNEL_ID` | var | `1337811266541977631` (Luck Society › ⚽-soccer-bets) |
+| `DISCORD_BOT_TOKEN` | **secret** | `printenv DISCORD_BOT_TOKEN \| npx wrangler secret put DISCORD_BOT_TOKEN` (daily post only) |
 
-No secrets are needed at runtime: replies go through the interaction token. The bot token is only
-used once, from your own machine, to register the command.
+Slash-command replies go through the interaction token; the bot token secret is used only by the daily post.
 
 ## Deploy
 

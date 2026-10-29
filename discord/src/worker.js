@@ -3,7 +3,8 @@
 // The Worker never feeds prices into the model; it only reads the published snapshot.
 //
 // Vars:    DISCORD_APPLICATION_ID, DISCORD_PUBLIC_KEY (public, not secret), SITE_URL (optional)
-// Secrets: none required. Replies use the interaction token, so the bot token never lives here.
+// Secrets: DISCORD_BOT_TOKEN, used only by the daily scheduled post (slash-command replies use the
+//          interaction token). Var SOCCER_CHANNEL_ID = the #soccer-bets channel.
 
 const DEFAULT_SITE = "https://lucksociety.github.io/oracle-fc";
 const API = "https://discord.com/api/v10";
@@ -292,9 +293,9 @@ export function chunkEmbeds(embeds) {
 
 // ------------------------------------------------------------------ Discord follow-ups
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
-async function discordCall(method, url, payload, tries = 4) {
+async function discordCall(method, url, payload, tries = 4, headers = { "content-type": "application/json" }) {
   for (let i = 0; i < tries; i++) {
-    const r = await fetch(url, { method, headers: { "content-type": "application/json" }, body: JSON.stringify(payload) });
+    const r = await fetch(url, { method, headers, body: JSON.stringify(payload) });
     if (r.status === 429) {
       const j = await r.json().catch(() => ({}));
       await sleep(Math.ceil((j.retry_after || 1) * 1000) + 100);
@@ -335,6 +336,42 @@ export async function runSoccer(interaction, env) {
   }
 }
 
+// ------------------------------------------------------------------ daily scheduled post
+// Cron runs at 13:00 and 14:00 UTC; only the one that lands at 09:xx America/New_York posts
+// (EDT = UTC-4 -> 13:00, EST = UTC-5 -> 14:00), so DST is handled year-round.
+export function etHour(d = new Date()) {
+  return +new Intl.DateTimeFormat("en-US", { timeZone: TZ, hour: "numeric", hourCycle: "h23" }).format(d);
+}
+export function dailyPayloads(scan, site) {
+  const dash = `${site}/?date=${scan.date}`;
+  const msgs = chunkEmbeds(buildEmbeds(scan, site));
+  return msgs.map((embeds, i) => ({ embeds, allowed_mentions: { parse: [] }, ...(i === msgs.length - 1 ? { components: linkRow(dash) } : {}) }));
+}
+const botHeaders = (env) => ({ authorization: `Bot ${env.DISCORD_BOT_TOKEN}`, "content-type": "application/json", "user-agent": "oracle-fc-discord (https://github.com/lucksociety/oracle-fc, 1.1)" });
+async function alreadyPosted(env, channel, date) {
+  // dedupe (cron retries / manual re-runs): skip if this bot already posted today's report
+  const r = await fetch(`${API}/channels/${channel}/messages?limit=50`, { headers: botHeaders(env) });
+  if (!r.ok) throw new Error(`Discord read ${r.status}: ${(await r.text()).slice(0, 200)}`);
+  const appId = env.DISCORD_APPLICATION_ID;
+  return (await r.json()).some((m) => m.author?.id === appId && (m.embeds || []).some((e) => e.title === `⚽ Best Bets · ${date}`));
+}
+export async function dailyPost(env, when = new Date(), { force = false } = {}) {
+  const site = (env.SITE_URL || DEFAULT_SITE).replace(/\/$/, "");
+  const channel = env.SOCCER_CHANNEL_ID;
+  if (!channel || !env.DISCORD_BOT_TOKEN) { console.log("daily post: SOCCER_CHANNEL_ID or DISCORD_BOT_TOKEN missing"); return { posted: false, reason: "not configured" }; }
+  if (!force && etHour(when) !== 9) return { posted: false, reason: `ET hour is ${etHour(when)}, not 9` };
+  const date = todayET(when);
+  if (await alreadyPosted(env, channel, date)) { console.log("daily post: already posted", date); return { posted: false, reason: "already posted" }; }
+  const scan = await loadScan(site, date);
+  const payloads = dailyPayloads(scan, site);
+  for (let i = 0; i < payloads.length; i++) {
+    if (i) await sleep(700);
+    await discordCall("POST", `${API}/channels/${channel}/messages`, payloads[i], 4, botHeaders(env));
+  }
+  console.log("daily post: posted", date, payloads.length, "messages");
+  return { posted: true, date, messages: payloads.length };
+}
+
 async function notifyFailure(edit, err) {
   try {
     await edit({ content: "ORACLE FC scan error: " + clip(err && err.message, 300) });
@@ -344,10 +381,24 @@ async function notifyFailure(edit, err) {
 }
 
 export default {
+  async scheduled(event, env, ctx) {
+    ctx.waitUntil(dailyPost(env, new Date(event.scheduledTime)).catch((e) => console.log("daily post error", String(e))));
+  },
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
     if (request.method === "GET") {
       if (url.pathname === "/health") return json({ ok: true, today_et: todayET() });
+      if (url.pathname === "/daily-preview") {
+        // DRY RUN of the 09:00 ET post: returns the exact payloads, posts nothing
+        const at = url.searchParams.get("at") ? new Date(url.searchParams.get("at")) : new Date();
+        if (isNaN(at)) return json({ error: "bad at" }, 400);
+        const site = (env.SITE_URL || DEFAULT_SITE).replace(/\/$/, "");
+        const date = todayET(at);
+        const payloads = dailyPayloads(await loadScan(site, date), site);
+        return json({ dry_run: true, would_post_at_this_time: etHour(at) === 9, et_hour: etHour(at), date,
+          channel_id: env.SOCCER_CHANNEL_ID || null, bot_token_configured: !!env.DISCORD_BOT_TOKEN,
+          crons_utc: ["0 13 * * *", "0 14 * * *"], n_messages: payloads.length, payloads });
+      }
       if (url.pathname === "/scan") {
         // public read-only summary of what /soccer would show (same published data)
         const date = parseDate(url.searchParams.get("date"));

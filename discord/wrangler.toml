@@ -9,3 +9,9 @@ enabled = true
 [vars]
 DISCORD_APPLICATION_ID = "1565128574128754708"
 SITE_URL = "https://lucksociety.github.io/oracle-fc"
+SOCCER_CHANNEL_ID = "1337811266541977631"   # Luck Society › SOCCER › ⚽-soccer-bets
+
+# Daily /soccer report at 09:00 America/New_York: 13:00 UTC during EDT, 14:00 UTC during EST.
+# The handler posts only when the ET hour is 9 and skips if today's report is already there.
+[triggers]
+crons = ["0 13 * * *", "0 14 * * *"]
