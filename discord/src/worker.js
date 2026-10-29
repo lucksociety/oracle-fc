@@ -94,19 +94,37 @@ export function gamesFromEdge(edge) {
     return g;
   });
 }
+// Model version that produced the bets: the newest version among the games' frozen forecasts.
+export function modelVersionOf(games, dates, edge) {
+  const vs = [...new Set((games || []).map((g) => g.model_version).filter(Boolean))];
+  const semver = (v) => (String(v).match(/^(\d+)\.(\d+)\.(\d+)/) || [0, 0, 0, 0]).slice(1).map(Number);
+  vs.sort((a, b) => { const x = semver(a), y = semver(b); return x[0] - y[0] || x[1] - y[1] || x[2] - y[2]; });
+  return vs.at(-1) || dates?.model_version || edge?.events?.[0]?.model_version || null;
+}
 export async function loadScan(site, date) {
-  const [edge, dates] = await Promise.all([
+  const [edge, dates, results, record] = await Promise.all([
     getJSON(`${site}/data/edge/${date}.json`),
     getJSON(`${site}/data/dates/${date}.json`).catch(() => null),
+    getJSON(`${site}/data/results/${date}.json`).catch(() => null),
+    getJSON(`${site}/data/results/record.json`).catch(() => null),
   ]);
   const forecasts = dates?.forecasts || [];
+  const games = edge ? gamesFromEdge(edge) : [];
+  const graded = new Map((results?.games || []).map((g) => [g.event_id, g]));
+  for (const g of games) {
+    const r = graded.get(g.event_id);
+    if (r) g.graded = { status: r.status, score: r.result?.score_90 || null, bet_result: r.bet_result || null, pnl: r.pnl_units ?? null };
+  }
   return {
     date,
-    games: edge ? gamesFromEdge(edge) : [],
+    games,
     fetchedAt: edge?.market_fetched_at || null,
     nFixtures: dates?.n_fixtures ?? forecasts.length,
     nForecast: forecasts.filter((f) => f.status === "ok").length,
-    modelVersion: dates?.model_version || edge?.events?.[0]?.model_version || null,
+    modelVersion: modelVersionOf(games, dates, edge),
+    results: results?.summary || null,
+    record: record?.overall || null,
+    recordSince: record?.by_day?.[0]?.date || null,
     hasEdge: !!edge,
     hasDates: !!dates,
     forecasts,
@@ -118,6 +136,7 @@ const pct = (x, d = 1) => (x == null ? "–" : (100 * x).toFixed(d) + "%");
 const cents = (x) => (x == null ? "–" : (100 * x).toFixed(1).replace(/\.0$/, "") + "¢");
 const evp = (x) => (x == null ? "–" : (x >= 0 ? "+" : "") + (100 * x).toFixed(1) + "%");
 const pp = (x) => (x == null ? "–" : (x >= 0 ? "+" : "") + Number(x).toFixed(1) + " pp");
+const units = (u) => (u == null ? "–" : `${u >= 0 ? "+" : ""}${Number(u).toFixed(2)}u`);
 const clip = (s, n) => (String(s).length > n ? String(s).slice(0, n - 1) + "…" : String(s));
 
 function betEmbed(g, dash) {
@@ -127,11 +146,16 @@ function betEmbed(g, dash) {
     b.thin_book ? "⚠️ thin book" : null,
     b.volume != null ? `vol ${Number(b.volume).toLocaleString("en-US")}` : null,
     b.fee_assumed ? "fee assumed" : null,
-    g.started ? "⏱️ already kicked off" : null,
+    g.locked ? `🔒 locked at the pre-kick-off price (${String(g.locked_from_snapshot || "").slice(11, 16)} UTC)` : g.started ? "⏱️ already kicked off" : null,
+    g.model_version ? `model ${g.model_version}` : null,
   ].filter(Boolean).join(" · ");
+  const res = g.graded;
+  const resField = res && res.status === "final"
+    ? [{ name: "Result", value: `${res.score ?? "?"} · ${res.bet_result ? `**${res.bet_result}** ${units(res.pnl)}` : "ungraded"}`, inline: false }]
+    : [];
   return {
-    color: COLORS.gold,
-    title: clip(`🍀 ${g.home} v ${g.away}`, 256),
+    color: res?.bet_result === "WIN" ? COLORS.greenBright : res?.bet_result === "LOSS" ? COLORS.danger : COLORS.gold,
+    title: clip(`${res?.bet_result === "WIN" ? "✅" : res?.bet_result === "LOSS" ? "❌" : "🍀"} ${g.home} v ${g.away}`, 256),
     description: `**${clip(b.label, 200)}** · buy **${b.side}**\n${g.competition || ""}${ko ? ` · <t:${ko}:f>` : ""}`,
     fields: [
       { name: "Price (ask)", value: cents(b.ask), inline: true },
@@ -140,6 +164,7 @@ function betEmbed(g, dash) {
       { name: "Edge", value: pp(b.edge_pp), inline: true },
       { name: "Cost incl. fee", value: cents(b.cost_per_contract), inline: true },
       { name: "Eligible sides", value: `${g.n_eligible ?? "?"} of ${g.n_priced ?? "?"}`, inline: true },
+      ...resField,
     ],
     ...(flags ? { footer: { text: flags } } : {}),
   };
@@ -150,7 +175,8 @@ function noBetLine(g) {
   const why = c
     ? `closest: ${c.label} (P ${pct(c.model_p)}, ask ${cents(c.ask)}, EV ${evp(c.ev_per_dollar)})`
     : g.reason || "no side with model P > 50% and +EV at the ask";
-  return `**${g.home} v ${g.away}**${ko ? ` · <t:${ko}:t>` : ""}\n> NO BET · ${why}`;
+  const ft = g.graded?.status === "final" ? ` · FT ${g.graded.score}` : "";
+  return `**${g.home} v ${g.away}**${ko ? ` · <t:${ko}:t>` : ""}${ft}\n> NO BET · ${why}`;
 }
 function noBetEmbeds(games, dash) {
   const groups = [];
@@ -177,6 +203,7 @@ function scoreLine(f, g) {
   let pick = "NO BET";
   if (g && g.verdict === "BET" && g.bet) pick = `🍀 ${clip(g.bet.label, 60)} (${g.bet.side}) @ ${cents(g.bet.ask)} · EV ${evp(g.bet.ev_per_dollar)}`;
   else if (!g) pick = "NO BET (no prices)";
+  if (g?.graded?.status === "final") pick += ` · FT ${g.graded.score}${g.graded.bet_result ? ` ${g.graded.bet_result === "WIN" ? "✅" : "❌"} ${units(g.graded.pnl)}` : ""}`;
   return `**${home} ${m ? m.home + "–" + m.away : "?"} ${away}**${ko ? ` · <t:${ko}:t>` : ""}\n> ${pct(sm.p_home, 0)}/${pct(sm.p_draw, 0)}/${pct(sm.p_away, 0)} · xG ${Number(sm.xg_home).toFixed(2)}–${Number(sm.xg_away).toFixed(2)} · ${pick}`;
 }
 function scoreEmbeds(scan, games, dash) {
@@ -231,10 +258,17 @@ function summaryLines(scan, games, bets, nobets, opts) {
     const unforecast = scan.nForecast && scan.nForecast < nf ? ` (${nf - scan.nForecast} not forecast)` : "";
     lines.push(`**${bets.length}** bet · **${nobets.length}** no bet · ${nf} Jupiter games${unforecast}`);
     if (scan.fetchedAt) lines.push(`Prices: Jupiter snapshot <t:${unix(scan.fetchedAt)}:f> (<t:${unix(scan.fetchedAt)}:R>)`);
-    const started = games.filter((g) => g.started).length;
-    if (started) lines.push(`⏱️ ${started} game(s) already kicked off; those prices are stale.`);
+    if (scan.modelVersion) lines.push(`Model: **${scan.modelVersion}**`);
+    const locked = games.filter((g) => g.started && g.locked).length;
+    const stale = games.filter((g) => g.started && !g.locked && g.graded?.status !== "final").length;
+    if (locked) lines.push(`🔒 ${locked} game(s) kicked off; their picks are locked at the last pre-kick-off price.`);
+    if (stale) lines.push(`⏱️ ${stale} game(s) already kicked off without a pre-kick-off lock.`);
+    const day = scan.results;
+    if (day && day.bets && (day.bets.wins + day.bets.losses) > 0) lines.push(`📊 ${scan.date} graded: bets **${day.bets.wins}-${day.bets.losses}** · **${units(day.bets.units)}** (${day.n_final}/${day.n_games} final)`);
     if (opts.onlyBets && nobets.length) lines.push(`_Showing bets only; ${nobets.length} NO BET games hidden._`);
   }
+  const rec = scan.record?.bets;
+  if (rec && (rec.wins + rec.losses) > 0) lines.push(`📒 Running record${scan.recordSince ? ` since ${scan.recordSince}` : ""}: **${rec.wins}-${rec.losses}** · **${units(rec.units)}** · ROI ${rec.roi == null ? "–" : (100 * rec.roi).toFixed(1) + "%"} (1u per bet at ask + fees)`);
   lines.push("", "Rule: model P > 50% **and** +EV buying at the Jupiter ask incl. fees; highest EV per game. Prices are compared only *after* each forecast is frozen and never feed the model. Research, not financial advice.");
   return lines;
 }
@@ -314,6 +348,18 @@ export default {
     const url = new URL(request.url);
     if (request.method === "GET") {
       if (url.pathname === "/health") return json({ ok: true, today_et: todayET() });
+      if (url.pathname === "/scan") {
+        // public read-only summary of what /soccer would show (same published data)
+        const date = parseDate(url.searchParams.get("date"));
+        if (!date) return json({ error: "bad date" }, 400);
+        const scan = await loadScan((env.SITE_URL || DEFAULT_SITE).replace(/\/$/, ""), date);
+        const bets = scan.games.filter((g) => g.verdict === "BET" && g.bet);
+        return json({ date, model_version: scan.modelVersion, prices_at: scan.fetchedAt, n_games: scan.games.length,
+          n_bet: bets.length, n_locked: scan.games.filter((g) => g.locked).length,
+          bets: bets.map((g) => ({ match: `${g.home} v ${g.away}`, pick: g.bet.label, ask: g.bet.ask, model_p: g.bet.model_p,
+            ev: g.bet.ev_per_dollar, model_version: g.model_version, locked: !!g.locked, result: g.graded?.bet_result || null })),
+          day: scan.results?.bets || null, record: scan.record?.bets || null });
+      }
       return new Response("ORACLE FC Discord interactions endpoint. POST only.");
     }
     if (request.method !== "POST") return new Response("Method not allowed", { status: 405 });

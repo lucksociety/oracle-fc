@@ -69,3 +69,20 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
+  rearm:
+    # GitHub cron on this repo is throttled to every few hours; chain the next run explicitly
+    # (workflow_dispatch from GITHUB_TOKEN is allowed to start runs). See scripts/rearm.sh.
+    needs: [run, deploy]
+    if: ${{ !cancelled() && vars.ORACLE_TICK != 'off' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      actions: write
+      contents: read
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+      RUN_ID: ${{ github.run_id }}
+    steps:
+      - uses: actions/checkout@v4
+      - run: bash scripts/rearm.sh

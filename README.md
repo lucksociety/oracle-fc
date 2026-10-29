@@ -48,6 +48,10 @@ For every game the Edge layer (`oraclefc/market/best_bet.py`, mirrored in `web/b
 * There is no backtest of betting returns (Directive Zero forbids historical odds), so these are research flags, not advice.
 * **Locking.** The lineups job re-prices every 20 min; once a game kicks off, its last **pre-kick-off** verdict is kept (`locked: true`) instead of being overwritten by an in-play NO BET.
 
+## Automation cadence
+
+`pipeline` (ingest → forecast + freeze → price snapshot → best bets → grade → site) and `lineups` (near-kick-off re-forecast → re-price → lock → site) share one concurrency group. GitHub cron on this repo fires only every few hours, so each run ends with `scripts/rearm.sh`, which dispatches exactly one follow-up: the full `pipeline` if none started in the last 3 h, otherwise `lineups` 20 min after the current run started. The crons stay as a restart if the chain ever breaks; set the repo variable `ORACLE_TICK=off` to stop the chain.
+
 ## Results grading (post-match)
 
 `python -m oraclefc.cli grade` (run by the daily pipeline for the last 3 days) fetches final scores from FotMob (allow-listed fields only, no odds), takes the **90-minute** score (extra time / penalties ignored, as Jupiter soccer markets settle on regulation time), and grades:

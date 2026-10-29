@@ -9,6 +9,10 @@ GitHub Pages (`data/edge/<date>.json`, plus `data/dates/<date>.json` for counts)
 - one gold embed per BET game: pick + side, Jupiter ask, model probability, EV per $1, edge, cost incl. fee, volume / thin-book flag,
 - compact "NO BET" embeds listing each remaining game with the reason or the closest miss,
 - a button linking to the dashboard for that date.
+- the **model version** that produced the picks (newest frozen forecast version among the games),
+- 🔒 for games that already kicked off: the pick shown is the one **locked at the last pre-kick-off price** (never an in-play price),
+- once graded (`data/results/<date>.json`): final 90′ score and WIN/LOSS ± units per pick, the day's record, and a
+  **running record** line from `data/results/record.json` (1 unit per bet at the recorded ask + fees).
 
 `date` accepts `YYYY-MM-DD`, `MM/DD`, `MM-DD-YY`, `today`, `tomorrow`; default is today in America/New_York.
 Games already kicked off are flagged, since their prices are stale.
