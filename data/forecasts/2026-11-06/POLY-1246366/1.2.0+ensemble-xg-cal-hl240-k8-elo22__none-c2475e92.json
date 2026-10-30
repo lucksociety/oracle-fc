@@ -1,0 +1,502 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-10-29",
+ "generated_at": "2026-10-30T04:13:08+00:00",
+ "fixture": {
+  "event_id": "POLY-1246366",
+  "home_name": "Willem II Tilburg",
+  "away_name": "PEC Zwolle",
+  "competition": "Eredivisie 2025",
+  "subcategory": "ere",
+  "kickoff_utc": "2026-11-06T19:00:00+00:00",
+  "kickoff_local": "2026-11-06 14:00 EST",
+  "home_matched": "Willem II",
+  "away_matched": "Zwolle",
+  "match_methods": {
+   "home": {
+    "source": "Willem II Tilburg",
+    "matched": "Willem II",
+    "method": "token-subset",
+    "score": 0.9
+   },
+   "away": {
+    "source": "PEC Zwolle",
+    "matched": "Zwolle",
+    "method": "alias",
+    "score": 1.0
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.2896045574914883,
+  "p_draw": 0.24575732083388618,
+  "p_away": 0.4646381216746256,
+  "xg_home": 1.4143775574396273,
+  "xg_away": 1.8206435816714193,
+  "xg_total": 3.235021139111047,
+  "median_total": 3,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.1108684301375865
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.1108684301375865
+   },
+   {
+    "home": 1,
+    "away": 2,
+    "p": 0.0945725398839793
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.07244136024051799
+   },
+   {
+    "home": 2,
+    "away": 2,
+    "p": 0.0708945675656017
+   },
+   {
+    "home": 0,
+    "away": 1,
+    "p": 0.06675247558597792
+   }
+  ],
+  "btts": 0.6514460739709402,
+  "totals_over": {
+   "over_0.5": 0.9591608117711965,
+   "over_1.5": 0.8419935569907326,
+   "over_2.5": 0.6296103736278404,
+   "over_3.5": 0.4067986653529106,
+   "over_4.5": 0.2225083608925456,
+   "over_5.5": 0.10667363578665756,
+   "over_6.5": 0.04418945435754016
+  },
+  "total_buckets": {
+   "0-1": 0.15800644300926736,
+   "2": 0.21238318336289222,
+   "3": 0.22281170827492985,
+   "4": 0.18429030446036496,
+   "5+": 0.2225083608925456
+  },
+  "clean_sheet_home": 0.1539708198515792,
+  "clean_sheet_away": 0.23542229440628415,
+  "home_goal_dist": [
+   0.23542229440628415,
+   0.35026842615087406,
+   0.24796754346500668,
+   0.11410134061649795,
+   0.038853731524667624,
+   0.010500979840948216,
+   0.0023503473249834334,
+   0.0005353366707379134
+  ],
+  "away_goal_dist": [
+   0.1539708198515792,
+   0.29896369255936545,
+   0.2749090173748019,
+   0.1643632528844081,
+   0.07269186049020117,
+   0.025456574180333754,
+   0.007361947063475048,
+   0.0022828355958353836
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    3
+   ],
+   "away_goals_80": [
+    0,
+    4
+   ],
+   "total_goals_80": [
+    1,
+    6
+   ],
+   "goal_diff_80": [
+    -3,
+    2
+   ]
+  },
+  "score_grid": [
+   [
+    0.040839,
+    0.066752,
+    0.064044,
+    0.038495,
+    0.017062,
+    0.005972,
+    0.001724
+   ],
+   [
+    0.050415,
+    0.110868,
+    0.094573,
+    0.056929,
+    0.02527,
+    0.008858,
+    0.002562
+   ],
+   [
+    0.037471,
+    0.072441,
+    0.070895,
+    0.040463,
+    0.017987,
+    0.006315,
+    0.001829
+   ],
+   [
+    0.017303,
+    0.033497,
+    0.03108,
+    0.019817,
+    0.008352,
+    0.002936,
+    0.000851
+   ],
+   [
+    0.005908,
+    0.011452,
+    0.01064,
+    0.006432,
+    0.003028,
+    0.001009,
+    0.000293
+   ],
+   [
+    0.001597,
+    0.0031,
+    0.002884,
+    0.001746,
+    0.000779,
+    0.00029,
+    8e-05
+   ],
+   [
+    0.000357,
+    0.000694,
+    0.000646,
+    0.000392,
+    0.000175,
+    6.2e-05,
+    1.9e-05
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.29019,
+  "p_draw": 0.245865,
+  "p_away": 0.463945,
+  "se": [
+   0.00101483930723046,
+   0.0009628483831190662,
+   0.0011151233944613483
+  ],
+  "max_abs_dev_vs_exact": 0.0006931216746255964,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   1.0193879086041282,
+   1.8540978816056597
+  ],
+  "xg_away_80": [
+   1.3279216920538064,
+   2.3547857099305167
+  ],
+  "p_home_80": [
+   0.19241588187067374,
+   0.42654494421244094
+  ],
+  "p_draw_80": [
+   0.19891848258223963,
+   0.2674937419170108
+  ],
+  "p_away_80": [
+   0.3276208951588089,
+   0.6001909120277181
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.2371652194000595,
+   0.212589911704247
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.305620041081156,
+   "p_draw": 0.23682952108229105,
+   "p_away": 0.45755043783655314,
+   "xg_home": 1.4579274601532082,
+   "xg_away": 1.819084167706401,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.2870319330102923,
+   "p_draw": 0.2355291703125653,
+   "p_away": 0.4774388966771423,
+   "xg_home": 1.2953159212388412,
+   "xg_away": 1.7332988941568843,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.22336665014301824,
+   "p_draw": 0.20519257062596363,
+   "p_away": 0.5714407792310182,
+   "xg_home": 1.4261368512405752,
+   "xg_away": 2.3259682949710614,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.4507422514197028,
+   "p_draw": 0.23057214598813094,
+   "p_away": 0.31868560259216616,
+   "xg_home": 1.7654478235803523,
+   "xg_away": 1.454393430312949,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.3054931911316401,
+   "p_draw": 0.2366958831948623,
+   "p_away": 0.4578109256734977,
+   "xg_home": 1.4575466814764013,
+   "xg_away": 1.8196419463585052,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Zwolle attack vs Willem II defence: rate multiplier \u00d71.51 for the away side.",
+   "effect": 0.4129
+  },
+  {
+   "text": "Independent results-only Elo: Willem II 1288 vs Zwolle 1446 (gap -158 before home advantage).",
+   "effect": 0.2369
+  },
+  {
+   "text": "Home advantage (Netherlands, fitted from results): \u00d71.15 on Willem II's scoring rate.",
+   "effect": 0.1376
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.2896045574914883,
+  "p_draw": 0.24575732083388618,
+  "p_away": 0.4646381216746256,
+  "xg_home": 1.4143775574396273,
+  "xg_away": 1.8206435816714193
+ },
+ "context": {
+  "fetched_at": "2026-10-30T04:13:08+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5781802",
+    "fetched_at": "2026-10-30T04:13:08+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "none",
+    "source": null,
+    "formation": null,
+    "starters": [],
+    "fetched_at": "2026-10-30T04:13:08+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   },
+   "away": {
+    "status": "none",
+    "source": null,
+    "formation": null,
+    "starters": [],
+    "fetched_at": "2026-10-30T04:13:08+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Wouter van der Steen",
+     "type": "injury",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5781802",
+     "fetched_at": "2026-10-30T04:13:08+00:00"
+    },
+    {
+     "player": "Justin Hoogma",
+     "type": "injury",
+     "expected_return": "Late October 2027",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5781802",
+     "fetched_at": "2026-10-30T04:13:08+00:00"
+    },
+    {
+     "player": "Amine Lachkar",
+     "type": "injury",
+     "expected_return": "Day to day",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5781802",
+     "fetched_at": "2026-10-30T04:13:08+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "Filip Krastev",
+     "type": "injury",
+     "expected_return": "Day to day",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5781802",
+     "fetched_at": "2026-10-30T04:13:08+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 13,
+    "n21": 2,
+    "last_match": "2026-10-24"
+   },
+   "away": {
+    "rest_days": 13,
+    "n21": 2,
+    "last_match": "2026-10-24"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 130.1
+  },
+  "venue": {
+   "name": "Koning Willem II Stadion",
+   "city": "Tilburg",
+   "lat": 51.542770382,
+   "lon": 5.06686191
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 3.0549999999999997,
+   "temp_c": 4.1,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=51.543&longitude=5.067",
+   "fetched_at": "2026-10-30T04:13:08+00:00",
+   "lat": 51.542770382,
+   "lon": 5.06686191
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": 0.89,
+    "d_p_draw_pp": 0.08,
+    "d_p_away_pp": -0.97,
+    "d_xg_home": 0.078,
+    "d_xg_away": 0.041
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0129,
+    "away_rate_mult": 1.0054,
+    "d_p_home_pp": 0.25,
+    "d_p_draw_pp": -0.09,
+    "d_p_away_pp": -0.15,
+    "d_xg_home": 0.018,
+    "d_xg_away": 0.01,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "reason": "failed validation; no live features"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 13.0,
+   "rest_a": 13.0,
+   "n21_h": 2.0,
+   "n21_a": 2.0,
+   "travel_km": 130.1225534421333,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 3.0549999999999997,
+   "temp_c": 4.1
+  }
+ },
+ "confidence": {
+  "tier": "LOW",
+  "p_max": 0.4646381216746256,
+  "entropy_nats": 1.0599311409678516,
+  "text": "Most likely result has P = 46.5%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.3% \u00b1 0.4% (n=16754, mean forecast 44.6%). Backtest RPS for N1: 0.1916; exact-score top-5 hit rate 44.8% (n=1008). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: LOW (entropy 1.060 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Willem II: no lineup information.",
+  "Willem II: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.",
+  "Zwolle: no lineup information.",
+  "Zwolle: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+ ],
+ "verdict": "Willem II 1\u20131 Zwolle is the single most probable scoreline at 11.1%: expected goals 1.41\u20131.82 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.047). Exact scores are inherently uncertain; the 1X2 split is 29.0%/24.6%/46.5%.",
+ "resolved": {
+  "home_key": "Netherlands:Willem II",
+  "away_key": "Netherlands:Zwolle",
+  "div": "N1",
+  "home_div": "N1",
+  "away_div": "N1",
+  "country": "Netherlands"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: PEC Zwolle at Willem II Tilburg\nCompetition: Eredivisie 2025\nDate: 2026-11-06 14:00 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-10-29\n\nPRIMARY FINAL SCORE PREDICTION\n\nWillem II Tilburg 1 \u2013 1 PEC Zwolle\n(modal exact score, probability 11.1%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.41\nAway: 1.82\nExpected Total: 3.24\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 29.0%\nDraw: 24.6%\nAway Win: 46.5%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 11.1%\n2. 1\u20132: 9.5%\n3. 2\u20131: 7.2%\n4. 2\u20132: 7.1%\n5. 0\u20131: 6.7%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 15.8%\nTotal 2 goals: 21.2%\nTotal 3 goals: 22.3%\nTotal 4 goals: 18.4%\nTotal 5+ goals: 22.3%\n\nBoth Teams Score: 65.1%\nClean sheet Willem II Tilburg: 15.4% \u00b7 Clean sheet PEC Zwolle: 23.5%\n\nMATCH INTELLIGENCE\n\n1. Zwolle attack vs Willem II defence: rate multiplier \u00d71.51 for the away side.\n2. Independent results-only Elo: Willem II 1288 vs Zwolle 1446 (gap -158 before home advantage).\n3. Home advantage (Netherlands, fitted from results): \u00d71.15 on Willem II's scoring rate.\n\nMODEL CONFIDENCE\n\nMost likely result has P = 46.5%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.3% \u00b1 0.4% (n=16754, mean forecast 44.6%). Backtest RPS for N1: 0.1916; exact-score top-5 hit rate 44.8% (n=1008). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: LOW (entropy 1.060 nats of max 1.099).\nParameter-uncertainty 80% bands: xG Willem II Tilburg 1.02\u20131.85, xG PEC Zwolle 1.33\u20132.35; P(home win) 19.2%\u201342.7%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0007 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nWillem II: NONE, fetched 2026-10-30 00:13 EDT\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\nZwolle: NONE, fetched 2026-10-30 00:13 EDT\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nKEY ABSENCES\n\n- Willem II: Wouter van der Steen \u2014 injury, Mid November 2026 [FotMob, 2026-10-30 00:13 EDT]\n- Willem II: Justin Hoogma \u2014 injury, Late October 2027 [FotMob, 2026-10-30 00:13 EDT]\n- Willem II: Amine Lachkar \u2014 injury, Day to day [FotMob, 2026-10-30 00:13 EDT]\n- Zwolle: Filip Krastev \u2014 injury, Day to day [FotMob, 2026-10-30 00:13 EDT]\n\nWEATHER AT VENUE\n\nKoning Willem II Stadion, Tilburg: 4.1 \u00b0C, wind 3.1 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-10-30 00:13 EDT]\n\nREST & TRAVEL\n\nWillem II: 13 days' rest, 2 matches in previous 21 days \u00b7 Zwolle: 13 days' rest, 2 in 21 days \u00b7 away travel 130.1 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 29.0% / 24.6% / 46.5%, xG 1.41\u20131.82\n- Understat xG component (validated, in ensemble): home +0.89 pp, draw +0.08 pp, away -0.97 pp; xG +0.078 / +0.041\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.25 pp, draw -0.09 pp, away -0.15 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- lineup: not applied (failed validation; no live features)\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Willem II: no lineup information.\n- Willem II: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n- Zwolle: no lineup information.\n- Zwolle: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nFINAL VERDICT\n\nWillem II 1\u20131 Zwolle is the single most probable scoreline at 11.1%: expected goals 1.41\u20131.82 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.047). Exact scores are inherently uncertain; the 1X2 split is 29.0%/24.6%/46.5%.\n",
+ "frozen_at": "2026-10-30T04:13:08+00:00",
+ "sha256": "a3da3ced2656440fb3125bd436f5c4f8419ab25ace439ca31bf82aab8579972b"
+}
