@@ -1,0 +1,669 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-10-29",
+ "generated_at": "2026-10-30T10:12:08+00:00",
+ "fixture": {
+  "event_id": "POLY-1209174",
+  "home_name": "Bayer 04 Leverkusen",
+  "away_name": "VfB Stuttgart",
+  "competition": "Bundesliga 2025",
+  "subcategory": "bun",
+  "kickoff_utc": "2026-10-31T14:30:00+00:00",
+  "kickoff_local": "2026-10-31 10:30 EDT",
+  "home_matched": "Leverkusen",
+  "away_matched": "Stuttgart",
+  "match_methods": {
+   "home": {
+    "source": "Bayer 04 Leverkusen",
+    "matched": "Leverkusen",
+    "method": "alias",
+    "score": 1.0
+   },
+   "away": {
+    "source": "VfB Stuttgart",
+    "matched": "Stuttgart",
+    "method": "core-tokens",
+    "score": 0.97
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.5435633092017882,
+  "p_draw": 0.22518440623158062,
+  "p_away": 0.23125228456663113,
+  "xg_home": 2.1051908463029068,
+  "xg_away": 1.3445377082899463,
+  "xg_total": 3.449728554592853,
+  "median_total": 3,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.0978894251048334
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.0978894251048334
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.09666984808654763
+   },
+   {
+    "home": 2,
+    "away": 0,
+    "p": 0.06904902491686747
+   },
+   {
+    "home": 2,
+    "away": 2,
+    "p": 0.06865392521120332
+   },
+   {
+    "home": 3,
+    "away": 1,
+    "p": 0.06764732300029085
+   }
+  ],
+  "btts": 0.6644559410616493,
+  "totals_over": {
+   "over_0.5": 0.9666401750179922,
+   "over_1.5": 0.8653841748504797,
+   "over_2.5": 0.6713072837197896,
+   "over_3.5": 0.4542257064561664,
+   "over_4.5": 0.26287305919083276,
+   "over_5.5": 0.13394236952305366,
+   "over_6.5": 0.059403772970013896
+  },
+  "total_buckets": {
+   "0-1": 0.1346158251495202,
+   "2": 0.19407689113069004,
+   "3": 0.21708157726362326,
+   "4": 0.1913526472653337,
+   "5+": 0.26287305919083276
+  },
+  "clean_sheet_home": 0.253013089373694,
+  "clean_sheet_away": 0.11589079454666447,
+  "home_goal_dist": [
+   0.11589079454666447,
+   0.25870354597736317,
+   0.27506478369520543,
+   0.19132528147058114,
+   0.09898492749411258,
+   0.04074813430994314,
+   0.013914361654274383,
+   0.005368170851855679
+  ],
+  "away_goal_dist": [
+   0.253013089373694,
+   0.3571713627794429,
+   0.2402646888914408,
+   0.10489018537869635,
+   0.03380878248903065,
+   0.008637177915330566,
+   0.0018261428772037326,
+   0.0003885702951610059
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    4
+   ],
+   "away_goals_80": [
+    0,
+    3
+   ],
+   "total_goals_80": [
+    1,
+    6
+   ],
+   "goal_diff_80": [
+    -1,
+    3
+   ]
+  },
+  "score_grid": [
+   [
+    0.03336,
+    0.038601,
+    0.027138,
+    0.011796,
+    0.003788,
+    0.000963,
+    0.000202
+   ],
+   [
+    0.062655,
+    0.097889,
+    0.060503,
+    0.02641,
+    0.008518,
+    0.002174,
+    0.000458
+   ],
+   [
+    0.069049,
+    0.09667,
+    0.068654,
+    0.028493,
+    0.009228,
+    0.002364,
+    0.0005
+   ],
+   [
+    0.048113,
+    0.067647,
+    0.045677,
+    0.021235,
+    0.006537,
+    0.001681,
+    0.000357
+   ],
+   [
+    0.024853,
+    0.035089,
+    0.02379,
+    0.010513,
+    0.003624,
+    0.000886,
+    0.000189
+   ],
+   [
+    0.010191,
+    0.014447,
+    0.009833,
+    0.004362,
+    0.001429,
+    0.000391,
+    7.9e-05
+   ],
+   [
+    0.003464,
+    0.004929,
+    0.003367,
+    0.001499,
+    0.000493,
+    0.000128,
+    2.9e-05
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.54403,
+  "p_draw": 0.22489,
+  "p_away": 0.23108,
+  "se": [
+   0.0011136906192924496,
+   0.0009335804408298195,
+   0.0009425551273002551
+  ],
+  "max_abs_dev_vs_exact": 0.0004666907982118218,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   1.6513674042071957,
+   2.5975195402783333
+  ],
+  "xg_away_80": [
+   1.0273030563810515,
+   1.6825884504851003
+  ],
+  "p_home_80": [
+   0.4293267217537752,
+   0.6608518850027553
+  ],
+  "p_draw_80": [
+   0.181000173901476,
+   0.24950903287329348
+  ],
+  "p_away_80": [
+   0.15394464116126166,
+   0.3273315349892718
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.1795812444657381,
+   0.1831088483351455
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.5352659878003502,
+   "p_draw": 0.21910818437716614,
+   "p_away": 0.24562582782248382,
+   "xg_home": 2.088191021769055,
+   "xg_away": 1.3729493497435221,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.5229827383452673,
+   "p_draw": 0.22520799188585036,
+   "p_away": 0.2518092697688824,
+   "xg_home": 1.8788038125402187,
+   "xg_away": 1.2415714693088034,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.5731806347752169,
+   "p_draw": 0.21209394503215342,
+   "p_away": 0.21472542019262975,
+   "xg_home": 2.2114289679803174,
+   "xg_away": 1.310083842935608,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.45250378310800177,
+   "p_draw": 0.23123492809904828,
+   "p_away": 0.31626128879295007,
+   "xg_home": 1.7595119161779555,
+   "xg_away": 1.4394657282833494,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.5566745643630278,
+   "p_draw": 0.21102814616644452,
+   "p_away": 0.23229728947052786,
+   "xg_home": 2.199472938200876,
+   "xg_away": 1.3818303801246463,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Leverkusen attack vs Stuttgart defence: time-weighted strength gap multiplies Leverkusen's scoring rate by \u00d71.34 relative to an average pairing (from 34/29 decay-weighted matches).",
+   "effect": 0.289
+  },
+  {
+   "text": "Home advantage (Germany, fitted from results): \u00d71.30 on Leverkusen's scoring rate.",
+   "effect": 0.2618
+  },
+  {
+   "text": "Stuttgart attack vs Leverkusen defence: rate multiplier \u00d71.14 for the away side.",
+   "effect": 0.1314
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.5435633092017882,
+  "p_draw": 0.22518440623158062,
+  "p_away": 0.23125228456663113,
+  "xg_home": 2.1051908463029068,
+  "xg_away": 1.3445377082899463
+ },
+ "context": {
+  "fetched_at": "2026-10-30T10:12:08+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5881207",
+    "fetched_at": "2026-10-30T10:12:08+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "projected",
+    "source": "FotMob projected XI (enetpulse)",
+    "formation": "4-2-3-1",
+    "starters": [
+     {
+      "name": "Mark Flekken",
+      "pos": "G"
+     },
+     {
+      "name": "Jarell Quansah",
+      "pos": "D"
+     },
+     {
+      "name": "Edmond Tapsoba",
+      "pos": "D"
+     },
+     {
+      "name": "Facundo Medina",
+      "pos": "D"
+     },
+     {
+      "name": "Miguel Guti\u00e9rrez",
+      "pos": "D"
+     },
+     {
+      "name": "Aleix Garc\u00eda",
+      "pos": "M"
+     },
+     {
+      "name": "Equi Fern\u00e1ndez",
+      "pos": "M"
+     },
+     {
+      "name": "Nathan Tella",
+      "pos": "M"
+     },
+     {
+      "name": "Ibrahim Maza",
+      "pos": "M"
+     },
+     {
+      "name": "Afonso Moreira",
+      "pos": "F"
+     },
+     {
+      "name": "Patrik Schick",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-10-30T10:12:08+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [],
+    "mean_xi_attack_index": -0.079,
+    "mean_continuity": 0.026,
+    "p_backup_gk": 0.175
+   },
+   "away": {
+    "status": "projected",
+    "source": "FotMob projected XI (enetpulse)",
+    "formation": "4-2-3-1",
+    "starters": [
+     {
+      "name": "Dennis Seimen",
+      "pos": "G"
+     },
+     {
+      "name": "Lorenz Assignon",
+      "pos": "D"
+     },
+     {
+      "name": "Finn Jeltsch",
+      "pos": "D"
+     },
+     {
+      "name": "Jeff Chabot",
+      "pos": "D"
+     },
+     {
+      "name": "Maximilian Mittelst\u00e4dt",
+      "pos": "D"
+     },
+     {
+      "name": "Atakan Karazor",
+      "pos": "M"
+     },
+     {
+      "name": "Grischa Pr\u00f6mel",
+      "pos": "M"
+     },
+     {
+      "name": "Bilal El Khannouss",
+      "pos": "M"
+     },
+     {
+      "name": "Deniz Undav",
+      "pos": "F"
+     },
+     {
+      "name": "Chris F\u00fchrich",
+      "pos": "M"
+     },
+     {
+      "name": "Ermedin Demirovi\u0107",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-10-30T10:12:08+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [],
+    "mean_xi_attack_index": -0.041,
+    "mean_continuity": -0.537,
+    "p_backup_gk": 0.0
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Kennet Eichhorn",
+     "type": "injury",
+     "expected_return": "Late October 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881207",
+     "fetched_at": "2026-10-30T10:12:08+00:00"
+    },
+    {
+     "player": "Gu\u00e9la Dou\u00e9",
+     "type": "injury",
+     "expected_return": "A few weeks",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881207",
+     "fetched_at": "2026-10-30T10:12:08+00:00"
+    },
+    {
+     "player": "Eliesse Ben Seghir",
+     "type": "injury",
+     "expected_return": "About 1-2 weeks",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881207",
+     "fetched_at": "2026-10-30T10:12:08+00:00"
+    },
+    {
+     "player": "Martin Terrier",
+     "type": "injury",
+     "expected_return": "Early December 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881207",
+     "fetched_at": "2026-10-30T10:12:08+00:00"
+    },
+    {
+     "player": "Christian Kofane",
+     "type": "injury",
+     "expected_return": "A few weeks",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881207",
+     "fetched_at": "2026-10-30T10:12:08+00:00"
+    },
+    {
+     "player": "Moussa Diaby",
+     "type": "injury",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881207",
+     "fetched_at": "2026-10-30T10:12:08+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "Dan-Axel Zagadou",
+     "type": "injury",
+     "expected_return": "Late October 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881207",
+     "fetched_at": "2026-10-30T10:12:08+00:00"
+    },
+    {
+     "player": "Josha Vagnoman",
+     "type": "injury",
+     "expected_return": "A few weeks",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881207",
+     "fetched_at": "2026-10-30T10:12:08+00:00"
+    },
+    {
+     "player": "Angelo Stiller",
+     "type": "injury",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881207",
+     "fetched_at": "2026-10-30T10:12:08+00:00"
+    },
+    {
+     "player": "Justin Diehl",
+     "type": "injury",
+     "expected_return": "Late October 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881207",
+     "fetched_at": "2026-10-30T10:12:08+00:00"
+    },
+    {
+     "player": "Leo Sauer",
+     "type": "injury",
+     "expected_return": "About 1-2 weeks",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881207",
+     "fetched_at": "2026-10-30T10:12:08+00:00"
+    },
+    {
+     "player": "Tiago Tom\u00e1s",
+     "type": "injury",
+     "expected_return": "Late October 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881207",
+     "fetched_at": "2026-10-30T10:12:08+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 6,
+    "n21": 3,
+    "last_match": "2026-10-25"
+   },
+   "away": {
+    "rest_days": 8,
+    "n21": 3,
+    "last_match": "2026-10-23"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 296.4
+  },
+  "venue": {
+   "name": "BayArena",
+   "city": "Leverkusen",
+   "lat": 51.038213121,
+   "lon": 7.002249956
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 3.3499999999999996,
+   "temp_c": 12.7,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=51.038&longitude=7.002",
+   "fetched_at": "2026-10-30T10:12:08+00:00",
+   "lat": 51.038213121,
+   "lon": 7.002249956
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": 1.75,
+    "d_p_draw_pp": -0.75,
+    "d_p_away_pp": -1.0,
+    "d_xg_home": 0.161,
+    "d_xg_away": 0.069
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0214,
+    "away_rate_mult": 1.009,
+    "d_p_home_pp": 0.67,
+    "d_p_draw_pp": -0.33,
+    "d_p_away_pp": -0.35,
+    "d_xg_home": 0.044,
+    "d_xg_away": 0.012,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "home_rate_mult": 0.9881,
+    "away_rate_mult": 0.9809,
+    "d_p_home_pp": 0.02,
+    "d_p_draw_pp": 0.14,
+    "d_p_away_pp": -0.16,
+    "d_xg_home": -0.024,
+    "d_xg_away": -0.024,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 6.0,
+   "rest_a": 8.0,
+   "n21_h": 3.0,
+   "n21_a": 3.0,
+   "travel_km": 296.3751164420802,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 3.3499999999999996,
+   "temp_c": 12.7
+  }
+ },
+ "confidence": {
+  "tier": "MODERATE",
+  "p_max": 0.5435633092017882,
+  "entropy_nats": 1.0056843109977982,
+  "text": "Most likely result has P = 54.4%. In the out-of-sample backtest, favourites priced 0.50\u20130.60 won 53.9% \u00b1 0.5% (n=9522, mean forecast 54.4%). Backtest RPS for D1: 0.2000; exact-score top-5 hit rate 42.2% (n=981). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: MODERATE (entropy 1.006 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Leverkusen: lineup is PROJECTED (FotMob projected XI (enetpulse)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Stuttgart: lineup is PROJECTED (FotMob projected XI (enetpulse)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior)."
+ ],
+ "verdict": "Leverkusen 1\u20131 Stuttgart is the single most probable scoreline at 9.8%: expected goals 2.11\u20131.34 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.047). Exact scores are inherently uncertain; the 1X2 split is 54.4%/22.5%/23.1%.",
+ "resolved": {
+  "home_key": "Germany:Leverkusen",
+  "away_key": "Germany:Stuttgart",
+  "div": "D1",
+  "home_div": "D1",
+  "away_div": "D1",
+  "country": "Germany"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: VfB Stuttgart at Bayer 04 Leverkusen\nCompetition: Bundesliga 2025\nDate: 2026-10-31 10:30 EDT\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-10-29\n\nPRIMARY FINAL SCORE PREDICTION\n\nBayer 04 Leverkusen 1 \u2013 1 VfB Stuttgart\n(modal exact score, probability 9.8%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 2.11\nAway: 1.34\nExpected Total: 3.45\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 54.4%\nDraw: 22.5%\nAway Win: 23.1%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 9.8%\n2. 2\u20131: 9.7%\n3. 2\u20130: 6.9%\n4. 2\u20132: 6.9%\n5. 3\u20131: 6.8%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 13.5%\nTotal 2 goals: 19.4%\nTotal 3 goals: 21.7%\nTotal 4 goals: 19.1%\nTotal 5+ goals: 26.3%\n\nBoth Teams Score: 66.4%\nClean sheet Bayer 04 Leverkusen: 25.3% \u00b7 Clean sheet VfB Stuttgart: 11.6%\n\nMATCH INTELLIGENCE\n\n1. Leverkusen attack vs Stuttgart defence: time-weighted strength gap multiplies Leverkusen's scoring rate by \u00d71.34 relative to an average pairing (from 34/29 decay-weighted matches).\n2. Home advantage (Germany, fitted from results): \u00d71.30 on Leverkusen's scoring rate.\n3. Stuttgart attack vs Leverkusen defence: rate multiplier \u00d71.14 for the away side.\n\nMODEL CONFIDENCE\n\nMost likely result has P = 54.4%. In the out-of-sample backtest, favourites priced 0.50\u20130.60 won 53.9% \u00b1 0.5% (n=9522, mean forecast 54.4%). Backtest RPS for D1: 0.2000; exact-score top-5 hit rate 42.2% (n=981). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: MODERATE (entropy 1.006 nats of max 1.099).\nParameter-uncertainty 80% bands: xG Bayer 04 Leverkusen 1.65\u20132.60, xG VfB Stuttgart 1.03\u20131.68; P(home win) 42.9%\u201366.1%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0005 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nLeverkusen: PROJECTED \u2014 FotMob projected XI (enetpulse), fetched 2026-10-30 06:12 EDT (4-2-3-1)\n  Mark Flekken (G), Jarell Quansah (D), Edmond Tapsoba (D), Facundo Medina (D), Miguel Guti\u00e9rrez (D), Aleix Garc\u00eda (M), Equi Fern\u00e1ndez (M), Nathan Tella (M), Ibrahim Maza (M), Afonso Moreira (F), Patrik Schick (F)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs -0.079 (log) \u00b7 continuity +0.03 \u00b7 P(backup GK) 18%\nStuttgart: PROJECTED \u2014 FotMob projected XI (enetpulse), fetched 2026-10-30 06:12 EDT (4-2-3-1)\n  Dennis Seimen (G), Lorenz Assignon (D), Finn Jeltsch (D), Jeff Chabot (D), Maximilian Mittelst\u00e4dt (D), Atakan Karazor (M), Grischa Pr\u00f6mel (M), Bilal El Khannouss (M), Deniz Undav (F), Chris F\u00fchrich (M), Ermedin Demirovi\u0107 (F)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs -0.041 (log) \u00b7 continuity -0.54 \u00b7 P(backup GK) 0%\n\nKEY ABSENCES\n\n- Leverkusen: Kennet Eichhorn \u2014 injury, Late October 2026 [FotMob, 2026-10-30 06:12 EDT]\n- Leverkusen: Gu\u00e9la Dou\u00e9 \u2014 injury, A few weeks [FotMob, 2026-10-30 06:12 EDT]\n- Leverkusen: Eliesse Ben Seghir \u2014 injury, About 1-2 weeks [FotMob, 2026-10-30 06:12 EDT]\n- Leverkusen: Martin Terrier \u2014 injury, Early December 2026 [FotMob, 2026-10-30 06:12 EDT]\n- Leverkusen: Christian Kofane \u2014 injury, A few weeks [FotMob, 2026-10-30 06:12 EDT]\n- Leverkusen: Moussa Diaby \u2014 injury, Mid November 2026 [FotMob, 2026-10-30 06:12 EDT]\n- Stuttgart: Dan-Axel Zagadou \u2014 injury, Late October 2026 [FotMob, 2026-10-30 06:12 EDT]\n- Stuttgart: Josha Vagnoman \u2014 injury, A few weeks [FotMob, 2026-10-30 06:12 EDT]\n- Stuttgart: Angelo Stiller \u2014 injury, Mid November 2026 [FotMob, 2026-10-30 06:12 EDT]\n- Stuttgart: Justin Diehl \u2014 injury, Late October 2026 [FotMob, 2026-10-30 06:12 EDT]\n- Stuttgart: Leo Sauer \u2014 injury, About 1-2 weeks [FotMob, 2026-10-30 06:12 EDT]\n- Stuttgart: Tiago Tom\u00e1s \u2014 injury, Late October 2026 [FotMob, 2026-10-30 06:12 EDT]\n\nWEATHER AT VENUE\n\nBayArena, Leverkusen: 12.7 \u00b0C, wind 3.3 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-10-30 06:12 EDT]\n\nREST & TRAVEL\n\nLeverkusen: 6 days' rest, 3 matches in previous 21 days \u00b7 Stuttgart: 8 days' rest, 3 in 21 days \u00b7 away travel 296.4 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 54.4% / 22.5% / 23.1%, xG 2.11\u20131.34\n- Understat xG component (validated, in ensemble): home +1.75 pp, draw -0.75 pp, away -1.00 pp; xG +0.161 / +0.069\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.67 pp, draw -0.33 pp, away -0.35 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- lineup: NOT APPLIED (failed out-of-sample validation); would have moved home +0.02 pp, draw +0.14 pp, away -0.16 pp\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Leverkusen: lineup is PROJECTED (FotMob projected XI (enetpulse)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Stuttgart: lineup is PROJECTED (FotMob projected XI (enetpulse)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n\nFINAL VERDICT\n\nLeverkusen 1\u20131 Stuttgart is the single most probable scoreline at 9.8%: expected goals 2.11\u20131.34 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.047). Exact scores are inherently uncertain; the 1X2 split is 54.4%/22.5%/23.1%.\n",
+ "frozen_at": "2026-10-30T10:12:08+00:00",
+ "sha256": "d8c0eeb69aa73338145fd22711ddaa5bfbf7b9b98f791b347b9c14072f280d82"
+}

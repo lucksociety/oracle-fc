@@ -1,0 +1,613 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-10-29",
+ "generated_at": "2026-10-30T10:12:52+00:00",
+ "fixture": {
+  "event_id": "POLY-1216157",
+  "home_name": "Real Racing Club",
+  "away_name": "Real Madrid CF",
+  "competition": "La Liga 2025",
+  "subcategory": "lal",
+  "kickoff_utc": "2026-11-01T15:15:00+00:00",
+  "kickoff_local": "2026-11-01 10:15 EST",
+  "home_matched": "Santander",
+  "away_matched": "Real Madrid",
+  "match_methods": {
+   "home": {
+    "source": "Real Racing Club",
+    "matched": "Santander",
+    "method": "alias",
+    "score": 1.0
+   },
+   "away": {
+    "source": "Real Madrid CF",
+    "matched": "Real Madrid",
+    "method": "core-tokens",
+    "score": 0.97
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.14466238359542372,
+  "p_draw": 0.19252791814694636,
+  "p_away": 0.66280969825763,
+  "xg_home": 1.099070127419391,
+  "xg_away": 2.419316242004321,
+  "xg_total": 3.5183863694237116,
+  "median_total": 3,
+  "modal_score": {
+   "home": 1,
+   "away": 2,
+   "p": 0.09317659434711034
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 2,
+    "p": 0.09317659434711034
+   },
+   {
+    "home": 0,
+    "away": 2,
+    "p": 0.08897600596011969
+   },
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.0832294310045498
+   },
+   {
+    "home": 1,
+    "away": 3,
+    "p": 0.07494021015432643
+   },
+   {
+    "home": 0,
+    "away": 1,
+    "p": 0.07467172957203233
+   }
+  ],
+  "btts": 0.6091745780643584,
+  "totals_over": {
+   "over_0.5": 0.9642168202553529,
+   "over_1.5": 0.8599721322937611,
+   "over_2.5": 0.6722093842639925,
+   "over_3.5": 0.4648785646402272,
+   "over_4.5": 0.2810372705691173,
+   "over_5.5": 0.15201588717347372,
+   "over_6.5": 0.0730449834958093
+  },
+  "total_buckets": {
+   "0-1": 0.14002786770623904,
+   "2": 0.1877627480297686,
+   "3": 0.2073308196237652,
+   "4": 0.18384129407110986,
+   "5+": 0.2810372705691173
+  },
+  "clean_sheet_home": 0.08822370223907428,
+  "clean_sheet_away": 0.3383848994412146,
+  "home_goal_dist": [
+   0.3383848994412146,
+   0.3619250057765413,
+   0.19758399652942488,
+   0.07424827266571177,
+   0.021527883607644595,
+   0.005101397184147575,
+   0.001021275424220105,
+   0.00020726937109522524
+  ],
+  "away_goal_dist": [
+   0.08822370223907428,
+   0.21735837039764974,
+   0.26066482816373326,
+   0.20857472614504843,
+   0.12606420409881786,
+   0.06143255792544237,
+   0.025123988407553838,
+   0.012557622622680327
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    3
+   ],
+   "away_goals_80": [
+    1,
+    4
+   ],
+   "total_goals_80": [
+    1,
+    6
+   ],
+   "goal_diff_80": [
+    -4,
+    1
+   ]
+  },
+  "score_grid": [
+   [
+    0.035783,
+    0.074672,
+    0.088976,
+    0.068858,
+    0.040144,
+    0.01888,
+    0.007474
+   ],
+   [
+    0.029573,
+    0.083229,
+    0.093177,
+    0.07494,
+    0.045365,
+    0.022101,
+    0.009031
+   ],
+   [
+    0.015557,
+    0.039883,
+    0.052908,
+    0.041751,
+    0.02611,
+    0.013089,
+    0.00548
+   ],
+   [
+    0.005414,
+    0.014369,
+    0.018646,
+    0.016901,
+    0.010262,
+    0.005253,
+    0.002237
+   ],
+   [
+    0.001481,
+    0.004043,
+    0.005381,
+    0.004718,
+    0.003253,
+    0.001599,
+    0.000689
+   ],
+   [
+    0.000337,
+    0.000939,
+    0.001272,
+    0.001132,
+    0.000748,
+    0.000414,
+    0.00017
+   ],
+   [
+    6.6e-05,
+    0.000186,
+    0.000254,
+    0.000228,
+    0.000152,
+    8e-05,
+    3.7e-05
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.143595,
+  "p_draw": 0.19310500000000003,
+  "p_away": 0.6633,
+  "se": [
+   0.0007841411734343503,
+   0.0008826535531424546,
+   0.0010567239705807756
+  ],
+  "max_abs_dev_vs_exact": 0.0010673835954237154,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   0.8637970268612273,
+   1.3541509392216051
+  ],
+  "xg_away_80": [
+   1.913530752698772,
+   2.9512775948036913
+  ],
+  "p_home_80": [
+   0.09940117807829063,
+   0.22410149446986316
+  ],
+  "p_draw_80": [
+   0.14468750619197934,
+   0.23049780369889777
+  ],
+  "p_away_80": [
+   0.5453124934863166,
+   0.7527254797927997
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.178248643099334,
+   0.16080150233074467
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.14324421743676363,
+   "p_draw": 0.16538655838439853,
+   "p_away": 0.6913692241788378,
+   "xg_home": 1.2358157005187238,
+   "xg_away": 2.7647457015064205,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.1386573592964716,
+   "p_draw": 0.20528625085626814,
+   "p_away": 0.6560563898472603,
+   "xg_home": 0.7829166347178468,
+   "xg_away": 1.9870969594399208,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.08654551950657714,
+   "p_draw": 0.12458146634848696,
+   "p_away": 0.7888730141449358,
+   "xg_home": 1.1063893186014433,
+   "xg_away": 3.285754583389387,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.45848263072470963,
+   "p_draw": 0.2519052737562372,
+   "p_away": 0.2896120955190531,
+   "xg_home": 1.5460543311068884,
+   "xg_away": 1.1762344731697738,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.16930789103602478,
+   "p_draw": 0.17789396680270972,
+   "p_away": 0.6527981421612656,
+   "xg_home": 1.317703164965239,
+   "xg_away": 2.6345616404086494,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Real Madrid attack vs Santander defence: rate multiplier \u00d72.30 for the away side.",
+   "effect": 0.8318
+  },
+  {
+   "text": "Independent results-only Elo: Santander 1493 vs Real Madrid 1882 (gap -389 before home advantage).",
+   "effect": 0.5838
+  },
+  {
+   "text": "Home advantage (Spain, fitted from results): \u00d71.32 on Santander's scoring rate.",
+   "effect": 0.2758
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.14466238359542372,
+  "p_draw": 0.19252791814694636,
+  "p_away": 0.66280969825763,
+  "xg_home": 1.099070127419391,
+  "xg_away": 2.419316242004321
+ },
+ "context": {
+  "fetched_at": "2026-10-30T10:12:52+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5868118",
+    "fetched_at": "2026-10-30T10:12:52+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "projected",
+    "source": "FotMob projected XI (enetpulse)",
+    "formation": "4-2-3-1",
+    "starters": [
+     {
+      "name": "Julen Agirrezabala",
+      "pos": "G"
+     },
+     {
+      "name": "\u00c1lvaro Mantilla",
+      "pos": "D"
+     },
+     {
+      "name": "Pablo Ram\u00f3n",
+      "pos": "D"
+     },
+     {
+      "name": "Jeanu\u00ebl Belocian",
+      "pos": "D"
+     },
+     {
+      "name": "Aar\u00f3n Mart\u00edn",
+      "pos": "M"
+     },
+     {
+      "name": "\u00cd\u00f1igo Sainz-Maza",
+      "pos": "M"
+     },
+     {
+      "name": "Iv\u00e1n Martin",
+      "pos": "M"
+     },
+     {
+      "name": "Andr\u00e9s Martin",
+      "pos": "F"
+     },
+     {
+      "name": "Sergio Canales",
+      "pos": "M"
+     },
+     {
+      "name": "I\u00f1igo Vicente",
+      "pos": "F"
+     },
+     {
+      "name": "Yassir Zabiri",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-10-30T10:12:52+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [],
+    "mean_xi_attack_index": 0.172,
+    "mean_continuity": 0.103,
+    "p_backup_gk": 0.0
+   },
+   "away": {
+    "status": "projected",
+    "source": "FotMob projected XI (enetpulse)",
+    "formation": "4-2-3-1",
+    "starters": [
+     {
+      "name": "Andriy Lunin",
+      "pos": "G"
+     },
+     {
+      "name": "Denzel Dumfries",
+      "pos": "D"
+     },
+     {
+      "name": "Ibrahima Konat\u00e9",
+      "pos": "D"
+     },
+     {
+      "name": "Dean Huijsen",
+      "pos": "D"
+     },
+     {
+      "name": "Marc Cucurella",
+      "pos": "D"
+     },
+     {
+      "name": "Bernardo Silva",
+      "pos": "M"
+     },
+     {
+      "name": "Aur\u00e9lien Tchouam\u00e9ni",
+      "pos": "M"
+     },
+     {
+      "name": "Arda G\u00fcler",
+      "pos": "M"
+     },
+     {
+      "name": "Jude Bellingham",
+      "pos": "M"
+     },
+     {
+      "name": "Yan Diomande",
+      "pos": "F"
+     },
+     {
+      "name": "Kylian Mbapp\u00e9",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-10-30T10:12:52+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [],
+    "mean_xi_attack_index": -0.1,
+    "mean_continuity": -0.307,
+    "p_backup_gk": 0.825
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Jorge Salinas",
+     "type": "suspension",
+     "expected_return": "Early November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868118",
+     "fetched_at": "2026-10-30T10:12:52+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "Ferland Mendy",
+     "type": "injury",
+     "expected_return": "Back in training",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868118",
+     "fetched_at": "2026-10-30T10:12:52+00:00"
+    },
+    {
+     "player": "Ra\u00fal Asencio",
+     "type": "injury",
+     "expected_return": "Early January 2027",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868118",
+     "fetched_at": "2026-10-30T10:12:52+00:00"
+    },
+    {
+     "player": "Rodrygo",
+     "type": "injury",
+     "expected_return": "Late December 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868118",
+     "fetched_at": "2026-10-30T10:12:52+00:00"
+    },
+    {
+     "player": "Vin\u00edcius J\u00fanior",
+     "type": "suspension",
+     "expected_return": "Early November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868118",
+     "fetched_at": "2026-10-30T10:12:52+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 8,
+    "n21": 3,
+    "last_match": "2026-10-24"
+   },
+   "away": {
+    "rest_days": 7,
+    "n21": 2,
+    "last_match": "2026-10-25"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 336.3
+  },
+  "venue": {
+   "name": "Campos de Sport de El Sardinero",
+   "city": "Santander",
+   "lat": 43.47629931,
+   "lon": -3.793281913
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 1.7200000000000002,
+   "temp_c": 16.5,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=43.476&longitude=-3.793",
+   "fetched_at": "2026-10-30T10:12:53+00:00",
+   "lat": 43.47629931,
+   "lon": -3.793281913
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": 1.51,
+    "d_p_draw_pp": -1.16,
+    "d_p_away_pp": -0.34,
+    "d_xg_home": 0.264,
+    "d_xg_away": 0.31
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0229,
+    "away_rate_mult": 1.0096,
+    "d_p_home_pp": 0.22,
+    "d_p_draw_pp": -0.1,
+    "d_p_away_pp": -0.12,
+    "d_xg_home": 0.027,
+    "d_xg_away": 0.026,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "home_rate_mult": 1.0872,
+    "away_rate_mult": 0.9638,
+    "d_p_home_pp": 2.56,
+    "d_p_draw_pp": 1.07,
+    "d_p_away_pp": -3.63,
+    "d_xg_home": 0.096,
+    "d_xg_away": -0.079,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 8.0,
+   "rest_a": 7.0,
+   "n21_h": 3.0,
+   "n21_a": 2.0,
+   "travel_km": 336.27978766818796,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 1.7200000000000002,
+   "temp_c": 16.5
+  }
+ },
+ "confidence": {
+  "tier": "HIGH",
+  "p_max": 0.66280969825763,
+  "entropy_nats": 0.8694678579661715,
+  "text": "Most likely result has P = 66.3%. In the out-of-sample backtest, favourites priced 0.60\u20130.70 won 66.4% \u00b1 0.7% (n=4069, mean forecast 64.2%). Backtest RPS for SP1: 0.1930; exact-score top-5 hit rate 55.1% (n=1239). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: HIGH (entropy 0.869 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Santander: lineup is PROJECTED (FotMob projected XI (enetpulse)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Real Madrid: lineup is PROJECTED (FotMob projected XI (enetpulse)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior)."
+ ],
+ "verdict": "Santander 1\u20132 Real Madrid is the single most probable scoreline at 9.3%: expected goals 1.10\u20132.42 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.047). Exact scores are inherently uncertain; the 1X2 split is 14.5%/19.3%/66.3%.",
+ "resolved": {
+  "home_key": "Spain:Santander",
+  "away_key": "Spain:Real Madrid",
+  "div": "SP1",
+  "home_div": "SP1",
+  "away_div": "SP1",
+  "country": "Spain"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: Real Madrid CF at Real Racing Club\nCompetition: La Liga 2025\nDate: 2026-11-01 10:15 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-10-29\n\nPRIMARY FINAL SCORE PREDICTION\n\nReal Racing Club 1 \u2013 2 Real Madrid CF\n(modal exact score, probability 9.3%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.10\nAway: 2.42\nExpected Total: 3.52\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 14.5%\nDraw: 19.3%\nAway Win: 66.3%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20132: 9.3%\n2. 0\u20132: 8.9%\n3. 1\u20131: 8.3%\n4. 1\u20133: 7.5%\n5. 0\u20131: 7.5%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 14.0%\nTotal 2 goals: 18.8%\nTotal 3 goals: 20.7%\nTotal 4 goals: 18.4%\nTotal 5+ goals: 28.1%\n\nBoth Teams Score: 60.9%\nClean sheet Real Racing Club: 8.8% \u00b7 Clean sheet Real Madrid CF: 33.8%\n\nMATCH INTELLIGENCE\n\n1. Real Madrid attack vs Santander defence: rate multiplier \u00d72.30 for the away side.\n2. Independent results-only Elo: Santander 1493 vs Real Madrid 1882 (gap -389 before home advantage).\n3. Home advantage (Spain, fitted from results): \u00d71.32 on Santander's scoring rate.\n\nMODEL CONFIDENCE\n\nMost likely result has P = 66.3%. In the out-of-sample backtest, favourites priced 0.60\u20130.70 won 66.4% \u00b1 0.7% (n=4069, mean forecast 64.2%). Backtest RPS for SP1: 0.1930; exact-score top-5 hit rate 55.1% (n=1239). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: HIGH (entropy 0.869 nats of max 1.099).\nParameter-uncertainty 80% bands: xG Real Racing Club 0.86\u20131.35, xG Real Madrid CF 1.91\u20132.95; P(home win) 9.9%\u201322.4%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0011 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nSantander: PROJECTED \u2014 FotMob projected XI (enetpulse), fetched 2026-10-30 06:12 EDT (4-2-3-1)\n  Julen Agirrezabala (G), \u00c1lvaro Mantilla (D), Pablo Ram\u00f3n (D), Jeanu\u00ebl Belocian (D), Aar\u00f3n Mart\u00edn (M), \u00cd\u00f1igo Sainz-Maza (M), Iv\u00e1n Martin (M), Andr\u00e9s Martin (F), Sergio Canales (M), I\u00f1igo Vicente (F), Yassir Zabiri (F)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs +0.172 (log) \u00b7 continuity +0.10 \u00b7 P(backup GK) 0%\nReal Madrid: PROJECTED \u2014 FotMob projected XI (enetpulse), fetched 2026-10-30 06:12 EDT (4-2-3-1)\n  Andriy Lunin (G), Denzel Dumfries (D), Ibrahima Konat\u00e9 (D), Dean Huijsen (D), Marc Cucurella (D), Bernardo Silva (M), Aur\u00e9lien Tchouam\u00e9ni (M), Arda G\u00fcler (M), Jude Bellingham (M), Yan Diomande (F), Kylian Mbapp\u00e9 (F)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs -0.100 (log) \u00b7 continuity -0.31 \u00b7 P(backup GK) 82%\n\nKEY ABSENCES\n\n- Santander: Jorge Salinas \u2014 suspension, Early November 2026 [FotMob, 2026-10-30 06:12 EDT]\n- Real Madrid: Ferland Mendy \u2014 injury, Back in training [FotMob, 2026-10-30 06:12 EDT]\n- Real Madrid: Ra\u00fal Asencio \u2014 injury, Early January 2027 [FotMob, 2026-10-30 06:12 EDT]\n- Real Madrid: Rodrygo \u2014 injury, Late December 2026 [FotMob, 2026-10-30 06:12 EDT]\n- Real Madrid: Vin\u00edcius J\u00fanior \u2014 suspension, Early November 2026 [FotMob, 2026-10-30 06:12 EDT]\n\nWEATHER AT VENUE\n\nCampos de Sport de El Sardinero, Santander: 16.5 \u00b0C, wind 1.7 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-10-30 06:12 EDT]\n\nREST & TRAVEL\n\nSantander: 8 days' rest, 3 matches in previous 21 days \u00b7 Real Madrid: 7 days' rest, 2 in 21 days \u00b7 away travel 336.3 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 14.5% / 19.3% / 66.3%, xG 1.10\u20132.42\n- Understat xG component (validated, in ensemble): home +1.51 pp, draw -1.16 pp, away -0.34 pp; xG +0.264 / +0.310\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.22 pp, draw -0.10 pp, away -0.12 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- lineup: NOT APPLIED (failed out-of-sample validation); would have moved home +2.56 pp, draw +1.07 pp, away -3.63 pp\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Santander: lineup is PROJECTED (FotMob projected XI (enetpulse)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Real Madrid: lineup is PROJECTED (FotMob projected XI (enetpulse)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n\nFINAL VERDICT\n\nSantander 1\u20132 Real Madrid is the single most probable scoreline at 9.3%: expected goals 1.10\u20132.42 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.047). Exact scores are inherently uncertain; the 1X2 split is 14.5%/19.3%/66.3%.\n",
+ "frozen_at": "2026-10-30T10:12:53+00:00",
+ "sha256": "60023a068d1918cf94f9ef603909924ea8ced67c21f7317751380225430bdbe4"
+}
