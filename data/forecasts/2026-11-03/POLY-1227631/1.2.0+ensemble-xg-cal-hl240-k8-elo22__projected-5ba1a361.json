@@ -1,0 +1,648 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-10-29",
+ "generated_at": "2026-10-30T07:21:16+00:00",
+ "fixture": {
+  "event_id": "POLY-1227631",
+  "home_name": "Blackburn Rovers FC",
+  "away_name": "Stoke City FC",
+  "competition": "EFL Championship",
+  "subcategory": "elc",
+  "kickoff_utc": "2026-11-03T19:45:00+00:00",
+  "kickoff_local": "2026-11-03 14:45 EST",
+  "home_matched": "Blackburn",
+  "away_matched": "Stoke",
+  "match_methods": {
+   "home": {
+    "source": "Blackburn Rovers FC",
+    "matched": "Blackburn",
+    "method": "alias",
+    "score": 1.0
+   },
+   "away": {
+    "source": "Stoke City FC",
+    "matched": "Stoke",
+    "method": "token-subset",
+    "score": 0.9
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.4454280510404863,
+  "p_draw": 0.28858271333376834,
+  "p_away": 0.2659892356257456,
+  "xg_home": 1.4023801764722192,
+  "xg_away": 1.0310748255896296,
+  "xg_total": 2.433455002061849,
+  "median_total": 2,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.13959185918806497
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.13959185918806497
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.11661415278774638
+   },
+   {
+    "home": 0,
+    "away": 0,
+    "p": 0.09141367959356153
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.09062397628292951
+   },
+   {
+    "home": 2,
+    "away": 0,
+    "p": 0.0844979478012029
+   }
+  ],
+  "btts": 0.50164750239518,
+  "totals_over": {
+   "over_0.5": 0.9085863204064387,
+   "over_1.5": 0.7074997672009423,
+   "over_2.5": 0.4384778072430945,
+   "over_3.5": 0.2281094620095467,
+   "over_4.5": 0.09799421511676605,
+   "over_5.5": 0.03661298821296144,
+   "over_6.5": 0.011710043820269212
+  },
+  "total_buckets": {
+   "0-1": 0.2925002327990578,
+   "2": 0.26902195995784794,
+   "3": 0.21036834523354775,
+   "4": 0.13011524689278062,
+   "5+": 0.09799421511676605
+  },
+  "clean_sheet_home": 0.3495027658170287,
+  "clean_sheet_away": 0.24026341138135307,
+  "home_goal_dist": [
+   0.24026341138135307,
+   0.3506515824087516,
+   0.24466505688947443,
+   0.11239221370730398,
+   0.03853745368115038,
+   0.010536555013912756,
+   0.002394941051519431,
+   0.0005587858665345381
+  ],
+  "away_goal_dist": [
+   0.3495027658170287,
+   0.3760715838935038,
+   0.19168894987031904,
+   0.06355658586782101,
+   0.015590629664669509,
+   0.0030285994667654296,
+   0.0004858596081216006,
+   7.502581177106236e-05
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    3
+   ],
+   "away_goals_80": [
+    0,
+    2
+   ],
+   "total_goals_80": [
+    1,
+    4
+   ],
+   "goal_diff_80": [
+    -1,
+    2
+   ]
+  },
+  "score_grid": [
+   [
+    0.091414,
+    0.084472,
+    0.044932,
+    0.014941,
+    0.003664,
+    0.00071,
+    0.000113
+   ],
+   [
+    0.116614,
+    0.139592,
+    0.065839,
+    0.021961,
+    0.005402,
+    0.00105,
+    0.000168
+   ],
+   [
+    0.084498,
+    0.090624,
+    0.049215,
+    0.015591,
+    0.003848,
+    0.00075,
+    0.000121
+   ],
+   [
+    0.038965,
+    0.041923,
+    0.021624,
+    0.007667,
+    0.001797,
+    0.000351,
+    5.7e-05
+   ],
+   [
+    0.013353,
+    0.014412,
+    0.007457,
+    0.002511,
+    0.000659,
+    0.000122,
+    2e-05
+   ],
+   [
+    0.003642,
+    0.003943,
+    0.002046,
+    0.000691,
+    0.000172,
+    3.6e-05,
+    5e-06
+   ],
+   [
+    0.000825,
+    0.000896,
+    0.000467,
+    0.000158,
+    3.9e-05,
+    8e-06,
+    1e-06
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.44728,
+  "p_draw": 0.288275,
+  "p_away": 0.26444500000000004,
+  "se": [
+   0.001111801694548088,
+   0.0010128487655494279,
+   0.0009861892363410788
+  ],
+  "max_abs_dev_vs_exact": 0.0018519489595137384,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   1.0853930005196215,
+   1.7477117773018445
+  ],
+  "xg_away_80": [
+   0.7785049974594399,
+   1.3014129060025679
+  ],
+  "p_home_80": [
+   0.34830199593182104,
+   0.5561394161384957
+  ],
+  "p_draw_80": [
+   0.24471175559629746,
+   0.3126872073856975
+  ],
+  "p_away_80": [
+   0.19085456772488005,
+   0.35686656344977713
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.18886332180150678,
+   0.1906923035698966
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.4217672037589949,
+   "p_draw": 0.2947706914689744,
+   "p_away": 0.2834621047720307,
+   "xg_home": 1.2742386532562682,
+   "xg_away": 0.9948825452449678,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.47989619413478224,
+   "p_draw": 0.2563636428533369,
+   "p_away": 0.263740163011881,
+   "xg_home": 1.524571563328275,
+   "xg_away": 1.0601919421317416,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.412982268412581,
+   "p_draw": 0.3087406809821327,
+   "p_away": 0.2782770506052863,
+   "xg_home": 1.2077208637338914,
+   "xg_away": 0.9418403548206327,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.43362929859923616,
+   "p_draw": 0.26159331450305645,
+   "p_away": 0.30477738689770745,
+   "xg_home": 1.4320617984640485,
+   "xg_away": 1.1567024686904,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.4214569601219249,
+   "p_draw": 0.2950327305473086,
+   "p_away": 0.2835103093307664,
+   "xg_home": 1.271247384183717,
+   "xg_away": 0.9928814321625438,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Home advantage (England, fitted from results): \u00d71.22 on Blackburn's scoring rate.",
+   "effect": 0.1964
+  },
+  {
+   "text": "Stoke attack vs Blackburn defence: rate multiplier \u00d70.83 for the away side.",
+   "effect": 0.1907
+  },
+  {
+   "text": "Blackburn attack vs Stoke defence: time-weighted strength gap multiplies Blackburn's scoring rate by \u00d70.87 relative to an average pairing (from 39/39 decay-weighted matches).",
+   "effect": 0.1397
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.4454280510404862,
+  "p_draw": 0.2885827133337683,
+  "p_away": 0.26598923562574556,
+  "xg_home": 1.402380176472219,
+  "xg_away": 1.0310748255896296
+ },
+ "context": {
+  "fetched_at": "2026-10-30T07:21:16+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5836911",
+    "fetched_at": "2026-10-30T07:21:17+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "4-2-3-1",
+    "starters": [
+     {
+      "name": "Bal\u00e1zs T\u00f3th",
+      "pos": "G"
+     },
+     {
+      "name": "Ryan Alebiosu",
+      "pos": "D"
+     },
+     {
+      "name": "Hayden Carter",
+      "pos": "D"
+     },
+     {
+      "name": "Sean McLoughlin",
+      "pos": "D"
+     },
+     {
+      "name": "Harry Pickering",
+      "pos": "D"
+     },
+     {
+      "name": "Sam Morsy",
+      "pos": "M"
+     },
+     {
+      "name": "Moussa Baradji",
+      "pos": "M"
+     },
+     {
+      "name": "Jayden Fevrier",
+      "pos": "F"
+     },
+     {
+      "name": "Todd Cantwell",
+      "pos": "M"
+     },
+     {
+      "name": "Oladapo Afolayan",
+      "pos": "F"
+     },
+     {
+      "name": "Andri Gu\u00f0johnsen",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-10-30T07:21:17+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   },
+   "away": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "3-4-3",
+    "starters": [
+     {
+      "name": "Viktor Johansson",
+      "pos": "G"
+     },
+     {
+      "name": "Ben Wilmot",
+      "pos": "D"
+     },
+     {
+      "name": "Bosun Lawal",
+      "pos": "D"
+     },
+     {
+      "name": "Luke Graham",
+      "pos": "D"
+     },
+     {
+      "name": "Ben Johnson",
+      "pos": "M"
+     },
+     {
+      "name": "Djibril Soumar\u00e9",
+      "pos": "M"
+     },
+     {
+      "name": "Ethan Galbraith",
+      "pos": "M"
+     },
+     {
+      "name": "Luca Bombino",
+      "pos": "M"
+     },
+     {
+      "name": "Jack McGlynn",
+      "pos": "F"
+     },
+     {
+      "name": "Lamine Ciss\u00e9",
+      "pos": "F"
+     },
+     {
+      "name": "Justin Devenny",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-10-30T07:21:17+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Adam Forshaw",
+     "type": "injury",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836911",
+     "fetched_at": "2026-10-30T07:21:17+00:00"
+    },
+    {
+     "player": "Ryoya Morishita",
+     "type": "injury",
+     "expected_return": "Early November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836911",
+     "fetched_at": "2026-10-30T07:21:17+00:00"
+    },
+    {
+     "player": "Yuri Ribeiro",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836911",
+     "fetched_at": "2026-10-30T07:21:17+00:00"
+    },
+    {
+     "player": "Yuki Ohashi",
+     "type": "injury",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836911",
+     "fetched_at": "2026-10-30T07:21:17+00:00"
+    },
+    {
+     "player": "Lewis Miller",
+     "type": "injury",
+     "expected_return": "Unknown",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836911",
+     "fetched_at": "2026-10-30T07:21:17+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "Lamine Ciss\u00e9",
+     "type": "injury",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836911",
+     "fetched_at": "2026-10-30T07:21:17+00:00"
+    },
+    {
+     "player": "Eric Bocat",
+     "type": "injury",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836911",
+     "fetched_at": "2026-10-30T07:21:17+00:00"
+    },
+    {
+     "player": "Sam Gallagher",
+     "type": "injury",
+     "expected_return": "Early November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836911",
+     "fetched_at": "2026-10-30T07:21:17+00:00"
+    },
+    {
+     "player": "Svante Ingelsson",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836911",
+     "fetched_at": "2026-10-30T07:21:17+00:00"
+    },
+    {
+     "player": "Ato Ampah",
+     "type": "injury",
+     "expected_return": "Mid January 2027",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836911",
+     "fetched_at": "2026-10-30T07:21:17+00:00"
+    },
+    {
+     "player": "Aaron Cresswell",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836911",
+     "fetched_at": "2026-10-30T07:21:17+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 10,
+    "n21": 3,
+    "last_match": "2026-10-24"
+   },
+   "away": {
+    "rest_days": 10,
+    "n21": 3,
+    "last_match": "2026-10-24"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 84.9
+  },
+  "venue": {
+   "name": "Ewood Park",
+   "city": "Blackburn, Lancashire",
+   "lat": 53.728578814,
+   "lon": -2.489207983
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 2.7,
+   "temp_c": 7.6,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=53.729&longitude=-2.489",
+   "fetched_at": "2026-10-30T07:21:17+00:00",
+   "lat": 53.728578814,
+   "lon": -2.489207983
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": -2.83,
+    "d_p_draw_pp": 1.88,
+    "d_p_away_pp": 0.94,
+    "d_xg_home": -0.123,
+    "d_xg_away": -0.033
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0095,
+    "away_rate_mult": 1.004,
+    "d_p_home_pp": 0.26,
+    "d_p_draw_pp": -0.15,
+    "d_p_away_pp": -0.11,
+    "d_xg_home": 0.013,
+    "d_xg_away": 0.004,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "reason": "failed validation; no live features"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 10.0,
+   "rest_a": 10.0,
+   "n21_h": 3.0,
+   "n21_a": 3.0,
+   "travel_km": 84.89658742095955,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 2.7,
+   "temp_c": 7.6
+  }
+ },
+ "confidence": {
+  "tier": "LOW",
+  "p_max": 0.4454280510404863,
+  "entropy_nats": 1.0711187250918002,
+  "text": "Most likely result has P = 44.5%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.3% \u00b1 0.4% (n=16754, mean forecast 44.6%). Backtest RPS for E1: 0.2179; exact-score top-5 hit rate 51.6% (n=1800). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: LOW (entropy 1.071 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Blackburn: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Blackburn: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.",
+  "Stoke: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Stoke: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+ ],
+ "verdict": "Blackburn 1\u20131 Stoke is the single most probable scoreline at 14.0%: expected goals 1.40\u20131.03 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.047). Exact scores are inherently uncertain; the 1X2 split is 44.5%/28.9%/26.6%.",
+ "resolved": {
+  "home_key": "England:Blackburn",
+  "away_key": "England:Stoke",
+  "div": "E1",
+  "home_div": "E1",
+  "away_div": "E1",
+  "country": "England"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: Stoke City FC at Blackburn Rovers FC\nCompetition: EFL Championship\nDate: 2026-11-03 14:45 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-10-29\n\nPRIMARY FINAL SCORE PREDICTION\n\nBlackburn Rovers FC 1 \u2013 1 Stoke City FC\n(modal exact score, probability 14.0%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.40\nAway: 1.03\nExpected Total: 2.43\nMedian Total: 2\n\nRESULT PROBABILITIES\n\nHome Win: 44.5%\nDraw: 28.9%\nAway Win: 26.6%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 14.0%\n2. 1\u20130: 11.7%\n3. 0\u20130: 9.1%\n4. 2\u20131: 9.1%\n5. 2\u20130: 8.4%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 29.3%\nTotal 2 goals: 26.9%\nTotal 3 goals: 21.0%\nTotal 4 goals: 13.0%\nTotal 5+ goals: 9.8%\n\nBoth Teams Score: 50.2%\nClean sheet Blackburn Rovers FC: 35.0% \u00b7 Clean sheet Stoke City FC: 24.0%\n\nMATCH INTELLIGENCE\n\n1. Home advantage (England, fitted from results): \u00d71.22 on Blackburn's scoring rate.\n2. Stoke attack vs Blackburn defence: rate multiplier \u00d70.83 for the away side.\n3. Blackburn attack vs Stoke defence: time-weighted strength gap multiplies Blackburn's scoring rate by \u00d70.87 relative to an average pairing (from 39/39 decay-weighted matches).\n\nMODEL CONFIDENCE\n\nMost likely result has P = 44.5%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.3% \u00b1 0.4% (n=16754, mean forecast 44.6%). Backtest RPS for E1: 0.2179; exact-score top-5 hit rate 51.6% (n=1800). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: LOW (entropy 1.071 nats of max 1.099).\nParameter-uncertainty 80% bands: xG Blackburn Rovers FC 1.09\u20131.75, xG Stoke City FC 0.78\u20131.30; P(home win) 34.8%\u201355.6%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0019 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nBlackburn: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-10-30 03:21 EDT (4-2-3-1)\n  Bal\u00e1zs T\u00f3th (G), Ryan Alebiosu (D), Hayden Carter (D), Sean McLoughlin (D), Harry Pickering (D), Sam Morsy (M), Moussa Baradji (M), Jayden Fevrier (F), Todd Cantwell (M), Oladapo Afolayan (F), Andri Gu\u00f0johnsen (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\nStoke: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-10-30 03:21 EDT (3-4-3)\n  Viktor Johansson (G), Ben Wilmot (D), Bosun Lawal (D), Luke Graham (D), Ben Johnson (M), Djibril Soumar\u00e9 (M), Ethan Galbraith (M), Luca Bombino (M), Jack McGlynn (F), Lamine Ciss\u00e9 (F), Justin Devenny (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nKEY ABSENCES\n\n- Blackburn: Adam Forshaw \u2014 injury, Mid November 2026 [FotMob, 2026-10-30 03:21 EDT]\n- Blackburn: Ryoya Morishita \u2014 injury, Early November 2026 [FotMob, 2026-10-30 03:21 EDT]\n- Blackburn: Yuri Ribeiro \u2014 injury, Doubtful [FotMob, 2026-10-30 03:21 EDT]\n- Blackburn: Yuki Ohashi \u2014 injury, Mid November 2026 [FotMob, 2026-10-30 03:21 EDT]\n- Blackburn: Lewis Miller \u2014 injury, Unknown [FotMob, 2026-10-30 03:21 EDT]\n- Stoke: Lamine Ciss\u00e9 \u2014 injury, Mid November 2026 [FotMob, 2026-10-30 03:21 EDT]\n- Stoke: Eric Bocat \u2014 injury, Mid November 2026 [FotMob, 2026-10-30 03:21 EDT]\n- Stoke: Sam Gallagher \u2014 injury, Early November 2026 [FotMob, 2026-10-30 03:21 EDT]\n- Stoke: Svante Ingelsson \u2014 injury, Doubtful [FotMob, 2026-10-30 03:21 EDT]\n- Stoke: Ato Ampah \u2014 injury, Mid January 2027 [FotMob, 2026-10-30 03:21 EDT]\n- Stoke: Aaron Cresswell \u2014 injury, Doubtful [FotMob, 2026-10-30 03:21 EDT]\n\nWEATHER AT VENUE\n\nEwood Park, Blackburn, Lancashire: 7.6 \u00b0C, wind 2.7 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-10-30 03:21 EDT]\n\nREST & TRAVEL\n\nBlackburn: 10 days' rest, 3 matches in previous 21 days \u00b7 Stoke: 10 days' rest, 3 in 21 days \u00b7 away travel 84.9 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 44.5% / 28.9% / 26.6%, xG 1.40\u20131.03\n- Understat xG component (validated, in ensemble): home -2.83 pp, draw +1.88 pp, away +0.94 pp; xG -0.123 / -0.033\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.26 pp, draw -0.15 pp, away -0.11 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- lineup: not applied (failed validation; no live features)\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Blackburn: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Blackburn: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n- Stoke: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Stoke: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nFINAL VERDICT\n\nBlackburn 1\u20131 Stoke is the single most probable scoreline at 14.0%: expected goals 1.40\u20131.03 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.047). Exact scores are inherently uncertain; the 1X2 split is 44.5%/28.9%/26.6%.\n",
+ "frozen_at": "2026-10-30T07:21:17+00:00",
+ "sha256": "f840e1f45fdc7f7a1b2f1e96fcc991644d0cfd90b9b5ec80ebf3e647e1f75fd9"
+}
