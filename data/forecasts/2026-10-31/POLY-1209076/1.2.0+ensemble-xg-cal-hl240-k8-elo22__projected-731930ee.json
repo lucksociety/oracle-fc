@@ -1,0 +1,746 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-10-30",
+ "generated_at": "2026-10-30T13:20:47+00:00",
+ "fixture": {
+  "event_id": "POLY-1209076",
+  "home_name": "Chelsea FC",
+  "away_name": "Manchester United FC",
+  "competition": "Premier League 2025",
+  "subcategory": "epl",
+  "kickoff_utc": "2026-10-31T12:30:00+00:00",
+  "kickoff_local": "2026-10-31 08:30 EDT",
+  "home_matched": "Chelsea",
+  "away_matched": "Man United",
+  "match_methods": {
+   "home": {
+    "source": "Chelsea FC",
+    "matched": "Chelsea",
+    "method": "core-tokens",
+    "score": 0.97
+   },
+   "away": {
+    "source": "Manchester United FC",
+    "matched": "Man United",
+    "method": "alias",
+    "score": 1.0
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.4194052153737816,
+  "p_draw": 0.2523150977041428,
+  "p_away": 0.32827968692207554,
+  "xg_home": 1.6981437617776696,
+  "xg_away": 1.485424662530769,
+  "xg_total": 3.1835684243084383,
+  "median_total": 3,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.11426721604607895
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.11426721604607895
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.08984725810923809
+   },
+   {
+    "home": 1,
+    "away": 2,
+    "p": 0.0784791879019252
+   },
+   {
+    "home": 2,
+    "away": 2,
+    "p": 0.0710500978152288
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.065447332189624
+   }
+  ],
+  "btts": 0.6478076680837491,
+  "totals_over": {
+   "over_0.5": 0.9560001751888032,
+   "over_1.5": 0.8331290047836644,
+   "over_2.5": 0.6168521866626228,
+   "over_3.5": 0.3949854787828367,
+   "over_4.5": 0.21448974978263016,
+   "over_5.5": 0.10244581686682765,
+   "over_6.5": 0.04240476998161815
+  },
+  "total_buckets": {
+   "0-1": 0.1668709952163357,
+   "2": 0.21627681812104166,
+   "3": 0.221866707879786,
+   "4": 0.18049572900020655,
+   "5+": 0.21448974978263016
+  },
+  "clean_sheet_home": 0.21856805456766015,
+  "clean_sheet_away": 0.17762410215978766,
+  "home_goal_dist": [
+   0.17762410215978766,
+   0.31493224443771684,
+   0.2675576397608755,
+   0.14933991268290345,
+   0.062284900783001244,
+   0.020769813088749412,
+   0.005770107694924089,
+   0.0017212793920418571
+  ],
+  "away_goal_dist": [
+   0.21856805456766015,
+   0.34250580495428756,
+   0.2550381758174982,
+   0.12345018593754228,
+   0.044214250031055745,
+   0.012559520041740912,
+   0.00295199231067317,
+   0.000712016339541943
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    3
+   ],
+   "away_goals_80": [
+    0,
+    3
+   ],
+   "total_goals_80": [
+    1,
+    6
+   ],
+   "goal_diff_80": [
+    -2,
+    2
+   ]
+  },
+  "score_grid": [
+   [
+    0.044,
+    0.057424,
+    0.044381,
+    0.021412,
+    0.007633,
+    0.002153,
+    0.000502
+   ],
+   [
+    0.065447,
+    0.114267,
+    0.078479,
+    0.038084,
+    0.013654,
+    0.003874,
+    0.000908
+   ],
+   [
+    0.057628,
+    0.089847,
+    0.07105,
+    0.032831,
+    0.011837,
+    0.003376,
+    0.000796
+   ],
+   [
+    0.032128,
+    0.050376,
+    0.037928,
+    0.019658,
+    0.006746,
+    0.001934,
+    0.000458
+   ],
+   [
+    0.013352,
+    0.02105,
+    0.015932,
+    0.007858,
+    0.003023,
+    0.000824,
+    0.000196
+   ],
+   [
+    0.004428,
+    0.007016,
+    0.005336,
+    0.002644,
+    0.000967,
+    0.000296,
+    6.7e-05
+   ],
+   [
+    0.001222,
+    0.001946,
+    0.001487,
+    0.00074,
+    0.000272,
+    7.9e-05,
+    2e-05
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.42036,
+  "p_draw": 0.252195,
+  "p_away": 0.327445,
+  "se": [
+   0.0011037605501194542,
+   0.000971063030845578,
+   0.001049344490563037
+  ],
+  "max_abs_dev_vs_exact": 0.0009547846262183968,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   1.3199117202883361,
+   2.109649284569659
+  ],
+  "xg_away_80": [
+   1.1316397545464187,
+   1.862836333752638
+  ],
+  "p_home_80": [
+   0.3192498168508102,
+   0.5388451226260905
+  ],
+  "p_draw_80": [
+   0.21345705591900932,
+   0.26902220936369725
+  ],
+  "p_away_80": [
+   0.23433472784543727,
+   0.4370554863542378
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.18592613970228516,
+   0.18497786749183445
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.44709658532609686,
+   "p_draw": 0.2384914174998997,
+   "p_away": 0.31441199717400337,
+   "xg_home": 1.789150395313263,
+   "xg_away": 1.4746792864373877,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.3950158965148184,
+   "p_draw": 0.25051674733806506,
+   "p_away": 0.35446735614711644,
+   "xg_home": 1.4644635376799708,
+   "xg_away": 1.374482703711824,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.36003073018668375,
+   "p_draw": 0.23908084639181923,
+   "p_away": 0.4008884234214971,
+   "xg_home": 1.6432887294144696,
+   "xg_away": 1.741410235428669,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.4228904171224199,
+   "p_draw": 0.24977313804598375,
+   "p_away": 0.3273364448315963,
+   "xg_home": 1.519993969003253,
+   "xg_away": 1.307998571550038,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.44353434218430243,
+   "p_draw": 0.23534955616245326,
+   "p_away": 0.3211161016532444,
+   "xg_home": 1.8195465839914444,
+   "xg_away": 1.5262811695891374,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Man United attack vs Chelsea defence: rate multiplier \u00d71.22 for the away side.",
+   "effect": 0.2029
+  },
+  {
+   "text": "Chelsea attack vs Man United defence: time-weighted strength gap multiplies Chelsea's scoring rate by \u00d71.22 relative to an average pairing (from 35/31 decay-weighted matches).",
+   "effect": 0.1998
+  },
+  {
+   "text": "Home advantage (England, fitted from results): \u00d71.22 on Chelsea's scoring rate.",
+   "effect": 0.1964
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.4194052153737816,
+  "p_draw": 0.2523150977041428,
+  "p_away": 0.32827968692207554,
+  "xg_home": 1.6981437617776696,
+  "xg_away": 1.485424662530769
+ },
+ "context": {
+  "fetched_at": "2026-10-30T13:20:47+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5795498",
+    "fetched_at": "2026-10-30T13:20:47+00:00"
+   },
+   {
+    "name": "Fantasy Premier League availability",
+    "url": "https://fantasy.premierleague.com/api/bootstrap-static/",
+    "fetched_at": "2026-10-30T13:20:47+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "projected",
+    "source": "FotMob projected XI (enetpulse)",
+    "formation": "3-4-2-1",
+    "starters": [
+     {
+      "name": "Mike Penders",
+      "pos": "G"
+     },
+     {
+      "name": "Josh Acheampong",
+      "pos": "D"
+     },
+     {
+      "name": "Levi Colwill",
+      "pos": "D"
+     },
+     {
+      "name": "Jorrel Hato",
+      "pos": "D"
+     },
+     {
+      "name": "Pedro Neto",
+      "pos": "F"
+     },
+     {
+      "name": "Mois\u00e9s Caicedo",
+      "pos": "M"
+     },
+     {
+      "name": "Jordan Henderson",
+      "pos": "M"
+     },
+     {
+      "name": "Marco Palestra",
+      "pos": "M"
+     },
+     {
+      "name": "Cole Palmer",
+      "pos": "M"
+     },
+     {
+      "name": "Morgan Rogers",
+      "pos": "M"
+     },
+     {
+      "name": "Danny Welbeck",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-10-30T13:20:47+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [],
+    "mean_xi_attack_index": -0.076,
+    "mean_continuity": -0.58,
+    "p_backup_gk": 1.0
+   },
+   "away": {
+    "status": "projected",
+    "source": "FotMob projected XI (enetpulse)",
+    "formation": "4-2-3-1",
+    "starters": [
+     {
+      "name": "Senne Lammens",
+      "pos": "G"
+     },
+     {
+      "name": "Leny Yoro",
+      "pos": "D"
+     },
+     {
+      "name": "Harry Maguire",
+      "pos": "D"
+     },
+     {
+      "name": "Lisandro Mart\u00ednez",
+      "pos": "D"
+     },
+     {
+      "name": "Diogo Dalot",
+      "pos": "D"
+     },
+     {
+      "name": "Kobbie Mainoo",
+      "pos": "M"
+     },
+     {
+      "name": "Carlos Baleba",
+      "pos": "M"
+     },
+     {
+      "name": "Amad Diallo",
+      "pos": "F"
+     },
+     {
+      "name": "Bruno Fernandes",
+      "pos": "M"
+     },
+     {
+      "name": "Matheus Cunha",
+      "pos": "F"
+     },
+     {
+      "name": "Bryan Mbeumo",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-10-30T13:20:47+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [],
+    "mean_xi_attack_index": -0.076,
+    "mean_continuity": -0.506,
+    "p_backup_gk": 0.0
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Emiliano Mart\u00ednez",
+     "type": "injury",
+     "expected_return": "Early November 2026",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795498",
+     "fetched_at": "2026-10-30T13:20:47+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Head injury - Unknown return date",
+     "fpl_news_added": "2026-10-17T13:30:08.724000Z"
+    },
+    {
+     "player": "Maxence Lacroix",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795498",
+     "fetched_at": "2026-10-30T13:20:47+00:00",
+     "chance_of_playing": 50,
+     "fpl_status": "doubtful",
+     "fpl_news": "Hamstring injury - 50% chance of playing",
+     "fpl_news_added": "2026-10-28T23:00:10.088612Z"
+    },
+    {
+     "player": "Pep Chavarr\u00eda",
+     "type": "injury",
+     "expected_return": "Back in training",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795498",
+     "fetched_at": "2026-10-30T13:20:47+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Unspecified injury - Expected back 31 Oct",
+     "fpl_news_added": "2026-10-17T12:00:10.154091Z"
+    },
+    {
+     "player": "Reece James",
+     "type": "injury",
+     "expected_return": "Mid January 2027",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795498",
+     "fetched_at": "2026-10-30T13:20:47+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Knee injury - Unknown return date",
+     "fpl_news_added": "2026-10-10T13:30:08.699019Z"
+    },
+    {
+     "player": "Jamie Gittens",
+     "type": "injury",
+     "expected_return": "Back in training",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795498",
+     "fetched_at": "2026-10-30T13:20:47+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Ankle injury - Unknown return date",
+     "fpl_news_added": "2026-09-26T05:30:09.245832Z"
+    },
+    {
+     "player": "Jo\u00e3o Pedro",
+     "type": "injury",
+     "expected_return": "Early November 2026",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795498",
+     "fetched_at": "2026-10-30T13:20:47+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Thigh injury - Unknown return date",
+     "fpl_news_added": "2026-10-24T16:30:09.687729Z"
+    },
+    {
+     "player": "Malo Gusto",
+     "type": "doubtful",
+     "expected_return": "Unspecified injury - 75% chance of playing",
+     "chance_of_playing": 75,
+     "source": "FPL",
+     "source_url": "https://fantasy.premierleague.com/api/bootstrap-static/",
+     "fetched_at": "2026-10-29T22:00:09.886054Z"
+    },
+    {
+     "player": "Jorrel Hato",
+     "type": "doubtful",
+     "expected_return": "Unspecified injury - 75% chance of playing",
+     "chance_of_playing": 75,
+     "source": "FPL",
+     "source_url": "https://fantasy.premierleague.com/api/bootstrap-static/",
+     "fetched_at": "2026-10-29T22:00:09.909621Z"
+    },
+    {
+     "player": "Mois\u00e9s Caicedo Corozo",
+     "type": "doubtful",
+     "expected_return": "Unspecified injury - 75% chance of playing",
+     "chance_of_playing": 75,
+     "source": "FPL",
+     "source_url": "https://fantasy.premierleague.com/api/bootstrap-static/",
+     "fetched_at": "2026-10-29T22:00:09.933708Z"
+    }
+   ],
+   "away": [
+    {
+     "player": "Luke Shaw",
+     "type": "injury",
+     "expected_return": "A few days",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795498",
+     "fetched_at": "2026-10-30T13:20:47+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Unspecified injury - Unknown return date",
+     "fpl_news_added": "2026-10-12T21:30:08.995810Z"
+    },
+    {
+     "player": "Manuel Ugarte",
+     "type": "injury",
+     "expected_return": "Early April 2027",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795498",
+     "fetched_at": "2026-10-30T13:20:47+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Knee injury - Unknown return date",
+     "fpl_news_added": "2026-07-23T12:01:23.706702Z"
+    },
+    {
+     "player": "Benjamin \u0160e\u0161ko",
+     "type": "injury",
+     "expected_return": "Early January 2027",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795498",
+     "fetched_at": "2026-10-30T13:20:47+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Shin injury - Unknown return date",
+     "fpl_news_added": "2026-09-20T19:30:08.505755Z"
+    },
+    {
+     "player": "Marcus Rashford",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795498",
+     "fetched_at": "2026-10-30T13:20:47+00:00",
+     "chance_of_playing": 75,
+     "fpl_status": "doubtful",
+     "fpl_news": "Hip injury - 75% chance of playing",
+     "fpl_news_added": "2026-10-20T20:00:09.925594Z"
+    },
+    {
+     "player": "Patrick Dorgu",
+     "type": "injury",
+     "expected_return": "Late October 2026",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795498",
+     "fetched_at": "2026-10-30T13:20:47+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Hamstring injury - Unknown return date",
+     "fpl_news_added": "2026-09-27T21:30:07.831640Z"
+    },
+    {
+     "player": "Kobbie Mainoo",
+     "type": "doubtful",
+     "expected_return": "Unspecified injury - 25% chance of playing",
+     "chance_of_playing": 25,
+     "source": "FPL",
+     "source_url": "https://fantasy.premierleague.com/api/bootstrap-static/",
+     "fetched_at": "2026-10-12T21:30:09.006287Z"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 7,
+    "n21": 3,
+    "last_match": "2026-10-24"
+   },
+   "away": {
+    "rest_days": 6,
+    "n21": 3,
+    "last_match": "2026-10-25"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 262.2
+  },
+  "venue": {
+   "name": "Stamford Bridge",
+   "city": "London",
+   "lat": 51.481711963,
+   "lon": -0.190974623
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 2.55,
+   "temp_c": 13.7,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=51.482&longitude=-0.191",
+   "fetched_at": "2026-10-30T13:20:48+00:00",
+   "lat": 51.481711963,
+   "lon": -0.190974623
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": 2.36,
+    "d_p_draw_pp": -0.75,
+    "d_p_away_pp": -1.6,
+    "d_xg_home": 0.174,
+    "d_xg_away": 0.076
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.02,
+    "away_rate_mult": 1.0084,
+    "d_p_home_pp": 0.54,
+    "d_p_draw_pp": -0.24,
+    "d_p_away_pp": -0.3,
+    "d_xg_home": 0.033,
+    "d_xg_away": 0.013,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "home_rate_mult": 0.9735,
+    "away_rate_mult": 1.0109,
+    "d_p_home_pp": -1.35,
+    "d_p_draw_pp": 0.19,
+    "d_p_away_pp": 1.16,
+    "d_xg_home": -0.043,
+    "d_xg_away": 0.015,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 7.0,
+   "rest_a": 6.0,
+   "n21_h": 3.0,
+   "n21_a": 3.0,
+   "travel_km": 262.2349442248829,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 2.55,
+   "temp_c": 13.7
+  }
+ },
+ "confidence": {
+  "tier": "LOW",
+  "p_max": 0.4194052153737816,
+  "entropy_nats": 1.077553079248571,
+  "text": "Most likely result has P = 41.9%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.3% \u00b1 0.4% (n=16754, mean forecast 44.6%). Backtest RPS for E0: 0.2018; exact-score top-5 hit rate 46.6% (n=1220). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: LOW (entropy 1.078 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Chelsea: lineup is PROJECTED (FotMob projected XI (enetpulse)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Man United: lineup is PROJECTED (FotMob projected XI (enetpulse)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior)."
+ ],
+ "verdict": "Chelsea 1\u20131 Man United is the single most probable scoreline at 11.4%: expected goals 1.70\u20131.49 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.048). Exact scores are inherently uncertain; the 1X2 split is 41.9%/25.2%/32.8%.",
+ "resolved": {
+  "home_key": "England:Chelsea",
+  "away_key": "England:Man United",
+  "div": "E0",
+  "home_div": "E0",
+  "away_div": "E0",
+  "country": "England"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: Manchester United FC at Chelsea FC\nCompetition: Premier League 2025\nDate: 2026-10-31 08:30 EDT\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-10-30\n\nPRIMARY FINAL SCORE PREDICTION\n\nChelsea FC 1 \u2013 1 Manchester United FC\n(modal exact score, probability 11.4%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.70\nAway: 1.49\nExpected Total: 3.18\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 41.9%\nDraw: 25.2%\nAway Win: 32.8%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 11.4%\n2. 2\u20131: 9.0%\n3. 1\u20132: 7.8%\n4. 2\u20132: 7.1%\n5. 1\u20130: 6.5%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 16.7%\nTotal 2 goals: 21.6%\nTotal 3 goals: 22.2%\nTotal 4 goals: 18.0%\nTotal 5+ goals: 21.4%\n\nBoth Teams Score: 64.8%\nClean sheet Chelsea FC: 21.9% \u00b7 Clean sheet Manchester United FC: 17.8%\n\nMATCH INTELLIGENCE\n\n1. Man United attack vs Chelsea defence: rate multiplier \u00d71.22 for the away side.\n2. Chelsea attack vs Man United defence: time-weighted strength gap multiplies Chelsea's scoring rate by \u00d71.22 relative to an average pairing (from 35/31 decay-weighted matches).\n3. Home advantage (England, fitted from results): \u00d71.22 on Chelsea's scoring rate.\n\nMODEL CONFIDENCE\n\nMost likely result has P = 41.9%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.3% \u00b1 0.4% (n=16754, mean forecast 44.6%). Backtest RPS for E0: 0.2018; exact-score top-5 hit rate 46.6% (n=1220). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: LOW (entropy 1.078 nats of max 1.099).\nParameter-uncertainty 80% bands: xG Chelsea FC 1.32\u20132.11, xG Manchester United FC 1.13\u20131.86; P(home win) 31.9%\u201353.9%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0010 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nChelsea: PROJECTED \u2014 FotMob projected XI (enetpulse), fetched 2026-10-30 09:20 EDT (3-4-2-1)\n  Mike Penders (G), Josh Acheampong (D), Levi Colwill (D), Jorrel Hato (D), Pedro Neto (F), Mois\u00e9s Caicedo (M), Jordan Henderson (M), Marco Palestra (M), Cole Palmer (M), Morgan Rogers (M), Danny Welbeck (F)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs -0.076 (log) \u00b7 continuity -0.58 \u00b7 P(backup GK) 100%\nMan United: PROJECTED \u2014 FotMob projected XI (enetpulse), fetched 2026-10-30 09:20 EDT (4-2-3-1)\n  Senne Lammens (G), Leny Yoro (D), Harry Maguire (D), Lisandro Mart\u00ednez (D), Diogo Dalot (D), Kobbie Mainoo (M), Carlos Baleba (M), Amad Diallo (F), Bruno Fernandes (M), Matheus Cunha (F), Bryan Mbeumo (F)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs -0.076 (log) \u00b7 continuity -0.51 \u00b7 P(backup GK) 0%\n\nKEY ABSENCES\n\n- Chelsea: Emiliano Mart\u00ednez \u2014 injury, Early November 2026, 0% chance of playing [FotMob + FPL, 2026-10-30 09:20 EDT] \u2014 FPL: Head injury - Unknown return date (updated 2026-10-17 09:30 EDT)\n- Chelsea: Maxence Lacroix \u2014 injury, Late November 2026, 50% chance of playing [FotMob + FPL, 2026-10-30 09:20 EDT] \u2014 FPL: Hamstring injury - 50% chance of playing (updated 2026-10-28 19:00 EDT)\n- Chelsea: Pep Chavarr\u00eda \u2014 injury, Back in training, 0% chance of playing [FotMob + FPL, 2026-10-30 09:20 EDT] \u2014 FPL: Unspecified injury - Expected back 31 Oct (updated 2026-10-17 08:00 EDT)\n- Chelsea: Reece James \u2014 injury, Mid January 2027, 0% chance of playing [FotMob + FPL, 2026-10-30 09:20 EDT] \u2014 FPL: Knee injury - Unknown return date (updated 2026-10-10 09:30 EDT)\n- Chelsea: Jamie Gittens \u2014 injury, Back in training, 0% chance of playing [FotMob + FPL, 2026-10-30 09:20 EDT] \u2014 FPL: Ankle injury - Unknown return date (updated 2026-09-26 01:30 EDT)\n- Chelsea: Jo\u00e3o Pedro \u2014 injury, Early November 2026, 0% chance of playing [FotMob + FPL, 2026-10-30 09:20 EDT] \u2014 FPL: Thigh injury - Unknown return date (updated 2026-10-24 12:30 EDT)\n- Chelsea: Malo Gusto \u2014 doubtful, Unspecified injury - 75% chance of playing, 75% chance of playing [FPL, 2026-10-29 18:00 EDT]\n- Chelsea: Jorrel Hato \u2014 doubtful, Unspecified injury - 75% chance of playing, 75% chance of playing [FPL, 2026-10-29 18:00 EDT]\n- Chelsea: Mois\u00e9s Caicedo Corozo \u2014 doubtful, Unspecified injury - 75% chance of playing, 75% chance of playing [FPL, 2026-10-29 18:00 EDT]\n- Man United: Luke Shaw \u2014 injury, A few days, 0% chance of playing [FotMob + FPL, 2026-10-30 09:20 EDT] \u2014 FPL: Unspecified injury - Unknown return date (updated 2026-10-12 17:30 EDT)\n- Man United: Manuel Ugarte \u2014 injury, Early April 2027, 0% chance of playing [FotMob + FPL, 2026-10-30 09:20 EDT] \u2014 FPL: Knee injury - Unknown return date (updated 2026-07-23 08:01 EDT)\n- Man United: Benjamin \u0160e\u0161ko \u2014 injury, Early January 2027, 0% chance of playing [FotMob + FPL, 2026-10-30 09:20 EDT] \u2014 FPL: Shin injury - Unknown return date (updated 2026-09-20 15:30 EDT)\n- Man United: Marcus Rashford \u2014 injury, Doubtful, 75% chance of playing [FotMob + FPL, 2026-10-30 09:20 EDT] \u2014 FPL: Hip injury - 75% chance of playing (updated 2026-10-20 16:00 EDT)\n- Man United: Patrick Dorgu \u2014 injury, Late October 2026, 0% chance of playing [FotMob + FPL, 2026-10-30 09:20 EDT] \u2014 FPL: Hamstring injury - Unknown return date (updated 2026-09-27 17:30 EDT)\n- Man United: Kobbie Mainoo \u2014 doubtful, Unspecified injury - 25% chance of playing, 25% chance of playing [FPL, 2026-10-12 17:30 EDT]\n\nWEATHER AT VENUE\n\nStamford Bridge, London: 13.7 \u00b0C, wind 2.5 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-10-30 09:20 EDT]\n\nREST & TRAVEL\n\nChelsea: 7 days' rest, 3 matches in previous 21 days \u00b7 Man United: 6 days' rest, 3 in 21 days \u00b7 away travel 262.2 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 41.9% / 25.2% / 32.8%, xG 1.70\u20131.49\n- Understat xG component (validated, in ensemble): home +2.36 pp, draw -0.75 pp, away -1.60 pp; xG +0.174 / +0.076\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.54 pp, draw -0.24 pp, away -0.30 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- lineup: NOT APPLIED (failed out-of-sample validation); would have moved home -1.35 pp, draw +0.19 pp, away +1.16 pp\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Chelsea: lineup is PROJECTED (FotMob projected XI (enetpulse)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Man United: lineup is PROJECTED (FotMob projected XI (enetpulse)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n\nFINAL VERDICT\n\nChelsea 1\u20131 Man United is the single most probable scoreline at 11.4%: expected goals 1.70\u20131.49 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.048). Exact scores are inherently uncertain; the 1X2 split is 41.9%/25.2%/32.8%.\n",
+ "frozen_at": "2026-10-30T13:20:48+00:00",
+ "sha256": "2c7f4359a788ea7b66539050f205e633b72b8c58a5e814362247ac2fefcb3f9b"
+}
