@@ -1,0 +1,624 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-10-30",
+ "generated_at": "2026-10-30T19:27:36+00:00",
+ "fixture": {
+  "event_id": "POLY-1203181",
+  "home_name": "Sheffield United FC",
+  "away_name": "Wrexham AFC",
+  "competition": "EFL Championship",
+  "subcategory": "elc",
+  "kickoff_utc": "2026-10-30T20:00:00+00:00",
+  "kickoff_local": "2026-10-30 16:00 EDT",
+  "home_matched": "Sheffield United",
+  "away_matched": "Wrexham",
+  "match_methods": {
+   "home": {
+    "source": "Sheffield United FC",
+    "matched": "Sheffield United",
+    "method": "alias",
+    "score": 1.0
+   },
+   "away": {
+    "source": "Wrexham AFC",
+    "matched": "Wrexham",
+    "method": "core-tokens",
+    "score": 0.97
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.447484519485604,
+  "p_draw": 0.27083542670232125,
+  "p_away": 0.2816800538120747,
+  "xg_home": 1.5450663937033935,
+  "xg_away": 1.1855018085448101,
+  "xg_total": 2.730568202248204,
+  "median_total": 3,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.1312700645385653
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.1312700645385653
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.09472298248149623
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.09430269700132578
+   },
+   {
+    "home": 2,
+    "away": 0,
+    "p": 0.07621122959973133
+   },
+   {
+    "home": 0,
+    "away": 1,
+    "p": 0.07162089612065217
+   }
+  ],
+  "btts": 0.563438406334109,
+  "totals_over": {
+   "over_0.5": 0.9324236050248453,
+   "over_1.5": 0.766079726422697,
+   "over_2.5": 0.5144206058941071,
+   "over_3.5": 0.2927315309898579,
+   "over_4.5": 0.1386484449045879,
+   "over_5.5": 0.05720181861419822,
+   "over_6.5": 0.020241415243042342
+  },
+  "total_buckets": {
+   "0-1": 0.23392027357730305,
+   "2": 0.25165912052858985,
+   "3": 0.22168907490424913,
+   "4": 0.15408308608527,
+   "5+": 0.1386484449045879
+  },
+  "clean_sheet_home": 0.29765412908820543,
+  "clean_sheet_away": 0.20648385955284027,
+  "home_goal_dist": [
+   0.20648385955284027,
+   0.33511788352627925,
+   0.25887066554462806,
+   0.1309499420663961,
+   0.04925930066752627,
+   0.014728815970077042,
+   0.003649395554668503,
+   0.0009401371175844533
+  ],
+  "away_goal_dist": [
+   0.29765412908820543,
+   0.37049430993467003,
+   0.21833477371801255,
+   0.08350324531059125,
+   0.023590973347395936,
+   0.005273643110133438,
+   0.0009729135620789588,
+   0.00017601192891241076
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    3
+   ],
+   "away_goals_80": [
+    0,
+    3
+   ],
+   "total_goals_80": [
+    1,
+    5
+   ],
+   "goal_diff_80": [
+    -2,
+    2
+   ]
+  },
+  "score_grid": [
+   [
+    0.067576,
+    0.071621,
+    0.044178,
+    0.016986,
+    0.004813,
+    0.001076,
+    0.000198
+   ],
+   [
+    0.094723,
+    0.13127,
+    0.07161,
+    0.027565,
+    0.007819,
+    0.00175,
+    0.000323
+   ],
+   [
+    0.076211,
+    0.094303,
+    0.059033,
+    0.021538,
+    0.006116,
+    0.001371,
+    0.000253
+   ],
+   [
+    0.03879,
+    0.048051,
+    0.02851,
+    0.011617,
+    0.003127,
+    0.000702,
+    0.00013
+   ],
+   [
+    0.014622,
+    0.018133,
+    0.01077,
+    0.00416,
+    0.00125,
+    0.000266,
+    4.9e-05
+   ],
+   [
+    0.004371,
+    0.005426,
+    0.003227,
+    0.001247,
+    0.000355,
+    8.4e-05,
+    1.5e-05
+   ],
+   [
+    0.001082,
+    0.001345,
+    0.0008,
+    0.00031,
+    8.8e-05,
+    2e-05,
+    4e-06
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.44982,
+  "p_draw": 0.268975,
+  "p_away": 0.281205,
+  "se": [
+   0.0011123892475208487,
+   0.0009915327765006056,
+   0.001005307783653842
+  ],
+  "max_abs_dev_vs_exact": 0.002335480514395971,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   1.205963833602118,
+   1.9135172193540932
+  ],
+  "xg_away_80": [
+   0.9092901672428637,
+   1.479412201233938
+  ],
+  "p_home_80": [
+   0.34927901853631205,
+   0.5578871891482569
+  ],
+  "p_draw_80": [
+   0.23053879093015486,
+   0.2915736059761038
+  ],
+  "p_away_80": [
+   0.2031538107189508,
+   0.37658716644126533
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.1830347234996678,
+   0.1806370062097689
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.46398437253171565,
+   "p_draw": 0.25761220079658365,
+   "p_away": 0.2784034266717005,
+   "xg_home": 1.6097279930666148,
+   "xg_away": 1.197263384516034,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.42520759743797265,
+   "p_draw": 0.2646547254760633,
+   "p_away": 0.3101376770859642,
+   "xg_home": 1.3960166579144027,
+   "xg_away": 1.1519684035836664,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.48055136550371425,
+   "p_draw": 0.2412692890993464,
+   "p_away": 0.27817934539693956,
+   "xg_home": 1.8291932137411009,
+   "xg_away": 1.352726052752551,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.43362929859923616,
+   "p_draw": 0.26159331450305645,
+   "p_away": 0.30477738689770745,
+   "xg_home": 1.4320617984640485,
+   "xg_away": 1.1567024686904,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.4678876518779214,
+   "p_draw": 0.25761634495250807,
+   "p_away": 0.27449600316957057,
+   "xg_home": 1.6119115944820295,
+   "xg_away": 1.1826744648067546,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Home advantage (England, fitted from results): \u00d71.22 on Sheffield United's scoring rate.",
+   "effect": 0.1965
+  },
+  {
+   "text": "Sheffield United attack vs Wrexham defence: time-weighted strength gap multiplies Sheffield United's scoring rate by \u00d71.10 relative to an average pairing (from 38/38 decay-weighted matches).",
+   "effect": 0.0939
+  },
+  {
+   "text": "Context \u2014 Understat xG component (validated, in ensemble): home win +2.1 pp, draw -0.3 pp, away win -1.7 pp (xG +0.10 / +0.01).",
+   "effect": 0.0621
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.447484519485604,
+  "p_draw": 0.27083542670232125,
+  "p_away": 0.2816800538120747,
+  "xg_home": 1.5450663937033935,
+  "xg_away": 1.1855018085448101
+ },
+ "context": {
+  "fetched_at": "2026-10-30T19:27:36+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5836904",
+    "fetched_at": "2026-10-30T19:27:36+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "confirmed",
+    "source": "FotMob official team sheet",
+    "formation": "4-2-3-1",
+    "starters": [
+     {
+      "name": "Michael Cooper",
+      "pos": "G"
+     },
+     {
+      "name": "Hamza Choudhury",
+      "pos": "D"
+     },
+     {
+      "name": "Japhet Tanganga",
+      "pos": "D"
+     },
+     {
+      "name": "Liam Kitching",
+      "pos": "D"
+     },
+     {
+      "name": "Harrison Burrows",
+      "pos": "D"
+     },
+     {
+      "name": "Sydie Peck",
+      "pos": "M"
+     },
+     {
+      "name": "Kalvin Phillips",
+      "pos": "M"
+     },
+     {
+      "name": "Tahith Chong",
+      "pos": "F"
+     },
+     {
+      "name": "Romelle Donovan",
+      "pos": "M"
+     },
+     {
+      "name": "Ben Brereton",
+      "pos": "F"
+     },
+     {
+      "name": "Jordan Ayew",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-10-30T19:27:36+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   },
+   "away": {
+    "status": "confirmed",
+    "source": "FotMob official team sheet",
+    "formation": "3-4-2-1",
+    "starters": [
+     {
+      "name": "Anthony Patterson",
+      "pos": "G"
+     },
+     {
+      "name": "Dominic Hyam",
+      "pos": "D"
+     },
+     {
+      "name": "Joe Worrall",
+      "pos": "D"
+     },
+     {
+      "name": "Callum Doyle",
+      "pos": "D"
+     },
+     {
+      "name": "Issa Kabor\u00e9",
+      "pos": "M"
+     },
+     {
+      "name": "Ben Sheaf",
+      "pos": "M"
+     },
+     {
+      "name": "Matty James",
+      "pos": "M"
+     },
+     {
+      "name": "Jacques Ekomi\u00e9",
+      "pos": "M"
+     },
+     {
+      "name": "Oliver Rathbone",
+      "pos": "M"
+     },
+     {
+      "name": "Lewis O'Brien",
+      "pos": "M"
+     },
+     {
+      "name": "Kieffer Moore",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-10-30T19:27:36+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Ryan On\u00e9",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836904",
+     "fetched_at": "2026-10-30T19:27:36+00:00"
+    },
+    {
+     "player": "Patrick Bamford",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836904",
+     "fetched_at": "2026-10-30T19:27:36+00:00"
+    },
+    {
+     "player": "Jamie Shackleton",
+     "type": "injury",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836904",
+     "fetched_at": "2026-10-30T19:27:36+00:00"
+    },
+    {
+     "player": "Matt Doherty",
+     "type": "injury",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836904",
+     "fetched_at": "2026-10-30T19:27:36+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "Josh Windass",
+     "type": "injury",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836904",
+     "fetched_at": "2026-10-30T19:27:36+00:00"
+    },
+    {
+     "player": "Nathan Broadhead",
+     "type": "injury",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836904",
+     "fetched_at": "2026-10-30T19:27:36+00:00"
+    },
+    {
+     "player": "Sebastian Revan",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836904",
+     "fetched_at": "2026-10-30T19:27:36+00:00"
+    },
+    {
+     "player": "Liberato Cacace",
+     "type": "injury",
+     "expected_return": "Unknown",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836904",
+     "fetched_at": "2026-10-30T19:27:36+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 6,
+    "n21": 4,
+    "last_match": "2026-10-24"
+   },
+   "away": {
+    "rest_days": 6,
+    "n21": 4,
+    "last_match": "2026-10-24"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 108.0
+  },
+  "venue": {
+   "name": "Bramall Lane",
+   "city": "Sheffield",
+   "lat": 53.370346199,
+   "lon": -1.470864415
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 1.2000000000000002,
+   "temp_c": 10.5,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=53.37&longitude=-1.471",
+   "fetched_at": "2026-10-30T19:27:36+00:00",
+   "lat": 53.370346199,
+   "lon": -1.470864415
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": 2.07,
+    "d_p_draw_pp": -0.34,
+    "d_p_away_pp": -1.73,
+    "d_xg_home": 0.103,
+    "d_xg_away": 0.014
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0113,
+    "away_rate_mult": 1.0048,
+    "d_p_home_pp": 0.31,
+    "d_p_draw_pp": -0.16,
+    "d_p_away_pp": -0.15,
+    "d_xg_home": 0.017,
+    "d_xg_away": 0.006,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "reason": "failed validation; no live features"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 6.0,
+   "rest_a": 6.0,
+   "n21_h": 4.0,
+   "n21_a": 4.0,
+   "travel_km": 108.04397845954435,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 1.2000000000000002,
+   "temp_c": 10.5
+  }
+ },
+ "confidence": {
+  "tier": "LOW",
+  "p_max": 0.447484519485604,
+  "entropy_nats": 1.070489355955643,
+  "text": "Most likely result has P = 44.7%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.3% \u00b1 0.4% (n=16754, mean forecast 44.6%). Backtest RPS for E1: 0.2179; exact-score top-5 hit rate 51.6% (n=1800). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: LOW (entropy 1.070 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Sheffield United: lineup CONFIRMED (FotMob official team sheet).",
+  "Sheffield United: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.",
+  "Wrexham: lineup CONFIRMED (FotMob official team sheet).",
+  "Wrexham: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+ ],
+ "verdict": "Sheffield United 1\u20131 Wrexham is the single most probable scoreline at 13.1%: expected goals 1.55\u20131.19 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.048). Exact scores are inherently uncertain; the 1X2 split is 44.7%/27.1%/28.2%.",
+ "resolved": {
+  "home_key": "England:Sheffield United",
+  "away_key": "England:Wrexham",
+  "div": "E1",
+  "home_div": "E1",
+  "away_div": "E1",
+  "country": "England"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: Wrexham AFC at Sheffield United FC\nCompetition: EFL Championship\nDate: 2026-10-30 16:00 EDT\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-10-30\n\nPRIMARY FINAL SCORE PREDICTION\n\nSheffield United FC 1 \u2013 1 Wrexham AFC\n(modal exact score, probability 13.1%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.55\nAway: 1.19\nExpected Total: 2.73\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 44.7%\nDraw: 27.1%\nAway Win: 28.2%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 13.1%\n2. 1\u20130: 9.5%\n3. 2\u20131: 9.4%\n4. 2\u20130: 7.6%\n5. 0\u20131: 7.2%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 23.4%\nTotal 2 goals: 25.2%\nTotal 3 goals: 22.2%\nTotal 4 goals: 15.4%\nTotal 5+ goals: 13.9%\n\nBoth Teams Score: 56.3%\nClean sheet Sheffield United FC: 29.8% \u00b7 Clean sheet Wrexham AFC: 20.6%\n\nMATCH INTELLIGENCE\n\n1. Home advantage (England, fitted from results): \u00d71.22 on Sheffield United's scoring rate.\n2. Sheffield United attack vs Wrexham defence: time-weighted strength gap multiplies Sheffield United's scoring rate by \u00d71.10 relative to an average pairing (from 38/38 decay-weighted matches).\n3. Context \u2014 Understat xG component (validated, in ensemble): home win +2.1 pp, draw -0.3 pp, away win -1.7 pp (xG +0.10 / +0.01).\n\nMODEL CONFIDENCE\n\nMost likely result has P = 44.7%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.3% \u00b1 0.4% (n=16754, mean forecast 44.6%). Backtest RPS for E1: 0.2179; exact-score top-5 hit rate 51.6% (n=1800). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: LOW (entropy 1.070 nats of max 1.099).\nParameter-uncertainty 80% bands: xG Sheffield United FC 1.21\u20131.91, xG Wrexham AFC 0.91\u20131.48; P(home win) 34.9%\u201355.8%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0023 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nSheffield United: CONFIRMED \u2014 FotMob official team sheet, fetched 2026-10-30 15:27 EDT (4-2-3-1)\n  Michael Cooper (G), Hamza Choudhury (D), Japhet Tanganga (D), Liam Kitching (D), Harrison Burrows (D), Sydie Peck (M), Kalvin Phillips (M), Tahith Chong (F), Romelle Donovan (M), Ben Brereton (F), Jordan Ayew (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\nWrexham: CONFIRMED \u2014 FotMob official team sheet, fetched 2026-10-30 15:27 EDT (3-4-2-1)\n  Anthony Patterson (G), Dominic Hyam (D), Joe Worrall (D), Callum Doyle (D), Issa Kabor\u00e9 (M), Ben Sheaf (M), Matty James (M), Jacques Ekomi\u00e9 (M), Oliver Rathbone (M), Lewis O'Brien (M), Kieffer Moore (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nKEY ABSENCES\n\n- Sheffield United: Ryan On\u00e9 \u2014 injury, Late November 2026 [FotMob, 2026-10-30 15:27 EDT]\n- Sheffield United: Patrick Bamford \u2014 injury, Doubtful [FotMob, 2026-10-30 15:27 EDT]\n- Sheffield United: Jamie Shackleton \u2014 injury, Mid November 2026 [FotMob, 2026-10-30 15:27 EDT]\n- Sheffield United: Matt Doherty \u2014 injury, Mid November 2026 [FotMob, 2026-10-30 15:27 EDT]\n- Wrexham: Josh Windass \u2014 injury, Mid November 2026 [FotMob, 2026-10-30 15:27 EDT]\n- Wrexham: Nathan Broadhead \u2014 injury, Mid November 2026 [FotMob, 2026-10-30 15:27 EDT]\n- Wrexham: Sebastian Revan \u2014 injury, Doubtful [FotMob, 2026-10-30 15:27 EDT]\n- Wrexham: Liberato Cacace \u2014 injury, Unknown [FotMob, 2026-10-30 15:27 EDT]\n\nWEATHER AT VENUE\n\nBramall Lane, Sheffield: 10.5 \u00b0C, wind 1.2 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-10-30 15:27 EDT]\n\nREST & TRAVEL\n\nSheffield United: 6 days' rest, 4 matches in previous 21 days \u00b7 Wrexham: 6 days' rest, 4 in 21 days \u00b7 away travel 108.0 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 44.7% / 27.1% / 28.2%, xG 1.55\u20131.19\n- Understat xG component (validated, in ensemble): home +2.07 pp, draw -0.34 pp, away -1.73 pp; xG +0.103 / +0.014\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.31 pp, draw -0.16 pp, away -0.15 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- lineup: not applied (failed validation; no live features)\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Sheffield United: lineup CONFIRMED (FotMob official team sheet).\n- Sheffield United: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n- Wrexham: lineup CONFIRMED (FotMob official team sheet).\n- Wrexham: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nFINAL VERDICT\n\nSheffield United 1\u20131 Wrexham is the single most probable scoreline at 13.1%: expected goals 1.55\u20131.19 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.048). Exact scores are inherently uncertain; the 1X2 split is 44.7%/27.1%/28.2%.\n",
+ "frozen_at": "2026-10-30T19:27:36+00:00",
+ "sha256": "f56e627105122f6aeec42043a4861312fb9c335488b55dc9e9cda51c6be64f23"
+}
