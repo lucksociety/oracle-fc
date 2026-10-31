@@ -1,0 +1,634 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-10-30",
+ "input_fingerprint": "5a99153ce08caaded5d8617b1eff1cb6b5e652ce705eaf2cd2bf4b9802c3b82c",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-10-31T05:15:52+00:00",
+ "fixture": {
+  "event_id": "POLY-1224771",
+  "home_name": "Sport Lisboa e Benfica",
+  "away_name": "FC Alverca",
+  "competition": "Primeira Liga",
+  "subcategory": "por",
+  "kickoff_utc": "2026-11-02T20:15:00+00:00",
+  "kickoff_local": "2026-11-02 15:15 EST",
+  "home_matched": "Benfica",
+  "away_matched": "Alverca",
+  "match_methods": {
+   "home": {
+    "source": "Sport Lisboa e Benfica",
+    "matched": "Benfica",
+    "method": "alias",
+    "score": 1.0
+   },
+   "away": {
+    "source": "FC Alverca",
+    "matched": "Alverca",
+    "method": "core-tokens",
+    "score": 0.97
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.7520078141474407,
+  "p_draw": 0.16336124828315712,
+  "p_away": 0.08463093756940218,
+  "xg_home": 2.4873140496724266,
+  "xg_away": 0.7534431251725627,
+  "xg_total": 3.2407571748449895,
+  "median_total": 3,
+  "modal_score": {
+   "home": 2,
+   "away": 0,
+   "p": 0.1215009493467255
+  },
+  "top_scores": [
+   {
+    "home": 2,
+    "away": 0,
+    "p": 0.1215009493467255
+   },
+   {
+    "home": 3,
+    "away": 0,
+    "p": 0.10135121243564374
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.09339463250340914
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.09285764448276429
+   },
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.07898190798183165
+   }
+  ],
+  "btts": 0.4956910292821631,
+  "totals_over": {
+   "over_0.5": 0.9603159616492363,
+   "over_1.5": 0.8420707219704816,
+   "over_2.5": 0.6315575888681839,
+   "over_3.5": 0.4075374969021425,
+   "over_4.5": 0.22378074144203483,
+   "over_5.5": 0.106947666758431,
+   "over_6.5": 0.044520741646827
+  },
+  "total_buckets": {
+   "0-1": 0.1579292780295184,
+   "2": 0.2105131331022978,
+   "3": 0.22402009196604133,
+   "4": 0.18375675546010775,
+   "5+": 0.22378074144203483
+  },
+  "clean_sheet_home": 0.46597256610239235,
+  "clean_sheet_away": 0.07802044296620848,
+  "home_goal_dist": [
+   0.07802044296620848,
+   0.20650967866453454,
+   0.26139805488894313,
+   0.2170846904792447,
+   0.13354394098208527,
+   0.06497296736660864,
+   0.026081796477278194,
+   0.01238842817509714
+  ],
+  "away_goal_dist": [
+   0.46597256610239235,
+   0.3612004765213988,
+   0.13391947077288974,
+   0.03225717467848201,
+   0.005735911893153154,
+   0.0008092434867832663,
+   9.475632277040205e-05,
+   1.0400222130234786e-05
+  ],
+  "intervals": {
+   "home_goals_80": [
+    1,
+    5
+   ],
+   "away_goals_80": [
+    0,
+    2
+   ],
+   "total_goals_80": [
+    1,
+    6
+   ],
+   "goal_diff_80": [
+    0,
+    4
+   ]
+  },
+  "score_grid": [
+   [
+    0.039684,
+    0.025388,
+    0.01003,
+    0.002417,
+    0.000432,
+    6.1e-05,
+    7e-06
+   ],
+   [
+    0.092858,
+    0.078982,
+    0.026857,
+    0.006473,
+    0.001155,
+    0.000164,
+    1.9e-05
+   ],
+   [
+    0.121501,
+    0.093395,
+    0.036454,
+    0.008325,
+    0.001486,
+    0.00021,
+    2.5e-05
+   ],
+   [
+    0.101351,
+    0.078038,
+    0.028883,
+    0.007368,
+    0.001246,
+    0.000176,
+    2.1e-05
+   ],
+   [
+    0.06236,
+    0.048101,
+    0.017832,
+    0.004313,
+    0.000815,
+    0.000109,
+    1.3e-05
+   ],
+   [
+    0.030308,
+    0.02342,
+    0.008697,
+    0.002107,
+    0.000377,
+    5.6e-05,
+    6e-06
+   ],
+   [
+    0.01215,
+    0.009406,
+    0.003499,
+    0.000849,
+    0.000152,
+    2.2e-05,
+    3e-06
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.75346,
+  "p_draw": 0.163245,
+  "p_away": 0.08329500000000001,
+  "se": [
+   0.0009637375898033655,
+   0.000826426251927539,
+   0.0006178872994932004
+  ],
+  "max_abs_dev_vs_exact": 0.0014521858525593512,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   1.9162193363886084,
+   3.110370192092205
+  ],
+  "xg_away_80": [
+   0.537039360969547,
+   0.9899977189802255
+  ],
+  "p_home_80": [
+   0.6363410085752872,
+   0.8406076630506203
+  ],
+  "p_draw_80": [
+   0.11162562901979618,
+   0.2204308204336203
+  ],
+  "p_away_80": [
+   0.047563594619685436,
+   0.1428170470100943
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.19204392682094504,
+   0.22698807338259006
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.7424250328475267,
+   "p_draw": 0.16380178627091604,
+   "p_away": 0.09377318088155723,
+   "xg_home": 2.4919767511941098,
+   "xg_away": 0.7875358514515589,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.7403008056827101,
+   "p_draw": 0.16524307378705488,
+   "p_away": 0.09445612053023515,
+   "xg_home": 2.3358293533462717,
+   "xg_away": 0.701719598766352,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.790594571306171,
+   "p_draw": 0.14520933678044323,
+   "p_away": 0.06419609191338582,
+   "xg_home": 2.5938150189158007,
+   "xg_away": 0.6326111492126841,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.4185879989407295,
+   "p_draw": 0.25875187335638455,
+   "p_away": 0.322660127702886,
+   "xg_home": 1.4339280227102307,
+   "xg_away": 1.226752905236581,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.7424227848200686,
+   "p_draw": 0.16369894827251422,
+   "p_away": 0.09387826690741694,
+   "xg_home": 2.492863865933961,
+   "xg_away": 0.7883523925544801,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Benfica attack vs Alverca defence: time-weighted strength gap multiplies Benfica's scoring rate by \u00d71.79 relative to an average pairing (from 35/22 decay-weighted matches).",
+   "effect": 0.585
+  },
+  {
+   "text": "Independent results-only Elo: Benfica 1828 vs Alverca 1495 (gap +333 before home advantage).",
+   "effect": 0.4998
+  },
+  {
+   "text": "Alverca attack vs Benfica defence: rate multiplier \u00d70.65 for the away side.",
+   "effect": 0.4244
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.7520078141474407,
+  "p_draw": 0.16336124828315712,
+  "p_away": 0.08463093756940218,
+  "xg_home": 2.4873140496724266,
+  "xg_away": 0.7534431251725627
+ },
+ "context": {
+  "fetched_at": "2026-10-31T05:15:52+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5887671",
+    "fetched_at": "2026-10-31T05:15:52+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "4-3-3",
+    "starters": [
+     {
+      "name": "Anatoliy Trubin",
+      "pos": "G"
+     },
+     {
+      "name": "Samuel Dahl",
+      "pos": "D"
+     },
+     {
+      "name": "Alessandro Circati",
+      "pos": "D"
+     },
+     {
+      "name": "Cl\u00e9ment Lenglet",
+      "pos": "D"
+     },
+     {
+      "name": "Souffian El Karouani",
+      "pos": "D"
+     },
+     {
+      "name": "Georgiy Sudakov",
+      "pos": "M"
+     },
+     {
+      "name": "Jo\u00e3o Palhinha",
+      "pos": "M"
+     },
+     {
+      "name": "Claudio Echeverri",
+      "pos": "F"
+     },
+     {
+      "name": "Dodi Luk\u00e9bakio",
+      "pos": "F"
+     },
+     {
+      "name": "Jhon Dur\u00e1n",
+      "pos": "F"
+     },
+     {
+      "name": "Andreas Schjelderup",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-10-31T05:15:52+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   },
+   "away": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "3-4-2-1",
+    "starters": [
+     {
+      "name": "Matheus Mendes",
+      "pos": "G"
+     },
+     {
+      "name": "Steven Baseya",
+      "pos": "D"
+     },
+     {
+      "name": "Sergi G\u00f3mez",
+      "pos": "D"
+     },
+     {
+      "name": "Isaac James",
+      "pos": "M"
+     },
+     {
+      "name": "Diogo Spencer",
+      "pos": "M"
+     },
+     {
+      "name": "Rayan Lucas",
+      "pos": "M"
+     },
+     {
+      "name": "Davy Gui",
+      "pos": "M"
+     },
+     {
+      "name": "Francisco Chissumba",
+      "pos": "M"
+     },
+     {
+      "name": "Chiquinho",
+      "pos": "F"
+     },
+     {
+      "name": "Lucas Figueiredo",
+      "pos": "F"
+     },
+     {
+      "name": "Dawda Camara",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-10-31T05:15:52+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Leandro Barreiro",
+     "type": "injury",
+     "expected_return": "Early July 2027",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5887671",
+     "fetched_at": "2026-10-31T05:15:52+00:00"
+    },
+    {
+     "player": "Daniel Banjaqui",
+     "type": "injury",
+     "expected_return": "Early November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5887671",
+     "fetched_at": "2026-10-31T05:15:52+00:00"
+    },
+    {
+     "player": "Jakub Kami\u0144ski",
+     "type": "injury",
+     "expected_return": "Day to day",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5887671",
+     "fetched_at": "2026-10-31T05:15:52+00:00"
+    },
+    {
+     "player": "Enzo Barrenechea",
+     "type": "injury",
+     "expected_return": "Early November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5887671",
+     "fetched_at": "2026-10-31T05:15:52+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "Steven Baseya",
+     "type": "suspension",
+     "expected_return": "Early November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5887671",
+     "fetched_at": "2026-10-31T05:15:52+00:00"
+    },
+    {
+     "player": "Noah Raveyre",
+     "type": "injury",
+     "expected_return": "Day to day",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5887671",
+     "fetched_at": "2026-10-31T05:15:52+00:00"
+    },
+    {
+     "player": "Bastien Meupiyou",
+     "type": "injury",
+     "expected_return": "Day to day",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5887671",
+     "fetched_at": "2026-10-31T05:15:52+00:00"
+    },
+    {
+     "player": "Juli\u00e1n Mart\u00ednez",
+     "type": "injury",
+     "expected_return": "Day to day",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5887671",
+     "fetched_at": "2026-10-31T05:15:52+00:00"
+    },
+    {
+     "player": "Sabit Abdulai",
+     "type": "injury",
+     "expected_return": "Day to day",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5887671",
+     "fetched_at": "2026-10-31T05:15:52+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 7,
+    "n21": 1,
+    "last_match": "2026-10-26"
+   },
+   "away": {
+    "rest_days": 9,
+    "n21": 2,
+    "last_match": "2026-10-24"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 20.7
+  },
+  "venue": {
+   "name": "Est\u00e1dio do Sport Lisboa e Benfica (da Luz)",
+   "city": "Lisboa",
+   "lat": 38.75264836,
+   "lon": -9.184699059
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 1.525,
+   "temp_c": 17.5,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=38.753&longitude=-9.185",
+   "fetched_at": "2026-10-31T05:15:52+00:00",
+   "lat": 38.75264836,
+   "lon": -9.184699059
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": 0.13,
+    "d_p_draw_pp": -0.08,
+    "d_p_away_pp": -0.05,
+    "d_xg_home": 0.077,
+    "d_xg_away": 0.042
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0029,
+    "away_rate_mult": 1.0012,
+    "d_p_home_pp": 0.09,
+    "d_p_draw_pp": -0.06,
+    "d_p_away_pp": -0.03,
+    "d_xg_home": 0.007,
+    "d_xg_away": 0.001,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "reason": "failed validation; no live features"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 7.0,
+   "rest_a": 9.0,
+   "n21_h": 1.0,
+   "n21_a": 2.0,
+   "travel_km": 20.712934505579437,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 1.525,
+   "temp_c": 17.5
+  }
+ },
+ "confidence": {
+  "tier": "HIGH",
+  "p_max": 0.7520078141474407,
+  "entropy_nats": 0.7192974775235587,
+  "text": "Most likely result has P = 75.2%. In the out-of-sample backtest, favourites priced 0.70\u20130.80 won 76.5% \u00b1 1.1% (n=1436, mean forecast 74.2%). Backtest RPS for P1: 0.1840; exact-score top-5 hit rate 53.5% (n=999). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: HIGH (entropy 0.719 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Benfica: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Benfica: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.",
+  "Alverca: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Alverca: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+ ],
+ "verdict": "Benfica 2\u20130 Alverca is the single most probable scoreline at 12.2%: expected goals 2.49\u20130.75 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.048). Exact scores are inherently uncertain; the 1X2 split is 75.2%/16.3%/8.5%.",
+ "resolved": {
+  "home_key": "Portugal:Benfica",
+  "away_key": "Portugal:Alverca",
+  "div": "P1",
+  "home_div": "P1",
+  "away_div": "P1",
+  "country": "Portugal"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: FC Alverca at Sport Lisboa e Benfica\nCompetition: Primeira Liga\nDate: 2026-11-02 15:15 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-10-30\n\nPRIMARY FINAL SCORE PREDICTION\n\nSport Lisboa e Benfica 2 \u2013 0 FC Alverca\n(modal exact score, probability 12.2%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 2.49\nAway: 0.75\nExpected Total: 3.24\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 75.2%\nDraw: 16.3%\nAway Win: 8.5%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 2\u20130: 12.2%\n2. 3\u20130: 10.1%\n3. 2\u20131: 9.3%\n4. 1\u20130: 9.3%\n5. 1\u20131: 7.9%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 15.8%\nTotal 2 goals: 21.1%\nTotal 3 goals: 22.4%\nTotal 4 goals: 18.4%\nTotal 5+ goals: 22.4%\n\nBoth Teams Score: 49.6%\nClean sheet Sport Lisboa e Benfica: 46.6% \u00b7 Clean sheet FC Alverca: 7.8%\n\nMATCH INTELLIGENCE\n\n1. Benfica attack vs Alverca defence: time-weighted strength gap multiplies Benfica's scoring rate by \u00d71.79 relative to an average pairing (from 35/22 decay-weighted matches).\n2. Independent results-only Elo: Benfica 1828 vs Alverca 1495 (gap +333 before home advantage).\n3. Alverca attack vs Benfica defence: rate multiplier \u00d70.65 for the away side.\n\nMODEL CONFIDENCE\n\nMost likely result has P = 75.2%. In the out-of-sample backtest, favourites priced 0.70\u20130.80 won 76.5% \u00b1 1.1% (n=1436, mean forecast 74.2%). Backtest RPS for P1: 0.1840; exact-score top-5 hit rate 53.5% (n=999). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: HIGH (entropy 0.719 nats of max 1.099).\nParameter-uncertainty 80% bands: xG Sport Lisboa e Benfica 1.92\u20133.11, xG FC Alverca 0.54\u20130.99; P(home win) 63.6%\u201384.1%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0015 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nBenfica: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-10-31 01:15 EDT (4-3-3)\n  Anatoliy Trubin (G), Samuel Dahl (D), Alessandro Circati (D), Cl\u00e9ment Lenglet (D), Souffian El Karouani (D), Georgiy Sudakov (M), Jo\u00e3o Palhinha (M), Claudio Echeverri (F), Dodi Luk\u00e9bakio (F), Jhon Dur\u00e1n (F), Andreas Schjelderup (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\nAlverca: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-10-31 01:15 EDT (3-4-2-1)\n  Matheus Mendes (G), Steven Baseya (D), Sergi G\u00f3mez (D), Isaac James (M), Diogo Spencer (M), Rayan Lucas (M), Davy Gui (M), Francisco Chissumba (M), Chiquinho (F), Lucas Figueiredo (F), Dawda Camara (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nKEY ABSENCES\n\n- Benfica: Leandro Barreiro \u2014 injury, Early July 2027 [FotMob, 2026-10-31 01:15 EDT]\n- Benfica: Daniel Banjaqui \u2014 injury, Early November 2026 [FotMob, 2026-10-31 01:15 EDT]\n- Benfica: Jakub Kami\u0144ski \u2014 injury, Day to day [FotMob, 2026-10-31 01:15 EDT]\n- Benfica: Enzo Barrenechea \u2014 injury, Early November 2026 [FotMob, 2026-10-31 01:15 EDT]\n- Alverca: Steven Baseya \u2014 suspension, Early November 2026 [FotMob, 2026-10-31 01:15 EDT]\n- Alverca: Noah Raveyre \u2014 injury, Day to day [FotMob, 2026-10-31 01:15 EDT]\n- Alverca: Bastien Meupiyou \u2014 injury, Day to day [FotMob, 2026-10-31 01:15 EDT]\n- Alverca: Juli\u00e1n Mart\u00ednez \u2014 injury, Day to day [FotMob, 2026-10-31 01:15 EDT]\n- Alverca: Sabit Abdulai \u2014 injury, Day to day [FotMob, 2026-10-31 01:15 EDT]\n\nWEATHER AT VENUE\n\nEst\u00e1dio do Sport Lisboa e Benfica (da Luz), Lisboa: 17.5 \u00b0C, wind 1.5 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-10-31 01:15 EDT]\n\nREST & TRAVEL\n\nBenfica: 7 days' rest, 1 matches in previous 21 days \u00b7 Alverca: 9 days' rest, 2 in 21 days \u00b7 away travel 20.7 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 75.2% / 16.3% / 8.5%, xG 2.49\u20130.75\n- Understat xG component (validated, in ensemble): home +0.13 pp, draw -0.08 pp, away -0.05 pp; xG +0.077 / +0.042\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.09 pp, draw -0.06 pp, away -0.03 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- lineup: not applied (failed validation; no live features)\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Benfica: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Benfica: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n- Alverca: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Alverca: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nFINAL VERDICT\n\nBenfica 2\u20130 Alverca is the single most probable scoreline at 12.2%: expected goals 2.49\u20130.75 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.048). Exact scores are inherently uncertain; the 1X2 split is 75.2%/16.3%/8.5%.\n",
+ "frozen_at": "2026-10-31T05:15:52+00:00",
+ "sha256": "c42b2c956972f8c7d9997b6e771428451f9516f9ff508223d7a30198e5668761"
+}

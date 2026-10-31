@@ -1,0 +1,552 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-10-30",
+ "input_fingerprint": "5a99153ce08caaded5d8617b1eff1cb6b5e652ce705eaf2cd2bf4b9802c3b82c",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-10-31T05:17:16+00:00",
+ "fixture": {
+  "event_id": "POLY-1250167",
+  "home_name": "Wrexham AFC",
+  "away_name": "Wolverhampton Wanderers FC",
+  "competition": "EFL Championship",
+  "subcategory": "elc",
+  "kickoff_utc": "2026-11-07T12:30:00+00:00",
+  "kickoff_local": "2026-11-07 07:30 EST",
+  "home_matched": "Wrexham",
+  "away_matched": "Wolves",
+  "match_methods": {
+   "home": {
+    "source": "Wrexham AFC",
+    "matched": "Wrexham",
+    "method": "core-tokens",
+    "score": 0.97
+   },
+   "away": {
+    "source": "Wolverhampton Wanderers FC",
+    "matched": "Wolves",
+    "method": "alias",
+    "score": 1.0
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.3614150488971196,
+  "p_draw": 0.2811253914010396,
+  "p_away": 0.3574595597018405,
+  "xg_home": 1.328183271505054,
+  "xg_away": 1.3202031263962888,
+  "xg_total": 2.648386397901343,
+  "median_total": 2,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.13685242968577327
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.13685242968577327
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.08788711157771953
+   },
+   {
+    "home": 0,
+    "away": 1,
+    "p": 0.08713414055604322
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.08412151048820181
+   },
+   {
+    "home": 1,
+    "away": 2,
+    "p": 0.08355531417158346
+   }
+  ],
+  "btts": 0.5569256794158343,
+  "totals_over": {
+   "over_0.5": 0.9269196430520015,
+   "over_1.5": 0.7518983909182388,
+   "over_2.5": 0.4942653657019191,
+   "over_3.5": 0.2743291793131169,
+   "over_4.5": 0.1261403141039063,
+   "over_5.5": 0.05044263870092253,
+   "over_6.5": 0.01723724039044738
+  },
+  "total_buckets": {
+   "0-1": 0.24810160908176102,
+   "2": 0.2576330252163197,
+   "3": 0.2199361863888022,
+   "4": 0.1481888652092106,
+   "5+": 0.1261403141039063
+  },
+  "clean_sheet_home": 0.25931292043783233,
+  "clean_sheet_away": 0.25684175709433144,
+  "home_goal_dist": [
+   0.25684175709433144,
+   0.3594856044110807,
+   0.23810526063676374,
+   0.10257764532336663,
+   0.03268160230768002,
+   0.008238489572505567,
+   0.0017134270874621493,
+   0.0003562135668095227
+  ],
+  "away_goal_dist": [
+   0.25931292043783233,
+   0.3599787595540569,
+   0.23684409616539503,
+   0.10150501756478755,
+   0.032220379464185385,
+   0.008104233963556652,
+   0.0016841573971242557,
+   0.000350435453061716
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    3
+   ],
+   "away_goals_80": [
+    0,
+    3
+   ],
+   "total_goals_80": [
+    1,
+    5
+   ],
+   "goal_diff_80": [
+    -2,
+    2
+   ]
+  },
+  "score_grid": [
+   [
+    0.07308,
+    0.087134,
+    0.059933,
+    0.025863,
+    0.008237,
+    0.002073,
+    0.000431
+   ],
+   [
+    0.087887,
+    0.136852,
+    0.083555,
+    0.036074,
+    0.011495,
+    0.002895,
+    0.000602
+   ],
+   [
+    0.060847,
+    0.084122,
+    0.058931,
+    0.0241,
+    0.007683,
+    0.001936,
+    0.000403
+   ],
+   [
+    0.026396,
+    0.036508,
+    0.024225,
+    0.011057,
+    0.003339,
+    0.000842,
+    0.000175
+   ],
+   [
+    0.008438,
+    0.011675,
+    0.007751,
+    0.003351,
+    0.001129,
+    0.00027,
+    5.6e-05
+   ],
+   [
+    0.002129,
+    0.002947,
+    0.001957,
+    0.000846,
+    0.00027,
+    7.2e-05,
+    1.4e-05
+   ],
+   [
+    0.000443,
+    0.000613,
+    0.000407,
+    0.000176,
+    5.6e-05,
+    1.4e-05,
+    3e-06
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.362305,
+  "p_draw": 0.28075,
+  "p_away": 0.356945,
+  "se": [
+   0.0010748025097081788,
+   0.001004812016001003,
+   0.001071296567190897
+  ],
+  "max_abs_dev_vs_exact": 0.0008899511028803708,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   1.0459799443034485,
+   1.633950102394875
+  ],
+  "xg_away_80": [
+   0.9881486569345612,
+   1.6767700556315728
+  ],
+  "p_home_80": [
+   0.2768358540014638,
+   0.4681729711612498
+  ],
+  "p_draw_80": [
+   0.24237193240463367,
+   0.3000895718660913
+  ],
+  "p_away_80": [
+   0.25721113655064315,
+   0.4624104486198053
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.1768428335727251,
+   0.19624465182802306
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.3676977027648522,
+   "p_draw": 0.27326194663116177,
+   "p_away": 0.3590403506039862,
+   "xg_home": 1.331462388567735,
+   "xg_away": 1.3128489252353888,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.3764466462328821,
+   "p_draw": 0.2680262032067621,
+   "p_away": 0.35552715056035583,
+   "xg_home": 1.2875212238789893,
+   "xg_away": 1.2433927442689077,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.46368596286805797,
+   "p_draw": 0.2696250189137229,
+   "p_away": 0.2666890182182193,
+   "xg_home": 1.5368850346978502,
+   "xg_away": 1.1099086100320459,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.43362929859923616,
+   "p_draw": 0.26159331450305645,
+   "p_away": 0.30477738689770745,
+   "xg_home": 1.4320617984640485,
+   "xg_away": 1.1567024686904,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.35714329742688333,
+   "p_draw": 0.27131457888483956,
+   "p_away": 0.37154212368827716,
+   "xg_home": 1.321579649529556,
+   "xg_away": 1.3526915167110605,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Home advantage (England, fitted from results): \u00d71.22 on Wrexham's scoring rate.",
+   "effect": 0.1964
+  },
+  {
+   "text": "Independent results-only Elo: Wrexham 1438 vs Wolves 1504 (gap -66 before home advantage).",
+   "effect": 0.0988
+  },
+  {
+   "text": "Wrexham attack vs Wolves defence: time-weighted strength gap multiplies Wrexham's scoring rate by \u00d70.91 relative to an average pairing (from 38/35 decay-weighted matches).",
+   "effect": 0.0957
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.3614150488971196,
+  "p_draw": 0.2811253914010396,
+  "p_away": 0.3574595597018405,
+  "xg_home": 1.328183271505054,
+  "xg_away": 1.3202031263962888
+ },
+ "context": {
+  "fetched_at": "2026-10-31T05:17:16+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5836933",
+    "fetched_at": "2026-10-31T05:17:16+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "none",
+    "source": null,
+    "formation": null,
+    "starters": [],
+    "fetched_at": "2026-10-31T05:17:16+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   },
+   "away": {
+    "status": "none",
+    "source": null,
+    "formation": null,
+    "starters": [],
+    "fetched_at": "2026-10-31T05:17:16+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Josh Windass",
+     "type": "injury",
+     "expected_return": "Early November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836933",
+     "fetched_at": "2026-10-31T05:17:16+00:00"
+    },
+    {
+     "player": "Nathan Broadhead",
+     "type": "injury",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836933",
+     "fetched_at": "2026-10-31T05:17:16+00:00"
+    },
+    {
+     "player": "Max Cleworth",
+     "type": "injury",
+     "expected_return": "Early November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836933",
+     "fetched_at": "2026-10-31T05:17:16+00:00"
+    },
+    {
+     "player": "Sebastian Revan",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836933",
+     "fetched_at": "2026-10-31T05:17:16+00:00"
+    },
+    {
+     "player": "George Thomason",
+     "type": "injury",
+     "expected_return": "Unknown",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836933",
+     "fetched_at": "2026-10-31T05:17:16+00:00"
+    },
+    {
+     "player": "Liberato Cacace",
+     "type": "injury",
+     "expected_return": "Early November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836933",
+     "fetched_at": "2026-10-31T05:17:16+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "Bertrand Traor\u00e9",
+     "type": "injury",
+     "expected_return": "Early November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836933",
+     "fetched_at": "2026-10-31T05:17:16+00:00"
+    },
+    {
+     "player": "Boubacar Traor\u00e9",
+     "type": "injury",
+     "expected_return": "Early November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836933",
+     "fetched_at": "2026-10-31T05:17:16+00:00"
+    },
+    {
+     "player": "Rodrigo Gomes",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836933",
+     "fetched_at": "2026-10-31T05:17:16+00:00"
+    },
+    {
+     "player": "Raul Jim\u00e9nez",
+     "type": "injury",
+     "expected_return": "Early January 2027",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836933",
+     "fetched_at": "2026-10-31T05:17:16+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 14,
+    "n21": 2,
+    "last_match": "2026-10-24"
+   },
+   "away": {
+    "rest_days": 14,
+    "n21": 2,
+    "last_match": "2026-10-24"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 78.0
+  },
+  "venue": {
+   "name": "Racecourse Ground",
+   "city": "Wrexham (Wrecsam)",
+   "lat": 53.051940682,
+   "lon": -3.003819287
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 1.8,
+   "temp_c": 8.5,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=53.052&longitude=-3.004",
+   "fetched_at": "2026-10-31T05:17:16+00:00",
+   "lat": 53.051940682,
+   "lon": -3.003819287
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": -1.04,
+    "d_p_draw_pp": 0.17,
+    "d_p_away_pp": 0.87,
+    "d_xg_home": 0.015,
+    "d_xg_away": 0.056
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0089,
+    "away_rate_mult": 1.0038,
+    "d_p_home_pp": 0.2,
+    "d_p_draw_pp": -0.1,
+    "d_p_away_pp": -0.1,
+    "d_xg_home": 0.011,
+    "d_xg_away": 0.005,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "reason": "failed validation; no live features"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 14.0,
+   "rest_a": 14.0,
+   "n21_h": 2.0,
+   "n21_a": 2.0,
+   "travel_km": 77.9730187052117,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 1.8,
+   "temp_c": 8.5
+  }
+ },
+ "confidence": {
+  "tier": "LOW",
+  "p_max": 0.3614150488971196,
+  "entropy_nats": 1.0922880937080892,
+  "text": "Most likely result has P = 36.1%. In the out-of-sample backtest, favourites priced 0.33\u20130.40 won 37.6% \u00b1 0.5% (n=8383, mean forecast 37.8%). Backtest RPS for E1: 0.2179; exact-score top-5 hit rate 51.6% (n=1800). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: LOW (entropy 1.092 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Wrexham: no lineup information.",
+  "Wrexham: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.",
+  "Wolves: no lineup information.",
+  "Wolves: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+ ],
+ "verdict": "Wrexham 1\u20131 Wolves is the single most probable scoreline at 13.7%: expected goals 1.33\u20131.32 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.048). Exact scores are inherently uncertain; the 1X2 split is 36.1%/28.1%/35.7%.",
+ "resolved": {
+  "home_key": "England:Wrexham",
+  "away_key": "England:Wolves",
+  "div": "E1",
+  "home_div": "E1",
+  "away_div": "E1",
+  "country": "England"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: Wolverhampton Wanderers FC at Wrexham AFC\nCompetition: EFL Championship\nDate: 2026-11-07 07:30 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-10-30\n\nPRIMARY FINAL SCORE PREDICTION\n\nWrexham AFC 1 \u2013 1 Wolverhampton Wanderers FC\n(modal exact score, probability 13.7%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.33\nAway: 1.32\nExpected Total: 2.65\nMedian Total: 2\n\nRESULT PROBABILITIES\n\nHome Win: 36.1%\nDraw: 28.1%\nAway Win: 35.7%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 13.7%\n2. 1\u20130: 8.8%\n3. 0\u20131: 8.7%\n4. 2\u20131: 8.4%\n5. 1\u20132: 8.4%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 24.8%\nTotal 2 goals: 25.8%\nTotal 3 goals: 22.0%\nTotal 4 goals: 14.8%\nTotal 5+ goals: 12.6%\n\nBoth Teams Score: 55.7%\nClean sheet Wrexham AFC: 25.9% \u00b7 Clean sheet Wolverhampton Wanderers FC: 25.7%\n\nMATCH INTELLIGENCE\n\n1. Home advantage (England, fitted from results): \u00d71.22 on Wrexham's scoring rate.\n2. Independent results-only Elo: Wrexham 1438 vs Wolves 1504 (gap -66 before home advantage).\n3. Wrexham attack vs Wolves defence: time-weighted strength gap multiplies Wrexham's scoring rate by \u00d70.91 relative to an average pairing (from 38/35 decay-weighted matches).\n\nMODEL CONFIDENCE\n\nMost likely result has P = 36.1%. In the out-of-sample backtest, favourites priced 0.33\u20130.40 won 37.6% \u00b1 0.5% (n=8383, mean forecast 37.8%). Backtest RPS for E1: 0.2179; exact-score top-5 hit rate 51.6% (n=1800). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: LOW (entropy 1.092 nats of max 1.099).\nParameter-uncertainty 80% bands: xG Wrexham AFC 1.05\u20131.63, xG Wolverhampton Wanderers FC 0.99\u20131.68; P(home win) 27.7%\u201346.8%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0009 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nWrexham: NONE, fetched 2026-10-31 01:17 EDT\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\nWolves: NONE, fetched 2026-10-31 01:17 EDT\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nKEY ABSENCES\n\n- Wrexham: Josh Windass \u2014 injury, Early November 2026 [FotMob, 2026-10-31 01:17 EDT]\n- Wrexham: Nathan Broadhead \u2014 injury, Mid November 2026 [FotMob, 2026-10-31 01:17 EDT]\n- Wrexham: Max Cleworth \u2014 injury, Early November 2026 [FotMob, 2026-10-31 01:17 EDT]\n- Wrexham: Sebastian Revan \u2014 injury, Doubtful [FotMob, 2026-10-31 01:17 EDT]\n- Wrexham: George Thomason \u2014 injury, Unknown [FotMob, 2026-10-31 01:17 EDT]\n- Wrexham: Liberato Cacace \u2014 injury, Early November 2026 [FotMob, 2026-10-31 01:17 EDT]\n- Wolves: Bertrand Traor\u00e9 \u2014 injury, Early November 2026 [FotMob, 2026-10-31 01:17 EDT]\n- Wolves: Boubacar Traor\u00e9 \u2014 injury, Early November 2026 [FotMob, 2026-10-31 01:17 EDT]\n- Wolves: Rodrigo Gomes \u2014 injury, Doubtful [FotMob, 2026-10-31 01:17 EDT]\n- Wolves: Raul Jim\u00e9nez \u2014 injury, Early January 2027 [FotMob, 2026-10-31 01:17 EDT]\n\nWEATHER AT VENUE\n\nRacecourse Ground, Wrexham (Wrecsam): 8.5 \u00b0C, wind 1.8 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-10-31 01:17 EDT]\n\nREST & TRAVEL\n\nWrexham: 14 days' rest, 2 matches in previous 21 days \u00b7 Wolves: 14 days' rest, 2 in 21 days \u00b7 away travel 78.0 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 36.1% / 28.1% / 35.7%, xG 1.33\u20131.32\n- Understat xG component (validated, in ensemble): home -1.04 pp, draw +0.17 pp, away +0.87 pp; xG +0.015 / +0.056\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.20 pp, draw -0.10 pp, away -0.10 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- lineup: not applied (failed validation; no live features)\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Wrexham: no lineup information.\n- Wrexham: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n- Wolves: no lineup information.\n- Wolves: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nFINAL VERDICT\n\nWrexham 1\u20131 Wolves is the single most probable scoreline at 13.7%: expected goals 1.33\u20131.32 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.048). Exact scores are inherently uncertain; the 1X2 split is 36.1%/28.1%/35.7%.\n",
+ "frozen_at": "2026-10-31T05:17:16+00:00",
+ "sha256": "8110fae0aa97d4577372207c22fc62daab7ab9346e1aad94dbb5cbb658b28344"
+}

@@ -1,0 +1,544 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-10-30",
+ "input_fingerprint": "5a99153ce08caaded5d8617b1eff1cb6b5e652ce705eaf2cd2bf4b9802c3b82c",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-10-31T05:15:06+00:00",
+ "fixture": {
+  "event_id": "POLY-1253822",
+  "home_name": "Standard Liege",
+  "away_name": "KV Kortrijk",
+  "competition": "Belgium Pro League",
+  "subcategory": "bel1",
+  "kickoff_utc": "2026-10-31T17:15:00+00:00",
+  "kickoff_local": "2026-10-31 13:15 EDT",
+  "home_matched": "Standard",
+  "away_matched": "Kortrijk",
+  "match_methods": {
+   "home": {
+    "source": "Standard Liege",
+    "matched": "Standard",
+    "method": "alias",
+    "score": 1.0
+   },
+   "away": {
+    "source": "KV Kortrijk",
+    "matched": "Kortrijk",
+    "method": "core-tokens",
+    "score": 0.97
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.60587358795386,
+  "p_draw": 0.24009151146224486,
+  "p_away": 0.1540349005838952,
+  "xg_home": 1.8281634544255971,
+  "xg_away": 0.8257534781541744,
+  "xg_total": 2.6539169325797713,
+  "median_total": 2,
+  "modal_score": {
+   "home": 1,
+   "away": 0,
+   "p": 0.12441654881316361
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.12441654881316361
+   },
+   {
+    "home": 2,
+    "away": 0,
+    "p": 0.11727451526882958
+   },
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.11546861322299973
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.09858019059416849
+   },
+   {
+    "home": 0,
+    "away": 0,
+    "p": 0.07420673908810878
+   }
+  ],
+  "btts": 0.4844164446716983,
+  "totals_over": {
+   "over_0.5": 0.9257932609118914,
+   "over_1.5": 0.7490775429727219,
+   "over_2.5": 0.4941968418375722,
+   "over_3.5": 0.2760736726803836,
+   "over_4.5": 0.12922807274021292,
+   "over_5.5": 0.05273896296213839,
+   "over_6.5": 0.0186579267390336
+  },
+  "total_buckets": {
+   "0-1": 0.2509224570272782,
+   "2": 0.25488070113514977,
+   "3": 0.2181231691571886,
+   "4": 0.14684559994017066,
+   "5+": 0.12922807274021292
+  },
+  "clean_sheet_home": 0.43393252655891046,
+  "clean_sheet_away": 0.15585776785750008,
+  "home_goal_dist": [
+   0.15585776785750008,
+   0.297060527393563,
+   0.2718909943251968,
+   0.16420027937299153,
+   0.07396559992956915,
+   0.026540063039566103,
+   0.007911845739035375,
+   0.002572922342578117
+  ],
+  "away_goal_dist": [
+   0.43393252655891046,
+   0.3670404730931824,
+   0.14953428799207982,
+   0.04001812262532551,
+   0.008000388068650147,
+   0.0012809727599793369,
+   0.00017134657933579866,
+   2.188232253668393e-05
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    4
+   ],
+   "away_goals_80": [
+    0,
+    2
+   ],
+   "total_goals_80": [
+    1,
+    5
+   ],
+   "goal_diff_80": [
+    -1,
+    3
+   ]
+  },
+  "score_grid": [
+   [
+    0.074207,
+    0.052299,
+    0.022138,
+    0.00585,
+    0.001155,
+    0.000182,
+    2.4e-05
+   ],
+   [
+    0.124417,
+    0.115469,
+    0.042995,
+    0.011475,
+    0.002287,
+    0.000364,
+    4.8e-05
+   ],
+   [
+    0.117275,
+    0.09858,
+    0.042579,
+    0.010866,
+    0.002186,
+    0.000351,
+    4.7e-05
+   ],
+   [
+    0.070698,
+    0.059983,
+    0.024772,
+    0.007122,
+    0.001369,
+    0.000222,
+    3e-05
+   ],
+   [
+    0.031653,
+    0.027108,
+    0.011305,
+    0.003107,
+    0.000672,
+    0.000104,
+    1.4e-05
+   ],
+   [
+    0.011274,
+    0.009744,
+    0.004102,
+    0.001138,
+    0.000235,
+    4.1e-05,
+    5e-06
+   ],
+   [
+    0.003335,
+    0.002909,
+    0.001236,
+    0.000346,
+    7.2e-05,
+    1.2e-05,
+    2e-06
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.6065699999999999,
+  "p_draw": 0.23989,
+  "p_away": 0.15354,
+  "se": [
+   0.0010923434329458846,
+   0.0009548371272107091,
+   0.0008061186897721699
+  ],
+  "max_abs_dev_vs_exact": 0.0006964120461399048,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   1.3365904914678868,
+   2.3730844244831077
+  ],
+  "xg_away_80": [
+   0.5555794546149706,
+   1.1271505911834045
+  ],
+  "p_home_80": [
+   0.4673557567044563,
+   0.7304393446968841
+  ],
+  "p_draw_80": [
+   0.17649878503503805,
+   0.2920356834101092
+  ],
+  "p_away_80": [
+   0.08814340003022272,
+   0.24850824721896947
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.22759952447193346,
+   0.2625432334996382
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.5863570767048871,
+   "p_draw": 0.25309739621763183,
+   "p_away": 0.1605455270774808,
+   "xg_home": 1.6532008353862846,
+   "xg_away": 0.743155510167442,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.6174373485966512,
+   "p_draw": 0.21241758122029936,
+   "p_away": 0.17014507018304964,
+   "xg_home": 1.9697729417679148,
+   "xg_away": 0.924729552317747,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.8047079984626255,
+   "p_draw": 0.1635378940050377,
+   "p_away": 0.0317541075323368,
+   "xg_home": 2.0569159303200424,
+   "xg_away": 0.24429639173920528,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.44375757764167556,
+   "p_draw": 0.25071635132858755,
+   "p_away": 0.3055260710297367,
+   "xg_home": 1.5403555972381355,
+   "xg_away": 1.235584022710973,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.5863645272522278,
+   "p_draw": 0.2530129906522846,
+   "p_away": 0.1606224820954877,
+   "xg_home": 1.6529471731755343,
+   "xg_away": 0.7431119037291019,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Kortrijk attack vs Standard defence: rate multiplier \u00d70.62 for the away side.",
+   "effect": 0.4824
+  },
+  {
+   "text": "Independent results-only Elo: Standard 1531 vs Kortrijk 1365 (gap +166 before home advantage).",
+   "effect": 0.2496
+  },
+  {
+   "text": "Home advantage (Belgium, fitted from results): \u00d71.25 on Standard's scoring rate.",
+   "effect": 0.2198
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.60587358795386,
+  "p_draw": 0.24009151146224486,
+  "p_away": 0.1540349005838952,
+  "xg_home": 1.8281634544255971,
+  "xg_away": 0.8257534781541744
+ },
+ "context": {
+  "fetched_at": "2026-10-31T05:15:06+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5811797",
+    "fetched_at": "2026-10-31T05:15:06+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "none",
+    "source": null,
+    "formation": "",
+    "starters": [],
+    "fetched_at": "2026-10-31T05:15:06+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   },
+   "away": {
+    "status": "none",
+    "source": null,
+    "formation": "",
+    "starters": [],
+    "fetched_at": "2026-10-31T05:15:06+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Matthieu Epolo",
+     "type": "suspension",
+     "expected_return": "Late October 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5811797",
+     "fetched_at": "2026-10-31T05:15:06+00:00"
+    },
+    {
+     "player": "Mohamed El Hankouri",
+     "type": "injury",
+     "expected_return": "Day to day",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5811797",
+     "fetched_at": "2026-10-31T05:15:06+00:00"
+    },
+    {
+     "player": "Josu\u00e9 Homawoo",
+     "type": "injury",
+     "expected_return": "Early January 2027",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5811797",
+     "fetched_at": "2026-10-31T05:15:06+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "Rok \u0160torman",
+     "type": "injury",
+     "expected_return": "Day to day",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5811797",
+     "fetched_at": "2026-10-31T05:15:06+00:00"
+    },
+    {
+     "player": "Nayel Mehssatou",
+     "type": "injury",
+     "expected_return": "Day to day",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5811797",
+     "fetched_at": "2026-10-31T05:15:06+00:00"
+    },
+    {
+     "player": "Jamie Roche",
+     "type": "injury",
+     "expected_return": "Day to day",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5811797",
+     "fetched_at": "2026-10-31T05:15:06+00:00"
+    },
+    {
+     "player": "Basile Vroninks",
+     "type": "injury",
+     "expected_return": "Day to day",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5811797",
+     "fetched_at": "2026-10-31T05:15:06+00:00"
+    },
+    {
+     "player": "Marko Ili\u0107",
+     "type": "injury",
+     "expected_return": "Day to day",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5811797",
+     "fetched_at": "2026-10-31T05:15:06+00:00"
+    },
+    {
+     "player": "Matthew Anderson",
+     "type": "injury",
+     "expected_return": "Day to day",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5811797",
+     "fetched_at": "2026-10-31T05:15:06+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 6,
+    "n21": 2,
+    "last_match": "2026-10-25"
+   },
+   "away": {
+    "rest_days": 21,
+    "n21": 1,
+    "last_match": "2026-10-10"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 163.4
+  },
+  "venue": {
+   "name": "Stade Maurice Dufrasne",
+   "city": "Li\u00e8ge (Luik)",
+   "lat": 50.609892585,
+   "lon": 5.543342829
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 3.25,
+   "temp_c": 10.7,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=50.61&longitude=5.543",
+   "fetched_at": "2026-10-31T05:15:06+00:00",
+   "lat": 50.609892585,
+   "lon": 5.543342829
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": -1.56,
+    "d_p_draw_pp": 1.96,
+    "d_p_away_pp": -0.4,
+    "d_xg_home": -0.155,
+    "d_xg_away": -0.086
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.015,
+    "away_rate_mult": 1.0063,
+    "d_p_home_pp": 0.48,
+    "d_p_draw_pp": -0.3,
+    "d_p_away_pp": -0.18,
+    "d_xg_home": 0.027,
+    "d_xg_away": 0.005,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "reason": "failed validation; no live features"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 6.0,
+   "rest_a": 21.0,
+   "n21_h": 2.0,
+   "n21_a": 1.0,
+   "travel_km": 163.36479402316223,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 3.25,
+   "temp_c": 10.7
+  }
+ },
+ "confidence": {
+  "tier": "MODERATE",
+  "p_max": 0.60587358795386,
+  "entropy_nats": 0.9342745034054887,
+  "text": "Most likely result has P = 60.6%. In the out-of-sample backtest, favourites priced 0.60\u20130.70 won 66.4% \u00b1 0.7% (n=4069, mean forecast 64.2%). Backtest RPS for B1: 0.2037; exact-score top-5 hit rate 48.8% (n=1015). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: MODERATE (entropy 0.934 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Standard: no lineup information.",
+  "Standard: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.",
+  "Kortrijk: no lineup information.",
+  "Kortrijk: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+ ],
+ "verdict": "Standard 1\u20130 Kortrijk is the single most probable scoreline at 12.4%: expected goals 1.83\u20130.83 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.048). Exact scores are inherently uncertain; the 1X2 split is 60.6%/24.0%/15.4%.",
+ "resolved": {
+  "home_key": "Belgium:Standard",
+  "away_key": "Belgium:Kortrijk",
+  "div": "B1",
+  "home_div": "B1",
+  "away_div": "B1",
+  "country": "Belgium"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: KV Kortrijk at Standard Liege\nCompetition: Belgium Pro League\nDate: 2026-10-31 13:15 EDT\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-10-30\n\nPRIMARY FINAL SCORE PREDICTION\n\nStandard Liege 1 \u2013 0 KV Kortrijk\n(modal exact score, probability 12.4%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.83\nAway: 0.83\nExpected Total: 2.65\nMedian Total: 2\n\nRESULT PROBABILITIES\n\nHome Win: 60.6%\nDraw: 24.0%\nAway Win: 15.4%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20130: 12.4%\n2. 2\u20130: 11.7%\n3. 1\u20131: 11.5%\n4. 2\u20131: 9.9%\n5. 0\u20130: 7.4%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 25.1%\nTotal 2 goals: 25.5%\nTotal 3 goals: 21.8%\nTotal 4 goals: 14.7%\nTotal 5+ goals: 12.9%\n\nBoth Teams Score: 48.4%\nClean sheet Standard Liege: 43.4% \u00b7 Clean sheet KV Kortrijk: 15.6%\n\nMATCH INTELLIGENCE\n\n1. Kortrijk attack vs Standard defence: rate multiplier \u00d70.62 for the away side.\n2. Independent results-only Elo: Standard 1531 vs Kortrijk 1365 (gap +166 before home advantage).\n3. Home advantage (Belgium, fitted from results): \u00d71.25 on Standard's scoring rate.\n\nMODEL CONFIDENCE\n\nMost likely result has P = 60.6%. In the out-of-sample backtest, favourites priced 0.60\u20130.70 won 66.4% \u00b1 0.7% (n=4069, mean forecast 64.2%). Backtest RPS for B1: 0.2037; exact-score top-5 hit rate 48.8% (n=1015). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: MODERATE (entropy 0.934 nats of max 1.099).\nParameter-uncertainty 80% bands: xG Standard Liege 1.34\u20132.37, xG KV Kortrijk 0.56\u20131.13; P(home win) 46.7%\u201373.0%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0007 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nStandard: NONE, fetched 2026-10-31 01:15 EDT\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\nKortrijk: NONE, fetched 2026-10-31 01:15 EDT\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nKEY ABSENCES\n\n- Standard: Matthieu Epolo \u2014 suspension, Late October 2026 [FotMob, 2026-10-31 01:15 EDT]\n- Standard: Mohamed El Hankouri \u2014 injury, Day to day [FotMob, 2026-10-31 01:15 EDT]\n- Standard: Josu\u00e9 Homawoo \u2014 injury, Early January 2027 [FotMob, 2026-10-31 01:15 EDT]\n- Kortrijk: Rok \u0160torman \u2014 injury, Day to day [FotMob, 2026-10-31 01:15 EDT]\n- Kortrijk: Nayel Mehssatou \u2014 injury, Day to day [FotMob, 2026-10-31 01:15 EDT]\n- Kortrijk: Jamie Roche \u2014 injury, Day to day [FotMob, 2026-10-31 01:15 EDT]\n- Kortrijk: Basile Vroninks \u2014 injury, Day to day [FotMob, 2026-10-31 01:15 EDT]\n- Kortrijk: Marko Ili\u0107 \u2014 injury, Day to day [FotMob, 2026-10-31 01:15 EDT]\n- Kortrijk: Matthew Anderson \u2014 injury, Day to day [FotMob, 2026-10-31 01:15 EDT]\n\nWEATHER AT VENUE\n\nStade Maurice Dufrasne, Li\u00e8ge (Luik): 10.7 \u00b0C, wind 3.2 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-10-31 01:15 EDT]\n\nREST & TRAVEL\n\nStandard: 6 days' rest, 2 matches in previous 21 days \u00b7 Kortrijk: 21 days' rest, 1 in 21 days \u00b7 away travel 163.4 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 60.6% / 24.0% / 15.4%, xG 1.83\u20130.83\n- Understat xG component (validated, in ensemble): home -1.56 pp, draw +1.96 pp, away -0.40 pp; xG -0.155 / -0.086\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.48 pp, draw -0.30 pp, away -0.18 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- lineup: not applied (failed validation; no live features)\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Standard: no lineup information.\n- Standard: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n- Kortrijk: no lineup information.\n- Kortrijk: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nFINAL VERDICT\n\nStandard 1\u20130 Kortrijk is the single most probable scoreline at 12.4%: expected goals 1.83\u20130.83 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.048). Exact scores are inherently uncertain; the 1X2 split is 60.6%/24.0%/15.4%.\n",
+ "frozen_at": "2026-10-31T05:15:06+00:00",
+ "sha256": "c2d7fa3986f70df127bf9d2d00a4a03be395729dbf2af99854b6798f1fa4012d"
+}

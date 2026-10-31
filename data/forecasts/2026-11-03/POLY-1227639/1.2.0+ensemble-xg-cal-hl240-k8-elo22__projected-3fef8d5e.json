@@ -1,0 +1,626 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-10-30",
+ "input_fingerprint": "5a99153ce08caaded5d8617b1eff1cb6b5e652ce705eaf2cd2bf4b9802c3b82c",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-10-31T05:16:09+00:00",
+ "fixture": {
+  "event_id": "POLY-1227639",
+  "home_name": "Birmingham City FC",
+  "away_name": "Millwall FC",
+  "competition": "EFL Championship",
+  "subcategory": "elc",
+  "kickoff_utc": "2026-11-03T20:00:00+00:00",
+  "kickoff_local": "2026-11-03 15:00 EST",
+  "home_matched": "Birmingham",
+  "away_matched": "Millwall",
+  "match_methods": {
+   "home": {
+    "source": "Birmingham City FC",
+    "matched": "Birmingham",
+    "method": "alias",
+    "score": 1.0
+   },
+   "away": {
+    "source": "Millwall FC",
+    "matched": "Millwall",
+    "method": "core-tokens",
+    "score": 0.97
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.4326566784825898,
+  "p_draw": 0.2857048734516702,
+  "p_away": 0.28163844806573984,
+  "xg_home": 1.4086836974979795,
+  "xg_away": 1.0952149864499379,
+  "xg_total": 2.5038986839479174,
+  "median_total": 2,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.13924346819020247
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.13924346819020247
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.10902228460309861
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.09105736429320548
+   },
+   {
+    "home": 0,
+    "away": 0,
+    "p": 0.0844183278173754
+   },
+   {
+    "home": 0,
+    "away": 1,
+    "p": 0.08297573397383333
+   }
+  ],
+  "btts": 0.5206239838192859,
+  "totals_over": {
+   "over_0.5": 0.9155816721826245,
+   "over_1.5": 0.7235836536056925,
+   "over_2.5": 0.4573234510722966,
+   "over_3.5": 0.24268294327799028,
+   "over_4.5": 0.10622833398328385,
+   "over_5.5": 0.04035682448051931,
+   "over_6.5": 0.013085189968854907
+  },
+  "total_buckets": {
+   "0-1": 0.27641634639430734,
+   "2": 0.266260202533396,
+   "3": 0.21464050779430632,
+   "4": 0.13645460929470646,
+   "5+": 0.10622833398328385
+  },
+  "clean_sheet_home": 0.3270668758103917,
+  "clean_sheet_away": 0.23672746818769785,
+  "home_goal_dist": [
+   0.23672746818769785,
+   0.3512172482218742,
+   0.2469970338789241,
+   0.11336049556999804,
+   0.03852386162806072,
+   0.010359348131379653,
+   0.002298583526611912,
+   0.0005159608554534318
+  ],
+  "away_goal_dist": [
+   0.3270668758103917,
+   0.3746266308759671,
+   0.20323247776304193,
+   0.07171006709735761,
+   0.018722032847279767,
+   0.003871232271640512,
+   0.0006610928515209701,
+   0.00010959048280031657
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    3
+   ],
+   "away_goals_80": [
+    0,
+    2
+   ],
+   "total_goals_80": [
+    1,
+    5
+   ],
+   "goal_diff_80": [
+    -2,
+    2
+   ]
+  },
+  "score_grid": [
+   [
+    0.084418,
+    0.082976,
+    0.047135,
+    0.016732,
+    0.004381,
+    0.000906,
+    0.000155
+   ],
+   [
+    0.109022,
+    0.139243,
+    0.069961,
+    0.024859,
+    0.006515,
+    0.001349,
+    0.00023
+   ],
+   [
+    0.079882,
+    0.091057,
+    0.052561,
+    0.0177,
+    0.004643,
+    0.000962,
+    0.000164
+   ],
+   [
+    0.036891,
+    0.042094,
+    0.023028,
+    0.00866,
+    0.002153,
+    0.000447,
+    7.6e-05
+   ],
+   [
+    0.012561,
+    0.014346,
+    0.007856,
+    0.0028,
+    0.000777,
+    0.000153,
+    2.6e-05
+   ],
+   [
+    0.003377,
+    0.003861,
+    0.002116,
+    0.000755,
+    0.000199,
+    4.4e-05,
+    7e-06
+   ],
+   [
+    0.000749,
+    0.000857,
+    0.00047,
+    0.000168,
+    4.4e-05,
+    9e-06,
+    2e-06
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.433805,
+  "p_draw": 0.28561000000000003,
+  "p_away": 0.28058500000000003,
+  "se": [
+   0.0011081927223524797,
+   0.0010100418998734658,
+   0.0010046319171094456
+  ],
+  "max_abs_dev_vs_exact": 0.001148321517410178,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   1.0988980010645277,
+   1.7453394940673232
+  ],
+  "xg_away_80": [
+   0.8267854618410846,
+   1.3825476292920078
+  ],
+  "p_home_80": [
+   0.3378904305334214,
+   0.5392958308035918
+  ],
+  "p_draw_80": [
+   0.24410746296381877,
+   0.30735422117545497
+  ],
+  "p_away_80": [
+   0.20222219852642961,
+   0.37366120872718334
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.18342219640746052,
+   0.19080644012575831
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.43071734841147497,
+   "p_draw": 0.28436925330379387,
+   "p_away": 0.2849133982847312,
+   "xg_home": 1.3560982094916199,
+   "xg_away": 1.0537800881451453,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.44039150674248,
+   "p_draw": 0.26279663847869117,
+   "p_away": 0.2968118547788287,
+   "xg_home": 1.430968753504478,
+   "xg_away": 1.125570441051256,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.417146331292772,
+   "p_draw": 0.28182316076975567,
+   "p_away": 0.3010305079374724,
+   "xg_home": 1.3875263819069854,
+   "xg_away": 1.1420257335572501,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.43362929859923616,
+   "p_draw": 0.26159331450305645,
+   "p_away": 0.30477738689770745,
+   "xg_home": 1.4320617984640485,
+   "xg_away": 1.1567024686904,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.4305818396416186,
+   "p_draw": 0.28460542002553063,
+   "p_away": 0.28481274033285087,
+   "xg_home": 1.3532656295946839,
+   "xg_away": 1.0513074629194865,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Home advantage (England, fitted from results): \u00d71.22 on Birmingham's scoring rate.",
+   "effect": 0.1964
+  },
+  {
+   "text": "Millwall attack vs Birmingham defence: rate multiplier \u00d70.88 for the away side.",
+   "effect": 0.1331
+  },
+  {
+   "text": "Birmingham attack vs Millwall defence: time-weighted strength gap multiplies Birmingham's scoring rate by \u00d70.93 relative to an average pairing (from 39/39 decay-weighted matches).",
+   "effect": 0.0773
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.4326566784825898,
+  "p_draw": 0.2857048734516702,
+  "p_away": 0.28163844806573984,
+  "xg_home": 1.4086836974979795,
+  "xg_away": 1.0952149864499379
+ },
+ "context": {
+  "fetched_at": "2026-10-31T05:16:09+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5836910",
+    "fetched_at": "2026-10-31T05:16:09+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "4-2-3-1",
+    "starters": [
+     {
+      "name": "James Beadle",
+      "pos": "G"
+     },
+     {
+      "name": "Bright Osayi-Samuel",
+      "pos": "D"
+     },
+     {
+      "name": "Phil Neumann",
+      "pos": "D"
+     },
+     {
+      "name": "Christoph Klarer",
+      "pos": "D"
+     },
+     {
+      "name": "Alexander Cochrane",
+      "pos": "D"
+     },
+     {
+      "name": "Tomoki Iwata",
+      "pos": "M"
+     },
+     {
+      "name": "Jhon Sol\u00eds",
+      "pos": "M"
+     },
+     {
+      "name": "Carlos Vicente",
+      "pos": "F"
+     },
+     {
+      "name": "Jay Stansfield",
+      "pos": "M"
+     },
+     {
+      "name": "Liam Millar",
+      "pos": "F"
+     },
+     {
+      "name": "Luis V\u00e1zquez",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-10-31T05:16:09+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   },
+   "away": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "4-2-3-1",
+    "starters": [
+     {
+      "name": "Max Crocombe",
+      "pos": "G"
+     },
+     {
+      "name": "Tristan Crama",
+      "pos": "D"
+     },
+     {
+      "name": "Caleb Taylor",
+      "pos": "D"
+     },
+     {
+      "name": "Jake Cooper",
+      "pos": "D"
+     },
+     {
+      "name": "Zak Sturge",
+      "pos": "D"
+     },
+     {
+      "name": "Jenson Metcalfe",
+      "pos": "M"
+     },
+     {
+      "name": "Derek Mazou-Sacko",
+      "pos": "M"
+     },
+     {
+      "name": "Camiel Neghli",
+      "pos": "F"
+     },
+     {
+      "name": "Luke Cundle",
+      "pos": "M"
+     },
+     {
+      "name": "Kyrell Lisbie",
+      "pos": "F"
+     },
+     {
+      "name": "Lyndon Dykes",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-10-31T05:16:09+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "August Priske",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836910",
+     "fetched_at": "2026-10-31T05:16:09+00:00"
+    },
+    {
+     "player": "Paik Seung-Ho",
+     "type": "injury",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836910",
+     "fetched_at": "2026-10-31T05:16:09+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "Filip Marschall",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836910",
+     "fetched_at": "2026-10-31T05:16:09+00:00"
+    },
+    {
+     "player": "Ta\u00efryk Arconte",
+     "type": "injury",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836910",
+     "fetched_at": "2026-10-31T05:16:09+00:00"
+    },
+    {
+     "player": "Lukas Bornh\u00f8ft Jensen",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836910",
+     "fetched_at": "2026-10-31T05:16:09+00:00"
+    },
+    {
+     "player": "Josh Coburn",
+     "type": "injury",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836910",
+     "fetched_at": "2026-10-31T05:16:09+00:00"
+    },
+    {
+     "player": "Casper de Norre",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836910",
+     "fetched_at": "2026-10-31T05:16:09+00:00"
+    },
+    {
+     "player": "Mathis Servais",
+     "type": "injury",
+     "expected_return": "Unknown",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836910",
+     "fetched_at": "2026-10-31T05:16:09+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 10,
+    "n21": 3,
+    "last_match": "2026-10-24"
+   },
+   "away": {
+    "rest_days": 10,
+    "n21": 3,
+    "last_match": "2026-10-24"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 166.1
+  },
+  "venue": {
+   "name": "St. Andrew's @ Knighthead Park",
+   "city": "Birmingham",
+   "lat": 52.47573289,
+   "lon": -1.868104935
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 3.7,
+   "temp_c": 8.2,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=52.476&longitude=-1.868",
+   "fetched_at": "2026-10-31T05:16:09+00:00",
+   "lat": 52.47573289,
+   "lon": -1.868104935
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": -0.48,
+    "d_p_draw_pp": 1.05,
+    "d_p_away_pp": -0.58,
+    "d_xg_home": -0.038,
+    "d_xg_away": -0.037
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0152,
+    "away_rate_mult": 1.0064,
+    "d_p_home_pp": 0.4,
+    "d_p_draw_pp": -0.22,
+    "d_p_away_pp": -0.18,
+    "d_xg_home": 0.021,
+    "d_xg_away": 0.007,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "reason": "failed validation; no live features"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 10.0,
+   "rest_a": 10.0,
+   "n21_h": 3.0,
+   "n21_a": 3.0,
+   "travel_km": 166.12831104197096,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 3.7,
+   "temp_c": 8.2
+  }
+ },
+ "confidence": {
+  "tier": "LOW",
+  "p_max": 0.4326566784825898,
+  "entropy_nats": 1.0772871611610038,
+  "text": "Most likely result has P = 43.3%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.3% \u00b1 0.4% (n=16754, mean forecast 44.6%). Backtest RPS for E1: 0.2179; exact-score top-5 hit rate 51.6% (n=1800). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: LOW (entropy 1.077 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Birmingham: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Birmingham: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.",
+  "Millwall: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Millwall: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+ ],
+ "verdict": "Birmingham 1\u20131 Millwall is the single most probable scoreline at 13.9%: expected goals 1.41\u20131.10 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.048). Exact scores are inherently uncertain; the 1X2 split is 43.3%/28.6%/28.2%.",
+ "resolved": {
+  "home_key": "England:Birmingham",
+  "away_key": "England:Millwall",
+  "div": "E1",
+  "home_div": "E1",
+  "away_div": "E1",
+  "country": "England"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: Millwall FC at Birmingham City FC\nCompetition: EFL Championship\nDate: 2026-11-03 15:00 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-10-30\n\nPRIMARY FINAL SCORE PREDICTION\n\nBirmingham City FC 1 \u2013 1 Millwall FC\n(modal exact score, probability 13.9%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.41\nAway: 1.10\nExpected Total: 2.50\nMedian Total: 2\n\nRESULT PROBABILITIES\n\nHome Win: 43.3%\nDraw: 28.6%\nAway Win: 28.2%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 13.9%\n2. 1\u20130: 10.9%\n3. 2\u20131: 9.1%\n4. 0\u20130: 8.4%\n5. 0\u20131: 8.3%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 27.6%\nTotal 2 goals: 26.6%\nTotal 3 goals: 21.5%\nTotal 4 goals: 13.6%\nTotal 5+ goals: 10.6%\n\nBoth Teams Score: 52.1%\nClean sheet Birmingham City FC: 32.7% \u00b7 Clean sheet Millwall FC: 23.7%\n\nMATCH INTELLIGENCE\n\n1. Home advantage (England, fitted from results): \u00d71.22 on Birmingham's scoring rate.\n2. Millwall attack vs Birmingham defence: rate multiplier \u00d70.88 for the away side.\n3. Birmingham attack vs Millwall defence: time-weighted strength gap multiplies Birmingham's scoring rate by \u00d70.93 relative to an average pairing (from 39/39 decay-weighted matches).\n\nMODEL CONFIDENCE\n\nMost likely result has P = 43.3%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.3% \u00b1 0.4% (n=16754, mean forecast 44.6%). Backtest RPS for E1: 0.2179; exact-score top-5 hit rate 51.6% (n=1800). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: LOW (entropy 1.077 nats of max 1.099).\nParameter-uncertainty 80% bands: xG Birmingham City FC 1.10\u20131.75, xG Millwall FC 0.83\u20131.38; P(home win) 33.8%\u201353.9%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0011 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nBirmingham: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-10-31 01:16 EDT (4-2-3-1)\n  James Beadle (G), Bright Osayi-Samuel (D), Phil Neumann (D), Christoph Klarer (D), Alexander Cochrane (D), Tomoki Iwata (M), Jhon Sol\u00eds (M), Carlos Vicente (F), Jay Stansfield (M), Liam Millar (F), Luis V\u00e1zquez (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\nMillwall: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-10-31 01:16 EDT (4-2-3-1)\n  Max Crocombe (G), Tristan Crama (D), Caleb Taylor (D), Jake Cooper (D), Zak Sturge (D), Jenson Metcalfe (M), Derek Mazou-Sacko (M), Camiel Neghli (F), Luke Cundle (M), Kyrell Lisbie (F), Lyndon Dykes (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nKEY ABSENCES\n\n- Birmingham: August Priske \u2014 injury, Doubtful [FotMob, 2026-10-31 01:16 EDT]\n- Birmingham: Paik Seung-Ho \u2014 injury, Mid November 2026 [FotMob, 2026-10-31 01:16 EDT]\n- Millwall: Filip Marschall \u2014 injury, Doubtful [FotMob, 2026-10-31 01:16 EDT]\n- Millwall: Ta\u00efryk Arconte \u2014 injury, Mid November 2026 [FotMob, 2026-10-31 01:16 EDT]\n- Millwall: Lukas Bornh\u00f8ft Jensen \u2014 injury, Doubtful [FotMob, 2026-10-31 01:16 EDT]\n- Millwall: Josh Coburn \u2014 injury, Mid November 2026 [FotMob, 2026-10-31 01:16 EDT]\n- Millwall: Casper de Norre \u2014 injury, Doubtful [FotMob, 2026-10-31 01:16 EDT]\n- Millwall: Mathis Servais \u2014 injury, Unknown [FotMob, 2026-10-31 01:16 EDT]\n\nWEATHER AT VENUE\n\nSt. Andrew's @ Knighthead Park, Birmingham: 8.2 \u00b0C, wind 3.7 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-10-31 01:16 EDT]\n\nREST & TRAVEL\n\nBirmingham: 10 days' rest, 3 matches in previous 21 days \u00b7 Millwall: 10 days' rest, 3 in 21 days \u00b7 away travel 166.1 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 43.3% / 28.6% / 28.2%, xG 1.41\u20131.10\n- Understat xG component (validated, in ensemble): home -0.48 pp, draw +1.05 pp, away -0.58 pp; xG -0.038 / -0.037\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.40 pp, draw -0.22 pp, away -0.18 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- lineup: not applied (failed validation; no live features)\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Birmingham: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Birmingham: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n- Millwall: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Millwall: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nFINAL VERDICT\n\nBirmingham 1\u20131 Millwall is the single most probable scoreline at 13.9%: expected goals 1.41\u20131.10 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.048). Exact scores are inherently uncertain; the 1X2 split is 43.3%/28.6%/28.2%.\n",
+ "frozen_at": "2026-10-31T05:16:09+00:00",
+ "sha256": "d364d0a9aaae5358daea27cb487893be1886dd374af2176d739bc2e8659d8442"
+}
