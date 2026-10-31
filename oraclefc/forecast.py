@@ -8,6 +8,8 @@ No market data is read anywhere in this module (enforced by tests).
 from __future__ import annotations
 
 import math
+import hashlib
+import json
 from datetime import datetime, timezone
 from zoneinfo import ZoneInfo
 
@@ -34,9 +36,13 @@ class Engine:
 
     def __init__(self, df: pd.DataFrame | None = None, as_of: pd.Timestamp | None = None, with_context: bool = True):
         self.with_context = with_context
-        self.df = df if df is not None else store.load()
+        raw = df if df is not None else store.load()
+        self.as_of = as_of if as_of is not None else (raw["date"].max() + pd.Timedelta(days=1))
+        # Resolution, context and metadata must share the models' point-in-time cutoff.
+        self.df = raw.loc[raw["date"] < self.as_of].copy()
+        if self.df.empty:
+            raise ValueError("No training results strictly before the requested cutoff")
         self.cutoff = store.data_cutoff(self.df)
-        self.as_of = as_of or (self.df["date"].max() + pd.Timedelta(days=1))
         reg = load_registry()
         ch = reg.get("champion") or {}
         p = ch.get("params", {"half_life_days": 240.0, "kappa": 6.0, "elo_k": 22.0})
@@ -74,10 +80,18 @@ class Engine:
         if "xg_dc" in self.weights or self.with_context:
             from .context import history as H
             self._us_map = H.map_understat(self.df) if (config.CONTEXT_DIR / "understat_matches.parquet").exists() else None
+            if self._us_map is not None:
+                self._us_map = self._us_map.loc[self._us_map["datetime"] < self.as_of].copy()
             if "xg_dc" in self.models and self._us_map is not None:
                 self.df = H.attach_xg(self.df, self._us_map)
         for m in self.models.values():
             m.fit(self.df, self.as_of)
+        ordered = self.df.sort_values(["date", "home_key", "away_key"])[sorted(self.df.columns)]
+        result_hash = pd.util.hash_pandas_object(ordered, index=False).values.tobytes()
+        settings = json.dumps({"params": p, "weights": self.weights, "calibration": ch.get("calibration"),
+                               "context": ctx_reg, "as_of": str(self.as_of),
+                               "identity_policy": "explicit-alias-v2"}, sort_keys=True, default=str).encode()
+        self.input_fingerprint = hashlib.sha256(result_hash + settings).hexdigest()
         self.resolver = Resolver(self.df)
         self.player_book = None
         if self.with_context and getattr(self, "_us_map", None) is not None:
@@ -226,7 +240,8 @@ class Engine:
                    "kickoff_local": kickoff_local, "home_matched": r.home, "away_matched": r.away,
                    "match_methods": r.match_methods, "neutral": neutral}
         base = {"oracle": "ORACLE FC", "model_version": self.version, "champion": self.champion,
-                "data_cutoff": self.cutoff, "generated_at": now_utc_iso(), "fixture": fixture}
+                "data_cutoff": self.cutoff, "input_fingerprint": self.input_fingerprint,
+                "identity_policy": "explicit-alias-v2", "generated_at": now_utc_iso(), "fixture": fixture}
         dq = list(r.notes)
         if not r.ok:
             return {**base, "status": "unsupported", "data_quality": dq}
@@ -321,12 +336,17 @@ def forecast_date(date: str, engine: Engine | None = None, freeze: bool = True, 
                                              "retroactively."]})
             continue
         if within_hours is not None and existing and \
+                existing[-1].get("input_fingerprint") == engine.input_fingerprint and \
                 datetime.fromisoformat(f.kickoff_utc) - now > pd.Timedelta(hours=within_hours):
             out.append(existing[-1])  # lineup-refresh runs only re-forecast fixtures close to kickoff
             continue
         fc = engine.forecast(f.home_name, f.away_name, f.competition, f.subcategory, f.kickoff_utc, f.event_id)
         if freeze and fc["status"] == "ok":
-            fc, _ = frozen.freeze(date, f.event_id, engine.version, fc)
+            try:
+                fc, _ = frozen.freeze(date, f.event_id, engine.version, fc)
+            except frozen.KickoffPassed:
+                fc = existing[-1] if existing else {"status": "not_forecast_before_kickoff", "fixture": f.to_dict(),
+                    "data_quality": ["Fit finished after kickoff; no new forecast was published."]}
         out.append(fc)
     # Events Jupiter no longer lists (settled / past dates): show what was frozen.
     seen = {f.event_id for f in fixtures}

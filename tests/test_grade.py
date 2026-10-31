@@ -54,3 +54,10 @@ def test_forecast_metrics():
     m = forecast_metrics(sim, 1, 0)
     assert m["exact_hit"] and m["top5_hit"] and m["outcome"] == "H"
     assert abs(m["rps"] - ((0.5 - 1) ** 2 + (0.8 - 1) ** 2) / 2) < 1e-12
+
+
+def test_corrected_identity_still_grades_original_espanyol_fixture():
+    fx={'home_name':'Villarreal CF','away_name':'RCD Espanyol de Barcelona','home_matched':'Villarreal',
+        'away_matched':'Barcelona','kickoff_utc':'2026-10-30T20:00:00+00:00'}
+    actual={'home':'Villarreal','away':'Espanyol','utc':'2026-10-30T20:00:00Z'}
+    assert find_result(fx,[actual]) is actual

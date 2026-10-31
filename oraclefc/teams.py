@@ -94,6 +94,67 @@ ALIASES: dict[str, str] = {
 }
 
 
+# Full club identities must precede approximate matching: a city alone is not a club.
+ALIASES.update({'1 fsv mainz 05': 'Mainz',
+ 'borussia mgladbach': "M'gladbach",
+ 'clermont foot': 'Clermont',
+ 'aarhus gf': 'Aarhus',
+ 'ad ceuta': 'Ceuta',
+ 'ado den haag': 'Den Haag',
+ 'albacete balompie': 'Albacete',
+ 'associacao chapecoense de futebol': 'Chapecoense-SC',
+ 'atalanta bc': 'Atalanta',
+ 'birmingham city': 'Birmingham',
+ 'botafogo fr': 'Botafogo RJ',
+ 'bv borussia 09 dortmund': 'Dortmund',
+ 'cambuur leeuwarden': 'Cambuur',
+ 'cardiff city': 'Cardiff',
+ 'caykur rizespor': 'Rizespor',
+ 'ce sabadell': 'Sabadell',
+ 'cf estrela da amadora': 'Estrela',
+ 'charlton athletic': 'Charlton',
+ 'clube do remo': 'Remo',
+ 'coventry city': 'Coventry',
+ 'cr vasco da gama': 'Vasco',
+ 'cs maritimo': 'Maritimo',
+ 'dsc arminia bielefeld': 'Bielefeld',
+ 'eintracht braunschweig': 'Braunschweig',
+ 'energie cottbus': 'Cottbus',
+ 'espanyol barcelona': 'Espanol',
+ 'espanyol de barcelona': 'Espanol',
+ 'estoril praia': 'Estoril',
+ 'feyenoord rotterdam': 'Feyenoord',
+ 'grazer ak 1902': 'Grazer AK',
+ 'gremio fbpa': 'Gremio',
+ 'hannover 96': 'Hannover',
+ 'hjk helsinki': 'HJK',
+ 'hull city': 'Hull',
+ 'kaa gent': 'Gent',
+ 'kks lech poznan': 'Lech Poznan',
+ 'kvc westerlo': 'Westerlo',
+ 'lask linz': 'LASK',
+ 'lille osc': 'Lille',
+ 'lincoln city': 'Lincoln',
+ 'norwich city': 'Norwich',
+ 'rcd espanyol de barcelona': 'Espanol',
+ 'red bull bragantino': 'Bragantino',
+ 'sbv excelsior': 'Excelsior',
+ 'sc corinthians paulista': 'Corinthians',
+ 'sc paderborn 07': 'Paderborn',
+ 'scr altach': 'Altach',
+ 'sg dynamo dresden': 'Dresden',
+ 'sport lisboa e benfica': 'Benfica',
+ 'stoke city': 'Stoke',
+ 'sv 07 elversberg': 'Elversberg',
+ 'sv darmstadt 98': 'Darmstadt',
+ 'sv zulte waregem': 'Waregem',
+ 'swansea city': 'Swansea',
+ 'telstar 1963': 'Telstar',
+ 'tsv hartberg': 'Hartberg',
+ 'willem ii tilburg': 'Willem II',
+ 'wsg tirol': 'Tirol',
+ 'yellow red kv mechelen': 'Mechelen'})
+
 def strip_accents(s: str) -> str:
     return "".join(c for c in unicodedata.normalize("NFKD", s) if not unicodedata.combining(c))
 
@@ -141,28 +202,33 @@ def match_team(name: str, candidates: list[str], threshold: float = 0.84) -> Tea
     core_map: dict[str, list[str]] = {}
     for x in candidates:
         core_map.setdefault(core_tokens(x), []).append(x)
-    for key in (n, c):
-        if key in ALIASES and ALIASES[key] in cand_set:
-            return TeamMatch(name, ALIASES[key], "alias", 1.0)
     if n in norm_map:
         return TeamMatch(name, norm_map[n], "normalised", 1.0)
     if c and c in core_map and len(core_map[c]) == 1:
         return TeamMatch(name, core_map[c][0], "core-tokens", 0.97)
+    for key in (n, c):
+        if key in ALIASES:
+            target = ALIASES[key]
+            equivalent = [x for x in candidates if x == target or
+                          ALIASES.get(normalise(x), ALIASES.get(core_tokens(x))) == target]
+            if len(equivalent) == 1:
+                return TeamMatch(name, equivalent[0], "alias", 1.0)
+            return TeamMatch(name, None, "ambiguous-alias" if equivalent else "known-alias-unavailable", 0.0)
     res = is_reserve(name)
     candidates = [x for x in candidates if is_reserve(x) == res]
-    # token containment, unique
-    ctoks = set(c.split())
-    if ctoks:
-        hits = [x for x in candidates if (core_tokens(x) and set(core_tokens(x).split()) <= ctoks)
-                or (set(core_tokens(x).split()) >= ctoks and len(ctoks) >= 1 and len(c) >= 5)]
-        if len(hits) == 1:
-            return TeamMatch(name, hits[0], "token-subset", 0.9)
-    best, best_s = None, 0.0
+    # Do not accept a canonical city token contained in a different full club name.
+    # Verified shortened/brand names belong in ALIASES rather than a containment guess.
+    best, best_s, runner_up = None, 0.0, 0.0
     for x in candidates:
         s = max(difflib.SequenceMatcher(None, c, core_tokens(x)).ratio(),
                 difflib.SequenceMatcher(None, n, normalise(x)).ratio())
         if s > best_s:
+            runner_up = best_s
             best, best_s = x, s
+        elif s > runner_up:
+            runner_up = s
+    if best_s >= threshold and best_s - runner_up < 0.05:
+        return TeamMatch(name, None, "ambiguous", round(best_s, 3))
     if best_s >= threshold:
         return TeamMatch(name, best, "fuzzy", round(best_s, 3))
     return TeamMatch(name, None, "unmatched", round(best_s, 3))

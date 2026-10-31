@@ -16,6 +16,10 @@ from . import config
 from .governance import assert_no_price_keys, now_utc_iso
 
 
+class KickoffPassed(ValueError):
+    """A new forecast was not complete before its scheduled kickoff."""
+
+
 def _safe(s: str) -> str:
     return re.sub(r"[^A-Za-z0-9_.+-]", "_", s)
 
@@ -40,16 +44,22 @@ def context_stage(forecast: dict) -> str:
     t = c.get("total_shift") or {}
     fp = tuple(round(2 * float(t.get(k, 0.0))) for k in ("d_p_home_pp", "d_p_draw_pp", "d_p_away_pp"))
     names = tuple(p.get("name") for s in ("home", "away") for p in ((c.get("lineups") or {}).get(s) or {}).get("starters", []))
-    h = hashlib.sha256(json.dumps([st, fp, names]).encode()).hexdigest()[:8]
+    h = hashlib.sha256(json.dumps([st, fp, names, forecast.get("input_fingerprint"), forecast.get("resolved")]).encode()).hexdigest()[:8]
     return f"{stage}-{h}"
 
 
 def freeze(date: str, event_id: str, version: str, forecast: dict) -> tuple[dict, bool]:
     """Write once per (event, model version, context stage). Returns (stored_forecast, newly_written)."""
     assert_no_price_keys(forecast, "frozen forecast")
-    if forecast.get("context") is not None:
+    if forecast.get("context") is not None or forecast.get("input_fingerprint"):
         version = f"{version}__{context_stage(forecast)}"
     p = path_for(date, event_id, version)
+    # A fit/context lookup can cross kickoff. Never publish a new snapshot afterwards.
+    kickoff = (forecast.get("fixture") or {}).get("kickoff_utc")
+    if kickoff and not p.exists():
+        from datetime import datetime
+        if datetime.fromisoformat(kickoff.replace("Z", "+00:00")) <= datetime.fromisoformat(now_utc_iso().replace("Z", "+00:00")):
+            raise KickoffPassed("Cannot freeze a new forecast after kickoff")
     if p.exists():
         return json.loads(p.read_text()), False
     p.parent.mkdir(parents=True, exist_ok=True)

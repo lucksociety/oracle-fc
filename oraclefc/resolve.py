@@ -29,7 +29,7 @@ class Resolved:
 
     @property
     def ok(self) -> bool:
-        return bool(self.home_key and self.away_key)
+        return bool(self.home_key and self.away_key and self.home_key != self.away_key)
 
 
 class Resolver:
@@ -85,6 +85,8 @@ class Resolver:
             setattr(r, side, info["name"])
             setattr(r, f"{side}_key", key)
             setattr(r, f"{side}_div", info["div"])
+        if r.home_key and r.home_key == r.away_key:
+            r.notes.append("INVALID team identity: both opponents resolved to the same club; no forecast is produced.")
         if r.ok:
             if sub in EURO_COMPS:
                 r.div, r.country = "UCL", "Europe"
