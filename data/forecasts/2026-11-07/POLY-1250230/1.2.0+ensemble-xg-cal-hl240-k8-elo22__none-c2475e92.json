@@ -1,0 +1,534 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-10-30",
+ "generated_at": "2026-10-31T04:07:21+00:00",
+ "fixture": {
+  "event_id": "POLY-1250230",
+  "home_name": "Hertha BSC",
+  "away_name": "VfL Wolfsburg",
+  "competition": "Bundesliga 2",
+  "subcategory": "bl2",
+  "kickoff_utc": "2026-11-07T19:30:00+00:00",
+  "kickoff_local": "2026-11-07 14:30 EST",
+  "home_matched": "Hertha",
+  "away_matched": "Wolfsburg",
+  "match_methods": {
+   "home": {
+    "source": "Hertha BSC",
+    "matched": "Hertha",
+    "method": "alias",
+    "score": 1.0
+   },
+   "away": {
+    "source": "VfL Wolfsburg",
+    "matched": "Wolfsburg",
+    "method": "core-tokens",
+    "score": 0.97
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.39897785380720036,
+  "p_draw": 0.25443151043806767,
+  "p_away": 0.3465906357547319,
+  "xg_home": 1.6378305038624366,
+  "xg_away": 1.5166161958356021,
+  "xg_total": 3.1544466996980387,
+  "median_total": 3,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.11617365456577512
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.11617365456577512
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.08847314449077344
+   },
+   {
+    "home": 1,
+    "away": 2,
+    "p": 0.08180934391790651
+   },
+   {
+    "home": 2,
+    "away": 2,
+    "p": 0.07149576217752489
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.06443374159252656
+   }
+  ],
+  "btts": 0.6462855554407059,
+  "totals_over": {
+   "over_0.5": 0.9556025389935959,
+   "over_1.5": 0.8315069321843602,
+   "over_2.5": 0.6123607902620753,
+   "over_3.5": 0.3886191878678044,
+   "over_4.5": 0.20818956416543088,
+   "over_5.5": 0.09771636276379754,
+   "over_6.5": 0.03956646139249487
+  },
+  "total_buckets": {
+   "0-1": 0.16849306781563986,
+   "2": 0.21914614192228485,
+   "3": 0.22374160239427093,
+   "4": 0.18042962370237353,
+   "5+": 0.20818956416543088
+  },
+  "clean_sheet_home": 0.21101466486840123,
+  "clean_sheet_away": 0.18709724069729708,
+  "home_goal_dist": [
+   0.18709724069729708,
+   0.32352989400033016,
+   0.26603749152384404,
+   0.14264075105512922,
+   0.05675371406767535,
+   0.01794409417006072,
+   0.004701101600112534,
+   0.0012957128855508825
+  ],
+  "away_goal_dist": [
+   0.21101466486840123,
+   0.33917754875824885,
+   0.25827777364355853,
+   0.12757684749533335,
+   0.046535990765707747,
+   0.013433594792254802,
+   0.003201182453051235,
+   0.0007823972234443291
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    3
+   ],
+   "away_goals_80": [
+    0,
+    3
+   ],
+   "total_goals_80": [
+    1,
+    5
+   ],
+   "goal_diff_80": [
+    -2,
+    2
+   ]
+  },
+  "score_grid": [
+   [
+    0.044397,
+    0.059662,
+    0.047573,
+    0.023604,
+    0.008632,
+    0.002492,
+    0.000593
+   ],
+   [
+    0.064434,
+    0.116174,
+    0.081809,
+    0.040649,
+    0.014886,
+    0.004303,
+    0.001025
+   ],
+   [
+    0.055399,
+    0.088473,
+    0.071496,
+    0.033681,
+    0.012351,
+    0.003575,
+    0.000853
+   ],
+   [
+    0.029855,
+    0.047745,
+    0.03658,
+    0.019251,
+    0.006693,
+    0.00194,
+    0.000463
+   ],
+   [
+    0.011908,
+    0.01907,
+    0.01463,
+    0.007299,
+    0.002835,
+    0.000779,
+    0.000186
+   ],
+   [
+    0.003765,
+    0.006037,
+    0.004637,
+    0.002317,
+    0.000853,
+    0.000262,
+    5.9e-05
+   ],
+   [
+    0.000985,
+    0.001581,
+    0.001216,
+    0.000608,
+    0.000224,
+    6.5e-05,
+    1.7e-05
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.3998,
+  "p_draw": 0.253695,
+  "p_away": 0.34650499999999995,
+  "se": [
+   0.0010953537328187639,
+   0.0009729692877347157,
+   0.0010640471910939853
+  ],
+  "max_abs_dev_vs_exact": 0.0008221461927996332,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   1.2732503470195577,
+   2.0344619193980735
+  ],
+  "xg_away_80": [
+   1.1290793858651524,
+   1.9335876830485774
+  ],
+  "p_home_80": [
+   0.3002994155399655,
+   0.5204232865559965
+  ],
+  "p_draw_80": [
+   0.21457407419769764,
+   0.271301479542072
+  ],
+  "p_away_80": [
+   0.24120757938105222,
+   0.46215295843459964
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.18580781377787312,
+   0.1996526743799886
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.42951937620302394,
+   "p_draw": 0.24258708253485356,
+   "p_away": 0.32789354126212245,
+   "xg_home": 1.718700196147486,
+   "xg_away": 1.4803746344666786,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.38347029241922137,
+   "p_draw": 0.24585985928427037,
+   "p_away": 0.3706698482965082,
+   "xg_home": 1.4837047116352564,
+   "xg_away": 1.4548687959445126,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.4733084027636818,
+   "p_draw": 0.2317700112989493,
+   "p_away": 0.2949215859373687,
+   "xg_home": 1.9364679267358993,
+   "xg_away": 1.5022194269628635,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.4539302869182808,
+   "p_draw": 0.24270459977321962,
+   "p_away": 0.30336511330849975,
+   "xg_home": 1.6318290201309804,
+   "xg_away": 1.2918726970166408,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.4161066285337584,
+   "p_draw": 0.24266584198935504,
+   "p_away": 0.3412275294768866,
+   "xg_home": 1.6943127421244044,
+   "xg_away": 1.5185412857033944,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Home advantage (Germany, fitted from results): \u00d71.30 on Hertha's scoring rate.",
+   "effect": 0.2618
+  },
+  {
+   "text": "Wolfsburg attack vs Hertha defence: rate multiplier \u00d71.23 for the away side.",
+   "effect": 0.2066
+  },
+  {
+   "text": "Hertha attack vs Wolfsburg defence: time-weighted strength gap multiplies Hertha's scoring rate by \u00d71.10 relative to an average pairing (from 29/29 decay-weighted matches).",
+   "effect": 0.0942
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.39897785380720036,
+  "p_draw": 0.25443151043806767,
+  "p_away": 0.3465906357547319,
+  "xg_home": 1.6378305038624366,
+  "xg_away": 1.5166161958356021
+ },
+ "context": {
+  "fetched_at": "2026-10-31T04:07:21+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5881720",
+    "fetched_at": "2026-10-31T04:07:21+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "none",
+    "source": null,
+    "formation": null,
+    "starters": [],
+    "fetched_at": "2026-10-31T04:07:21+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   },
+   "away": {
+    "status": "none",
+    "source": null,
+    "formation": null,
+    "starters": [],
+    "fetched_at": "2026-10-31T04:07:21+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Gustaf Nilsson",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881720",
+     "fetched_at": "2026-10-31T04:07:21+00:00"
+    },
+    {
+     "player": "Boris Lum",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881720",
+     "fetched_at": "2026-10-31T04:07:21+00:00"
+    },
+    {
+     "player": "M\u00e1rton D\u00e1rdai",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881720",
+     "fetched_at": "2026-10-31T04:07:21+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "Rog\u00e9rio",
+     "type": "injury",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881720",
+     "fetched_at": "2026-10-31T04:07:21+00:00"
+    },
+    {
+     "player": "Mattias Svanberg",
+     "type": "injury",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881720",
+     "fetched_at": "2026-10-31T04:07:21+00:00"
+    },
+    {
+     "player": "Aster Vranckx",
+     "type": "injury",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881720",
+     "fetched_at": "2026-10-31T04:07:21+00:00"
+    },
+    {
+     "player": "Fraser Hornby",
+     "type": "injury",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881720",
+     "fetched_at": "2026-10-31T04:07:21+00:00"
+    },
+    {
+     "player": "Christian Eriksen",
+     "type": "injury",
+     "expected_return": "Unknown",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881720",
+     "fetched_at": "2026-10-31T04:07:21+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 14,
+    "n21": 1,
+    "last_match": "2026-10-24"
+   },
+   "away": {
+    "rest_days": 15,
+    "n21": 2,
+    "last_match": "2026-10-23"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 165.2
+  },
+  "venue": {
+   "name": "Olympiastadion Berlin",
+   "city": "Berlin",
+   "lat": 52.514627786,
+   "lon": 13.23954463
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 2.525,
+   "temp_c": 3.4,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=52.515&longitude=13.24",
+   "fetched_at": "2026-10-31T04:07:21+00:00",
+   "lat": 52.514627786,
+   "lon": 13.23954463
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": 1.48,
+    "d_p_draw_pp": -0.15,
+    "d_p_away_pp": -1.33,
+    "d_xg_home": 0.099,
+    "d_xg_away": 0.034
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0151,
+    "away_rate_mult": 1.0064,
+    "d_p_home_pp": 0.39,
+    "d_p_draw_pp": -0.17,
+    "d_p_away_pp": -0.22,
+    "d_xg_home": 0.024,
+    "d_xg_away": 0.01,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "reason": "failed validation; no live features"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 14.0,
+   "rest_a": 15.0,
+   "n21_h": 1.0,
+   "n21_a": 2.0,
+   "travel_km": 165.23791023038197,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 2.525,
+   "temp_c": 3.4
+  }
+ },
+ "confidence": {
+  "tier": "LOW",
+  "p_max": 0.39897785380720036,
+  "entropy_nats": 1.0820981822530338,
+  "text": "Most likely result has P = 39.9%. In the out-of-sample backtest, favourites priced 0.33\u20130.40 won 37.6% \u00b1 0.5% (n=8383, mean forecast 37.8%). Backtest RPS for D2: 0.2218; exact-score top-5 hit rate 43.8% (n=999). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: LOW (entropy 1.082 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Hertha: no lineup information.",
+  "Hertha: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.",
+  "Wolfsburg: no lineup information.",
+  "Wolfsburg: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+ ],
+ "verdict": "Hertha 1\u20131 Wolfsburg is the single most probable scoreline at 11.6%: expected goals 1.64\u20131.52 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.048). Exact scores are inherently uncertain; the 1X2 split is 39.9%/25.4%/34.7%.",
+ "resolved": {
+  "home_key": "Germany:Hertha",
+  "away_key": "Germany:Wolfsburg",
+  "div": "D2",
+  "home_div": "D2",
+  "away_div": "D2",
+  "country": "Germany"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: VfL Wolfsburg at Hertha BSC\nCompetition: Bundesliga 2\nDate: 2026-11-07 14:30 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-10-30\n\nPRIMARY FINAL SCORE PREDICTION\n\nHertha BSC 1 \u2013 1 VfL Wolfsburg\n(modal exact score, probability 11.6%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.64\nAway: 1.52\nExpected Total: 3.15\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 39.9%\nDraw: 25.4%\nAway Win: 34.7%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 11.6%\n2. 2\u20131: 8.8%\n3. 1\u20132: 8.2%\n4. 2\u20132: 7.1%\n5. 1\u20130: 6.4%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 16.8%\nTotal 2 goals: 21.9%\nTotal 3 goals: 22.4%\nTotal 4 goals: 18.0%\nTotal 5+ goals: 20.8%\n\nBoth Teams Score: 64.6%\nClean sheet Hertha BSC: 21.1% \u00b7 Clean sheet VfL Wolfsburg: 18.7%\n\nMATCH INTELLIGENCE\n\n1. Home advantage (Germany, fitted from results): \u00d71.30 on Hertha's scoring rate.\n2. Wolfsburg attack vs Hertha defence: rate multiplier \u00d71.23 for the away side.\n3. Hertha attack vs Wolfsburg defence: time-weighted strength gap multiplies Hertha's scoring rate by \u00d71.10 relative to an average pairing (from 29/29 decay-weighted matches).\n\nMODEL CONFIDENCE\n\nMost likely result has P = 39.9%. In the out-of-sample backtest, favourites priced 0.33\u20130.40 won 37.6% \u00b1 0.5% (n=8383, mean forecast 37.8%). Backtest RPS for D2: 0.2218; exact-score top-5 hit rate 43.8% (n=999). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: LOW (entropy 1.082 nats of max 1.099).\nParameter-uncertainty 80% bands: xG Hertha BSC 1.27\u20132.03, xG VfL Wolfsburg 1.13\u20131.93; P(home win) 30.0%\u201352.0%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0008 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nHertha: NONE, fetched 2026-10-31 00:07 EDT\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\nWolfsburg: NONE, fetched 2026-10-31 00:07 EDT\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nKEY ABSENCES\n\n- Hertha: Gustaf Nilsson \u2014 injury, Doubtful [FotMob, 2026-10-31 00:07 EDT]\n- Hertha: Boris Lum \u2014 injury, Doubtful [FotMob, 2026-10-31 00:07 EDT]\n- Hertha: M\u00e1rton D\u00e1rdai \u2014 injury, Doubtful [FotMob, 2026-10-31 00:07 EDT]\n- Wolfsburg: Rog\u00e9rio \u2014 injury, Mid November 2026 [FotMob, 2026-10-31 00:07 EDT]\n- Wolfsburg: Mattias Svanberg \u2014 injury, Mid November 2026 [FotMob, 2026-10-31 00:07 EDT]\n- Wolfsburg: Aster Vranckx \u2014 injury, Mid November 2026 [FotMob, 2026-10-31 00:07 EDT]\n- Wolfsburg: Fraser Hornby \u2014 injury, Mid November 2026 [FotMob, 2026-10-31 00:07 EDT]\n- Wolfsburg: Christian Eriksen \u2014 injury, Unknown [FotMob, 2026-10-31 00:07 EDT]\n\nWEATHER AT VENUE\n\nOlympiastadion Berlin, Berlin: 3.4 \u00b0C, wind 2.5 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-10-31 00:07 EDT]\n\nREST & TRAVEL\n\nHertha: 14 days' rest, 1 matches in previous 21 days \u00b7 Wolfsburg: 15 days' rest, 2 in 21 days \u00b7 away travel 165.2 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 39.9% / 25.4% / 34.7%, xG 1.64\u20131.52\n- Understat xG component (validated, in ensemble): home +1.48 pp, draw -0.15 pp, away -1.33 pp; xG +0.099 / +0.034\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.39 pp, draw -0.17 pp, away -0.22 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- lineup: not applied (failed validation; no live features)\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Hertha: no lineup information.\n- Hertha: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n- Wolfsburg: no lineup information.\n- Wolfsburg: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nFINAL VERDICT\n\nHertha 1\u20131 Wolfsburg is the single most probable scoreline at 11.6%: expected goals 1.64\u20131.52 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.048). Exact scores are inherently uncertain; the 1X2 split is 39.9%/25.4%/34.7%.\n",
+ "frozen_at": "2026-10-31T04:07:21+00:00",
+ "sha256": "31c9a7aae3c5d6c57c5986c275e91a457f83d5ef828d3385da9b61e13752d229"
+}

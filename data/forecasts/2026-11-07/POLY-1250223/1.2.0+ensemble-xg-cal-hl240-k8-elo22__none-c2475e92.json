@@ -1,0 +1,590 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-10-30",
+ "generated_at": "2026-10-31T04:06:52+00:00",
+ "fixture": {
+  "event_id": "POLY-1250223",
+  "home_name": "Portsmouth FC",
+  "away_name": "Stoke City FC",
+  "competition": "EFL Championship",
+  "subcategory": "elc",
+  "kickoff_utc": "2026-11-07T12:30:00+00:00",
+  "kickoff_local": "2026-11-07 07:30 EST",
+  "home_matched": "Portsmouth",
+  "away_matched": "Stoke",
+  "match_methods": {
+   "home": {
+    "source": "Portsmouth FC",
+    "matched": "Portsmouth",
+    "method": "core-tokens",
+    "score": 0.97
+   },
+   "away": {
+    "source": "Stoke City FC",
+    "matched": "Stoke",
+    "method": "token-subset",
+    "score": 0.9
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.44719264057822095,
+  "p_draw": 0.2812933792022849,
+  "p_away": 0.27151398021949397,
+  "xg_home": 1.4543688737346265,
+  "xg_away": 1.084405143332574,
+  "xg_total": 2.5387740170672006,
+  "median_total": 2,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.13723068689454013
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.13723068689454013
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.10831934268700166
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.09255767843213668
+   },
+   {
+    "home": 2,
+    "away": 0,
+    "p": 0.08213971008639137
+   },
+   {
+    "home": 0,
+    "away": 0,
+    "p": 0.0815727599908067
+   }
+  ],
+  "btts": 0.5240410534960085,
+  "totals_over": {
+   "over_0.5": 0.9184272400091931,
+   "over_1.5": 0.7306423654295723,
+   "over_2.5": 0.46634690139299523,
+   "over_3.5": 0.250226393692954,
+   "over_4.5": 0.11091333796870753,
+   "over_5.5": 0.04267315253769838,
+   "over_6.5": 0.014026920404173979
+  },
+  "total_buckets": {
+   "0-1": 0.2693576345704276,
+   "2": 0.264295464036577,
+   "3": 0.21612050770004124,
+   "4": 0.13931305572424652,
+   "5+": 0.11091333796870753
+  },
+  "clean_sheet_home": 0.33060938113083155,
+  "clean_sheet_away": 0.22692232536396664,
+  "home_goal_dist": [
+   0.22692232536396664,
+   0.3456213853766831,
+   0.25068625135080613,
+   0.119249463873494,
+   0.04220764499239195,
+   0.011877559085434529,
+   0.002770891415346864,
+   0.0006644785418767557
+  ],
+  "away_goal_dist": [
+   0.33060938113083155,
+   0.37508205944144235,
+   0.20144271470934222,
+   0.07029817579589887,
+   0.018137353830891937,
+   0.0037040208471683296,
+   0.0006243827188226026,
+   0.00010191152560209382
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    3
+   ],
+   "away_goals_80": [
+    0,
+    2
+   ],
+   "total_goals_80": [
+    1,
+    5
+   ],
+   "goal_diff_80": [
+    -2,
+    2
+   ]
+  },
+  "score_grid": [
+   [
+    0.081573,
+    0.079466,
+    0.044925,
+    0.015835,
+    0.004114,
+    0.000844,
+    0.000143
+   ],
+   [
+    0.108319,
+    0.137231,
+    0.068287,
+    0.024026,
+    0.006231,
+    0.001276,
+    0.000215
+   ],
+   [
+    0.08214,
+    0.092558,
+    0.052784,
+    0.017551,
+    0.004544,
+    0.000929,
+    0.000156
+   ],
+   [
+    0.039441,
+    0.044359,
+    0.023906,
+    0.008851,
+    0.002165,
+    0.000442,
+    7.4e-05
+   ],
+   [
+    0.01403,
+    0.015749,
+    0.008471,
+    0.002964,
+    0.000807,
+    0.000156,
+    2.6e-05
+   ],
+   [
+    0.003959,
+    0.004436,
+    0.002382,
+    0.000832,
+    0.000214,
+    4.6e-05,
+    7e-06
+   ],
+   [
+    0.000926,
+    0.001035,
+    0.000555,
+    0.000193,
+    5e-05,
+    1e-05,
+    2e-06
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.44922000000000006,
+  "p_draw": 0.2801,
+  "p_away": 0.27068000000000003,
+  "se": [
+   0.0011122530997933879,
+   0.0010041015635880665,
+   0.0009935097825386522
+  ],
+  "max_abs_dev_vs_exact": 0.002027359421779118,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   1.1297784577449659,
+   1.8075778477151105
+  ],
+  "xg_away_80": [
+   0.8232257030366816,
+   1.363393954316914
+  ],
+  "p_home_80": [
+   0.3494566018660782,
+   0.5573542899127302
+  ],
+  "p_draw_80": [
+   0.23937837642285115,
+   0.3047599670457633
+  ],
+  "p_away_80": [
+   0.19449236042191628,
+   0.36295533511887157
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.1863263034442706,
+   0.187230364589655
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.4169341712606924,
+   "p_draw": 0.2836637505653643,
+   "p_away": 0.2994020781739433,
+   "xg_home": 1.3430202923757655,
+   "xg_away": 1.098305599623572,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.49015291262533467,
+   "p_draw": 0.254323206601996,
+   "p_away": 0.25552388077266946,
+   "xg_home": 1.549675949923644,
+   "xg_away": 1.0440013637268344,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.4125261896975846,
+   "p_draw": 0.2821599809691065,
+   "p_away": 0.305313829333309,
+   "xg_home": 1.378439687040057,
+   "xg_away": 1.1518231503277514,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.43362929859923616,
+   "p_draw": 0.26159331450305645,
+   "p_away": 0.30477738689770745,
+   "xg_home": 1.4320617984640485,
+   "xg_away": 1.1567024686904,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.4164439150288642,
+   "p_draw": 0.2839701884847883,
+   "p_away": 0.2995858964863475,
+   "xg_home": 1.339140079558961,
+   "xg_away": 1.096098502271797,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Home advantage (England, fitted from results): \u00d71.22 on Portsmouth's scoring rate.",
+   "effect": 0.1965
+  },
+  {
+   "text": "Context \u2014 Understat xG component (validated, in ensemble): home win -3.6 pp, draw +1.5 pp, away win +2.1 pp (xG -0.10 / +0.02).",
+   "effect": 0.1071
+  },
+  {
+   "text": "Stoke attack vs Portsmouth defence: rate multiplier \u00d70.91 for the away side.",
+   "effect": 0.0919
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.44719264057822095,
+  "p_draw": 0.2812933792022849,
+  "p_away": 0.27151398021949397,
+  "xg_home": 1.4543688737346265,
+  "xg_away": 1.084405143332574
+ },
+ "context": {
+  "fetched_at": "2026-10-31T04:06:52+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5836928",
+    "fetched_at": "2026-10-31T04:06:53+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "none",
+    "source": null,
+    "formation": null,
+    "starters": [],
+    "fetched_at": "2026-10-31T04:06:53+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   },
+   "away": {
+    "status": "none",
+    "source": null,
+    "formation": null,
+    "starters": [],
+    "fetched_at": "2026-10-31T04:06:53+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Colby Bishop",
+     "type": "injury",
+     "expected_return": "Early December 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836928",
+     "fetched_at": "2026-10-31T04:06:53+00:00"
+    },
+    {
+     "player": "John Swift",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836928",
+     "fetched_at": "2026-10-31T04:06:53+00:00"
+    },
+    {
+     "player": "Keshi Anderson",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836928",
+     "fetched_at": "2026-10-31T04:06:53+00:00"
+    },
+    {
+     "player": "Benjamin Arthur",
+     "type": "injury",
+     "expected_return": "Back in training",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836928",
+     "fetched_at": "2026-10-31T04:06:53+00:00"
+    },
+    {
+     "player": "Conor Shaughnessy",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836928",
+     "fetched_at": "2026-10-31T04:06:53+00:00"
+    },
+    {
+     "player": "Luke Brooke-Smith",
+     "type": "injury",
+     "expected_return": "Out for season",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836928",
+     "fetched_at": "2026-10-31T04:06:53+00:00"
+    },
+    {
+     "player": "Josh Murphy",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836928",
+     "fetched_at": "2026-10-31T04:06:53+00:00"
+    },
+    {
+     "player": "Connor Ogilvie",
+     "type": "injury",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836928",
+     "fetched_at": "2026-10-31T04:06:53+00:00"
+    },
+    {
+     "player": "M\u00e1rk Kosznovszky",
+     "type": "injury",
+     "expected_return": "Unknown",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836928",
+     "fetched_at": "2026-10-31T04:06:53+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "Lamine Ciss\u00e9",
+     "type": "injury",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836928",
+     "fetched_at": "2026-10-31T04:06:53+00:00"
+    },
+    {
+     "player": "Eric Bocat",
+     "type": "injury",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836928",
+     "fetched_at": "2026-10-31T04:06:53+00:00"
+    },
+    {
+     "player": "Sam Gallagher",
+     "type": "injury",
+     "expected_return": "Early November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836928",
+     "fetched_at": "2026-10-31T04:06:53+00:00"
+    },
+    {
+     "player": "Svante Ingelsson",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836928",
+     "fetched_at": "2026-10-31T04:06:53+00:00"
+    },
+    {
+     "player": "Ato Ampah",
+     "type": "injury",
+     "expected_return": "Mid January 2027",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836928",
+     "fetched_at": "2026-10-31T04:06:53+00:00"
+    },
+    {
+     "player": "Aaron Cresswell",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836928",
+     "fetched_at": "2026-10-31T04:06:53+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 14,
+    "n21": 3,
+    "last_match": "2026-10-24"
+   },
+   "away": {
+    "rest_days": 14,
+    "n21": 2,
+    "last_match": "2026-10-24"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 255.4
+  },
+  "venue": {
+   "name": "Fratton Park",
+   "city": "Portsmouth",
+   "lat": 50.796346713,
+   "lon": -1.063804328
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 2.95,
+   "temp_c": 9.3,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=50.796&longitude=-1.064",
+   "fetched_at": "2026-10-31T04:06:53+00:00",
+   "lat": 50.796346713,
+   "lon": -1.063804328
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": -3.57,
+    "d_p_draw_pp": 1.48,
+    "d_p_away_pp": 2.09,
+    "d_xg_home": -0.102,
+    "d_xg_away": 0.024
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0197,
+    "away_rate_mult": 1.0083,
+    "d_p_home_pp": 0.54,
+    "d_p_draw_pp": -0.29,
+    "d_p_away_pp": -0.24,
+    "d_xg_home": 0.028,
+    "d_xg_away": 0.009,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "reason": "failed validation; no live features"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 14.0,
+   "rest_a": 14.0,
+   "n21_h": 3.0,
+   "n21_a": 2.0,
+   "travel_km": 255.39538971651638,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 2.95,
+   "temp_c": 9.3
+  }
+ },
+ "confidence": {
+  "tier": "LOW",
+  "p_max": 0.44719264057822095,
+  "entropy_nats": 1.0706498882718394,
+  "text": "Most likely result has P = 44.7%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.3% \u00b1 0.4% (n=16754, mean forecast 44.6%). Backtest RPS for E1: 0.2179; exact-score top-5 hit rate 51.6% (n=1800). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: LOW (entropy 1.071 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Portsmouth: no lineup information.",
+  "Portsmouth: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.",
+  "Stoke: no lineup information.",
+  "Stoke: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+ ],
+ "verdict": "Portsmouth 1\u20131 Stoke is the single most probable scoreline at 13.7%: expected goals 1.45\u20131.08 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.048). Exact scores are inherently uncertain; the 1X2 split is 44.7%/28.1%/27.2%.",
+ "resolved": {
+  "home_key": "England:Portsmouth",
+  "away_key": "England:Stoke",
+  "div": "E1",
+  "home_div": "E1",
+  "away_div": "E1",
+  "country": "England"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: Stoke City FC at Portsmouth FC\nCompetition: EFL Championship\nDate: 2026-11-07 07:30 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-10-30\n\nPRIMARY FINAL SCORE PREDICTION\n\nPortsmouth FC 1 \u2013 1 Stoke City FC\n(modal exact score, probability 13.7%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.45\nAway: 1.08\nExpected Total: 2.54\nMedian Total: 2\n\nRESULT PROBABILITIES\n\nHome Win: 44.7%\nDraw: 28.1%\nAway Win: 27.2%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 13.7%\n2. 1\u20130: 10.8%\n3. 2\u20131: 9.3%\n4. 2\u20130: 8.2%\n5. 0\u20130: 8.2%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 26.9%\nTotal 2 goals: 26.4%\nTotal 3 goals: 21.6%\nTotal 4 goals: 13.9%\nTotal 5+ goals: 11.1%\n\nBoth Teams Score: 52.4%\nClean sheet Portsmouth FC: 33.1% \u00b7 Clean sheet Stoke City FC: 22.7%\n\nMATCH INTELLIGENCE\n\n1. Home advantage (England, fitted from results): \u00d71.22 on Portsmouth's scoring rate.\n2. Context \u2014 Understat xG component (validated, in ensemble): home win -3.6 pp, draw +1.5 pp, away win +2.1 pp (xG -0.10 / +0.02).\n3. Stoke attack vs Portsmouth defence: rate multiplier \u00d70.91 for the away side.\n\nMODEL CONFIDENCE\n\nMost likely result has P = 44.7%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.3% \u00b1 0.4% (n=16754, mean forecast 44.6%). Backtest RPS for E1: 0.2179; exact-score top-5 hit rate 51.6% (n=1800). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: LOW (entropy 1.071 nats of max 1.099).\nParameter-uncertainty 80% bands: xG Portsmouth FC 1.13\u20131.81, xG Stoke City FC 0.82\u20131.36; P(home win) 34.9%\u201355.7%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0020 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nPortsmouth: NONE, fetched 2026-10-31 00:06 EDT\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\nStoke: NONE, fetched 2026-10-31 00:06 EDT\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nKEY ABSENCES\n\n- Portsmouth: Colby Bishop \u2014 injury, Early December 2026 [FotMob, 2026-10-31 00:06 EDT]\n- Portsmouth: John Swift \u2014 injury, Late November 2026 [FotMob, 2026-10-31 00:06 EDT]\n- Portsmouth: Keshi Anderson \u2014 injury, Late November 2026 [FotMob, 2026-10-31 00:06 EDT]\n- Portsmouth: Benjamin Arthur \u2014 injury, Back in training [FotMob, 2026-10-31 00:06 EDT]\n- Portsmouth: Conor Shaughnessy \u2014 injury, Doubtful [FotMob, 2026-10-31 00:06 EDT]\n- Portsmouth: Luke Brooke-Smith \u2014 injury, Out for season [FotMob, 2026-10-31 00:06 EDT]\n- Portsmouth: Josh Murphy \u2014 injury, Doubtful [FotMob, 2026-10-31 00:06 EDT]\n- Portsmouth: Connor Ogilvie \u2014 injury, Mid November 2026 [FotMob, 2026-10-31 00:06 EDT]\n- Portsmouth: M\u00e1rk Kosznovszky \u2014 injury, Unknown [FotMob, 2026-10-31 00:06 EDT]\n- Stoke: Lamine Ciss\u00e9 \u2014 injury, Mid November 2026 [FotMob, 2026-10-31 00:06 EDT]\n- Stoke: Eric Bocat \u2014 injury, Mid November 2026 [FotMob, 2026-10-31 00:06 EDT]\n- Stoke: Sam Gallagher \u2014 injury, Early November 2026 [FotMob, 2026-10-31 00:06 EDT]\n- Stoke: Svante Ingelsson \u2014 injury, Doubtful [FotMob, 2026-10-31 00:06 EDT]\n- Stoke: Ato Ampah \u2014 injury, Mid January 2027 [FotMob, 2026-10-31 00:06 EDT]\n- Stoke: Aaron Cresswell \u2014 injury, Doubtful [FotMob, 2026-10-31 00:06 EDT]\n\nWEATHER AT VENUE\n\nFratton Park, Portsmouth: 9.3 \u00b0C, wind 3.0 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-10-31 00:06 EDT]\n\nREST & TRAVEL\n\nPortsmouth: 14 days' rest, 3 matches in previous 21 days \u00b7 Stoke: 14 days' rest, 2 in 21 days \u00b7 away travel 255.4 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 44.7% / 28.1% / 27.2%, xG 1.45\u20131.08\n- Understat xG component (validated, in ensemble): home -3.57 pp, draw +1.48 pp, away +2.09 pp; xG -0.102 / +0.024\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.54 pp, draw -0.29 pp, away -0.24 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- lineup: not applied (failed validation; no live features)\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Portsmouth: no lineup information.\n- Portsmouth: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n- Stoke: no lineup information.\n- Stoke: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nFINAL VERDICT\n\nPortsmouth 1\u20131 Stoke is the single most probable scoreline at 13.7%: expected goals 1.45\u20131.08 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.048). Exact scores are inherently uncertain; the 1X2 split is 44.7%/28.1%/27.2%.\n",
+ "frozen_at": "2026-10-31T04:06:53+00:00",
+ "sha256": "7936c5e28d9d349e3bda6416291ef095ae31b3e914103122ff88895faef4b4c6"
+}

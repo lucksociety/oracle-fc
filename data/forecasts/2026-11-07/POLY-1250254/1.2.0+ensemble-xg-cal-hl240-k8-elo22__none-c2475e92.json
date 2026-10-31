@@ -1,0 +1,518 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-10-30",
+ "generated_at": "2026-10-31T04:07:00+00:00",
+ "fixture": {
+  "event_id": "POLY-1250254",
+  "home_name": "Birmingham City FC",
+  "away_name": "Swansea City AFC",
+  "competition": "EFL Championship",
+  "subcategory": "elc",
+  "kickoff_utc": "2026-11-07T15:00:00+00:00",
+  "kickoff_local": "2026-11-07 10:00 EST",
+  "home_matched": "Birmingham",
+  "away_matched": "Swansea",
+  "match_methods": {
+   "home": {
+    "source": "Birmingham City FC",
+    "matched": "Birmingham",
+    "method": "token-subset",
+    "score": 0.9
+   },
+   "away": {
+    "source": "Swansea City AFC",
+    "matched": "Swansea",
+    "method": "token-subset",
+    "score": 0.9
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.446133181388341,
+  "p_draw": 0.28586389231861037,
+  "p_away": 0.2680029262930485,
+  "xg_home": 1.419994061204698,
+  "xg_away": 1.0522731910575385,
+  "xg_total": 2.4722672522622364,
+  "median_total": 2,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.1389266067557635
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.1389266067557635
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.11401000559109735
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.09165377907480005
+   },
+   {
+    "home": 0,
+    "away": 0,
+    "p": 0.0872813975753626
+   },
+   {
+    "home": 2,
+    "away": 0,
+    "p": 0.08410585993536188
+   }
+  ],
+  "btts": 0.5106633305235954,
+  "totals_over": {
+   "over_0.5": 0.9127186024246372,
+   "over_1.5": 0.7166880296555801,
+   "over_2.5": 0.44898537927005094,
+   "over_3.5": 0.2359820058023496,
+   "over_4.5": 0.10229782952792235,
+   "over_5.5": 0.03849448191807166,
+   "over_6.5": 0.012371563912634434
+  },
+  "total_buckets": {
+   "0-1": 0.2833119703444198,
+   "2": 0.2677026503855292,
+   "3": 0.21300337346770126,
+   "4": 0.13368417627442722,
+   "5+": 0.10229782952792235
+  },
+  "clean_sheet_home": 0.3426104352567124,
+  "clean_sheet_away": 0.2340076317950546,
+  "home_goal_dist": [
+   0.2340076317950546,
+   0.3499689338679086,
+   0.24817373329384748,
+   0.11488434688721631,
+   0.03936874275005938,
+   0.010670830703171106,
+   0.002385682616225822,
+   0.0005400980865164221
+  ],
+  "away_goal_dist": [
+   0.3426104352567124,
+   0.3750871060765083,
+   0.19522469247697463,
+   0.06633225898790654,
+   0.016738793950223017,
+   0.003358040156498777,
+   0.0005584384837236249,
+   9.023461145245215e-05
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    3
+   ],
+   "away_goals_80": [
+    0,
+    2
+   ],
+   "total_goals_80": [
+    1,
+    5
+   ],
+   "goal_diff_80": [
+    -2,
+    2
+   ]
+  },
+  "score_grid": [
+   [
+    0.087281,
+    0.082021,
+    0.04467,
+    0.015256,
+    0.003857,
+    0.000773,
+    0.000128
+   ],
+   [
+    0.11401,
+    0.138927,
+    0.066945,
+    0.022899,
+    0.005799,
+    0.001165,
+    0.000194
+   ],
+   [
+    0.084106,
+    0.091654,
+    0.050767,
+    0.016467,
+    0.004177,
+    0.00084,
+    0.00014
+   ],
+   [
+    0.039149,
+    0.04273,
+    0.022444,
+    0.008134,
+    0.001957,
+    0.000394,
+    6.6e-05
+   ],
+   [
+    0.013431,
+    0.014682,
+    0.007724,
+    0.002655,
+    0.000714,
+    0.000136,
+    2.3e-05
+   ],
+   [
+    0.003637,
+    0.003982,
+    0.002098,
+    0.000722,
+    0.000184,
+    3.9e-05,
+    6e-06
+   ],
+   [
+    0.000812,
+    0.00089,
+    0.00047,
+    0.000162,
+    4.1e-05,
+    8e-06,
+    1e-06
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.44522500000000004,
+  "p_draw": 0.285845,
+  "p_away": 0.26893,
+  "se": [
+   0.0011113048622565277,
+   0.0010102911361954039,
+   0.0009914803454935453
+  ],
+  "max_abs_dev_vs_exact": 0.0009270737069514978,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   1.109181014508941,
+   1.757626815825653
+  ],
+  "xg_away_80": [
+   0.7907351758906805,
+   1.3327061130443343
+  ],
+  "p_home_80": [
+   0.3504438798561538,
+   0.5524545265203261
+  ],
+  "p_draw_80": [
+   0.2440936570468035,
+   0.3091082678366961
+  ],
+  "p_away_80": [
+   0.19119223161674265,
+   0.35852266248985315
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.18251085721251634,
+   0.19372557798698115
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.45297138266973314,
+   "p_draw": 0.2851894443560368,
+   "p_away": 0.26183917297423,
+   "xg_home": 1.3744957335928298,
+   "xg_away": 0.9809164940155228,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.4413126283081066,
+   "p_draw": 0.26268196417966144,
+   "p_away": 0.2960054075122318,
+   "xg_home": 1.4330304208713203,
+   "xg_away": 1.1239063279193346,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.47212908571334855,
+   "p_draw": 0.2780840388332702,
+   "p_away": 0.24978687545338132,
+   "xg_home": 1.4743323644173951,
+   "xg_away": 1.0050250125524214,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.43362929859923616,
+   "p_draw": 0.26159331450305645,
+   "p_away": 0.30477738689770745,
+   "xg_home": 1.4320617984640485,
+   "xg_away": 1.1567024686904,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.45265032710592645,
+   "p_draw": 0.2854312609655409,
+   "p_away": 0.2619184119285327,
+   "xg_home": 1.3714466450369207,
+   "xg_away": 0.9790555472225423,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Swansea attack vs Birmingham defence: rate multiplier \u00d70.81 for the away side.",
+   "effect": 0.2049
+  },
+  {
+   "text": "Home advantage (England, fitted from results): \u00d71.22 on Birmingham's scoring rate.",
+   "effect": 0.1965
+  },
+  {
+   "text": "Birmingham attack vs Swansea defence: time-weighted strength gap multiplies Birmingham's scoring rate by \u00d70.94 relative to an average pairing (from 39/39 decay-weighted matches).",
+   "effect": 0.0641
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.44613318138834107,
+  "p_draw": 0.2858638923186105,
+  "p_away": 0.26800292629304856,
+  "xg_home": 1.4199940612046986,
+  "xg_away": 1.052273191057539
+ },
+ "context": {
+  "fetched_at": "2026-10-31T04:07:00+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5836922",
+    "fetched_at": "2026-10-31T04:07:00+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "none",
+    "source": null,
+    "formation": null,
+    "starters": [],
+    "fetched_at": "2026-10-31T04:07:00+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   },
+   "away": {
+    "status": "none",
+    "source": null,
+    "formation": null,
+    "starters": [],
+    "fetched_at": "2026-10-31T04:07:00+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "August Priske",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836922",
+     "fetched_at": "2026-10-31T04:07:00+00:00"
+    },
+    {
+     "player": "Paik Seung-Ho",
+     "type": "injury",
+     "expected_return": "Early November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836922",
+     "fetched_at": "2026-10-31T04:07:00+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "Ronald",
+     "type": "injury",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836922",
+     "fetched_at": "2026-10-31T04:07:00+00:00"
+    },
+    {
+     "player": "Moussa Kounfolo Yeo",
+     "type": "injury",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836922",
+     "fetched_at": "2026-10-31T04:07:00+00:00"
+    },
+    {
+     "player": "Josh Key",
+     "type": "injury",
+     "expected_return": "Early November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836922",
+     "fetched_at": "2026-10-31T04:07:00+00:00"
+    },
+    {
+     "player": "Cameron Burgess",
+     "type": "injury",
+     "expected_return": "Out for season",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836922",
+     "fetched_at": "2026-10-31T04:07:00+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 14,
+    "n21": 2,
+    "last_match": "2026-10-24"
+   },
+   "away": {
+    "rest_days": 14,
+    "n21": 2,
+    "last_match": "2026-10-24"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 168.9
+  },
+  "venue": {
+   "name": "St. Andrew's @ Knighthead Park",
+   "city": "Birmingham",
+   "lat": 52.47573289,
+   "lon": -1.868104935
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 3.065,
+   "temp_c": 8.4,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=52.476&longitude=-1.868",
+   "fetched_at": "2026-10-31T04:07:01+00:00",
+   "lat": 52.47573289,
+   "lon": -1.868104935
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": 0.54,
+    "d_p_draw_pp": 1.08,
+    "d_p_away_pp": -1.62,
+    "d_xg_home": -0.031,
+    "d_xg_away": -0.07
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": -0.0,
+    "d_p_draw_pp": -0.0,
+    "d_p_away_pp": -0.0,
+    "d_xg_home": -0.0,
+    "d_xg_away": -0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0153,
+    "away_rate_mult": 1.0065,
+    "d_p_home_pp": 0.41,
+    "d_p_draw_pp": -0.23,
+    "d_p_away_pp": -0.18,
+    "d_xg_home": 0.021,
+    "d_xg_away": 0.007,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": -0.0,
+    "d_p_draw_pp": -0.0,
+    "d_p_away_pp": -0.0,
+    "d_xg_home": -0.0,
+    "d_xg_away": -0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "reason": "failed validation; no live features"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": -0.0,
+   "d_p_draw_pp": -0.0,
+   "d_p_away_pp": -0.0,
+   "d_xg_home": -0.0,
+   "d_xg_away": -0.0
+  },
+  "features": {
+   "rest_h": 14.0,
+   "rest_a": 14.0,
+   "n21_h": 2.0,
+   "n21_a": 2.0,
+   "travel_km": 168.9312615817009,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 3.065,
+   "temp_c": 8.4
+  }
+ },
+ "confidence": {
+  "tier": "LOW",
+  "p_max": 0.446133181388341,
+  "entropy_nats": 1.0709558195365703,
+  "text": "Most likely result has P = 44.6%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.3% \u00b1 0.4% (n=16754, mean forecast 44.6%). Backtest RPS for E1: 0.2179; exact-score top-5 hit rate 51.6% (n=1800). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: LOW (entropy 1.071 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Birmingham: no lineup information.",
+  "Birmingham: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.",
+  "Swansea: no lineup information.",
+  "Swansea: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+ ],
+ "verdict": "Birmingham 1\u20131 Swansea is the single most probable scoreline at 13.9%: expected goals 1.42\u20131.05 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.048). Exact scores are inherently uncertain; the 1X2 split is 44.6%/28.6%/26.8%.",
+ "resolved": {
+  "home_key": "England:Birmingham",
+  "away_key": "England:Swansea",
+  "div": "E1",
+  "home_div": "E1",
+  "away_div": "E1",
+  "country": "England"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: Swansea City AFC at Birmingham City FC\nCompetition: EFL Championship\nDate: 2026-11-07 10:00 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-10-30\n\nPRIMARY FINAL SCORE PREDICTION\n\nBirmingham City FC 1 \u2013 1 Swansea City AFC\n(modal exact score, probability 13.9%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.42\nAway: 1.05\nExpected Total: 2.47\nMedian Total: 2\n\nRESULT PROBABILITIES\n\nHome Win: 44.6%\nDraw: 28.6%\nAway Win: 26.8%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 13.9%\n2. 1\u20130: 11.4%\n3. 2\u20131: 9.2%\n4. 0\u20130: 8.7%\n5. 2\u20130: 8.4%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 28.3%\nTotal 2 goals: 26.8%\nTotal 3 goals: 21.3%\nTotal 4 goals: 13.4%\nTotal 5+ goals: 10.2%\n\nBoth Teams Score: 51.1%\nClean sheet Birmingham City FC: 34.3% \u00b7 Clean sheet Swansea City AFC: 23.4%\n\nMATCH INTELLIGENCE\n\n1. Swansea attack vs Birmingham defence: rate multiplier \u00d70.81 for the away side.\n2. Home advantage (England, fitted from results): \u00d71.22 on Birmingham's scoring rate.\n3. Birmingham attack vs Swansea defence: time-weighted strength gap multiplies Birmingham's scoring rate by \u00d70.94 relative to an average pairing (from 39/39 decay-weighted matches).\n\nMODEL CONFIDENCE\n\nMost likely result has P = 44.6%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.3% \u00b1 0.4% (n=16754, mean forecast 44.6%). Backtest RPS for E1: 0.2179; exact-score top-5 hit rate 51.6% (n=1800). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: LOW (entropy 1.071 nats of max 1.099).\nParameter-uncertainty 80% bands: xG Birmingham City FC 1.11\u20131.76, xG Swansea City AFC 0.79\u20131.33; P(home win) 35.0%\u201355.2%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0009 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nBirmingham: NONE, fetched 2026-10-31 00:07 EDT\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\nSwansea: NONE, fetched 2026-10-31 00:07 EDT\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nKEY ABSENCES\n\n- Birmingham: August Priske \u2014 injury, Doubtful [FotMob, 2026-10-31 00:07 EDT]\n- Birmingham: Paik Seung-Ho \u2014 injury, Early November 2026 [FotMob, 2026-10-31 00:07 EDT]\n- Swansea: Ronald \u2014 injury, Mid November 2026 [FotMob, 2026-10-31 00:07 EDT]\n- Swansea: Moussa Kounfolo Yeo \u2014 injury, Mid November 2026 [FotMob, 2026-10-31 00:07 EDT]\n- Swansea: Josh Key \u2014 injury, Early November 2026 [FotMob, 2026-10-31 00:07 EDT]\n- Swansea: Cameron Burgess \u2014 injury, Out for season [FotMob, 2026-10-31 00:07 EDT]\n\nWEATHER AT VENUE\n\nSt. Andrew's @ Knighthead Park, Birmingham: 8.4 \u00b0C, wind 3.1 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-10-31 00:07 EDT]\n\nREST & TRAVEL\n\nBirmingham: 14 days' rest, 2 matches in previous 21 days \u00b7 Swansea: 14 days' rest, 2 in 21 days \u00b7 away travel 168.9 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 44.6% / 28.6% / 26.8%, xG 1.42\u20131.05\n- Understat xG component (validated, in ensemble): home +0.54 pp, draw +1.08 pp, away -1.62 pp; xG -0.031 / -0.070\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home -0.00 pp, draw -0.00 pp, away -0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.41 pp, draw -0.23 pp, away -0.18 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home -0.00 pp, draw -0.00 pp, away -0.00 pp\n- lineup: not applied (failed validation; no live features)\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Birmingham: no lineup information.\n- Birmingham: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n- Swansea: no lineup information.\n- Swansea: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nFINAL VERDICT\n\nBirmingham 1\u20131 Swansea is the single most probable scoreline at 13.9%: expected goals 1.42\u20131.05 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.048). Exact scores are inherently uncertain; the 1X2 split is 44.6%/28.6%/26.8%.\n",
+ "frozen_at": "2026-10-31T04:07:01+00:00",
+ "sha256": "1c6bb41acdf8089ce08836ebb4b4cf271fadc7f66e887e59aaf4e72f466f2b83"
+}

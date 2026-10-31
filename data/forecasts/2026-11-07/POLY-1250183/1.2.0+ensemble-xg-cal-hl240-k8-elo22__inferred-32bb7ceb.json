@@ -1,0 +1,637 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-10-30",
+ "generated_at": "2026-10-31T04:06:57+00:00",
+ "fixture": {
+  "event_id": "POLY-1250183",
+  "home_name": "1. FSV Mainz 05",
+  "away_name": "FC Bayern M\u00fcnchen",
+  "competition": "Bundesliga 2025",
+  "subcategory": "bun",
+  "kickoff_utc": "2026-11-07T14:30:00+00:00",
+  "kickoff_local": "2026-11-07 09:30 EST",
+  "home_matched": "Mainz",
+  "away_matched": "Bayern Munich",
+  "match_methods": {
+   "home": {
+    "source": "1. FSV Mainz 05",
+    "matched": "Mainz",
+    "method": "token-subset",
+    "score": 0.9
+   },
+   "away": {
+    "source": "FC Bayern M\u00fcnchen",
+    "matched": "Bayern Munich",
+    "method": "alias",
+    "score": 1.0
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.13862014519575577,
+  "p_draw": 0.17087887594963977,
+  "p_away": 0.6905009788546046,
+  "xg_home": 1.2061854986986227,
+  "xg_away": 2.7042032130624416,
+  "xg_total": 3.9103887117610645,
+  "median_total": 4,
+  "modal_score": {
+   "home": 1,
+   "away": 2,
+   "p": 0.08803017547390765
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 2,
+    "p": 0.08803017547390765
+   },
+   {
+    "home": 1,
+    "away": 3,
+    "p": 0.08009617077280645
+   },
+   {
+    "home": 0,
+    "away": 2,
+    "p": 0.07569765896681951
+   },
+   {
+    "home": 0,
+    "away": 3,
+    "p": 0.06842410560623985
+   },
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.06827538387982399
+   }
+  ],
+  "btts": 0.6558603664833271,
+  "totals_over": {
+   "over_0.5": 0.9784400674529804,
+   "over_1.5": 0.9054284929114341,
+   "over_2.5": 0.7487893874741962,
+   "over_3.5": 0.5500867228243527,
+   "over_4.5": 0.35254526779629125,
+   "over_5.5": 0.20051798013638816,
+   "over_6.5": 0.10058137477296553
+  },
+  "total_buckets": {
+   "0-1": 0.094571507088566,
+   "2": 0.15663910543723797,
+   "3": 0.19870266464984365,
+   "4": 0.19754145502806134,
+   "5+": 0.35254526779629125
+  },
+  "clean_sheet_home": 0.06158596012654591,
+  "clean_sheet_away": 0.3041136059371471,
+  "home_goal_dist": [
+   0.3041136059371471,
+   0.35779796396027314,
+   0.21385292211553755,
+   0.08759566161474881,
+   0.027620275538778466,
+   0.007118465593717363,
+   0.0015520065171988502,
+   0.00034909872259887353
+  ],
+  "away_goal_dist": [
+   0.06158596012654591,
+   0.1796898439706208,
+   0.24913349693412692,
+   0.22531006174687998,
+   0.15081143213053613,
+   0.07988690273364667,
+   0.034924185740095016,
+   0.01865811661754873
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    3
+   ],
+   "away_goals_80": [
+    1,
+    5
+   ],
+   "total_goals_80": [
+    2,
+    7
+   ],
+   "goal_diff_80": [
+    -4,
+    1
+   ]
+  },
+  "score_grid": [
+   [
+    0.02156,
+    0.052908,
+    0.075698,
+    0.068424,
+    0.045604,
+    0.024,
+    0.010415
+   ],
+   [
+    0.020103,
+    0.068275,
+    0.08803,
+    0.080096,
+    0.053741,
+    0.028474,
+    0.01244
+   ],
+   [
+    0.012666,
+    0.037123,
+    0.055145,
+    0.047801,
+    0.032274,
+    0.017207,
+    0.007565
+   ],
+   [
+    0.005125,
+    0.015089,
+    0.021326,
+    0.02073,
+    0.013321,
+    0.00714,
+    0.003155
+   ],
+   [
+    0.001607,
+    0.004745,
+    0.006731,
+    0.006219,
+    0.004476,
+    0.00228,
+    0.001011
+   ],
+   [
+    0.000414,
+    0.001223,
+    0.001738,
+    0.00161,
+    0.0011,
+    0.000627,
+    0.000264
+   ],
+   [
+    9e-05,
+    0.000267,
+    0.000379,
+    0.000352,
+    0.000241,
+    0.00013,
+    6.1e-05
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.13874999999999998,
+  "p_draw": 0.17012,
+  "p_away": 0.69113,
+  "se": [
+   0.000772976188184345,
+   0.0008401761291538816,
+   0.0010331246853599037
+  ],
+  "max_abs_dev_vs_exact": 0.0007588759496397757,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   0.9262923714129011,
+   1.5118462372478716
+  ],
+  "xg_away_80": [
+   2.119431881607833,
+   3.321383834943522
+  ],
+  "p_home_80": [
+   0.088403290916306,
+   0.22361872523655102
+  ],
+  "p_draw_80": [
+   0.12548789169849203,
+   0.21530832973092945
+  ],
+  "p_away_80": [
+   0.5599451265789238,
+   0.7819400808455246
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.1942281983636328,
+   0.1667191378399104
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.15791924430506513,
+   "p_draw": 0.172731227210056,
+   "p_away": 0.669349528484879,
+   "xg_home": 1.284660426067158,
+   "xg_away": 2.692041898220001,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.10617021721154443,
+   "p_draw": 0.15666589002309916,
+   "p_away": 0.7371638927653563,
+   "xg_home": 0.8731973947229091,
+   "xg_away": 2.5554111658534366,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.1402007564784239,
+   "p_draw": 0.160930487944705,
+   "p_away": 0.6988687555768711,
+   "xg_home": 1.2904724374312968,
+   "xg_away": 2.8864575342420498,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.45250378310800177,
+   "p_draw": 0.23123492809904828,
+   "p_away": 0.31626128879295007,
+   "xg_home": 1.7595119161779555,
+   "xg_away": 1.4394657282833494,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.18368598182501947,
+   "p_draw": 0.1776271774591799,
+   "p_away": 0.6386868407158006,
+   "xg_home": 1.4366500238620306,
+   "xg_away": 2.693097098059184,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Bayern Munich attack vs Mainz defence: rate multiplier \u00d72.24 for the away side.",
+   "effect": 0.805
+  },
+  {
+   "text": "Independent results-only Elo: Mainz 1599 vs Bayern Munich 2009 (gap -410 before home advantage).",
+   "effect": 0.6154
+  },
+  {
+   "text": "Home advantage (Germany, fitted from results): \u00d71.30 on Mainz's scoring rate.",
+   "effect": 0.2618
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.13862014519575575,
+  "p_draw": 0.1708788759496397,
+  "p_away": 0.6905009788546046,
+  "xg_home": 1.2061854986986225,
+  "xg_away": 2.7042032130624407
+ },
+ "context": {
+  "fetched_at": "2026-10-31T04:06:57+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5881220",
+    "fetched_at": "2026-10-31T04:06:58+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "inferred",
+    "source": null,
+    "formation": null,
+    "starters": [
+     {
+      "name": "Alexander Schwolow",
+      "pos": "G"
+     },
+     {
+      "name": "Kaishu Sano",
+      "pos": "M"
+     },
+     {
+      "name": "Phillip Tietz",
+      "pos": "F"
+     },
+     {
+      "name": "Philipp Mwene",
+      "pos": "M"
+     },
+     {
+      "name": "Nadiem Amiri",
+      "pos": "M"
+     },
+     {
+      "name": "Stefan Posch",
+      "pos": "D"
+     },
+     {
+      "name": "Sheraldo Becker",
+      "pos": "F"
+     },
+     {
+      "name": "Kacper Potulski",
+      "pos": "D"
+     },
+     {
+      "name": "Anthony Caci",
+      "pos": "M"
+     },
+     {
+      "name": "Jae-Sung Lee",
+      "pos": "M"
+     },
+     {
+      "name": "Danny da Costa",
+      "pos": "D"
+     }
+    ],
+    "fetched_at": "2026-10-31T04:06:58+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [],
+    "mean_xi_attack_index": -0.055,
+    "mean_continuity": -0.807,
+    "p_backup_gk": 0.305
+   },
+   "away": {
+    "status": "inferred",
+    "source": null,
+    "formation": null,
+    "starters": [
+     {
+      "name": "Jonas Urbig",
+      "pos": "G"
+     },
+     {
+      "name": "Michael Olise",
+      "pos": "F"
+     },
+     {
+      "name": "Dayotchanculle Upamecano",
+      "pos": "D"
+     },
+     {
+      "name": "Harry Kane",
+      "pos": "F"
+     },
+     {
+      "name": "Joshua Kimmich",
+      "pos": "M"
+     },
+     {
+      "name": "Aleksandar Pavlovic",
+      "pos": "M"
+     },
+     {
+      "name": "Josip Stanisic",
+      "pos": "D"
+     },
+     {
+      "name": "Jonathan Tah",
+      "pos": "D"
+     },
+     {
+      "name": "Konrad Laimer",
+      "pos": "M"
+     },
+     {
+      "name": "Nathaniel Brown",
+      "pos": "D"
+     },
+     {
+      "name": "Alphonso Davies",
+      "pos": "D"
+     }
+    ],
+    "fetched_at": "2026-10-31T04:06:58+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [],
+    "mean_xi_attack_index": -0.21,
+    "mean_continuity": -0.013,
+    "p_backup_gk": 0.0
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Nadiem Amiri",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881220",
+     "fetched_at": "2026-10-31T04:06:58+00:00"
+    },
+    {
+     "player": "Otto Ruoppi",
+     "type": "injury",
+     "expected_return": "Early November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881220",
+     "fetched_at": "2026-10-31T04:06:58+00:00"
+    },
+    {
+     "player": "Dominik Kohr",
+     "type": "injury",
+     "expected_return": "Early January 2027",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881220",
+     "fetched_at": "2026-10-31T04:06:58+00:00"
+    },
+    {
+     "player": "Silas Katompa Mvumpa",
+     "type": "injury",
+     "expected_return": "Early January 2027",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881220",
+     "fetched_at": "2026-10-31T04:06:58+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "Bara Ndiaye",
+     "type": "injury",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881220",
+     "fetched_at": "2026-10-31T04:06:58+00:00"
+    },
+    {
+     "player": "Manuel Neuer",
+     "type": "injury",
+     "expected_return": "About a week",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881220",
+     "fetched_at": "2026-10-31T04:06:58+00:00"
+    },
+    {
+     "player": "Luis D\u00edaz",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881220",
+     "fetched_at": "2026-10-31T04:06:58+00:00"
+    },
+    {
+     "player": "Jamal Musiala",
+     "type": "injury",
+     "expected_return": "A few weeks",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881220",
+     "fetched_at": "2026-10-31T04:06:58+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 14,
+    "n21": 2,
+    "last_match": "2026-10-24"
+   },
+   "away": {
+    "rest_days": 13,
+    "n21": 2,
+    "last_match": "2026-10-25"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 315.9
+  },
+  "venue": {
+   "name": "MEWA ARENA",
+   "city": "Mainz",
+   "lat": 49.984627,
+   "lon": 8.224125
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 2.25,
+   "temp_c": 6.7,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=49.985&longitude=8.224",
+   "fetched_at": "2026-10-31T04:06:58+00:00",
+   "lat": 49.984627,
+   "lon": 8.224125
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": 3.65,
+    "d_p_draw_pp": 1.21,
+    "d_p_away_pp": -4.86,
+    "d_xg_home": 0.28,
+    "d_xg_away": 0.069
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0222,
+    "away_rate_mult": 1.0093,
+    "d_p_home_pp": 0.22,
+    "d_p_draw_pp": -0.06,
+    "d_p_away_pp": -0.16,
+    "d_xg_home": 0.028,
+    "d_xg_away": 0.025,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "home_rate_mult": 0.9655,
+    "away_rate_mult": 0.9669,
+    "d_p_home_pp": 0.12,
+    "d_p_draw_pp": 0.47,
+    "d_p_away_pp": -0.59,
+    "d_xg_home": -0.042,
+    "d_xg_away": -0.085,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 14.0,
+   "rest_a": 13.0,
+   "n21_h": 2.0,
+   "n21_a": 2.0,
+   "travel_km": 315.9285196649957,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 2.25,
+   "temp_c": 6.7
+  }
+ },
+ "confidence": {
+  "tier": "HIGH",
+  "p_max": 0.6905009788546046,
+  "entropy_nats": 0.8315434060186564,
+  "text": "Most likely result has P = 69.1%. In the out-of-sample backtest, favourites priced 0.60\u20130.70 won 66.4% \u00b1 0.7% (n=4069, mean forecast 64.2%). Backtest RPS for D1: 0.2000; exact-score top-5 hit rate 42.2% (n=981). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: HIGH (entropy 0.832 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Mainz: no lineup published yet \u2014 XI inferred from recent minutes share minus known absences; 200 configurations simulated (start P=0.7, UNVALIDATED prior).",
+  "Bayern Munich: no lineup published yet \u2014 XI inferred from recent minutes share minus known absences; 200 configurations simulated (start P=0.7, UNVALIDATED prior)."
+ ],
+ "verdict": "Mainz 1\u20132 Bayern Munich is the single most probable scoreline at 8.8%: expected goals 1.21\u20132.70 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.048). Exact scores are inherently uncertain; the 1X2 split is 13.9%/17.1%/69.1%.",
+ "resolved": {
+  "home_key": "Germany:Mainz",
+  "away_key": "Germany:Bayern Munich",
+  "div": "D1",
+  "home_div": "D1",
+  "away_div": "D1",
+  "country": "Germany"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: FC Bayern M\u00fcnchen at 1. FSV Mainz 05\nCompetition: Bundesliga 2025\nDate: 2026-11-07 09:30 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-10-30\n\nPRIMARY FINAL SCORE PREDICTION\n\n1. FSV Mainz 05 1 \u2013 2 FC Bayern M\u00fcnchen\n(modal exact score, probability 8.8%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.21\nAway: 2.70\nExpected Total: 3.91\nMedian Total: 4\n\nRESULT PROBABILITIES\n\nHome Win: 13.9%\nDraw: 17.1%\nAway Win: 69.1%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20132: 8.8%\n2. 1\u20133: 8.0%\n3. 0\u20132: 7.6%\n4. 0\u20133: 6.8%\n5. 1\u20131: 6.8%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 9.5%\nTotal 2 goals: 15.7%\nTotal 3 goals: 19.9%\nTotal 4 goals: 19.8%\nTotal 5+ goals: 35.3%\n\nBoth Teams Score: 65.6%\nClean sheet 1. FSV Mainz 05: 6.2% \u00b7 Clean sheet FC Bayern M\u00fcnchen: 30.4%\n\nMATCH INTELLIGENCE\n\n1. Bayern Munich attack vs Mainz defence: rate multiplier \u00d72.24 for the away side.\n2. Independent results-only Elo: Mainz 1599 vs Bayern Munich 2009 (gap -410 before home advantage).\n3. Home advantage (Germany, fitted from results): \u00d71.30 on Mainz's scoring rate.\n\nMODEL CONFIDENCE\n\nMost likely result has P = 69.1%. In the out-of-sample backtest, favourites priced 0.60\u20130.70 won 66.4% \u00b1 0.7% (n=4069, mean forecast 64.2%). Backtest RPS for D1: 0.2000; exact-score top-5 hit rate 42.2% (n=981). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: HIGH (entropy 0.832 nats of max 1.099).\nParameter-uncertainty 80% bands: xG 1. FSV Mainz 05 0.93\u20131.51, xG FC Bayern M\u00fcnchen 2.12\u20133.32; P(home win) 8.8%\u201322.4%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0008 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nMainz: INFERRED, fetched 2026-10-31 00:06 EDT\n  Alexander Schwolow (G), Kaishu Sano (M), Phillip Tietz (F), Philipp Mwene (M), Nadiem Amiri (M), Stefan Posch (D), Sheraldo Becker (F), Kacper Potulski (D), Anthony Caci (M), Jae-Sung Lee (M), Danny da Costa (D)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs -0.055 (log) \u00b7 continuity -0.81 \u00b7 P(backup GK) 30%\nBayern Munich: INFERRED, fetched 2026-10-31 00:06 EDT\n  Jonas Urbig (G), Michael Olise (F), Dayotchanculle Upamecano (D), Harry Kane (F), Joshua Kimmich (M), Aleksandar Pavlovic (M), Josip Stanisic (D), Jonathan Tah (D), Konrad Laimer (M), Nathaniel Brown (D), Alphonso Davies (D)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs -0.210 (log) \u00b7 continuity -0.01 \u00b7 P(backup GK) 0%\n\nKEY ABSENCES\n\n- Mainz: Nadiem Amiri \u2014 injury, Doubtful [FotMob, 2026-10-31 00:06 EDT]\n- Mainz: Otto Ruoppi \u2014 injury, Early November 2026 [FotMob, 2026-10-31 00:06 EDT]\n- Mainz: Dominik Kohr \u2014 injury, Early January 2027 [FotMob, 2026-10-31 00:06 EDT]\n- Mainz: Silas Katompa Mvumpa \u2014 injury, Early January 2027 [FotMob, 2026-10-31 00:06 EDT]\n- Bayern Munich: Bara Ndiaye \u2014 injury, Mid November 2026 [FotMob, 2026-10-31 00:06 EDT]\n- Bayern Munich: Manuel Neuer \u2014 injury, About a week [FotMob, 2026-10-31 00:06 EDT]\n- Bayern Munich: Luis D\u00edaz \u2014 injury, Late November 2026 [FotMob, 2026-10-31 00:06 EDT]\n- Bayern Munich: Jamal Musiala \u2014 injury, A few weeks [FotMob, 2026-10-31 00:06 EDT]\n\nWEATHER AT VENUE\n\nMEWA ARENA, Mainz: 6.7 \u00b0C, wind 2.2 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-10-31 00:06 EDT]\n\nREST & TRAVEL\n\nMainz: 14 days' rest, 2 matches in previous 21 days \u00b7 Bayern Munich: 13 days' rest, 2 in 21 days \u00b7 away travel 315.9 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 13.9% / 17.1% / 69.1%, xG 1.21\u20132.70\n- Understat xG component (validated, in ensemble): home +3.65 pp, draw +1.21 pp, away -4.86 pp; xG +0.280 / +0.069\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.22 pp, draw -0.06 pp, away -0.16 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- lineup: NOT APPLIED (failed out-of-sample validation); would have moved home +0.12 pp, draw +0.47 pp, away -0.59 pp\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Mainz: no lineup published yet \u2014 XI inferred from recent minutes share minus known absences; 200 configurations simulated (start P=0.7, UNVALIDATED prior).\n- Bayern Munich: no lineup published yet \u2014 XI inferred from recent minutes share minus known absences; 200 configurations simulated (start P=0.7, UNVALIDATED prior).\n\nFINAL VERDICT\n\nMainz 1\u20132 Bayern Munich is the single most probable scoreline at 8.8%: expected goals 1.21\u20132.70 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.048). Exact scores are inherently uncertain; the 1X2 split is 13.9%/17.1%/69.1%.\n",
+ "frozen_at": "2026-10-31T04:06:58+00:00",
+ "sha256": "36d74deab177f9b24ef1eeea18cd76b9140bcbf3e5de159decfcae5272c2be05"
+}

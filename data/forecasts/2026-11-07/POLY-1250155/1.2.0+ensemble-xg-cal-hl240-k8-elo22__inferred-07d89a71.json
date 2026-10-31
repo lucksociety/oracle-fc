@@ -1,0 +1,629 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-10-30",
+ "generated_at": "2026-10-31T04:06:59+00:00",
+ "fixture": {
+  "event_id": "POLY-1250155",
+  "home_name": "SC Paderborn 07",
+  "away_name": "Eintracht Frankfurt",
+  "competition": "Bundesliga 2025",
+  "subcategory": "bun",
+  "kickoff_utc": "2026-11-07T14:30:00+00:00",
+  "kickoff_local": "2026-11-07 09:30 EST",
+  "home_matched": "Paderborn",
+  "away_matched": "Ein Frankfurt",
+  "match_methods": {
+   "home": {
+    "source": "SC Paderborn 07",
+    "matched": "Paderborn",
+    "method": "token-subset",
+    "score": 0.9
+   },
+   "away": {
+    "source": "Eintracht Frankfurt",
+    "matched": "Ein Frankfurt",
+    "method": "alias",
+    "score": 1.0
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.387560913219019,
+  "p_draw": 0.251063089263873,
+  "p_away": 0.361375997517108,
+  "xg_home": 1.6458218279782326,
+  "xg_away": 1.5831387054652812,
+  "xg_total": 3.228960533443514,
+  "median_total": 3,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.11291656086475864
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.11291656086475864
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.08638571603292274
+   },
+   {
+    "home": 1,
+    "away": 2,
+    "p": 0.0832559728496088
+   },
+   {
+    "home": 2,
+    "away": 2,
+    "p": 0.07295879903453695
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.05964122568118254
+   }
+  ],
+  "btts": 0.6583861958860904,
+  "totals_over": {
+   "over_0.5": 0.958879584050478,
+   "over_1.5": 0.841453725769051,
+   "over_2.5": 0.6284287677894184,
+   "over_3.5": 0.40549493864546204,
+   "over_4.5": 0.2213305835154035,
+   "over_5.5": 0.10589658921996165,
+   "over_6.5": 0.04373617897044276
+  },
+  "total_buckets": {
+   "0-1": 0.15854627423094883,
+   "2": 0.21302495797963272,
+   "3": 0.22293382914395635,
+   "4": 0.18416435513005858,
+   "5+": 0.2213305835154035
+  },
+  "clean_sheet_home": 0.19679513334313165,
+  "clean_sheet_away": 0.18593908672029974,
+  "home_goal_dist": [
+   0.18593908672029974,
+   0.32230288455473477,
+   0.26619886226344947,
+   0.14352326670165919,
+   0.05749801547002505,
+   0.018332385435687232,
+   0.004850168246104842,
+   0.0013553306080397198
+  ],
+  "away_goal_dist": [
+   0.19679513334313165,
+   0.3309831032966835,
+   0.26362368796078445,
+   0.13614574455152728,
+   0.051901841080234955,
+   0.0156525767341952,
+   0.003895313202038456,
+   0.0010025998314044705
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    3
+   ],
+   "away_goals_80": [
+    0,
+    3
+   ],
+   "total_goals_80": [
+    1,
+    6
+   ],
+   "goal_diff_80": [
+    -2,
+    2
+   ]
+  },
+  "score_grid": [
+   [
+    0.04112,
+    0.057785,
+    0.048371,
+    0.025175,
+    0.009653,
+    0.00292,
+    0.000728
+   ],
+   [
+    0.059641,
+    0.112917,
+    0.083256,
+    0.043305,
+    0.016595,
+    0.005018,
+    0.00125
+   ],
+   [
+    0.051738,
+    0.086386,
+    0.072959,
+    0.035908,
+    0.013752,
+    0.004156,
+    0.001035
+   ],
+   [
+    0.028118,
+    0.04692,
+    0.037497,
+    0.020576,
+    0.007456,
+    0.002252,
+    0.00056
+   ],
+   [
+    0.011328,
+    0.018892,
+    0.01509,
+    0.007835,
+    0.003166,
+    0.000905,
+    0.000225
+   ],
+   [
+    0.003622,
+    0.006038,
+    0.00482,
+    0.002501,
+    0.000956,
+    0.000305,
+    7.2e-05
+   ],
+   [
+    0.00096,
+    0.001599,
+    0.001276,
+    0.000662,
+    0.000253,
+    7.6e-05,
+    2e-05
+   ]
+  ],
+  "mass_check": 0.9999999999999997
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.38739500000000004,
+  "p_draw": 0.252265,
+  "p_away": 0.36034000000000005,
+  "se": [
+   0.0010893119708673912,
+   0.0009711523304173244,
+   0.0010735340805023378
+  ],
+  "max_abs_dev_vs_exact": 0.001201910736127021,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   1.280422767241669,
+   2.0432508945283243
+  ],
+  "xg_away_80": [
+   1.1807608284202091,
+   2.0157864673386667
+  ],
+  "p_home_80": [
+   0.28922538296987277,
+   0.5103023070935448
+  ],
+  "p_draw_80": [
+   0.21241912830489057,
+   0.268065585797207
+  ],
+  "p_away_80": [
+   0.25198793173522616,
+   0.4787717131769168
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.18528978672287472,
+   0.19849323973741712
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.418929398726095,
+   "p_draw": 0.24126513208928435,
+   "p_away": 0.3398054691846206,
+   "xg_home": 1.715535237257047,
+   "xg_away": 1.5289497677212642,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.35839360936727277,
+   "p_draw": 0.24112110006927787,
+   "p_away": 0.4004852905634494,
+   "xg_home": 1.4691665462011647,
+   "xg_away": 1.565391057339879,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.4427657650292651,
+   "p_draw": 0.25214385717971655,
+   "p_away": 0.3050903777910182,
+   "xg_home": 1.675325749627164,
+   "xg_away": 1.3594762260652455,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.45250378310800177,
+   "p_draw": 0.23123492809904828,
+   "p_away": 0.31626128879295007,
+   "xg_home": 1.7595119161779555,
+   "xg_away": 1.4394657282833494,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.4172496295569108,
+   "p_draw": 0.24025519397220602,
+   "p_away": 0.34249517647088307,
+   "xg_home": 1.7222598502309074,
+   "xg_away": 1.54543313258273,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Home advantage (Germany, fitted from results): \u00d71.30 on Paderborn's scoring rate.",
+   "effect": 0.2618
+  },
+  {
+   "text": "Ein Frankfurt attack vs Paderborn defence: rate multiplier \u00d71.27 for the away side.",
+   "effect": 0.2389
+  },
+  {
+   "text": "Independent results-only Elo: Paderborn 1487 vs Ein Frankfurt 1570 (gap -83 before home advantage).",
+   "effect": 0.1238
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.387560913219019,
+  "p_draw": 0.25106308926387305,
+  "p_away": 0.36137599751710814,
+  "xg_home": 1.6458218279782328,
+  "xg_away": 1.5831387054652812
+ },
+ "context": {
+  "fetched_at": "2026-10-31T04:06:59+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5881221",
+    "fetched_at": "2026-10-31T04:07:00+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "inferred",
+    "source": null,
+    "formation": null,
+    "starters": [
+     {
+      "name": "Nahuel Nicolas Noll",
+      "pos": "G"
+     },
+     {
+      "name": "Santiago Casta\u00f1eda",
+      "pos": "M"
+     },
+     {
+      "name": "Tjark Scheller",
+      "pos": "D"
+     },
+     {
+      "name": "Laurin Curda",
+      "pos": "M"
+     },
+     {
+      "name": "Raphael Obermair",
+      "pos": "M"
+     },
+     {
+      "name": "Mattes Hansen",
+      "pos": "D"
+     },
+     {
+      "name": "Jano ter Horst",
+      "pos": "D"
+     },
+     {
+      "name": "Laurin Ulrich",
+      "pos": "M"
+     },
+     {
+      "name": "Gabriel Vidovic",
+      "pos": "M"
+     },
+     {
+      "name": "Stefano Marino",
+      "pos": "F"
+     },
+     {
+      "name": "Marvin Pieringer",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-10-31T04:07:00+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [],
+    "mean_xi_attack_index": 0.056,
+    "mean_continuity": -1.473,
+    "p_backup_gk": 0.0
+   },
+   "away": {
+    "status": "inferred",
+    "source": null,
+    "formation": null,
+    "starters": [
+     {
+      "name": "Noah Atubolu",
+      "pos": "G"
+     },
+     {
+      "name": "Robin Koch",
+      "pos": "D"
+     },
+     {
+      "name": "Jonathan Burkardt",
+      "pos": "F"
+     },
+     {
+      "name": "Raphael Onyedika",
+      "pos": "M"
+     },
+     {
+      "name": "Ritsu Doan",
+      "pos": "M"
+     },
+     {
+      "name": "Lilian Brassier",
+      "pos": "D"
+     },
+     {
+      "name": "Younes Ebnoutalib",
+      "pos": "F"
+     },
+     {
+      "name": "Keita Kosugi",
+      "pos": "D"
+     },
+     {
+      "name": "Elias Baum",
+      "pos": "D"
+     },
+     {
+      "name": "Can Uzun",
+      "pos": "F"
+     },
+     {
+      "name": "Nnamdi Collins",
+      "pos": "D"
+     }
+    ],
+    "fetched_at": "2026-10-31T04:07:00+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [],
+    "mean_xi_attack_index": -0.018,
+    "mean_continuity": -0.026,
+    "p_backup_gk": 0.26
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Gabriel Vidovi\u0107",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881221",
+     "fetched_at": "2026-10-31T04:07:00+00:00"
+    },
+    {
+     "player": "Oliver Batista Meier",
+     "type": "injury",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881221",
+     "fetched_at": "2026-10-31T04:07:00+00:00"
+    },
+    {
+     "player": "Marcel Hoffmeier",
+     "type": "injury",
+     "expected_return": "A few weeks",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881221",
+     "fetched_at": "2026-10-31T04:07:00+00:00"
+    },
+    {
+     "player": "Nyamekye Awortwie-Grant",
+     "type": "injury",
+     "expected_return": "Late October 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881221",
+     "fetched_at": "2026-10-31T04:07:00+00:00"
+    },
+    {
+     "player": "Sebastian Klaas",
+     "type": "injury",
+     "expected_return": "Late October 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881221",
+     "fetched_at": "2026-10-31T04:07:00+00:00"
+    },
+    {
+     "player": "Timur Gayret",
+     "type": "injury",
+     "expected_return": "Early January 2027",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881221",
+     "fetched_at": "2026-10-31T04:07:00+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "Jessic Ngankam",
+     "type": "injury",
+     "expected_return": "Late October 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881221",
+     "fetched_at": "2026-10-31T04:07:00+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 14,
+    "n21": 2,
+    "last_match": "2026-10-24"
+   },
+   "away": {
+    "rest_days": 14,
+    "n21": 1,
+    "last_match": "2026-10-24"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 184.9
+  },
+  "venue": {
+   "name": "Home Deluxe Arena",
+   "city": "Paderborn",
+   "lat": 51.730769438,
+   "lon": 8.711031675
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 3.5549999999999997,
+   "temp_c": 7.0,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=51.731&longitude=8.711",
+   "fetched_at": "2026-10-31T04:07:00+00:00",
+   "lat": 51.730769438,
+   "lon": 8.711031675
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": 2.81,
+    "d_p_draw_pp": -0.05,
+    "d_p_away_pp": -2.76,
+    "d_xg_home": 0.122,
+    "d_xg_away": -0.007
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": -0.0,
+    "d_p_away_pp": -0.0,
+    "d_xg_home": -0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0162,
+    "away_rate_mult": 1.0068,
+    "d_p_home_pp": 0.41,
+    "d_p_draw_pp": -0.17,
+    "d_p_away_pp": -0.24,
+    "d_xg_home": 0.026,
+    "d_xg_away": 0.011,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": -0.0,
+    "d_p_away_pp": -0.0,
+    "d_xg_home": -0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "home_rate_mult": 0.9877,
+    "away_rate_mult": 1.0197,
+    "d_p_home_pp": -1.03,
+    "d_p_draw_pp": -0.07,
+    "d_p_away_pp": 1.1,
+    "d_xg_home": -0.019,
+    "d_xg_away": 0.031,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": -0.0,
+   "d_p_away_pp": -0.0,
+   "d_xg_home": -0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 14.0,
+   "rest_a": 14.0,
+   "n21_h": 2.0,
+   "n21_a": 1.0,
+   "travel_km": 184.8845192638005,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 3.5549999999999997,
+   "temp_c": 7.0
+  }
+ },
+ "confidence": {
+  "tier": "LOW",
+  "p_max": 0.387560913219019,
+  "entropy_nats": 1.0821657227116561,
+  "text": "Most likely result has P = 38.8%. In the out-of-sample backtest, favourites priced 0.33\u20130.40 won 37.6% \u00b1 0.5% (n=8383, mean forecast 37.8%). Backtest RPS for D1: 0.2000; exact-score top-5 hit rate 42.2% (n=981). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: LOW (entropy 1.082 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Paderborn: no lineup published yet \u2014 XI inferred from recent minutes share minus known absences; 200 configurations simulated (start P=0.7, UNVALIDATED prior).",
+  "Ein Frankfurt: no lineup published yet \u2014 XI inferred from recent minutes share minus known absences; 200 configurations simulated (start P=0.7, UNVALIDATED prior)."
+ ],
+ "verdict": "Paderborn 1\u20131 Ein Frankfurt is the single most probable scoreline at 11.3%: expected goals 1.65\u20131.58 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.048). Exact scores are inherently uncertain; the 1X2 split is 38.8%/25.1%/36.1%.",
+ "resolved": {
+  "home_key": "Germany:Paderborn",
+  "away_key": "Germany:Ein Frankfurt",
+  "div": "D1",
+  "home_div": "D1",
+  "away_div": "D1",
+  "country": "Germany"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: Eintracht Frankfurt at SC Paderborn 07\nCompetition: Bundesliga 2025\nDate: 2026-11-07 09:30 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-10-30\n\nPRIMARY FINAL SCORE PREDICTION\n\nSC Paderborn 07 1 \u2013 1 Eintracht Frankfurt\n(modal exact score, probability 11.3%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.65\nAway: 1.58\nExpected Total: 3.23\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 38.8%\nDraw: 25.1%\nAway Win: 36.1%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 11.3%\n2. 2\u20131: 8.6%\n3. 1\u20132: 8.3%\n4. 2\u20132: 7.3%\n5. 1\u20130: 6.0%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 15.9%\nTotal 2 goals: 21.3%\nTotal 3 goals: 22.3%\nTotal 4 goals: 18.4%\nTotal 5+ goals: 22.1%\n\nBoth Teams Score: 65.8%\nClean sheet SC Paderborn 07: 19.7% \u00b7 Clean sheet Eintracht Frankfurt: 18.6%\n\nMATCH INTELLIGENCE\n\n1. Home advantage (Germany, fitted from results): \u00d71.30 on Paderborn's scoring rate.\n2. Ein Frankfurt attack vs Paderborn defence: rate multiplier \u00d71.27 for the away side.\n3. Independent results-only Elo: Paderborn 1487 vs Ein Frankfurt 1570 (gap -83 before home advantage).\n\nMODEL CONFIDENCE\n\nMost likely result has P = 38.8%. In the out-of-sample backtest, favourites priced 0.33\u20130.40 won 37.6% \u00b1 0.5% (n=8383, mean forecast 37.8%). Backtest RPS for D1: 0.2000; exact-score top-5 hit rate 42.2% (n=981). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: LOW (entropy 1.082 nats of max 1.099).\nParameter-uncertainty 80% bands: xG SC Paderborn 07 1.28\u20132.04, xG Eintracht Frankfurt 1.18\u20132.02; P(home win) 28.9%\u201351.0%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0012 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nPaderborn: INFERRED, fetched 2026-10-31 00:07 EDT\n  Nahuel Nicolas Noll (G), Santiago Casta\u00f1eda (M), Tjark Scheller (D), Laurin Curda (M), Raphael Obermair (M), Mattes Hansen (D), Jano ter Horst (D), Laurin Ulrich (M), Gabriel Vidovic (M), Stefano Marino (F), Marvin Pieringer (F)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs +0.056 (log) \u00b7 continuity -1.47 \u00b7 P(backup GK) 0%\nEin Frankfurt: INFERRED, fetched 2026-10-31 00:07 EDT\n  Noah Atubolu (G), Robin Koch (D), Jonathan Burkardt (F), Raphael Onyedika (M), Ritsu Doan (M), Lilian Brassier (D), Younes Ebnoutalib (F), Keita Kosugi (D), Elias Baum (D), Can Uzun (F), Nnamdi Collins (D)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs -0.018 (log) \u00b7 continuity -0.03 \u00b7 P(backup GK) 26%\n\nKEY ABSENCES\n\n- Paderborn: Gabriel Vidovi\u0107 \u2014 injury, Doubtful [FotMob, 2026-10-31 00:07 EDT]\n- Paderborn: Oliver Batista Meier \u2014 injury, Mid November 2026 [FotMob, 2026-10-31 00:07 EDT]\n- Paderborn: Marcel Hoffmeier \u2014 injury, A few weeks [FotMob, 2026-10-31 00:07 EDT]\n- Paderborn: Nyamekye Awortwie-Grant \u2014 injury, Late October 2026 [FotMob, 2026-10-31 00:07 EDT]\n- Paderborn: Sebastian Klaas \u2014 injury, Late October 2026 [FotMob, 2026-10-31 00:07 EDT]\n- Paderborn: Timur Gayret \u2014 injury, Early January 2027 [FotMob, 2026-10-31 00:07 EDT]\n- Ein Frankfurt: Jessic Ngankam \u2014 injury, Late October 2026 [FotMob, 2026-10-31 00:07 EDT]\n\nWEATHER AT VENUE\n\nHome Deluxe Arena, Paderborn: 7.0 \u00b0C, wind 3.6 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-10-31 00:07 EDT]\n\nREST & TRAVEL\n\nPaderborn: 14 days' rest, 2 matches in previous 21 days \u00b7 Ein Frankfurt: 14 days' rest, 1 in 21 days \u00b7 away travel 184.9 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 38.8% / 25.1% / 36.1%, xG 1.65\u20131.58\n- Understat xG component (validated, in ensemble): home +2.81 pp, draw -0.05 pp, away -2.76 pp; xG +0.122 / -0.007\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw -0.00 pp, away -0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.41 pp, draw -0.17 pp, away -0.24 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw -0.00 pp, away -0.00 pp\n- lineup: NOT APPLIED (failed out-of-sample validation); would have moved home -1.03 pp, draw -0.07 pp, away +1.10 pp\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Paderborn: no lineup published yet \u2014 XI inferred from recent minutes share minus known absences; 200 configurations simulated (start P=0.7, UNVALIDATED prior).\n- Ein Frankfurt: no lineup published yet \u2014 XI inferred from recent minutes share minus known absences; 200 configurations simulated (start P=0.7, UNVALIDATED prior).\n\nFINAL VERDICT\n\nPaderborn 1\u20131 Ein Frankfurt is the single most probable scoreline at 11.3%: expected goals 1.65\u20131.58 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.048). Exact scores are inherently uncertain; the 1X2 split is 38.8%/25.1%/36.1%.\n",
+ "frozen_at": "2026-10-31T04:07:00+00:00",
+ "sha256": "5639becd78822d1b7f4c5bf8013b1994f9f5fd8847ef01caa0b584b6aa0d2f6a"
+}
