@@ -1,0 +1,602 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-10-30",
+ "input_fingerprint": "5a99153ce08caaded5d8617b1eff1cb6b5e652ce705eaf2cd2bf4b9802c3b82c",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-10-31T14:08:36+00:00",
+ "fixture": {
+  "event_id": "POLY-1209226",
+  "home_name": "Southampton FC",
+  "away_name": "Queens Park Rangers FC",
+  "competition": "EFL Championship",
+  "subcategory": "elc",
+  "kickoff_utc": "2026-10-31T15:00:00+00:00",
+  "kickoff_local": "2026-10-31 11:00 EDT",
+  "home_matched": "Southampton",
+  "away_matched": "QPR",
+  "match_methods": {
+   "home": {
+    "source": "Southampton FC",
+    "matched": "Southampton",
+    "method": "core-tokens",
+    "score": 0.97
+   },
+   "away": {
+    "source": "Queens Park Rangers FC",
+    "matched": "QPR",
+    "method": "alias",
+    "score": 1.0
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.5783854252617657,
+  "p_draw": 0.23249551347520717,
+  "p_away": 0.18911906126302713,
+  "xg_home": 1.95537295650449,
+  "xg_away": 1.056390294672018,
+  "xg_total": 3.0117632511765082,
+  "median_total": 3,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.11027782586649518
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.11027782586649518
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.10139301246758076
+   },
+   {
+    "home": 2,
+    "away": 0,
+    "p": 0.09420460380609476
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.09228263354102995
+   },
+   {
+    "home": 3,
+    "away": 1,
+    "p": 0.0658900957455348
+   }
+  ],
+  "btts": 0.5734009846871365,
+  "totals_over": {
+   "over_0.5": 0.9484954845674533,
+   "over_1.5": 0.8098953366322927,
+   "over_2.5": 0.580057576254334,
+   "over_3.5": 0.35606900983265577,
+   "over_4.5": 0.18444632046718804,
+   "over_5.5": 0.0835303634363019,
+   "over_6.5": 0.03276509704356218
+  },
+  "total_buckets": {
+   "0-1": 0.19010466336770715,
+   "2": 0.22983776037795894,
+   "3": 0.22398856642167814,
+   "4": 0.1716226893654677,
+   "5+": 0.18444632046718804
+  },
+  "clean_sheet_home": 0.34343772475543405,
+  "clean_sheet_away": 0.13466580598997624,
+  "home_goal_dist": [
+   0.13466580598997624,
+   0.27975170205790634,
+   0.2761772315710695,
+   0.17824297853131515,
+   0.08527053428599268,
+   0.03231103411006265,
+   0.010113333578644983,
+   0.0034673798750324697
+  ],
+  "away_goal_dist": [
+   0.34343772475543405,
+   0.3725027280000098,
+   0.19511902329524214,
+   0.06727267855011648,
+   0.017353702719003782,
+   0.0035887314728610064,
+   0.0006199908046745191,
+   0.0001054204026582293
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    4
+   ],
+   "away_goals_80": [
+    0,
+    2
+   ],
+   "total_goals_80": [
+    1,
+    5
+   ],
+   "goal_diff_80": [
+    -1,
+    3
+   ]
+  },
+  "score_grid": [
+   [
+    0.051505,
+    0.046318,
+    0.025355,
+    0.008701,
+    0.002235,
+    0.00046,
+    7.9e-05
+   ],
+   [
+    0.092283,
+    0.110278,
+    0.053013,
+    0.018285,
+    0.00472,
+    0.000975,
+    0.000168
+   ],
+   [
+    0.094205,
+    0.101393,
+    0.056169,
+    0.018436,
+    0.004781,
+    0.000992,
+    0.000172
+   ],
+   [
+    0.060882,
+    0.06589,
+    0.034743,
+    0.012785,
+    0.003153,
+    0.000657,
+    0.000114
+   ],
+   [
+    0.029042,
+    0.031605,
+    0.016752,
+    0.005865,
+    0.001621,
+    0.000321,
+    5.6e-05
+   ],
+   [
+    0.010952,
+    0.011983,
+    0.006384,
+    0.002246,
+    0.00059,
+    0.000131,
+    2.2e-05
+   ],
+   [
+    0.00341,
+    0.003751,
+    0.002008,
+    0.00071,
+    0.000187,
+    3.9e-05,
+    7e-06
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.57779,
+  "p_draw": 0.23337999999999998,
+  "p_away": 0.18883,
+  "se": [
+   0.001104420019512504,
+   0.0009458165139180009,
+   0.0008751377922933051
+  ],
+  "max_abs_dev_vs_exact": 0.0008844865247928102,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   1.5439146371931227,
+   2.40082155291278
+  ],
+  "xg_away_80": [
+   0.8060702987543958,
+   1.3232684214618984
+  ],
+  "p_home_80": [
+   0.46754614009069173,
+   0.6827830484232795
+  ],
+  "p_draw_80": [
+   0.18660239756027341,
+   0.2652482136325422
+  ],
+  "p_away_80": [
+   0.12741934726313378,
+   0.2695198720539671
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.17503635406024642,
+   0.1839597126041992
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.5588618807745059,
+   "p_draw": 0.22724126021024113,
+   "p_away": 0.213896859015253,
+   "xg_home": 1.9664960333027883,
+   "xg_away": 1.1483973878743856,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.5932446271279324,
+   "p_draw": 0.22617454882786117,
+   "p_away": 0.18058082404420658,
+   "xg_home": 1.8256626580669006,
+   "xg_away": 0.8946743051108416,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.6475942008001581,
+   "p_draw": 0.1948075948823407,
+   "p_away": 0.15759820431750132,
+   "xg_home": 2.3550162571003956,
+   "xg_away": 1.1001555424397746,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.43362929859923616,
+   "p_draw": 0.26159331450305645,
+   "p_away": 0.30477738689770745,
+   "xg_home": 1.4320617984640485,
+   "xg_away": 1.1567024686904,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.5592002218675682,
+   "p_draw": 0.22604763763597294,
+   "p_away": 0.21475214049645877,
+   "xg_home": 1.980648170868654,
+   "xg_away": 1.1606842422426429,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Southampton attack vs QPR defence: time-weighted strength gap multiplies Southampton's scoring rate by \u00d71.34 relative to an average pairing (from 38/39 decay-weighted matches).",
+   "effect": 0.2941
+  },
+  {
+   "text": "Independent results-only Elo: Southampton 1574 vs QPR 1419 (gap +154 before home advantage).",
+   "effect": 0.2313
+  },
+  {
+   "text": "Home advantage (England, fitted from results): \u00d71.22 on Southampton's scoring rate.",
+   "effect": 0.1965
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.5783854252617657,
+  "p_draw": 0.23249551347520717,
+  "p_away": 0.18911906126302713,
+  "xg_home": 1.95537295650449,
+  "xg_away": 1.056390294672018
+ },
+ "context": {
+  "fetched_at": "2026-10-31T14:08:36+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5836905",
+    "fetched_at": "2026-10-31T14:08:36+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "confirmed",
+    "source": "FotMob official team sheet",
+    "formation": "4-2-3-1",
+    "starters": [
+     {
+      "name": "Daniel Peretz",
+      "pos": "G"
+     },
+     {
+      "name": "James Bree",
+      "pos": "D"
+     },
+     {
+      "name": "Jack Stephens",
+      "pos": "D"
+     },
+     {
+      "name": "Keven Schlotterbeck",
+      "pos": "D"
+     },
+     {
+      "name": "Ryan Manning",
+      "pos": "D"
+     },
+     {
+      "name": "James Ward-Prowse",
+      "pos": "M"
+     },
+     {
+      "name": "Cameron Bragg",
+      "pos": "M"
+     },
+     {
+      "name": "Kuryu Matsuki",
+      "pos": "F"
+     },
+     {
+      "name": "Finn Azaz",
+      "pos": "M"
+     },
+     {
+      "name": "L\u00e9o Scienza",
+      "pos": "F"
+     },
+     {
+      "name": "Lewis Dobbin",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-10-31T14:08:36+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   },
+   "away": {
+    "status": "confirmed",
+    "source": "FotMob official team sheet",
+    "formation": "4-4-2",
+    "starters": [
+     {
+      "name": "Pierce Charles",
+      "pos": "G"
+     },
+     {
+      "name": "Kealey Adamson",
+      "pos": "D"
+     },
+     {
+      "name": "Jimmy Dunne",
+      "pos": "D"
+     },
+     {
+      "name": "Ronnie Edwards",
+      "pos": "D"
+     },
+     {
+      "name": "Boy Kemper",
+      "pos": "D"
+     },
+     {
+      "name": "Kwame Poku",
+      "pos": "M"
+     },
+     {
+      "name": "Jonathan Varane",
+      "pos": "M"
+     },
+     {
+      "name": "Glen Kamara",
+      "pos": "M"
+     },
+     {
+      "name": "Harvey Vale",
+      "pos": "M"
+     },
+     {
+      "name": "Richard Kone",
+      "pos": "F"
+     },
+     {
+      "name": "Paul Smyth",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-10-31T14:08:36+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Cyle Larin",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836905",
+     "fetched_at": "2026-10-31T14:08:36+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "Rumarn Burrell",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836905",
+     "fetched_at": "2026-10-31T14:08:36+00:00"
+    },
+    {
+     "player": "Nicolas Madsen",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836905",
+     "fetched_at": "2026-10-31T14:08:36+00:00"
+    },
+    {
+     "player": "Tariq Lamptey",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836905",
+     "fetched_at": "2026-10-31T14:08:36+00:00"
+    },
+    {
+     "player": "Amadou Salif Mbengue",
+     "type": "injury",
+     "expected_return": "Out for season",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836905",
+     "fetched_at": "2026-10-31T14:08:36+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 7,
+    "n21": 4,
+    "last_match": "2026-10-24"
+   },
+   "away": {
+    "rest_days": 7,
+    "n21": 3,
+    "last_match": "2026-10-24"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 105.0
+  },
+  "venue": {
+   "name": "St. Mary's Stadium",
+   "city": "Southampton, Hampshire",
+   "lat": 50.905894751,
+   "lon": -1.391047239
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 2.05,
+   "temp_c": 14.7,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=50.906&longitude=-1.391",
+   "fetched_at": "2026-10-31T14:08:36+00:00",
+   "lat": 50.905894751,
+   "lon": -1.391047239
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": -1.66,
+    "d_p_draw_pp": 0.07,
+    "d_p_away_pp": 1.6,
+    "d_xg_home": 0.076,
+    "d_xg_away": 0.129
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0111,
+    "away_rate_mult": 1.0047,
+    "d_p_home_pp": 0.35,
+    "d_p_draw_pp": -0.2,
+    "d_p_away_pp": -0.15,
+    "d_xg_home": 0.021,
+    "d_xg_away": 0.005,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "reason": "failed validation; no live features"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 7.0,
+   "rest_a": 7.0,
+   "n21_h": 4.0,
+   "n21_a": 3.0,
+   "travel_km": 104.9703785571085,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 2.05,
+   "temp_c": 14.7
+  }
+ },
+ "confidence": {
+  "tier": "MODERATE",
+  "p_max": 0.5783854252617657,
+  "entropy_nats": 0.9708134708481673,
+  "text": "Most likely result has P = 57.8%. In the out-of-sample backtest, favourites priced 0.50\u20130.60 won 53.9% \u00b1 0.5% (n=9522, mean forecast 54.4%). Backtest RPS for E1: 0.2179; exact-score top-5 hit rate 51.6% (n=1800). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: MODERATE (entropy 0.971 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Southampton: lineup CONFIRMED (FotMob official team sheet).",
+  "Southampton: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.",
+  "QPR: lineup CONFIRMED (FotMob official team sheet).",
+  "QPR: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+ ],
+ "verdict": "Southampton 1\u20131 QPR is the single most probable scoreline at 11.0%: expected goals 1.96\u20131.06 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.048). Exact scores are inherently uncertain; the 1X2 split is 57.8%/23.2%/18.9%.",
+ "resolved": {
+  "home_key": "England:Southampton",
+  "away_key": "England:QPR",
+  "div": "E1",
+  "home_div": "E1",
+  "away_div": "E1",
+  "country": "England"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: Queens Park Rangers FC at Southampton FC\nCompetition: EFL Championship\nDate: 2026-10-31 11:00 EDT\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-10-30\n\nPRIMARY FINAL SCORE PREDICTION\n\nSouthampton FC 1 \u2013 1 Queens Park Rangers FC\n(modal exact score, probability 11.0%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.96\nAway: 1.06\nExpected Total: 3.01\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 57.8%\nDraw: 23.2%\nAway Win: 18.9%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 11.0%\n2. 2\u20131: 10.1%\n3. 2\u20130: 9.4%\n4. 1\u20130: 9.2%\n5. 3\u20131: 6.6%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 19.0%\nTotal 2 goals: 23.0%\nTotal 3 goals: 22.4%\nTotal 4 goals: 17.2%\nTotal 5+ goals: 18.4%\n\nBoth Teams Score: 57.3%\nClean sheet Southampton FC: 34.3% \u00b7 Clean sheet Queens Park Rangers FC: 13.5%\n\nMATCH INTELLIGENCE\n\n1. Southampton attack vs QPR defence: time-weighted strength gap multiplies Southampton's scoring rate by \u00d71.34 relative to an average pairing (from 38/39 decay-weighted matches).\n2. Independent results-only Elo: Southampton 1574 vs QPR 1419 (gap +154 before home advantage).\n3. Home advantage (England, fitted from results): \u00d71.22 on Southampton's scoring rate.\n\nMODEL CONFIDENCE\n\nMost likely result has P = 57.8%. In the out-of-sample backtest, favourites priced 0.50\u20130.60 won 53.9% \u00b1 0.5% (n=9522, mean forecast 54.4%). Backtest RPS for E1: 0.2179; exact-score top-5 hit rate 51.6% (n=1800). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: MODERATE (entropy 0.971 nats of max 1.099).\nParameter-uncertainty 80% bands: xG Southampton FC 1.54\u20132.40, xG Queens Park Rangers FC 0.81\u20131.32; P(home win) 46.8%\u201368.3%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0009 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nSouthampton: CONFIRMED \u2014 FotMob official team sheet, fetched 2026-10-31 10:08 EDT (4-2-3-1)\n  Daniel Peretz (G), James Bree (D), Jack Stephens (D), Keven Schlotterbeck (D), Ryan Manning (D), James Ward-Prowse (M), Cameron Bragg (M), Kuryu Matsuki (F), Finn Azaz (M), L\u00e9o Scienza (F), Lewis Dobbin (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\nQPR: CONFIRMED \u2014 FotMob official team sheet, fetched 2026-10-31 10:08 EDT (4-4-2)\n  Pierce Charles (G), Kealey Adamson (D), Jimmy Dunne (D), Ronnie Edwards (D), Boy Kemper (D), Kwame Poku (M), Jonathan Varane (M), Glen Kamara (M), Harvey Vale (M), Richard Kone (F), Paul Smyth (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nKEY ABSENCES\n\n- Southampton: Cyle Larin \u2014 injury, Doubtful [FotMob, 2026-10-31 10:08 EDT]\n- QPR: Rumarn Burrell \u2014 injury, Late November 2026 [FotMob, 2026-10-31 10:08 EDT]\n- QPR: Nicolas Madsen \u2014 injury, Late November 2026 [FotMob, 2026-10-31 10:08 EDT]\n- QPR: Tariq Lamptey \u2014 injury, Late November 2026 [FotMob, 2026-10-31 10:08 EDT]\n- QPR: Amadou Salif Mbengue \u2014 injury, Out for season [FotMob, 2026-10-31 10:08 EDT]\n\nWEATHER AT VENUE\n\nSt. Mary's Stadium, Southampton, Hampshire: 14.7 \u00b0C, wind 2.0 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-10-31 10:08 EDT]\n\nREST & TRAVEL\n\nSouthampton: 7 days' rest, 4 matches in previous 21 days \u00b7 QPR: 7 days' rest, 3 in 21 days \u00b7 away travel 105.0 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 57.8% / 23.2% / 18.9%, xG 1.96\u20131.06\n- Understat xG component (validated, in ensemble): home -1.66 pp, draw +0.07 pp, away +1.60 pp; xG +0.076 / +0.129\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.35 pp, draw -0.20 pp, away -0.15 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- lineup: not applied (failed validation; no live features)\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Southampton: lineup CONFIRMED (FotMob official team sheet).\n- Southampton: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n- QPR: lineup CONFIRMED (FotMob official team sheet).\n- QPR: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nFINAL VERDICT\n\nSouthampton 1\u20131 QPR is the single most probable scoreline at 11.0%: expected goals 1.96\u20131.06 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.048). Exact scores are inherently uncertain; the 1X2 split is 57.8%/23.2%/18.9%.\n",
+ "frozen_at": "2026-10-31T14:08:36+00:00",
+ "sha256": "7254246d315f818a8990702b36bc1d4e0f9eb3a6f7f1caab26d373c342a3bd0d"
+}
