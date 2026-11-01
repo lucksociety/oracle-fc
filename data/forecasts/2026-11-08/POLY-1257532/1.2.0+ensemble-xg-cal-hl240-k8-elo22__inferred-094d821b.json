@@ -1,0 +1,639 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-10-30",
+ "input_fingerprint": "5a99153ce08caaded5d8617b1eff1cb6b5e652ce705eaf2cd2bf4b9802c3b82c",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-11-01T04:07:38+00:00",
+ "fixture": {
+  "event_id": "POLY-1257532",
+  "home_name": "RC Celta de Vigo",
+  "away_name": "Levante UD",
+  "competition": "La Liga 2025",
+  "subcategory": "lal",
+  "kickoff_utc": "2026-11-08T17:30:00+00:00",
+  "kickoff_local": "2026-11-08 12:30 EST",
+  "home_matched": "Celta",
+  "away_matched": "Levante",
+  "match_methods": {
+   "home": {
+    "source": "RC Celta de Vigo",
+    "matched": "Celta",
+    "method": "alias",
+    "score": 1.0
+   },
+   "away": {
+    "source": "Levante UD",
+    "matched": "Levante",
+    "method": "core-tokens",
+    "score": 0.97
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.5028165748036515,
+  "p_draw": 0.2598834307878215,
+  "p_away": 0.2372999944085271,
+  "xg_home": 1.6811115599692064,
+  "xg_away": 1.09836488765514,
+  "xg_total": 2.7794764476243463,
+  "median_total": 3,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.12583311197245256
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.12583311197245256
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.09887320513149375
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.0988514597640691
+   },
+   {
+    "home": 2,
+    "away": 0,
+    "p": 0.08671488212243929
+   },
+   {
+    "home": 0,
+    "away": 0,
+    "p": 0.06424450458786882
+   }
+  ],
+  "btts": 0.5592298182866131,
+  "totals_over": {
+   "over_0.5": 0.9357554954121313,
+   "over_1.5": 0.7745705155313599,
+   "over_2.5": 0.5264622828941445,
+   "over_3.5": 0.30361269672649027,
+   "over_4.5": 0.1460662342052072,
+   "over_5.5": 0.06118302370279615,
+   "over_6.5": 0.022020585033870377
+  },
+  "total_buckets": {
+   "0-1": 0.2254294844686403,
+   "2": 0.24810823263721538,
+   "3": 0.2228495861676542,
+   "4": 0.15754646252128307,
+   "5+": 0.1460662342052072
+  },
+  "clean_sheet_home": 0.3261452356053324,
+  "clean_sheet_away": 0.17886945069592342,
+  "home_goal_dist": [
+   0.17886945069592342,
+   0.3179079948080267,
+   0.2683074926382388,
+   0.1480043145461543,
+   0.06054348708090033,
+   0.019626182724119597,
+   0.005257135202258077,
+   0.0014839423043790491
+  ],
+  "away_goal_dist": [
+   0.3261452356053324,
+   0.3742588682793431,
+   0.20387342528918814,
+   0.07214273798828114,
+   0.018879381204239595,
+   0.003916444097949471,
+   0.0006718179801850556,
+   0.00011208955548126243
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    3
+   ],
+   "away_goals_80": [
+    0,
+    2
+   ],
+   "total_goals_80": [
+    1,
+    5
+   ],
+   "goal_diff_80": [
+    -1,
+    3
+   ]
+  },
+  "score_grid": [
+   [
+    0.064245,
+    0.062312,
+    0.03556,
+    0.012623,
+    0.003308,
+    0.000685,
+    0.000117
+   ],
+   [
+    0.098873,
+    0.125833,
+    0.063299,
+    0.022516,
+    0.005913,
+    0.001228,
+    0.000211
+   ],
+   [
+    0.086715,
+    0.098851,
+    0.057124,
+    0.019277,
+    0.005073,
+    0.001056,
+    0.000181
+   ],
+   [
+    0.048076,
+    0.054917,
+    0.030108,
+    0.011358,
+    0.002836,
+    0.000591,
+    0.000102
+   ],
+   [
+    0.019682,
+    0.022528,
+    0.012375,
+    0.004429,
+    0.001236,
+    0.000244,
+    4.2e-05
+   ],
+   [
+    0.006372,
+    0.007308,
+    0.004022,
+    0.001442,
+    0.000382,
+    8.4e-05,
+    1.4e-05
+   ],
+   [
+    0.001703,
+    0.001957,
+    0.001079,
+    0.000388,
+    0.000103,
+    2.2e-05,
+    4e-06
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.505405,
+  "p_draw": 0.25837,
+  "p_away": 0.23622500000000002,
+  "se": [
+   0.001117968662295594,
+   0.0009788129113880752,
+   0.0009497966871257238
+  ],
+  "max_abs_dev_vs_exact": 0.0025884251963484983,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   1.2985659354877437,
+   2.0981189941101457
+  ],
+  "xg_away_80": [
+   0.8212669346787174,
+   1.39603087436475
+  ],
+  "p_home_80": [
+   0.3933377630617872,
+   0.6193791078778941
+  ],
+  "p_draw_80": [
+   0.21524878834067218,
+   0.28706592488897786
+  ],
+  "p_away_80": [
+   0.1620237110413015,
+   0.3326942752933354
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.19021743852310102,
+   0.19689363610609306
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.5221897464899727,
+   "p_draw": 0.25238932726290186,
+   "p_away": 0.2254209262471255,
+   "xg_home": 1.6886357660836653,
+   "xg_away": 1.0310208426728187,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.4950637978736117,
+   "p_draw": 0.2532935443305973,
+   "p_away": 0.251642657795791,
+   "xg_home": 1.5618310955409573,
+   "xg_away": 1.0363601632264978,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.565179132847811,
+   "p_draw": 0.2522743387024645,
+   "p_away": 0.18254652844972472,
+   "xg_home": 1.7113971087098476,
+   "xg_away": 0.8722853841960642,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.45848263072470963,
+   "p_draw": 0.2519052737562372,
+   "p_away": 0.2896120955190531,
+   "xg_home": 1.5460543311068884,
+   "xg_away": 1.1762344731697738,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.505810365984487,
+   "p_draw": 0.24889690537358886,
+   "p_away": 0.24529272864192397,
+   "xg_home": 1.7202958080707045,
+   "xg_away": 1.1330054576314685,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Home advantage (Spain, fitted from results): \u00d71.32 on Celta's scoring rate.",
+   "effect": 0.2759
+  },
+  {
+   "text": "Levante attack vs Celta defence: rate multiplier \u00d70.86 for the away side.",
+   "effect": 0.1551
+  },
+  {
+   "text": "Independent results-only Elo: Celta 1597 vs Levante 1551 (gap +46 before home advantage).",
+   "effect": 0.0691
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.5028165748036515,
+  "p_draw": 0.2598834307878214,
+  "p_away": 0.237299994408527,
+  "xg_home": 1.681111559969206,
+  "xg_away": 1.0983648876551395
+ },
+ "context": {
+  "fetched_at": "2026-11-01T04:07:38+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5868122",
+    "fetched_at": "2026-11-01T04:07:39+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "inferred",
+    "source": null,
+    "formation": null,
+    "starters": [
+     {
+      "name": "Ionut Radu",
+      "pos": "G"
+     },
+     {
+      "name": "Yoel Lago",
+      "pos": "D"
+     },
+     {
+      "name": "Ilaix Moriba",
+      "pos": "M"
+     },
+     {
+      "name": "Marcos Alonso",
+      "pos": "D"
+     },
+     {
+      "name": "Ferr\u00e1n Jutgl\u00e0",
+      "pos": "F"
+     },
+     {
+      "name": "Sergio Carreira",
+      "pos": "M"
+     },
+     {
+      "name": "Javier Rueda",
+      "pos": "M"
+     },
+     {
+      "name": "Hugo \u00c1lvarez",
+      "pos": "M"
+     },
+     {
+      "name": "Javier Rodr\u00edguez",
+      "pos": "D"
+     },
+     {
+      "name": "Miguel Rom\u00e1n",
+      "pos": "M"
+     },
+     {
+      "name": "Williot Swedberg",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-11-01T04:07:39+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [],
+    "mean_xi_attack_index": 0.004,
+    "mean_continuity": 0.302,
+    "p_backup_gk": 0.0
+   },
+   "away": {
+    "status": "inferred",
+    "source": null,
+    "formation": null,
+    "starters": [
+     {
+      "name": "Mat Ryan",
+      "pos": "G"
+     },
+     {
+      "name": "Manuel S\u00e1nchez",
+      "pos": "D"
+     },
+     {
+      "name": "Jon Ander Olasagasti",
+      "pos": "M"
+     },
+     {
+      "name": "Iv\u00e1n Romero",
+      "pos": "F"
+     },
+     {
+      "name": "Roger Brugu\u00e9",
+      "pos": "M"
+     },
+     {
+      "name": "Adri\u00e1n De la Fuente",
+      "pos": "D"
+     },
+     {
+      "name": "Thiago Fern\u00e1ndez",
+      "pos": "M"
+     },
+     {
+      "name": "Aissa Mandi",
+      "pos": "D"
+     },
+     {
+      "name": "Jeremy Toljan",
+      "pos": "D"
+     },
+     {
+      "name": "Oriol Rey",
+      "pos": "M"
+     },
+     {
+      "name": "Ifeanyi Ndukwe",
+      "pos": "D"
+     }
+    ],
+    "fetched_at": "2026-11-01T04:07:39+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [],
+    "mean_xi_attack_index": -0.147,
+    "mean_continuity": -0.356,
+    "p_backup_gk": 0.0
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Hugo Gonz\u00e1lez",
+     "type": "injury",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868122",
+     "fetched_at": "2026-11-01T04:07:39+00:00"
+    },
+    {
+     "player": "\u00c1lvaro N\u00fa\u00f1ez",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868122",
+     "fetched_at": "2026-11-01T04:07:39+00:00"
+    },
+    {
+     "player": "Borja Iglesias",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868122",
+     "fetched_at": "2026-11-01T04:07:39+00:00"
+    },
+    {
+     "player": "Carl Starfelt",
+     "type": "injury",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868122",
+     "fetched_at": "2026-11-01T04:07:39+00:00"
+    },
+    {
+     "player": "Miguel Rom\u00e1n",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868122",
+     "fetched_at": "2026-11-01T04:07:39+00:00"
+    },
+    {
+     "player": "Jones El-Abdellaoui",
+     "type": "injury",
+     "expected_return": "Mid January 2027",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868122",
+     "fetched_at": "2026-11-01T04:07:39+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "Manuel S\u00e1nchez",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868122",
+     "fetched_at": "2026-11-01T04:07:39+00:00"
+    },
+    {
+     "player": "Enzo Bardeli",
+     "type": "injury",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868122",
+     "fetched_at": "2026-11-01T04:07:39+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 14,
+    "n21": 2,
+    "last_match": "2026-10-25"
+   },
+   "away": {
+    "rest_days": 14,
+    "n21": 2,
+    "last_match": "2026-10-25"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 766.1
+  },
+  "venue": {
+   "name": "Estadio Abanca-Bala\u00eddos",
+   "city": "Vigo",
+   "lat": 42.211851813,
+   "lon": -8.739720583
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 0.625,
+   "temp_c": 14.0,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=42.212&longitude=-8.74",
+   "fetched_at": "2026-11-01T04:07:39+00:00",
+   "lat": 42.211851813,
+   "lon": -8.739720583
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": 0.42,
+    "d_p_draw_pp": -0.22,
+    "d_p_away_pp": -0.2,
+    "d_xg_home": 0.078,
+    "d_xg_away": 0.053
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0338,
+    "away_rate_mult": 1.0142,
+    "d_p_home_pp": 0.98,
+    "d_p_draw_pp": -0.53,
+    "d_p_away_pp": -0.45,
+    "d_xg_home": 0.055,
+    "d_xg_away": 0.016,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "home_rate_mult": 1.0149,
+    "away_rate_mult": 0.947,
+    "d_p_home_pp": 1.93,
+    "d_p_draw_pp": -0.25,
+    "d_p_away_pp": -1.67,
+    "d_xg_home": 0.024,
+    "d_xg_away": -0.056,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 14.0,
+   "rest_a": 14.0,
+   "n21_h": 2.0,
+   "n21_a": 2.0,
+   "travel_km": 766.080378464725,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 0.625,
+   "temp_c": 14.0
+  }
+ },
+ "confidence": {
+  "tier": "MODERATE",
+  "p_max": 0.5028165748036515,
+  "entropy_nats": 1.03723952632144,
+  "text": "Most likely result has P = 50.3%. In the out-of-sample backtest, favourites priced 0.50\u20130.60 won 53.9% \u00b1 0.5% (n=9522, mean forecast 54.4%). Backtest RPS for SP1: 0.1930; exact-score top-5 hit rate 55.1% (n=1239). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: MODERATE (entropy 1.037 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Celta: no lineup published yet \u2014 XI inferred from recent minutes share minus known absences; 200 configurations simulated (start P=0.7, UNVALIDATED prior).",
+  "Levante: no lineup published yet \u2014 XI inferred from recent minutes share minus known absences; 200 configurations simulated (start P=0.7, UNVALIDATED prior)."
+ ],
+ "verdict": "Celta 1\u20131 Levante is the single most probable scoreline at 12.6%: expected goals 1.68\u20131.10 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.048). Exact scores are inherently uncertain; the 1X2 split is 50.3%/26.0%/23.7%.",
+ "resolved": {
+  "home_key": "Spain:Celta",
+  "away_key": "Spain:Levante",
+  "div": "SP1",
+  "home_div": "SP1",
+  "away_div": "SP1",
+  "country": "Spain"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: Levante UD at RC Celta de Vigo\nCompetition: La Liga 2025\nDate: 2026-11-08 12:30 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-10-30\n\nPRIMARY FINAL SCORE PREDICTION\n\nRC Celta de Vigo 1 \u2013 1 Levante UD\n(modal exact score, probability 12.6%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.68\nAway: 1.10\nExpected Total: 2.78\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 50.3%\nDraw: 26.0%\nAway Win: 23.7%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 12.6%\n2. 1\u20130: 9.9%\n3. 2\u20131: 9.9%\n4. 2\u20130: 8.7%\n5. 0\u20130: 6.4%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 22.5%\nTotal 2 goals: 24.8%\nTotal 3 goals: 22.3%\nTotal 4 goals: 15.8%\nTotal 5+ goals: 14.6%\n\nBoth Teams Score: 55.9%\nClean sheet RC Celta de Vigo: 32.6% \u00b7 Clean sheet Levante UD: 17.9%\n\nMATCH INTELLIGENCE\n\n1. Home advantage (Spain, fitted from results): \u00d71.32 on Celta's scoring rate.\n2. Levante attack vs Celta defence: rate multiplier \u00d70.86 for the away side.\n3. Independent results-only Elo: Celta 1597 vs Levante 1551 (gap +46 before home advantage).\n\nMODEL CONFIDENCE\n\nMost likely result has P = 50.3%. In the out-of-sample backtest, favourites priced 0.50\u20130.60 won 53.9% \u00b1 0.5% (n=9522, mean forecast 54.4%). Backtest RPS for SP1: 0.1930; exact-score top-5 hit rate 55.1% (n=1239). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: MODERATE (entropy 1.037 nats of max 1.099).\nParameter-uncertainty 80% bands: xG RC Celta de Vigo 1.30\u20132.10, xG Levante UD 0.82\u20131.40; P(home win) 39.3%\u201361.9%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0026 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nCelta: INFERRED, fetched 2026-11-01 00:07 EDT\n  Ionut Radu (G), Yoel Lago (D), Ilaix Moriba (M), Marcos Alonso (D), Ferr\u00e1n Jutgl\u00e0 (F), Sergio Carreira (M), Javier Rueda (M), Hugo \u00c1lvarez (M), Javier Rodr\u00edguez (D), Miguel Rom\u00e1n (M), Williot Swedberg (F)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs +0.004 (log) \u00b7 continuity +0.30 \u00b7 P(backup GK) 0%\nLevante: INFERRED, fetched 2026-11-01 00:07 EDT\n  Mat Ryan (G), Manuel S\u00e1nchez (D), Jon Ander Olasagasti (M), Iv\u00e1n Romero (F), Roger Brugu\u00e9 (M), Adri\u00e1n De la Fuente (D), Thiago Fern\u00e1ndez (M), Aissa Mandi (D), Jeremy Toljan (D), Oriol Rey (M), Ifeanyi Ndukwe (D)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs -0.147 (log) \u00b7 continuity -0.36 \u00b7 P(backup GK) 0%\n\nKEY ABSENCES\n\n- Celta: Hugo Gonz\u00e1lez \u2014 injury, Mid November 2026 [FotMob, 2026-11-01 00:07 EDT]\n- Celta: \u00c1lvaro N\u00fa\u00f1ez \u2014 injury, Late November 2026 [FotMob, 2026-11-01 00:07 EDT]\n- Celta: Borja Iglesias \u2014 injury, Late November 2026 [FotMob, 2026-11-01 00:07 EDT]\n- Celta: Carl Starfelt \u2014 injury, Mid November 2026 [FotMob, 2026-11-01 00:07 EDT]\n- Celta: Miguel Rom\u00e1n \u2014 injury, Doubtful [FotMob, 2026-11-01 00:07 EDT]\n- Celta: Jones El-Abdellaoui \u2014 injury, Mid January 2027 [FotMob, 2026-11-01 00:07 EDT]\n- Levante: Manuel S\u00e1nchez \u2014 injury, Doubtful [FotMob, 2026-11-01 00:07 EDT]\n- Levante: Enzo Bardeli \u2014 injury, Mid November 2026 [FotMob, 2026-11-01 00:07 EDT]\n\nWEATHER AT VENUE\n\nEstadio Abanca-Bala\u00eddos, Vigo: 14.0 \u00b0C, wind 0.6 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-11-01 00:07 EDT]\n\nREST & TRAVEL\n\nCelta: 14 days' rest, 2 matches in previous 21 days \u00b7 Levante: 14 days' rest, 2 in 21 days \u00b7 away travel 766.1 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 50.3% / 26.0% / 23.7%, xG 1.68\u20131.10\n- Understat xG component (validated, in ensemble): home +0.42 pp, draw -0.22 pp, away -0.20 pp; xG +0.078 / +0.053\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.98 pp, draw -0.53 pp, away -0.45 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- lineup: NOT APPLIED (failed out-of-sample validation); would have moved home +1.93 pp, draw -0.25 pp, away -1.67 pp\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Celta: no lineup published yet \u2014 XI inferred from recent minutes share minus known absences; 200 configurations simulated (start P=0.7, UNVALIDATED prior).\n- Levante: no lineup published yet \u2014 XI inferred from recent minutes share minus known absences; 200 configurations simulated (start P=0.7, UNVALIDATED prior).\n\nFINAL VERDICT\n\nCelta 1\u20131 Levante is the single most probable scoreline at 12.6%: expected goals 1.68\u20131.10 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.048). Exact scores are inherently uncertain; the 1X2 split is 50.3%/26.0%/23.7%.\n",
+ "frozen_at": "2026-11-01T04:07:39+00:00",
+ "sha256": "85f6814e35f7f69099d972e93d9db34f3979d62d52fe33e3718bab95316546fd"
+}

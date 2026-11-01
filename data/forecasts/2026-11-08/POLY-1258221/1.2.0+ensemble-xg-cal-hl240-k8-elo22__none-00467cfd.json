@@ -1,0 +1,592 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-10-30",
+ "input_fingerprint": "5a99153ce08caaded5d8617b1eff1cb6b5e652ce705eaf2cd2bf4b9802c3b82c",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-11-01T04:07:30+00:00",
+ "fixture": {
+  "event_id": "POLY-1258221",
+  "home_name": "Heart of Midlothian FC",
+  "away_name": "Falkirk FC",
+  "competition": "Scottish Premiership",
+  "subcategory": "scop",
+  "kickoff_utc": "2026-11-08T15:00:00+00:00",
+  "kickoff_local": "2026-11-08 10:00 EST",
+  "home_matched": "Hearts",
+  "away_matched": "Falkirk",
+  "match_methods": {
+   "home": {
+    "source": "Heart of Midlothian FC",
+    "matched": "Hearts",
+    "method": "alias",
+    "score": 1.0
+   },
+   "away": {
+    "source": "Falkirk FC",
+    "matched": "Falkirk",
+    "method": "core-tokens",
+    "score": 0.97
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.6112531424168073,
+  "p_draw": 0.2229344175549895,
+  "p_away": 0.1658124400282031,
+  "xg_home": 2.0304299690261685,
+  "xg_away": 0.9860840178240198,
+  "xg_total": 3.016513986850188,
+  "median_total": 3,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.10716688007712458
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.10716688007712458
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.10252677920058602
+   },
+   {
+    "home": 2,
+    "away": 0,
+    "p": 0.1006837768451571
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.0940616432490922
+   },
+   {
+    "home": 3,
+    "away": 1,
+    "p": 0.06931249748000316
+   }
+  ],
+  "btts": 0.5596888687220467,
+  "totals_over": {
+   "over_0.5": 0.9498697916687964,
+   "over_1.5": 0.8129685949620261,
+   "over_2.5": 0.5829056634024105,
+   "over_3.5": 0.35702485438453635,
+   "over_4.5": 0.1839112646675283,
+   "over_5.5": 0.08239614247636261,
+   "over_6.5": 0.03186505780929204
+  },
+  "total_buckets": {
+   "0-1": 0.18703140503797414,
+   "2": 0.2300629315596156,
+   "3": 0.225880809017874,
+   "4": 0.17311358971700808,
+   "5+": 0.1839112646675283
+  },
+  "clean_sheet_home": 0.3661707561482603,
+  "clean_sheet_away": 0.12427058346089695,
+  "home_goal_dist": [
+   0.12427058346089695,
+   0.2691024909331754,
+   0.27652876472861304,
+   0.18564723205270556,
+   0.09225702776917012,
+   0.03625065356394962,
+   0.011745557034860384,
+   0.00419769045662894
+  ],
+  "away_goal_dist": [
+   0.3661707561482603,
+   0.37592455265548996,
+   0.18344417928372925,
+   0.058002910984970915,
+   0.01352460744538506,
+   0.0024964890849527243,
+   0.0003808743115930817,
+   5.5630085618851555e-05
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    4
+   ],
+   "away_goals_80": [
+    0,
+    2
+   ],
+   "total_goals_80": [
+    1,
+    5
+   ],
+   "goal_diff_80": [
+    -1,
+    3
+   ]
+  },
+  "score_grid": [
+   [
+    0.05013,
+    0.04284,
+    0.022212,
+    0.007068,
+    0.001659,
+    0.000308,
+    4.7e-05
+   ],
+   [
+    0.094062,
+    0.107167,
+    0.048178,
+    0.01532,
+    0.003593,
+    0.000666,
+    0.000102
+   ],
+   [
+    0.100684,
+    0.102527,
+    0.052871,
+    0.015907,
+    0.003729,
+    0.00069,
+    0.000105
+   ],
+   [
+    0.068108,
+    0.069312,
+    0.03382,
+    0.011344,
+    0.002516,
+    0.000466,
+    7.1e-05
+   ],
+   [
+    0.033951,
+    0.034531,
+    0.016838,
+    0.005344,
+    0.001321,
+    0.000231,
+    3.5e-05
+   ],
+   [
+    0.013357,
+    0.013577,
+    0.006616,
+    0.002099,
+    0.000491,
+    9.6e-05,
+    1.4e-05
+   ],
+   [
+    0.004331,
+    0.004399,
+    0.002143,
+    0.000679,
+    0.000159,
+    2.9e-05,
+    5e-06
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.61099,
+  "p_draw": 0.223865,
+  "p_away": 0.165145,
+  "se": [
+   0.0010901404035719435,
+   0.0009320661504823571,
+   0.0008302774505398782
+  ],
+  "max_abs_dev_vs_exact": 0.0009305824450105138,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   1.5801088503832088,
+   2.520179840318717
+  ],
+  "xg_away_80": [
+   0.7384877107542781,
+   1.2519018934533386
+  ],
+  "p_home_80": [
+   0.4949209145099923,
+   0.7161187498431238
+  ],
+  "p_draw_80": [
+   0.17236562471297734,
+   0.26048948716835957
+  ],
+  "p_away_80": [
+   0.10717293454272692,
+   0.2440960294471065
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.185085495731455,
+   0.19588215775439508
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.5906830489424428,
+   "p_draw": 0.22555263451420018,
+   "p_away": 0.18376431654335718,
+   "xg_home": 1.9574051992917196,
+   "xg_away": 1.0043272412749742,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.6250410892392216,
+   "p_draw": 0.20775615115242765,
+   "p_away": 0.16720275960835082,
+   "xg_home": 2.0225773324360765,
+   "xg_away": 0.939149844539959,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.5957531538425287,
+   "p_draw": 0.23642226141364933,
+   "p_away": 0.1678245847438219,
+   "xg_home": 1.854155705508493,
+   "xg_away": 0.8831988843862637,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.46167153584069537,
+   "p_draw": 0.2444840458786651,
+   "p_away": 0.29384441828063956,
+   "xg_home": 1.6217280203832936,
+   "xg_away": 1.2456512854858692,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.5908452572052951,
+   "p_draw": 0.22542020422202494,
+   "p_away": 0.1837345385726799,
+   "xg_home": 1.9575659385798176,
+   "xg_away": 1.0040249478241987,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Hearts attack vs Falkirk defence: time-weighted strength gap multiplies Hearts's scoring rate by \u00d71.32 relative to an average pairing (from 33/33 decay-weighted matches).",
+   "effect": 0.2759
+  },
+  {
+   "text": "Independent results-only Elo: Hearts 1735 vs Falkirk 1568 (gap +167 before home advantage).",
+   "effect": 0.2504
+  },
+  {
+   "text": "Home advantage (Scotland, fitted from results): \u00d71.23 on Hearts's scoring rate.",
+   "effect": 0.2101
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.6112531424168073,
+  "p_draw": 0.2229344175549895,
+  "p_away": 0.1658124400282031,
+  "xg_home": 2.0304299690261685,
+  "xg_away": 0.9860840178240198
+ },
+ "context": {
+  "fetched_at": "2026-11-01T04:07:30+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5793975",
+    "fetched_at": "2026-11-01T04:07:31+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "none",
+    "source": null,
+    "formation": null,
+    "starters": [],
+    "fetched_at": "2026-11-01T04:07:31+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   },
+   "away": {
+    "status": "none",
+    "source": null,
+    "formation": null,
+    "starters": [],
+    "fetched_at": "2026-11-01T04:07:31+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Rogers Mato",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5793975",
+     "fetched_at": "2026-11-01T04:07:31+00:00"
+    },
+    {
+     "player": "Oisin McEntee",
+     "type": "injury",
+     "expected_return": "About 1-2 weeks",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5793975",
+     "fetched_at": "2026-11-01T04:07:31+00:00"
+    },
+    {
+     "player": "Stuart Findlay",
+     "type": "injury",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5793975",
+     "fetched_at": "2026-11-01T04:07:31+00:00"
+    },
+    {
+     "player": "Christian Dahle Borchgrevink",
+     "type": "injury",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5793975",
+     "fetched_at": "2026-11-01T04:07:31+00:00"
+    },
+    {
+     "player": "Harry Milne",
+     "type": "injury",
+     "expected_return": "Out for season",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5793975",
+     "fetched_at": "2026-11-01T04:07:31+00:00"
+    },
+    {
+     "player": "Ageu",
+     "type": "injury",
+     "expected_return": "About 1-2 weeks",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5793975",
+     "fetched_at": "2026-11-01T04:07:31+00:00"
+    },
+    {
+     "player": "Blair Spittal",
+     "type": "injury",
+     "expected_return": "Late October 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5793975",
+     "fetched_at": "2026-11-01T04:07:31+00:00"
+    },
+    {
+     "player": "Tom Renaud",
+     "type": "injury",
+     "expected_return": "Late October 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5793975",
+     "fetched_at": "2026-11-01T04:07:31+00:00"
+    },
+    {
+     "player": "Craig Halkett",
+     "type": "injury",
+     "expected_return": "Late October 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5793975",
+     "fetched_at": "2026-11-01T04:07:31+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "Leon McCann",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5793975",
+     "fetched_at": "2026-11-01T04:07:31+00:00"
+    },
+    {
+     "player": "Aodhan Doherty",
+     "type": "injury",
+     "expected_return": "Late October 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5793975",
+     "fetched_at": "2026-11-01T04:07:31+00:00"
+    },
+    {
+     "player": "Joseph Gardner",
+     "type": "injury",
+     "expected_return": "Early November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5793975",
+     "fetched_at": "2026-11-01T04:07:31+00:00"
+    },
+    {
+     "player": "Ethan Laidlaw",
+     "type": "injury",
+     "expected_return": "Late October 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5793975",
+     "fetched_at": "2026-11-01T04:07:31+00:00"
+    },
+    {
+     "player": "Keelan Adams",
+     "type": "injury",
+     "expected_return": "About 1-2 weeks",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5793975",
+     "fetched_at": "2026-11-01T04:07:31+00:00"
+    },
+    {
+     "player": "Aidan Nesbitt",
+     "type": "injury",
+     "expected_return": "Late October 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5793975",
+     "fetched_at": "2026-11-01T04:07:31+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 11,
+    "n21": 3,
+    "last_match": "2026-10-28"
+   },
+   "away": {
+    "rest_days": 11,
+    "n21": 2,
+    "last_match": "2026-10-28"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 33.2
+  },
+  "venue": {
+   "name": "Tynecastle Park",
+   "city": "Edinburgh",
+   "lat": 55.938987445,
+   "lon": -3.232432008
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 0.26,
+   "temp_c": 7.4,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=55.939&longitude=-3.232",
+   "fetched_at": "2026-11-01T04:07:31+00:00",
+   "lat": 55.938987445,
+   "lon": -3.232432008
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": -1.64,
+    "d_p_draw_pp": 0.88,
+    "d_p_away_pp": 0.76,
+    "d_xg_home": -0.031,
+    "d_xg_away": 0.031
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0044,
+    "away_rate_mult": 1.0019,
+    "d_p_home_pp": 0.14,
+    "d_p_draw_pp": -0.08,
+    "d_p_away_pp": -0.06,
+    "d_xg_home": 0.009,
+    "d_xg_away": 0.002,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "reason": "failed validation; no live features"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 11.0,
+   "rest_a": 11.0,
+   "n21_h": 3.0,
+   "n21_a": 2.0,
+   "travel_km": 33.20191588004005,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 0.26,
+   "temp_c": 7.4
+  }
+ },
+ "confidence": {
+  "tier": "MODERATE",
+  "p_max": 0.6112531424168073,
+  "entropy_nats": 0.9334310776311339,
+  "text": "Most likely result has P = 61.1%. In the out-of-sample backtest, favourites priced 0.60\u20130.70 won 66.4% \u00b1 0.7% (n=4069, mean forecast 64.2%). Backtest RPS for SC0: 0.1961; exact-score top-5 hit rate 48.3% (n=750). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: MODERATE (entropy 0.933 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Hearts: no lineup information.",
+  "Hearts: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.",
+  "Falkirk: no lineup information.",
+  "Falkirk: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+ ],
+ "verdict": "Hearts 1\u20131 Falkirk is the single most probable scoreline at 10.7%: expected goals 2.03\u20130.99 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.048). Exact scores are inherently uncertain; the 1X2 split is 61.1%/22.3%/16.6%.",
+ "resolved": {
+  "home_key": "Scotland:Hearts",
+  "away_key": "Scotland:Falkirk",
+  "div": "SC0",
+  "home_div": "SC0",
+  "away_div": "SC0",
+  "country": "Scotland"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: Falkirk FC at Heart of Midlothian FC\nCompetition: Scottish Premiership\nDate: 2026-11-08 10:00 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-10-30\n\nPRIMARY FINAL SCORE PREDICTION\n\nHeart of Midlothian FC 1 \u2013 1 Falkirk FC\n(modal exact score, probability 10.7%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 2.03\nAway: 0.99\nExpected Total: 3.02\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 61.1%\nDraw: 22.3%\nAway Win: 16.6%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 10.7%\n2. 2\u20131: 10.3%\n3. 2\u20130: 10.1%\n4. 1\u20130: 9.4%\n5. 3\u20131: 6.9%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 18.7%\nTotal 2 goals: 23.0%\nTotal 3 goals: 22.6%\nTotal 4 goals: 17.3%\nTotal 5+ goals: 18.4%\n\nBoth Teams Score: 56.0%\nClean sheet Heart of Midlothian FC: 36.6% \u00b7 Clean sheet Falkirk FC: 12.4%\n\nMATCH INTELLIGENCE\n\n1. Hearts attack vs Falkirk defence: time-weighted strength gap multiplies Hearts's scoring rate by \u00d71.32 relative to an average pairing (from 33/33 decay-weighted matches).\n2. Independent results-only Elo: Hearts 1735 vs Falkirk 1568 (gap +167 before home advantage).\n3. Home advantage (Scotland, fitted from results): \u00d71.23 on Hearts's scoring rate.\n\nMODEL CONFIDENCE\n\nMost likely result has P = 61.1%. In the out-of-sample backtest, favourites priced 0.60\u20130.70 won 66.4% \u00b1 0.7% (n=4069, mean forecast 64.2%). Backtest RPS for SC0: 0.1961; exact-score top-5 hit rate 48.3% (n=750). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: MODERATE (entropy 0.933 nats of max 1.099).\nParameter-uncertainty 80% bands: xG Heart of Midlothian FC 1.58\u20132.52, xG Falkirk FC 0.74\u20131.25; P(home win) 49.5%\u201371.6%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0009 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nHearts: NONE, fetched 2026-11-01 00:07 EDT\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\nFalkirk: NONE, fetched 2026-11-01 00:07 EDT\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nKEY ABSENCES\n\n- Hearts: Rogers Mato \u2014 injury, Doubtful [FotMob, 2026-11-01 00:07 EDT]\n- Hearts: Oisin McEntee \u2014 injury, About 1-2 weeks [FotMob, 2026-11-01 00:07 EDT]\n- Hearts: Stuart Findlay \u2014 injury, Mid November 2026 [FotMob, 2026-11-01 00:07 EDT]\n- Hearts: Christian Dahle Borchgrevink \u2014 injury, Mid November 2026 [FotMob, 2026-11-01 00:07 EDT]\n- Hearts: Harry Milne \u2014 injury, Out for season [FotMob, 2026-11-01 00:07 EDT]\n- Hearts: Ageu \u2014 injury, About 1-2 weeks [FotMob, 2026-11-01 00:07 EDT]\n- Hearts: Blair Spittal \u2014 injury, Late October 2026 [FotMob, 2026-11-01 00:07 EDT]\n- Hearts: Tom Renaud \u2014 injury, Late October 2026 [FotMob, 2026-11-01 00:07 EDT]\n- Hearts: Craig Halkett \u2014 injury, Late October 2026 [FotMob, 2026-11-01 00:07 EDT]\n- Falkirk: Leon McCann \u2014 injury, Doubtful [FotMob, 2026-11-01 00:07 EDT]\n- Falkirk: Aodhan Doherty \u2014 injury, Late October 2026 [FotMob, 2026-11-01 00:07 EDT]\n- Falkirk: Joseph Gardner \u2014 injury, Early November 2026 [FotMob, 2026-11-01 00:07 EDT]\n- Falkirk: Ethan Laidlaw \u2014 injury, Late October 2026 [FotMob, 2026-11-01 00:07 EDT]\n- Falkirk: Keelan Adams \u2014 injury, About 1-2 weeks [FotMob, 2026-11-01 00:07 EDT]\n- Falkirk: Aidan Nesbitt \u2014 injury, Late October 2026 [FotMob, 2026-11-01 00:07 EDT]\n\nWEATHER AT VENUE\n\nTynecastle Park, Edinburgh: 7.4 \u00b0C, wind 0.3 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-11-01 00:07 EDT]\n\nREST & TRAVEL\n\nHearts: 11 days' rest, 3 matches in previous 21 days \u00b7 Falkirk: 11 days' rest, 2 in 21 days \u00b7 away travel 33.2 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 61.1% / 22.3% / 16.6%, xG 2.03\u20130.99\n- Understat xG component (validated, in ensemble): home -1.64 pp, draw +0.88 pp, away +0.76 pp; xG -0.031 / +0.031\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.14 pp, draw -0.08 pp, away -0.06 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- lineup: not applied (failed validation; no live features)\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Hearts: no lineup information.\n- Hearts: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n- Falkirk: no lineup information.\n- Falkirk: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nFINAL VERDICT\n\nHearts 1\u20131 Falkirk is the single most probable scoreline at 10.7%: expected goals 2.03\u20130.99 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.048). Exact scores are inherently uncertain; the 1X2 split is 61.1%/22.3%/16.6%.\n",
+ "frozen_at": "2026-11-01T04:07:31+00:00",
+ "sha256": "ae68248e48f13a225a4ad0b89e6eda597a71927f7be6baa2872a344ded863d9b"
+}
