@@ -1,0 +1,591 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-10-30",
+ "input_fingerprint": "5a99153ce08caaded5d8617b1eff1cb6b5e652ce705eaf2cd2bf4b9802c3b82c",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-11-01T19:11:14+00:00",
+ "fixture": {
+  "event_id": "POLY-1215718",
+  "home_name": "Olympique de Marseille",
+  "away_name": "Toulouse FC",
+  "competition": "Ligue 1 2025",
+  "subcategory": "fl1",
+  "kickoff_utc": "2026-11-01T19:45:00+00:00",
+  "kickoff_local": "2026-11-01 14:45 EST",
+  "home_matched": "Marseille",
+  "away_matched": "Toulouse",
+  "match_methods": {
+   "home": {
+    "source": "Olympique de Marseille",
+    "matched": "Marseille",
+    "method": "alias",
+    "score": 1.0
+   },
+   "away": {
+    "source": "Toulouse FC",
+    "matched": "Toulouse",
+    "method": "core-tokens",
+    "score": 0.97
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.48040289721120494,
+  "p_draw": 0.24942298685672307,
+  "p_away": 0.2701741159320719,
+  "xg_home": 1.7873465001037,
+  "xg_away": 1.3087243783890719,
+  "xg_total": 3.096070878492772,
+  "median_total": 3,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.11548373778238305
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.11548373778238305
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.09655762965547197
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.07650385291284842
+   },
+   {
+    "home": 2,
+    "away": 0,
+    "p": 0.07152087136306161
+   },
+   {
+    "home": 1,
+    "away": 2,
+    "p": 0.06934173732740502
+   }
+  ],
+  "btts": 0.6233275673182352,
+  "totals_over": {
+   "over_0.5": 0.9525142574947374,
+   "over_1.5": 0.8223425436868911,
+   "over_2.5": 0.5988207726549418,
+   "over_3.5": 0.3752896259739482,
+   "over_4.5": 0.1986484522475714,
+   "over_5.5": 0.0921735584343658,
+   "over_6.5": 0.03697877334590822
+  },
+  "total_buckets": {
+   "0-1": 0.17765745631310886,
+   "2": 0.22352177103194915,
+   "3": 0.22353114668099358,
+   "4": 0.17664117372637686,
+   "5+": 0.1986484522475714
+  },
+  "clean_sheet_home": 0.26438659076524956,
+  "clean_sheet_away": 0.15977158442177758,
+  "home_goal_dist": [
+   0.15977158442177758,
+   0.3035365732015485,
+   0.2734516909515526,
+   0.16051165275489807,
+   0.06977781836826544,
+   0.02403302947224856,
+   0.006838557064073585,
+   0.0020790937656355135
+  ],
+  "away_goal_dist": [
+   0.26438659076524956,
+   0.3593283667404336,
+   0.2342138957720289,
+   0.10002911537082838,
+   0.031851474764621496,
+   0.00810377502317653,
+   0.0017175203556196376,
+   0.000369261208041694
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    4
+   ],
+   "away_goals_80": [
+    0,
+    3
+   ],
+   "total_goals_80": [
+    1,
+    5
+   ],
+   "goal_diff_80": [
+    -2,
+    3
+   ]
+  },
+  "score_grid": [
+   [
+    0.047486,
+    0.053668,
+    0.036517,
+    0.015575,
+    0.00495,
+    0.001254,
+    0.000265
+   ],
+   [
+    0.076504,
+    0.115484,
+    0.069342,
+    0.029701,
+    0.009476,
+    0.002411,
+    0.00051
+   ],
+   [
+    0.071521,
+    0.096558,
+    0.066712,
+    0.027165,
+    0.008701,
+    0.002221,
+    0.000472
+   ],
+   [
+    0.042056,
+    0.057027,
+    0.037462,
+    0.017087,
+    0.005201,
+    0.001332,
+    0.000284
+   ],
+   [
+    0.018251,
+    0.024856,
+    0.016397,
+    0.007109,
+    0.002423,
+    0.00059,
+    0.000126
+   ],
+   [
+    0.00626,
+    0.008562,
+    0.005671,
+    0.002468,
+    0.000799,
+    0.000218,
+    4.4e-05
+   ],
+   [
+    0.001772,
+    0.002434,
+    0.001619,
+    0.000707,
+    0.00023,
+    5.9e-05,
+    1.3e-05
+   ]
+  ],
+  "mass_check": 0.9999999999999999
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.48162,
+  "p_draw": 0.24783,
+  "p_away": 0.27055,
+  "se": [
+   0.0011172783350624858,
+   0.0009654281203176132,
+   0.00099335969693762
+  ],
+  "max_abs_dev_vs_exact": 0.001592986856723072,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   1.3780473985921866,
+   2.2337770774920442
+  ],
+  "xg_away_80": [
+   0.9758447933127906,
+   1.6666792583232672
+  ],
+  "p_home_80": [
+   0.3676656144305295,
+   0.6004897643710093
+  ],
+  "p_draw_80": [
+   0.20780113151830484,
+   0.27147683659601546
+  ],
+  "p_away_80": [
+   0.1847458556406234,
+   0.3782119730404525
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.19150423068721906,
+   0.19865448437038222
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.5007022028697354,
+   "p_draw": 0.23503769897593274,
+   "p_away": 0.2642600981543319,
+   "xg_home": 1.875580803830687,
+   "xg_away": 1.3163356429926238,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.4981268952969766,
+   "p_draw": 0.24238444166106773,
+   "p_away": 0.25948866304195584,
+   "xg_home": 1.6704643875800451,
+   "xg_away": 1.137540445868759,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.447786357448634,
+   "p_draw": 0.24964653926661975,
+   "p_away": 0.30256710328474645,
+   "xg_home": 1.7067428439470649,
+   "xg_away": 1.3713132725791208,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.44304020530717614,
+   "p_draw": 0.24563234244742432,
+   "p_away": 0.3113274522453996,
+   "xg_home": 1.5887138935518335,
+   "xg_away": 1.2935310559387132,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.46424224650658447,
+   "p_draw": 0.23861314722913407,
+   "p_away": 0.2971446062642814,
+   "xg_home": 1.8062639765125574,
+   "xg_away": 1.411903882214788,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Marseille attack vs Toulouse defence: time-weighted strength gap multiplies Marseille's scoring rate by \u00d71.33 relative to an average pairing (from 31/28 decay-weighted matches).",
+   "effect": 0.2887
+  },
+  {
+   "text": "Home advantage (France, fitted from results): \u00d71.17 on Marseille's scoring rate.",
+   "effect": 0.1546
+  },
+  {
+   "text": "Independent results-only Elo: Marseille 1675 vs Toulouse 1606 (gap +69 before home advantage).",
+   "effect": 0.1036
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.48040289721120505,
+  "p_draw": 0.24942298685672315,
+  "p_away": 0.27017411593207197,
+  "xg_home": 1.7873465001037006,
+  "xg_away": 1.308724378389072
+ },
+ "context": {
+  "fetched_at": "2026-11-01T19:11:14+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5802977",
+    "fetched_at": "2026-11-01T19:11:14+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "confirmed",
+    "source": "FotMob official team sheet",
+    "formation": "4-2-3-1",
+    "starters": [
+     {
+      "name": "Jeffrey De Lange",
+      "pos": "G"
+     },
+     {
+      "name": "Timothy Weah",
+      "pos": "D"
+     },
+     {
+      "name": "CJ Egan-Riley",
+      "pos": "D"
+     },
+     {
+      "name": "Nayef Aguerd",
+      "pos": "D"
+     },
+     {
+      "name": "Emerson",
+      "pos": "D"
+     },
+     {
+      "name": "Tochukwu Nnadi",
+      "pos": "M"
+     },
+     {
+      "name": "Pierre-Emile H\u00f8jbjerg",
+      "pos": "M"
+     },
+     {
+      "name": "Amine Harit",
+      "pos": "F"
+     },
+     {
+      "name": "Himad Abdelli",
+      "pos": "M"
+     },
+     {
+      "name": "Igor Paix\u00e3o",
+      "pos": "F"
+     },
+     {
+      "name": "Amine Gouiri",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-11-01T19:11:14+00:00",
+    "n_configurations": 1,
+    "unmatched_players": [],
+    "mean_xi_attack_index": 0.011,
+    "mean_continuity": 1.304,
+    "p_backup_gk": 0.0
+   },
+   "away": {
+    "status": "confirmed",
+    "source": "FotMob official team sheet",
+    "formation": "4-4-2",
+    "starters": [
+     {
+      "name": "Guillaume Restes",
+      "pos": "G"
+     },
+     {
+      "name": "Isma\u00efl Diallo",
+      "pos": "D"
+     },
+     {
+      "name": "Mark McKenzie",
+      "pos": "D"
+     },
+     {
+      "name": "Rasmus Nicolaisen",
+      "pos": "D"
+     },
+     {
+      "name": "Christ Tap\u00e9",
+      "pos": "D"
+     },
+     {
+      "name": "Aron D\u00f8nnum",
+      "pos": "M"
+     },
+     {
+      "name": "Cristian C\u00e1sseres",
+      "pos": "M"
+     },
+     {
+      "name": "Niko Sigur",
+      "pos": "D"
+     },
+     {
+      "name": "Thomas J\u00f8rgensen",
+      "pos": "M"
+     },
+     {
+      "name": "Jacen Russell-Rowe",
+      "pos": "F"
+     },
+     {
+      "name": "Casper Tengstedt",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-11-01T19:11:14+00:00",
+    "n_configurations": 1,
+    "unmatched_players": [],
+    "mean_xi_attack_index": -0.103,
+    "mean_continuity": 1.004,
+    "p_backup_gk": 0.0
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Derek Cornelius",
+     "type": "injury",
+     "expected_return": "Early January 2027",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5802977",
+     "fetched_at": "2026-11-01T19:11:14+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "Rafik Messali",
+     "type": "injury",
+     "expected_return": "Early December 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5802977",
+     "fetched_at": "2026-11-01T19:11:14+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 7,
+    "n21": 3,
+    "last_match": "2026-10-25"
+   },
+   "away": {
+    "rest_days": 7,
+    "n21": 2,
+    "last_match": "2026-10-25"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 321.8
+  },
+  "venue": {
+   "name": "CEPAC V\u00e9lodrome",
+   "city": "Marseille",
+   "lat": 43.269870275,
+   "lon": 5.395853519
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 0.855,
+   "temp_c": 13.9,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=43.27&longitude=5.396",
+   "fetched_at": "2026-11-01T19:11:14+00:00",
+   "lat": 43.269870275,
+   "lon": 5.395853519
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": -1.82,
+    "d_p_draw_pp": -0.12,
+    "d_p_away_pp": 1.94,
+    "d_xg_home": 0.064,
+    "d_xg_away": 0.137
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": -0.0,
+    "d_p_draw_pp": -0.0,
+    "d_p_away_pp": -0.0,
+    "d_xg_home": -0.0,
+    "d_xg_away": -0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0224,
+    "away_rate_mult": 1.0094,
+    "d_p_home_pp": 0.64,
+    "d_p_draw_pp": -0.31,
+    "d_p_away_pp": -0.33,
+    "d_xg_home": 0.039,
+    "d_xg_away": 0.013,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": -0.0,
+    "d_p_draw_pp": -0.0,
+    "d_p_away_pp": -0.0,
+    "d_xg_home": -0.0,
+    "d_xg_away": -0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "home_rate_mult": 1.0188,
+    "away_rate_mult": 0.9752,
+    "d_p_home_pp": 1.46,
+    "d_p_draw_pp": -0.23,
+    "d_p_away_pp": -1.23,
+    "d_xg_home": 0.032,
+    "d_xg_away": -0.031,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": -0.0,
+   "d_p_draw_pp": -0.0,
+   "d_p_away_pp": -0.0,
+   "d_xg_home": -0.0,
+   "d_xg_away": -0.0
+  },
+  "features": {
+   "rest_h": 7.0,
+   "rest_a": 7.0,
+   "n21_h": 3.0,
+   "n21_a": 2.0,
+   "travel_km": 321.80137138733085,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 0.855,
+   "temp_c": 13.9
+  }
+ },
+ "confidence": {
+  "tier": "LOW",
+  "p_max": 0.48040289721120494,
+  "entropy_nats": 1.0521216789993888,
+  "text": "Most likely result has P = 48.0%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.3% \u00b1 0.4% (n=16754, mean forecast 44.6%). Backtest RPS for F1: 0.2071; exact-score top-5 hit rate 45.4% (n=990). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: LOW (entropy 1.052 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Marseille: lineup CONFIRMED (FotMob official team sheet).",
+  "Toulouse: lineup CONFIRMED (FotMob official team sheet)."
+ ],
+ "verdict": "Marseille 1\u20131 Toulouse is the single most probable scoreline at 11.5%: expected goals 1.79\u20131.31 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.048). Exact scores are inherently uncertain; the 1X2 split is 48.0%/24.9%/27.0%.",
+ "resolved": {
+  "home_key": "France:Marseille",
+  "away_key": "France:Toulouse",
+  "div": "F1",
+  "home_div": "F1",
+  "away_div": "F1",
+  "country": "France"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: Toulouse FC at Olympique de Marseille\nCompetition: Ligue 1 2025\nDate: 2026-11-01 14:45 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-10-30\n\nPRIMARY FINAL SCORE PREDICTION\n\nOlympique de Marseille 1 \u2013 1 Toulouse FC\n(modal exact score, probability 11.5%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.79\nAway: 1.31\nExpected Total: 3.10\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 48.0%\nDraw: 24.9%\nAway Win: 27.0%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 11.5%\n2. 2\u20131: 9.7%\n3. 1\u20130: 7.7%\n4. 2\u20130: 7.2%\n5. 1\u20132: 6.9%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 17.8%\nTotal 2 goals: 22.4%\nTotal 3 goals: 22.4%\nTotal 4 goals: 17.7%\nTotal 5+ goals: 19.9%\n\nBoth Teams Score: 62.3%\nClean sheet Olympique de Marseille: 26.4% \u00b7 Clean sheet Toulouse FC: 16.0%\n\nMATCH INTELLIGENCE\n\n1. Marseille attack vs Toulouse defence: time-weighted strength gap multiplies Marseille's scoring rate by \u00d71.33 relative to an average pairing (from 31/28 decay-weighted matches).\n2. Home advantage (France, fitted from results): \u00d71.17 on Marseille's scoring rate.\n3. Independent results-only Elo: Marseille 1675 vs Toulouse 1606 (gap +69 before home advantage).\n\nMODEL CONFIDENCE\n\nMost likely result has P = 48.0%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.3% \u00b1 0.4% (n=16754, mean forecast 44.6%). Backtest RPS for F1: 0.2071; exact-score top-5 hit rate 45.4% (n=990). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: LOW (entropy 1.052 nats of max 1.099).\nParameter-uncertainty 80% bands: xG Olympique de Marseille 1.38\u20132.23, xG Toulouse FC 0.98\u20131.67; P(home win) 36.8%\u201360.0%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0016 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nMarseille: CONFIRMED \u2014 FotMob official team sheet, fetched 2026-11-01 14:11 EST (4-2-3-1)\n  Jeffrey De Lange (G), Timothy Weah (D), CJ Egan-Riley (D), Nayef Aguerd (D), Emerson (D), Tochukwu Nnadi (M), Pierre-Emile H\u00f8jbjerg (M), Amine Harit (F), Himad Abdelli (M), Igor Paix\u00e3o (F), Amine Gouiri (F)\n  1 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs +0.011 (log) \u00b7 continuity +1.30 \u00b7 P(backup GK) 0%\nToulouse: CONFIRMED \u2014 FotMob official team sheet, fetched 2026-11-01 14:11 EST (4-4-2)\n  Guillaume Restes (G), Isma\u00efl Diallo (D), Mark McKenzie (D), Rasmus Nicolaisen (D), Christ Tap\u00e9 (D), Aron D\u00f8nnum (M), Cristian C\u00e1sseres (M), Niko Sigur (D), Thomas J\u00f8rgensen (M), Jacen Russell-Rowe (F), Casper Tengstedt (F)\n  1 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs -0.103 (log) \u00b7 continuity +1.00 \u00b7 P(backup GK) 0%\n\nKEY ABSENCES\n\n- Marseille: Derek Cornelius \u2014 injury, Early January 2027 [FotMob, 2026-11-01 14:11 EST]\n- Toulouse: Rafik Messali \u2014 injury, Early December 2026 [FotMob, 2026-11-01 14:11 EST]\n\nWEATHER AT VENUE\n\nCEPAC V\u00e9lodrome, Marseille: 13.9 \u00b0C, wind 0.9 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-11-01 14:11 EST]\n\nREST & TRAVEL\n\nMarseille: 7 days' rest, 3 matches in previous 21 days \u00b7 Toulouse: 7 days' rest, 2 in 21 days \u00b7 away travel 321.8 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 48.0% / 24.9% / 27.0%, xG 1.79\u20131.31\n- Understat xG component (validated, in ensemble): home -1.82 pp, draw -0.12 pp, away +1.94 pp; xG +0.064 / +0.137\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home -0.00 pp, draw -0.00 pp, away -0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.64 pp, draw -0.31 pp, away -0.33 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home -0.00 pp, draw -0.00 pp, away -0.00 pp\n- lineup: NOT APPLIED (failed out-of-sample validation); would have moved home +1.46 pp, draw -0.23 pp, away -1.23 pp\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Marseille: lineup CONFIRMED (FotMob official team sheet).\n- Toulouse: lineup CONFIRMED (FotMob official team sheet).\n\nFINAL VERDICT\n\nMarseille 1\u20131 Toulouse is the single most probable scoreline at 11.5%: expected goals 1.79\u20131.31 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.048). Exact scores are inherently uncertain; the 1X2 split is 48.0%/24.9%/27.0%.\n",
+ "frozen_at": "2026-11-01T19:11:14+00:00",
+ "sha256": "154ce1f7a7b30c0bbecbd7fac6778d558cb746be81c8a0b8a8412913042bde8c"
+}
