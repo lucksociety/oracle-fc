@@ -38,7 +38,7 @@ def cmd_ingest_context(a):
     fetched live at forecast time. Failures are non-fatal: forecasts fall back to team level."""
     from .ingest import understat
     try:
-        understat.update()
+        understat.update(max_seconds=60)
     except Exception as e:  # noqa: BLE001
         print(f"understat update failed (non-fatal): {e}")
 
