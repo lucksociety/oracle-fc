@@ -1,0 +1,659 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-11-01",
+ "input_fingerprint": "b4abbb0906d4a9bbef34120dbb14ecdda8f3442e0383d60bfe598a459aedf216",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-11-02T14:17:21+00:00",
+ "fixture": {
+  "event_id": "POLY-1241707",
+  "home_name": "AZ",
+  "away_name": "Juventus FC",
+  "competition": "UEFA Europa League 2025",
+  "subcategory": "uel",
+  "kickoff_utc": "2026-11-05T20:00:00+00:00",
+  "kickoff_local": "2026-11-05 15:00 EST",
+  "home_matched": "AZ Alkmaar",
+  "away_matched": "Juventus",
+  "match_methods": {
+   "home": {
+    "source": "AZ",
+    "matched": "AZ Alkmaar",
+    "method": "alias",
+    "score": 1.0
+   },
+   "away": {
+    "source": "Juventus FC",
+    "matched": "Juventus",
+    "method": "core-tokens",
+    "score": 0.97
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.2752187368503449,
+  "p_draw": 0.2563684011814074,
+  "p_away": 0.4684128619682477,
+  "xg_home": 1.2392213959099998,
+  "xg_away": 1.6651347633414175,
+  "xg_total": 2.9043561592514173,
+  "median_total": 3,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.12204672050474047
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.12204672050474047
+   },
+   {
+    "home": 1,
+    "away": 2,
+    "p": 0.09506448740747428
+   },
+   {
+    "home": 0,
+    "away": 1,
+    "p": 0.08743143805548718
+   },
+   {
+    "home": 0,
+    "away": 2,
+    "p": 0.07703834299512571
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.06944793822329656
+   }
+  ],
+  "btts": 0.5861836267552147,
+  "totals_over": {
+   "over_0.5": 0.9428689327485301,
+   "over_1.5": 0.7945886537540034,
+   "over_2.5": 0.5557925736112239,
+   "over_3.5": 0.33184540943263463,
+   "over_4.5": 0.16614847750203407,
+   "over_5.5": 0.07267006811951633,
+   "over_6.5": 0.027386434751635852
+  },
+  "total_buckets": {
+   "0-1": 0.2054113462459966,
+   "2": 0.23879608014277956,
+   "3": 0.22394716417858923,
+   "4": 0.16569693193060056,
+   "5+": 0.16614847750203407
+  },
+  "clean_sheet_home": 0.18150587864214204,
+  "clean_sheet_away": 0.2894415618541131,
+  "home_goal_dist": [
+   0.2894415618541131,
+   0.3607361249883069,
+   0.22081397921371632,
+   0.09096343759183634,
+   0.02867567319561641,
+   0.0073878129643464695,
+   0.0016146367004284345,
+   0.0003667734916359139
+  ],
+  "away_goal_dist": [
+   0.18150587864214204,
+   0.3201371146384323,
+   0.26784259296987944,
+   0.14614275815750855,
+   0.05906819622361701,
+   0.01891230820832128,
+   0.005001946468202788,
+   0.0013892046918964965
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    3
+   ],
+   "away_goals_80": [
+    0,
+    3
+   ],
+   "total_goals_80": [
+    1,
+    5
+   ],
+   "goal_diff_80": [
+    -3,
+    2
+   ]
+  },
+  "score_grid": [
+   [
+    0.057131,
+    0.087431,
+    0.077038,
+    0.042745,
+    0.0175,
+    0.005661,
+    0.001511
+   ],
+   [
+    0.060849,
+    0.122047,
+    0.095064,
+    0.052352,
+    0.021275,
+    0.006833,
+    0.001811
+   ],
+   [
+    0.039711,
+    0.069448,
+    0.061536,
+    0.031827,
+    0.012831,
+    0.004089,
+    0.001075
+   ],
+   [
+    0.016689,
+    0.028958,
+    0.0241,
+    0.013794,
+    0.005223,
+    0.001651,
+    0.000431
+   ],
+   [
+    0.005351,
+    0.009219,
+    0.007616,
+    0.004096,
+    0.001717,
+    0.00051,
+    0.000132
+   ],
+   [
+    0.001396,
+    0.00239,
+    0.001962,
+    0.001048,
+    0.000413,
+    0.000136,
+    3.3e-05
+   ],
+   [
+    0.000308,
+    0.000525,
+    0.000428,
+    0.000228,
+    8.9e-05,
+    2.8e-05,
+    7e-06
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.27605,
+  "p_draw": 0.25871500000000003,
+  "p_away": 0.465235,
+  "se": [
+   0.0009996159199912734,
+   0.000979238348858438,
+   0.0011153281911056494
+  ],
+  "max_abs_dev_vs_exact": 0.0031778619682477083,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   0.9523253586162601,
+   1.5524621130875493
+  ],
+  "xg_away_80": [
+   1.2634814796951224,
+   2.094252725387951
+  ],
+  "p_home_80": [
+   0.19849939552229973,
+   0.38233060470853264
+  ],
+  "p_draw_80": [
+   0.21641146658853286,
+   0.28052474368309294
+  ],
+  "p_away_80": [
+   0.3475567034317274,
+   0.5779121709738098
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.19374995314123356,
+   0.18753608820742357
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.25010038943034274,
+   "p_draw": 0.2586041844005498,
+   "p_away": 0.4912954261691076,
+   "xg_home": 1.086635921235666,
+   "xg_away": 1.616355787990332,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.361327541302748,
+   "p_draw": 0.2408776628214206,
+   "p_away": 0.39779479587583144,
+   "xg_home": 1.4790785662387083,
+   "xg_away": 1.5625244868742143,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.20354839415057208,
+   "p_draw": 0.25185721492481455,
+   "p_away": 0.5445943909246131,
+   "xg_home": 0.9663488336248088,
+   "xg_away": 1.7227990175092085,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.4832416938369637,
+   "p_draw": 0.22060600873606262,
+   "p_away": 0.2961522974269736,
+   "xg_home": 1.9289572439516407,
+   "xg_away": 1.4753041001490228,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.21932972143009738,
+   "p_draw": 0.2508954484668914,
+   "p_away": 0.5297748301030113,
+   "xg_home": 1.0107342491126274,
+   "xg_away": 1.698702931128843,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "AZ Alkmaar attack vs Juventus defence: time-weighted strength gap multiplies AZ Alkmaar's scoring rate by \u00d70.68 relative to an average pairing (from 31/38 decay-weighted matches).",
+   "effect": 0.3792
+  },
+  {
+   "text": "Juventus attack vs AZ Alkmaar defence: rate multiplier \u00d71.34 for the away side.",
+   "effect": 0.295
+  },
+  {
+   "text": "Home advantage (Europe, fitted from results): \u00d71.32 on AZ Alkmaar's scoring rate.",
+   "effect": 0.2771
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.2752187368503449,
+  "p_draw": 0.2563684011814074,
+  "p_away": 0.4684128619682476,
+  "xg_home": 1.2392213959099996,
+  "xg_away": 1.6651347633414175
+ },
+ "context": {
+  "fetched_at": "2026-11-02T14:17:21+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/6112262",
+    "fetched_at": "2026-11-02T14:17:21+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "4-2-3-1",
+    "starters": [
+     {
+      "name": "Jari De Busser",
+      "pos": "G"
+     },
+     {
+      "name": "Elijah Dijkstra",
+      "pos": "D"
+     },
+     {
+      "name": "Wouter Goes",
+      "pos": "D"
+     },
+     {
+      "name": "Lewis Schouten",
+      "pos": "D"
+     },
+     {
+      "name": "Mees de Wit",
+      "pos": "D"
+     },
+     {
+      "name": "Dave Kwakman",
+      "pos": "M"
+     },
+     {
+      "name": "Peer Koopmeiners",
+      "pos": "M"
+     },
+     {
+      "name": "Weslley Pinto",
+      "pos": "F"
+     },
+     {
+      "name": "Valdemar Byskov",
+      "pos": "M"
+     },
+     {
+      "name": "Ro-Zangelo Daal",
+      "pos": "F"
+     },
+     {
+      "name": "Mexx Meerdink",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-11-02T14:17:21+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   },
+   "away": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "4-4-2",
+    "starters": [
+     {
+      "name": "Guglielmo Vicario",
+      "pos": "G"
+     },
+     {
+      "name": "Pierre Kalulu",
+      "pos": "D"
+     },
+     {
+      "name": "Gleison Bremer",
+      "pos": "D"
+     },
+     {
+      "name": "Jhon Lucum\u00ed",
+      "pos": "D"
+     },
+     {
+      "name": "Juan Cabal",
+      "pos": "M"
+     },
+     {
+      "name": "Weston McKennie",
+      "pos": "M"
+     },
+     {
+      "name": "Douglas Luiz",
+      "pos": "M"
+     },
+     {
+      "name": "Teun Koopmeiners",
+      "pos": "D"
+     },
+     {
+      "name": "Kerim Alajbegovi\u0107",
+      "pos": "F"
+     },
+     {
+      "name": "Randal Kolo Muani",
+      "pos": "F"
+     },
+     {
+      "name": "Nick Woltemade",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-11-02T14:17:21+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Kees Smit",
+     "type": "injury",
+     "expected_return": "Day to day",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6112262",
+     "fetched_at": "2026-11-02T14:17:21+00:00"
+    },
+    {
+     "player": "Jeroen Zoet",
+     "type": "injury",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6112262",
+     "fetched_at": "2026-11-02T14:17:21+00:00"
+    },
+    {
+     "player": "Stije Resink",
+     "type": "injury",
+     "expected_return": "Early January 2027",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6112262",
+     "fetched_at": "2026-11-02T14:17:21+00:00"
+    },
+    {
+     "player": "Jizz Hornkamp",
+     "type": "injury",
+     "expected_return": "Day to day",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6112262",
+     "fetched_at": "2026-11-02T14:17:21+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "Weston McKennie",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6112262",
+     "fetched_at": "2026-11-02T14:17:21+00:00"
+    },
+    {
+     "player": "Kamil Grabara",
+     "type": "injury",
+     "expected_return": "Out for season",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6112262",
+     "fetched_at": "2026-11-02T14:17:21+00:00"
+    },
+    {
+     "player": "Kh\u00e9phren Thuram-Ulien",
+     "type": "injury",
+     "expected_return": "Mid January 2027",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6112262",
+     "fetched_at": "2026-11-02T14:17:21+00:00"
+    },
+    {
+     "player": "Manuel Locatelli",
+     "type": "injury",
+     "expected_return": "Late March 2027",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6112262",
+     "fetched_at": "2026-11-02T14:17:21+00:00"
+    },
+    {
+     "player": "Zeki \u00c7elik",
+     "type": "injury",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6112262",
+     "fetched_at": "2026-11-02T14:17:21+00:00"
+    },
+    {
+     "player": "Nicol\u00e1s Gonz\u00e1lez",
+     "type": "injury",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6112262",
+     "fetched_at": "2026-11-02T14:17:21+00:00"
+    },
+    {
+     "player": "Francisco Concei\u00e7\u00e3o",
+     "type": "injury",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6112262",
+     "fetched_at": "2026-11-02T14:17:21+00:00"
+    },
+    {
+     "player": "Kenan Y\u0131ld\u0131z",
+     "type": "injury",
+     "expected_return": "Early December 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6112262",
+     "fetched_at": "2026-11-02T14:17:21+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 5,
+    "n21": 3,
+    "last_match": "2026-10-31"
+   },
+   "away": {
+    "rest_days": 4,
+    "n21": 4,
+    "last_match": "2026-11-01"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 860.7
+  },
+  "venue": {
+   "name": "AFAS Stadion",
+   "city": "Alkmaar",
+   "lat": 52.612735728,
+   "lon": 4.742102623
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 4.449999999999999,
+   "temp_c": 6.1,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=52.613&longitude=4.742",
+   "fetched_at": "2026-11-02T14:17:22+00:00",
+   "lat": 52.612735728,
+   "lon": 4.742102623
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": -6.95,
+    "d_p_draw_pp": 0.35,
+    "d_p_away_pp": 6.6,
+    "d_xg_home": -0.23,
+    "d_xg_away": 0.067
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 0.9939,
+    "away_rate_mult": 1.0172,
+    "d_p_home_pp": -0.63,
+    "d_p_draw_pp": -0.22,
+    "d_p_away_pp": 0.84,
+    "d_xg_home": -0.008,
+    "d_xg_away": 0.028,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0354,
+    "away_rate_mult": 1.0148,
+    "d_p_home_pp": 0.67,
+    "d_p_draw_pp": -0.28,
+    "d_p_away_pp": -0.4,
+    "d_xg_home": 0.044,
+    "d_xg_away": 0.024,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "reason": "failed validation; no live features"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 5.0,
+   "rest_a": 4.0,
+   "n21_h": 3.0,
+   "n21_a": 4.0,
+   "travel_km": 860.665890276336,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 4.449999999999999,
+   "temp_c": 6.1
+  }
+ },
+ "confidence": {
+  "tier": "LOW",
+  "p_max": 0.4684128619682477,
+  "entropy_nats": 1.0592841914087752,
+  "text": "Most likely result has P = 46.8%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.3% \u00b1 0.4% (n=16754, mean forecast 44.6%). Backtest RPS for UCL: 0.1961; exact-score top-5 hit rate 40.2% (n=503). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: LOW (entropy 1.059 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Europa/Conference League: modelled with the Champions League home-advantage and scoring environment (no UEL/UECL results ingested yet).",
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "AZ Alkmaar: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "AZ Alkmaar: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.",
+  "Juventus: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Juventus: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+ ],
+ "verdict": "AZ Alkmaar 1\u20131 Juventus is the single most probable scoreline at 12.2%: expected goals 1.24\u20131.67 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.047). Exact scores are inherently uncertain; the 1X2 split is 27.5%/25.6%/46.8%.",
+ "resolved": {
+  "home_key": "Netherlands:AZ Alkmaar",
+  "away_key": "Italy:Juventus",
+  "div": "UCL",
+  "home_div": "N1",
+  "away_div": "I1",
+  "country": "Europe"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: Juventus FC at AZ\nCompetition: UEFA Europa League 2025\nDate: 2026-11-05 15:00 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-11-01\n\nPRIMARY FINAL SCORE PREDICTION\n\nAZ 1 \u2013 1 Juventus FC\n(modal exact score, probability 12.2%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.24\nAway: 1.67\nExpected Total: 2.90\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 27.5%\nDraw: 25.6%\nAway Win: 46.8%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 12.2%\n2. 1\u20132: 9.5%\n3. 0\u20131: 8.7%\n4. 0\u20132: 7.7%\n5. 2\u20131: 6.9%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 20.5%\nTotal 2 goals: 23.9%\nTotal 3 goals: 22.4%\nTotal 4 goals: 16.6%\nTotal 5+ goals: 16.6%\n\nBoth Teams Score: 58.6%\nClean sheet AZ: 18.2% \u00b7 Clean sheet Juventus FC: 28.9%\n\nMATCH INTELLIGENCE\n\n1. AZ Alkmaar attack vs Juventus defence: time-weighted strength gap multiplies AZ Alkmaar's scoring rate by \u00d70.68 relative to an average pairing (from 31/38 decay-weighted matches).\n2. Juventus attack vs AZ Alkmaar defence: rate multiplier \u00d71.34 for the away side.\n3. Home advantage (Europe, fitted from results): \u00d71.32 on AZ Alkmaar's scoring rate.\n\nMODEL CONFIDENCE\n\nMost likely result has P = 46.8%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.3% \u00b1 0.4% (n=16754, mean forecast 44.6%). Backtest RPS for UCL: 0.1961; exact-score top-5 hit rate 40.2% (n=503). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: LOW (entropy 1.059 nats of max 1.099).\nParameter-uncertainty 80% bands: xG AZ 0.95\u20131.55, xG Juventus FC 1.26\u20132.09; P(home win) 19.8%\u201338.2%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0032 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nAZ Alkmaar: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-11-02 09:17 EST (4-2-3-1)\n  Jari De Busser (G), Elijah Dijkstra (D), Wouter Goes (D), Lewis Schouten (D), Mees de Wit (D), Dave Kwakman (M), Peer Koopmeiners (M), Weslley Pinto (F), Valdemar Byskov (M), Ro-Zangelo Daal (F), Mexx Meerdink (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\nJuventus: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-11-02 09:17 EST (4-4-2)\n  Guglielmo Vicario (G), Pierre Kalulu (D), Gleison Bremer (D), Jhon Lucum\u00ed (D), Juan Cabal (M), Weston McKennie (M), Douglas Luiz (M), Teun Koopmeiners (D), Kerim Alajbegovi\u0107 (F), Randal Kolo Muani (F), Nick Woltemade (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nKEY ABSENCES\n\n- AZ Alkmaar: Kees Smit \u2014 injury, Day to day [FotMob, 2026-11-02 09:17 EST]\n- AZ Alkmaar: Jeroen Zoet \u2014 injury, Mid November 2026 [FotMob, 2026-11-02 09:17 EST]\n- AZ Alkmaar: Stije Resink \u2014 injury, Early January 2027 [FotMob, 2026-11-02 09:17 EST]\n- AZ Alkmaar: Jizz Hornkamp \u2014 injury, Day to day [FotMob, 2026-11-02 09:17 EST]\n- Juventus: Weston McKennie \u2014 injury, Doubtful [FotMob, 2026-11-02 09:17 EST]\n- Juventus: Kamil Grabara \u2014 injury, Out for season [FotMob, 2026-11-02 09:17 EST]\n- Juventus: Kh\u00e9phren Thuram-Ulien \u2014 injury, Mid January 2027 [FotMob, 2026-11-02 09:17 EST]\n- Juventus: Manuel Locatelli \u2014 injury, Late March 2027 [FotMob, 2026-11-02 09:17 EST]\n- Juventus: Zeki \u00c7elik \u2014 injury, Mid November 2026 [FotMob, 2026-11-02 09:17 EST]\n- Juventus: Nicol\u00e1s Gonz\u00e1lez \u2014 injury, Mid November 2026 [FotMob, 2026-11-02 09:17 EST]\n- Juventus: Francisco Concei\u00e7\u00e3o \u2014 injury, Mid November 2026 [FotMob, 2026-11-02 09:17 EST]\n- Juventus: Kenan Y\u0131ld\u0131z \u2014 injury, Early December 2026 [FotMob, 2026-11-02 09:17 EST]\n\nWEATHER AT VENUE\n\nAFAS Stadion, Alkmaar: 6.1 \u00b0C, wind 4.4 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-11-02 09:17 EST]\n\nREST & TRAVEL\n\nAZ Alkmaar: 5 days' rest, 3 matches in previous 21 days \u00b7 Juventus: 4 days' rest, 4 in 21 days \u00b7 away travel 860.7 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 27.5% / 25.6% / 46.8%, xG 1.24\u20131.67\n- Understat xG component (validated, in ensemble): home -6.95 pp, draw +0.35 pp, away +6.60 pp; xG -0.230 / +0.067\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home -0.63 pp, draw -0.22 pp, away +0.84 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.67 pp, draw -0.28 pp, away -0.40 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- lineup: not applied (failed validation; no live features)\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Europa/Conference League: modelled with the Champions League home-advantage and scoring environment (no UEL/UECL results ingested yet).\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- AZ Alkmaar: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- AZ Alkmaar: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n- Juventus: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Juventus: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nFINAL VERDICT\n\nAZ Alkmaar 1\u20131 Juventus is the single most probable scoreline at 12.2%: expected goals 1.24\u20131.67 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.047). Exact scores are inherently uncertain; the 1X2 split is 27.5%/25.6%/46.8%.\n",
+ "frozen_at": "2026-11-02T14:17:22+00:00",
+ "sha256": "d425ba502e7cdb9919ae035eeae6a774947f18426082a6a71586e5ad2ca72cd7"
+}

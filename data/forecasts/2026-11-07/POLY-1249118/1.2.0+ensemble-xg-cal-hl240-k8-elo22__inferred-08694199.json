@@ -1,0 +1,631 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-11-01",
+ "input_fingerprint": "b4abbb0906d4a9bbef34120dbb14ecdda8f3442e0383d60bfe598a459aedf216",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-11-02T14:18:09+00:00",
+ "fixture": {
+  "event_id": "POLY-1249118",
+  "home_name": "Cagliari Calcio",
+  "away_name": "Frosinone Calcio",
+  "competition": "Serie A 2025",
+  "subcategory": "sea",
+  "kickoff_utc": "2026-11-07T14:00:00+00:00",
+  "kickoff_local": "2026-11-07 09:00 EST",
+  "home_matched": "Cagliari",
+  "away_matched": "Frosinone",
+  "match_methods": {
+   "home": {
+    "source": "Cagliari Calcio",
+    "matched": "Cagliari",
+    "method": "core-tokens",
+    "score": 0.97
+   },
+   "away": {
+    "source": "Frosinone Calcio",
+    "matched": "Frosinone",
+    "method": "core-tokens",
+    "score": 0.97
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.34696496310530617,
+  "p_draw": 0.2733153693270882,
+  "p_away": 0.37971966756760583,
+  "xg_home": 1.3558772441852252,
+  "xg_away": 1.4222542063230605,
+  "xg_total": 2.778131450508286,
+  "median_total": 3,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.1308792922977318
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.1308792922977318
+   },
+   {
+    "home": 1,
+    "away": 2,
+    "p": 0.08631445066561555
+   },
+   {
+    "home": 0,
+    "away": 1,
+    "p": 0.08422112637449394
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.08163233270287529
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.07809163886021668
+   }
+  ],
+  "btts": 0.5786688667271052,
+  "totals_over": {
+   "over_0.5": 0.9343525059716413,
+   "over_1.5": 0.7720397407369308,
+   "over_2.5": 0.5247335508146924,
+   "over_3.5": 0.30386433219961195,
+   "over_4.5": 0.1472708869773651,
+   "over_5.5": 0.06250762010199923,
+   "over_6.5": 0.022856795064190746
+  },
+  "total_buckets": {
+   "0-1": 0.22796025926306937,
+   "2": 0.2473061899222383,
+   "3": 0.22086921861508055,
+   "4": 0.15659344522224683,
+   "5+": 0.1472708869773651
+  },
+  "clean_sheet_home": 0.23332489715326749,
+  "clean_sheet_away": 0.25365373014798626,
+  "home_goal_dist": [
+   0.25365373014798626,
+   0.3540382707972064,
+   0.23835089155139086,
+   0.10617055904793497,
+   0.035559487595479236,
+   0.00957155424625028,
+   0.0021553237395477154,
+   0.0005001828742044453
+  ],
+  "away_goal_dist": [
+   0.23332489715326749,
+   0.3497592243427423,
+   0.2486581802657893,
+   0.11512492597017847,
+   0.03946305453593924,
+   0.010717287098005158,
+   0.0024046931776713866,
+   0.0005477374564067575
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    3
+   ],
+   "away_goals_80": [
+    0,
+    3
+   ],
+   "total_goals_80": [
+    1,
+    5
+   ],
+   "goal_diff_80": [
+    -2,
+    2
+   ]
+  },
+  "score_grid": [
+   [
+    0.065647,
+    0.084221,
+    0.061956,
+    0.028672,
+    0.009792,
+    0.002643,
+    0.000589
+   ],
+   [
+    0.078092,
+    0.130879,
+    0.086314,
+    0.040176,
+    0.0138,
+    0.003746,
+    0.000839
+   ],
+   [
+    0.054471,
+    0.081632,
+    0.061983,
+    0.02747,
+    0.009488,
+    0.00259,
+    0.000583
+   ],
+   [
+    0.024251,
+    0.036545,
+    0.026415,
+    0.01313,
+    0.004316,
+    0.001184,
+    0.000268
+   ],
+   [
+    0.008097,
+    0.012266,
+    0.008911,
+    0.004214,
+    0.001553,
+    0.000405,
+    9.2e-05
+   ],
+   [
+    0.002169,
+    0.003301,
+    0.002409,
+    0.001144,
+    0.000401,
+    0.000117,
+    2.5e-05
+   ],
+   [
+    0.000486,
+    0.000742,
+    0.000544,
+    0.000259,
+    9.1e-05,
+    2.5e-05,
+    6e-06
+   ]
+  ],
+  "mass_check": 1.0000000000000002
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.34785,
+  "p_draw": 0.27388000000000007,
+  "p_away": 0.37827,
+  "se": [
+   0.001065012623164627,
+   0.000997170360570349,
+   0.0010843933951753856
+  ],
+  "max_abs_dev_vs_exact": 0.001449667567605839,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   1.0130158292633038,
+   1.7334743913037152
+  ],
+  "xg_away_80": [
+   1.093664753821114,
+   1.7715638258147075
+  ],
+  "p_home_80": [
+   0.2523557658271091,
+   0.46677020626556626
+  ],
+  "p_draw_80": [
+   0.23335192218270442,
+   0.2924437853885998
+  ],
+  "p_away_80": [
+   0.2783444071271814,
+   0.48805402923974056
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.2129806852782963,
+   0.17900133205256413
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.34339982406691655,
+   "p_draw": 0.2678107318530926,
+   "p_away": 0.3887894440799907,
+   "xg_home": 1.3126262619867475,
+   "xg_away": 1.4115370087028514,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.31803358386855785,
+   "p_draw": 0.2699273290535457,
+   "p_away": 0.41203908707789627,
+   "xg_home": 1.1399296255847124,
+   "xg_away": 1.336689986110529,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.32010542092397953,
+   "p_draw": 0.26954970174636306,
+   "p_away": 0.41034487732965746,
+   "xg_home": 1.2712603351165843,
+   "xg_away": 1.4686423619783664,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.3916051458230918,
+   "p_draw": 0.26731385205005714,
+   "p_away": 0.34108100212685116,
+   "xg_home": 1.3214740482913954,
+   "xg_away": 1.2147555631211289,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.38281729877480447,
+   "p_draw": 0.25553879548781927,
+   "p_away": 0.36164390573737637,
+   "xg_home": 1.500909941624854,
+   "xg_away": 1.4530977271565635,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Home advantage (Italy, fitted from results): \u00d71.18 on Cagliari's scoring rate.",
+   "effect": 0.166
+  },
+  {
+   "text": "Frosinone attack vs Cagliari defence: rate multiplier \u00d71.17 for the away side.",
+   "effect": 0.1595
+  },
+  {
+   "text": "Independent results-only Elo: Cagliari 1525 vs Frosinone 1614 (gap -89 before home advantage).",
+   "effect": 0.1332
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.3469649631053061,
+  "p_draw": 0.27331536932708816,
+  "p_away": 0.3797196675676058,
+  "xg_home": 1.3558772441852247,
+  "xg_away": 1.4222542063230603
+ },
+ "context": {
+  "fetched_at": "2026-11-02T14:18:09+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5749741",
+    "fetched_at": "2026-11-02T14:18:09+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "inferred",
+    "source": null,
+    "formation": "",
+    "starters": [
+     {
+      "name": "Elia Caprile",
+      "pos": "G"
+     },
+     {
+      "name": "Ndary Adopo",
+      "pos": "M"
+     },
+     {
+      "name": "Juan Rodr\u00edguez",
+      "pos": "D"
+     },
+     {
+      "name": "Alessandro Romano",
+      "pos": "M"
+     },
+     {
+      "name": "Z\u00e9 Pedro",
+      "pos": "D"
+     },
+     {
+      "name": "Alessandro Deiola",
+      "pos": "D"
+     },
+     {
+      "name": "Paul Mendy",
+      "pos": "F"
+     },
+     {
+      "name": "Daniel Maldini",
+      "pos": "F"
+     },
+     {
+      "name": "Harry Winks",
+      "pos": "M"
+     },
+     {
+      "name": "Yerry Mina",
+      "pos": "D"
+     },
+     {
+      "name": "Yukinari Sugawara",
+      "pos": "M"
+     }
+    ],
+    "fetched_at": "2026-11-02T14:18:09+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [],
+    "mean_xi_attack_index": -0.093,
+    "mean_continuity": -1.596,
+    "p_backup_gk": 0.0
+   },
+   "away": {
+    "status": "inferred",
+    "source": null,
+    "formation": "",
+    "starters": [
+     {
+      "name": "Lorenzo Palmisani",
+      "pos": "G"
+     },
+     {
+      "name": "Giacomo Calo",
+      "pos": "M"
+     },
+     {
+      "name": "Giorgi Kvernadze",
+      "pos": "F"
+     },
+     {
+      "name": "Romano Schmid",
+      "pos": "F"
+     },
+     {
+      "name": "Gabriele Calvani",
+      "pos": "D"
+     },
+     {
+      "name": "Anthony Oyono",
+      "pos": "D"
+     },
+     {
+      "name": "Far\u00e8s Ghedjemis",
+      "pos": "F"
+     },
+     {
+      "name": "Gabriele Bracaglia",
+      "pos": "D"
+     },
+     {
+      "name": "Patrizio Masini",
+      "pos": "M"
+     },
+     {
+      "name": "Ilario Monterisi",
+      "pos": "D"
+     },
+     {
+      "name": "Giorgio Cittadini",
+      "pos": "D"
+     }
+    ],
+    "fetched_at": "2026-11-02T14:18:09+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [],
+    "mean_xi_attack_index": -0.162,
+    "mean_continuity": -1.768,
+    "p_backup_gk": 0.0
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Adam Obert",
+     "type": "suspension",
+     "expected_return": "Early November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5749741",
+     "fetched_at": "2026-11-02T14:18:09+00:00"
+    },
+    {
+     "player": "Alessandro Deiola",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5749741",
+     "fetched_at": "2026-11-02T14:18:09+00:00"
+    },
+    {
+     "player": "Alieu Fadera",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5749741",
+     "fetched_at": "2026-11-02T14:18:09+00:00"
+    },
+    {
+     "player": "Mattia Felici",
+     "type": "injury",
+     "expected_return": "Out for season",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5749741",
+     "fetched_at": "2026-11-02T14:18:09+00:00"
+    },
+    {
+     "player": "Riyad Idrissi",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5749741",
+     "fetched_at": "2026-11-02T14:18:09+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "Antonio Raimondo",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5749741",
+     "fetched_at": "2026-11-02T14:18:09+00:00"
+    },
+    {
+     "player": "Florian Grillitsch",
+     "type": "injury",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5749741",
+     "fetched_at": "2026-11-02T14:18:09+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 6,
+    "n21": 4,
+    "last_match": "2026-11-01"
+   },
+   "away": {
+    "rest_days": 6,
+    "n21": 3,
+    "last_match": "2026-11-01"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 445.7
+  },
+  "venue": {
+   "name": "Unipol Domus",
+   "city": "Cagliari",
+   "lat": 39.199802357,
+   "lon": 9.137473349
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 0.8049999999999999,
+   "temp_c": 21.2,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=39.2&longitude=9.137",
+   "fetched_at": "2026-11-02T14:18:09+00:00",
+   "lat": 39.199802357,
+   "lon": 9.137473349
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": 3.31,
+    "d_p_draw_pp": -0.72,
+    "d_p_away_pp": -2.59,
+    "d_xg_home": 0.184,
+    "d_xg_away": 0.06
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0265,
+    "away_rate_mult": 1.0111,
+    "d_p_home_pp": 0.6,
+    "d_p_draw_pp": -0.28,
+    "d_p_away_pp": -0.32,
+    "d_xg_home": 0.036,
+    "d_xg_away": 0.016,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "home_rate_mult": 0.9651,
+    "away_rate_mult": 0.9402,
+    "d_p_home_pp": 0.4,
+    "d_p_draw_pp": 0.77,
+    "d_p_away_pp": -1.17,
+    "d_xg_home": -0.048,
+    "d_xg_away": -0.082,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 6.0,
+   "rest_a": 6.0,
+   "n21_h": 4.0,
+   "n21_a": 3.0,
+   "travel_km": 445.7223096698273,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 0.8049999999999999,
+   "temp_c": 21.2
+  }
+ },
+ "confidence": {
+  "tier": "LOW",
+  "p_max": 0.37971966756760583,
+  "entropy_nats": 1.0894895264240074,
+  "text": "Most likely result has P = 38.0%. In the out-of-sample backtest, favourites priced 0.33\u20130.40 won 37.6% \u00b1 0.5% (n=8383, mean forecast 37.8%). Backtest RPS for I1: 0.1939; exact-score top-5 hit rate 54.8% (n=1228). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: LOW (entropy 1.089 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Cagliari: no lineup published yet \u2014 XI inferred from recent minutes share minus known absences; 200 configurations simulated (start P=0.7, UNVALIDATED prior).",
+  "Frosinone: no lineup published yet \u2014 XI inferred from recent minutes share minus known absences; 200 configurations simulated (start P=0.7, UNVALIDATED prior)."
+ ],
+ "verdict": "Cagliari 1\u20131 Frosinone is the single most probable scoreline at 13.1%: expected goals 1.36\u20131.42 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.047). Exact scores are inherently uncertain; the 1X2 split is 34.7%/27.3%/38.0%.",
+ "resolved": {
+  "home_key": "Italy:Cagliari",
+  "away_key": "Italy:Frosinone",
+  "div": "I1",
+  "home_div": "I1",
+  "away_div": "I1",
+  "country": "Italy"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: Frosinone Calcio at Cagliari Calcio\nCompetition: Serie A 2025\nDate: 2026-11-07 09:00 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-11-01\n\nPRIMARY FINAL SCORE PREDICTION\n\nCagliari Calcio 1 \u2013 1 Frosinone Calcio\n(modal exact score, probability 13.1%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.36\nAway: 1.42\nExpected Total: 2.78\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 34.7%\nDraw: 27.3%\nAway Win: 38.0%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 13.1%\n2. 1\u20132: 8.6%\n3. 0\u20131: 8.4%\n4. 2\u20131: 8.2%\n5. 1\u20130: 7.8%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 22.8%\nTotal 2 goals: 24.7%\nTotal 3 goals: 22.1%\nTotal 4 goals: 15.7%\nTotal 5+ goals: 14.7%\n\nBoth Teams Score: 57.9%\nClean sheet Cagliari Calcio: 23.3% \u00b7 Clean sheet Frosinone Calcio: 25.4%\n\nMATCH INTELLIGENCE\n\n1. Home advantage (Italy, fitted from results): \u00d71.18 on Cagliari's scoring rate.\n2. Frosinone attack vs Cagliari defence: rate multiplier \u00d71.17 for the away side.\n3. Independent results-only Elo: Cagliari 1525 vs Frosinone 1614 (gap -89 before home advantage).\n\nMODEL CONFIDENCE\n\nMost likely result has P = 38.0%. In the out-of-sample backtest, favourites priced 0.33\u20130.40 won 37.6% \u00b1 0.5% (n=8383, mean forecast 37.8%). Backtest RPS for I1: 0.1939; exact-score top-5 hit rate 54.8% (n=1228). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: LOW (entropy 1.089 nats of max 1.099).\nParameter-uncertainty 80% bands: xG Cagliari Calcio 1.01\u20131.73, xG Frosinone Calcio 1.09\u20131.77; P(home win) 25.2%\u201346.7%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0014 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nCagliari: INFERRED, fetched 2026-11-02 09:18 EST\n  Elia Caprile (G), Ndary Adopo (M), Juan Rodr\u00edguez (D), Alessandro Romano (M), Z\u00e9 Pedro (D), Alessandro Deiola (D), Paul Mendy (F), Daniel Maldini (F), Harry Winks (M), Yerry Mina (D), Yukinari Sugawara (M)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs -0.093 (log) \u00b7 continuity -1.60 \u00b7 P(backup GK) 0%\nFrosinone: INFERRED, fetched 2026-11-02 09:18 EST\n  Lorenzo Palmisani (G), Giacomo Calo (M), Giorgi Kvernadze (F), Romano Schmid (F), Gabriele Calvani (D), Anthony Oyono (D), Far\u00e8s Ghedjemis (F), Gabriele Bracaglia (D), Patrizio Masini (M), Ilario Monterisi (D), Giorgio Cittadini (D)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs -0.162 (log) \u00b7 continuity -1.77 \u00b7 P(backup GK) 0%\n\nKEY ABSENCES\n\n- Cagliari: Adam Obert \u2014 suspension, Early November 2026 [FotMob, 2026-11-02 09:18 EST]\n- Cagliari: Alessandro Deiola \u2014 injury, Doubtful [FotMob, 2026-11-02 09:18 EST]\n- Cagliari: Alieu Fadera \u2014 injury, Late November 2026 [FotMob, 2026-11-02 09:18 EST]\n- Cagliari: Mattia Felici \u2014 injury, Out for season [FotMob, 2026-11-02 09:18 EST]\n- Cagliari: Riyad Idrissi \u2014 injury, Late November 2026 [FotMob, 2026-11-02 09:18 EST]\n- Frosinone: Antonio Raimondo \u2014 injury, Late November 2026 [FotMob, 2026-11-02 09:18 EST]\n- Frosinone: Florian Grillitsch \u2014 injury, Mid November 2026 [FotMob, 2026-11-02 09:18 EST]\n\nWEATHER AT VENUE\n\nUnipol Domus, Cagliari: 21.2 \u00b0C, wind 0.8 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-11-02 09:18 EST]\n\nREST & TRAVEL\n\nCagliari: 6 days' rest, 4 matches in previous 21 days \u00b7 Frosinone: 6 days' rest, 3 in 21 days \u00b7 away travel 445.7 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 34.7% / 27.3% / 38.0%, xG 1.36\u20131.42\n- Understat xG component (validated, in ensemble): home +3.31 pp, draw -0.72 pp, away -2.59 pp; xG +0.184 / +0.060\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.60 pp, draw -0.28 pp, away -0.32 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- lineup: NOT APPLIED (failed out-of-sample validation); would have moved home +0.40 pp, draw +0.77 pp, away -1.17 pp\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Cagliari: no lineup published yet \u2014 XI inferred from recent minutes share minus known absences; 200 configurations simulated (start P=0.7, UNVALIDATED prior).\n- Frosinone: no lineup published yet \u2014 XI inferred from recent minutes share minus known absences; 200 configurations simulated (start P=0.7, UNVALIDATED prior).\n\nFINAL VERDICT\n\nCagliari 1\u20131 Frosinone is the single most probable scoreline at 13.1%: expected goals 1.36\u20131.42 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.047). Exact scores are inherently uncertain; the 1X2 split is 34.7%/27.3%/38.0%.\n",
+ "frozen_at": "2026-11-02T14:18:09+00:00",
+ "sha256": "8c1c4582e5623e3bf377062eb9e12ed42acb32b6b096061fcaf4d1fd8ac52b75"
+}
