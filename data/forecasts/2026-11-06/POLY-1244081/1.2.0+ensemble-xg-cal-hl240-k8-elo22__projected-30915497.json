@@ -1,0 +1,661 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-10-30",
+ "input_fingerprint": "5a99153ce08caaded5d8617b1eff1cb6b5e652ce705eaf2cd2bf4b9802c3b82c",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-11-02T07:14:34+00:00",
+ "fixture": {
+  "event_id": "POLY-1244081",
+  "home_name": "Everton FC",
+  "away_name": "Coventry City FC",
+  "competition": "Premier League 2025",
+  "subcategory": "epl",
+  "kickoff_utc": "2026-11-06T20:00:00+00:00",
+  "kickoff_local": "2026-11-06 15:00 EST",
+  "home_matched": "Everton",
+  "away_matched": "Coventry",
+  "match_methods": {
+   "home": {
+    "source": "Everton FC",
+    "matched": "Everton",
+    "method": "core-tokens",
+    "score": 0.97
+   },
+   "away": {
+    "source": "Coventry City FC",
+    "matched": "Coventry",
+    "method": "alias",
+    "score": 1.0
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.48656430907713455,
+  "p_draw": 0.26162851487930117,
+  "p_away": 0.25180717604356445,
+  "xg_home": 1.663302755656458,
+  "xg_away": 1.1442264516915137,
+  "xg_total": 2.8075292073479714,
+  "median_total": 3,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.1263492268704446
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.1263492268704446
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.0976023026921194
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.09428370941164062
+   },
+   {
+    "home": 2,
+    "away": 0,
+    "p": 0.08191782962559105
+   },
+   {
+    "home": 1,
+    "away": 2,
+    "p": 0.06624877586332029
+   }
+  ],
+  "btts": 0.568908817619122,
+  "totals_over": {
+   "over_0.5": 0.9370368631137928,
+   "over_1.5": 0.77926052121882,
+   "over_2.5": 0.5329824219140622,
+   "over_3.5": 0.3099918955054202,
+   "over_4.5": 0.15062928509788429,
+   "over_5.5": 0.06381710544189183,
+   "over_6.5": 0.02325522412767011
+  },
+  "total_buckets": {
+   "0-1": 0.2207394787811801,
+   "2": 0.24627809930475777,
+   "3": 0.22299052640864203,
+   "4": 0.15936261040753585,
+   "5+": 0.15062928509788429
+  },
+  "clean_sheet_home": 0.31065066875725994,
+  "clean_sheet_away": 0.1834036505098256,
+  "home_goal_dist": [
+   0.1834036505098256,
+   0.31991527905339207,
+   0.2661557628443845,
+   0.14541239137781192,
+   0.05922566354743317,
+   0.01922034082437582,
+   0.0051815594001720314,
+   0.0014853524426049283
+  ],
+  "away_goal_dist": [
+   0.31065066875725994,
+   0.3727094622133825,
+   0.2118090714779598,
+   0.07806470492116141,
+   0.021240199446858288,
+   0.004572600244058748,
+   0.0008124937282777092,
+   0.00014079921104166886
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    3
+   ],
+   "away_goals_80": [
+    0,
+    3
+   ],
+   "total_goals_80": [
+    1,
+    5
+   ],
+   "goal_diff_80": [
+    -1,
+    3
+   ]
+  },
+  "score_grid": [
+   [
+    0.062963,
+    0.063493,
+    0.038011,
+    0.014087,
+    0.003847,
+    0.000829,
+    0.000147
+   ],
+   [
+    0.094284,
+    0.126349,
+    0.066249,
+    0.024569,
+    0.006714,
+    0.001448,
+    0.000257
+   ],
+   [
+    0.081918,
+    0.097602,
+    0.058836,
+    0.020672,
+    0.005653,
+    0.00122,
+    0.000217
+   ],
+   [
+    0.045052,
+    0.053717,
+    0.030679,
+    0.012033,
+    0.003118,
+    0.000673,
+    0.00012
+   ],
+   [
+    0.018394,
+    0.021947,
+    0.012543,
+    0.004661,
+    0.001348,
+    0.000276,
+    4.9e-05
+   ],
+   [
+    0.00597,
+    0.007129,
+    0.004077,
+    0.001516,
+    0.000415,
+    9.5e-05,
+    1.6e-05
+   ],
+   [
+    0.001609,
+    0.001922,
+    0.0011,
+    0.000409,
+    0.000112,
+    2.4e-05,
+    5e-06
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.48683,
+  "p_draw": 0.26117999999999997,
+  "p_away": 0.25199,
+  "se": [
+   0.001117646077924492,
+   0.0009822550778692874,
+   0.0009708013182417914
+  ],
+  "max_abs_dev_vs_exact": 0.0004485148793011984,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   1.2562352792237699,
+   2.110132654753873
+  ],
+  "xg_away_80": [
+   0.8658529080622192,
+   1.4419382235408045
+  ],
+  "p_home_80": [
+   0.3700305854328579,
+   0.6068597844576114
+  ],
+  "p_draw_80": [
+   0.21484802935283068,
+   0.2887726691143856
+  ],
+  "p_away_80": [
+   0.17075768422960785,
+   0.34837396206813886
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.20562049543739666,
+   0.18928132367100567
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.4637012363671129,
+   "p_draw": 0.2737968508871275,
+   "p_away": 0.26250191274575957,
+   "xg_home": 1.4696023448766156,
+   "xg_away": 1.0431921699960927,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.52606338234787,
+   "p_draw": 0.2323811815007819,
+   "p_away": 0.24155543615134817,
+   "xg_home": 1.7889625205674493,
+   "xg_away": 1.1383804182487878,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.4298312133557105,
+   "p_draw": 0.2799595137485656,
+   "p_away": 0.29020927289572396,
+   "xg_home": 1.4182283549202668,
+   "xg_away": 1.122134170660343,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.4228904171224199,
+   "p_draw": 0.24977313804598375,
+   "p_away": 0.3273364448315963,
+   "xg_home": 1.519993969003253,
+   "xg_away": 1.307998571550038,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.4550653306703729,
+   "p_draw": 0.2673407210893808,
+   "p_away": 0.2775939482402464,
+   "xg_home": 1.5133777164085085,
+   "xg_away": 1.1295313337292392,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Home advantage (England, fitted from results): \u00d71.22 on Everton's scoring rate.",
+   "effect": 0.1965
+  },
+  {
+   "text": "Independent results-only Elo: Everton 1658 vs Coventry 1562 (gap +96 before home advantage).",
+   "effect": 0.1443
+  },
+  {
+   "text": "Coventry attack vs Everton defence: rate multiplier \u00d70.87 for the away side.",
+   "effect": 0.1434
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.48656430907713455,
+  "p_draw": 0.26162851487930117,
+  "p_away": 0.25180717604356445,
+  "xg_home": 1.663302755656458,
+  "xg_away": 1.1442264516915137
+ },
+ "context": {
+  "fetched_at": "2026-11-02T07:14:34+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5795508",
+    "fetched_at": "2026-11-02T07:14:34+00:00"
+   },
+   {
+    "name": "Fantasy Premier League availability",
+    "url": "https://fantasy.premierleague.com/api/bootstrap-static/",
+    "fetched_at": "2026-11-02T07:14:34+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "4-2-3-1",
+    "starters": [
+     {
+      "name": "Jordan Pickford",
+      "pos": "G"
+     },
+     {
+      "name": "Merlin R\u00f6hl",
+      "pos": "D"
+     },
+     {
+      "name": "James Tarkowski",
+      "pos": "D"
+     },
+     {
+      "name": "Jake O'Brien",
+      "pos": "D"
+     },
+     {
+      "name": "Vitaliy Mykolenko",
+      "pos": "D"
+     },
+     {
+      "name": "Hayden Hackney",
+      "pos": "M"
+     },
+     {
+      "name": "James Garner",
+      "pos": "M"
+     },
+     {
+      "name": "Tyler Dibling",
+      "pos": "F"
+     },
+     {
+      "name": "Kiernan Dewsbury-Hall",
+      "pos": "M"
+     },
+     {
+      "name": "Tyrique George",
+      "pos": "F"
+     },
+     {
+      "name": "Thierno Barry",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-11-02T07:14:34+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [],
+    "mean_xi_attack_index": -0.065,
+    "mean_continuity": -0.67,
+    "p_backup_gk": 0.0
+   },
+   "away": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "4-2-3-1",
+    "starters": [
+     {
+      "name": "Carl Rushworth",
+      "pos": "G"
+     },
+     {
+      "name": "Milan van Ewijk",
+      "pos": "D"
+     },
+     {
+      "name": "Stephen Mfuni",
+      "pos": "D"
+     },
+     {
+      "name": "Ethan Pinnock",
+      "pos": "D"
+     },
+     {
+      "name": "Jay Dasilva",
+      "pos": "D"
+     },
+     {
+      "name": "Caleb Yirenkyi",
+      "pos": "M"
+     },
+     {
+      "name": "Victor Torp",
+      "pos": "M"
+     },
+     {
+      "name": "Tatsuhiro Sakamoto",
+      "pos": "F"
+     },
+     {
+      "name": "Jack Rudoni",
+      "pos": "M"
+     },
+     {
+      "name": "Yann Gboho",
+      "pos": "M"
+     },
+     {
+      "name": "Taiwo Awoniyi",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-11-02T07:14:34+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [
+     "Yann Gboho"
+    ],
+    "mean_xi_attack_index": -0.023,
+    "mean_continuity": -1.437,
+    "p_backup_gk": 0.0
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Jarrad Branthwaite",
+     "type": "doubtful",
+     "expected_return": "Concussion - 75% chance of playing",
+     "chance_of_playing": 75,
+     "source": "FPL",
+     "source_url": "https://fantasy.premierleague.com/api/bootstrap-static/",
+     "fetched_at": "2026-10-30T15:30:09.601963Z"
+    }
+   ],
+   "away": [
+    {
+     "player": "Bobby Thomas",
+     "type": "injury",
+     "expected_return": "A few days",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795508",
+     "fetched_at": "2026-11-02T07:14:34+00:00",
+     "chance_of_playing": 50,
+     "fpl_status": "doubtful",
+     "fpl_news": "Calf injury - 50% chance of playing",
+     "fpl_news_added": "2026-10-24T17:00:09.115906Z"
+    },
+    {
+     "player": "Aur\u00e8le Amenda",
+     "type": "injury",
+     "expected_return": "Early November 2026",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795508",
+     "fetched_at": "2026-11-02T07:14:34+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Calf injury - Unknown return date",
+     "fpl_news_added": "2026-09-17T07:30:09.329041Z"
+    },
+    {
+     "player": "Luke Woolfenden",
+     "type": "injury",
+     "expected_return": "Early November 2026",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795508",
+     "fetched_at": "2026-11-02T07:14:34+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Knee injury - Unknown return date",
+     "fpl_news_added": "2026-08-27T14:56:28.718566Z"
+    },
+    {
+     "player": "Josh Eccles",
+     "type": "injury",
+     "expected_return": "Early November 2026",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795508",
+     "fetched_at": "2026-11-02T07:14:34+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Ankle injury - Unknown return date",
+     "fpl_news_added": "2026-09-10T18:30:08.877110Z"
+    },
+    {
+     "player": "Haji Wright",
+     "type": "injury",
+     "expected_return": "Early November 2026",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795508",
+     "fetched_at": "2026-11-02T07:14:34+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Thigh injury - Unknown return date",
+     "fpl_news_added": "2026-08-14T22:00:07.214508Z"
+    },
+    {
+     "player": "Oliver Dovin",
+     "type": "unavailable",
+     "expected_return": "not included in squad.",
+     "chance_of_playing": 0,
+     "source": "FPL",
+     "source_url": "https://fantasy.premierleague.com/api/bootstrap-static/",
+     "fetched_at": "2026-09-02T15:44:14.839336Z"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 13,
+    "n21": 2,
+    "last_match": "2026-10-24"
+   },
+   "away": {
+    "rest_days": 13,
+    "n21": 2,
+    "last_match": "2026-10-24"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 148.3
+  },
+  "venue": {
+   "name": "Hill Dickinson Stadium",
+   "city": "Liverpool, Merseyside",
+   "lat": 53.42498148,
+   "lon": -3.002691341
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 2.9,
+   "temp_c": 9.0,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=53.425&longitude=-3.003",
+   "fetched_at": "2026-11-02T07:14:35+00:00",
+   "lat": 53.42498148,
+   "lon": -3.002691341
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": -3.46,
+    "d_p_draw_pp": 1.69,
+    "d_p_away_pp": 1.77,
+    "d_xg_home": -0.13,
+    "d_xg_away": -0.001
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0141,
+    "away_rate_mult": 1.0059,
+    "d_p_home_pp": 0.41,
+    "d_p_draw_pp": -0.22,
+    "d_p_away_pp": -0.19,
+    "d_xg_home": 0.023,
+    "d_xg_away": 0.007,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "home_rate_mult": 0.9899,
+    "away_rate_mult": 0.9694,
+    "d_p_home_pp": 0.38,
+    "d_p_draw_pp": 0.18,
+    "d_p_away_pp": -0.56,
+    "d_xg_home": -0.016,
+    "d_xg_away": -0.034,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 13.0,
+   "rest_a": 13.0,
+   "n21_h": 2.0,
+   "n21_a": 2.0,
+   "travel_km": 148.31660044784994,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 2.9,
+   "temp_c": 9.0
+  }
+ },
+ "confidence": {
+  "tier": "LOW",
+  "p_max": 0.48656430907713455,
+  "entropy_nats": 1.0485786628045195,
+  "text": "Most likely result has P = 48.7%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.3% \u00b1 0.4% (n=16754, mean forecast 44.6%). Backtest RPS for E0: 0.2018; exact-score top-5 hit rate 46.6% (n=1220). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: LOW (entropy 1.049 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Everton: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Coventry: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Coventry: no Understat history for Yann Gboho \u2014 rated at the positional prior."
+ ],
+ "verdict": "Everton 1\u20131 Coventry is the single most probable scoreline at 12.6%: expected goals 1.66\u20131.14 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.048). Exact scores are inherently uncertain; the 1X2 split is 48.7%/26.2%/25.2%.",
+ "resolved": {
+  "home_key": "England:Everton",
+  "away_key": "England:Coventry",
+  "div": "E0",
+  "home_div": "E0",
+  "away_div": "E0",
+  "country": "England"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: Coventry City FC at Everton FC\nCompetition: Premier League 2025\nDate: 2026-11-06 15:00 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-10-30\n\nPRIMARY FINAL SCORE PREDICTION\n\nEverton FC 1 \u2013 1 Coventry City FC\n(modal exact score, probability 12.6%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.66\nAway: 1.14\nExpected Total: 2.81\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 48.7%\nDraw: 26.2%\nAway Win: 25.2%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 12.6%\n2. 2\u20131: 9.8%\n3. 1\u20130: 9.4%\n4. 2\u20130: 8.2%\n5. 1\u20132: 6.6%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 22.1%\nTotal 2 goals: 24.6%\nTotal 3 goals: 22.3%\nTotal 4 goals: 15.9%\nTotal 5+ goals: 15.1%\n\nBoth Teams Score: 56.9%\nClean sheet Everton FC: 31.1% \u00b7 Clean sheet Coventry City FC: 18.3%\n\nMATCH INTELLIGENCE\n\n1. Home advantage (England, fitted from results): \u00d71.22 on Everton's scoring rate.\n2. Independent results-only Elo: Everton 1658 vs Coventry 1562 (gap +96 before home advantage).\n3. Coventry attack vs Everton defence: rate multiplier \u00d70.87 for the away side.\n\nMODEL CONFIDENCE\n\nMost likely result has P = 48.7%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.3% \u00b1 0.4% (n=16754, mean forecast 44.6%). Backtest RPS for E0: 0.2018; exact-score top-5 hit rate 46.6% (n=1220). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: LOW (entropy 1.049 nats of max 1.099).\nParameter-uncertainty 80% bands: xG Everton FC 1.26\u20132.11, xG Coventry City FC 0.87\u20131.44; P(home win) 37.0%\u201360.7%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0004 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nEverton: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-11-02 02:14 EST (4-2-3-1)\n  Jordan Pickford (G), Merlin R\u00f6hl (D), James Tarkowski (D), Jake O'Brien (D), Vitaliy Mykolenko (D), Hayden Hackney (M), James Garner (M), Tyler Dibling (F), Kiernan Dewsbury-Hall (M), Tyrique George (F), Thierno Barry (F)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs -0.065 (log) \u00b7 continuity -0.67 \u00b7 P(backup GK) 0%\nCoventry: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-11-02 02:14 EST (4-2-3-1)\n  Carl Rushworth (G), Milan van Ewijk (D), Stephen Mfuni (D), Ethan Pinnock (D), Jay Dasilva (D), Caleb Yirenkyi (M), Victor Torp (M), Tatsuhiro Sakamoto (F), Jack Rudoni (M), Yann Gboho (M), Taiwo Awoniyi (F)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs -0.023 (log) \u00b7 continuity -1.44 \u00b7 P(backup GK) 0%\n\nKEY ABSENCES\n\n- Everton: Jarrad Branthwaite \u2014 doubtful, Concussion - 75% chance of playing, 75% chance of playing [FPL, 2026-10-30 11:30 EDT]\n- Coventry: Bobby Thomas \u2014 injury, A few days, 50% chance of playing [FotMob + FPL, 2026-11-02 02:14 EST] \u2014 FPL: Calf injury - 50% chance of playing (updated 2026-10-24 13:00 EDT)\n- Coventry: Aur\u00e8le Amenda \u2014 injury, Early November 2026, 0% chance of playing [FotMob + FPL, 2026-11-02 02:14 EST] \u2014 FPL: Calf injury - Unknown return date (updated 2026-09-17 03:30 EDT)\n- Coventry: Luke Woolfenden \u2014 injury, Early November 2026, 0% chance of playing [FotMob + FPL, 2026-11-02 02:14 EST] \u2014 FPL: Knee injury - Unknown return date (updated 2026-08-27 10:56 EDT)\n- Coventry: Josh Eccles \u2014 injury, Early November 2026, 0% chance of playing [FotMob + FPL, 2026-11-02 02:14 EST] \u2014 FPL: Ankle injury - Unknown return date (updated 2026-09-10 14:30 EDT)\n- Coventry: Haji Wright \u2014 injury, Early November 2026, 0% chance of playing [FotMob + FPL, 2026-11-02 02:14 EST] \u2014 FPL: Thigh injury - Unknown return date (updated 2026-08-14 18:00 EDT)\n- Coventry: Oliver Dovin \u2014 unavailable, not included in squad., 0% chance of playing [FPL, 2026-09-02 11:44 EDT]\n\nWEATHER AT VENUE\n\nHill Dickinson Stadium, Liverpool, Merseyside: 9.0 \u00b0C, wind 2.9 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-11-02 02:14 EST]\n\nREST & TRAVEL\n\nEverton: 13 days' rest, 2 matches in previous 21 days \u00b7 Coventry: 13 days' rest, 2 in 21 days \u00b7 away travel 148.3 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 48.7% / 26.2% / 25.2%, xG 1.66\u20131.14\n- Understat xG component (validated, in ensemble): home -3.46 pp, draw +1.69 pp, away +1.77 pp; xG -0.130 / -0.001\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.41 pp, draw -0.22 pp, away -0.19 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- lineup: NOT APPLIED (failed out-of-sample validation); would have moved home +0.38 pp, draw +0.18 pp, away -0.56 pp\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Everton: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Coventry: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Coventry: no Understat history for Yann Gboho \u2014 rated at the positional prior.\n\nFINAL VERDICT\n\nEverton 1\u20131 Coventry is the single most probable scoreline at 12.6%: expected goals 1.66\u20131.14 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.048). Exact scores are inherently uncertain; the 1X2 split is 48.7%/26.2%/25.2%.\n",
+ "frozen_at": "2026-11-02T07:14:35+00:00",
+ "sha256": "fc6f299b4037adb489d782b09aef3e6c6548e148bbbe3fd80c14816ae3a014de"
+}

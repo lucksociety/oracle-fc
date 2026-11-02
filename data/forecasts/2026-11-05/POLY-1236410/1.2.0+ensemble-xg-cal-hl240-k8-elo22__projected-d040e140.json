@@ -1,0 +1,651 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-10-30",
+ "input_fingerprint": "5a99153ce08caaded5d8617b1eff1cb6b5e652ce705eaf2cd2bf4b9802c3b82c",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-11-02T07:14:08+00:00",
+ "fixture": {
+  "event_id": "POLY-1236410",
+  "home_name": "RSC Anderlecht",
+  "away_name": "FC Red Bull Salzburg",
+  "competition": "UEFA Europa League 2025",
+  "subcategory": "uel",
+  "kickoff_utc": "2026-11-05T17:45:00+00:00",
+  "kickoff_local": "2026-11-05 12:45 EST",
+  "home_matched": "Anderlecht",
+  "away_matched": "Salzburg",
+  "match_methods": {
+   "home": {
+    "source": "RSC Anderlecht",
+    "matched": "Anderlecht",
+    "method": "core-tokens",
+    "score": 0.97
+   },
+   "away": {
+    "source": "FC Red Bull Salzburg",
+    "matched": "Salzburg",
+    "method": "alias",
+    "score": 1.0
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.44263045615977115,
+  "p_draw": 0.2547350398789135,
+  "p_away": 0.30263450396131525,
+  "xg_home": 1.6537186225938298,
+  "xg_away": 1.3402900469977004,
+  "xg_total": 2.9940086695915302,
+  "median_total": 3,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.12023041793094964
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.12023041793094964
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.09285665081682737
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.07798668716392182
+   },
+   {
+    "home": 1,
+    "away": 2,
+    "p": 0.07437374208877937
+   },
+   {
+    "home": 2,
+    "away": 0,
+    "p": 0.06876761807261725
+   }
+  ],
+  "btts": 0.6078316875230929,
+  "totals_over": {
+   "over_0.5": 0.9481480719931086,
+   "over_1.5": 0.8095248900921747,
+   "over_2.5": 0.5772404841015922,
+   "over_3.5": 0.35214607880382903,
+   "over_4.5": 0.18027956436951018,
+   "over_5.5": 0.08056183274199483,
+   "over_6.5": 0.03097547375734962
+  },
+  "total_buckets": {
+   "0-1": 0.19047510990782524,
+   "2": 0.23228440599058245,
+   "3": 0.22509440529776317,
+   "4": 0.1718665144343189,
+   "5+": 0.18027956436951018
+  },
+  "clean_sheet_home": 0.2593817104093665,
+  "clean_sheet_away": 0.18463853007443198,
+  "home_goal_dist": [
+   0.18463853007443198,
+   0.32129053985358647,
+   0.2662999905641306,
+   0.14443023788092882,
+   0.05826458246818702,
+   0.01869911919033218,
+   0.004976802178256243,
+   0.0014001977901465696
+  ],
+  "away_goal_dist": [
+   0.2593817104093665,
+   0.35438908107816464,
+   0.2352509443581399,
+   0.10398402103606809,
+   0.03483817843269932,
+   0.009466037805016723,
+   0.002170200532239128,
+   0.0005198263483055338
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    3
+   ],
+   "away_goals_80": [
+    0,
+    3
+   ],
+   "total_goals_80": [
+    1,
+    5
+   ],
+   "goal_diff_80": [
+    -2,
+    2
+   ]
+  },
+  "score_grid": [
+   [
+    0.051852,
+    0.060636,
+    0.043286,
+    0.019682,
+    0.006762,
+    0.001876,
+    0.000438
+   ],
+   [
+    0.077987,
+    0.12023,
+    0.074374,
+    0.033377,
+    0.011326,
+    0.003106,
+    0.000717
+   ],
+   [
+    0.068768,
+    0.092857,
+    0.065066,
+    0.027287,
+    0.009143,
+    0.002478,
+    0.000566
+   ],
+   [
+    0.038182,
+    0.050961,
+    0.033386,
+    0.015417,
+    0.004829,
+    0.001293,
+    0.000292
+   ],
+   [
+    0.0157,
+    0.020725,
+    0.013414,
+    0.00579,
+    0.001997,
+    0.0005,
+    0.000112
+   ],
+   [
+    0.005118,
+    0.006687,
+    0.004278,
+    0.001824,
+    0.000588,
+    0.000162,
+    3.4e-05
+   ],
+   [
+    0.001381,
+    0.001787,
+    0.001131,
+    0.000476,
+    0.000152,
+    3.9e-05,
+    9e-06
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.44313,
+  "p_draw": 0.253625,
+  "p_away": 0.303245,
+  "se": [
+   0.0011107785627657747,
+   0.0009728806693911643,
+   0.001027831382024795
+  ],
+  "max_abs_dev_vs_exact": 0.0011100398789135046,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   1.2505199718055042,
+   2.0961365994418975
+  ],
+  "xg_away_80": [
+   1.0194383884981348,
+   1.6827740557240554
+  ],
+  "p_home_80": [
+   0.329175194604884,
+   0.5666572896975309
+  ],
+  "p_draw_80": [
+   0.21673348819147,
+   0.2791603322959281
+  ],
+  "p_away_80": [
+   0.2075773540622756,
+   0.4080101992760964
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.20478991712631117,
+   0.1860018718318423
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.5187331753754147,
+   "p_draw": 0.24471683066920896,
+   "p_away": 0.23654999395537615,
+   "xg_home": 1.7685475398856318,
+   "xg_away": 1.1266562036448995,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.36478643571972114,
+   "p_draw": 0.24102134470323128,
+   "p_away": 0.3941922195770475,
+   "xg_home": 1.4864448929134797,
+   "xg_away": 1.5537117839992476,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.2111838195983396,
+   "p_draw": 0.2359101871063656,
+   "p_away": 0.552905993295295,
+   "xg_home": 1.1033440308713827,
+   "xg_away": 1.9000272502807158,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.4832416938369637,
+   "p_draw": 0.22060600873606262,
+   "p_away": 0.2961522974269736,
+   "xg_home": 1.9289572439516407,
+   "xg_away": 1.4753041001490228,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.5071673273446802,
+   "p_draw": 0.2484279615954239,
+   "p_away": 0.24440471105989592,
+   "xg_home": 1.725571901506586,
+   "xg_away": 1.1326204703949685,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Home advantage (Europe, fitted from results): \u00d71.32 on Anderlecht's scoring rate.",
+   "effect": 0.2745
+  },
+  {
+   "text": "Context \u2014 Understat xG component (validated, in ensemble): home win +6.9 pp, draw +0.3 pp, away win -7.2 pp (xG +0.11 / -0.20).",
+   "effect": 0.2172
+  },
+  {
+   "text": "Independent results-only Elo: Anderlecht 1576 vs Salzburg 1690 (gap -113 before home advantage).",
+   "effect": 0.1699
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.44263045615977137,
+  "p_draw": 0.2547350398789136,
+  "p_away": 0.3026345039613153,
+  "xg_home": 1.65371862259383,
+  "xg_away": 1.3402900469977006
+ },
+ "context": {
+  "fetched_at": "2026-11-02T07:14:08+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/6112311",
+    "fetched_at": "2026-11-02T07:14:08+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "4-2-3-1",
+    "starters": [
+     {
+      "name": "Colin Coosemans",
+      "pos": "G"
+     },
+     {
+      "name": "Ali Maamar",
+      "pos": "D"
+     },
+     {
+      "name": "Giulian Biancone",
+      "pos": "D"
+     },
+     {
+      "name": "L\u00e9o P\u00e9trot",
+      "pos": "D"
+     },
+     {
+      "name": "Ludwig Augustinsson",
+      "pos": "D"
+     },
+     {
+      "name": "Mario Stroeykens",
+      "pos": "M"
+     },
+     {
+      "name": "Thelo Aasgaard",
+      "pos": "M"
+     },
+     {
+      "name": "Luk\u00e1s Ambros",
+      "pos": "M"
+     },
+     {
+      "name": "Ilias Koutsoupias",
+      "pos": "M"
+     },
+     {
+      "name": "Jayden Seke",
+      "pos": "F"
+     },
+     {
+      "name": "Mihajlo Cvetkovi\u0107",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-11-02T07:14:08+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   },
+   "away": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "4-2-3-1",
+    "starters": [
+     {
+      "name": "Christian Zawieschitzky",
+      "pos": "G"
+     },
+     {
+      "name": "Tim Drexler",
+      "pos": "D"
+     },
+     {
+      "name": "K\u00e9vin Boma",
+      "pos": "D"
+     },
+     {
+      "name": "Valentin Zabransky",
+      "pos": "D"
+     },
+     {
+      "name": "Frans Kr\u00e4tzig",
+      "pos": "D"
+     },
+     {
+      "name": "Abubakr Barry",
+      "pos": "M"
+     },
+     {
+      "name": "Bartosz Mazurek",
+      "pos": "M"
+     },
+     {
+      "name": "Edmund Baidoo",
+      "pos": "F"
+     },
+     {
+      "name": "Gaoussou Diakite",
+      "pos": "F"
+     },
+     {
+      "name": "Yorbe Vertessen",
+      "pos": "F"
+     },
+     {
+      "name": "Haris Tabakovi\u0107",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-11-02T07:14:08+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Killian Sardella",
+     "type": "injury",
+     "expected_return": "Day to day",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6112311",
+     "fetched_at": "2026-11-02T07:14:08+00:00"
+    },
+    {
+     "player": "Ilay Camara",
+     "type": "injury",
+     "expected_return": "Day to day",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6112311",
+     "fetched_at": "2026-11-02T07:14:08+00:00"
+    },
+    {
+     "player": "Lucas Hey",
+     "type": "injury",
+     "expected_return": "Early January 2027",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6112311",
+     "fetched_at": "2026-11-02T07:14:08+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "Jesper Lindstr\u00f8m",
+     "type": "injury",
+     "expected_return": "About a week",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6112311",
+     "fetched_at": "2026-11-02T07:14:08+00:00"
+    },
+    {
+     "player": "John Mellberg",
+     "type": "injury",
+     "expected_return": "About 1-2 weeks",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6112311",
+     "fetched_at": "2026-11-02T07:14:08+00:00"
+    },
+    {
+     "player": "Sota Kitano",
+     "type": "injury",
+     "expected_return": "About 1-2 weeks",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6112311",
+     "fetched_at": "2026-11-02T07:14:08+00:00"
+    },
+    {
+     "player": "Dominik Schmid",
+     "type": "injury",
+     "expected_return": "Early January 2027",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6112311",
+     "fetched_at": "2026-11-02T07:14:08+00:00"
+    },
+    {
+     "player": "Damir Redzic",
+     "type": "injury",
+     "expected_return": "A few weeks",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6112311",
+     "fetched_at": "2026-11-02T07:14:08+00:00"
+    },
+    {
+     "player": "Nikolas Veratschnig",
+     "type": "injury",
+     "expected_return": "Mid December 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6112311",
+     "fetched_at": "2026-11-02T07:14:08+00:00"
+    },
+    {
+     "player": "Enrique Aguilar",
+     "type": "injury",
+     "expected_return": "A few weeks",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6112311",
+     "fetched_at": "2026-11-02T07:14:08+00:00"
+    },
+    {
+     "player": "Justin Omoregie",
+     "type": "injury",
+     "expected_return": "Out for season",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6112311",
+     "fetched_at": "2026-11-02T07:14:08+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 11,
+    "n21": 1,
+    "last_match": "2026-10-25"
+   },
+   "away": {
+    "rest_days": 11,
+    "n21": 2,
+    "last_match": "2026-10-25"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 713.6
+  },
+  "venue": {
+   "name": "Lotto Park",
+   "city": "Bruxelles (Brussel)",
+   "lat": 50.834182156,
+   "lon": 4.298352599
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 3.1,
+   "temp_c": 6.5,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=50.834&longitude=4.298",
+   "fetched_at": "2026-11-02T07:14:08+00:00",
+   "lat": 50.834182156,
+   "lon": 4.298352599
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": 6.93,
+    "d_p_draw_pp": 0.31,
+    "d_p_away_pp": -7.24,
+    "d_xg_home": 0.113,
+    "d_xg_away": -0.205
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": -0.0,
+    "d_p_draw_pp": -0.0,
+    "d_p_away_pp": -0.0,
+    "d_xg_home": -0.0,
+    "d_xg_away": -0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0328,
+    "away_rate_mult": 1.0137,
+    "d_p_home_pp": 0.88,
+    "d_p_draw_pp": -0.42,
+    "d_p_away_pp": -0.46,
+    "d_xg_home": 0.052,
+    "d_xg_away": 0.018,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": -0.0,
+    "d_p_draw_pp": -0.0,
+    "d_p_away_pp": -0.0,
+    "d_xg_home": -0.0,
+    "d_xg_away": -0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "reason": "failed validation; no live features"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": -0.0,
+   "d_p_draw_pp": -0.0,
+   "d_p_away_pp": -0.0,
+   "d_xg_home": -0.0,
+   "d_xg_away": -0.0
+  },
+  "features": {
+   "rest_h": 11.0,
+   "rest_a": 11.0,
+   "n21_h": 1.0,
+   "n21_a": 2.0,
+   "travel_km": 713.6089659622072,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 3.1,
+   "temp_c": 6.5
+  }
+ },
+ "confidence": {
+  "tier": "LOW",
+  "p_max": 0.44263045615977115,
+  "entropy_nats": 1.070828516098341,
+  "text": "Most likely result has P = 44.3%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.3% \u00b1 0.4% (n=16754, mean forecast 44.6%). Backtest RPS for UCL: 0.1961; exact-score top-5 hit rate 40.2% (n=503). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: LOW (entropy 1.071 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Europa/Conference League: modelled with the Champions League home-advantage and scoring environment (no UEL/UECL results ingested yet).",
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Anderlecht: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Anderlecht: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.",
+  "Salzburg: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Salzburg: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+ ],
+ "verdict": "Anderlecht 1\u20131 Salzburg is the single most probable scoreline at 12.0%: expected goals 1.65\u20131.34 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.048). Exact scores are inherently uncertain; the 1X2 split is 44.3%/25.5%/30.3%.",
+ "resolved": {
+  "home_key": "Belgium:Anderlecht",
+  "away_key": "Austria:Salzburg",
+  "div": "UCL",
+  "home_div": "B1",
+  "away_div": "AUT",
+  "country": "Europe"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: FC Red Bull Salzburg at RSC Anderlecht\nCompetition: UEFA Europa League 2025\nDate: 2026-11-05 12:45 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-10-30\n\nPRIMARY FINAL SCORE PREDICTION\n\nRSC Anderlecht 1 \u2013 1 FC Red Bull Salzburg\n(modal exact score, probability 12.0%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.65\nAway: 1.34\nExpected Total: 2.99\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 44.3%\nDraw: 25.5%\nAway Win: 30.3%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 12.0%\n2. 2\u20131: 9.3%\n3. 1\u20130: 7.8%\n4. 1\u20132: 7.4%\n5. 2\u20130: 6.9%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 19.0%\nTotal 2 goals: 23.2%\nTotal 3 goals: 22.5%\nTotal 4 goals: 17.2%\nTotal 5+ goals: 18.0%\n\nBoth Teams Score: 60.8%\nClean sheet RSC Anderlecht: 25.9% \u00b7 Clean sheet FC Red Bull Salzburg: 18.5%\n\nMATCH INTELLIGENCE\n\n1. Home advantage (Europe, fitted from results): \u00d71.32 on Anderlecht's scoring rate.\n2. Context \u2014 Understat xG component (validated, in ensemble): home win +6.9 pp, draw +0.3 pp, away win -7.2 pp (xG +0.11 / -0.20).\n3. Independent results-only Elo: Anderlecht 1576 vs Salzburg 1690 (gap -113 before home advantage).\n\nMODEL CONFIDENCE\n\nMost likely result has P = 44.3%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.3% \u00b1 0.4% (n=16754, mean forecast 44.6%). Backtest RPS for UCL: 0.1961; exact-score top-5 hit rate 40.2% (n=503). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: LOW (entropy 1.071 nats of max 1.099).\nParameter-uncertainty 80% bands: xG RSC Anderlecht 1.25\u20132.10, xG FC Red Bull Salzburg 1.02\u20131.68; P(home win) 32.9%\u201356.7%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0011 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nAnderlecht: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-11-02 02:14 EST (4-2-3-1)\n  Colin Coosemans (G), Ali Maamar (D), Giulian Biancone (D), L\u00e9o P\u00e9trot (D), Ludwig Augustinsson (D), Mario Stroeykens (M), Thelo Aasgaard (M), Luk\u00e1s Ambros (M), Ilias Koutsoupias (M), Jayden Seke (F), Mihajlo Cvetkovi\u0107 (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\nSalzburg: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-11-02 02:14 EST (4-2-3-1)\n  Christian Zawieschitzky (G), Tim Drexler (D), K\u00e9vin Boma (D), Valentin Zabransky (D), Frans Kr\u00e4tzig (D), Abubakr Barry (M), Bartosz Mazurek (M), Edmund Baidoo (F), Gaoussou Diakite (F), Yorbe Vertessen (F), Haris Tabakovi\u0107 (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nKEY ABSENCES\n\n- Anderlecht: Killian Sardella \u2014 injury, Day to day [FotMob, 2026-11-02 02:14 EST]\n- Anderlecht: Ilay Camara \u2014 injury, Day to day [FotMob, 2026-11-02 02:14 EST]\n- Anderlecht: Lucas Hey \u2014 injury, Early January 2027 [FotMob, 2026-11-02 02:14 EST]\n- Salzburg: Jesper Lindstr\u00f8m \u2014 injury, About a week [FotMob, 2026-11-02 02:14 EST]\n- Salzburg: John Mellberg \u2014 injury, About 1-2 weeks [FotMob, 2026-11-02 02:14 EST]\n- Salzburg: Sota Kitano \u2014 injury, About 1-2 weeks [FotMob, 2026-11-02 02:14 EST]\n- Salzburg: Dominik Schmid \u2014 injury, Early January 2027 [FotMob, 2026-11-02 02:14 EST]\n- Salzburg: Damir Redzic \u2014 injury, A few weeks [FotMob, 2026-11-02 02:14 EST]\n- Salzburg: Nikolas Veratschnig \u2014 injury, Mid December 2026 [FotMob, 2026-11-02 02:14 EST]\n- Salzburg: Enrique Aguilar \u2014 injury, A few weeks [FotMob, 2026-11-02 02:14 EST]\n- Salzburg: Justin Omoregie \u2014 injury, Out for season [FotMob, 2026-11-02 02:14 EST]\n\nWEATHER AT VENUE\n\nLotto Park, Bruxelles (Brussel): 6.5 \u00b0C, wind 3.1 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-11-02 02:14 EST]\n\nREST & TRAVEL\n\nAnderlecht: 11 days' rest, 1 matches in previous 21 days \u00b7 Salzburg: 11 days' rest, 2 in 21 days \u00b7 away travel 713.6 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 44.3% / 25.5% / 30.3%, xG 1.65\u20131.34\n- Understat xG component (validated, in ensemble): home +6.93 pp, draw +0.31 pp, away -7.24 pp; xG +0.113 / -0.205\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home -0.00 pp, draw -0.00 pp, away -0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.88 pp, draw -0.42 pp, away -0.46 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home -0.00 pp, draw -0.00 pp, away -0.00 pp\n- lineup: not applied (failed validation; no live features)\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Europa/Conference League: modelled with the Champions League home-advantage and scoring environment (no UEL/UECL results ingested yet).\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Anderlecht: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Anderlecht: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n- Salzburg: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Salzburg: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nFINAL VERDICT\n\nAnderlecht 1\u20131 Salzburg is the single most probable scoreline at 12.0%: expected goals 1.65\u20131.34 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.048). Exact scores are inherently uncertain; the 1X2 split is 44.3%/25.5%/30.3%.\n",
+ "frozen_at": "2026-11-02T07:14:08+00:00",
+ "sha256": "5ebe15eb9182be2d9f972f62ca86a1c11deb616657d9c43823ac9a252c5f835f"
+}
