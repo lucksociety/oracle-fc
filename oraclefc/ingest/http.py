@@ -15,7 +15,7 @@ _S.headers.update({"User-Agent": UA, "Accept": "application/json, text/plain, */
 
 
 def get_json(url: str, cache: Path | None = None, max_age_h: float | None = None, headers: dict | None = None,
-             retries: int = 4, timeout: float = 30.0, params: dict | None = None):
+             retries: int = 4, timeout: float = 30.0, params: dict | None = None, deadline: float | None = None):
     """GET JSON with retries/backoff. If ``cache`` is given and fresh (or max_age_h is None and it
     exists), return the cached body. Returns None on persistent failure (never fabricates)."""
     if cache is not None and cache.exists():
@@ -27,8 +27,12 @@ def get_json(url: str, cache: Path | None = None, max_age_h: float | None = None
                 pass
     last = None
     for i in range(retries):
+        remaining = None if deadline is None else deadline - time.monotonic()
+        if remaining is not None and remaining <= 0:
+            break
+        request_timeout = timeout if remaining is None else max(0.001, min(timeout, remaining))
         try:
-            r = _S.get(url, headers=headers, timeout=timeout, params=params)
+            r = _S.get(url, headers=headers, timeout=request_timeout, params=params)
             if r.status_code == 200:
                 data = r.json()
                 if cache is not None:
@@ -40,6 +44,11 @@ def get_json(url: str, cache: Path | None = None, max_age_h: float | None = None
                 break
         except Exception as e:  # network / JSON errors
             last = repr(e)
-        time.sleep((2 ** i) + random.random())
+        if i + 1 < retries:
+            pause = (2 ** i) + random.random()
+            if deadline is not None:
+                pause = min(pause, max(0.0, deadline - time.monotonic()))
+            if pause > 0:
+                time.sleep(pause)
     print(f"   ! GET failed {url}: {last}", flush=True)
     return None

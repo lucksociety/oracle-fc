@@ -13,6 +13,8 @@ from __future__ import annotations
 from concurrent.futures import ThreadPoolExecutor
 
 import pandas as pd
+import time
+import os
 
 from .. import config
 from ..governance import assert_no_market_columns
@@ -34,19 +36,20 @@ def current_season() -> int:
     return t.year if t.month >= 7 else t.year - 1
 
 
-def league_data(league: str, season: int):
+def league_data(league: str, season: int, deadline=None):
     fresh = season >= current_season()
     return get_json(f"{BASE}/getLeagueData/{league}/{season}", RAW / f"league_{league}_{season}.json",
-                    max_age_h=6 if fresh else None, headers=HDR)
+                    max_age_h=6 if fresh else None, headers=HDR,
+                    retries=1 if deadline is not None else 4, timeout=5 if deadline is not None else 30, deadline=deadline)
 
 
-def matches(seasons=range(2019, 2100)) -> pd.DataFrame:
+def matches(seasons=range(2019, 2100), deadline=None) -> pd.DataFrame:
     rows = []
     for lg, div in LEAGUES.items():
         for s in seasons:
             if s > current_season():
                 break
-            d = league_data(lg, s)
+            d = league_data(lg, s, deadline=deadline)
             if not d:
                 continue
             for m in d.get("dates", []):
@@ -56,7 +59,7 @@ def matches(seasons=range(2019, 2100)) -> pd.DataFrame:
                              "home": m["h"]["title"], "away": m["a"]["title"],
                              "hg": _num(m["goals"]["h"]), "ag": _num(m["goals"]["a"]),
                              "hxg": _num(m["xG"]["h"]), "axg": _num(m["xG"]["a"])})
-    df = pd.DataFrame(rows)
+    df = pd.DataFrame(rows, columns=['us_id', 'league', 'div', 'season', 'datetime', 'is_result', 'home', 'away', 'hg', 'ag', 'hxg', 'axg'])
     assert_no_market_columns(df, "understat matches")
     return df
 
@@ -68,13 +71,14 @@ def _num(x):
         return float("nan")
 
 
-def match_rosters(us_id: int):
-    return get_json(f"{BASE}/getMatchData/{us_id}", RAW / "matches" / f"{us_id}.json", max_age_h=None, headers=HDR)
+def match_rosters(us_id: int, deadline=None):
+    return get_json(f"{BASE}/getMatchData/{us_id}", RAW / "matches" / f"{us_id}.json", max_age_h=None, headers=HDR, retries=1 if deadline is not None else 4,
+                    timeout=5 if deadline is not None else 30, deadline=deadline)
 
 
-def rosters(match_ids, workers: int = 8) -> pd.DataFrame:
+def rosters(match_ids, workers: int = 8, deadline=None) -> pd.DataFrame:
     def one(mid):
-        d = match_rosters(mid)
+        d = match_rosters(mid, deadline=deadline)
         out = []
         if not d or "rosters" not in d:
             return out
@@ -113,23 +117,32 @@ def build(seasons=range(2019, 2100)):
     return m, r
 
 
-def update(max_age_h: float = 3.0):
+def update(max_age_h: float = 3.0, max_seconds: float | None = None):
     """Incremental refresh for the pipeline: re-read the current season's fixture lists and
     fetch rosters only for played matches not yet in the committed snapshot."""
     pm = config.CONTEXT_DIR / "understat_matches.parquet"
     pp = config.CONTEXT_DIR / "understat_players.parquet"
     if not pm.exists() or not pp.exists():
+        if max_seconds is not None:
+            print('Understat snapshot missing; optional context bootstrap deferred to the historical build')
+            return None
         return build()
     old_m, old_p = pd.read_parquet(pm), pd.read_parquet(pp)
     cur = current_season()
-    new_m = matches(range(cur - 1, cur + 1))
+    deadline = None if max_seconds is None else time.monotonic() + max_seconds
+    new_m = matches(range(cur - 1, cur + 1), deadline=deadline)
+    if new_m.empty:
+        print('Understat unavailable within refresh budget; retaining last good context snapshot')
+        return old_m, old_p
     m = pd.concat([old_m[~old_m["us_id"].isin(new_m["us_id"])], new_m], ignore_index=True)
     have = set(old_p["us_id"].unique())
     todo = [i for i in m.loc[m["is_result"], "us_id"] if i not in have]
-    r = rosters(todo) if todo else old_p.iloc[:0]
+    r = rosters(todo, deadline=deadline) if todo else old_p.iloc[:0]
     p = pd.concat([old_p, r], ignore_index=True) if len(r) else old_p
-    m.to_parquet(pm, index=False)
-    p.to_parquet(pp, index=False)
+    for frame, path in ((m, pm), (p, pp)):
+        temporary = path.with_suffix('.tmp.parquet')
+        frame.to_parquet(temporary, index=False)
+        os.replace(temporary, path)
     print(f"understat update: {len(todo)} new played matches, {len(r)} player rows added")
     return m, p
 
