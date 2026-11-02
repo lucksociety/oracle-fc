@@ -1,0 +1,615 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-11-01",
+ "input_fingerprint": "b4abbb0906d4a9bbef34120dbb14ecdda8f3442e0383d60bfe598a459aedf216",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-11-02T19:32:40+00:00",
+ "fixture": {
+  "event_id": "POLY-1209111",
+  "home_name": "FC Lorient",
+  "away_name": "Stade Brestois 29",
+  "competition": "Ligue 1 2025",
+  "subcategory": "fl1",
+  "kickoff_utc": "2026-11-02T19:45:00+00:00",
+  "kickoff_local": "2026-11-02 14:45 EST",
+  "home_matched": "Lorient",
+  "away_matched": "Brest",
+  "match_methods": {
+   "home": {
+    "source": "FC Lorient",
+    "matched": "Lorient",
+    "method": "core-tokens",
+    "score": 0.97
+   },
+   "away": {
+    "source": "Stade Brestois 29",
+    "matched": "Brest",
+    "method": "alias",
+    "score": 1.0
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.4591795655924744,
+  "p_draw": 0.2632415921272345,
+  "p_away": 0.277578842280291,
+  "xg_home": 1.6256922001495637,
+  "xg_away": 1.2261708904468684,
+  "xg_total": 2.8518630905964324,
+  "median_total": 3,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.12660371184987804
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.12660371184987804
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.0961436801365787
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.08812491501575105
+   },
+   {
+    "home": 2,
+    "away": 0,
+    "p": 0.07512896139806345
+   },
+   {
+    "home": 1,
+    "away": 2,
+    "p": 0.0715232915004986
+   }
+  ],
+  "btts": 0.5854337696124787,
+  "totals_over": {
+   "over_0.5": 0.9405820179133096,
+   "over_1.5": 0.7876496853194325,
+   "over_2.5": 0.5443587724716348,
+   "over_3.5": 0.31986650483187273,
+   "over_4.5": 0.15681485046626614,
+   "over_5.5": 0.06693693923068035,
+   "over_6.5": 0.024502421274220164
+  },
+  "total_buckets": {
+   "0-1": 0.21235031468056764,
+   "2": 0.24329091284779758,
+   "3": 0.224492267639762,
+   "4": 0.16305165436560662,
+   "5+": 0.15681485046626614
+  },
+  "clean_sheet_home": 0.28537114140150177,
+  "clean_sheet_away": 0.18861307107271008,
+  "home_goal_dist": [
+   0.18861307107271008,
+   0.3255401297556408,
+   0.26591120618865405,
+   0.14139933664516013,
+   0.05561402457476177,
+   0.01729978193681175,
+   0.004437896195359347,
+   0.0011845536309021396
+  ],
+  "away_goal_dist": [
+   0.28537114140150177,
+   0.36778899178378155,
+   0.22453195649557878,
+   0.08891690755580561,
+   0.026005126673371834,
+   0.006019149691753474,
+   0.0011500435895370053,
+   0.00021668280866992898
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    3
+   ],
+   "away_goals_80": [
+    0,
+    3
+   ],
+   "total_goals_80": [
+    1,
+    5
+   ],
+   "goal_diff_80": [
+    -2,
+    2
+   ]
+  },
+  "score_grid": [
+   [
+    0.059418,
+    0.064807,
+    0.041558,
+    0.016572,
+    0.004871,
+    0.00113,
+    0.000216
+   ],
+   [
+    0.088125,
+    0.126604,
+    0.071523,
+    0.02852,
+    0.008382,
+    0.001944,
+    0.000372
+   ],
+   [
+    0.075129,
+    0.096144,
+    0.062261,
+    0.023504,
+    0.006907,
+    0.001602,
+    0.000306
+   ],
+   [
+    0.040253,
+    0.051511,
+    0.031581,
+    0.0133,
+    0.0037,
+    0.000858,
+    0.000164
+   ],
+   [
+    0.015889,
+    0.020332,
+    0.012465,
+    0.00497,
+    0.001542,
+    0.000339,
+    6.5e-05
+   ],
+   [
+    0.004948,
+    0.006332,
+    0.003882,
+    0.001548,
+    0.000455,
+    0.000111,
+    2e-05
+   ],
+   [
+    0.00127,
+    0.001625,
+    0.000996,
+    0.000397,
+    0.000117,
+    2.7e-05,
+    5e-06
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.461255,
+  "p_draw": 0.26249,
+  "p_away": 0.27625500000000003,
+  "se": [
+   0.001114672205123551,
+   0.0009838419585990424,
+   0.0009998454254908607
+  ],
+  "max_abs_dev_vs_exact": 0.0020754344075256115,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   1.242887217765398,
+   2.044317480936387
+  ],
+  "xg_away_80": [
+   0.8990788182727188,
+   1.5800757382117567
+  ],
+  "p_home_80": [
+   0.34962505362974144,
+   0.5796704321907387
+  ],
+  "p_draw_80": [
+   0.21983999677726426,
+   0.2857338918324752
+  ],
+  "p_away_80": [
+   0.18964715577608773,
+   0.3842089917581279
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.1972928814810898,
+   0.2092582673030108
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.46080242148592016,
+   "p_draw": 0.26102223791622325,
+   "p_away": 0.27817534059785665,
+   "xg_home": 1.5719018349025569,
+   "xg_away": 1.1702756263332683,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.47097038103577515,
+   "p_draw": 0.2468374076927166,
+   "p_away": 0.28219221127150806,
+   "xg_home": 1.606711619184995,
+   "xg_away": 1.1878648869439126,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.4771983364393735,
+   "p_draw": 0.27867980376634033,
+   "p_away": 0.24412185979428616,
+   "xg_home": 1.4700196313402516,
+   "xg_away": 0.9801122169657438,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.4475247565762307,
+   "p_draw": 0.24448663547528351,
+   "p_away": 0.3079886079484857,
+   "xg_home": 1.6059011970926544,
+   "xg_away": 1.2922811598215187,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.4510439173727113,
+   "p_draw": 0.25807307284766157,
+   "p_away": 0.29088300977962706,
+   "xg_home": 1.5875726758759372,
+   "xg_away": 1.2315565392164887,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Home advantage (France, fitted from results): \u00d71.18 on Lorient's scoring rate.",
+   "effect": 0.1648
+  },
+  {
+   "text": "Lorient attack vs Brest defence: time-weighted strength gap multiplies Lorient's scoring rate by \u00d71.11 relative to an average pairing (from 28/30 decay-weighted matches).",
+   "effect": 0.1021
+  },
+  {
+   "text": "Independent results-only Elo: Lorient 1603 vs Brest 1563 (gap +41 before home advantage).",
+   "effect": 0.0608
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.4591795655924744,
+  "p_draw": 0.2632415921272345,
+  "p_away": 0.277578842280291,
+  "xg_home": 1.6256922001495637,
+  "xg_away": 1.2261708904468684
+ },
+ "context": {
+  "fetched_at": "2026-11-02T19:32:40+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5802975",
+    "fetched_at": "2026-11-02T19:32:41+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "confirmed",
+    "source": "FotMob official team sheet",
+    "formation": "3-4-2-1",
+    "starters": [
+     {
+      "name": "Yvon Mvogo",
+      "pos": "G"
+     },
+     {
+      "name": "Nathaniel Adjei",
+      "pos": "D"
+     },
+     {
+      "name": "Montassar Talbi",
+      "pos": "D"
+     },
+     {
+      "name": "Souleymane Tour\u00e9",
+      "pos": "D"
+     },
+     {
+      "name": "Dembo Sylla",
+      "pos": "M"
+     },
+     {
+      "name": "Noah Cadiou",
+      "pos": "M"
+     },
+     {
+      "name": "Arthur Avom",
+      "pos": "M"
+     },
+     {
+      "name": "Ars\u00e8ne Kouassi",
+      "pos": "M"
+     },
+     {
+      "name": "Jean-Victor Makengo",
+      "pos": "M"
+     },
+     {
+      "name": "Souleymane Faye",
+      "pos": "F"
+     },
+     {
+      "name": "Ibrahima Bald\u00e9",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-11-02T19:32:41+00:00",
+    "n_configurations": 1,
+    "unmatched_players": [],
+    "mean_xi_attack_index": -0.075,
+    "mean_continuity": 0.879,
+    "p_backup_gk": 0.0
+   },
+   "away": {
+    "status": "confirmed",
+    "source": "FotMob official team sheet",
+    "formation": "4-2-3-1",
+    "starters": [
+     {
+      "name": "Egil Selvik",
+      "pos": "G"
+     },
+     {
+      "name": "Kenny Lala",
+      "pos": "D"
+     },
+     {
+      "name": "Lucas Tousart",
+      "pos": "M"
+     },
+     {
+      "name": "Gautier Lloris",
+      "pos": "D"
+     },
+     {
+      "name": "Bradley Locko",
+      "pos": "D"
+     },
+     {
+      "name": "Joris Chotard",
+      "pos": "M"
+     },
+     {
+      "name": "Hugo Magnetti",
+      "pos": "M"
+     },
+     {
+      "name": "Mama Bald\u00e9",
+      "pos": "F"
+     },
+     {
+      "name": "Kamory Doumbia",
+      "pos": "M"
+     },
+     {
+      "name": "Path\u00e9 Mboup",
+      "pos": "F"
+     },
+     {
+      "name": "Ludovic Ajorque",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-11-02T19:32:41+00:00",
+    "n_configurations": 1,
+    "unmatched_players": [],
+    "mean_xi_attack_index": 0.017,
+    "mean_continuity": 1.206,
+    "p_backup_gk": 0.0
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Mohamed Bamba",
+     "type": "injury",
+     "expected_return": "About 1-2 weeks",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5802975",
+     "fetched_at": "2026-11-02T19:32:41+00:00"
+    },
+    {
+     "player": "Bandiougou Fadiga",
+     "type": "injury",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5802975",
+     "fetched_at": "2026-11-02T19:32:41+00:00"
+    },
+    {
+     "player": "Panos Katseris",
+     "type": "injury",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5802975",
+     "fetched_at": "2026-11-02T19:32:41+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "Brendan Chardonnet",
+     "type": "injury",
+     "expected_return": "About 1-2 weeks",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5802975",
+     "fetched_at": "2026-11-02T19:32:41+00:00"
+    },
+    {
+     "player": "Rapha\u00ebl Le Guen",
+     "type": "injury",
+     "expected_return": "Late January 2027",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5802975",
+     "fetched_at": "2026-11-02T19:32:41+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 8,
+    "n21": 2,
+    "last_match": "2026-10-25"
+   },
+   "away": {
+    "rest_days": 10,
+    "n21": 2,
+    "last_match": "2026-10-23"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 109.0
+  },
+  "venue": {
+   "name": "Stade du Moustoir - Yves Allainmat",
+   "city": "Lorient",
+   "lat": 47.748821296,
+   "lon": -3.36902082
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 5.275,
+   "temp_c": 11.4,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=47.749&longitude=-3.369",
+   "fetched_at": "2026-11-02T19:32:41+00:00",
+   "lat": 47.748821296,
+   "lon": -3.36902082
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": -1.02,
+    "d_p_draw_pp": 0.53,
+    "d_p_away_pp": 0.49,
+    "d_xg_home": -0.008,
+    "d_xg_away": 0.025
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0114,
+    "away_rate_mult": 1.0048,
+    "d_p_home_pp": 0.32,
+    "d_p_draw_pp": -0.16,
+    "d_p_away_pp": -0.16,
+    "d_xg_home": 0.018,
+    "d_xg_away": 0.006,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "home_rate_mult": 0.9812,
+    "away_rate_mult": 1.0203,
+    "d_p_home_pp": -1.27,
+    "d_p_draw_pp": 0.18,
+    "d_p_away_pp": 1.09,
+    "d_xg_home": -0.029,
+    "d_xg_away": 0.024,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 8.0,
+   "rest_a": 10.0,
+   "n21_h": 2.0,
+   "n21_a": 2.0,
+   "travel_km": 108.97805140574745,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 5.275,
+   "temp_c": 11.4
+  }
+ },
+ "confidence": {
+  "tier": "LOW",
+  "p_max": 0.4591795655924744,
+  "entropy_nats": 1.0644889482653055,
+  "text": "Most likely result has P = 45.9%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.3% \u00b1 0.4% (n=16754, mean forecast 44.6%). Backtest RPS for F1: 0.2071; exact-score top-5 hit rate 45.4% (n=990). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: LOW (entropy 1.064 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Lorient: lineup CONFIRMED (FotMob official team sheet).",
+  "Brest: lineup CONFIRMED (FotMob official team sheet)."
+ ],
+ "verdict": "Lorient 1\u20131 Brest is the single most probable scoreline at 12.7%: expected goals 1.63\u20131.23 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.047). Exact scores are inherently uncertain; the 1X2 split is 45.9%/26.3%/27.8%.",
+ "resolved": {
+  "home_key": "France:Lorient",
+  "away_key": "France:Brest",
+  "div": "F1",
+  "home_div": "F1",
+  "away_div": "F1",
+  "country": "France"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: Stade Brestois 29 at FC Lorient\nCompetition: Ligue 1 2025\nDate: 2026-11-02 14:45 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-11-01\n\nPRIMARY FINAL SCORE PREDICTION\n\nFC Lorient 1 \u2013 1 Stade Brestois 29\n(modal exact score, probability 12.7%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.63\nAway: 1.23\nExpected Total: 2.85\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 45.9%\nDraw: 26.3%\nAway Win: 27.8%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 12.7%\n2. 2\u20131: 9.6%\n3. 1\u20130: 8.8%\n4. 2\u20130: 7.5%\n5. 1\u20132: 7.2%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 21.2%\nTotal 2 goals: 24.3%\nTotal 3 goals: 22.4%\nTotal 4 goals: 16.3%\nTotal 5+ goals: 15.7%\n\nBoth Teams Score: 58.5%\nClean sheet FC Lorient: 28.5% \u00b7 Clean sheet Stade Brestois 29: 18.9%\n\nMATCH INTELLIGENCE\n\n1. Home advantage (France, fitted from results): \u00d71.18 on Lorient's scoring rate.\n2. Lorient attack vs Brest defence: time-weighted strength gap multiplies Lorient's scoring rate by \u00d71.11 relative to an average pairing (from 28/30 decay-weighted matches).\n3. Independent results-only Elo: Lorient 1603 vs Brest 1563 (gap +41 before home advantage).\n\nMODEL CONFIDENCE\n\nMost likely result has P = 45.9%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.3% \u00b1 0.4% (n=16754, mean forecast 44.6%). Backtest RPS for F1: 0.2071; exact-score top-5 hit rate 45.4% (n=990). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: LOW (entropy 1.064 nats of max 1.099).\nParameter-uncertainty 80% bands: xG FC Lorient 1.24\u20132.04, xG Stade Brestois 29 0.90\u20131.58; P(home win) 35.0%\u201358.0%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0021 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nLorient: CONFIRMED \u2014 FotMob official team sheet, fetched 2026-11-02 14:32 EST (3-4-2-1)\n  Yvon Mvogo (G), Nathaniel Adjei (D), Montassar Talbi (D), Souleymane Tour\u00e9 (D), Dembo Sylla (M), Noah Cadiou (M), Arthur Avom (M), Ars\u00e8ne Kouassi (M), Jean-Victor Makengo (M), Souleymane Faye (F), Ibrahima Bald\u00e9 (F)\n  1 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs -0.075 (log) \u00b7 continuity +0.88 \u00b7 P(backup GK) 0%\nBrest: CONFIRMED \u2014 FotMob official team sheet, fetched 2026-11-02 14:32 EST (4-2-3-1)\n  Egil Selvik (G), Kenny Lala (D), Lucas Tousart (M), Gautier Lloris (D), Bradley Locko (D), Joris Chotard (M), Hugo Magnetti (M), Mama Bald\u00e9 (F), Kamory Doumbia (M), Path\u00e9 Mboup (F), Ludovic Ajorque (F)\n  1 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs +0.017 (log) \u00b7 continuity +1.21 \u00b7 P(backup GK) 0%\n\nKEY ABSENCES\n\n- Lorient: Mohamed Bamba \u2014 injury, About 1-2 weeks [FotMob, 2026-11-02 14:32 EST]\n- Lorient: Bandiougou Fadiga \u2014 injury, Mid November 2026 [FotMob, 2026-11-02 14:32 EST]\n- Lorient: Panos Katseris \u2014 injury, Mid November 2026 [FotMob, 2026-11-02 14:32 EST]\n- Brest: Brendan Chardonnet \u2014 injury, About 1-2 weeks [FotMob, 2026-11-02 14:32 EST]\n- Brest: Rapha\u00ebl Le Guen \u2014 injury, Late January 2027 [FotMob, 2026-11-02 14:32 EST]\n\nWEATHER AT VENUE\n\nStade du Moustoir - Yves Allainmat, Lorient: 11.4 \u00b0C, wind 5.3 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-11-02 14:32 EST]\n\nREST & TRAVEL\n\nLorient: 8 days' rest, 2 matches in previous 21 days \u00b7 Brest: 10 days' rest, 2 in 21 days \u00b7 away travel 109.0 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 45.9% / 26.3% / 27.8%, xG 1.63\u20131.23\n- Understat xG component (validated, in ensemble): home -1.02 pp, draw +0.53 pp, away +0.49 pp; xG -0.008 / +0.025\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.32 pp, draw -0.16 pp, away -0.16 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- lineup: NOT APPLIED (failed out-of-sample validation); would have moved home -1.27 pp, draw +0.18 pp, away +1.09 pp\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Lorient: lineup CONFIRMED (FotMob official team sheet).\n- Brest: lineup CONFIRMED (FotMob official team sheet).\n\nFINAL VERDICT\n\nLorient 1\u20131 Brest is the single most probable scoreline at 12.7%: expected goals 1.63\u20131.23 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.047). Exact scores are inherently uncertain; the 1X2 split is 45.9%/26.3%/27.8%.\n",
+ "frozen_at": "2026-11-02T19:32:41+00:00",
+ "sha256": "db75796688ead523a10920ff9e77eaf8376796292a698a06e5b67450b5cbcaa5"
+}
