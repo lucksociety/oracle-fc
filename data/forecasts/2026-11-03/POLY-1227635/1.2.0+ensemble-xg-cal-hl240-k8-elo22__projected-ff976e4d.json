@@ -1,0 +1,602 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-11-03",
+ "input_fingerprint": "2b496214a714c6c247d21cc4d8d6f0d6ca240398cabf4dfbc8806167e27902c4",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-11-03T15:32:29+00:00",
+ "fixture": {
+  "event_id": "POLY-1227635",
+  "home_name": "West Bromwich Albion FC",
+  "away_name": "Southampton FC",
+  "competition": "EFL Championship",
+  "subcategory": "elc",
+  "kickoff_utc": "2026-11-03T20:00:00+00:00",
+  "kickoff_local": "2026-11-03 15:00 EST",
+  "home_matched": "West Brom",
+  "away_matched": "Southampton",
+  "match_methods": {
+   "home": {
+    "source": "West Bromwich Albion FC",
+    "matched": "West Brom",
+    "method": "alias",
+    "score": 1.0
+   },
+   "away": {
+    "source": "Southampton FC",
+    "matched": "Southampton",
+    "method": "core-tokens",
+    "score": 0.97
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.31828721338318877,
+  "p_draw": 0.27954855641079035,
+  "p_away": 0.402164230206021,
+  "xg_home": 1.2343802279440639,
+  "xg_away": 1.411826682701285,
+  "xg_total": 2.6462069106453487,
+  "median_total": 2,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.13612846252520805
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.13612846252520805
+   },
+   {
+    "home": 0,
+    "away": 1,
+    "p": 0.09423776235440033
+   },
+   {
+    "home": 1,
+    "away": 2,
+    "p": 0.08931133515124264
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.08133274174353257
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.07756696767577849
+   }
+  ],
+  "btts": 0.5541295150338049,
+  "totals_over": {
+   "over_0.5": 0.9269450296531863,
+   "over_1.5": 0.7513745255552533,
+   "over_2.5": 0.49375438206126354,
+   "over_3.5": 0.27382358838949955,
+   "over_4.5": 0.12580115995758068,
+   "over_5.5": 0.05024957863251406,
+   "over_6.5": 0.017153256606014522
+  },
+  "total_buckets": {
+   "0-1": 0.24862547444474672,
+   "2": 0.25762014349398976,
+   "3": 0.21993079367176402,
+   "4": 0.14802242843191885,
+   "5+": 0.12580115995758068
+  },
+  "clean_sheet_home": 0.23561518245486457,
+  "clean_sheet_away": 0.28331027285814425,
+  "home_goal_dist": [
+   0.28331027285814425,
+   0.3670170139334803,
+   0.22534424387991162,
+   0.09002549590948765,
+   0.02662444681005479,
+   0.006239076964396728,
+   0.0012079970018736023,
+   0.00023145264265097393
+  ],
+  "away_goal_dist": [
+   0.23561518245486457,
+   0.3510950874301721,
+   0.24766413689247727,
+   0.11375246406279112,
+   0.038656068515468475,
+   0.010393825674757304,
+   0.0023058304711120158,
+   0.0005174044983570794
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    3
+   ],
+   "away_goals_80": [
+    0,
+    3
+   ],
+   "total_goals_80": [
+    1,
+    5
+   ],
+   "goal_diff_80": [
+    -2,
+    2
+   ]
+  },
+  "score_grid": [
+   [
+    0.073055,
+    0.094238,
+    0.069295,
+    0.032055,
+    0.010928,
+    0.002941,
+    0.000652
+   ],
+   [
+    0.081333,
+    0.136128,
+    0.089311,
+    0.041327,
+    0.014093,
+    0.003794,
+    0.000842
+   ],
+   [
+    0.052196,
+    0.077567,
+    0.058319,
+    0.025558,
+    0.008718,
+    0.002347,
+    0.000521
+   ],
+   [
+    0.020998,
+    0.031215,
+    0.022227,
+    0.010871,
+    0.003512,
+    0.000946,
+    0.00021
+   ],
+   [
+    0.006234,
+    0.00927,
+    0.006603,
+    0.003058,
+    0.001103,
+    0.000281,
+    6.2e-05
+   ],
+   [
+    0.001462,
+    0.002175,
+    0.00155,
+    0.000718,
+    0.000245,
+    7e-05,
+    1.5e-05
+   ],
+   [
+    0.000283,
+    0.000421,
+    0.0003,
+    0.000139,
+    4.8e-05,
+    1.3e-05,
+    3e-06
+   ]
+  ],
+  "mass_check": 1.0000000000000002
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.31879500000000005,
+  "p_draw": 0.278545,
+  "p_away": 0.40266,
+  "se": [
+   0.0010420286655725935,
+   0.001002391348164478,
+   0.0010966424312418338
+  ],
+  "max_abs_dev_vs_exact": 0.0010035564107903627,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   0.9575107129747523,
+   1.5357960915459217
+  ],
+  "xg_away_80": [
+   1.085206649470577,
+   1.7590956090578516
+  ],
+  "p_home_80": [
+   0.24019123911047804,
+   0.4224372894502851
+  ],
+  "p_draw_80": [
+   0.24054826977235394,
+   0.2985321199692625
+  ],
+  "p_away_80": [
+   0.3010942019506917,
+   0.505643025648107
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.18731789145692537,
+   0.17926146121100786
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.32992787003791124,
+   "p_draw": 0.27201648797919886,
+   "p_away": 0.3980556419828898,
+   "xg_home": 1.247957607410967,
+   "xg_away": 1.3945195067247234,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.31742252173874924,
+   "p_draw": 0.26603526458527704,
+   "p_away": 0.41654221367597377,
+   "xg_home": 1.1629757590931948,
+   "xg_away": 1.3726104878485679,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.22893818367409974,
+   "p_draw": 0.24984151459071263,
+   "p_away": 0.5212203017351875,
+   "xg_home": 1.084669262983148,
+   "xg_away": 1.7433792448030172,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.4383712301167117,
+   "p_draw": 0.2608005497682298,
+   "p_away": 0.3008282201150584,
+   "xg_home": 1.4447426571835906,
+   "xg_away": 1.1503619116271415,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.331178340765235,
+   "p_draw": 0.27052436465671686,
+   "p_away": 0.398297294578048,
+   "xg_home": 1.2602840621657228,
+   "xg_away": 1.4052224423523743,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Home advantage (England, fitted from results): \u00d71.22 on West Brom's scoring rate.",
+   "effect": 0.2019
+  },
+  {
+   "text": "Independent results-only Elo: West Brom 1450 vs Southampton 1582 (gap -132 before home advantage).",
+   "effect": 0.1979
+  },
+  {
+   "text": "West Brom attack vs Southampton defence: time-weighted strength gap multiplies West Brom's scoring rate by \u00d70.85 relative to an average pairing (from 39/38 decay-weighted matches).",
+   "effect": 0.1675
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.31828721338318866,
+  "p_draw": 0.2795485564107903,
+  "p_away": 0.4021642302060209,
+  "xg_home": 1.2343802279440637,
+  "xg_away": 1.4118266827012849
+ },
+ "context": {
+  "fetched_at": "2026-11-03T15:32:29+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5836917",
+    "fetched_at": "2026-11-03T15:32:29+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "4-4-1-1",
+    "starters": [
+     {
+      "name": "Max O'Leary",
+      "pos": "G"
+     },
+     {
+      "name": "Brayann Pereira",
+      "pos": "D"
+     },
+     {
+      "name": "Chris Mepham",
+      "pos": "D"
+     },
+     {
+      "name": "George Campbell",
+      "pos": "D"
+     },
+     {
+      "name": "Callum Styles",
+      "pos": "D"
+     },
+     {
+      "name": "Rabby Nzingoula",
+      "pos": "M"
+     },
+     {
+      "name": "Jayson Molumby",
+      "pos": "M"
+     },
+     {
+      "name": "Ousmane Diakit\u00e9",
+      "pos": "M"
+     },
+     {
+      "name": "Isaac Price",
+      "pos": "M"
+     },
+     {
+      "name": "Felix Horn Myhre",
+      "pos": "M"
+     },
+     {
+      "name": "Jimmy-Jay Morgan",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-11-03T15:32:29+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   },
+   "away": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "4-2-3-1",
+    "starters": [
+     {
+      "name": "Daniel Peretz",
+      "pos": "G"
+     },
+     {
+      "name": "James Bree",
+      "pos": "D"
+     },
+     {
+      "name": "Jack Stephens",
+      "pos": "D"
+     },
+     {
+      "name": "Keven Schlotterbeck",
+      "pos": "D"
+     },
+     {
+      "name": "Ryan Manning",
+      "pos": "D"
+     },
+     {
+      "name": "Cameron Bragg",
+      "pos": "M"
+     },
+     {
+      "name": "James Ward-Prowse",
+      "pos": "M"
+     },
+     {
+      "name": "Kuryu Matsuki",
+      "pos": "F"
+     },
+     {
+      "name": "Finn Azaz",
+      "pos": "M"
+     },
+     {
+      "name": "L\u00e9o Scienza",
+      "pos": "F"
+     },
+     {
+      "name": "Lewis Dobbin",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-11-03T15:32:29+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Jimmy-Jay Morgan",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836917",
+     "fetched_at": "2026-11-03T15:32:29+00:00"
+    },
+    {
+     "player": "Toby Collyer",
+     "type": "injury",
+     "expected_return": "Early December 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836917",
+     "fetched_at": "2026-11-03T15:32:29+00:00"
+    },
+    {
+     "player": "Nolan Galves",
+     "type": "injury",
+     "expected_return": "Out for season",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836917",
+     "fetched_at": "2026-11-03T15:32:29+00:00"
+    },
+    {
+     "player": "Michael Johnston",
+     "type": "injury",
+     "expected_return": "Unknown",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836917",
+     "fetched_at": "2026-11-03T15:32:29+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "Cyle Larin",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836917",
+     "fetched_at": "2026-11-03T15:32:29+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 3,
+    "n21": 4,
+    "last_match": "2026-10-31"
+   },
+   "away": {
+    "rest_days": 3,
+    "n21": 4,
+    "last_match": "2026-10-31"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 182.6
+  },
+  "venue": {
+   "name": "The Hawthorns",
+   "city": "West Bromwich",
+   "lat": 52.509074411,
+   "lon": -1.963952333
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 3.3499999999999996,
+   "temp_c": 7.9,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=52.509&longitude=-1.964",
+   "fetched_at": "2026-11-03T15:32:29+00:00",
+   "lat": 52.509074411,
+   "lon": -1.963952333
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": 0.68,
+    "d_p_draw_pp": 0.24,
+    "d_p_away_pp": -0.91,
+    "d_xg_home": 0.048,
+    "d_xg_away": 0.016
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.022,
+    "away_rate_mult": 1.022,
+    "d_p_home_pp": 0.12,
+    "d_p_draw_pp": -0.35,
+    "d_p_away_pp": 0.22,
+    "d_xg_home": 0.027,
+    "d_xg_away": 0.03,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0161,
+    "away_rate_mult": 1.0068,
+    "d_p_home_pp": 0.33,
+    "d_p_draw_pp": -0.16,
+    "d_p_away_pp": -0.17,
+    "d_xg_home": 0.019,
+    "d_xg_away": 0.009,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "reason": "failed validation; no live features"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 3.0,
+   "rest_a": 3.0,
+   "n21_h": 4.0,
+   "n21_a": 4.0,
+   "travel_km": 182.5823680354338,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 3.3499999999999996,
+   "temp_c": 7.9
+  }
+ },
+ "confidence": {
+  "tier": "LOW",
+  "p_max": 0.402164230206021,
+  "entropy_nats": 1.0870116362215938,
+  "text": "Most likely result has P = 40.2%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.3% \u00b1 0.4% (n=16754, mean forecast 44.6%). Backtest RPS for E1: 0.2179; exact-score top-5 hit rate 51.6% (n=1800). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: LOW (entropy 1.087 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "West Brom: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "West Brom: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.",
+  "Southampton: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Southampton: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+ ],
+ "verdict": "West Brom 1\u20131 Southampton is the single most probable scoreline at 13.6%: expected goals 1.23\u20131.41 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.046). Exact scores are inherently uncertain; the 1X2 split is 31.8%/28.0%/40.2%.",
+ "resolved": {
+  "home_key": "England:West Brom",
+  "away_key": "England:Southampton",
+  "div": "E1",
+  "home_div": "E1",
+  "away_div": "E1",
+  "country": "England"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: Southampton FC at West Bromwich Albion FC\nCompetition: EFL Championship\nDate: 2026-11-03 15:00 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-11-03\n\nPRIMARY FINAL SCORE PREDICTION\n\nWest Bromwich Albion FC 1 \u2013 1 Southampton FC\n(modal exact score, probability 13.6%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.23\nAway: 1.41\nExpected Total: 2.65\nMedian Total: 2\n\nRESULT PROBABILITIES\n\nHome Win: 31.8%\nDraw: 28.0%\nAway Win: 40.2%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 13.6%\n2. 0\u20131: 9.4%\n3. 1\u20132: 8.9%\n4. 1\u20130: 8.1%\n5. 2\u20131: 7.8%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 24.9%\nTotal 2 goals: 25.8%\nTotal 3 goals: 22.0%\nTotal 4 goals: 14.8%\nTotal 5+ goals: 12.6%\n\nBoth Teams Score: 55.4%\nClean sheet West Bromwich Albion FC: 23.6% \u00b7 Clean sheet Southampton FC: 28.3%\n\nMATCH INTELLIGENCE\n\n1. Home advantage (England, fitted from results): \u00d71.22 on West Brom's scoring rate.\n2. Independent results-only Elo: West Brom 1450 vs Southampton 1582 (gap -132 before home advantage).\n3. West Brom attack vs Southampton defence: time-weighted strength gap multiplies West Brom's scoring rate by \u00d70.85 relative to an average pairing (from 39/38 decay-weighted matches).\n\nMODEL CONFIDENCE\n\nMost likely result has P = 40.2%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.3% \u00b1 0.4% (n=16754, mean forecast 44.6%). Backtest RPS for E1: 0.2179; exact-score top-5 hit rate 51.6% (n=1800). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: LOW (entropy 1.087 nats of max 1.099).\nParameter-uncertainty 80% bands: xG West Bromwich Albion FC 0.96\u20131.54, xG Southampton FC 1.09\u20131.76; P(home win) 24.0%\u201342.2%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0010 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nWest Brom: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-11-03 10:32 EST (4-4-1-1)\n  Max O'Leary (G), Brayann Pereira (D), Chris Mepham (D), George Campbell (D), Callum Styles (D), Rabby Nzingoula (M), Jayson Molumby (M), Ousmane Diakit\u00e9 (M), Isaac Price (M), Felix Horn Myhre (M), Jimmy-Jay Morgan (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\nSouthampton: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-11-03 10:32 EST (4-2-3-1)\n  Daniel Peretz (G), James Bree (D), Jack Stephens (D), Keven Schlotterbeck (D), Ryan Manning (D), Cameron Bragg (M), James Ward-Prowse (M), Kuryu Matsuki (F), Finn Azaz (M), L\u00e9o Scienza (F), Lewis Dobbin (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nKEY ABSENCES\n\n- West Brom: Jimmy-Jay Morgan \u2014 injury, Doubtful [FotMob, 2026-11-03 10:32 EST]\n- West Brom: Toby Collyer \u2014 injury, Early December 2026 [FotMob, 2026-11-03 10:32 EST]\n- West Brom: Nolan Galves \u2014 injury, Out for season [FotMob, 2026-11-03 10:32 EST]\n- West Brom: Michael Johnston \u2014 injury, Unknown [FotMob, 2026-11-03 10:32 EST]\n- Southampton: Cyle Larin \u2014 injury, Doubtful [FotMob, 2026-11-03 10:32 EST]\n\nWEATHER AT VENUE\n\nThe Hawthorns, West Bromwich: 7.9 \u00b0C, wind 3.3 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-11-03 10:32 EST]\n\nREST & TRAVEL\n\nWest Brom: 3 days' rest, 4 matches in previous 21 days \u00b7 Southampton: 3 days' rest, 4 in 21 days \u00b7 away travel 182.6 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 31.8% / 28.0% / 40.2%, xG 1.23\u20131.41\n- Understat xG component (validated, in ensemble): home +0.68 pp, draw +0.24 pp, away -0.91 pp; xG +0.048 / +0.016\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.12 pp, draw -0.35 pp, away +0.22 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.33 pp, draw -0.16 pp, away -0.17 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- lineup: not applied (failed validation; no live features)\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- West Brom: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- West Brom: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n- Southampton: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Southampton: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nFINAL VERDICT\n\nWest Brom 1\u20131 Southampton is the single most probable scoreline at 13.6%: expected goals 1.23\u20131.41 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.046). Exact scores are inherently uncertain; the 1X2 split is 31.8%/28.0%/40.2%.\n",
+ "frozen_at": "2026-11-03T15:32:29+00:00",
+ "sha256": "be84d46508871e411bb946c8e45073edad98571bc151ae77fafdcade93c5a3b9"
+}

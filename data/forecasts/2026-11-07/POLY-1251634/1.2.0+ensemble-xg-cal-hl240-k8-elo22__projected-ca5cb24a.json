@@ -1,0 +1,610 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-11-03",
+ "input_fingerprint": "2b496214a714c6c247d21cc4d8d6f0d6ca240398cabf4dfbc8806167e27902c4",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-11-03T15:34:20+00:00",
+ "fixture": {
+  "event_id": "POLY-1251634",
+  "home_name": "St Johnstone FC",
+  "away_name": "Dundee FC",
+  "competition": "Scottish Premiership",
+  "subcategory": "scop",
+  "kickoff_utc": "2026-11-07T15:00:00+00:00",
+  "kickoff_local": "2026-11-07 10:00 EST",
+  "home_matched": "St Johnstone",
+  "away_matched": "Dundee",
+  "match_methods": {
+   "home": {
+    "source": "St Johnstone FC",
+    "matched": "St Johnstone",
+    "method": "core-tokens",
+    "score": 0.97
+   },
+   "away": {
+    "source": "Dundee FC",
+    "matched": "Dundee",
+    "method": "core-tokens",
+    "score": 0.97
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.4390220520333059,
+  "p_draw": 0.26951796834721053,
+  "p_away": 0.29145997961948356,
+  "xg_home": 1.5449230957811846,
+  "xg_away": 1.2241005111004852,
+  "xg_total": 2.76902360688167,
+  "median_total": 3,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.13051669288084858
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.13051669288084858
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.09390562134339205
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.090897130132364
+   },
+   {
+    "home": 1,
+    "away": 2,
+    "p": 0.07368049356663528
+   },
+   {
+    "home": 2,
+    "away": 0,
+    "p": 0.07352832256799574
+   }
+  ],
+  "btts": 0.5728779977934924,
+  "totals_over": {
+   "over_0.5": 0.9354044811084175,
+   "over_1.5": 0.7737013377241007,
+   "over_2.5": 0.5243221037699607,
+   "over_3.5": 0.3011861354979805,
+   "over_4.5": 0.14392705104616949,
+   "over_5.5": 0.05984025425688648,
+   "over_6.5": 0.02130578313766005
+  },
+  "total_buckets": {
+   "0-1": 0.22629866227589918,
+   "2": 0.24937923395413997,
+   "3": 0.2231359682719803,
+   "4": 0.15725908445181105,
+   "5+": 0.14392705104616949
+  },
+  "clean_sheet_home": 0.286049834582977,
+  "clean_sheet_away": 0.20566768651511283,
+  "home_goal_dist": [
+   0.20566768651511283,
+   0.33554913403853504,
+   0.2596359452718412,
+   0.13107291753862546,
+   0.04905195459224614,
+   0.014550704895001161,
+   0.0035674176276736256,
+   0.0009042395209645456
+  ],
+  "away_goal_dist": [
+   0.286049834582977,
+   0.36792667823307806,
+   0.22412373678609254,
+   0.08863782588129546,
+   0.025907019861938742,
+   0.005994178247790358,
+   0.0011449993916285255,
+   0.00021572701519924665
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    3
+   ],
+   "away_goals_80": [
+    0,
+    3
+   ],
+   "total_goals_80": [
+    1,
+    5
+   ],
+   "goal_diff_80": [
+    -2,
+    2
+   ]
+  },
+  "score_grid": [
+   [
+    0.064596,
+    0.070806,
+    0.045334,
+    0.018092,
+    0.005322,
+    0.001236,
+    0.000237
+   ],
+   [
+    0.090897,
+    0.130517,
+    0.07368,
+    0.029368,
+    0.008629,
+    0.002002,
+    0.000383
+   ],
+   [
+    0.073528,
+    0.093906,
+    0.0607,
+    0.022879,
+    0.006714,
+    0.001556,
+    0.000297
+   ],
+   [
+    0.037458,
+    0.047778,
+    0.029203,
+    0.012264,
+    0.003403,
+    0.000788,
+    0.00015
+   ],
+   [
+    0.014089,
+    0.017949,
+    0.010957,
+    0.004351,
+    0.001345,
+    0.000294,
+    5.6e-05
+   ],
+   [
+    0.004191,
+    0.005332,
+    0.003251,
+    0.001289,
+    0.000377,
+    9.2e-05,
+    1.7e-05
+   ],
+   [
+    0.001029,
+    0.001308,
+    0.000796,
+    0.000315,
+    9.2e-05,
+    2.1e-05,
+    4e-06
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.440125,
+  "p_draw": 0.26769000000000004,
+  "p_away": 0.29218500000000003,
+  "se": [
+   0.001109988703489815,
+   0.0009900304639252268,
+   0.0010168896837292629
+  ],
+  "max_abs_dev_vs_exact": 0.0018279683472104957,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   1.1999781589243352,
+   1.9202953238516922
+  ],
+  "xg_away_80": [
+   0.9088475315149074,
+   1.5636362325394266
+  ],
+  "p_home_80": [
+   0.339346699091795,
+   0.5535399061083042
+  ],
+  "p_draw_80": [
+   0.22848767765045602,
+   0.2897940756150044
+  ],
+  "p_away_80": [
+   0.2029726137619472,
+   0.39368543364095104
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.18640934276686918,
+   0.20136627087162595
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.41685882181015277,
+   "p_draw": 0.268078494123023,
+   "p_away": 0.31506268406682414,
+   "xg_home": 1.4559860847225758,
+   "xg_away": 1.2349900346365457,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.47195589579295216,
+   "p_draw": 0.2479455808013744,
+   "p_away": 0.2800985234056734,
+   "xg_home": 1.5966144637498183,
+   "xg_away": 1.1725573865090957,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.43604315576359026,
+   "p_draw": 0.2752534406236351,
+   "p_away": 0.28870340361277447,
+   "xg_home": 1.4554529899182496,
+   "xg_away": 1.1399172410560297,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.46338623059184164,
+   "p_draw": 0.24430625563839173,
+   "p_away": 0.2923075137697666,
+   "xg_home": 1.625260992063694,
+   "xg_away": 1.2418292031735463,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.41658737285330644,
+   "p_draw": 0.2679819351331567,
+   "p_away": 0.3154306920135367,
+   "xg_home": 1.4551360611637731,
+   "xg_away": 1.2355444838454746,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Home advantage (Scotland, fitted from results): \u00d71.23 on St Johnstone's scoring rate.",
+   "effect": 0.2099
+  },
+  {
+   "text": "Context \u2014 Understat xG component (validated, in ensemble): home win -2.7 pp, draw +1.0 pp, away win +1.7 pp (xG -0.07 / +0.03).",
+   "effect": 0.0807
+  },
+  {
+   "text": "Independent results-only Elo: St Johnstone 1562 vs Dundee 1544 (gap +18 before home advantage).",
+   "effect": 0.027
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.4390220520333059,
+  "p_draw": 0.26951796834721053,
+  "p_away": 0.29145997961948356,
+  "xg_home": 1.5449230957811846,
+  "xg_away": 1.2241005111004852
+ },
+ "context": {
+  "fetched_at": "2026-11-03T15:34:20+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5793973",
+    "fetched_at": "2026-11-03T15:34:20+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "3-4-2-1",
+    "starters": [
+     {
+      "name": "Toby Steward",
+      "pos": "G"
+     },
+     {
+      "name": "Cheick Diabate",
+      "pos": "D"
+     },
+     {
+      "name": "Bo\u017eo Mikuli\u0107",
+      "pos": "D"
+     },
+     {
+      "name": "Enes Ali\u0107",
+      "pos": "D"
+     },
+     {
+      "name": "Matty Todd",
+      "pos": "M"
+     },
+     {
+      "name": "Reece McAlear",
+      "pos": "M"
+     },
+     {
+      "name": "Jason Holt",
+      "pos": "M"
+     },
+     {
+      "name": "Joel Cotterill",
+      "pos": "M"
+     },
+     {
+      "name": "Taylor Steven",
+      "pos": "F"
+     },
+     {
+      "name": "Josh Fowler",
+      "pos": "F"
+     },
+     {
+      "name": "Danny Schmidt",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-11-03T15:34:20+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   },
+   "away": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "4-4-2",
+    "starters": [
+     {
+      "name": "Owen Goodman",
+      "pos": "G"
+     },
+     {
+      "name": "Drey Wright",
+      "pos": "D"
+     },
+     {
+      "name": "Joe Wright",
+      "pos": "D"
+     },
+     {
+      "name": "Ryan Astley",
+      "pos": "D"
+     },
+     {
+      "name": "Imari Samuels",
+      "pos": "D"
+     },
+     {
+      "name": "Joe Bevan",
+      "pos": "M"
+     },
+     {
+      "name": "Callum Jones",
+      "pos": "M"
+     },
+     {
+      "name": "Ethan Hamilton",
+      "pos": "M"
+     },
+     {
+      "name": "Alan Forrest",
+      "pos": "M"
+     },
+     {
+      "name": "Ashley Hay",
+      "pos": "F"
+     },
+     {
+      "name": "Bradley Fink",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-11-03T15:34:20+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Toby Steward",
+     "type": "suspension",
+     "expected_return": "Early November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5793973",
+     "fetched_at": "2026-11-03T15:34:20+00:00"
+    },
+    {
+     "player": "Samuel Stanton",
+     "type": "injury",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5793973",
+     "fetched_at": "2026-11-03T15:34:20+00:00"
+    },
+    {
+     "player": "Zach Mitchell",
+     "type": "injury",
+     "expected_return": "Out for season",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5793973",
+     "fetched_at": "2026-11-03T15:34:20+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "Finlay Robertson",
+     "type": "injury",
+     "expected_return": "Out for season",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5793973",
+     "fetched_at": "2026-11-03T15:34:20+00:00"
+    },
+    {
+     "player": "Bobby Wales",
+     "type": "injury",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5793973",
+     "fetched_at": "2026-11-03T15:34:20+00:00"
+    },
+    {
+     "player": "Simon Murray",
+     "type": "injury",
+     "expected_return": "Out for season",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5793973",
+     "fetched_at": "2026-11-03T15:34:20+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 7,
+    "n21": 4,
+    "last_match": "2026-10-31"
+   },
+   "away": {
+    "rest_days": 10,
+    "n21": 3,
+    "last_match": "2026-10-28"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 31.8
+  },
+  "venue": {
+   "name": "McDiarmid Park",
+   "city": "Perth",
+   "lat": 56.409909826,
+   "lon": -3.476904631
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 2.7,
+   "temp_c": 9.6,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=56.41&longitude=-3.477",
+   "fetched_at": "2026-11-03T15:34:20+00:00",
+   "lat": 56.409909826,
+   "lon": -3.476904631
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": -2.69,
+    "d_p_draw_pp": 0.99,
+    "d_p_away_pp": 1.7,
+    "d_xg_home": -0.068,
+    "d_xg_away": 0.03
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0043,
+    "away_rate_mult": 1.0018,
+    "d_p_home_pp": 0.11,
+    "d_p_draw_pp": -0.06,
+    "d_p_away_pp": -0.06,
+    "d_xg_home": 0.006,
+    "d_xg_away": 0.002,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "reason": "failed validation; no live features"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 7.0,
+   "rest_a": 10.0,
+   "n21_h": 4.0,
+   "n21_a": 3.0,
+   "travel_km": 31.7641500685955,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 2.7,
+   "temp_c": 9.6
+  }
+ },
+ "confidence": {
+  "tier": "LOW",
+  "p_max": 0.4390220520333059,
+  "entropy_nats": 1.0741030704476782,
+  "text": "Most likely result has P = 43.9%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.3% \u00b1 0.4% (n=16754, mean forecast 44.6%). Backtest RPS for SC0: 0.1961; exact-score top-5 hit rate 48.3% (n=750). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: LOW (entropy 1.074 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "St Johnstone: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "St Johnstone: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.",
+  "Dundee: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Dundee: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+ ],
+ "verdict": "St Johnstone 1\u20131 Dundee is the single most probable scoreline at 13.1%: expected goals 1.54\u20131.22 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.046). Exact scores are inherently uncertain; the 1X2 split is 43.9%/27.0%/29.1%.",
+ "resolved": {
+  "home_key": "Scotland:St Johnstone",
+  "away_key": "Scotland:Dundee",
+  "div": "SC0",
+  "home_div": "SC0",
+  "away_div": "SC0",
+  "country": "Scotland"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: Dundee FC at St Johnstone FC\nCompetition: Scottish Premiership\nDate: 2026-11-07 10:00 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-11-03\n\nPRIMARY FINAL SCORE PREDICTION\n\nSt Johnstone FC 1 \u2013 1 Dundee FC\n(modal exact score, probability 13.1%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.54\nAway: 1.22\nExpected Total: 2.77\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 43.9%\nDraw: 27.0%\nAway Win: 29.1%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 13.1%\n2. 2\u20131: 9.4%\n3. 1\u20130: 9.1%\n4. 1\u20132: 7.4%\n5. 2\u20130: 7.4%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 22.6%\nTotal 2 goals: 24.9%\nTotal 3 goals: 22.3%\nTotal 4 goals: 15.7%\nTotal 5+ goals: 14.4%\n\nBoth Teams Score: 57.3%\nClean sheet St Johnstone FC: 28.6% \u00b7 Clean sheet Dundee FC: 20.6%\n\nMATCH INTELLIGENCE\n\n1. Home advantage (Scotland, fitted from results): \u00d71.23 on St Johnstone's scoring rate.\n2. Context \u2014 Understat xG component (validated, in ensemble): home win -2.7 pp, draw +1.0 pp, away win +1.7 pp (xG -0.07 / +0.03).\n3. Independent results-only Elo: St Johnstone 1562 vs Dundee 1544 (gap +18 before home advantage).\n\nMODEL CONFIDENCE\n\nMost likely result has P = 43.9%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.3% \u00b1 0.4% (n=16754, mean forecast 44.6%). Backtest RPS for SC0: 0.1961; exact-score top-5 hit rate 48.3% (n=750). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: LOW (entropy 1.074 nats of max 1.099).\nParameter-uncertainty 80% bands: xG St Johnstone FC 1.20\u20131.92, xG Dundee FC 0.91\u20131.56; P(home win) 33.9%\u201355.4%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0018 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nSt Johnstone: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-11-03 10:34 EST (3-4-2-1)\n  Toby Steward (G), Cheick Diabate (D), Bo\u017eo Mikuli\u0107 (D), Enes Ali\u0107 (D), Matty Todd (M), Reece McAlear (M), Jason Holt (M), Joel Cotterill (M), Taylor Steven (F), Josh Fowler (F), Danny Schmidt (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\nDundee: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-11-03 10:34 EST (4-4-2)\n  Owen Goodman (G), Drey Wright (D), Joe Wright (D), Ryan Astley (D), Imari Samuels (D), Joe Bevan (M), Callum Jones (M), Ethan Hamilton (M), Alan Forrest (M), Ashley Hay (F), Bradley Fink (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nKEY ABSENCES\n\n- St Johnstone: Toby Steward \u2014 suspension, Early November 2026 [FotMob, 2026-11-03 10:34 EST]\n- St Johnstone: Samuel Stanton \u2014 injury, Mid November 2026 [FotMob, 2026-11-03 10:34 EST]\n- St Johnstone: Zach Mitchell \u2014 injury, Out for season [FotMob, 2026-11-03 10:34 EST]\n- Dundee: Finlay Robertson \u2014 injury, Out for season [FotMob, 2026-11-03 10:34 EST]\n- Dundee: Bobby Wales \u2014 injury, Mid November 2026 [FotMob, 2026-11-03 10:34 EST]\n- Dundee: Simon Murray \u2014 injury, Out for season [FotMob, 2026-11-03 10:34 EST]\n\nWEATHER AT VENUE\n\nMcDiarmid Park, Perth: 9.6 \u00b0C, wind 2.7 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-11-03 10:34 EST]\n\nREST & TRAVEL\n\nSt Johnstone: 7 days' rest, 4 matches in previous 21 days \u00b7 Dundee: 10 days' rest, 3 in 21 days \u00b7 away travel 31.8 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 43.9% / 27.0% / 29.1%, xG 1.54\u20131.22\n- Understat xG component (validated, in ensemble): home -2.69 pp, draw +0.99 pp, away +1.70 pp; xG -0.068 / +0.030\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.11 pp, draw -0.06 pp, away -0.06 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- lineup: not applied (failed validation; no live features)\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- St Johnstone: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- St Johnstone: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n- Dundee: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Dundee: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nFINAL VERDICT\n\nSt Johnstone 1\u20131 Dundee is the single most probable scoreline at 13.1%: expected goals 1.54\u20131.22 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.046). Exact scores are inherently uncertain; the 1X2 split is 43.9%/27.0%/29.1%.\n",
+ "frozen_at": "2026-11-03T15:34:20+00:00",
+ "sha256": "d824edb86a2d51085e33a14182c2c9e4e3f2d3bf331695661006231f57e5380f"
+}

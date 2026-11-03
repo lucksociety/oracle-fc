@@ -1,0 +1,602 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-11-03",
+ "input_fingerprint": "2b496214a714c6c247d21cc4d8d6f0d6ca240398cabf4dfbc8806167e27902c4",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-11-03T15:32:52+00:00",
+ "fixture": {
+  "event_id": "POLY-1230776",
+  "home_name": "AEK",
+  "away_name": "Real Madrid CF",
+  "competition": "UEFA Champions League 2025",
+  "subcategory": "ucl",
+  "kickoff_utc": "2026-11-04T17:45:00+00:00",
+  "kickoff_local": "2026-11-04 12:45 EST",
+  "home_matched": "AEK",
+  "away_matched": "Real Madrid",
+  "match_methods": {
+   "home": {
+    "source": "AEK",
+    "matched": "AEK",
+    "method": "exact",
+    "score": 1.0
+   },
+   "away": {
+    "source": "Real Madrid CF",
+    "matched": "Real Madrid",
+    "method": "core-tokens",
+    "score": 0.97
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.2864090326094242,
+  "p_draw": 0.244842120814021,
+  "p_away": 0.468748846576555,
+  "xg_home": 1.2978303713641568,
+  "xg_away": 1.7159131164601757,
+  "xg_total": 3.0137434878243328,
+  "median_total": 3,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.1156904182821794
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.1156904182821794
+   },
+   {
+    "home": 1,
+    "away": 2,
+    "p": 0.09274763962489015
+   },
+   {
+    "home": 0,
+    "away": 1,
+    "p": 0.08000787573348062
+   },
+   {
+    "home": 0,
+    "away": 2,
+    "p": 0.07415065103990316
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.06979027064096069
+   }
+  ],
+  "btts": 0.596553496511806,
+  "totals_over": {
+   "over_0.5": 0.949457592409262,
+   "over_1.5": 0.8121738932964881,
+   "over_2.5": 0.5818182692105461,
+   "over_3.5": 0.3565721965758539,
+   "over_4.5": 0.18361372676475785,
+   "over_5.5": 0.08247969291501638,
+   "over_6.5": 0.031918075965259814
+  },
+  "total_buckets": {
+   "0-1": 0.1878261067035121,
+   "2": 0.23035562408594196,
+   "3": 0.22524607263469232,
+   "4": 0.172958469811096,
+   "5+": 0.18361372676475785
+  },
+  "clean_sheet_home": 0.17643013157697265,
+  "clean_sheet_away": 0.2775587795019597,
+  "home_goal_dist": [
+   0.2775587795019597,
+   0.35312852811833084,
+   0.22501477160338118,
+   0.09842764992730922,
+   0.033540080637291275,
+   0.009462770853884188,
+   0.002281917077121788,
+   0.0005855022807219745
+  ],
+  "away_goal_dist": [
+   0.17643013157697265,
+   0.31198181308415895,
+   0.2663315145127968,
+   0.1507535679026751,
+   0.0642354130587328,
+   0.022000561289186215,
+   0.006303514854589119,
+   0.0019634837208885878
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    3
+   ],
+   "away_goals_80": [
+    0,
+    3
+   ],
+   "total_goals_80": [
+    1,
+    5
+   ],
+   "goal_diff_80": [
+    -3,
+    2
+   ]
+  },
+  "score_grid": [
+   [
+    0.050542,
+    0.080008,
+    0.074151,
+    0.043913,
+    0.019425,
+    0.00686,
+    0.002016
+   ],
+   [
+    0.057276,
+    0.11569,
+    0.092748,
+    0.053398,
+    0.023037,
+    0.007962,
+    0.002297
+   ],
+   [
+    0.040515,
+    0.06979,
+    0.061994,
+    0.032721,
+    0.013696,
+    0.004605,
+    0.001297
+   ],
+   [
+    0.018795,
+    0.031418,
+    0.025587,
+    0.014574,
+    0.005588,
+    0.00182,
+    0.000498
+   ],
+   [
+    0.006723,
+    0.010963,
+    0.008682,
+    0.00454,
+    0.00188,
+    0.000561,
+    0.000148
+   ],
+   [
+    0.001966,
+    0.003146,
+    0.002436,
+    0.001242,
+    0.000473,
+    0.000153,
+    3.7e-05
+   ],
+   [
+    0.000486,
+    0.000767,
+    0.000585,
+    0.000292,
+    0.000109,
+    3.2e-05,
+    8e-06
+   ]
+  ],
+  "mass_check": 1.0000000000000002
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.28506,
+  "p_draw": 0.24656000000000003,
+  "p_away": 0.46838,
+  "se": [
+   0.001009457271012498,
+   0.0009637638880970796,
+   0.0011157960736622083
+  ],
+  "max_abs_dev_vs_exact": 0.0017178791859790155,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   1.0052396479991759,
+   1.616508428923537
+  ],
+  "xg_away_80": [
+   1.2635751184805226,
+   2.2045650146703872
+  ],
+  "p_home_80": [
+   0.19905966649423443,
+   0.3975483311413894
+  ],
+  "p_draw_80": [
+   0.20876459664508995,
+   0.27658269185434176
+  ],
+  "p_away_80": [
+   0.33575733018887666,
+   0.5847150919675334
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.18833892258245746,
+   0.2065594005167141
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.1942752982915088,
+   "p_draw": 0.23597161154373308,
+   "p_away": 0.5697530901647581,
+   "xg_home": 0.9877102427689624,
+   "xg_away": 1.8447583230649265,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.4187376640288375,
+   "p_draw": 0.23958248097118018,
+   "p_away": 0.3416798549999823,
+   "xg_home": 1.614968839913608,
+   "xg_away": 1.4381770129883842,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.4425162787241158,
+   "p_draw": 0.2803107420327828,
+   "p_away": 0.2771729792431015,
+   "xg_home": 1.423976763417525,
+   "xg_away": 1.0752830684322352,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.4832416938369637,
+   "p_draw": 0.22060600873606262,
+   "p_away": 0.2961522974269736,
+   "xg_home": 1.9289572439516407,
+   "xg_away": 1.4753041001490228,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.19483316822568192,
+   "p_draw": 0.23236443136297638,
+   "p_away": 0.5728024004113417,
+   "xg_home": 1.012188173318543,
+   "xg_away": 1.8840125480689565,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "AEK attack vs Real Madrid defence: time-weighted strength gap multiplies AEK's scoring rate by \u00d70.62 relative to an average pairing (from 27/42 decay-weighted matches).",
+   "effect": 0.4768
+  },
+  {
+   "text": "Real Madrid attack vs AEK defence: rate multiplier \u00d71.53 for the away side.",
+   "effect": 0.4252
+  },
+  {
+   "text": "Context \u2014 Understat xG component (validated, in ensemble): home win -10.9 pp, draw -0.5 pp, away win +11.3 pp (xG -0.29 / +0.22).",
+   "effect": 0.3399
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.2864090326094242,
+  "p_draw": 0.244842120814021,
+  "p_away": 0.46874884657655497,
+  "xg_home": 1.2978303713641568,
+  "xg_away": 1.715913116460175
+ },
+ "context": {
+  "fetched_at": "2026-11-03T15:32:52+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/6106401",
+    "fetched_at": "2026-11-03T15:32:52+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "projected",
+    "source": "FotMob projected XI (enetpulse)",
+    "formation": "4-4-2",
+    "starters": [
+     {
+      "name": "Alberto Brignoli",
+      "pos": "G"
+     },
+     {
+      "name": "Lazaros Rota",
+      "pos": "D"
+     },
+     {
+      "name": "Harold Moukoudi",
+      "pos": "D"
+     },
+     {
+      "name": "Filipe Relvas",
+      "pos": "D"
+     },
+     {
+      "name": "Stavros Pilios",
+      "pos": "D"
+     },
+     {
+      "name": "Lovro Majer",
+      "pos": "M"
+     },
+     {
+      "name": "R\u0103zvan Marin",
+      "pos": "M"
+     },
+     {
+      "name": "Mil\u00e1n Vit\u00e1lis",
+      "pos": "M"
+     },
+     {
+      "name": "Aboubakary Ko\u00efta",
+      "pos": "M"
+     },
+     {
+      "name": "Barnab\u00e1s Varga",
+      "pos": "F"
+     },
+     {
+      "name": "Luka Jovi\u0107",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-11-03T15:32:52+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   },
+   "away": {
+    "status": "projected",
+    "source": "FotMob projected XI (enetpulse)",
+    "formation": "4-2-3-1",
+    "starters": [
+     {
+      "name": "Thibaut Courtois",
+      "pos": "G"
+     },
+     {
+      "name": "Denzel Dumfries",
+      "pos": "D"
+     },
+     {
+      "name": "Antonio R\u00fcdiger",
+      "pos": "D"
+     },
+     {
+      "name": "Dean Huijsen",
+      "pos": "D"
+     },
+     {
+      "name": "Marc Cucurella",
+      "pos": "D"
+     },
+     {
+      "name": "Bernardo Silva",
+      "pos": "M"
+     },
+     {
+      "name": "Eduardo Camavinga",
+      "pos": "M"
+     },
+     {
+      "name": "Arda G\u00fcler",
+      "pos": "M"
+     },
+     {
+      "name": "Jude Bellingham",
+      "pos": "M"
+     },
+     {
+      "name": "Vin\u00edcius J\u00fanior",
+      "pos": "F"
+     },
+     {
+      "name": "Kylian Mbapp\u00e9",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-11-03T15:32:52+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Thomas Strakosha",
+     "type": "injury",
+     "expected_return": "Unknown",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6106401",
+     "fetched_at": "2026-11-03T15:32:52+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "Aur\u00e9lien Tchouam\u00e9ni",
+     "type": "injury",
+     "expected_return": "A few days",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6106401",
+     "fetched_at": "2026-11-03T15:32:52+00:00"
+    },
+    {
+     "player": "Ferland Mendy",
+     "type": "injury",
+     "expected_return": "Back in training",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6106401",
+     "fetched_at": "2026-11-03T15:32:52+00:00"
+    },
+    {
+     "player": "Ra\u00fal Asencio",
+     "type": "injury",
+     "expected_return": "Early January 2027",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6106401",
+     "fetched_at": "2026-11-03T15:32:52+00:00"
+    },
+    {
+     "player": "Rodrygo",
+     "type": "injury",
+     "expected_return": "Late December 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6106401",
+     "fetched_at": "2026-11-03T15:32:52+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 3,
+    "n21": 2,
+    "last_match": "2026-11-01"
+   },
+   "away": {
+    "rest_days": 3,
+    "n21": 3,
+    "last_match": "2026-11-01"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 2367.7
+  },
+  "venue": {
+   "name": "ALLWYN Arena",
+   "city": "Ath\u00edna (Athens)",
+   "lat": 38.037165836,
+   "lon": 23.741438985
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 1.19,
+   "temp_c": 15.9,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=38.037&longitude=23.741",
+   "fetched_at": "2026-11-03T15:32:52+00:00",
+   "lat": 38.037165836,
+   "lon": 23.741438985
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": -10.86,
+    "d_p_draw_pp": -0.48,
+    "d_p_away_pp": 11.33,
+    "d_xg_home": -0.292,
+    "d_xg_away": 0.217
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.022,
+    "away_rate_mult": 1.022,
+    "d_p_home_pp": 0.09,
+    "d_p_draw_pp": -0.33,
+    "d_p_away_pp": 0.24,
+    "d_xg_home": 0.028,
+    "d_xg_away": 0.036,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0506,
+    "away_rate_mult": 1.0211,
+    "d_p_home_pp": 1.02,
+    "d_p_draw_pp": -0.4,
+    "d_p_away_pp": -0.63,
+    "d_xg_home": 0.067,
+    "d_xg_away": 0.033,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "reason": "failed validation; no live features"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 3.0,
+   "rest_a": 3.0,
+   "n21_h": 2.0,
+   "n21_a": 3.0,
+   "travel_km": 2367.7217477250642,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 1.19,
+   "temp_c": 15.9
+  }
+ },
+ "confidence": {
+  "tier": "LOW",
+  "p_max": 0.468748846576555,
+  "entropy_nats": 1.0578000446273546,
+  "text": "Most likely result has P = 46.9%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.3% \u00b1 0.4% (n=16754, mean forecast 44.6%). Backtest RPS for UCL: 0.1961; exact-score top-5 hit rate 40.2% (n=503). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: LOW (entropy 1.058 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "AEK: lineup is PROJECTED (FotMob projected XI (enetpulse)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "AEK: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.",
+  "Real Madrid: lineup is PROJECTED (FotMob projected XI (enetpulse)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Real Madrid: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+ ],
+ "verdict": "AEK 1\u20131 Real Madrid is the single most probable scoreline at 11.6%: expected goals 1.30\u20131.72 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.046). Exact scores are inherently uncertain; the 1X2 split is 28.6%/24.5%/46.9%.",
+ "resolved": {
+  "home_key": "Greece:AEK",
+  "away_key": "Spain:Real Madrid",
+  "div": "UCL",
+  "home_div": "G1",
+  "away_div": "SP1",
+  "country": "Europe"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: Real Madrid CF at AEK\nCompetition: UEFA Champions League 2025\nDate: 2026-11-04 12:45 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-11-03\n\nPRIMARY FINAL SCORE PREDICTION\n\nAEK 1 \u2013 1 Real Madrid CF\n(modal exact score, probability 11.6%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.30\nAway: 1.72\nExpected Total: 3.01\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 28.6%\nDraw: 24.5%\nAway Win: 46.9%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 11.6%\n2. 1\u20132: 9.3%\n3. 0\u20131: 8.0%\n4. 0\u20132: 7.4%\n5. 2\u20131: 7.0%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 18.8%\nTotal 2 goals: 23.0%\nTotal 3 goals: 22.5%\nTotal 4 goals: 17.3%\nTotal 5+ goals: 18.4%\n\nBoth Teams Score: 59.7%\nClean sheet AEK: 17.6% \u00b7 Clean sheet Real Madrid CF: 27.8%\n\nMATCH INTELLIGENCE\n\n1. AEK attack vs Real Madrid defence: time-weighted strength gap multiplies AEK's scoring rate by \u00d70.62 relative to an average pairing (from 27/42 decay-weighted matches).\n2. Real Madrid attack vs AEK defence: rate multiplier \u00d71.53 for the away side.\n3. Context \u2014 Understat xG component (validated, in ensemble): home win -10.9 pp, draw -0.5 pp, away win +11.3 pp (xG -0.29 / +0.22).\n\nMODEL CONFIDENCE\n\nMost likely result has P = 46.9%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.3% \u00b1 0.4% (n=16754, mean forecast 44.6%). Backtest RPS for UCL: 0.1961; exact-score top-5 hit rate 40.2% (n=503). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: LOW (entropy 1.058 nats of max 1.099).\nParameter-uncertainty 80% bands: xG AEK 1.01\u20131.62, xG Real Madrid CF 1.26\u20132.20; P(home win) 19.9%\u201339.8%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0017 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nAEK: PROJECTED \u2014 FotMob projected XI (enetpulse), fetched 2026-11-03 10:32 EST (4-4-2)\n  Alberto Brignoli (G), Lazaros Rota (D), Harold Moukoudi (D), Filipe Relvas (D), Stavros Pilios (D), Lovro Majer (M), R\u0103zvan Marin (M), Mil\u00e1n Vit\u00e1lis (M), Aboubakary Ko\u00efta (M), Barnab\u00e1s Varga (F), Luka Jovi\u0107 (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\nReal Madrid: PROJECTED \u2014 FotMob projected XI (enetpulse), fetched 2026-11-03 10:32 EST (4-2-3-1)\n  Thibaut Courtois (G), Denzel Dumfries (D), Antonio R\u00fcdiger (D), Dean Huijsen (D), Marc Cucurella (D), Bernardo Silva (M), Eduardo Camavinga (M), Arda G\u00fcler (M), Jude Bellingham (M), Vin\u00edcius J\u00fanior (F), Kylian Mbapp\u00e9 (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nKEY ABSENCES\n\n- AEK: Thomas Strakosha \u2014 injury, Unknown [FotMob, 2026-11-03 10:32 EST]\n- Real Madrid: Aur\u00e9lien Tchouam\u00e9ni \u2014 injury, A few days [FotMob, 2026-11-03 10:32 EST]\n- Real Madrid: Ferland Mendy \u2014 injury, Back in training [FotMob, 2026-11-03 10:32 EST]\n- Real Madrid: Ra\u00fal Asencio \u2014 injury, Early January 2027 [FotMob, 2026-11-03 10:32 EST]\n- Real Madrid: Rodrygo \u2014 injury, Late December 2026 [FotMob, 2026-11-03 10:32 EST]\n\nWEATHER AT VENUE\n\nALLWYN Arena, Ath\u00edna (Athens): 15.9 \u00b0C, wind 1.2 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-11-03 10:32 EST]\n\nREST & TRAVEL\n\nAEK: 3 days' rest, 2 matches in previous 21 days \u00b7 Real Madrid: 3 days' rest, 3 in 21 days \u00b7 away travel 2367.7 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 28.6% / 24.5% / 46.9%, xG 1.30\u20131.72\n- Understat xG component (validated, in ensemble): home -10.86 pp, draw -0.48 pp, away +11.33 pp; xG -0.292 / +0.217\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.09 pp, draw -0.33 pp, away +0.24 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +1.02 pp, draw -0.40 pp, away -0.63 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- lineup: not applied (failed validation; no live features)\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- AEK: lineup is PROJECTED (FotMob projected XI (enetpulse)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- AEK: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n- Real Madrid: lineup is PROJECTED (FotMob projected XI (enetpulse)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Real Madrid: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nFINAL VERDICT\n\nAEK 1\u20131 Real Madrid is the single most probable scoreline at 11.6%: expected goals 1.30\u20131.72 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.046). Exact scores are inherently uncertain; the 1X2 split is 28.6%/24.5%/46.9%.\n",
+ "frozen_at": "2026-11-03T15:32:53+00:00",
+ "sha256": "470ed7547d693d781e434204bb1dedfceaa69265e1d6de5ea8d009d71eb8659c"
+}
