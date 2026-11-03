@@ -1,0 +1,642 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-11-03",
+ "input_fingerprint": "2b496214a714c6c247d21cc4d8d6f0d6ca240398cabf4dfbc8806167e27902c4",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-11-03T19:42:44+00:00",
+ "fixture": {
+  "event_id": "POLY-1230761",
+  "home_name": "Manchester United FC",
+  "away_name": "AS Roma",
+  "competition": "UEFA Champions League 2025",
+  "subcategory": "ucl",
+  "kickoff_utc": "2026-11-03T20:00:00+00:00",
+  "kickoff_local": "2026-11-03 15:00 EST",
+  "home_matched": "Man United",
+  "away_matched": "Roma",
+  "match_methods": {
+   "home": {
+    "source": "Manchester United FC",
+    "matched": "Man United",
+    "method": "alias",
+    "score": 1.0
+   },
+   "away": {
+    "source": "AS Roma",
+    "matched": "Roma",
+    "method": "core-tokens",
+    "score": 0.97
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.471589053178786,
+  "p_draw": 0.23942781847335787,
+  "p_away": 0.2889831283478561,
+  "xg_home": 1.84592718271175,
+  "xg_away": 1.405463774101245,
+  "xg_total": 3.251390956812995,
+  "median_total": 3,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.10842946919793149
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.10842946919793149
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.09294183008904344
+   },
+   {
+    "home": 1,
+    "away": 2,
+    "p": 0.07127891232189816
+   },
+   {
+    "home": 2,
+    "away": 2,
+    "p": 0.06882330684536793
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.06564088030616494
+   }
+  ],
+  "btts": 0.6452138468822574,
+  "totals_over": {
+   "over_0.5": 0.9599574679600903,
+   "over_1.5": 0.8437513281157031,
+   "over_2.5": 0.6329726025299978,
+   "over_3.5": 0.41043809144165155,
+   "over_4.5": 0.225545250597228,
+   "over_5.5": 0.10862227548672422,
+   "over_6.5": 0.0452542599455469
+  },
+  "total_buckets": {
+   "0-1": 0.15624867188429684,
+   "2": 0.2107787255857055,
+   "3": 0.22253451108834607,
+   "4": 0.18489284084442356,
+   "5+": 0.225545250597228
+  },
+  "clean_sheet_home": 0.23910150784549616,
+  "clean_sheet_away": 0.15572717731215616,
+  "home_goal_dist": [
+   0.15572717731215616,
+   0.294386818270775,
+   0.26972636472700123,
+   0.1643867033577371,
+   0.07573633222611413,
+   0.028170178833437618,
+   0.00879733896778051,
+   0.003069086304998275
+  ],
+  "away_goal_dist": [
+   0.23910150784549616,
+   0.35030706791900906,
+   0.2457672425036644,
+   0.11278537118478338,
+   0.03855430872717922,
+   0.01052806233852107,
+   0.0023955355250162807,
+   0.0005609039563303308
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    4
+   ],
+   "away_goals_80": [
+    0,
+    3
+   ],
+   "total_goals_80": [
+    1,
+    6
+   ],
+   "goal_diff_80": [
+    -2,
+    3
+   ]
+  },
+  "score_grid": [
+   [
+    0.040043,
+    0.050565,
+    0.038248,
+    0.01815,
+    0.006404,
+    0.001798,
+    0.000419
+   ],
+   [
+    0.065641,
+    0.108429,
+    0.071279,
+    0.033322,
+    0.01159,
+    0.003211,
+    0.000739
+   ],
+   [
+    0.064102,
+    0.092942,
+    0.068823,
+    0.029994,
+    0.010275,
+    0.002805,
+    0.000637
+   ],
+   [
+    0.040164,
+    0.057421,
+    0.039666,
+    0.018993,
+    0.006065,
+    0.00163,
+    0.000365
+   ],
+   [
+    0.018923,
+    0.026714,
+    0.018204,
+    0.008134,
+    0.002854,
+    0.000715,
+    0.000158
+   ],
+   [
+    0.007161,
+    0.01,
+    0.006733,
+    0.002969,
+    0.000973,
+    0.000268,
+    5.5e-05
+   ],
+   [
+    0.002267,
+    0.003137,
+    0.00209,
+    0.000911,
+    0.000295,
+    7.6e-05,
+    1.7e-05
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.47076999999999997,
+  "p_draw": 0.24125,
+  "p_away": 0.28798,
+  "se": [
+   0.0011161218730497131,
+   0.0009566829085438915,
+   0.0010125401710549561
+  ],
+  "max_abs_dev_vs_exact": 0.0018221815266421248,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   1.39185247180048,
+   2.344609238487814
+  ],
+  "xg_away_80": [
+   1.0745462259593506,
+   1.758010089181981
+  ],
+  "p_home_80": [
+   0.35265520833507036,
+   0.6017040053644439
+  ],
+  "p_draw_80": [
+   0.20085659159649136,
+   0.2650100305261316
+  ],
+  "p_away_80": [
+   0.19252602282065115,
+   0.39082861702331045
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.20675111696951964,
+   0.18269605456919236
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.4967370376859131,
+   "p_draw": 0.23987579601973488,
+   "p_away": 0.26338716629435194,
+   "xg_home": 1.8117364824598345,
+   "xg_away": 1.2687820029619143,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.3737848175544391,
+   "p_draw": 0.24104475136114614,
+   "p_away": 0.38517043108441473,
+   "xg_home": 1.5081691000809059,
+   "xg_away": 1.5342188354945783,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.5120295105239618,
+   "p_draw": 0.23163434558731205,
+   "p_away": 0.25633614388872605,
+   "xg_home": 1.9519573839720423,
+   "xg_away": 1.3375795359341296,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.4832416938369637,
+   "p_draw": 0.22060600873606262,
+   "p_away": 0.2961522974269736,
+   "xg_home": 1.9289572439516407,
+   "xg_away": 1.4753041001490228,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.5530261987949028,
+   "p_draw": 0.22050579161619932,
+   "p_away": 0.22646800958889765,
+   "xg_home": 2.05552533974467,
+   "xg_away": 1.2607646537327413,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Home advantage (Europe, fitted from results): \u00d71.32 on Man United's scoring rate.",
+   "effect": 0.2775
+  },
+  {
+   "text": "Context \u2014 Understat xG component (validated, in ensemble): home win +9.0 pp, draw -1.2 pp, away win -7.8 pp (xG +0.28 / -0.13).",
+   "effect": 0.2694
+  },
+  {
+   "text": "Independent results-only Elo: Man United 1715 vs Roma 1820 (gap -105 before home advantage).",
+   "effect": 0.1573
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.471589053178786,
+  "p_draw": 0.23942781847335787,
+  "p_away": 0.2889831283478561,
+  "xg_home": 1.84592718271175,
+  "xg_away": 1.405463774101245
+ },
+ "context": {
+  "fetched_at": "2026-11-03T19:42:44+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/6106291",
+    "fetched_at": "2026-11-03T19:42:44+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "confirmed",
+    "source": "FotMob official team sheet",
+    "formation": "4-2-3-1",
+    "starters": [
+     {
+      "name": "Senne Lammens",
+      "pos": "G"
+     },
+     {
+      "name": "Leny Yoro",
+      "pos": "D"
+     },
+     {
+      "name": "Harry Maguire",
+      "pos": "D"
+     },
+     {
+      "name": "Ayden Heaven",
+      "pos": "D"
+     },
+     {
+      "name": "Diogo Dalot",
+      "pos": "D"
+     },
+     {
+      "name": "Kobbie Mainoo",
+      "pos": "M"
+     },
+     {
+      "name": "Carlos Baleba",
+      "pos": "M"
+     },
+     {
+      "name": "Amad Diallo",
+      "pos": "F"
+     },
+     {
+      "name": "Bruno Fernandes",
+      "pos": "M"
+     },
+     {
+      "name": "Matheus Cunha",
+      "pos": "F"
+     },
+     {
+      "name": "Bryan Mbeumo",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-11-03T19:42:44+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   },
+   "away": {
+    "status": "confirmed",
+    "source": "FotMob official team sheet",
+    "formation": "3-4-2-1",
+    "starters": [
+     {
+      "name": "Devis V\u00e1squez",
+      "pos": "G"
+     },
+     {
+      "name": "Gianluca Mancini",
+      "pos": "D"
+     },
+     {
+      "name": "Leonardo Balerdi",
+      "pos": "D"
+     },
+     {
+      "name": "Mario Hermoso",
+      "pos": "D"
+     },
+     {
+      "name": "Devyne Rensch",
+      "pos": "M"
+     },
+     {
+      "name": "Bryan Cristante",
+      "pos": "M"
+     },
+     {
+      "name": "Marten de Roon",
+      "pos": "M"
+     },
+     {
+      "name": "Wesley",
+      "pos": "M"
+     },
+     {
+      "name": "Matias Soul\u00e9",
+      "pos": "M"
+     },
+     {
+      "name": "Rodrigo Mora",
+      "pos": "M"
+     },
+     {
+      "name": "Donyell Malen",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-11-03T19:42:44+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Luke Shaw",
+     "type": "injury",
+     "expected_return": "Early November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6106291",
+     "fetched_at": "2026-11-03T19:42:44+00:00"
+    },
+    {
+     "player": "Manuel Ugarte",
+     "type": "injury",
+     "expected_return": "Early April 2027",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6106291",
+     "fetched_at": "2026-11-03T19:42:44+00:00"
+    },
+    {
+     "player": "Benjamin \u0160e\u0161ko",
+     "type": "injury",
+     "expected_return": "Early January 2027",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6106291",
+     "fetched_at": "2026-11-03T19:42:44+00:00"
+    },
+    {
+     "player": "Marcus Rashford",
+     "type": "injury",
+     "expected_return": "A few days",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6106291",
+     "fetched_at": "2026-11-03T19:42:44+00:00"
+    },
+    {
+     "player": "Patrick Dorgu",
+     "type": "injury",
+     "expected_return": "Early November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6106291",
+     "fetched_at": "2026-11-03T19:42:44+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "Pierluigi Gollini",
+     "type": "injury",
+     "expected_return": "About 1-2 weeks",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6106291",
+     "fetched_at": "2026-11-03T19:42:44+00:00"
+    },
+    {
+     "player": "Paulo Dybala",
+     "type": "injury",
+     "expected_return": "Back in training",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6106291",
+     "fetched_at": "2026-11-03T19:42:44+00:00"
+    },
+    {
+     "player": "Mile Svilar",
+     "type": "injury",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6106291",
+     "fetched_at": "2026-11-03T19:42:44+00:00"
+    },
+    {
+     "player": "Lorenzo Pellegrini",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6106291",
+     "fetched_at": "2026-11-03T19:42:44+00:00"
+    },
+    {
+     "player": "Manu Kon\u00e9",
+     "type": "injury",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6106291",
+     "fetched_at": "2026-11-03T19:42:44+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 3,
+    "n21": 3,
+    "last_match": "2026-10-31"
+   },
+   "away": {
+    "rest_days": 3,
+    "n21": 4,
+    "last_match": "2026-10-31"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 1684.8
+  },
+  "venue": {
+   "name": "Old Trafford",
+   "city": "Manchester",
+   "lat": 53.463094458,
+   "lon": -2.29137361
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 3.3499999999999996,
+   "temp_c": 9.2,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=53.463&longitude=-2.291",
+   "fetched_at": "2026-11-03T19:42:44+00:00",
+   "lat": 53.463094458,
+   "lon": -2.29137361
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": 8.98,
+    "d_p_draw_pp": -1.18,
+    "d_p_away_pp": -7.8,
+    "d_xg_home": 0.275,
+    "d_xg_away": -0.131
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.022,
+    "away_rate_mult": 1.022,
+    "d_p_home_pp": 0.28,
+    "d_p_draw_pp": -0.32,
+    "d_p_away_pp": 0.04,
+    "d_xg_home": 0.04,
+    "d_xg_away": 0.03,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0454,
+    "away_rate_mult": 1.0189,
+    "d_p_home_pp": 1.34,
+    "d_p_draw_pp": -0.6,
+    "d_p_away_pp": -0.74,
+    "d_xg_home": 0.083,
+    "d_xg_away": 0.025,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "reason": "failed validation; no live features"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 3.0,
+   "rest_a": 3.0,
+   "n21_h": 3.0,
+   "n21_a": 4.0,
+   "travel_km": 1684.8214251660524,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 3.3499999999999996,
+   "temp_c": 9.2
+  }
+ },
+ "confidence": {
+  "tier": "LOW",
+  "p_max": 0.471589053178786,
+  "entropy_nats": 1.055471394539118,
+  "text": "Most likely result has P = 47.2%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.3% \u00b1 0.4% (n=16754, mean forecast 44.6%). Backtest RPS for UCL: 0.1961; exact-score top-5 hit rate 40.2% (n=503). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: LOW (entropy 1.055 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Man United: lineup CONFIRMED (FotMob official team sheet).",
+  "Man United: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.",
+  "Roma: lineup CONFIRMED (FotMob official team sheet).",
+  "Roma: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+ ],
+ "verdict": "Man United 1\u20131 Roma is the single most probable scoreline at 10.8%: expected goals 1.85\u20131.41 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.046). Exact scores are inherently uncertain; the 1X2 split is 47.2%/23.9%/28.9%.",
+ "resolved": {
+  "home_key": "England:Man United",
+  "away_key": "Italy:Roma",
+  "div": "UCL",
+  "home_div": "E0",
+  "away_div": "I1",
+  "country": "Europe"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: AS Roma at Manchester United FC\nCompetition: UEFA Champions League 2025\nDate: 2026-11-03 15:00 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-11-03\n\nPRIMARY FINAL SCORE PREDICTION\n\nManchester United FC 1 \u2013 1 AS Roma\n(modal exact score, probability 10.8%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.85\nAway: 1.41\nExpected Total: 3.25\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 47.2%\nDraw: 23.9%\nAway Win: 28.9%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 10.8%\n2. 2\u20131: 9.3%\n3. 1\u20132: 7.1%\n4. 2\u20132: 6.9%\n5. 1\u20130: 6.6%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 15.6%\nTotal 2 goals: 21.1%\nTotal 3 goals: 22.3%\nTotal 4 goals: 18.5%\nTotal 5+ goals: 22.6%\n\nBoth Teams Score: 64.5%\nClean sheet Manchester United FC: 23.9% \u00b7 Clean sheet AS Roma: 15.6%\n\nMATCH INTELLIGENCE\n\n1. Home advantage (Europe, fitted from results): \u00d71.32 on Man United's scoring rate.\n2. Context \u2014 Understat xG component (validated, in ensemble): home win +9.0 pp, draw -1.2 pp, away win -7.8 pp (xG +0.28 / -0.13).\n3. Independent results-only Elo: Man United 1715 vs Roma 1820 (gap -105 before home advantage).\n\nMODEL CONFIDENCE\n\nMost likely result has P = 47.2%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.3% \u00b1 0.4% (n=16754, mean forecast 44.6%). Backtest RPS for UCL: 0.1961; exact-score top-5 hit rate 40.2% (n=503). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: LOW (entropy 1.055 nats of max 1.099).\nParameter-uncertainty 80% bands: xG Manchester United FC 1.39\u20132.34, xG AS Roma 1.07\u20131.76; P(home win) 35.3%\u201360.2%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0018 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nMan United: CONFIRMED \u2014 FotMob official team sheet, fetched 2026-11-03 14:42 EST (4-2-3-1)\n  Senne Lammens (G), Leny Yoro (D), Harry Maguire (D), Ayden Heaven (D), Diogo Dalot (D), Kobbie Mainoo (M), Carlos Baleba (M), Amad Diallo (F), Bruno Fernandes (M), Matheus Cunha (F), Bryan Mbeumo (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\nRoma: CONFIRMED \u2014 FotMob official team sheet, fetched 2026-11-03 14:42 EST (3-4-2-1)\n  Devis V\u00e1squez (G), Gianluca Mancini (D), Leonardo Balerdi (D), Mario Hermoso (D), Devyne Rensch (M), Bryan Cristante (M), Marten de Roon (M), Wesley (M), Matias Soul\u00e9 (M), Rodrigo Mora (M), Donyell Malen (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nKEY ABSENCES\n\n- Man United: Luke Shaw \u2014 injury, Early November 2026 [FotMob, 2026-11-03 14:42 EST]\n- Man United: Manuel Ugarte \u2014 injury, Early April 2027 [FotMob, 2026-11-03 14:42 EST]\n- Man United: Benjamin \u0160e\u0161ko \u2014 injury, Early January 2027 [FotMob, 2026-11-03 14:42 EST]\n- Man United: Marcus Rashford \u2014 injury, A few days [FotMob, 2026-11-03 14:42 EST]\n- Man United: Patrick Dorgu \u2014 injury, Early November 2026 [FotMob, 2026-11-03 14:42 EST]\n- Roma: Pierluigi Gollini \u2014 injury, About 1-2 weeks [FotMob, 2026-11-03 14:42 EST]\n- Roma: Paulo Dybala \u2014 injury, Back in training [FotMob, 2026-11-03 14:42 EST]\n- Roma: Mile Svilar \u2014 injury, Mid November 2026 [FotMob, 2026-11-03 14:42 EST]\n- Roma: Lorenzo Pellegrini \u2014 injury, Late November 2026 [FotMob, 2026-11-03 14:42 EST]\n- Roma: Manu Kon\u00e9 \u2014 injury, Mid November 2026 [FotMob, 2026-11-03 14:42 EST]\n\nWEATHER AT VENUE\n\nOld Trafford, Manchester: 9.2 \u00b0C, wind 3.3 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-11-03 14:42 EST]\n\nREST & TRAVEL\n\nMan United: 3 days' rest, 3 matches in previous 21 days \u00b7 Roma: 3 days' rest, 4 in 21 days \u00b7 away travel 1684.8 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 47.2% / 23.9% / 28.9%, xG 1.85\u20131.41\n- Understat xG component (validated, in ensemble): home +8.98 pp, draw -1.18 pp, away -7.80 pp; xG +0.275 / -0.131\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.28 pp, draw -0.32 pp, away +0.04 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +1.34 pp, draw -0.60 pp, away -0.74 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- lineup: not applied (failed validation; no live features)\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Man United: lineup CONFIRMED (FotMob official team sheet).\n- Man United: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n- Roma: lineup CONFIRMED (FotMob official team sheet).\n- Roma: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nFINAL VERDICT\n\nMan United 1\u20131 Roma is the single most probable scoreline at 10.8%: expected goals 1.85\u20131.41 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.046). Exact scores are inherently uncertain; the 1X2 split is 47.2%/23.9%/28.9%.\n",
+ "frozen_at": "2026-11-03T19:42:44+00:00",
+ "sha256": "8c46469bd7d1ba97e285534807cf0a57e4c4caa7eec66841435966fe7ca55126"
+}
