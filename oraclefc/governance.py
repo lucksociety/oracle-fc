@@ -27,6 +27,7 @@ class MarketContamination(RuntimeError):
 # ---------------------------------------------------------------- providers
 PERMITTED_PROVIDERS = {
     "football-data.co.uk": "Historical results & match statistics (odds columns are dropped at ingestion)",
+    "espn-results": "Completed domestic fixture identities and regulation scores only.",
     "openfootball": "Public-domain UEFA Champions League results (football.txt)",
     "jupiter-fixtures": "Fixture identity only (teams, competition, kickoff). Prices never pass this layer.",
     "user-input": "Manually entered fixture (home, away, date, competition)",

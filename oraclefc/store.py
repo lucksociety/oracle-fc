@@ -9,7 +9,7 @@ import pandas as pd
 
 from . import config
 from .governance import CLEAN_MATCH_SCHEMA, validate_clean_matches, now_utc_iso
-from .ingest import footballdata, openfootball_cl
+from .ingest import espn_results, footballdata, openfootball_cl
 from .teams import core_tokens, match_team, team_key
 
 CLEAN_PARQUET = config.CLEAN_DIR / "matches.parquet"
@@ -57,6 +57,11 @@ def build(seasons: list[str] | None = None, include_extra: bool = True, include_
     dom["home_key"] = [team_key(c, h) for c, h in zip(dom["country"], dom["home"])]
     dom["away_key"] = [team_key(c, a) for c, a in zip(dom["country"], dom["away"])]
     parts = [dom]
+    if include_extra:
+        extra_results, extra_provenance = espn_results.fetch()
+        if not extra_results.empty:
+            parts.append(extra_results)
+            prov += extra_provenance
     if include_cl:
         cl, p3 = openfootball_cl.fetch_cl()
         prov += p3
@@ -91,9 +96,10 @@ def build(seasons: list[str] | None = None, include_extra: bool = True, include_
     return df
 
 
-def load(path=None) -> pd.DataFrame:
+def load(path=None, *, include_supplemental: bool = False) -> pd.DataFrame:
     df = pd.read_parquet(path or CLEAN_PARQUET)
-    return validate_clean_matches(df)
+    df = validate_clean_matches(df)
+    return df if include_supplemental else df.loc[~df["div"].isin(config.SUPPLEMENTAL_DIVISIONS)].copy()
 
 
 def data_cutoff(df: pd.DataFrame) -> str:

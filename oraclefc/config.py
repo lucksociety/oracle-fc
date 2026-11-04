@@ -66,7 +66,20 @@ EXTRA_LEAGUES: dict[str, tuple[str, str, int]] = {
     "USA": ("USA", "MLS", 1),
 }
 
-ALL_DIVISIONS = {**MAIN_DIVISIONS, **EXTRA_LEAGUES, "UCL": ("Europe", "UEFA Champions League", 0)}
+SUPPLEMENTAL_DIVISIONS = {
+    "COL": ("Colombia", "Primera A", 1),
+    "CRC": ("Costa Rica", "Primera Division", 1),
+    "MEX2": ("Mexico", "Liga de Expansion MX", 2),
+    "PAR": ("Paraguay", "Primera Division", 1),
+    "PER": ("Peru", "Liga 1", 1),
+    "VEN": ("Venezuela", "Primera Division", 1),
+}
+SUPPLEMENTAL_FEEDS = {"COL": "col.1", "CRC": "crc.1", "MEX2": "mex.2",
+                      "PAR": "par.1", "PER": "per.1", "VEN": "ven.1"}
+SUPPLEMENTAL_SUBCATEGORIES = {"col1": "COL", "fpd": "CRC", "mex2": "MEX2",
+                             "par1": "PAR", "per1": "PER", "ven1": "VEN"}
+
+ALL_DIVISIONS = {**SUPPLEMENTAL_DIVISIONS, **MAIN_DIVISIONS, **EXTRA_LEAGUES, "UCL": ("Europe", "UEFA Champions League", 0)}
 
 # Season codes for football-data main files (e.g. "2324" = 2023/24)
 FIRST_SEASON_START = int(os.environ.get("ORACLEFC_FIRST_SEASON", "2016"))
@@ -93,7 +106,7 @@ UEFA_CC = {
 }
 
 # Jupiter subcategory -> candidate data divisions (where the two teams are looked up)
-EUROPE_ALL = [d for d, v in ALL_DIVISIONS.items() if v[0] not in {"Argentina", "Brazil", "China", "Japan", "Mexico", "USA"}]
+EUROPE_ALL = [d for d, v in ALL_DIVISIONS.items() if d not in SUPPLEMENTAL_DIVISIONS and v[0] not in {"Argentina", "Brazil", "China", "Japan", "Mexico", "USA"}]
 JUPITER_SUBCATEGORY_DIVS: dict[str, list[str]] = {
     "epl": ["E0"], "elc": ["E1"], "el1": ["E2"], "el2": ["E3"],
     "efl": ["E0", "E1", "E2", "E3", "EC"], "fac": ["E0", "E1", "E2", "E3", "EC"],
@@ -106,5 +119,6 @@ JUPITER_SUBCATEGORY_DIVS: dict[str, list[str]] = {
     "aut": ["AUT"], "fin1": ["FIN"], "mex": ["MEX"], "pol": ["POL"], "chi": ["CHN"],
     "bra": ["BRA"], "arg": ["ARG"], "mls": ["USA"], "jap": ["JPN"], "nor": ["NOR"],
     "swe": ["SWE"], "den": ["DNK"], "swi": ["SWZ"], "rom": ["ROU"], "irl": ["IRL"],
+    **{sub: [div] for sub, div in SUPPLEMENTAL_SUBCATEGORIES.items()},
     "ucl": EUROPE_ALL, "uel": EUROPE_ALL, "ucol": EUROPE_ALL,
 }
