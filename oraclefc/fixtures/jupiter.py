@@ -72,6 +72,9 @@ def _get(url: str, params: dict, retries: int = 6):
 
 def sanitise_event(ev: dict) -> Fixture | None:
     """Allowlist copy of the identity fields of one event. Returns None for non-match events."""
+    event_id = str(ev.get("eventId") or "")
+    if not event_id.startswith("POLY-"):
+        return None
     md = ev.get("metadata") or {}
     title = md.get("title") or ""
     m = TITLE_RE.match(title)
@@ -82,14 +85,15 @@ def sanitise_event(ev: dict) -> Fixture | None:
         return None
     kickoff = datetime.fromtimestamp(int(begin), timezone.utc).isoformat()
     return Fixture(
-        event_id=str(ev.get("eventId")), home_name=m.group("h").strip(), away_name=m.group("a").strip(),
+        event_id=event_id, home_name=m.group("h").strip(), away_name=m.group("a").strip(),
         competition=str(md.get("league") or ev.get("subcategory") or ""),
         subcategory=str(ev.get("subcategory") or ""), kickoff_utc=kickoff, slug=str(md.get("slug") or ""))
 
 
 def fetch_all_soccer(use_cache: bool = True) -> list[Fixture]:
     if use_cache and CACHE.exists() and time.time() - CACHE.stat().st_mtime < CACHE_TTL:
-        return [Fixture(**d) for d in json.loads(CACHE.read_text())["fixtures"]]
+        return [Fixture(**d) for d in json.loads(CACHE.read_text())["fixtures"]
+                if d["event_id"].startswith("POLY-")]
     out, start, page = [], 0, 100
     while True:
         js = _get(f"{BASE}/events", {"category": "sports", "tags": "soccer", "start": start,

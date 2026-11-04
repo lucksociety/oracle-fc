@@ -180,14 +180,27 @@ def evaluate(selections: list[dict], score_grid, sim: dict | None = None) -> lis
     return rows
 
 
-def best_bet(selections: list[dict], score_grid, sim: dict | None = None) -> dict:
+def best_bet(selections: list[dict], score_grid, sim: dict | None = None, *, components: dict | None = None) -> dict:
     rows = evaluate(selections, score_grid, sim)
+    primary = sorted((components or {}).values(), key=lambda c: c.get("weight", 0), reverse=True)[:2]
+    blocked = []
+    if len(primary) == 2:
+        for row in rows:
+            spec = row["outcome"]
+            if not row["eligible"] or spec["kind"] != "1x2":
+                continue
+            threshold = max(MIN_P, row["cost_per_contract"])
+            if any(model_prob(spec, score_grid, component) <= threshold for component in primary):
+                row["eligible"] = False
+                blocked.append(row)
     elig = sorted((r for r in rows if r["eligible"]), key=lambda r: (-r["ev_per_dollar"], -r["model_p"]))
     out = {"n_priced": len(rows), "n_eligible": len(elig),
            "rule": f"model P > {MIN_P:.0%} and EV > 0 at the Jupiter ask incl. fees; highest EV wins"}
     if not elig:
         out["verdict"] = "NO BET"
-        cands = [r for r in rows if r["model_p"] > MIN_P]
+        if blocked:
+            out["reason"] = "main model components do not both clear 50% and after-fee break-even"
+        cands = [r for r in rows if r["model_p"] > MIN_P and r not in blocked]
         if cands:  # closest miss, for transparency
             out["closest"] = _public(max(cands, key=lambda r: r["ev_per_dollar"]))
         return out

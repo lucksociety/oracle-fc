@@ -20,3 +20,7 @@ def test_sanitised_fixture_has_identity_only():
 def test_outrights_are_not_fixtures():
     ev = dict(EVENT, metadata={"title": "EPL: 2027 Champion"})
     assert sanitise_event(ev) is None
+
+
+def test_non_polymarket_events_are_excluded():
+    assert sanitise_event(dict(EVENT, eventId="KALSHI-1")) is None
