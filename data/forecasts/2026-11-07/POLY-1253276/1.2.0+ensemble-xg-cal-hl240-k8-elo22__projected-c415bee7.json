@@ -1,0 +1,650 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-11-03",
+ "input_fingerprint": "2b496214a714c6c247d21cc4d8d6f0d6ca240398cabf4dfbc8806167e27902c4",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-11-04T07:59:50+00:00",
+ "fixture": {
+  "event_id": "POLY-1253276",
+  "home_name": "D.C. United SC",
+  "away_name": "New York City FC",
+  "competition": "MLS 2025",
+  "subcategory": "mls",
+  "kickoff_utc": "2026-11-07T21:00:00+00:00",
+  "kickoff_local": "2026-11-07 16:00 EST",
+  "home_matched": "DC United",
+  "away_matched": "New York City",
+  "match_methods": {
+   "home": {
+    "source": "D.C. United SC",
+    "matched": "DC United",
+    "method": "core-tokens",
+    "score": 0.97
+   },
+   "away": {
+    "source": "New York City FC",
+    "matched": "New York City",
+    "method": "core-tokens",
+    "score": 0.97
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.2857568924147551,
+  "p_draw": 0.26677466036884007,
+  "p_away": 0.44746844721640494,
+  "xg_home": 1.23852211743721,
+  "xg_away": 1.5930400666897946,
+  "xg_total": 2.8315621841270047,
+  "median_total": 3,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.1275065866377073
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.1275065866377073
+   },
+   {
+    "home": 1,
+    "away": 2,
+    "p": 0.09410381114687046
+   },
+   {
+    "home": 0,
+    "away": 1,
+    "p": 0.08874401465615067
+   },
+   {
+    "home": 0,
+    "away": 2,
+    "p": 0.07318998854202305
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.07226191390487649
+   }
+  ],
+  "btts": 0.5821479947747971,
+  "totals_over": {
+   "over_0.5": 0.937519763979798,
+   "over_1.5": 0.7813400593131851,
+   "over_2.5": 0.5374948819249942,
+   "over_3.5": 0.3156927292033149,
+   "over_4.5": 0.15553799107097863,
+   "over_5.5": 0.06714113214991287,
+   "over_6.5": 0.025019918126157347
+  },
+  "total_buckets": {
+   "0-1": 0.21865994068681505,
+   "2": 0.24384517738819092,
+   "3": 0.22180215272167925,
+   "4": 0.16015473813233627,
+   "5+": 0.15553799107097863
+  },
+  "clean_sheet_home": 0.19698572055556998,
+  "clean_sheet_away": 0.2833465206898352,
+  "home_goal_dist": [
+   0.2833465206898352,
+   0.36566949169214963,
+   0.22515764810326114,
+   0.09064242120972855,
+   0.027153536987401274,
+   0.006485600444911629,
+   0.0012882939007053946,
+   0.0002564869720073199
+  ],
+  "away_goal_dist": [
+   0.19698572055556998,
+   0.328977588317397,
+   0.26199148365133224,
+   0.13685143549645593,
+   0.05326446513586609,
+   0.01651909859447743,
+   0.004256159810701011,
+   0.0011540484382003852
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    3
+   ],
+   "away_goals_80": [
+    0,
+    3
+   ],
+   "total_goals_80": [
+    1,
+    5
+   ],
+   "goal_diff_80": [
+    -2,
+    2
+   ]
+  },
+  "score_grid": [
+   [
+    0.06248,
+    0.088744,
+    0.07319,
+    0.038156,
+    0.014764,
+    0.004541,
+    0.00116
+   ],
+   [
+    0.067436,
+    0.127507,
+    0.094104,
+    0.049428,
+    0.019271,
+    0.005973,
+    0.001537
+   ],
+   [
+    0.043149,
+    0.072262,
+    0.061669,
+    0.0309,
+    0.012138,
+    0.00379,
+    0.000982
+   ],
+   [
+    0.01728,
+    0.029155,
+    0.023734,
+    0.013366,
+    0.005008,
+    0.001575,
+    0.000411
+   ],
+   [
+    0.005139,
+    0.008735,
+    0.007164,
+    0.003848,
+    0.00162,
+    0.000486,
+    0.000127
+   ],
+   [
+    0.001216,
+    0.002082,
+    0.001719,
+    0.00093,
+    0.000373,
+    0.000126,
+    3.1e-05
+   ],
+   [
+    0.000239,
+    0.000412,
+    0.000343,
+    0.000187,
+    7.5e-05,
+    2.4e-05,
+    7e-06
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.286315,
+  "p_draw": 0.26695,
+  "p_away": 0.446735,
+  "se": [
+   0.0010107886049392325,
+   0.000989160496330095,
+   0.0011116718035800853
+  ],
+  "max_abs_dev_vs_exact": 0.0007334472164049477,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   0.9530768407846057,
+   1.5500480427314907
+  ],
+  "xg_away_80": [
+   1.2367388183066474,
+   1.9704475854702093
+  ],
+  "p_home_80": [
+   0.21127917484733028,
+   0.39072445077032675
+  ],
+  "p_draw_80": [
+   0.22620562426200874,
+   0.2829484554983039
+  ],
+  "p_away_80": [
+   0.3412335468302211,
+   0.5532197026165646
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.1928202384002715,
+   0.17286091716657725
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.28827414829540216,
+   "p_draw": 0.27266323117319113,
+   "p_away": 0.43906262053140666,
+   "xg_home": 1.127220039901622,
+   "xg_away": 1.4491713011849816,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.2995274009435134,
+   "p_draw": 0.23605943876451316,
+   "p_away": 0.4644131602919733,
+   "xg_home": 1.3358097396491018,
+   "xg_away": 1.715658937390676,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.29659910575861587,
+   "p_draw": 0.2835714045366316,
+   "p_away": 0.41982948970475253,
+   "xg_home": 1.1135207400297236,
+   "xg_away": 1.3721767927402033,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.46299044059842887,
+   "p_draw": 0.23325954905684435,
+   "p_away": 0.3037500103447269,
+   "xg_home": 1.7468736851014703,
+   "xg_away": 1.3763109404072005,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.2883027699929257,
+   "p_draw": 0.27252611893701506,
+   "p_away": 0.43917111107005913,
+   "xg_home": 1.1270743872402533,
+   "xg_away": 1.4491908076568478,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "DC United attack vs New York City defence: time-weighted strength gap multiplies DC United's scoring rate by \u00d70.73 relative to an average pairing (from 35/37 decay-weighted matches).",
+   "effect": 0.3088
+  },
+  {
+   "text": "Home advantage (USA, fitted from results): \u00d71.27 on DC United's scoring rate.",
+   "effect": 0.2414
+  },
+  {
+   "text": "Independent results-only Elo: DC United 1350 vs New York City 1507 (gap -156 before home advantage).",
+   "effect": 0.2343
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.2857568924147551,
+  "p_draw": 0.26677466036884,
+  "p_away": 0.4474684472164049,
+  "xg_home": 1.2385221174372096,
+  "xg_away": 1.5930400666897941
+ },
+ "context": {
+  "fetched_at": "2026-11-04T07:59:50+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5071487",
+    "fetched_at": "2026-11-04T07:59:50+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "4-4-2",
+    "starters": [
+     {
+      "name": "Alex Bono",
+      "pos": "G"
+     },
+     {
+      "name": "Silvan Hefti",
+      "pos": "D"
+     },
+     {
+      "name": "Lucas Bartlett",
+      "pos": "D"
+     },
+     {
+      "name": "Kye Rowles",
+      "pos": "D"
+     },
+     {
+      "name": "Keisuke Kurokawa",
+      "pos": "D"
+     },
+     {
+      "name": "Kimito Nono",
+      "pos": "D"
+     },
+     {
+      "name": "Matti Peltola",
+      "pos": "M"
+     },
+     {
+      "name": "Andre Dozzell",
+      "pos": "M"
+     },
+     {
+      "name": "Jared Stroud",
+      "pos": "M"
+     },
+     {
+      "name": "Nathan Ordaz",
+      "pos": "F"
+     },
+     {
+      "name": "Peglow",
+      "pos": "M"
+     }
+    ],
+    "fetched_at": "2026-11-04T07:59:50+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   },
+   "away": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "4-3-3",
+    "starters": [
+     {
+      "name": "Matt Freese",
+      "pos": "G"
+     },
+     {
+      "name": "Tayvon Gray",
+      "pos": "D"
+     },
+     {
+      "name": "Thiago Martins",
+      "pos": "D"
+     },
+     {
+      "name": "James Sands",
+      "pos": "D"
+     },
+     {
+      "name": "Kevin O'Toole",
+      "pos": "D"
+     },
+     {
+      "name": "Nicol\u00e1s Fern\u00e1ndez",
+      "pos": "F"
+     },
+     {
+      "name": "Jonathan Shore",
+      "pos": "M"
+     },
+     {
+      "name": "Andr\u00e9s Perea",
+      "pos": "M"
+     },
+     {
+      "name": "Agust\u00edn Ojeda",
+      "pos": "F"
+     },
+     {
+      "name": "Talles Magno",
+      "pos": "F"
+     },
+     {
+      "name": "B\u00e9nie Traor\u00e9",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-11-04T07:59:50+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Sean Johnson",
+     "type": "injury",
+     "expected_return": "Unknown",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5071487",
+     "fetched_at": "2026-11-04T07:59:50+00:00"
+    },
+    {
+     "player": "Tai Baribo",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5071487",
+     "fetched_at": "2026-11-04T07:59:50+00:00"
+    },
+    {
+     "player": "Hosei Kijima",
+     "type": "injury",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5071487",
+     "fetched_at": "2026-11-04T07:59:50+00:00"
+    },
+    {
+     "player": "Louis Munteanu",
+     "type": "injury",
+     "expected_return": "Early November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5071487",
+     "fetched_at": "2026-11-04T07:59:50+00:00"
+    },
+    {
+     "player": "Gabriel Segal",
+     "type": "injury",
+     "expected_return": "Early November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5071487",
+     "fetched_at": "2026-11-04T07:59:50+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "Aiden O'Neill",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5071487",
+     "fetched_at": "2026-11-04T07:59:50+00:00"
+    },
+    {
+     "player": "Alonso Mart\u00ednez",
+     "type": "injury",
+     "expected_return": "A few weeks",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5071487",
+     "fetched_at": "2026-11-04T07:59:50+00:00"
+    },
+    {
+     "player": "Maxi Moralez",
+     "type": "injury",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5071487",
+     "fetched_at": "2026-11-04T07:59:50+00:00"
+    },
+    {
+     "player": "Arnau Farn\u00f3s",
+     "type": "injury",
+     "expected_return": "Early November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5071487",
+     "fetched_at": "2026-11-04T07:59:50+00:00"
+    },
+    {
+     "player": "Kai Trewin",
+     "type": "injury",
+     "expected_return": "Early November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5071487",
+     "fetched_at": "2026-11-04T07:59:50+00:00"
+    },
+    {
+     "player": "Drew Baiera",
+     "type": "injury",
+     "expected_return": "Early November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5071487",
+     "fetched_at": "2026-11-04T07:59:50+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 7,
+    "n21": 5,
+    "last_match": "2026-10-31"
+   },
+   "away": {
+    "rest_days": 7,
+    "n21": 4,
+    "last_match": "2026-10-31"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 342.0
+  },
+  "venue": {
+   "name": "Audi Field",
+   "city": "Washington, District of Columbia",
+   "lat": 38.8688021,
+   "lon": -77.012888
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 4.575,
+   "temp_c": 15.2,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=38.869&longitude=-77.013",
+   "fetched_at": "2026-11-04T07:59:51+00:00",
+   "lat": 38.8688021,
+   "lon": -77.012888
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": -0.55,
+    "d_p_draw_pp": 1.73,
+    "d_p_away_pp": -1.18,
+    "d_xg_home": -0.102,
+    "d_xg_away": -0.129
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 0.9702,
+    "away_rate_mult": 1.034,
+    "d_p_home_pp": -1.74,
+    "d_p_draw_pp": -0.36,
+    "d_p_away_pp": 2.1,
+    "d_xg_home": -0.035,
+    "d_xg_away": 0.052,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0231,
+    "away_rate_mult": 1.0097,
+    "d_p_home_pp": 0.43,
+    "d_p_draw_pp": -0.2,
+    "d_p_away_pp": -0.23,
+    "d_xg_home": 0.028,
+    "d_xg_away": 0.016,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "reason": "failed validation; no live features"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 7.0,
+   "rest_a": 7.0,
+   "n21_h": 5.0,
+   "n21_a": 4.0,
+   "travel_km": 341.97694266227575,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 4.575,
+   "temp_c": 15.2
+  }
+ },
+ "confidence": {
+  "tier": "LOW",
+  "p_max": 0.44746844721640494,
+  "entropy_nats": 1.0702774101332808,
+  "text": "Most likely result has P = 44.7%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.3% \u00b1 0.4% (n=16754, mean forecast 44.6%). Backtest RPS for USA: 0.2201; exact-score top-5 hit rate 42.9% (n=1770). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: LOW (entropy 1.070 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "DC United: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "DC United: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.",
+  "New York City: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "New York City: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+ ],
+ "verdict": "DC United 1\u20131 New York City is the single most probable scoreline at 12.8%: expected goals 1.24\u20131.59 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.046). Exact scores are inherently uncertain; the 1X2 split is 28.6%/26.7%/44.7%.",
+ "resolved": {
+  "home_key": "USA:DC United",
+  "away_key": "USA:New York City",
+  "div": "USA",
+  "home_div": "USA",
+  "away_div": "USA",
+  "country": "USA"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: New York City FC at D.C. United SC\nCompetition: MLS 2025\nDate: 2026-11-07 16:00 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-11-03\n\nPRIMARY FINAL SCORE PREDICTION\n\nD.C. United SC 1 \u2013 1 New York City FC\n(modal exact score, probability 12.8%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.24\nAway: 1.59\nExpected Total: 2.83\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 28.6%\nDraw: 26.7%\nAway Win: 44.7%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 12.8%\n2. 1\u20132: 9.4%\n3. 0\u20131: 8.9%\n4. 0\u20132: 7.3%\n5. 2\u20131: 7.2%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 21.9%\nTotal 2 goals: 24.4%\nTotal 3 goals: 22.2%\nTotal 4 goals: 16.0%\nTotal 5+ goals: 15.6%\n\nBoth Teams Score: 58.2%\nClean sheet D.C. United SC: 19.7% \u00b7 Clean sheet New York City FC: 28.3%\n\nMATCH INTELLIGENCE\n\n1. DC United attack vs New York City defence: time-weighted strength gap multiplies DC United's scoring rate by \u00d70.73 relative to an average pairing (from 35/37 decay-weighted matches).\n2. Home advantage (USA, fitted from results): \u00d71.27 on DC United's scoring rate.\n3. Independent results-only Elo: DC United 1350 vs New York City 1507 (gap -156 before home advantage).\n\nMODEL CONFIDENCE\n\nMost likely result has P = 44.7%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.3% \u00b1 0.4% (n=16754, mean forecast 44.6%). Backtest RPS for USA: 0.2201; exact-score top-5 hit rate 42.9% (n=1770). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: LOW (entropy 1.070 nats of max 1.099).\nParameter-uncertainty 80% bands: xG D.C. United SC 0.95\u20131.55, xG New York City FC 1.24\u20131.97; P(home win) 21.1%\u201339.1%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0007 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nDC United: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-11-04 02:59 EST (4-4-2)\n  Alex Bono (G), Silvan Hefti (D), Lucas Bartlett (D), Kye Rowles (D), Keisuke Kurokawa (D), Kimito Nono (D), Matti Peltola (M), Andre Dozzell (M), Jared Stroud (M), Nathan Ordaz (F), Peglow (M)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\nNew York City: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-11-04 02:59 EST (4-3-3)\n  Matt Freese (G), Tayvon Gray (D), Thiago Martins (D), James Sands (D), Kevin O'Toole (D), Nicol\u00e1s Fern\u00e1ndez (F), Jonathan Shore (M), Andr\u00e9s Perea (M), Agust\u00edn Ojeda (F), Talles Magno (F), B\u00e9nie Traor\u00e9 (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nKEY ABSENCES\n\n- DC United: Sean Johnson \u2014 injury, Unknown [FotMob, 2026-11-04 02:59 EST]\n- DC United: Tai Baribo \u2014 injury, Doubtful [FotMob, 2026-11-04 02:59 EST]\n- DC United: Hosei Kijima \u2014 injury, Mid November 2026 [FotMob, 2026-11-04 02:59 EST]\n- DC United: Louis Munteanu \u2014 injury, Early November 2026 [FotMob, 2026-11-04 02:59 EST]\n- DC United: Gabriel Segal \u2014 injury, Early November 2026 [FotMob, 2026-11-04 02:59 EST]\n- New York City: Aiden O'Neill \u2014 injury, Doubtful [FotMob, 2026-11-04 02:59 EST]\n- New York City: Alonso Mart\u00ednez \u2014 injury, A few weeks [FotMob, 2026-11-04 02:59 EST]\n- New York City: Maxi Moralez \u2014 injury, Mid November 2026 [FotMob, 2026-11-04 02:59 EST]\n- New York City: Arnau Farn\u00f3s \u2014 injury, Early November 2026 [FotMob, 2026-11-04 02:59 EST]\n- New York City: Kai Trewin \u2014 injury, Early November 2026 [FotMob, 2026-11-04 02:59 EST]\n- New York City: Drew Baiera \u2014 injury, Early November 2026 [FotMob, 2026-11-04 02:59 EST]\n\nWEATHER AT VENUE\n\nAudi Field, Washington, District of Columbia: 15.2 \u00b0C, wind 4.6 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-11-04 02:59 EST]\n\nREST & TRAVEL\n\nDC United: 7 days' rest, 5 matches in previous 21 days \u00b7 New York City: 7 days' rest, 4 in 21 days \u00b7 away travel 342.0 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 28.6% / 26.7% / 44.7%, xG 1.24\u20131.59\n- Understat xG component (validated, in ensemble): home -0.55 pp, draw +1.73 pp, away -1.18 pp; xG -0.102 / -0.129\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home -1.74 pp, draw -0.36 pp, away +2.10 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.43 pp, draw -0.20 pp, away -0.23 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- lineup: not applied (failed validation; no live features)\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- DC United: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- DC United: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n- New York City: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- New York City: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nFINAL VERDICT\n\nDC United 1\u20131 New York City is the single most probable scoreline at 12.8%: expected goals 1.24\u20131.59 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.046). Exact scores are inherently uncertain; the 1X2 split is 28.6%/26.7%/44.7%.\n",
+ "frozen_at": "2026-11-04T07:59:51+00:00",
+ "sha256": "8ad58904306e24c1e993e363ecc33976f8d1b7c72fea257937424527cdeadd65"
+}

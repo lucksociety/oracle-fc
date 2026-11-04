@@ -1,0 +1,602 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-11-03",
+ "input_fingerprint": "2b496214a714c6c247d21cc4d8d6f0d6ca240398cabf4dfbc8806167e27902c4",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-11-04T07:59:50+00:00",
+ "fixture": {
+  "event_id": "POLY-1253266",
+  "home_name": "Chicago Fire FC",
+  "away_name": "Columbus Crew",
+  "competition": "MLS 2025",
+  "subcategory": "mls",
+  "kickoff_utc": "2026-11-07T21:00:00+00:00",
+  "kickoff_local": "2026-11-07 16:00 EST",
+  "home_matched": "Chicago Fire",
+  "away_matched": "Columbus Crew",
+  "match_methods": {
+   "home": {
+    "source": "Chicago Fire FC",
+    "matched": "Chicago Fire",
+    "method": "core-tokens",
+    "score": 0.97
+   },
+   "away": {
+    "source": "Columbus Crew",
+    "matched": "Columbus Crew",
+    "method": "exact",
+    "score": 1.0
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.4569160766417781,
+  "p_draw": 0.2437333759861389,
+  "p_away": 0.2993505473720829,
+  "xg_home": 1.8382043913544412,
+  "xg_away": 1.4694480249398707,
+  "xg_total": 3.307652416294312,
+  "median_total": 3,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.10799676708678743
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.10799676708678743
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.09305211167241359
+   },
+   {
+    "home": 1,
+    "away": 2,
+    "p": 0.0734322082674964
+   },
+   {
+    "home": 2,
+    "away": 2,
+    "p": 0.07257208047225559
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.06261092742293065
+   }
+  ],
+  "btts": 0.664407926257616,
+  "totals_over": {
+   "over_0.5": 0.9619808068966385,
+   "over_1.5": 0.8505619238098818,
+   "over_2.5": 0.6443627937359886,
+   "over_3.5": 0.42309816102477416,
+   "over_4.5": 0.2358470332234774,
+   "over_5.5": 0.11540343555553967,
+   "over_6.5": 0.04886294682950862
+  },
+  "total_buckets": {
+   "0-1": 0.14943807619011823,
+   "2": 0.20619913007389312,
+   "3": 0.22126463271121447,
+   "4": 0.18725112780129674,
+   "5+": 0.2358470332234774
+  },
+  "clean_sheet_home": 0.2223875205614058,
+  "clean_sheet_away": 0.15122374628433957,
+  "home_goal_dist": [
+   0.15122374628433957,
+   0.2964426604113118,
+   0.2753813100435936,
+   0.16629543421538806,
+   0.07428428000770926,
+   0.02628103479820098,
+   0.007679517660077637,
+   0.0024120165793789904
+  ],
+  "away_goal_dist": [
+   0.2223875205614058,
+   0.34416481918173636,
+   0.2535045262538465,
+   0.12136780309544973,
+   0.04299768807018654,
+   0.01209020697484234,
+   0.002815283318970742,
+   0.0006721525435618998
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    4
+   ],
+   "away_goals_80": [
+    0,
+    3
+   ],
+   "total_goals_80": [
+    1,
+    6
+   ],
+   "goal_diff_80": [
+    -2,
+    3
+   ]
+  },
+  "score_grid": [
+   [
+    0.038019,
+    0.048808,
+    0.037627,
+    0.018051,
+    0.006403,
+    0.001799,
+    0.000418
+   ],
+   [
+    0.062611,
+    0.107997,
+    0.073432,
+    0.035303,
+    0.012549,
+    0.003532,
+    0.000822
+   ],
+   [
+    0.060575,
+    0.093052,
+    0.072572,
+    0.033103,
+    0.011792,
+    0.003326,
+    0.000776
+   ],
+   [
+    0.03673,
+    0.056546,
+    0.041843,
+    0.021338,
+    0.007211,
+    0.002038,
+    0.000476
+   ],
+   [
+    0.016428,
+    0.025345,
+    0.018795,
+    0.009093,
+    0.003435,
+    0.000921,
+    0.000216
+   ],
+   [
+    0.005804,
+    0.008974,
+    0.006669,
+    0.003233,
+    0.001159,
+    0.000347,
+    7.7e-05
+   ],
+   [
+    0.001692,
+    0.002621,
+    0.001952,
+    0.000948,
+    0.00034,
+    9.7e-05,
+    2.4e-05
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.45668,
+  "p_draw": 0.24360500000000002,
+  "p_away": 0.299715,
+  "se": [
+   0.0011138298290133911,
+   0.0009598479149714292,
+   0.0010244167090959616
+  ],
+  "max_abs_dev_vs_exact": 0.0003644526279171223,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   1.4551936069848168,
+   2.252513050937921
+  ],
+  "xg_away_80": [
+   1.146269165487498,
+   1.8111499793913348
+  ],
+  "p_home_80": [
+   0.35568061511190174,
+   0.5680559957812436
+  ],
+  "p_draw_80": [
+   0.20662154758304713,
+   0.2585335442166242
+  ],
+  "p_away_80": [
+   0.21578526886694058,
+   0.3999944731402319
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.1732196291091328,
+   0.16976828438708297
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.4527340826819693,
+   "p_draw": 0.23334577503515472,
+   "p_away": 0.3139201422828759,
+   "xg_home": 1.8518505250146358,
+   "xg_away": 1.517927304004515,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.46469980206198724,
+   "p_draw": 0.23513868184199024,
+   "p_away": 0.30016151609602243,
+   "xg_home": 1.7265459294237393,
+   "xg_away": 1.3463127901806946,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.5104850844104534,
+   "p_draw": 0.2391119303567136,
+   "p_away": 0.2504029852328329,
+   "xg_home": 1.8606545022414975,
+   "xg_away": 1.251029634199212,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.46299044059842887,
+   "p_draw": 0.23325954905684435,
+   "p_away": 0.3037500103447269,
+   "xg_home": 1.7468736851014703,
+   "xg_away": 1.3763109404072005,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.45276690539767883,
+   "p_draw": 0.2332519072566146,
+   "p_away": 0.31398118734570635,
+   "xg_home": 1.8516364986859937,
+   "xg_away": 1.5177972337100807,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Home advantage (USA, fitted from results): \u00d71.27 on Chicago Fire's scoring rate.",
+   "effect": 0.2414
+  },
+  {
+   "text": "Columbus Crew attack vs Chicago Fire defence: rate multiplier \u00d71.26 for the away side.",
+   "effect": 0.2302
+  },
+  {
+   "text": "Chicago Fire attack vs Columbus Crew defence: time-weighted strength gap multiplies Chicago Fire's scoring rate by \u00d71.21 relative to an average pairing (from 36/36 decay-weighted matches).",
+   "effect": 0.1877
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.4569160766417781,
+  "p_draw": 0.2437333759861389,
+  "p_away": 0.2993505473720829,
+  "xg_home": 1.8382043913544412,
+  "xg_away": 1.4694480249398707
+ },
+ "context": {
+  "fetched_at": "2026-11-04T07:59:50+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5071485",
+    "fetched_at": "2026-11-04T07:59:50+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "4-4-2",
+    "starters": [
+     {
+      "name": "Chris Brady",
+      "pos": "G"
+     },
+     {
+      "name": "Jonathan Dean",
+      "pos": "D"
+     },
+     {
+      "name": "Jack Elliott",
+      "pos": "D"
+     },
+     {
+      "name": "Mbekezeli Mbokazi",
+      "pos": "D"
+     },
+     {
+      "name": "Noah Allen",
+      "pos": "D"
+     },
+     {
+      "name": "Philip Zinckernagel",
+      "pos": "F"
+     },
+     {
+      "name": "Anton Sal\u00e9tros",
+      "pos": "M"
+     },
+     {
+      "name": "Dj\u00e9 D'Avilla",
+      "pos": "M"
+     },
+     {
+      "name": "Jonathan Bamba",
+      "pos": "F"
+     },
+     {
+      "name": "Johan G\u00f3mez",
+      "pos": "M"
+     },
+     {
+      "name": "Maren Haile-Selassie",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-11-04T07:59:50+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   },
+   "away": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "3-4-3",
+    "starters": [
+     {
+      "name": "Patrick Schulte",
+      "pos": "G"
+     },
+     {
+      "name": "Steven Moreira",
+      "pos": "D"
+     },
+     {
+      "name": "Sean Zawadzki",
+      "pos": "D"
+     },
+     {
+      "name": "Malte Amundsen",
+      "pos": "D"
+     },
+     {
+      "name": "Mohamed Farsi",
+      "pos": "M"
+     },
+     {
+      "name": "Dylan Chambost",
+      "pos": "M"
+     },
+     {
+      "name": "S\u00e9kou Bangoura",
+      "pos": "M"
+     },
+     {
+      "name": "Anass Zaroury",
+      "pos": "M"
+     },
+     {
+      "name": "Taha Habroune",
+      "pos": "M"
+     },
+     {
+      "name": "Gonzalo Tapia",
+      "pos": "F"
+     },
+     {
+      "name": "Santiago Rodr\u00edguez",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-11-04T07:59:50+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Sam Rogers",
+     "type": "injury",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5071485",
+     "fetched_at": "2026-11-04T07:59:50+00:00"
+    },
+    {
+     "player": "Robin Lod",
+     "type": "injury",
+     "expected_return": "Early November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5071485",
+     "fetched_at": "2026-11-04T07:59:50+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "Brais M\u00e9ndez",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5071485",
+     "fetched_at": "2026-11-04T07:59:50+00:00"
+    },
+    {
+     "player": "Rudy Camacho",
+     "type": "injury",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5071485",
+     "fetched_at": "2026-11-04T07:59:50+00:00"
+    },
+    {
+     "player": "Wessam Abou Ali",
+     "type": "injury",
+     "expected_return": "Unknown",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5071485",
+     "fetched_at": "2026-11-04T07:59:50+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 6,
+    "n21": 4,
+    "last_match": "2026-11-01"
+   },
+   "away": {
+    "rest_days": 7,
+    "n21": 4,
+    "last_match": "2026-10-31"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 440.0
+  },
+  "venue": {
+   "name": "SeatGeek Stadium",
+   "city": "Bridgeview, Illinois",
+   "lat": 41.764813995,
+   "lon": -87.80614078
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 3.115,
+   "temp_c": 10.5,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=41.765&longitude=-87.806",
+   "fetched_at": "2026-11-04T07:59:50+00:00",
+   "lat": 41.764813995,
+   "lon": -87.80614078
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": -0.6,
+    "d_p_draw_pp": -0.08,
+    "d_p_away_pp": 0.68,
+    "d_xg_home": 0.061,
+    "d_xg_away": 0.084
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0263,
+    "away_rate_mult": 1.011,
+    "d_p_home_pp": 0.73,
+    "d_p_draw_pp": -0.33,
+    "d_p_away_pp": -0.41,
+    "d_xg_home": 0.047,
+    "d_xg_away": 0.016,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "reason": "failed validation; no live features"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 6.0,
+   "rest_a": 7.0,
+   "n21_h": 4.0,
+   "n21_a": 4.0,
+   "travel_km": 440.0495711131192,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 3.115,
+   "temp_c": 10.5
+  }
+ },
+ "confidence": {
+  "tier": "LOW",
+  "p_max": 0.4569160766417781,
+  "entropy_nats": 1.0630143406263284,
+  "text": "Most likely result has P = 45.7%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.3% \u00b1 0.4% (n=16754, mean forecast 44.6%). Backtest RPS for USA: 0.2201; exact-score top-5 hit rate 42.9% (n=1770). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: LOW (entropy 1.063 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Chicago Fire: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Chicago Fire: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.",
+  "Columbus Crew: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Columbus Crew: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+ ],
+ "verdict": "Chicago Fire 1\u20131 Columbus Crew is the single most probable scoreline at 10.8%: expected goals 1.84\u20131.47 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.046). Exact scores are inherently uncertain; the 1X2 split is 45.7%/24.4%/29.9%.",
+ "resolved": {
+  "home_key": "USA:Chicago Fire",
+  "away_key": "USA:Columbus Crew",
+  "div": "USA",
+  "home_div": "USA",
+  "away_div": "USA",
+  "country": "USA"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: Columbus Crew at Chicago Fire FC\nCompetition: MLS 2025\nDate: 2026-11-07 16:00 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-11-03\n\nPRIMARY FINAL SCORE PREDICTION\n\nChicago Fire FC 1 \u2013 1 Columbus Crew\n(modal exact score, probability 10.8%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.84\nAway: 1.47\nExpected Total: 3.31\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 45.7%\nDraw: 24.4%\nAway Win: 29.9%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 10.8%\n2. 2\u20131: 9.3%\n3. 1\u20132: 7.3%\n4. 2\u20132: 7.3%\n5. 1\u20130: 6.3%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 14.9%\nTotal 2 goals: 20.6%\nTotal 3 goals: 22.1%\nTotal 4 goals: 18.7%\nTotal 5+ goals: 23.6%\n\nBoth Teams Score: 66.4%\nClean sheet Chicago Fire FC: 22.2% \u00b7 Clean sheet Columbus Crew: 15.1%\n\nMATCH INTELLIGENCE\n\n1. Home advantage (USA, fitted from results): \u00d71.27 on Chicago Fire's scoring rate.\n2. Columbus Crew attack vs Chicago Fire defence: rate multiplier \u00d71.26 for the away side.\n3. Chicago Fire attack vs Columbus Crew defence: time-weighted strength gap multiplies Chicago Fire's scoring rate by \u00d71.21 relative to an average pairing (from 36/36 decay-weighted matches).\n\nMODEL CONFIDENCE\n\nMost likely result has P = 45.7%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.3% \u00b1 0.4% (n=16754, mean forecast 44.6%). Backtest RPS for USA: 0.2201; exact-score top-5 hit rate 42.9% (n=1770). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: LOW (entropy 1.063 nats of max 1.099).\nParameter-uncertainty 80% bands: xG Chicago Fire FC 1.46\u20132.25, xG Columbus Crew 1.15\u20131.81; P(home win) 35.6%\u201356.8%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0004 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nChicago Fire: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-11-04 02:59 EST (4-4-2)\n  Chris Brady (G), Jonathan Dean (D), Jack Elliott (D), Mbekezeli Mbokazi (D), Noah Allen (D), Philip Zinckernagel (F), Anton Sal\u00e9tros (M), Dj\u00e9 D'Avilla (M), Jonathan Bamba (F), Johan G\u00f3mez (M), Maren Haile-Selassie (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\nColumbus Crew: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-11-04 02:59 EST (3-4-3)\n  Patrick Schulte (G), Steven Moreira (D), Sean Zawadzki (D), Malte Amundsen (D), Mohamed Farsi (M), Dylan Chambost (M), S\u00e9kou Bangoura (M), Anass Zaroury (M), Taha Habroune (M), Gonzalo Tapia (F), Santiago Rodr\u00edguez (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nKEY ABSENCES\n\n- Chicago Fire: Sam Rogers \u2014 injury, Mid November 2026 [FotMob, 2026-11-04 02:59 EST]\n- Chicago Fire: Robin Lod \u2014 injury, Early November 2026 [FotMob, 2026-11-04 02:59 EST]\n- Columbus Crew: Brais M\u00e9ndez \u2014 injury, Doubtful [FotMob, 2026-11-04 02:59 EST]\n- Columbus Crew: Rudy Camacho \u2014 injury, Mid November 2026 [FotMob, 2026-11-04 02:59 EST]\n- Columbus Crew: Wessam Abou Ali \u2014 injury, Unknown [FotMob, 2026-11-04 02:59 EST]\n\nWEATHER AT VENUE\n\nSeatGeek Stadium, Bridgeview, Illinois: 10.5 \u00b0C, wind 3.1 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-11-04 02:59 EST]\n\nREST & TRAVEL\n\nChicago Fire: 6 days' rest, 4 matches in previous 21 days \u00b7 Columbus Crew: 7 days' rest, 4 in 21 days \u00b7 away travel 440.0 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 45.7% / 24.4% / 29.9%, xG 1.84\u20131.47\n- Understat xG component (validated, in ensemble): home -0.60 pp, draw -0.08 pp, away +0.68 pp; xG +0.061 / +0.084\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.73 pp, draw -0.33 pp, away -0.41 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- lineup: not applied (failed validation; no live features)\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Chicago Fire: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Chicago Fire: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n- Columbus Crew: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Columbus Crew: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nFINAL VERDICT\n\nChicago Fire 1\u20131 Columbus Crew is the single most probable scoreline at 10.8%: expected goals 1.84\u20131.47 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.046). Exact scores are inherently uncertain; the 1X2 split is 45.7%/24.4%/29.9%.\n",
+ "frozen_at": "2026-11-04T07:59:50+00:00",
+ "sha256": "cad610bf9b55b4ee2e155d98db3e5a9402d0c80adcbbf7a7526f0341f32ecd2c"
+}
