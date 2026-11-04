@@ -67,7 +67,7 @@ def _get(url: str, params: dict, retries: int = 6):
             continue
         r.raise_for_status()
         return r.json()
-    raise RuntimeError("Jupiter API rate limit persisted (HTTP 429); set JUPITER_API_KEY or retry later")
+    raise requests.HTTPError("Jupiter fixture API rate limit persisted (HTTP 429)", response=r)
 
 
 def sanitise_event(ev: dict) -> Fixture | None:

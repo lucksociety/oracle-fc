@@ -54,7 +54,8 @@ def cmd_run(a):
     out_dir.mkdir(parents=True, exist_ok=True)
     eng = Engine()
     for d in _dates(a.date, a.days):
-        res = forecast_date(d, eng, freeze=not a.no_freeze, use_cache=not a.refresh, within_hours=a.within_hours)
+        res = forecast_date(d, eng, freeze=not a.no_freeze, use_cache=not a.refresh, within_hours=a.within_hours,
+                            allow_frozen_fallback=a.allow_frozen_fallback)
         (out_dir / f"{d}.json").write_text(json.dumps(res, default=str))
         print(f"{d}: {res['n_fixtures']} Jupiter fixtures, {res['n_forecast']} forecast")
         if a.print:
@@ -112,6 +113,7 @@ def main(argv=None):
     r.add_argument("--no-freeze", action="store_true"); r.add_argument("--refresh", action="store_true")
     r.add_argument("--within-hours", type=float, default=None,
                    help="only re-forecast fixtures kicking off within N hours (others reuse their frozen forecast)")
+    r.add_argument("--allow-frozen-fallback", action="store_true")
     r.add_argument("--print", action="store_true"); r.set_defaults(f=cmd_run)
     sp.add_parser("ingest-context").set_defaults(f=cmd_ingest_context)
     e = sp.add_parser("edge"); e.add_argument("--date"); e.add_argument("--days", type=int, default=1)

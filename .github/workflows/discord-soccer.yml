@@ -43,11 +43,18 @@ jobs:
       - name: Refresh match context
         run: python -m oraclefc.cli ingest-context
       - name: Run model and freeze before prices
-        run: python -m oraclefc.cli run --date "$DATE" --days 1 --refresh
+        run: python -m oraclefc.cli run --date "$DATE" --days 1 --refresh --allow-frozen-fallback
       - name: Compare prices after freeze
+        id: prices
         continue-on-error: true
-        run: python -m oraclefc.cli edge --date "$DATE" --days 1
+        run: |
+          if jq -e '.fixture_feed_unavailable == true' "data/dates/$DATE.json" >/dev/null; then
+            exit 0
+          fi
+          python -m oraclefc.cli edge --date "$DATE" --days 1
       - name: Build Discord response from this run
+        env:
+          PRICE_STEP_OUTCOME: ${{ steps.prices.outcome }}
         run: node scripts/discord-report.mjs
       - name: Preserve pre-game forecasts for prospective evaluation
         run: python3 scripts/model_learning.py --capture-only
