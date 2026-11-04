@@ -34,9 +34,14 @@ DEFAULT_WEIGHTS = {"dynamic_dc": 1.0}
 class Engine:
     """Fits the champion's component models once on all data available now."""
 
-    def __init__(self, df: pd.DataFrame | None = None, as_of: pd.Timestamp | None = None, with_context: bool = True):
+    def __init__(self, df: pd.DataFrame | None = None, as_of: pd.Timestamp | None = None, with_context: bool = True, *, supplemental: bool = False):
         self.with_context = with_context
-        raw = df if df is not None else store.load()
+        raw = df if df is not None else store.load(include_supplemental=True)
+        self.supplemental = supplemental
+        self.supplemental_data = raw.loc[raw["div"].isin(config.SUPPLEMENTAL_DIVISIONS)]
+        self.supplemental_engine = None
+        if not supplemental:
+            raw = raw.loc[~raw["div"].isin(config.SUPPLEMENTAL_DIVISIONS)]
         self.as_of = as_of if as_of is not None else (raw["date"].max() + pd.Timedelta(days=1))
         # Resolution, context and metadata must share the models' point-in-time cutoff.
         self.df = raw.loc[raw["date"] < self.as_of].copy()
@@ -50,12 +55,17 @@ class Engine:
         self.weights = ch.get("ensemble_weights", DEFAULT_WEIGHTS) if self.champion == "ensemble" else DEFAULT_WEIGHTS
         self.version = ch.get("version", f"{__version__}+dynamic_dc-untuned")
         self.confidence = reg.get("confidence", {})
+        if supplemental:
+            self.champion = "dynamic_dc"
+            self.weights = {"dynamic_dc": 1.0}
+            self.version = "supplemental-results-v1"
+            self.confidence = {}
         # results-only calibration layer (validated in docs/CALIBRATION.md); None = not adopted
-        self.calibration = calibrate.from_json(ch["calibration"]) if ch.get("calibration") else None
+        self.calibration = calibrate.from_json(ch["calibration"]) if ch.get("calibration") and not supplemental else None
         self.models = {"dynamic_dc": dynamic_dc(p["half_life_days"], p["kappa"]),
                        "elo": EloGoals(k=p["elo_k"]), "standard_dc": standard_dc(),
                        "home_away_rate": HomeAwayRate()}
-        ctx_reg = ch.get("context") or {}
+        ctx_reg = {} if supplemental else ch.get("context") or {}
         self.context_kept = {f: list(v) for f, v in (ctx_reg.get("coefficients") or {}).items()
                              if f in (ctx_reg.get("kept_families") or [])}
         self.context_reg = ctx_reg
@@ -230,6 +240,13 @@ class Engine:
     def forecast(self, home_name: str, away_name: str, competition: str = "", subcategory: str = "",
                  kickoff_utc: str | None = None, event_id: str | None = None, neutral: bool = False,
                  mc_sims: int = 200_000) -> dict:
+        if not self.supplemental and (subcategory or '').lower() in config.SUPPLEMENTAL_SUBCATEGORIES:
+            history = self.supplemental_data.loc[self.supplemental_data["date"] < self.as_of]
+            if not history.empty:
+                if self.supplemental_engine is None:
+                    self.supplemental_engine = Engine(history, self.as_of, with_context=False, supplemental=True)
+                return self.supplemental_engine.forecast(home_name, away_name, competition, subcategory,
+                                                         kickoff_utc, event_id, neutral, mc_sims)
         r = self.resolver.resolve(home_name, away_name, subcategory, neutral)
         kickoff_local = ""
         if kickoff_utc:
@@ -246,6 +263,14 @@ class Engine:
         if not r.ok:
             return {**base, "status": "unsupported", "data_quality": dq}
         fx = self.resolver.fixture_frame(r)
+        if self.supplemental:
+            dc = self.models["dynamic_dc"]
+            keys = (r.home_key, r.away_key)
+            if any(dc.n_matches_weighted.get(key, 0) < 8 or
+                   (self.as_of - self.resolver.last_match_date(key)).days > 60 for key in keys):
+                return {**base, "status": "unsupported",
+                        "data_quality": dq + ["Supplemental results are too sparse or stale for this pairing."]}
+            dq.append("Supplemental results model. Forecast only until league calibration is validated.")
         m, comps = self.matrix(fx)
         if not np.isfinite(m).all():
             return {**base, "status": "unsupported", "data_quality": dq + ["Component models could not rate this pairing."]}
@@ -302,7 +327,7 @@ class Engine:
                    f"{self.champion} model put the joint mode there "
                    f"(DC low-score dependence rho={float(rho[0]):+.3f}). Exact scores are inherently uncertain; "
                    f"the 1X2 split is {s['p_home']:.1%}/{s['p_draw']:.1%}/{s['p_away']:.1%}.")
-        out = {**base, "status": "ok", "simulation": s, "monte_carlo": mc, "uncertainty": unc,
+        out = {**base, "status": "ok", **({"forecast_only": True} if self.supplemental else {}), "simulation": s, "monte_carlo": mc, "uncertainty": unc,
                "components": comp_summary, "key_factors": self._key_factors(r, fx, context),
                "base_simulation": {k: s0[k] for k in ("p_home", "p_draw", "p_away", "xg_home", "xg_away")},
                "context": context,

@@ -9,6 +9,14 @@ from . import config, store
 from .teams import match_team
 
 EURO_COMPS = {"ucl", "uel", "ucol"}
+SUPPLEMENTAL_ALIASES = {
+    "col1": {"Cúcuta Deportivo FC": "Cúcuta Deportivo", "Millonarios FC": "Millonarios", "América de Cali": "América de Cali"},
+    "fpd": {"Escorpiones de Belén": "Escorpiones Belén", "LD Alajuelense": "Alajuelense"},
+    "mex2": {"Atletico Morelia": "Club Atlético Morelia"},
+    "par1": {"Libertad Asuncion": "Libertad", "Club Guarani Asuncion": "Guaraní", "Recoleta FC": "Deportivo Recoleta"},
+    "per1": {"Club Universitario de Deportes": "Universitario", "Sport Boys Association": "Sport Boys"},
+    "ven1": {"Portuguesa FC": "Portuguesa", "Metropolitanos FC": "Metropolitanos", "Carabobo FC": "Carabobo"},
+}
 
 
 @dataclass
@@ -68,8 +76,11 @@ class Resolver:
                                "away": {"source": away_name, "matched": None, "method": "unsupported-competition"}}
             return r
         for side, name in (("home", home_name), ("away", away_name)):
-            key, m = self._lookup(name, divs)
-            if key is None and sub not in EURO_COMPS:
+            lookup_name = SUPPLEMENTAL_ALIASES.get(sub, {}).get(name, name)
+            key, m = self._lookup(lookup_name, divs)
+            if sub in config.SUPPLEMENTAL_SUBCATEGORIES and m.method not in ("exact", "normalised", "alias"):
+                key = None
+            if key is None and sub not in EURO_COMPS and sub not in config.SUPPLEMENTAL_SUBCATEGORIES:
                 # e.g. cup ties against teams outside the mapped divisions
                 key2, m2 = self._lookup(name, [d for d in self.by_div if config.ALL_DIVISIONS.get(d, ("",))[0]
                                                == config.ALL_DIVISIONS.get(divs[0], ("?",))[0]])

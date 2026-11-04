@@ -85,6 +85,8 @@ def edge_for_date(date: str, take_snapshot: bool = True) -> dict:
                   "market_after_kickoff": after})
         if after:
             bb_row.update(verdict="NO BET", reason="prices were fetched after kick-off (in-play), not pre-match")
+        elif fc.get("forecast_only"):
+            bb_row.update(verdict="NO BET", reason="supplemental league forecasts pending calibration")
         elif "selections" not in mk:
             bb_row.update(verdict="NO BET", reason="snapshot has no buyable-side data")
         else:
