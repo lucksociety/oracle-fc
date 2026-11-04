@@ -315,12 +315,24 @@ class Engine:
 
 
 def forecast_date(date: str, engine: Engine | None = None, freeze: bool = True, use_cache: bool = True,
-                  within_hours: float | None = None) -> dict:
+                  within_hours: float | None = None, allow_frozen_fallback: bool = False) -> dict:
     """Discover the date's Jupiter soccer fixtures and forecast each one."""
     from .fixtures.jupiter import fixtures_for_date
 
+    from requests import RequestException
+
+    try:
+        fixtures = fixtures_for_date(date, use_cache=use_cache)
+    except RequestException as exc:
+        if not allow_frozen_fallback:
+            raise
+        saved = [record for record in frozen.load_date(date) if frozen.verify(record)]
+        print(f"Jupiter fixture request failed for {date}: {exc}")
+        return {"date": date, "tz": config.USER_TZ, "generated_at": now_utc_iso(),
+                "fixture_feed_unavailable": True, "n_fixtures": len(saved),
+                "n_forecast": len(saved), "forecasts": saved}
+
     engine = engine or Engine()
-    fixtures = fixtures_for_date(date, use_cache=use_cache)
     out = []
     for f in fixtures:
         now = datetime.now(timezone.utc)
