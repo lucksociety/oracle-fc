@@ -346,12 +346,14 @@ def forecast_date(date: str, engine: Engine | None = None, freeze: bool = True, 
 
     from requests import RequestException
 
+    saved_for_date = [record for record in frozen.load_date(date)
+                      if str(record["fixture"].get("event_id") or "").startswith("POLY-")]
     try:
         fixtures = fixtures_for_date(date, use_cache=use_cache)
     except RequestException as exc:
         if not allow_frozen_fallback:
             raise
-        saved = [record for record in frozen.load_date(date) if frozen.verify(record)]
+        saved = [record for record in saved_for_date if frozen.verify(record)]
         print(f"Jupiter fixture request failed for {date}: {exc}")
         return {"date": date, "tz": config.USER_TZ, "generated_at": now_utc_iso(),
                 "fixture_feed_unavailable": True, "n_fixtures": len(saved),
@@ -361,7 +363,7 @@ def forecast_date(date: str, engine: Engine | None = None, freeze: bool = True, 
     out = []
     for f in fixtures:
         now = datetime.now(timezone.utc)
-        existing = [x for x in frozen.load_date(date) if x["fixture"].get("event_id") == f.event_id]
+        existing = [x for x in saved_for_date if x["fixture"].get("event_id") == f.event_id]
         started = datetime.fromisoformat(f.kickoff_utc) <= now
         if started:
             # never create a forecast after kickoff: only show what was frozen before
@@ -380,14 +382,14 @@ def forecast_date(date: str, engine: Engine | None = None, freeze: bool = True, 
         fc = engine.forecast(f.home_name, f.away_name, f.competition, f.subcategory, f.kickoff_utc, f.event_id)
         if freeze and fc["status"] == "ok":
             try:
-                fc, _ = frozen.freeze(date, f.event_id, engine.version, fc)
+                fc, _ = frozen.freeze(date, f.event_id, fc["model_version"], fc)
             except frozen.KickoffPassed:
                 fc = existing[-1] if existing else {"status": "not_forecast_before_kickoff", "fixture": f.to_dict(),
                     "data_quality": ["Fit finished after kickoff; no new forecast was published."]}
         out.append(fc)
     # Events Jupiter no longer lists (settled / past dates): show what was frozen.
     seen = {f.event_id for f in fixtures}
-    for x in frozen.load_date(date):
+    for x in saved_for_date:
         if x["fixture"].get("event_id") not in seen:
             out.append(x)
     out.sort(key=lambda x: (x["fixture"].get("kickoff_utc") or "", x["fixture"].get("home_name", "")))

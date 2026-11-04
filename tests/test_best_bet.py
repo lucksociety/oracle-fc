@@ -147,20 +147,21 @@ def test_edge_best_bets_respect_freeze_and_kickoff(monkeypatch):
     H, A, ev = _ev()
     from oraclefc.market.jupiter_prices import parse_event_markets
     mk = parse_event_markets(ev, H, A)
-    mk["selections"] = BB.selections_from_event(ev, H, A)
-    fcs = [_fc("E1", "2026-10-30T10:00:00+00:00", "2026-10-31T15:00:00+00:00"),   # valid pre-match
-           _fc("E2", "2026-10-30T13:00:00+00:00", "2026-10-31T15:00:00+00:00"),   # frozen AFTER the snapshot
-           _fc("E3", "2026-10-30T10:00:00+00:00", "2026-10-30T11:00:00+00:00"),   # snapshot after kick-off
-           _fc("E4", "2026-10-30T10:00:00+00:00", "2026-10-31T15:00:00+00:00")]   # no prices
-    snap = {"fetched_at": "2026-10-30T12:00:00+00:00", "events": {"E1": mk, "E2": mk, "E3": mk}}
+    mk["selections"] = [{**row, "market_id": f"POLY-{i}"}
+                        for i, row in enumerate(BB.selections_from_event(ev, H, A))]
+    fcs = [_fc("POLY-1", "2026-10-30T10:00:00+00:00", "2026-10-31T15:00:00+00:00"),   # valid pre-match
+           _fc("POLY-2", "2026-10-30T13:00:00+00:00", "2026-10-31T15:00:00+00:00"),   # frozen AFTER the snapshot
+           _fc("POLY-3", "2026-10-30T10:00:00+00:00", "2026-10-30T11:00:00+00:00"),   # snapshot after kick-off
+           _fc("POLY-4", "2026-10-30T10:00:00+00:00", "2026-10-31T15:00:00+00:00")]   # no prices
+    snap = {"fetched_at": "2026-10-30T12:00:00+00:00", "events": {"POLY-1": mk, "POLY-2": mk, "POLY-3": mk}}
     monkeypatch.setattr(EDGE.frozen, "load_date", lambda d: fcs)
     monkeypatch.setattr(EDGE, "snapshot", lambda *a, **k: snap)
     out = EDGE.edge_for_date("2026-10-30")
     g = {r["event_id"]: r for r in out["best_bets"]["games"]}
-    assert g["E1"]["verdict"] == "BET"
-    assert g["E2"]["verdict"] == "NO BET" and "after the price snapshot" in g["E2"]["reason"]
-    assert g["E3"]["verdict"] == "NO BET" and "kick-off" in g["E3"]["reason"]
-    assert g["E4"]["verdict"] == "NO BET" and "no Jupiter prices" in g["E4"]["reason"]
+    assert g["POLY-1"]["verdict"] == "BET"
+    assert g["POLY-2"]["verdict"] == "NO BET" and "after the price snapshot" in g["POLY-2"]["reason"]
+    assert g["POLY-3"]["verdict"] == "NO BET" and "kick-off" in g["POLY-3"]["reason"]
+    assert g["POLY-4"]["verdict"] == "NO BET" and "no Jupiter prices" in g["POLY-4"]["reason"]
     assert out["best_bets"]["n_bet"] == 1 and out["best_bets"]["n_no_bet"] == 3
 
 
@@ -168,3 +169,22 @@ def test_report_confidence_describes_current_champion():
     reg = json.loads((ROOT / "experiments" / "registry.json").read_text())
     src = reg["confidence"].get("source") or {}
     assert src.get("model_version") == reg["champion"]["version"], "confidence tables are from an older model"
+
+
+def test_match_result_must_clear_probability_and_break_even_in_both_components():
+    offer = {"outcome": {"kind": "1x2", "res": "A", "neg": True}, "ask": .18,
+             "bid": .17, "provider": "polymarket", "label": "Home or draw",
+             "market_id": "POLY-1", "market_type": "moneyline", "side": "NO", "volume": 100}
+    blend = {"p_away": .468749}
+    components = {"elo": {"weight": .44, "p_away": .34168},
+                  "xg_dc": {"weight": .51, "p_away": .5728}}
+    assert BB.best_bet([offer], _grid(), blend)["verdict"] == "BET"
+    guarded = BB.best_bet([offer], _grid(), blend, components=components)
+    assert guarded["verdict"] == "NO BET"
+    assert "main model components" in guarded["reason"]
+    components["xg_dc"]["p_away"] = .45
+    assert BB.best_bet([offer], _grid(), blend, components=components)["verdict"] == "BET"
+    offer["ask"] = .54
+    blend["p_away"] = .40
+    assert BB.best_bet([offer], _grid(), blend)["verdict"] == "BET"
+    assert BB.best_bet([offer], _grid(), blend, components=components)["verdict"] == "NO BET"

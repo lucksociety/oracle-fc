@@ -56,7 +56,7 @@ def compute_edges(fc: dict, mk: dict) -> dict:
 
 
 def edge_for_date(date: str, take_snapshot: bool = True) -> dict:
-    fcs = [f for f in frozen.load_date(date) if f.get("status") == "ok" and f["fixture"].get("event_id")]
+    fcs = [f for f in frozen.load_date(date) if f.get("status") == "ok" and str(f["fixture"].get("event_id") or "").startswith("POLY-")]
     fixtures = {f["fixture"]["event_id"]: f["fixture"] for f in fcs}
     snap = snapshot(list(fixtures), date, fixtures) if take_snapshot else None
     out = {"date": date, "label": "POST-HOC COMPARISON — market prices were fetched after the forecasts were "
@@ -90,7 +90,9 @@ def edge_for_date(date: str, take_snapshot: bool = True) -> dict:
         elif "selections" not in mk:
             bb_row.update(verdict="NO BET", reason="snapshot has no buyable-side data")
         else:
-            bb_row.update(best_bet(mk["selections"], fc["simulation"]["score_grid"], fc["simulation"]))
+            selections = [s for s in mk["selections"] if str(s.get("market_id") or "").startswith("POLY-")]
+            bb_row.update(best_bet(selections, fc["simulation"]["score_grid"], fc["simulation"],
+                                   components=fc.get("components")))
         e["best_bet"] = {k: v for k, v in bb_row.items() if k not in ("home", "away", "competition", "kickoff_utc")}
         out["events"].append(e)
     for r in rows:
@@ -137,7 +139,7 @@ def lock_pre_kickoff(rows: list[dict], prev: dict) -> list[dict]:
 
 def best_bets_meta() -> dict:
     return {"rule": f"Per game, the single selection with the highest EV among those with model P > {MIN_P:.0%} "
-                    "and EV > 0 when buying at the Jupiter ask (YES or NO) including trading fees; otherwise NO BET.",
+                    "and EV > 0 when buying at the Jupiter ask (YES or NO) including trading fees. Match-result bets also require agreement from the two highest-weight components; otherwise NO BET.",
             "ev_formula": "EV per $1 = p_model / (ask + fee per contract) - 1",
             "fees": FEES,
             "markets": "full-time goals markets priced from the frozen score grid: 1X2 (YES/NO), BTTS, totals, "
