@@ -201,7 +201,9 @@ const sc = (s) => `${s.home}–${s.away}`;
 function pickText(g) {
   if (isBet(g)) {
     const b = g.bet;
-    return `**BET** 🍀 ${clip(b.label, 90)} (buy ${b.side}) @ ${cents(b.ask)} · model ${pct(b.model_p)} · EV ${evp(b.ev_per_dollar)}${g.locked ? " 🔒" : ""}`;
+    const agreement = Number.isFinite(b.component_min_p) && Number.isFinite(b.component_max_p)
+      ? `\nMain component range **${pct(b.component_min_p)}–${pct(b.component_max_p)}** · EV at lowest estimate **${evp(b.conservative_ev_per_dollar)}**` : "";
+    return `**BET** 🍀 ${clip(b.label, 90)} (buy ${b.side}) @ ${cents(b.ask)} · model ${pct(b.model_p)} · EV ${evp(b.ev_per_dollar)}${g.locked ? " 🔒" : ""}${agreement}`;
   }
   if (!g) return "**NO BET** · no Jupiter prices for this game";
   const c = g.closest;
@@ -253,7 +255,18 @@ export function buildEmbeds(scan, site, opts = {}) {
   const dash = `${site}/?date=${scan.date}`;
   const now = opts.now ?? Date.now();
   const onlyBets = opts.onlyBets === true; // default: every game
-  const rows = allGames(scan).map((r) => ({ ...r, g: r.g ? { ...r.g, started: !!r.kickoff_utc && new Date(r.kickoff_utc).getTime() <= now } : null }));
+  const rows = allGames(scan).map((r) => {
+    if (!r.g) return r;
+    const kickoff = Date.parse(r.kickoff_utc);
+    const priced = Date.parse(r.g.priced_at || scan.fetchedAt);
+    const started = Number.isFinite(kickoff) && kickoff <= now;
+    const reason = !Number.isFinite(kickoff) || started
+      ? "kickoff passed or unavailable — no new pregame bet"
+      : !Number.isFinite(priced) || priced > now || now - priced > 300000
+        ? "quote unavailable or older than five minutes — refresh prices" : null;
+    return { ...r, g: { ...r.g, started, ...(reason
+      ? { verdict: "NO BET", bet: null, closest: null, alternatives: [], reason } : {}) } };
+  });
   const games = rows.map((r) => r.g).filter(Boolean);
   const bets = rows.filter((r) => isBet(r.g));
   const nobets = rows.filter((r) => !isBet(r.g));

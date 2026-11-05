@@ -210,7 +210,7 @@ async function liveEdge() {
       events.push({ home: fc.fixture.home_name, away: fc.fixture.away_name, competition: fc.fixture.competition, frozen_at: fc.frozen_at, market_after_kickoff: fetchedAt >= fc.fixture.kickoff_utc, rows: edges(fc, mk) });
       const g = { event_id: fc.fixture.event_id, home: fc.fixture.home_name, away: fc.fixture.away_name, competition: fc.fixture.competition, kickoff_utc: fc.fixture.kickoff_utc };
       if (fetchedAt >= fc.fixture.kickoff_utc) Object.assign(g, { verdict: "NO BET", reason: "prices fetched after kick-off (in-play), not pre-match" });
-      else Object.assign(g, BestBet.bestBet(BestBet.selectionsFromEvent(ev.data || ev, fc.fixture.home_name, fc.fixture.away_name), fc.simulation.score_grid, fc.simulation));
+      else Object.assign(g, BestBet.bestBet(BestBet.selectionsFromEvent(ev.data || ev, fc.fixture.home_name, fc.fixture.away_name), fc.simulation.score_grid, fc.simulation, fc.components));
       games.push(g);
     } catch (e) { console.warn(e); }
     await new Promise((r) => setTimeout(r, 350));

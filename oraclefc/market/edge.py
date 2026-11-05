@@ -6,8 +6,10 @@ frozen. Refuses to compare a forecast frozen after the snapshot.
 from __future__ import annotations
 
 import json
+from datetime import datetime
 
 from .. import config, frozen
+from ..governance import now_utc_iso
 from .best_bet import FEES, MIN_P, best_bet
 from .jupiter_prices import snapshot
 
@@ -55,6 +57,14 @@ def compute_edges(fc: dict, mk: dict) -> dict:
     return {"event_id": fc["fixture"]["event_id"], "overround": overround, "rows": rows}
 
 
+def fresh_quote(priced_at: str, now: datetime) -> bool:
+    try:
+        age = (now - datetime.fromisoformat(priced_at)).total_seconds()
+        return 0 <= age <= 300
+    except (TypeError, ValueError):
+        return False
+
+
 def edge_for_date(date: str, take_snapshot: bool = True) -> dict:
     fcs = [f for f in frozen.load_date(date) if f.get("status") == "ok" and str(f["fixture"].get("event_id") or "").startswith("POLY-")]
     fixtures = {f["fixture"]["event_id"]: f["fixture"] for f in fcs}
@@ -63,6 +73,7 @@ def edge_for_date(date: str, take_snapshot: bool = True) -> dict:
            "frozen and are never used by the model.", "market_fetched_at": snap["fetched_at"] if snap else None,
            "events": [], "best_bets": best_bets_meta()}
     rows = []
+    comparison_time = datetime.fromisoformat(now_utc_iso())
     for fc in fcs:
         eid = fc["fixture"]["event_id"]
         mk = (snap or {}).get("events", {}).get(eid)
@@ -73,10 +84,15 @@ def edge_for_date(date: str, take_snapshot: bool = True) -> dict:
         if not mk or "error" in mk:
             bb_row.update(verdict="NO BET", reason="no Jupiter prices captured for this game")
             continue
-        if fc["frozen_at"] > snap["fetched_at"]:
+        priced_at = mk.get("fetched_at") or snap["fetched_at"]
+        bb_row["priced_at"] = priced_at
+        if not fresh_quote(priced_at, comparison_time):
+            bb_row.update(verdict="NO BET", reason="price snapshot is missing, from the future, or older than five minutes")
+            continue
+        if fc["frozen_at"] > priced_at:
             bb_row.update(verdict="NO BET", reason="forecast frozen after the price snapshot")
             continue  # forecast frozen after the snapshot: not a valid post-hoc comparison
-        after = snap["fetched_at"] >= fc["fixture"]["kickoff_utc"]
+        after = priced_at >= fc["fixture"]["kickoff_utc"]
         e = compute_edges(fc, mk)
         e.update({"home": fc["fixture"]["home_name"], "away": fc["fixture"]["away_name"],
                   "competition": fc["fixture"]["competition"], "kickoff_utc": fc["fixture"]["kickoff_utc"],
@@ -96,7 +112,7 @@ def edge_for_date(date: str, take_snapshot: bool = True) -> dict:
         e["best_bet"] = {k: v for k, v in bb_row.items() if k not in ("home", "away", "competition", "kickoff_utc")}
         out["events"].append(e)
     for r in rows:
-        r["priced_at"] = out["market_fetched_at"]
+        r.setdefault("priced_at", out["market_fetched_at"])
     rows = lock_pre_kickoff(rows, _previous_games(date))
     rows.sort(key=lambda r: r.get("kickoff_utc") or "")
     out["best_bets"]["games"] = rows
