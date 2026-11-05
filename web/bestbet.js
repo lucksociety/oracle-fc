@@ -20,7 +20,7 @@
   function selectionsFromEvent(ev, home, away) {
     const out = [], sideOf = { [home]: "home", [away]: "away" };
     for (const m of ev.markets || []) {
-      if (m.status != null && m.status !== "open") continue;
+      if (m.periodType || m.status !== "open") continue;
       const t = m.sportsMarketType, title = (m.title || "").trim(), pr = m.pricing || {};
       const provider = (m.provider || "").toLowerCase() || null;
       const team = m.team && typeof m.team === "object" ? m.team.name : null;
@@ -47,7 +47,8 @@
       if (!spec) continue;
       const u = (x) => (x || 0) / 1e6;
       const ay = u(pr.buyYesPriceUsd), by = u(pr.sellYesPriceUsd), an = u(pr.buyNoPriceUsd), bn = u(pr.sellNoPriceUsd);
-      const base = { market_id: m.marketId, market_type: t, volume: pr.volume, provider };
+      const base = { market_id: m.marketId, market_type: t, volume: pr.volume, provider,
+        regulation_only: /\b90\s+minutes?\b/i.test(m.rulesPrimary || "") && /stoppage/i.test(m.rulesPrimary || "") };
       if (ay > 0 && ay < 1) out.push({ ...base, label, side: "YES", outcome: spec, ask: ay, bid: by || null });
       if (an > 0 && an < 1) out.push({ ...base, label: negLabel(spec, label, home, away), side: "NO", outcome: { ...spec, neg: true }, ask: an, bid: bn || null });
     }
@@ -84,17 +85,28 @@
   function evaluate(sels, grid, sim) {
     return sels.map((s) => {
       const p = modelProb(s.outcome, grid, sim), fee = feePerContract(s.ask, s.provider), ev = p / (s.ask + fee) - 1;
+      const thin = !(Number.isFinite(s.bid) && s.bid > 0 && s.bid <= s.ask && s.ask - s.bid <= .10 + 1e-9);
+      const liquid = Number.isFinite(s.volume) && s.volume > 0;
       return { ...s, model_p: p, fee_per_contract: fee, cost_per_contract: s.ask + fee, ev_per_dollar: ev, edge_pp: 100 * (p - s.ask),
-        thin_book: !s.bid || s.ask - (s.bid || 0) > 0.1, fee_assumed: !((s.provider || "") in FEES), eligible: p > MIN_P && ev > MIN_EV };
+        quote_valid: !thin && liquid && s.regulation_only === true, thin_book: thin, fee_assumed: !((s.provider || "") in FEES), eligible: !thin && liquid && s.regulation_only === true && p > MIN_P && ev > MIN_EV };
     });
   }
-  function bestBet(sels, grid, sim) {
+  function bestBet(sels, grid, sim, components) {
     const rows = evaluate(sels, grid, sim);
+    const primary = Object.entries(components || {}).sort((a, b) => (b[1].weight || 0) - (a[1].weight || 0)).slice(0, 2);
+    if (primary.length === 2) for (const row of rows) {
+      if (row.outcome.kind !== "1x2") continue;
+      row.component_probabilities = Object.fromEntries(primary.map(([name, component]) => [name, modelProb(row.outcome, grid, component)]));
+      row.component_min_p = Math.min(...Object.values(row.component_probabilities));
+      row.component_max_p = Math.max(...Object.values(row.component_probabilities));
+      row.conservative_ev_per_dollar = row.component_min_p / row.cost_per_contract - 1;
+      if (row.component_min_p <= Math.max(MIN_P, row.cost_per_contract)) row.eligible = false;
+    }
     const elig = rows.filter((r) => r.eligible).sort((a, b) => b.ev_per_dollar - a.ev_per_dollar || b.model_p - a.model_p);
     const out = { n_priced: rows.length, n_eligible: elig.length };
     if (!elig.length) {
       out.verdict = "NO BET";
-      const c = rows.filter((r) => r.model_p > MIN_P).sort((a, b) => b.ev_per_dollar - a.ev_per_dollar)[0];
+      const c = rows.filter((r) => r.quote_valid && r.model_p > MIN_P && (!Number.isFinite(r.component_min_p) || r.component_min_p > Math.max(MIN_P, r.cost_per_contract))).sort((a, b) => b.ev_per_dollar - a.ev_per_dollar)[0];
       if (c) out.closest = c;
       return out;
     }

@@ -21,7 +21,8 @@ def _pr(by, bs, nb=0, ns=0, vol=10):
 
 def _ev():
     H, A = "Home FC", "Away FC"
-    mk = lambda **k: {"status": "open", "provider": "polymarket", **k}  # noqa: E731
+    mk = lambda **k: {"status": "open", "provider": "polymarket",
+                       "rulesPrimary": "90 minutes of regular time plus stoppage time", **k}  # noqa: E731
     return H, A, {"markets": [
         mk(marketId="ML-H", sportsMarketType="moneyline", title=H, isTeamMarket=False, pricing=_pr(.50, .49, .51, .50)),
         mk(marketId="ML-D", sportsMarketType="moneyline", title="Draw", isTeamMarket=False, pricing=_pr(.26, .25, .75, .74)),
@@ -98,7 +99,7 @@ def test_eligibility_and_choice():
     res = BB.best_bet(BB.selections_from_event(ev, H, A), g)
     rows = BB.evaluate(BB.selections_from_event(ev, H, A), g)
     for r in rows:
-        assert r["eligible"] == (r["model_p"] > 0.5 and r["ev_per_dollar"] > 0)
+        assert r["eligible"] == (not r["thin_book"] and r["model_p"] > 0.5 and r["ev_per_dollar"] > 0)
     elig = [r for r in rows if r["eligible"]]
     assert res["verdict"] == "BET" and res["n_eligible"] == len(elig)
     assert math.isclose(res["bet"]["ev_per_dollar"], max(r["ev_per_dollar"] for r in elig), abs_tol=1e-5)
@@ -156,6 +157,7 @@ def test_edge_best_bets_respect_freeze_and_kickoff(monkeypatch):
     snap = {"fetched_at": "2026-10-30T12:00:00+00:00", "events": {"POLY-1": mk, "POLY-2": mk, "POLY-3": mk}}
     monkeypatch.setattr(EDGE.frozen, "load_date", lambda d: fcs)
     monkeypatch.setattr(EDGE, "snapshot", lambda *a, **k: snap)
+    monkeypatch.setattr(EDGE, "now_utc_iso", lambda: snap["fetched_at"])
     out = EDGE.edge_for_date("2026-10-30")
     g = {r["event_id"]: r for r in out["best_bets"]["games"]}
     assert g["POLY-1"]["verdict"] == "BET"
@@ -174,7 +176,7 @@ def test_report_confidence_describes_current_champion():
 def test_match_result_must_clear_probability_and_break_even_in_both_components():
     offer = {"outcome": {"kind": "1x2", "res": "A", "neg": True}, "ask": .18,
              "bid": .17, "provider": "polymarket", "label": "Home or draw",
-             "market_id": "POLY-1", "market_type": "moneyline", "side": "NO", "volume": 100}
+             "market_id": "POLY-1", "market_type": "moneyline", "side": "NO", "volume": 100, "regulation_only": True}
     blend = {"p_away": .468749}
     components = {"elo": {"weight": .44, "p_away": .34168},
                   "xg_dc": {"weight": .51, "p_away": .5728}}
@@ -185,6 +187,71 @@ def test_match_result_must_clear_probability_and_break_even_in_both_components()
     components["xg_dc"]["p_away"] = .45
     assert BB.best_bet([offer], _grid(), blend, components=components)["verdict"] == "BET"
     offer["ask"] = .54
+    offer["bid"] = .53
     blend["p_away"] = .40
     assert BB.best_bet([offer], _grid(), blend)["verdict"] == "BET"
     assert BB.best_bet([offer], _grid(), blend, components=components)["verdict"] == "NO BET"
+
+
+@pytest.mark.parametrize("change", [
+    {"bid": None}, {"bid": .70}, {"bid": .10}, {"bid": float("nan")},
+    {"volume": 0}, {"volume": None}, {"regulation_only": False},
+])
+def test_unexecutable_quotes_never_qualify(change):
+    home, away, event = _ev()
+    offer = BB.selections_from_event(event, home, away)[0]
+    offer.update(change)
+    assert BB.best_bet([offer], _grid(), {"p_home": .8})["verdict"] == "NO BET"
+
+
+def test_period_and_unverified_regulation_contracts_never_qualify():
+    home, away, event = _ev()
+    market = event["markets"][0]
+    market["periodType"] = "1st"
+    assert all(s["market_id"] != market["marketId"] for s in BB.selections_from_event(event, home, away))
+    del market["periodType"]
+    market["rulesPrimary"] = "Includes extra time and penalties"
+    offer = BB.selections_from_event(event, home, away)[0]
+    assert BB.best_bet([offer], _grid(), {"p_home": .8})["verdict"] == "NO BET"
+
+
+def test_individual_quote_time_controls_kickoff_boundary(monkeypatch):
+    home, away, event = _ev()
+    from oraclefc.market.jupiter_prices import parse_event_markets
+    market = parse_event_markets(event, home, away)
+    market["selections"] = [{**s, "market_id": "POLY-1"}
+                            for s in BB.selections_from_event(event, home, away)]
+    market["fetched_at"] = "2026-10-30T12:01:00+00:00"
+    forecast = _fc("POLY-1", "2026-10-30T11:00:00+00:00", "2026-10-30T12:00:00+00:00")
+    snap = {"fetched_at": "2026-10-30T11:59:00+00:00", "events": {"POLY-1": market}}
+    monkeypatch.setattr(EDGE.frozen, "load_date", lambda _: [forecast])
+    monkeypatch.setattr(EDGE, "snapshot", lambda *a, **kw: snap)
+    monkeypatch.setattr(EDGE, "now_utc_iso", lambda: "2026-10-30T12:01:01+00:00")
+    row = EDGE.edge_for_date("2026-10-30")["best_bets"]["games"][0]
+    assert row["verdict"] == "NO BET"
+    assert row["priced_at"] == market["fetched_at"]
+
+
+def test_quote_age_validation():
+    from datetime import datetime
+    now = datetime.fromisoformat("2026-11-05T12:00:00+00:00")
+    assert EDGE.fresh_quote("2026-11-05T11:55:00+00:00", now)
+    for value in (None, "", "bad", "2026-11-05T12:00:01+00:00", "2026-11-05T11:54:59+00:00"):
+        assert not EDGE.fresh_quote(value, now)
+
+
+@pytest.mark.skipif(shutil.which("node") is None, reason="node not installed")
+def test_component_range_and_conservative_ev_match_javascript():
+    home, away, event = _ev()
+    selections = BB.selections_from_event(event, home, away)
+    grid = _grid()
+    sim = {"p_home": .70, "p_draw": .15, "p_away": .15}
+    components = {"elo": {"weight": .44, "p_home": .65, "p_draw": .15, "p_away": .20},
+                  "xg": {"weight": .51, "p_home": .72, "p_draw": .13, "p_away": .15}}
+    py = BB.best_bet(selections, grid, sim, components=components)
+    script = "const B=require(process.argv[1]); console.log(JSON.stringify(B.bestBet(...JSON.parse(process.argv[2]))));"
+    js = json.loads(subprocess.check_output(["node", "-e", script, str(ROOT / "web/bestbet.js"),
+                                           json.dumps([selections, grid, sim, components])]))
+    assert py["bet"]["market_id"] == js["bet"]["market_id"]
+    for key in ("component_min_p", "component_max_p", "conservative_ev_per_dollar"):
+        assert py["bet"][key] == pytest.approx(js["bet"][key])

@@ -22,6 +22,7 @@ Fees (Polymarket-sourced markets on Jupiter Predict, checked 2026-10-28):
 """
 from __future__ import annotations
 
+import math
 import re
 
 import numpy as np
@@ -55,14 +56,16 @@ def _usd(x):
 def _side(m, outcome, label, side, ask, bid, provider):
     return {"market_id": m.get("marketId"), "market_type": m.get("sportsMarketType"), "label": label,
             "side": side, "outcome": outcome, "ask": ask, "bid": bid or None,
-            "volume": (m.get("pricing") or {}).get("volume"), "provider": provider}
+            "volume": (m.get("pricing") or {}).get("volume"), "provider": provider,
+            "regulation_only": bool(re.search(r"\b90\s+minutes?\b", m.get("rulesPrimary") or "", re.I)
+                                    and "stoppage" in (m.get("rulesPrimary") or "").lower())}
 
 
 def selections_from_event(ev: dict, home: str, away: str) -> list[dict]:
     """Every buyable side (YES and NO) of every full-time goals market we can price."""
     out = []
     for m in ev.get("markets") or []:
-        if m.get("status") not in (None, "open"):
+        if m.get("periodType") or m.get("status") != "open":
             continue
         t, title = m.get("sportsMarketType"), (m.get("title") or "").strip()
         pr = m.get("pricing") or {}
@@ -172,35 +175,49 @@ def evaluate(selections: list[dict], score_grid, sim: dict | None = None) -> lis
         p = model_prob(s["outcome"], score_grid, sim)
         fee = fee_per_contract(s["ask"], s.get("provider"))
         ev = p / (s["ask"] + fee) - 1.0
-        thin = (not s.get("bid")) or (s["ask"] - (s.get("bid") or 0) > 0.10)
+        bid = s.get("bid")
+        thin = not (isinstance(bid, (int, float)) and math.isfinite(bid)
+                    and 0 < bid <= s["ask"] and s["ask"] - bid <= 0.10 + 1e-9)
+        volume = s.get("volume")
+        liquid = isinstance(volume, (int, float)) and math.isfinite(volume) and volume > 0
         rows.append({**s, "model_p": p, "fee_per_contract": fee, "cost_per_contract": s["ask"] + fee,
                      "ev_per_dollar": ev, "edge_pp": 100 * (p - s["ask"]), "thin_book": bool(thin),
                      "fee_assumed": (s.get("provider") or "") not in FEES,
-                     "eligible": bool(p > MIN_P and ev > MIN_EV)})
+                     "quote_valid": bool(not thin and liquid and s.get("regulation_only") is True),
+                     "eligible": bool(not thin and liquid and s.get("regulation_only") is True
+                                      and p > MIN_P and ev > MIN_EV)})
     return rows
 
 
 def best_bet(selections: list[dict], score_grid, sim: dict | None = None, *, components: dict | None = None) -> dict:
     rows = evaluate(selections, score_grid, sim)
-    primary = sorted((components or {}).values(), key=lambda c: c.get("weight", 0), reverse=True)[:2]
+    primary = sorted((components or {}).items(), key=lambda item: item[1].get("weight", 0), reverse=True)[:2]
     blocked = []
     if len(primary) == 2:
         for row in rows:
             spec = row["outcome"]
-            if not row["eligible"] or spec["kind"] != "1x2":
+            if spec["kind"] != "1x2":
                 continue
+            probabilities = {name: model_prob(spec, score_grid, component) for name, component in primary}
+            row["component_probabilities"] = probabilities
+            row["component_min_p"] = min(probabilities.values())
+            row["component_max_p"] = max(probabilities.values())
+            row["conservative_ev_per_dollar"] = row["component_min_p"] / row["cost_per_contract"] - 1
             threshold = max(MIN_P, row["cost_per_contract"])
-            if any(model_prob(spec, score_grid, component) <= threshold for component in primary):
+            if row["eligible"] and row["component_min_p"] <= threshold:
                 row["eligible"] = False
                 blocked.append(row)
     elig = sorted((r for r in rows if r["eligible"]), key=lambda r: (-r["ev_per_dollar"], -r["model_p"]))
     out = {"n_priced": len(rows), "n_eligible": len(elig),
+           "selection_policy": "verified-quotes-component-agreement-v2",
            "rule": f"model P > {MIN_P:.0%} and EV > 0 at the Jupiter ask incl. fees; highest EV wins"}
     if not elig:
         out["verdict"] = "NO BET"
         if blocked:
             out["reason"] = "main model components do not both clear 50% and after-fee break-even"
-        cands = [r for r in rows if r["model_p"] > MIN_P and r not in blocked]
+        if rows and not any(r["quote_valid"] for r in rows):
+            out["reason"] = "no verified two-sided 90-minute quote with traded volume"
+        cands = [r for r in rows if r["quote_valid"] and r["model_p"] > MIN_P and r not in blocked]
         if cands:  # closest miss, for transparency
             out["closest"] = _public(max(cands, key=lambda r: r["ev_per_dollar"]))
         return out
@@ -214,6 +231,9 @@ def _public(r: dict) -> dict:
     keys = ("market_id", "market_type", "label", "side", "ask", "bid", "volume", "model_p", "fee_per_contract",
             "cost_per_contract", "ev_per_dollar", "edge_pp", "thin_book", "fee_assumed")
     out = {k: (round(r[k], 6) if isinstance(r[k], float) else r[k]) for k in keys}
+    for key in ("component_probabilities", "component_min_p", "component_max_p", "conservative_ev_per_dollar"):
+        if key in r:
+            out[key] = r[key]
     if r.get("outcome") is not None:
         out["outcome"] = r["outcome"]  # settlement spec, used by post-match grading
     return out

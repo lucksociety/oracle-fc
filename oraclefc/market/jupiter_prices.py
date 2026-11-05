@@ -39,7 +39,7 @@ def _mid(pr: dict) -> dict:
     buy = (pr.get("buyYesPriceUsd") or 0) / 1e6
     sell = (pr.get("sellYesPriceUsd") or 0) / 1e6
     # Only quote a mid when there is a two-sided book with a sane spread.
-    mid = (buy + sell) / 2 if (buy and sell and buy - sell <= 0.15) else None
+    mid = (buy + sell) / 2 if (0 < sell <= buy < 1 and buy - sell <= 0.15) else None
     return {"ask": buy or None, "bid": sell or None, "mid": mid, "volume": pr.get("volume"),
             "spread": (buy - sell) if (buy and sell) else None}
 
@@ -50,7 +50,7 @@ def parse_event_markets(ev: dict, home: str, away: str) -> dict:
         t = m.get("sportsMarketType")
         title = (m.get("title") or "").strip()
         pr = _mid(m.get("pricing") or {})
-        if m.get("status") not in (None, "open"):
+        if m.get("periodType") or m.get("status") != "open":
             continue
         if t == "moneyline" and not m.get("isTeamMarket"):
             if title.lower() == "draw":
@@ -90,9 +90,15 @@ def snapshot(event_ids: list[str], date: str, fixtures: dict[str, dict]) -> dict
             snap["events"][eid] = {"error": str(e)}
             continue
         ev = ev.get("data", ev)
+        if ev.get("eventId") != eid or ev.get("isLive"):
+            snap["events"][eid] = {"error": "event identity mismatch or market already live"}
+            continue
+        received_at = now_utc_iso()
         snap["events"][eid] = parse_event_markets(ev, fx["home_name"], fx["away_name"])
         snap["events"][eid]["selections"] = selections_from_event(ev, fx["home_name"], fx["away_name"])
+        snap["events"][eid]["fetched_at"] = received_at
         time.sleep(0.4)
+    snap["fetched_at"] = now_utc_iso()
     d = config.MARKET_DIR / date
     d.mkdir(parents=True, exist_ok=True)
     (d / f"snapshot_{snap['fetched_at'].replace(':', '')}.json").write_text(json.dumps(snap, indent=1))
