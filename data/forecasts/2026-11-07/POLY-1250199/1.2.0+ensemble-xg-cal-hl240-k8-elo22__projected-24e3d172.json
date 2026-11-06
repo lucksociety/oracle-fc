@@ -1,0 +1,602 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-11-06",
+ "input_fingerprint": "2041f3102bae828a2a87036744d059ae608def99029777ba85e1ed81e378bfc1",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-11-06T18:16:05+00:00",
+ "fixture": {
+  "event_id": "POLY-1250199",
+  "home_name": "Bristol City FC",
+  "away_name": "Norwich City FC",
+  "competition": "EFL Championship",
+  "subcategory": "elc",
+  "kickoff_utc": "2026-11-07T12:30:00+00:00",
+  "kickoff_local": "2026-11-07 07:30 EST",
+  "home_matched": "Bristol City",
+  "away_matched": "Norwich",
+  "match_methods": {
+   "home": {
+    "source": "Bristol City FC",
+    "matched": "Bristol City",
+    "method": "core-tokens",
+    "score": 0.97
+   },
+   "away": {
+    "source": "Norwich City FC",
+    "matched": "Norwich",
+    "method": "alias",
+    "score": 1.0
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.3700805771185426,
+  "p_draw": 0.27644798049304536,
+  "p_away": 0.3534714423884121,
+  "xg_home": 1.3805006968044216,
+  "xg_away": 1.345285133403623,
+  "xg_total": 2.7257858302080447,
+  "median_total": 3,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.13371909503264487
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.13371909503264487
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.08558432850081353
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.08475839964423129
+   },
+   {
+    "home": 1,
+    "away": 2,
+    "p": 0.0832567085014565
+   },
+   {
+    "home": 0,
+    "away": 1,
+    "p": 0.08225390364993546
+   }
+  ],
+  "btts": 0.5713150963089783,
+  "totals_over": {
+   "over_0.5": 0.932119273739686,
+   "over_1.5": 0.7651069704455192,
+   "over_2.5": 0.5131838937165898,
+   "over_3.5": 0.2917286800980154,
+   "over_4.5": 0.1379533833505809,
+   "over_5.5": 0.056864911414986355,
+   "over_6.5": 0.02008587848649414
+  },
+  "total_buckets": {
+   "0-1": 0.23489302955448077,
+   "2": 0.25192307672892944,
+   "3": 0.2214552136185744,
+   "4": 0.15377529674743454,
+   "5+": 0.1379533833505809
+  },
+  "clean_sheet_home": 0.2529515511966565,
+  "clean_sheet_away": 0.24361407875467941,
+  "home_goal_dist": [
+   0.24361407875467941,
+   0.3541677449087934,
+   0.2441011237987136,
+   0.1095622136002776,
+   0.036417558465564576,
+   0.009591578453417382,
+   0.0020872047908732146,
+   0.00045849722768089425
+  ],
+  "away_goal_dist": [
+   0.2529515511966565,
+   0.35742229642190915,
+   0.23976489218266392,
+   0.10485257448097984,
+   0.03399956667571924,
+   0.008747801108597828,
+   0.0018620934993861455,
+   0.00039922443408744014
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    3
+   ],
+   "away_goals_80": [
+    0,
+    3
+   ],
+   "total_goals_80": [
+    1,
+    5
+   ],
+   "goal_diff_80": [
+    -2,
+    2
+   ]
+  },
+  "score_grid": [
+   [
+    0.067881,
+    0.082254,
+    0.057429,
+    0.02522,
+    0.008186,
+    0.002103,
+    0.000446
+   ],
+   [
+    0.084758,
+    0.133719,
+    0.083257,
+    0.036648,
+    0.011922,
+    0.00307,
+    0.000653
+   ],
+   [
+    0.060775,
+    0.085584,
+    0.061158,
+    0.025548,
+    0.00833,
+    0.00215,
+    0.000458
+   ],
+   [
+    0.027394,
+    0.03867,
+    0.026224,
+    0.012249,
+    0.00379,
+    0.00098,
+    0.000209
+   ],
+   [
+    0.009113,
+    0.012895,
+    0.008765,
+    0.003885,
+    0.001344,
+    0.00033,
+    7.1e-05
+   ],
+   [
+    0.002396,
+    0.003399,
+    0.002315,
+    0.001028,
+    0.000338,
+    9.3e-05,
+    1.9e-05
+   ],
+   [
+    0.00052,
+    0.000739,
+    0.000505,
+    0.000225,
+    7.4e-05,
+    1.9e-05,
+    4e-06
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.37161,
+  "p_draw": 0.27607,
+  "p_away": 0.35231999999999997,
+  "se": [
+   0.001080546176477433,
+   0.0009996383223446366,
+   0.0010681540563046137
+  ],
+  "max_abs_dev_vs_exact": 0.0015294228814574096,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   1.0772749576717917,
+   1.7099928003739782
+  ],
+  "xg_away_80": [
+   1.0395252085885065,
+   1.6697301418770412
+  ],
+  "p_home_80": [
+   0.2830203625377142,
+   0.47595712053941297
+  ],
+  "p_draw_80": [
+   0.23856487582776292,
+   0.2936305159236923
+  ],
+  "p_away_80": [
+   0.2628772172977107,
+   0.45139382296278735
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.1831895755422645,
+   0.1758726066396109
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.372101079904541,
+   "p_draw": 0.2636277021790391,
+   "p_away": 0.3642712179164198,
+   "xg_home": 1.409610587161855,
+   "xg_away": 1.392341526518001,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.3785312812456304,
+   "p_draw": 0.26755824960144675,
+   "p_away": 0.3539104691529228,
+   "xg_home": 1.2949879747960094,
+   "xg_away": 1.242987170399804,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.3116726377471276,
+   "p_draw": 0.2715352055667007,
+   "p_away": 0.41679215668617176,
+   "xg_home": 1.2323784582336832,
+   "xg_away": 1.4606988251388406,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.43851657841122815,
+   "p_draw": 0.260108020694026,
+   "p_away": 0.30137540089474596,
+   "xg_home": 1.4506748649195045,
+   "xg_away": 1.1565606566310025,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.3721702721353345,
+   "p_draw": 0.26371813340181494,
+   "p_away": 0.36411159446285035,
+   "xg_home": 1.4078226228617077,
+   "xg_away": 1.3900603137093865,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Home advantage (England, fitted from results): \u00d71.22 on Bristol City's scoring rate.",
+   "effect": 0.2021
+  },
+  {
+   "text": "Norwich attack vs Bristol City defence: rate multiplier \u00d71.15 for the away side.",
+   "effect": 0.1437
+  },
+  {
+   "text": "Independent results-only Elo: Bristol City 1385 vs Norwich 1450 (gap -65 before home advantage).",
+   "effect": 0.097
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.3700805771185426,
+  "p_draw": 0.27644798049304536,
+  "p_away": 0.3534714423884121,
+  "xg_home": 1.3805006968044216,
+  "xg_away": 1.345285133403623
+ },
+ "context": {
+  "fetched_at": "2026-11-06T18:16:05+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5836924",
+    "fetched_at": "2026-11-06T18:16:05+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "4-2-3-1",
+    "starters": [
+     {
+      "name": "Bradley Collins",
+      "pos": "G"
+     },
+     {
+      "name": "George Tanner",
+      "pos": "D"
+     },
+     {
+      "name": "Luke McNally",
+      "pos": "D"
+     },
+     {
+      "name": "Lisav Naif Eissat",
+      "pos": "D"
+     },
+     {
+      "name": "Cameron Pring",
+      "pos": "D"
+     },
+     {
+      "name": "Jason Knight",
+      "pos": "M"
+     },
+     {
+      "name": "Joe Williams",
+      "pos": "M"
+     },
+     {
+      "name": "Rio Cardines",
+      "pos": "F"
+     },
+     {
+      "name": "Lorent Tolaj",
+      "pos": "M"
+     },
+     {
+      "name": "Scott Twine",
+      "pos": "F"
+     },
+     {
+      "name": "Sam Bell",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-11-06T18:16:05+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   },
+   "away": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "4-2-3-1",
+    "starters": [
+     {
+      "name": "Daniel Grimshaw",
+      "pos": "G"
+     },
+     {
+      "name": "Jack Stacey",
+      "pos": "D"
+     },
+     {
+      "name": "Ruairi McConville",
+      "pos": "D"
+     },
+     {
+      "name": "Harry Darling",
+      "pos": "D"
+     },
+     {
+      "name": "Darlin Yongwa",
+      "pos": "D"
+     },
+     {
+      "name": "Sam Field",
+      "pos": "M"
+     },
+     {
+      "name": "Jacob Wright",
+      "pos": "M"
+     },
+     {
+      "name": "Andre Brooks",
+      "pos": "F"
+     },
+     {
+      "name": "Edmond-Paris Maghoma",
+      "pos": "M"
+     },
+     {
+      "name": "Anthony Musaba",
+      "pos": "F"
+     },
+     {
+      "name": "Mathias Kvistgaarden",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-11-06T18:16:05+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Noah Eile",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836924",
+     "fetched_at": "2026-11-06T18:16:05+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "Papa Diallo",
+     "type": "injury",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836924",
+     "fetched_at": "2026-11-06T18:16:05+00:00"
+    },
+    {
+     "player": "Mohamed Tour\u00e9",
+     "type": "injury",
+     "expected_return": "Early January 2027",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836924",
+     "fetched_at": "2026-11-06T18:16:05+00:00"
+    },
+    {
+     "player": "Gabriel Forsyth",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836924",
+     "fetched_at": "2026-11-06T18:16:05+00:00"
+    },
+    {
+     "player": "Ali Ahmed",
+     "type": "injury",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836924",
+     "fetched_at": "2026-11-06T18:16:05+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 3,
+    "n21": 4,
+    "last_match": "2026-11-04"
+   },
+   "away": {
+    "rest_days": 4,
+    "n21": 4,
+    "last_match": "2026-11-03"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 299.2
+  },
+  "venue": {
+   "name": "Ashton Gate Stadium",
+   "city": "Bristol",
+   "lat": 51.440122578,
+   "lon": -2.62027815
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 1.05,
+   "temp_c": 9.2,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=51.44&longitude=-2.62",
+   "fetched_at": "2026-11-06T18:16:05+00:00",
+   "lat": 51.440122578,
+   "lon": -2.62027815
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": -0.3,
+    "d_p_draw_pp": -0.17,
+    "d_p_away_pp": 0.47,
+    "d_xg_home": 0.055,
+    "d_xg_away": 0.071
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0283,
+    "away_rate_mult": 1.0048,
+    "d_p_home_pp": 0.85,
+    "d_p_draw_pp": -0.27,
+    "d_p_away_pp": -0.58,
+    "d_xg_home": 0.038,
+    "d_xg_away": 0.007,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0215,
+    "away_rate_mult": 1.0091,
+    "d_p_home_pp": 0.5,
+    "d_p_draw_pp": -0.24,
+    "d_p_away_pp": -0.26,
+    "d_xg_home": 0.029,
+    "d_xg_away": 0.012,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "reason": "failed validation; no live features"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 3.0,
+   "rest_a": 4.0,
+   "n21_h": 4.0,
+   "n21_a": 4.0,
+   "travel_km": 299.1680500638909,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 1.05,
+   "temp_c": 9.2
+  }
+ },
+ "confidence": {
+  "tier": "LOW",
+  "p_max": 0.3700805771185426,
+  "entropy_nats": 1.0909045923525484,
+  "text": "Most likely result has P = 37.0%. In the out-of-sample backtest, favourites priced 0.33\u20130.40 won 37.6% \u00b1 0.5% (n=8383, mean forecast 37.8%). Backtest RPS for E1: 0.2179; exact-score top-5 hit rate 51.6% (n=1800). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: LOW (entropy 1.091 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Bristol City: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Bristol City: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.",
+  "Norwich: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Norwich: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+ ],
+ "verdict": "Bristol City 1\u20131 Norwich is the single most probable scoreline at 13.4%: expected goals 1.38\u20131.35 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.046). Exact scores are inherently uncertain; the 1X2 split is 37.0%/27.6%/35.3%.",
+ "resolved": {
+  "home_key": "England:Bristol City",
+  "away_key": "England:Norwich",
+  "div": "E1",
+  "home_div": "E1",
+  "away_div": "E1",
+  "country": "England"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: Norwich City FC at Bristol City FC\nCompetition: EFL Championship\nDate: 2026-11-07 07:30 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-11-06\n\nPRIMARY FINAL SCORE PREDICTION\n\nBristol City FC 1 \u2013 1 Norwich City FC\n(modal exact score, probability 13.4%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.38\nAway: 1.35\nExpected Total: 2.73\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 37.0%\nDraw: 27.6%\nAway Win: 35.3%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 13.4%\n2. 2\u20131: 8.6%\n3. 1\u20130: 8.5%\n4. 1\u20132: 8.3%\n5. 0\u20131: 8.2%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 23.5%\nTotal 2 goals: 25.2%\nTotal 3 goals: 22.1%\nTotal 4 goals: 15.4%\nTotal 5+ goals: 13.8%\n\nBoth Teams Score: 57.1%\nClean sheet Bristol City FC: 25.3% \u00b7 Clean sheet Norwich City FC: 24.4%\n\nMATCH INTELLIGENCE\n\n1. Home advantage (England, fitted from results): \u00d71.22 on Bristol City's scoring rate.\n2. Norwich attack vs Bristol City defence: rate multiplier \u00d71.15 for the away side.\n3. Independent results-only Elo: Bristol City 1385 vs Norwich 1450 (gap -65 before home advantage).\n\nMODEL CONFIDENCE\n\nMost likely result has P = 37.0%. In the out-of-sample backtest, favourites priced 0.33\u20130.40 won 37.6% \u00b1 0.5% (n=8383, mean forecast 37.8%). Backtest RPS for E1: 0.2179; exact-score top-5 hit rate 51.6% (n=1800). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: LOW (entropy 1.091 nats of max 1.099).\nParameter-uncertainty 80% bands: xG Bristol City FC 1.08\u20131.71, xG Norwich City FC 1.04\u20131.67; P(home win) 28.3%\u201347.6%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0015 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nBristol City: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-11-06 13:16 EST (4-2-3-1)\n  Bradley Collins (G), George Tanner (D), Luke McNally (D), Lisav Naif Eissat (D), Cameron Pring (D), Jason Knight (M), Joe Williams (M), Rio Cardines (F), Lorent Tolaj (M), Scott Twine (F), Sam Bell (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\nNorwich: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-11-06 13:16 EST (4-2-3-1)\n  Daniel Grimshaw (G), Jack Stacey (D), Ruairi McConville (D), Harry Darling (D), Darlin Yongwa (D), Sam Field (M), Jacob Wright (M), Andre Brooks (F), Edmond-Paris Maghoma (M), Anthony Musaba (F), Mathias Kvistgaarden (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nKEY ABSENCES\n\n- Bristol City: Noah Eile \u2014 injury, Doubtful [FotMob, 2026-11-06 13:16 EST]\n- Norwich: Papa Diallo \u2014 injury, Mid November 2026 [FotMob, 2026-11-06 13:16 EST]\n- Norwich: Mohamed Tour\u00e9 \u2014 injury, Early January 2027 [FotMob, 2026-11-06 13:16 EST]\n- Norwich: Gabriel Forsyth \u2014 injury, Doubtful [FotMob, 2026-11-06 13:16 EST]\n- Norwich: Ali Ahmed \u2014 injury, Mid November 2026 [FotMob, 2026-11-06 13:16 EST]\n\nWEATHER AT VENUE\n\nAshton Gate Stadium, Bristol: 9.2 \u00b0C, wind 1.1 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-11-06 13:16 EST]\n\nREST & TRAVEL\n\nBristol City: 3 days' rest, 4 matches in previous 21 days \u00b7 Norwich: 4 days' rest, 4 in 21 days \u00b7 away travel 299.2 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 37.0% / 27.6% / 35.3%, xG 1.38\u20131.35\n- Understat xG component (validated, in ensemble): home -0.30 pp, draw -0.17 pp, away +0.47 pp; xG +0.055 / +0.071\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.85 pp, draw -0.27 pp, away -0.58 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.50 pp, draw -0.24 pp, away -0.26 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- lineup: not applied (failed validation; no live features)\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Bristol City: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Bristol City: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n- Norwich: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Norwich: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nFINAL VERDICT\n\nBristol City 1\u20131 Norwich is the single most probable scoreline at 13.4%: expected goals 1.38\u20131.35 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.046). Exact scores are inherently uncertain; the 1X2 split is 37.0%/27.6%/35.3%.\n",
+ "frozen_at": "2026-11-06T18:16:05+00:00",
+ "sha256": "a6497b5cf7fb75f9e9726cfe9d5f8e3cdadc8a095dce9daef8986672410edeba"
+}

@@ -1,0 +1,642 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-11-06",
+ "input_fingerprint": "2041f3102bae828a2a87036744d059ae608def99029777ba85e1ed81e378bfc1",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-11-06T18:16:11+00:00",
+ "fixture": {
+  "event_id": "POLY-1250278",
+  "home_name": "Cardiff City FC",
+  "away_name": "Burnley FC",
+  "competition": "EFL Championship",
+  "subcategory": "elc",
+  "kickoff_utc": "2026-11-07T15:00:00+00:00",
+  "kickoff_local": "2026-11-07 10:00 EST",
+  "home_matched": "Cardiff",
+  "away_matched": "Burnley",
+  "match_methods": {
+   "home": {
+    "source": "Cardiff City FC",
+    "matched": "Cardiff",
+    "method": "alias",
+    "score": 1.0
+   },
+   "away": {
+    "source": "Burnley FC",
+    "matched": "Burnley",
+    "method": "core-tokens",
+    "score": 0.97
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.40326583258288357,
+  "p_draw": 0.2684983125875661,
+  "p_away": 0.3282358548295503,
+  "xg_home": 1.5089834897154335,
+  "xg_away": 1.3468518037597408,
+  "xg_total": 2.8558352934751743,
+  "median_total": 3,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.12775352928060416
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.12775352928060416
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.08952645489574601
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.08229191054010693
+   },
+   {
+    "home": 1,
+    "away": 2,
+    "p": 0.07922425017799775
+   },
+   {
+    "home": 0,
+    "away": 1,
+    "p": 0.07184797816155122
+   }
+  ],
+  "btts": 0.59237410310288,
+  "totals_over": {
+   "over_0.5": 0.9393768130364197,
+   "over_1.5": 0.7852369243347617,
+   "over_2.5": 0.5434520333058852,
+   "over_3.5": 0.32121561696902895,
+   "over_4.5": 0.1592335673252328,
+   "over_5.5": 0.06914771690608873,
+   "over_6.5": 0.02588662125561941
+  },
+  "total_buckets": {
+   "0-1": 0.2147630756652383,
+   "2": 0.2417848910288764,
+   "3": 0.22223641633685629,
+   "4": 0.1619820496437962,
+   "5+": 0.1592335673252328
+  },
+  "clean_sheet_home": 0.25451276550319585,
+  "clean_sheet_away": 0.21373631835750428,
+  "home_goal_dist": [
+   0.21373631835750428,
+   0.33968826380541367,
+   0.2565181896291591,
+   0.12640196473572876,
+   0.04621367168911222,
+   0.01341568584451448,
+   0.0032251330450244298,
+   0.0008007728935430286
+  ],
+  "away_goal_dist": [
+   0.25451276550319585,
+   0.35584458433615407,
+   0.23851431103809018,
+   0.1050347034575454,
+   0.03456153527438711,
+   0.009093101325206384,
+   0.0019930904001044447,
+   0.0004459086653165997
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    3
+   ],
+   "away_goals_80": [
+    0,
+    3
+   ],
+   "total_goals_80": [
+    1,
+    5
+   ],
+   "goal_diff_80": [
+    -2,
+    2
+   ]
+  },
+  "score_grid": [
+   [
+    0.060623,
+    0.071848,
+    0.049829,
+    0.021891,
+    0.007171,
+    0.001875,
+    0.000408
+   ],
+   [
+    0.082292,
+    0.127754,
+    0.079224,
+    0.035027,
+    0.011544,
+    0.003035,
+    0.000664
+   ],
+   [
+    0.064202,
+    0.089526,
+    0.063938,
+    0.02693,
+    0.008927,
+    0.002359,
+    0.000519
+   ],
+   [
+    0.031595,
+    0.044346,
+    0.030176,
+    0.014264,
+    0.004502,
+    0.001196,
+    0.000264
+   ],
+   [
+    0.011499,
+    0.016245,
+    0.011122,
+    0.005006,
+    0.001772,
+    0.000448,
+    9.9e-05
+   ],
+   [
+    0.003316,
+    0.004714,
+    0.003246,
+    0.001469,
+    0.000495,
+    0.00014,
+    3e-05
+   ],
+   [
+    0.000791,
+    0.001131,
+    0.000784,
+    0.000357,
+    0.000121,
+    3.2e-05,
+    8e-06
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.402995,
+  "p_draw": 0.26887,
+  "p_away": 0.32813499999999995,
+  "se": [
+   0.0010967908414438005,
+   0.000991410417284386,
+   0.001049910524223374
+  ],
+  "max_abs_dev_vs_exact": 0.00037168741243387426,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   1.2033549395078702,
+   1.83881792009117
+  ],
+  "xg_away_80": [
+   1.0203608527384036,
+   1.6958733118326093
+  ],
+  "p_home_80": [
+   0.3151508390702966,
+   0.5099816755747055
+  ],
+  "p_draw_80": [
+   0.23022903358355024,
+   0.2848918434300956
+  ],
+  "p_away_80": [
+   0.23601845444539002,
+   0.4313344832672584
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.16810596849867077,
+   0.18854393232403385
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.3904738281137114,
+   "p_draw": 0.25267779330347045,
+   "p_away": 0.35684837858281826,
+   "xg_home": 1.5423949402417703,
+   "xg_away": 1.465834139867237,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.4194112066853457,
+   "p_draw": 0.26487538520579157,
+   "p_away": 0.3157134081088627,
+   "xg_home": 1.3858626715837825,
+   "xg_away": 1.1658976942968606,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.5373023473888399,
+   "p_draw": 0.22456858898691884,
+   "p_away": 0.23812906362424138,
+   "xg_home": 2.046372454134067,
+   "xg_away": 1.3163946494980778,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.43851657841122815,
+   "p_draw": 0.260108020694026,
+   "p_away": 0.30137540089474596,
+   "xg_home": 1.4506748649195045,
+   "xg_away": 1.1565606566310025,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.39642929073772587,
+   "p_draw": 0.25253777408932715,
+   "p_away": 0.35103293517294687,
+   "xg_home": 1.5542818050188876,
+   "xg_away": 1.450946934812555,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Home advantage (England, fitted from results): \u00d71.22 on Cardiff's scoring rate.",
+   "effect": 0.2021
+  },
+  {
+   "text": "Burnley attack vs Cardiff defence: rate multiplier \u00d71.22 for the away side.",
+   "effect": 0.1952
+  },
+  {
+   "text": "Context \u2014 Understat xG component (validated, in ensemble): home win -1.1 pp, draw -0.6 pp, away win +1.7 pp (xG +0.08 / +0.14).",
+   "effect": 0.051
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.40326583258288357,
+  "p_draw": 0.2684983125875661,
+  "p_away": 0.3282358548295503,
+  "xg_home": 1.5089834897154335,
+  "xg_away": 1.3468518037597408
+ },
+ "context": {
+  "fetched_at": "2026-11-06T18:16:11+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5836925",
+    "fetched_at": "2026-11-06T18:16:11+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "4-1-4-1",
+    "starters": [
+     {
+      "name": "Nathan Trott",
+      "pos": "G"
+     },
+     {
+      "name": "Perry Ng",
+      "pos": "D"
+     },
+     {
+      "name": "William Fish",
+      "pos": "D"
+     },
+     {
+      "name": "Joel Bagan",
+      "pos": "D"
+     },
+     {
+      "name": "Calum Scanlon",
+      "pos": "D"
+     },
+     {
+      "name": "Alex Robertson",
+      "pos": "M"
+     },
+     {
+      "name": "Ollie Tanner",
+      "pos": "F"
+     },
+     {
+      "name": "Jack Moylan",
+      "pos": "M"
+     },
+     {
+      "name": "Rubin Colwill",
+      "pos": "M"
+     },
+     {
+      "name": "Chris Willock",
+      "pos": "F"
+     },
+     {
+      "name": "Yousef Salech",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-11-06T18:16:11+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   },
+   "away": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "4-2-3-1",
+    "starters": [
+     {
+      "name": "Gr\u00e9goire Coudert",
+      "pos": "G"
+     },
+     {
+      "name": "Kyle Walker",
+      "pos": "D"
+     },
+     {
+      "name": "Hjalmar Ekdal",
+      "pos": "D"
+     },
+     {
+      "name": "Igor Julio",
+      "pos": "D"
+     },
+     {
+      "name": "Lucas Pires",
+      "pos": "D"
+     },
+     {
+      "name": "Josh Laurent",
+      "pos": "M"
+     },
+     {
+      "name": "Reo Hatate",
+      "pos": "M"
+     },
+     {
+      "name": "Andr\u00e9as Hountondji",
+      "pos": "F"
+     },
+     {
+      "name": "Marcus Edwards",
+      "pos": "M"
+     },
+     {
+      "name": "Largie Ramazani",
+      "pos": "F"
+     },
+     {
+      "name": "Jamie Vardy",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-11-06T18:16:11+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Perry Ng",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836925",
+     "fetched_at": "2026-11-06T18:16:11+00:00"
+    },
+    {
+     "player": "Krystian Bielik",
+     "type": "injury",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836925",
+     "fetched_at": "2026-11-06T18:16:11+00:00"
+    },
+    {
+     "player": "Dylan Lawlor",
+     "type": "injury",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836925",
+     "fetched_at": "2026-11-06T18:16:11+00:00"
+    },
+    {
+     "player": "Calum Chambers",
+     "type": "injury",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836925",
+     "fetched_at": "2026-11-06T18:16:11+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "Armando Broja",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836925",
+     "fetched_at": "2026-11-06T18:16:11+00:00"
+    },
+    {
+     "player": "Zeki Amdouni",
+     "type": "injury",
+     "expected_return": "Back in training",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836925",
+     "fetched_at": "2026-11-06T18:16:11+00:00"
+    },
+    {
+     "player": "Hannibal Mejbri",
+     "type": "injury",
+     "expected_return": "Early January 2027",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836925",
+     "fetched_at": "2026-11-06T18:16:11+00:00"
+    },
+    {
+     "player": "Bashir Humphreys",
+     "type": "injury",
+     "expected_return": "Back in training",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836925",
+     "fetched_at": "2026-11-06T18:16:11+00:00"
+    },
+    {
+     "player": "Ashley Barnes",
+     "type": "injury",
+     "expected_return": "Back in training",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836925",
+     "fetched_at": "2026-11-06T18:16:11+00:00"
+    },
+    {
+     "player": "Jordan Beyer",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836925",
+     "fetched_at": "2026-11-06T18:16:11+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 3,
+    "n21": 4,
+    "last_match": "2026-11-04"
+   },
+   "away": {
+    "rest_days": 4,
+    "n21": 3,
+    "last_match": "2026-11-03"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 265.8
+  },
+  "venue": {
+   "name": "Cardiff City Stadium",
+   "city": "Cardiff (Caerdydd)",
+   "lat": 51.472829314,
+   "lon": -3.203115455
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 1.15,
+   "temp_c": 10.8,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=51.473&longitude=-3.203",
+   "fetched_at": "2026-11-06T18:16:11+00:00",
+   "lat": 51.472829314,
+   "lon": -3.203115455
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": -1.14,
+    "d_p_draw_pp": -0.55,
+    "d_p_away_pp": 1.7,
+    "d_xg_home": 0.081,
+    "d_xg_away": 0.138
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0283,
+    "away_rate_mult": 1.0048,
+    "d_p_home_pp": 0.9,
+    "d_p_draw_pp": -0.31,
+    "d_p_away_pp": -0.59,
+    "d_xg_home": 0.041,
+    "d_xg_away": 0.007,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0202,
+    "away_rate_mult": 1.0085,
+    "d_p_home_pp": 0.5,
+    "d_p_draw_pp": -0.24,
+    "d_p_away_pp": -0.26,
+    "d_xg_home": 0.03,
+    "d_xg_away": 0.012,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "reason": "failed validation; no live features"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 3.0,
+   "rest_a": 4.0,
+   "n21_h": 4.0,
+   "n21_a": 3.0,
+   "travel_km": 265.7758175217576,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 1.15,
+   "temp_c": 10.8
+  }
+ },
+ "confidence": {
+  "tier": "LOW",
+  "p_max": 0.40326583258288357,
+  "entropy_nats": 1.084943152540644,
+  "text": "Most likely result has P = 40.3%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.3% \u00b1 0.4% (n=16754, mean forecast 44.6%). Backtest RPS for E1: 0.2179; exact-score top-5 hit rate 51.6% (n=1800). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: LOW (entropy 1.085 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Cardiff: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Cardiff: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.",
+  "Burnley: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Burnley: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+ ],
+ "verdict": "Cardiff 1\u20131 Burnley is the single most probable scoreline at 12.8%: expected goals 1.51\u20131.35 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.046). Exact scores are inherently uncertain; the 1X2 split is 40.3%/26.8%/32.8%.",
+ "resolved": {
+  "home_key": "England:Cardiff",
+  "away_key": "England:Burnley",
+  "div": "E1",
+  "home_div": "E1",
+  "away_div": "E1",
+  "country": "England"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: Burnley FC at Cardiff City FC\nCompetition: EFL Championship\nDate: 2026-11-07 10:00 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-11-06\n\nPRIMARY FINAL SCORE PREDICTION\n\nCardiff City FC 1 \u2013 1 Burnley FC\n(modal exact score, probability 12.8%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.51\nAway: 1.35\nExpected Total: 2.86\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 40.3%\nDraw: 26.8%\nAway Win: 32.8%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 12.8%\n2. 2\u20131: 9.0%\n3. 1\u20130: 8.2%\n4. 1\u20132: 7.9%\n5. 0\u20131: 7.2%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 21.5%\nTotal 2 goals: 24.2%\nTotal 3 goals: 22.2%\nTotal 4 goals: 16.2%\nTotal 5+ goals: 15.9%\n\nBoth Teams Score: 59.2%\nClean sheet Cardiff City FC: 25.5% \u00b7 Clean sheet Burnley FC: 21.4%\n\nMATCH INTELLIGENCE\n\n1. Home advantage (England, fitted from results): \u00d71.22 on Cardiff's scoring rate.\n2. Burnley attack vs Cardiff defence: rate multiplier \u00d71.22 for the away side.\n3. Context \u2014 Understat xG component (validated, in ensemble): home win -1.1 pp, draw -0.6 pp, away win +1.7 pp (xG +0.08 / +0.14).\n\nMODEL CONFIDENCE\n\nMost likely result has P = 40.3%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.3% \u00b1 0.4% (n=16754, mean forecast 44.6%). Backtest RPS for E1: 0.2179; exact-score top-5 hit rate 51.6% (n=1800). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: LOW (entropy 1.085 nats of max 1.099).\nParameter-uncertainty 80% bands: xG Cardiff City FC 1.20\u20131.84, xG Burnley FC 1.02\u20131.70; P(home win) 31.5%\u201351.0%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0004 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nCardiff: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-11-06 13:16 EST (4-1-4-1)\n  Nathan Trott (G), Perry Ng (D), William Fish (D), Joel Bagan (D), Calum Scanlon (D), Alex Robertson (M), Ollie Tanner (F), Jack Moylan (M), Rubin Colwill (M), Chris Willock (F), Yousef Salech (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\nBurnley: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-11-06 13:16 EST (4-2-3-1)\n  Gr\u00e9goire Coudert (G), Kyle Walker (D), Hjalmar Ekdal (D), Igor Julio (D), Lucas Pires (D), Josh Laurent (M), Reo Hatate (M), Andr\u00e9as Hountondji (F), Marcus Edwards (M), Largie Ramazani (F), Jamie Vardy (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nKEY ABSENCES\n\n- Cardiff: Perry Ng \u2014 injury, Doubtful [FotMob, 2026-11-06 13:16 EST]\n- Cardiff: Krystian Bielik \u2014 injury, Mid November 2026 [FotMob, 2026-11-06 13:16 EST]\n- Cardiff: Dylan Lawlor \u2014 injury, Mid November 2026 [FotMob, 2026-11-06 13:16 EST]\n- Cardiff: Calum Chambers \u2014 injury, Mid November 2026 [FotMob, 2026-11-06 13:16 EST]\n- Burnley: Armando Broja \u2014 injury, Doubtful [FotMob, 2026-11-06 13:16 EST]\n- Burnley: Zeki Amdouni \u2014 injury, Back in training [FotMob, 2026-11-06 13:16 EST]\n- Burnley: Hannibal Mejbri \u2014 injury, Early January 2027 [FotMob, 2026-11-06 13:16 EST]\n- Burnley: Bashir Humphreys \u2014 injury, Back in training [FotMob, 2026-11-06 13:16 EST]\n- Burnley: Ashley Barnes \u2014 injury, Back in training [FotMob, 2026-11-06 13:16 EST]\n- Burnley: Jordan Beyer \u2014 injury, Doubtful [FotMob, 2026-11-06 13:16 EST]\n\nWEATHER AT VENUE\n\nCardiff City Stadium, Cardiff (Caerdydd): 10.8 \u00b0C, wind 1.1 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-11-06 13:16 EST]\n\nREST & TRAVEL\n\nCardiff: 3 days' rest, 4 matches in previous 21 days \u00b7 Burnley: 4 days' rest, 3 in 21 days \u00b7 away travel 265.8 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 40.3% / 26.8% / 32.8%, xG 1.51\u20131.35\n- Understat xG component (validated, in ensemble): home -1.14 pp, draw -0.55 pp, away +1.70 pp; xG +0.081 / +0.138\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.90 pp, draw -0.31 pp, away -0.59 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.50 pp, draw -0.24 pp, away -0.26 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- lineup: not applied (failed validation; no live features)\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Cardiff: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Cardiff: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n- Burnley: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Burnley: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nFINAL VERDICT\n\nCardiff 1\u20131 Burnley is the single most probable scoreline at 12.8%: expected goals 1.51\u20131.35 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.046). Exact scores are inherently uncertain; the 1X2 split is 40.3%/26.8%/32.8%.\n",
+ "frozen_at": "2026-11-06T18:16:11+00:00",
+ "sha256": "c6442bd221999dec6885eb0c591f606582d0278c27c4f66c01a17282db25bfd1"
+}

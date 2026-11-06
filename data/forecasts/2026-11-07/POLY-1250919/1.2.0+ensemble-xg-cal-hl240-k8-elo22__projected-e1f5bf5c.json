@@ -1,0 +1,618 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-11-06",
+ "input_fingerprint": "2041f3102bae828a2a87036744d059ae608def99029777ba85e1ed81e378bfc1",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-11-06T18:16:06+00:00",
+ "fixture": {
+  "event_id": "POLY-1250919",
+  "home_name": "Burgos CF",
+  "away_name": "Celta Fortuna",
+  "competition": "La Liga 2",
+  "subcategory": "es2",
+  "kickoff_utc": "2026-11-07T13:00:00+00:00",
+  "kickoff_local": "2026-11-07 08:00 EST",
+  "home_matched": "Burgos",
+  "away_matched": "Celta B",
+  "match_methods": {
+   "home": {
+    "source": "Burgos CF",
+    "matched": "Burgos",
+    "method": "core-tokens",
+    "score": 0.97
+   },
+   "away": {
+    "source": "Celta Fortuna",
+    "matched": "Celta B",
+    "method": "alias",
+    "score": 1.0
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.5808524485482274,
+  "p_draw": 0.2453866322771837,
+  "p_away": 0.17376091917458897,
+  "xg_home": 1.7886029171784261,
+  "xg_away": 0.890691768586735,
+  "xg_total": 2.679294685765161,
+  "median_total": 3,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.11979834699511695
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.11979834699511695
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.1173261878194081
+   },
+   {
+    "home": 2,
+    "away": 0,
+    "p": 0.10963494654499578
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.1007025593534145
+   },
+   {
+    "home": 0,
+    "away": 0,
+    "p": 0.07007619153124196
+   }
+  ],
+  "btts": 0.5062996011087151,
+  "totals_over": {
+   "over_0.5": 0.9299238084687582,
+   "over_1.5": 0.757373955570736,
+   "over_2.5": 0.5024249486624229,
+   "over_3.5": 0.28083315317368746,
+   "over_4.5": 0.1305006411584793,
+   "over_5.5": 0.05251145565932313,
+   "over_6.5": 0.018144325915438467
+  },
+  "total_buckets": {
+   "0-1": 0.24262604442926422,
+   "2": 0.25494900690831296,
+   "3": 0.22159179548873545,
+   "4": 0.15033251201520817,
+   "5+": 0.1305006411584793
+  },
+  "clean_sheet_home": 0.4038224609741185,
+  "clean_sheet_away": 0.15995412944840862,
+  "home_goal_dist": [
+   0.15995412944840862,
+   0.303113577163316,
+   0.2730032250721458,
+   0.16079148698908838,
+   0.07007831034533395,
+   0.024136131014867074,
+   0.006851937645381132,
+   0.0020712023214592983
+  ],
+  "away_goal_dist": [
+   0.4038224609741185,
+   0.37380414519957766,
+   0.16405691639954495,
+   0.046652202002075004,
+   0.00978775823991753,
+   0.0016249384228638644,
+   0.000222744263654718,
+   2.8834498247850166e-05
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    4
+   ],
+   "away_goals_80": [
+    0,
+    2
+   ],
+   "total_goals_80": [
+    1,
+    5
+   ],
+   "goal_diff_80": [
+    -1,
+    3
+   ]
+  },
+  "score_grid": [
+   [
+    0.070076,
+    0.055224,
+    0.025516,
+    0.007302,
+    0.00154,
+    0.000256,
+    3.5e-05
+   ],
+   [
+    0.117326,
+    0.119798,
+    0.048589,
+    0.013904,
+    0.002932,
+    0.000488,
+    6.7e-05
+   ],
+   [
+    0.109635,
+    0.100703,
+    0.0468,
+    0.012678,
+    0.002673,
+    0.000445,
+    6.1e-05
+   ],
+   [
+    0.064998,
+    0.0597,
+    0.026267,
+    0.007938,
+    0.001585,
+    0.000264,
+    3.6e-05
+   ],
+   [
+    0.028388,
+    0.026073,
+    0.011471,
+    0.003282,
+    0.000731,
+    0.000115,
+    1.6e-05
+   ],
+   [
+    0.009782,
+    0.008984,
+    0.003953,
+    0.001131,
+    0.000238,
+    4.2e-05,
+    5e-06
+   ],
+   [
+    0.002777,
+    0.002551,
+    0.001122,
+    0.000321,
+    6.8e-05,
+    1.1e-05,
+    2e-06
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.581895,
+  "p_draw": 0.24542999999999998,
+  "p_away": 0.17267500000000002,
+  "se": [
+   0.001102935195229076,
+   0.0009622736489689406,
+   0.0008451578088587953
+  ],
+  "max_abs_dev_vs_exact": 0.0010859191745889452,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   1.2854100450064605,
+   2.3492548198555085
+  ],
+  "xg_away_80": [
+   0.6045591108853916,
+   1.208920710774755
+  ],
+  "p_home_80": [
+   0.4362891017409148,
+   0.712377972005454
+  ],
+  "p_draw_80": [
+   0.18320371763904753,
+   0.297424400433316
+  ],
+  "p_away_80": [
+   0.10032900307898365,
+   0.2756496648133465
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.23907798019308593,
+   0.2571795677707158
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.5719401067929689,
+   "p_draw": 0.2435112219768415,
+   "p_away": 0.18454867123018956,
+   "xg_home": 1.7578838183250107,
+   "xg_away": 0.8972460559421943,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.5837050183320662,
+   "p_draw": 0.23297459207403903,
+   "p_away": 0.18332038959389463,
+   "xg_home": 1.7565306820888,
+   "xg_away": 0.8694208429191607,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.5772838027253373,
+   "p_draw": 0.25604629583433086,
+   "p_away": 0.1666699014403319,
+   "xg_home": 1.6599301828352986,
+   "xg_away": 0.7780985632506784,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.453179659430599,
+   "p_draw": 0.2580079182682607,
+   "p_away": 0.2888124223011404,
+   "xg_home": 1.4858030012474788,
+   "xg_away": 1.132095722100677,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.5711791007746654,
+   "p_draw": 0.24385255413522283,
+   "p_away": 0.18496834509011173,
+   "xg_home": 1.7535198710576494,
+   "xg_away": 0.8964261622400794,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Celta B attack vs Burgos defence: rate multiplier \u00d70.74 for the away side.",
+   "effect": 0.2957
+  },
+  {
+   "text": "Home advantage (Spain, fitted from results): \u00d71.32 on Burgos's scoring rate.",
+   "effect": 0.2739
+  },
+  {
+   "text": "Independent results-only Elo: Burgos 1465 vs Celta B 1327 (gap +139 before home advantage).",
+   "effect": 0.2083
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.5808524485482274,
+  "p_draw": 0.2453866322771837,
+  "p_away": 0.17376091917458897,
+  "xg_home": 1.7886029171784261,
+  "xg_away": 0.890691768586735
+ },
+ "context": {
+  "fetched_at": "2026-11-06T18:16:06+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5868526",
+    "fetched_at": "2026-11-06T18:16:07+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "5-3-2",
+    "starters": [
+     {
+      "name": "Ander Cantero",
+      "pos": "G"
+     },
+     {
+      "name": "\u00c1lex Lizancos",
+      "pos": "D"
+     },
+     {
+      "name": "Oier Luengo",
+      "pos": "D"
+     },
+     {
+      "name": "Grego Sierra",
+      "pos": "D"
+     },
+     {
+      "name": "Alberto Dadie",
+      "pos": "D"
+     },
+     {
+      "name": "Brais Mart\u00ednez",
+      "pos": "D"
+     },
+     {
+      "name": "Curro S\u00e1nchez",
+      "pos": "F"
+     },
+     {
+      "name": "Unai Vencedor",
+      "pos": "M"
+     },
+     {
+      "name": "Pablo Galdames",
+      "pos": "M"
+     },
+     {
+      "name": "Alex For\u00e9s",
+      "pos": "F"
+     },
+     {
+      "name": "Javi Llabr\u00e9s",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-11-06T18:16:07+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   },
+   "away": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "3-4-3",
+    "starters": [
+     {
+      "name": "Coke Carrillo",
+      "pos": "G"
+     },
+     {
+      "name": "Kike Ribes",
+      "pos": "D"
+     },
+     {
+      "name": "Seyni Ndiaye",
+      "pos": "D"
+     },
+     {
+      "name": "Joel L\u00f3pez",
+      "pos": "M"
+     },
+     {
+      "name": "Pablo Gavian",
+      "pos": "M"
+     },
+     {
+      "name": "Adria Capdevila",
+      "pos": "M"
+     },
+     {
+      "name": "Mateo Sobral",
+      "pos": "M"
+     },
+     {
+      "name": "\u00c1ngel Arcos",
+      "pos": "F"
+     },
+     {
+      "name": "Aldrine Kibet",
+      "pos": "F"
+     },
+     {
+      "name": "\u00c1lvaro Marin",
+      "pos": "F"
+     },
+     {
+      "name": "Oscar Marcos",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-11-06T18:16:07+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Grego Sierra",
+     "type": "suspension",
+     "expected_return": "Early November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868526",
+     "fetched_at": "2026-11-06T18:16:07+00:00"
+    },
+    {
+     "player": "Jon Karrikaburu",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868526",
+     "fetched_at": "2026-11-06T18:16:07+00:00"
+    },
+    {
+     "player": "David Gonz\u00e1lez",
+     "type": "injury",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868526",
+     "fetched_at": "2026-11-06T18:16:07+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "Pablo Gavian",
+     "type": "injury",
+     "expected_return": "Out for season",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868526",
+     "fetched_at": "2026-11-06T18:16:07+00:00"
+    },
+    {
+     "player": "Anthony Khayat",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868526",
+     "fetched_at": "2026-11-06T18:16:07+00:00"
+    },
+    {
+     "player": "Anxo Rodriguez",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868526",
+     "fetched_at": "2026-11-06T18:16:07+00:00"
+    },
+    {
+     "player": "Bernard Somuah",
+     "type": "injury",
+     "expected_return": "Late January 2027",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868526",
+     "fetched_at": "2026-11-06T18:16:07+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 6,
+    "n21": 3,
+    "last_match": "2026-11-01"
+   },
+   "away": {
+    "rest_days": 7,
+    "n21": 3,
+    "last_match": "2026-10-31"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 416.4
+  },
+  "venue": {
+   "name": "Estadio Municipal de El Plant\u00edo",
+   "city": "Burgos",
+   "lat": 42.344265882,
+   "lon": -3.680600148
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 3.79,
+   "temp_c": 12.3,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=42.344&longitude=-3.681",
+   "fetched_at": "2026-11-06T18:16:07+00:00",
+   "lat": 42.344265882,
+   "lon": -3.680600148
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": -0.6,
+    "d_p_draw_pp": 0.53,
+    "d_p_away_pp": 0.07,
+    "d_xg_home": -0.001,
+    "d_xg_away": 0.013
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0256,
+    "away_rate_mult": 1.0107,
+    "d_p_home_pp": 0.8,
+    "d_p_draw_pp": -0.48,
+    "d_p_away_pp": -0.32,
+    "d_xg_home": 0.044,
+    "d_xg_away": 0.01,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "reason": "failed validation; no live features"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 6.0,
+   "rest_a": 7.0,
+   "n21_h": 3.0,
+   "n21_a": 3.0,
+   "travel_km": 416.42217832305823,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 3.79,
+   "temp_c": 12.3
+  }
+ },
+ "confidence": {
+  "tier": "MODERATE",
+  "p_max": 0.5808524485482274,
+  "entropy_nats": 0.9643963130537192,
+  "text": "Most likely result has P = 58.1%. In the out-of-sample backtest, favourites priced 0.50\u20130.60 won 53.9% \u00b1 0.5% (n=9522, mean forecast 54.4%). Backtest RPS for SP2: 0.2154; exact-score top-5 hit rate 53.8% (n=1507). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: MODERATE (entropy 0.964 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Burgos: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Burgos: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.",
+  "Celta B: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Celta B: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+ ],
+ "verdict": "Burgos 1\u20131 Celta B is the single most probable scoreline at 12.0%: expected goals 1.79\u20130.89 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.046). Exact scores are inherently uncertain; the 1X2 split is 58.1%/24.5%/17.4%.",
+ "resolved": {
+  "home_key": "Spain:Burgos",
+  "away_key": "Spain:Celta B",
+  "div": "SP2",
+  "home_div": "SP2",
+  "away_div": "SP2",
+  "country": "Spain"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: Celta Fortuna at Burgos CF\nCompetition: La Liga 2\nDate: 2026-11-07 08:00 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-11-06\n\nPRIMARY FINAL SCORE PREDICTION\n\nBurgos CF 1 \u2013 1 Celta Fortuna\n(modal exact score, probability 12.0%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.79\nAway: 0.89\nExpected Total: 2.68\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 58.1%\nDraw: 24.5%\nAway Win: 17.4%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 12.0%\n2. 1\u20130: 11.7%\n3. 2\u20130: 11.0%\n4. 2\u20131: 10.1%\n5. 0\u20130: 7.0%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 24.3%\nTotal 2 goals: 25.5%\nTotal 3 goals: 22.2%\nTotal 4 goals: 15.0%\nTotal 5+ goals: 13.1%\n\nBoth Teams Score: 50.6%\nClean sheet Burgos CF: 40.4% \u00b7 Clean sheet Celta Fortuna: 16.0%\n\nMATCH INTELLIGENCE\n\n1. Celta B attack vs Burgos defence: rate multiplier \u00d70.74 for the away side.\n2. Home advantage (Spain, fitted from results): \u00d71.32 on Burgos's scoring rate.\n3. Independent results-only Elo: Burgos 1465 vs Celta B 1327 (gap +139 before home advantage).\n\nMODEL CONFIDENCE\n\nMost likely result has P = 58.1%. In the out-of-sample backtest, favourites priced 0.50\u20130.60 won 53.9% \u00b1 0.5% (n=9522, mean forecast 54.4%). Backtest RPS for SP2: 0.2154; exact-score top-5 hit rate 53.8% (n=1507). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: MODERATE (entropy 0.964 nats of max 1.099).\nParameter-uncertainty 80% bands: xG Burgos CF 1.29\u20132.35, xG Celta Fortuna 0.60\u20131.21; P(home win) 43.6%\u201371.2%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0011 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nBurgos: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-11-06 13:16 EST (5-3-2)\n  Ander Cantero (G), \u00c1lex Lizancos (D), Oier Luengo (D), Grego Sierra (D), Alberto Dadie (D), Brais Mart\u00ednez (D), Curro S\u00e1nchez (F), Unai Vencedor (M), Pablo Galdames (M), Alex For\u00e9s (F), Javi Llabr\u00e9s (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\nCelta B: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-11-06 13:16 EST (3-4-3)\n  Coke Carrillo (G), Kike Ribes (D), Seyni Ndiaye (D), Joel L\u00f3pez (M), Pablo Gavian (M), Adria Capdevila (M), Mateo Sobral (M), \u00c1ngel Arcos (F), Aldrine Kibet (F), \u00c1lvaro Marin (F), Oscar Marcos (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nKEY ABSENCES\n\n- Burgos: Grego Sierra \u2014 suspension, Early November 2026 [FotMob, 2026-11-06 13:16 EST]\n- Burgos: Jon Karrikaburu \u2014 injury, Doubtful [FotMob, 2026-11-06 13:16 EST]\n- Burgos: David Gonz\u00e1lez \u2014 injury, Mid November 2026 [FotMob, 2026-11-06 13:16 EST]\n- Celta B: Pablo Gavian \u2014 injury, Out for season [FotMob, 2026-11-06 13:16 EST]\n- Celta B: Anthony Khayat \u2014 injury, Doubtful [FotMob, 2026-11-06 13:16 EST]\n- Celta B: Anxo Rodriguez \u2014 injury, Doubtful [FotMob, 2026-11-06 13:16 EST]\n- Celta B: Bernard Somuah \u2014 injury, Late January 2027 [FotMob, 2026-11-06 13:16 EST]\n\nWEATHER AT VENUE\n\nEstadio Municipal de El Plant\u00edo, Burgos: 12.3 \u00b0C, wind 3.8 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-11-06 13:16 EST]\n\nREST & TRAVEL\n\nBurgos: 6 days' rest, 3 matches in previous 21 days \u00b7 Celta B: 7 days' rest, 3 in 21 days \u00b7 away travel 416.4 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 58.1% / 24.5% / 17.4%, xG 1.79\u20130.89\n- Understat xG component (validated, in ensemble): home -0.60 pp, draw +0.53 pp, away +0.07 pp; xG -0.001 / +0.013\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.80 pp, draw -0.48 pp, away -0.32 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- lineup: not applied (failed validation; no live features)\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Burgos: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Burgos: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n- Celta B: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Celta B: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nFINAL VERDICT\n\nBurgos 1\u20131 Celta B is the single most probable scoreline at 12.0%: expected goals 1.79\u20130.89 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.046). Exact scores are inherently uncertain; the 1X2 split is 58.1%/24.5%/17.4%.\n",
+ "frozen_at": "2026-11-06T18:16:07+00:00",
+ "sha256": "2d3a54f5d3838b73fd58b1a447d646a155c818c9b29c6e4134d686d5c956b813"
+}

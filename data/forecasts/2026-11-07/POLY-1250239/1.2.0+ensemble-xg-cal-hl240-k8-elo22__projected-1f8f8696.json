@@ -1,0 +1,602 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-11-06",
+ "input_fingerprint": "2041f3102bae828a2a87036744d059ae608def99029777ba85e1ed81e378bfc1",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-11-06T18:16:12+00:00",
+ "fixture": {
+  "event_id": "POLY-1250239",
+  "home_name": "Preston North End FC",
+  "away_name": "Southampton FC",
+  "competition": "EFL Championship",
+  "subcategory": "elc",
+  "kickoff_utc": "2026-11-07T15:00:00+00:00",
+  "kickoff_local": "2026-11-07 10:00 EST",
+  "home_matched": "Preston",
+  "away_matched": "Southampton",
+  "match_methods": {
+   "home": {
+    "source": "Preston North End FC",
+    "matched": "Preston",
+    "method": "alias",
+    "score": 1.0
+   },
+   "away": {
+    "source": "Southampton FC",
+    "matched": "Southampton",
+    "method": "core-tokens",
+    "score": 0.97
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.18748195769189538,
+  "p_draw": 0.23522490451697783,
+  "p_away": 0.5772931377911268,
+  "xg_home": 1.0241977966583111,
+  "xg_away": 1.9153585852552073,
+  "xg_total": 2.939556381913518,
+  "median_total": 3,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.1125410188252918
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.1125410188252918
+   },
+   {
+    "home": 1,
+    "away": 2,
+    "p": 0.10145064001290618
+   },
+   {
+    "home": 0,
+    "away": 1,
+    "p": 0.09724335786971498
+   },
+   {
+    "home": 0,
+    "away": 2,
+    "p": 0.09720097675508811
+   },
+   {
+    "home": 1,
+    "away": 3,
+    "p": 0.06455042018345647
+   }
+  ],
+  "btts": 0.5598678932036999,
+  "totals_over": {
+   "over_0.5": 0.9450166621991841,
+   "over_1.5": 0.7993425367367792,
+   "over_2.5": 0.5638976470755126,
+   "over_3.5": 0.3397180349285717,
+   "over_4.5": 0.17217745090386105,
+   "over_5.5": 0.07615314581351393,
+   "over_6.5": 0.029123540832739294
+  },
+  "total_buckets": {
+   "0-1": 0.20065746326322081,
+   "2": 0.23544488966126667,
+   "3": 0.2241796121469407,
+   "4": 0.16754058402471073,
+   "5+": 0.17217745090386105
+  },
+  "clean_sheet_home": 0.14034163080843146,
+  "clean_sheet_away": 0.3547738137886845,
+  "home_goal_dist": [
+   0.3547738137886845,
+   0.37310139982586965,
+   0.18933911994853375,
+   0.06321695266225483,
+   0.015790857762717818,
+   0.0031620661984977233,
+   0.0005290284425184329,
+   8.676137092331361e-05
+  ],
+  "away_goal_dist": [
+   0.14034163080843146,
+   0.2853925752170958,
+   0.27582272327058877,
+   0.17427330935221486,
+   0.08159035721275891,
+   0.030241599256393397,
+   0.009255211440203474,
+   0.003082593442313267
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    2
+   ],
+   "away_goals_80": [
+    0,
+    4
+   ],
+   "total_goals_80": [
+    1,
+    5
+   ],
+   "goal_diff_80": [
+    -3,
+    1
+   ]
+  },
+  "score_grid": [
+   [
+    0.054983,
+    0.097243,
+    0.097201,
+    0.061594,
+    0.028796,
+    0.010638,
+    0.003243
+   ],
+   [
+    0.048431,
+    0.112541,
+    0.101451,
+    0.06455,
+    0.030302,
+    0.01124,
+    0.00344
+   ],
+   [
+    0.025703,
+    0.052562,
+    0.054465,
+    0.032938,
+    0.015522,
+    0.00578,
+    0.001776
+   ],
+   [
+    0.008573,
+    0.017589,
+    0.017315,
+    0.011723,
+    0.005249,
+    0.001961,
+    0.000605
+   ],
+   [
+    0.002141,
+    0.004404,
+    0.004348,
+    0.002796,
+    0.001401,
+    0.000497,
+    0.000154
+   ],
+   [
+    0.000428,
+    0.000882,
+    0.000873,
+    0.000563,
+    0.000268,
+    0.000106,
+    3.1e-05
+   ],
+   [
+    7.1e-05,
+    0.000148,
+    0.000146,
+    9.4e-05,
+    4.5e-05,
+    1.7e-05,
+    6e-06
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.18748499999999998,
+  "p_draw": 0.23538,
+  "p_away": 0.577135,
+  "se": [
+   0.0008727381473701032,
+   0.0009486207239987961,
+   0.0011046496996220114
+  ],
+  "max_abs_dev_vs_exact": 0.00015813779112683335,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   0.7899044079342035,
+   1.2797214550996208
+  ],
+  "xg_away_80": [
+   1.5029982898133085,
+   2.3503712574465556
+  ],
+  "p_home_80": [
+   0.13407674997715865,
+   0.27489989649106644
+  ],
+  "p_draw_80": [
+   0.18886514587209968,
+   0.2675603254266158
+  ],
+  "p_away_80": [
+   0.4607357983654065,
+   0.6719326547592472
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.19128991770583298,
+   0.16593157966211028
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.21243387580296563,
+   "p_draw": 0.2307877884570376,
+   "p_away": 0.5567783357399967,
+   "xg_home": 1.1106232664699895,
+   "xg_away": 1.9166332108209674,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.1770113888164518,
+   "p_draw": 0.22733609456256818,
+   "p_away": 0.5956525166209798,
+   "xg_home": 0.8701131516151887,
+   "xg_away": 1.809194138430592,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.12389539530560859,
+   "p_draw": 0.18073927269516726,
+   "p_away": 0.6953653319992241,
+   "xg_home": 0.9512246458480442,
+   "xg_away": 2.434592813866045,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.43851657841122815,
+   "p_draw": 0.260108020694026,
+   "p_away": 0.30137540089474596,
+   "xg_home": 1.4506748649195045,
+   "xg_away": 1.1565606566310025,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.2132633911842259,
+   "p_draw": 0.22957979726607877,
+   "p_away": 0.5571568115496953,
+   "xg_home": 1.1223192335983883,
+   "xg_away": 1.930273484453083,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Independent results-only Elo: Preston 1264 vs Southampton 1580 (gap -316 before home advantage).",
+   "effect": 0.4741
+  },
+  {
+   "text": "Southampton attack vs Preston defence: rate multiplier \u00d71.59 for the away side.",
+   "effect": 0.4633
+  },
+  {
+   "text": "Preston attack vs Southampton defence: time-weighted strength gap multiplies Preston's scoring rate by \u00d70.75 relative to an average pairing (from 40/39 decay-weighted matches).",
+   "effect": 0.2845
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.1874819576918954,
+  "p_draw": 0.2352249045169779,
+  "p_away": 0.577293137791127,
+  "xg_home": 1.0241977966583111,
+  "xg_away": 1.915358585255208
+ },
+ "context": {
+  "fetched_at": "2026-11-06T18:16:12+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5836929",
+    "fetched_at": "2026-11-06T18:16:12+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "3-4-1-2",
+    "starters": [
+     {
+      "name": "Daniel Iversen",
+      "pos": "G"
+     },
+     {
+      "name": "Odel Offiah",
+      "pos": "D"
+     },
+     {
+      "name": "Jordan Storey",
+      "pos": "D"
+     },
+     {
+      "name": "Andrew Hughes",
+      "pos": "D"
+     },
+     {
+      "name": "Stanley Mills",
+      "pos": "M"
+     },
+     {
+      "name": "L\u00e9o Leroy",
+      "pos": "M"
+     },
+     {
+      "name": "Jordan Thompson",
+      "pos": "M"
+     },
+     {
+      "name": "Andrija Vuk\u010devi\u0107",
+      "pos": "M"
+     },
+     {
+      "name": "Andrew Moran",
+      "pos": "M"
+     },
+     {
+      "name": "Johnny Kenny",
+      "pos": "F"
+     },
+     {
+      "name": "Jusef Erabi",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-11-06T18:16:12+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   },
+   "away": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "4-2-3-1",
+    "starters": [
+     {
+      "name": "Daniel Peretz",
+      "pos": "G"
+     },
+     {
+      "name": "James Bree",
+      "pos": "D"
+     },
+     {
+      "name": "Jack Stephens",
+      "pos": "D"
+     },
+     {
+      "name": "Keven Schlotterbeck",
+      "pos": "D"
+     },
+     {
+      "name": "Ryan Manning",
+      "pos": "D"
+     },
+     {
+      "name": "James Ward-Prowse",
+      "pos": "M"
+     },
+     {
+      "name": "Flynn Downes",
+      "pos": "M"
+     },
+     {
+      "name": "Kuryu Matsuki",
+      "pos": "F"
+     },
+     {
+      "name": "Finn Azaz",
+      "pos": "M"
+     },
+     {
+      "name": "Samuel Edozie",
+      "pos": "F"
+     },
+     {
+      "name": "Divin Mubama",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-11-06T18:16:12+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Johnny Kenny",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836929",
+     "fetched_at": "2026-11-06T18:16:12+00:00"
+    },
+    {
+     "player": "Harry Clarke",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836929",
+     "fetched_at": "2026-11-06T18:16:12+00:00"
+    },
+    {
+     "player": "Liam Gibbs",
+     "type": "injury",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836929",
+     "fetched_at": "2026-11-06T18:16:12+00:00"
+    },
+    {
+     "player": "Alistair McCann",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836929",
+     "fetched_at": "2026-11-06T18:16:12+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "Cyle Larin",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836929",
+     "fetched_at": "2026-11-06T18:16:12+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 4,
+    "n21": 4,
+    "last_match": "2026-11-03"
+   },
+   "away": {
+    "rest_days": 4,
+    "n21": 4,
+    "last_match": "2026-11-03"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 330.7
+  },
+  "venue": {
+   "name": "Deepdale",
+   "city": "Preston",
+   "lat": 53.772181168,
+   "lon": -2.68843174
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 0.8,
+   "temp_c": 10.3,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=53.772&longitude=-2.688",
+   "fetched_at": "2026-11-06T18:16:12+00:00",
+   "lat": 53.772181168,
+   "lon": -2.68843174
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": 1.69,
+    "d_p_draw_pp": 0.19,
+    "d_p_away_pp": -1.88,
+    "d_xg_home": 0.122,
+    "d_xg_away": 0.059
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.011,
+    "away_rate_mult": 1.011,
+    "d_p_home_pp": -0.01,
+    "d_p_draw_pp": -0.18,
+    "d_p_away_pp": 0.19,
+    "d_xg_home": 0.011,
+    "d_xg_away": 0.02,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0227,
+    "away_rate_mult": 1.0096,
+    "d_p_home_pp": 0.27,
+    "d_p_draw_pp": -0.13,
+    "d_p_away_pp": -0.15,
+    "d_xg_home": 0.023,
+    "d_xg_away": 0.018,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": -0.0,
+    "d_p_draw_pp": -0.0,
+    "d_p_away_pp": -0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": -0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "reason": "failed validation; no live features"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": -0.0,
+   "d_p_draw_pp": -0.0,
+   "d_p_away_pp": -0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": -0.0
+  },
+  "features": {
+   "rest_h": 4.0,
+   "rest_a": 4.0,
+   "n21_h": 4.0,
+   "n21_a": 4.0,
+   "travel_km": 330.6650166893749,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 0.8,
+   "temp_c": 10.3
+  }
+ },
+ "confidence": {
+  "tier": "MODERATE",
+  "p_max": 0.5772931377911268,
+  "entropy_nats": 0.9714467991327389,
+  "text": "Most likely result has P = 57.7%. In the out-of-sample backtest, favourites priced 0.50\u20130.60 won 53.9% \u00b1 0.5% (n=9522, mean forecast 54.4%). Backtest RPS for E1: 0.2179; exact-score top-5 hit rate 51.6% (n=1800). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: MODERATE (entropy 0.971 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Preston: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Preston: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.",
+  "Southampton: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Southampton: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+ ],
+ "verdict": "Preston 1\u20131 Southampton is the single most probable scoreline at 11.3%: expected goals 1.02\u20131.92 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.046). Exact scores are inherently uncertain; the 1X2 split is 18.7%/23.5%/57.7%.",
+ "resolved": {
+  "home_key": "England:Preston",
+  "away_key": "England:Southampton",
+  "div": "E1",
+  "home_div": "E1",
+  "away_div": "E1",
+  "country": "England"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: Southampton FC at Preston North End FC\nCompetition: EFL Championship\nDate: 2026-11-07 10:00 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-11-06\n\nPRIMARY FINAL SCORE PREDICTION\n\nPreston North End FC 1 \u2013 1 Southampton FC\n(modal exact score, probability 11.3%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.02\nAway: 1.92\nExpected Total: 2.94\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 18.7%\nDraw: 23.5%\nAway Win: 57.7%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 11.3%\n2. 1\u20132: 10.1%\n3. 0\u20131: 9.7%\n4. 0\u20132: 9.7%\n5. 1\u20133: 6.5%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 20.1%\nTotal 2 goals: 23.5%\nTotal 3 goals: 22.4%\nTotal 4 goals: 16.8%\nTotal 5+ goals: 17.2%\n\nBoth Teams Score: 56.0%\nClean sheet Preston North End FC: 14.0% \u00b7 Clean sheet Southampton FC: 35.5%\n\nMATCH INTELLIGENCE\n\n1. Independent results-only Elo: Preston 1264 vs Southampton 1580 (gap -316 before home advantage).\n2. Southampton attack vs Preston defence: rate multiplier \u00d71.59 for the away side.\n3. Preston attack vs Southampton defence: time-weighted strength gap multiplies Preston's scoring rate by \u00d70.75 relative to an average pairing (from 40/39 decay-weighted matches).\n\nMODEL CONFIDENCE\n\nMost likely result has P = 57.7%. In the out-of-sample backtest, favourites priced 0.50\u20130.60 won 53.9% \u00b1 0.5% (n=9522, mean forecast 54.4%). Backtest RPS for E1: 0.2179; exact-score top-5 hit rate 51.6% (n=1800). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: MODERATE (entropy 0.971 nats of max 1.099).\nParameter-uncertainty 80% bands: xG Preston North End FC 0.79\u20131.28, xG Southampton FC 1.50\u20132.35; P(home win) 13.4%\u201327.5%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0002 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nPreston: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-11-06 13:16 EST (3-4-1-2)\n  Daniel Iversen (G), Odel Offiah (D), Jordan Storey (D), Andrew Hughes (D), Stanley Mills (M), L\u00e9o Leroy (M), Jordan Thompson (M), Andrija Vuk\u010devi\u0107 (M), Andrew Moran (M), Johnny Kenny (F), Jusef Erabi (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\nSouthampton: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-11-06 13:16 EST (4-2-3-1)\n  Daniel Peretz (G), James Bree (D), Jack Stephens (D), Keven Schlotterbeck (D), Ryan Manning (D), James Ward-Prowse (M), Flynn Downes (M), Kuryu Matsuki (F), Finn Azaz (M), Samuel Edozie (F), Divin Mubama (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nKEY ABSENCES\n\n- Preston: Johnny Kenny \u2014 injury, Doubtful [FotMob, 2026-11-06 13:16 EST]\n- Preston: Harry Clarke \u2014 injury, Late November 2026 [FotMob, 2026-11-06 13:16 EST]\n- Preston: Liam Gibbs \u2014 injury, Mid November 2026 [FotMob, 2026-11-06 13:16 EST]\n- Preston: Alistair McCann \u2014 injury, Doubtful [FotMob, 2026-11-06 13:16 EST]\n- Southampton: Cyle Larin \u2014 injury, Doubtful [FotMob, 2026-11-06 13:16 EST]\n\nWEATHER AT VENUE\n\nDeepdale, Preston: 10.3 \u00b0C, wind 0.8 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-11-06 13:16 EST]\n\nREST & TRAVEL\n\nPreston: 4 days' rest, 4 matches in previous 21 days \u00b7 Southampton: 4 days' rest, 4 in 21 days \u00b7 away travel 330.7 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 18.7% / 23.5% / 57.7%, xG 1.02\u20131.92\n- Understat xG component (validated, in ensemble): home +1.69 pp, draw +0.19 pp, away -1.88 pp; xG +0.122 / +0.059\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home -0.01 pp, draw -0.18 pp, away +0.19 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.27 pp, draw -0.13 pp, away -0.15 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home -0.00 pp, draw -0.00 pp, away -0.00 pp\n- lineup: not applied (failed validation; no live features)\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Preston: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Preston: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n- Southampton: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Southampton: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nFINAL VERDICT\n\nPreston 1\u20131 Southampton is the single most probable scoreline at 11.3%: expected goals 1.02\u20131.92 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.046). Exact scores are inherently uncertain; the 1X2 split is 18.7%/23.5%/57.7%.\n",
+ "frozen_at": "2026-11-06T18:16:12+00:00",
+ "sha256": "c74afbf9585521494fd60420e1efd75ad1103c375ee1db921ad62d113bc4aa3a"
+}

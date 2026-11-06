@@ -1,0 +1,586 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-11-06",
+ "input_fingerprint": "2041f3102bae828a2a87036744d059ae608def99029777ba85e1ed81e378bfc1",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-11-06T18:16:30+00:00",
+ "fixture": {
+  "event_id": "POLY-1253286",
+  "home_name": "New York Red Bulls",
+  "away_name": "Atlanta United FC",
+  "competition": "MLS 2025",
+  "subcategory": "mls",
+  "kickoff_utc": "2026-11-07T21:00:00+00:00",
+  "kickoff_local": "2026-11-07 16:00 EST",
+  "home_matched": "New York Red Bulls",
+  "away_matched": "Atlanta Utd",
+  "match_methods": {
+   "home": {
+    "source": "New York Red Bulls",
+    "matched": "New York Red Bulls",
+    "method": "exact",
+    "score": 1.0
+   },
+   "away": {
+    "source": "Atlanta United FC",
+    "matched": "Atlanta Utd",
+    "method": "fuzzy",
+    "score": 0.88
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.4826182425349591,
+  "p_draw": 0.2524504797691183,
+  "p_away": 0.2649312776959226,
+  "xg_home": 1.7573395090726713,
+  "xg_away": 1.2642152510273261,
+  "xg_total": 3.0215547600999972,
+  "median_total": 3,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.11883713305538245
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.11883713305538245
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.09761926696010081
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.08019554843117575
+   },
+   {
+    "home": 2,
+    "away": 0,
+    "p": 0.0739973295791045
+   },
+   {
+    "home": 1,
+    "away": 2,
+    "p": 0.06911498216402867
+   }
+  ],
+  "btts": 0.6111579740016448,
+  "totals_over": {
+   "over_0.5": 0.9494744578548333,
+   "over_1.5": 0.8132428668781527,
+   "over_2.5": 0.5832915180178747,
+   "over_3.5": 0.3584049548314891,
+   "over_4.5": 0.18508785383650653,
+   "over_5.5": 0.08349748177938279,
+   "over_6.5": 0.032449066878924175
+  },
+  "total_buckets": {
+   "0-1": 0.18675713312184739,
+   "2": 0.22995134886027796,
+   "3": 0.22488656318638559,
+   "4": 0.1733171009949826,
+   "5+": 0.18508785383650653
+  },
+  "clean_sheet_home": 0.274483197581075,
+  "clean_sheet_away": 0.16488437056244704,
+  "home_goal_dist": [
+   0.16488437056244704,
+   0.3077181159213953,
+   0.2722578819258832,
+   0.15704140043564632,
+   0.06711484680171781,
+   0.022728954250142482,
+   0.006360083628340996,
+   0.0018943464744268607
+  ],
+  "away_goal_dist": [
+   0.274483197581075,
+   0.36474957548744086,
+   0.22994172465641663,
+   0.09402962329976844,
+   0.028398026988997405,
+   0.006792170749335252,
+   0.0013423232220467734,
+   0.0002633580149197517
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    3
+   ],
+   "away_goals_80": [
+    0,
+    3
+   ],
+   "total_goals_80": [
+    1,
+    5
+   ],
+   "goal_diff_80": [
+    -2,
+    3
+   ]
+  },
+  "score_grid": [
+   [
+    0.050526,
+    0.056036,
+    0.037117,
+    0.015232,
+    0.004611,
+    0.001103,
+    0.000217
+   ],
+   [
+    0.080196,
+    0.118837,
+    0.069115,
+    0.028408,
+    0.008613,
+    0.002063,
+    0.000408
+   ],
+   [
+    0.073997,
+    0.097619,
+    0.065215,
+    0.025418,
+    0.007718,
+    0.001851,
+    0.000366
+   ],
+   [
+    0.04292,
+    0.056709,
+    0.035925,
+    0.015645,
+    0.004505,
+    0.001082,
+    0.000214
+   ],
+   [
+    0.018374,
+    0.024315,
+    0.015427,
+    0.006371,
+    0.00205,
+    0.000467,
+    9.3e-05
+   ],
+   [
+    0.006218,
+    0.008241,
+    0.005237,
+    0.002166,
+    0.000661,
+    0.000168,
+    3.2e-05
+   ],
+   [
+    0.001737,
+    0.002306,
+    0.001468,
+    0.000608,
+    0.000186,
+    4.5e-05,
+    9e-06
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.483925,
+  "p_draw": 0.25127,
+  "p_away": 0.264805,
+  "se": [
+   0.0011174560268194002,
+   0.0009698798562193155,
+   0.0009866187510254405
+  ],
+  "max_abs_dev_vs_exact": 0.0013067574650408864,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   1.3795203372791913,
+   2.1671201180081723
+  ],
+  "xg_away_80": [
+   0.968859278332774,
+   1.5785946919018228
+  ],
+  "p_home_80": [
+   0.37907633299903604,
+   0.5950727684194906
+  ],
+  "p_draw_80": [
+   0.21170952729422898,
+   0.2725697628925485
+  ],
+  "p_away_80": [
+   0.1869302021882265,
+   0.3619806663139133
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.1790698023297105,
+   0.18116958058360716
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.4736218707694749,
+   "p_draw": 0.25309284103336205,
+   "p_away": 0.2732852881971631,
+   "xg_home": 1.6562785538721232,
+   "xg_away": 1.2065716499151047,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.49440985897009126,
+   "p_draw": 0.23052501442759382,
+   "p_away": 0.2750651266023151,
+   "xg_home": 1.8039690759109959,
+   "xg_away": 1.293051695819278,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.4533222338190608,
+   "p_draw": 0.26211956679490117,
+   "p_away": 0.284558199386038,
+   "xg_home": 1.5875382897201225,
+   "xg_away": 1.213269588521095,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.462428484638321,
+   "p_draw": 0.23331175157976228,
+   "p_away": 0.30425976378191666,
+   "xg_home": 1.7456758293582104,
+   "xg_away": 1.3776267059018639,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.47372250413931233,
+   "p_draw": 0.25294521419839855,
+   "p_away": 0.27333228166228896,
+   "xg_home": 1.6565035112855822,
+   "xg_away": 1.2066527569029633,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Home advantage (USA, fitted from results): \u00d71.27 on New York Red Bulls's scoring rate.",
+   "effect": 0.2413
+  },
+  {
+   "text": "New York Red Bulls attack vs Atlanta Utd defence: time-weighted strength gap multiplies New York Red Bulls's scoring rate by \u00d71.08 relative to an average pairing (from 35/35 decay-weighted matches).",
+   "effect": 0.0761
+  },
+  {
+   "text": "Independent results-only Elo: New York Red Bulls 1435 vs Atlanta Utd 1401 (gap +34 before home advantage).",
+   "effect": 0.0509
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.4826182425349591,
+  "p_draw": 0.2524504797691183,
+  "p_away": 0.2649312776959226,
+  "xg_home": 1.7573395090726713,
+  "xg_away": 1.2642152510273261
+ },
+ "context": {
+  "fetched_at": "2026-11-06T18:16:30+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5071490",
+    "fetched_at": "2026-11-06T18:16:31+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "4-3-3",
+    "starters": [
+     {
+      "name": "Ethan Horvath",
+      "pos": "G"
+     },
+     {
+      "name": "Jahkeele Marshall-Rutty",
+      "pos": "D"
+     },
+     {
+      "name": "Tim Parker",
+      "pos": "D"
+     },
+     {
+      "name": "Juli\u00e1n Baz\u00e1n",
+      "pos": "D"
+     },
+     {
+      "name": "Devin Padelford",
+      "pos": "D"
+     },
+     {
+      "name": "Adri Mehmeti",
+      "pos": "M"
+     },
+     {
+      "name": "Sekou Kone",
+      "pos": "M"
+     },
+     {
+      "name": "Jorge Ruvalcaba",
+      "pos": "F"
+     },
+     {
+      "name": "Cade Cowell",
+      "pos": "F"
+     },
+     {
+      "name": "Julian Hall",
+      "pos": "F"
+     },
+     {
+      "name": "Cameron Harper",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-11-06T18:16:31+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   },
+   "away": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "4-3-3",
+    "starters": [
+     {
+      "name": "Lucas Hoyos",
+      "pos": "G"
+     },
+     {
+      "name": "Tom\u00e1s Jacob",
+      "pos": "D"
+     },
+     {
+      "name": "Paulo D\u00edaz",
+      "pos": "D"
+     },
+     {
+      "name": "J\u00fanior Alonso",
+      "pos": "D"
+     },
+     {
+      "name": "El\u00edas B\u00e1ez",
+      "pos": "D"
+     },
+     {
+      "name": "Cooper Sanchez",
+      "pos": "M"
+     },
+     {
+      "name": "Mauricio Amaro",
+      "pos": "M"
+     },
+     {
+      "name": "Giuliano Galoppo",
+      "pos": "M"
+     },
+     {
+      "name": "Aleksey Miranchuk",
+      "pos": "F"
+     },
+     {
+      "name": "Breel Embolo",
+      "pos": "F"
+     },
+     {
+      "name": "Miguel Almir\u00f3n",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-11-06T18:16:31+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Justin Che",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5071490",
+     "fetched_at": "2026-11-06T18:16:31+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "Enea Mihaj",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5071490",
+     "fetched_at": "2026-11-06T18:16:31+00:00"
+    },
+    {
+     "player": "Will Reilly",
+     "type": "injury",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5071490",
+     "fetched_at": "2026-11-06T18:16:31+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 6,
+    "n21": 4,
+    "last_match": "2026-11-01"
+   },
+   "away": {
+    "rest_days": 6,
+    "n21": 4,
+    "last_match": "2026-11-01"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": null
+  },
+  "venue": {
+   "name": "Sports Illustrated Stadium",
+   "city": "Harrison, New Jersey",
+   "lat": 40.736876521,
+   "lon": -74.150225111
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 3.29,
+   "temp_c": 11.7,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=40.737&longitude=-74.15",
+   "fetched_at": "2026-11-06T18:16:31+00:00",
+   "lat": 40.736876521,
+   "lon": -74.150225111
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": -0.99,
+    "d_p_draw_pp": 1.07,
+    "d_p_away_pp": -0.08,
+    "d_xg_home": -0.071,
+    "d_xg_away": -0.042
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "reason": "failed validation; no live features"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 6.0,
+   "rest_a": 6.0,
+   "n21_h": 4.0,
+   "n21_a": 4.0,
+   "travel_km": null,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 3.29,
+   "temp_c": 11.7
+  }
+ },
+ "confidence": {
+  "tier": "LOW",
+  "p_max": 0.4826182425349591,
+  "entropy_nats": 1.0510139625485302,
+  "text": "Most likely result has P = 48.3%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.3% \u00b1 0.4% (n=16754, mean forecast 44.6%). Backtest RPS for USA: 0.2201; exact-score top-5 hit rate 42.9% (n=1770). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: LOW (entropy 1.051 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "New York Red Bulls: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "New York Red Bulls: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.",
+  "Atlanta Utd: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Atlanta Utd: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+ ],
+ "verdict": "New York Red Bulls 1\u20131 Atlanta Utd is the single most probable scoreline at 11.9%: expected goals 1.76\u20131.26 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.046). Exact scores are inherently uncertain; the 1X2 split is 48.3%/25.2%/26.5%.",
+ "resolved": {
+  "home_key": "USA:New York Red Bulls",
+  "away_key": "USA:Atlanta Utd",
+  "div": "USA",
+  "home_div": "USA",
+  "away_div": "USA",
+  "country": "USA"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: Atlanta United FC at New York Red Bulls\nCompetition: MLS 2025\nDate: 2026-11-07 16:00 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-11-06\n\nPRIMARY FINAL SCORE PREDICTION\n\nNew York Red Bulls 1 \u2013 1 Atlanta United FC\n(modal exact score, probability 11.9%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.76\nAway: 1.26\nExpected Total: 3.02\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 48.3%\nDraw: 25.2%\nAway Win: 26.5%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 11.9%\n2. 2\u20131: 9.8%\n3. 1\u20130: 8.0%\n4. 2\u20130: 7.4%\n5. 1\u20132: 6.9%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 18.7%\nTotal 2 goals: 23.0%\nTotal 3 goals: 22.5%\nTotal 4 goals: 17.3%\nTotal 5+ goals: 18.5%\n\nBoth Teams Score: 61.1%\nClean sheet New York Red Bulls: 27.4% \u00b7 Clean sheet Atlanta United FC: 16.5%\n\nMATCH INTELLIGENCE\n\n1. Home advantage (USA, fitted from results): \u00d71.27 on New York Red Bulls's scoring rate.\n2. New York Red Bulls attack vs Atlanta Utd defence: time-weighted strength gap multiplies New York Red Bulls's scoring rate by \u00d71.08 relative to an average pairing (from 35/35 decay-weighted matches).\n3. Independent results-only Elo: New York Red Bulls 1435 vs Atlanta Utd 1401 (gap +34 before home advantage).\n\nMODEL CONFIDENCE\n\nMost likely result has P = 48.3%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.3% \u00b1 0.4% (n=16754, mean forecast 44.6%). Backtest RPS for USA: 0.2201; exact-score top-5 hit rate 42.9% (n=1770). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: LOW (entropy 1.051 nats of max 1.099).\nParameter-uncertainty 80% bands: xG New York Red Bulls 1.38\u20132.17, xG Atlanta United FC 0.97\u20131.58; P(home win) 37.9%\u201359.5%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0013 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nNew York Red Bulls: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-11-06 13:16 EST (4-3-3)\n  Ethan Horvath (G), Jahkeele Marshall-Rutty (D), Tim Parker (D), Juli\u00e1n Baz\u00e1n (D), Devin Padelford (D), Adri Mehmeti (M), Sekou Kone (M), Jorge Ruvalcaba (F), Cade Cowell (F), Julian Hall (F), Cameron Harper (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\nAtlanta Utd: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-11-06 13:16 EST (4-3-3)\n  Lucas Hoyos (G), Tom\u00e1s Jacob (D), Paulo D\u00edaz (D), J\u00fanior Alonso (D), El\u00edas B\u00e1ez (D), Cooper Sanchez (M), Mauricio Amaro (M), Giuliano Galoppo (M), Aleksey Miranchuk (F), Breel Embolo (F), Miguel Almir\u00f3n (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nKEY ABSENCES\n\n- New York Red Bulls: Justin Che \u2014 injury, Late November 2026 [FotMob, 2026-11-06 13:16 EST]\n- Atlanta Utd: Enea Mihaj \u2014 injury, Late November 2026 [FotMob, 2026-11-06 13:16 EST]\n- Atlanta Utd: Will Reilly \u2014 injury, Mid November 2026 [FotMob, 2026-11-06 13:16 EST]\n\nWEATHER AT VENUE\n\nSports Illustrated Stadium, Harrison, New Jersey: 11.7 \u00b0C, wind 3.3 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-11-06 13:16 EST]\n\nREST & TRAVEL\n\nNew York Red Bulls: 6 days' rest, 4 matches in previous 21 days \u00b7 Atlanta Utd: 6 days' rest, 4 in 21 days \u00b7 away travel None km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 48.3% / 25.2% / 26.5%, xG 1.76\u20131.26\n- Understat xG component (validated, in ensemble): home -0.99 pp, draw +1.07 pp, away -0.08 pp; xG -0.071 / -0.042\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- lineup: not applied (failed validation; no live features)\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- New York Red Bulls: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- New York Red Bulls: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n- Atlanta Utd: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Atlanta Utd: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nFINAL VERDICT\n\nNew York Red Bulls 1\u20131 Atlanta Utd is the single most probable scoreline at 11.9%: expected goals 1.76\u20131.26 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.046). Exact scores are inherently uncertain; the 1X2 split is 48.3%/25.2%/26.5%.\n",
+ "frozen_at": "2026-11-06T18:16:31+00:00",
+ "sha256": "64f28632abd44a7471cca758f55b69f7ac1944affc1e9009a43cdd5013c8fe25"
+}
