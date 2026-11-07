@@ -1,3 +1,4 @@
+import BB from '../../web/bestbet.js';
 // Encrypt short-lived interaction credentials before putting them in public workflow inputs.
 export async function dispatchModel(env, interaction, date, workflow, repo) {
   const app = env.DISCORD_APPLICATION_ID || interaction.application_id;
@@ -260,11 +261,13 @@ export function buildEmbeds(scan, site, opts = {}) {
     const kickoff = Date.parse(r.kickoff_utc);
     const priced = Date.parse(r.g.priced_at || scan.fetchedAt);
     const started = Number.isFinite(kickoff) && kickoff <= now;
-    const reason = !Number.isFinite(kickoff) || started
+    const consistent = b => b && BB.scoreSupports(b.outcome || {}, r.sim?.modal_score);
+    const reason = r.g.bet && !consistent(r.g.bet) ? "bet does not win at displayed predicted score"
+      : !Number.isFinite(kickoff) || started
       ? "kickoff passed or unavailable — no new pregame bet"
       : !Number.isFinite(priced) || priced > now || now - priced > 300000
         ? "quote unavailable or older than five minutes — refresh prices" : null;
-    return { ...r, g: { ...r.g, started, ...(reason
+    return { ...r, g: { ...r.g, started, alternatives: (r.g.alternatives || []).filter(consistent), closest: consistent(r.g.closest) ? r.g.closest : null, ...(reason
       ? { verdict: "NO BET", bet: null, closest: null, alternatives: [], reason } : {}) } };
   });
   const games = rows.map((r) => r.g).filter(Boolean);

@@ -96,10 +96,10 @@ def test_model_probabilities_and_complements():
 def test_eligibility_and_choice():
     H, A, ev = _ev()
     g = _grid()
-    res = BB.best_bet(BB.selections_from_event(ev, H, A), g)
-    rows = BB.evaluate(BB.selections_from_event(ev, H, A), g)
+    res = BB.best_bet(BB.selections_from_event(ev, H, A), g, {"modal_score": {"home": 1, "away": 0}})
+    rows = BB.evaluate(BB.selections_from_event(ev, H, A), g, {"modal_score": {"home": 1, "away": 0}})
     for r in rows:
-        assert r["eligible"] == (not r["thin_book"] and r["model_p"] > 0.5 and r["ev_per_dollar"] > 0)
+        assert r["eligible"] == (r["score_consistent"] and not r["thin_book"] and r["model_p"] > 0.5 and r["ev_per_dollar"] > 0)
     elig = [r for r in rows if r["eligible"]]
     assert res["verdict"] == "BET" and res["n_eligible"] == len(elig)
     assert math.isclose(res["bet"]["ev_per_dollar"], max(r["ev_per_dollar"] for r in elig), abs_tol=1e-5)
@@ -112,7 +112,7 @@ def test_no_bet_when_nothing_qualifies():
     for m in ev["markets"]:  # price every side far above any model probability
         has_no = m["pricing"]["buyNoPriceUsd"]
         m["pricing"] = _pr(.995, .99, .995 if has_no else 0, .99 if has_no else 0)
-    res = BB.best_bet(BB.selections_from_event(ev, H, A), _grid())
+    res = BB.best_bet(BB.selections_from_event(ev, H, A), _grid(), {"modal_score": {"home": 1, "away": 0}})
     assert res["verdict"] == "NO BET" and "bet" not in res and res["closest"]["ev_per_dollar"] <= 0
 
 
@@ -120,7 +120,7 @@ def test_no_bet_when_nothing_qualifies():
 def test_js_mirror_matches_python():
     H, A, ev = _ev()
     g = _grid(1.3, 1.2, 7)
-    sim = {"p_home": 0.41, "p_draw": 0.27, "p_away": 0.32, "btts": 0.52, "totals_over": {"over_2.5": 0.49}}
+    sim = {"modal_score": {"home": 1, "away": 0}, "p_home": 0.41, "p_draw": 0.27, "p_away": 0.32, "btts": 0.52, "totals_over": {"over_2.5": 0.49}}
     py = BB.best_bet(BB.selections_from_event(ev, H, A), g, sim)
     js = json.loads(subprocess.check_output(["node", "-e", (
         "const B=require(process.argv[1]);const [ev,g,sim,h,a]=JSON.parse(process.argv[2]);"
@@ -140,7 +140,7 @@ def test_js_mirror_matches_python():
 def _fc(eid, frozen_at, kickoff):
     return {"status": "ok", "frozen_at": frozen_at, "model_version": "t", "fixture": {
         "event_id": eid, "home_name": "Home FC", "away_name": "Away FC", "competition": "X", "kickoff_utc": kickoff},
-        "simulation": {"p_home": .5, "p_draw": .25, "p_away": .25, "btts": .5, "totals_over": {"over_2.5": .5},
+        "simulation": {"modal_score": {"home": 1, "away": 0}, "p_home": .5, "p_draw": .25, "p_away": .25, "btts": .5, "totals_over": {"over_2.5": .5},
                        "top_scores": [], "score_grid": _grid(1.6, 1.0, 7)}}
 
 
@@ -177,7 +177,7 @@ def test_match_result_must_clear_probability_and_break_even_in_both_components()
     offer = {"outcome": {"kind": "1x2", "res": "A", "neg": True}, "ask": .18,
              "bid": .17, "provider": "polymarket", "label": "Home or draw",
              "market_id": "POLY-1", "market_type": "moneyline", "side": "NO", "volume": 100, "regulation_only": True}
-    blend = {"p_away": .468749}
+    blend = {"modal_score": {"home": 1, "away": 0}, "p_away": .468749}
     components = {"elo": {"weight": .44, "p_away": .34168},
                   "xg_dc": {"weight": .51, "p_away": .5728}}
     assert BB.best_bet([offer], _grid(), blend)["verdict"] == "BET"
@@ -245,7 +245,7 @@ def test_component_range_and_conservative_ev_match_javascript():
     home, away, event = _ev()
     selections = BB.selections_from_event(event, home, away)
     grid = _grid()
-    sim = {"p_home": .70, "p_draw": .15, "p_away": .15}
+    sim = {"modal_score": {"home": 1, "away": 0}, "p_home": .70, "p_draw": .15, "p_away": .15}
     components = {"elo": {"weight": .44, "p_home": .65, "p_draw": .15, "p_away": .20},
                   "xg": {"weight": .51, "p_home": .72, "p_draw": .13, "p_away": .15}}
     py = BB.best_bet(selections, grid, sim, components=components)
