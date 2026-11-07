@@ -48,11 +48,14 @@ def context_stage(forecast: dict) -> str:
     return f"{stage}-{h}"
 
 
-def freeze(date: str, event_id: str, version: str, forecast: dict) -> tuple[dict, bool]:
+def freeze(date: str, event_id: str, version: str, forecast: dict, *, refresh_id: str | None = None) -> tuple[dict, bool]:
     """Write once per (event, model version, context stage). Returns (stored_forecast, newly_written)."""
     assert_no_price_keys(forecast, "frozen forecast")
     if forecast.get("context") is not None or forecast.get("input_fingerprint"):
         version = f"{version}__{context_stage(forecast)}"
+    if refresh_id:
+        version = f"{version}__run-{_safe(refresh_id)}"
+        forecast = {**forecast, "refresh_id": refresh_id}
     p = path_for(date, event_id, version)
     # A fit/context lookup can cross kickoff. Never publish a new snapshot afterwards.
     kickoff = (forecast.get("fixture") or {}).get("kickoff_utc")
