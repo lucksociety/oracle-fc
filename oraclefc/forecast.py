@@ -345,6 +345,8 @@ def forecast_date(date: str, engine: Engine | None = None, freeze: bool = True, 
     from .fixtures.jupiter import fixtures_for_date
 
     from requests import RequestException
+    from uuid import uuid4
+    refresh_id = uuid4().hex if not use_cache else None
 
     saved_for_date = [record for record in frozen.load_date(date)
                       if str(record["fixture"].get("event_id") or "").startswith("POLY-")]
@@ -382,7 +384,7 @@ def forecast_date(date: str, engine: Engine | None = None, freeze: bool = True, 
         fc = engine.forecast(f.home_name, f.away_name, f.competition, f.subcategory, f.kickoff_utc, f.event_id)
         if freeze and fc["status"] == "ok":
             try:
-                fc, _ = frozen.freeze(date, f.event_id, fc["model_version"], fc)
+                fc, _ = frozen.freeze(date, f.event_id, fc["model_version"], fc, refresh_id=refresh_id)
             except frozen.KickoffPassed:
                 fc = existing[-1] if existing else {"status": "not_forecast_before_kickoff", "fixture": f.to_dict(),
                     "data_quality": ["Fit finished after kickoff; no new forecast was published."]}

@@ -16,6 +16,7 @@ jobs:
     timeout-minutes: 12
     env:
       DATE: ${{ inputs.date }}
+      LIVE_REFRESH: "1"
       JUPITER_API_KEY: ${{ secrets.JUPITER_API_KEY }}
     steps:
       - uses: actions/checkout@v4

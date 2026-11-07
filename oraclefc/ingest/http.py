@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import json
+import os
 import random
 import time
 from pathlib import Path
@@ -18,7 +19,9 @@ def get_json(url: str, cache: Path | None = None, max_age_h: float | None = None
              retries: int = 4, timeout: float = 30.0, params: dict | None = None, deadline: float | None = None):
     """GET JSON with retries/backoff. If ``cache`` is given and fresh (or max_age_h is None and it
     exists), return the cached body. Returns None on persistent failure (never fabricates)."""
-    if cache is not None and cache.exists():
+    live_context = (os.getenv("LIVE_REFRESH") == "1" and max_age_h is not None and max_age_h <= 1
+                    and cache is not None and any(x in cache.parts for x in ("fotmob", "fpl", "weather_live")))
+    if cache is not None and cache.exists() and not live_context:
         age_h = (time.time() - cache.stat().st_mtime) / 3600
         if max_age_h is None or age_h <= max_age_h:
             try:
@@ -32,7 +35,8 @@ def get_json(url: str, cache: Path | None = None, max_age_h: float | None = None
             break
         request_timeout = timeout if remaining is None else max(0.001, min(timeout, remaining))
         try:
-            r = _S.get(url, headers=headers, timeout=request_timeout, params=params)
+            request_headers = {**(headers or {}), **({"Cache-Control": "no-cache"} if live_context else {})}
+            r = _S.get(url, headers=request_headers, timeout=request_timeout, params=params)
             if r.status_code == 200:
                 data = r.json()
                 if cache is not None:
