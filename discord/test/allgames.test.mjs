@@ -13,7 +13,7 @@ try {
     }));
     // Edge and date exports may legitimately contain different sets of fixture IDs.
     const games = [{event_id:'edge-only',home:'Extra Home',away:'Extra Away',competition:'Test',kickoff_utc:`${date}T21:00:00Z`,verdict:'NO BET'}];
-    if(count>1) games.push({event_id:'f1',home:'Home 1',away:'Away 1',competition:'Test',priced_at:'1970-01-01T00:00:00Z',verdict:'BET',bet:{label:'Home',side:'yes',ask:.4,model_p:.5,ev_per_dollar:.2}});
+    if(count>1) games.push({event_id:'f1',home:'Home 1',away:'Away 1',competition:'Test',priced_at:'1970-01-01T00:00:00Z',verdict:'BET',bet:{outcome:{kind:'1x2',res:'H'},label:'Home',side:'yes',ask:.4,model_p:.5,ev_per_dollar:.2}});
     globalThis.fetch = async url => ({ok:true,json:async()=>String(url).includes('/edge/') ? {best_bets:{games}} : String(url).includes('/dates/') ? {n_fixtures:count,forecasts} : null});
     const scan = await loadScan(site,date);
     const rows = allGames(scan);

@@ -82,13 +82,31 @@
     }
     return spec.neg ? 1 - p : p;
   }
+  function scoreSupports(spec, score) {
+    const h=score?.home,a=score?.away;
+    if (![h,a].every(x=>Number.isInteger(x)&&x>=0)) return false;
+    let win;
+    switch(spec.kind) {
+      case '1x2': win={H:h>a,D:h===a,A:a>h}[spec.res]; break;
+      case 'btts': win=h>0&&a>0; break;
+      case 'total': case 'team_total': {
+        const v=spec.kind==='total'?h+a:spec.team==='home'?h:a;
+        if(v===spec.line)return false; win=spec.over?v>spec.line:v<spec.line; break;
+      }
+      case 'spread': {const d=(spec.team==='home'?h-a:a-h)+spec.hcp;if(d===0)return false;win=d>0;break;}
+      case 'exact': win=h===spec.h&&a===spec.a;break;
+      default:return false;
+    }
+    return typeof win==='boolean' && (spec.neg?!win:win);
+  }
   function evaluate(sels, grid, sim) {
     return sels.map((s) => {
       const p = modelProb(s.outcome, grid, sim), fee = feePerContract(s.ask, s.provider), ev = p / (s.ask + fee) - 1;
       const thin = !(Number.isFinite(s.bid) && s.bid > 0 && s.bid <= s.ask && s.ask - s.bid <= .10 + 1e-9);
       const liquid = Number.isFinite(s.volume) && s.volume > 0;
-      return { ...s, model_p: p, fee_per_contract: fee, cost_per_contract: s.ask + fee, ev_per_dollar: ev, edge_pp: 100 * (p - s.ask),
-        quote_valid: !thin && liquid && s.regulation_only === true, thin_book: thin, fee_assumed: !((s.provider || "") in FEES), eligible: !thin && liquid && s.regulation_only === true && p > MIN_P && ev > MIN_EV };
+      const consistent=scoreSupports(s.outcome,sim?.modal_score);
+      return { ...s, score_consistent: consistent, model_p: p, fee_per_contract: fee, cost_per_contract: s.ask + fee, ev_per_dollar: ev, edge_pp: 100 * (p - s.ask),
+        quote_valid: !thin && liquid && s.regulation_only === true, thin_book: thin, fee_assumed: !((s.provider || "") in FEES), eligible: consistent && !thin && liquid && s.regulation_only === true && p > MIN_P && ev > MIN_EV };
     });
   }
   function bestBet(sels, grid, sim, components) {
@@ -106,13 +124,13 @@
     const out = { n_priced: rows.length, n_eligible: elig.length };
     if (!elig.length) {
       out.verdict = "NO BET";
-      const c = rows.filter((r) => r.quote_valid && r.model_p > MIN_P && (!Number.isFinite(r.component_min_p) || r.component_min_p > Math.max(MIN_P, r.cost_per_contract))).sort((a, b) => b.ev_per_dollar - a.ev_per_dollar)[0];
+      const c = rows.filter((r) => r.quote_valid && r.score_consistent && r.model_p > MIN_P && (!Number.isFinite(r.component_min_p) || r.component_min_p > Math.max(MIN_P, r.cost_per_contract))).sort((a, b) => b.ev_per_dollar - a.ev_per_dollar)[0];
       if (c) out.closest = c;
       return out;
     }
     out.verdict = "BET"; out.bet = elig[0]; out.alternatives = elig.slice(1, 3);
     return out;
   }
-  const api = { FEES, MIN_P, feePerContract, selectionsFromEvent, modelProb, evaluate, bestBet };
+  const api = { FEES, MIN_P, feePerContract, selectionsFromEvent, modelProb, scoreSupports, evaluate, bestBet };
   if (typeof module !== "undefined" && module.exports) module.exports = api; else root.BestBet = api;
 })(typeof window !== "undefined" ? window : globalThis);
