@@ -1,0 +1,653 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-11-06",
+ "input_fingerprint": "2041f3102bae828a2a87036744d059ae608def99029777ba85e1ed81e378bfc1",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-11-07T17:10:05+00:00",
+ "fixture": {
+  "event_id": "POLY-1250946",
+  "home_name": "CA Osasuna",
+  "away_name": "Athletic Club",
+  "competition": "La Liga 2025",
+  "subcategory": "lal",
+  "kickoff_utc": "2026-11-07T17:30:00+00:00",
+  "kickoff_local": "2026-11-07 12:30 EST",
+  "home_matched": "Osasuna",
+  "away_matched": "Ath Bilbao",
+  "match_methods": {
+   "home": {
+    "source": "CA Osasuna",
+    "matched": "Osasuna",
+    "method": "core-tokens",
+    "score": 0.97
+   },
+   "away": {
+    "source": "Athletic Club",
+    "matched": "Ath Bilbao",
+    "method": "alias",
+    "score": 1.0
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.36105785684932723,
+  "p_draw": 0.28509255388342974,
+  "p_away": 0.35384958926724286,
+  "xg_home": 1.2966213084581253,
+  "xg_away": 1.2814389173082166,
+  "xg_total": 2.578060225766342,
+  "median_total": 2,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.13915783730475617
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.13915783730475617
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.09221855993072853
+   },
+   {
+    "home": 0,
+    "away": 1,
+    "p": 0.09109738413145475
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.08354679424733791
+   },
+   {
+    "home": 1,
+    "away": 2,
+    "p": 0.08253100777805786
+   }
+  ],
+  "btts": 0.5430654326350306,
+  "totals_over": {
+   "over_0.5": 0.9219165907201796,
+   "over_1.5": 0.7386006466579963,
+   "over_2.5": 0.47655217716884773,
+   "over_3.5": 0.25874927077366194,
+   "over_4.5": 0.11603849368623186,
+   "over_5.5": 0.045195111568305565,
+   "over_6.5": 0.015015243132760729
+  },
+  "total_buckets": {
+   "0-1": 0.2613993533420036,
+   "2": 0.26204846948914856,
+   "3": 0.21780290639518574,
+   "4": 0.14271077708743016,
+   "5+": 0.11603849368623186
+  },
+  "clean_sheet_home": 0.26956571417862984,
+  "clean_sheet_away": 0.26545226246615966,
+  "home_goal_dist": [
+   0.26545226246615966,
+   0.36226156206799465,
+   0.23399364684202856,
+   0.09835272798733669,
+   0.030580679166678497,
+   0.007523450183629175,
+   0.0015270913146970232,
+   0.0003085799714755005
+  ],
+  "away_goal_dist": [
+   0.26956571417862984,
+   0.3636122888944913,
+   0.23204913953990802,
+   0.09631538163406818,
+   0.029559806183245316,
+   0.007175594782151546,
+   0.0014365718229420212,
+   0.0002855029645635659
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    3
+   ],
+   "away_goals_80": [
+    0,
+    3
+   ],
+   "total_goals_80": [
+    1,
+    5
+   ],
+   "goal_diff_80": [
+    -2,
+    2
+   ]
+  },
+  "score_grid": [
+   [
+    0.078083,
+    0.091097,
+    0.060704,
+    0.025388,
+    0.007822,
+    0.001901,
+    0.000381
+   ],
+   [
+    0.092219,
+    0.139158,
+    0.082531,
+    0.034515,
+    0.010634,
+    0.002585,
+    0.000518
+   ],
+   [
+    0.062186,
+    0.083547,
+    0.056771,
+    0.022478,
+    0.006925,
+    0.001683,
+    0.000337
+   ],
+   [
+    0.026337,
+    0.035383,
+    0.022762,
+    0.010054,
+    0.002932,
+    0.000713,
+    0.000143
+   ],
+   [
+    0.00822,
+    0.011043,
+    0.007104,
+    0.002971,
+    0.000967,
+    0.000222,
+    4.5e-05
+   ],
+   [
+    0.002025,
+    0.00272,
+    0.00175,
+    0.000732,
+    0.000225,
+    5.8e-05,
+    1.1e-05
+   ],
+   [
+    0.000411,
+    0.000552,
+    0.000355,
+    0.000149,
+    4.6e-05,
+    1.1e-05,
+    2e-06
+   ]
+  ],
+  "mass_check": 0.9999999999999999
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.36156,
+  "p_draw": 0.284975,
+  "p_away": 0.35346500000000003,
+  "se": [
+   0.001074323895294152,
+   0.0010093667553842855,
+   0.001068942219614793
+  ],
+  "max_abs_dev_vs_exact": 0.0005021431506727625,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   0.9888168653776648,
+   1.633489004309558
+  ],
+  "xg_away_80": [
+   0.97050409293791,
+   1.6138691748567455
+  ],
+  "p_home_80": [
+   0.2699425118817527,
+   0.4708048172266665
+  ],
+  "p_draw_80": [
+   0.24403691558201238,
+   0.3058545001904672
+  ],
+  "p_away_80": [
+   0.2580688393994001,
+   0.4570689221859603
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.19901253846354774,
+   0.18874161809728057
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.35428352531370333,
+   "p_draw": 0.2836887572528609,
+   "p_away": 0.3620277174334357,
+   "xg_home": 1.2277590448597842,
+   "xg_away": 1.2439269963656678,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.36326524732643733,
+   "p_draw": 0.268265124871224,
+   "p_away": 0.3684696278023388,
+   "xg_home": 1.258647099014926,
+   "xg_away": 1.2696195856339088,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.38596349277474595,
+   "p_draw": 0.2782567033373872,
+   "p_away": 0.3357798038878668,
+   "xg_home": 1.3581453714691019,
+   "xg_away": 1.2508318207907076,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.45832357832055165,
+   "p_draw": 0.2516149275704656,
+   "p_away": 0.29006149410898274,
+   "xg_home": 1.5485946692671546,
+   "xg_away": 1.1797597976523542,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.369234058041939,
+   "p_draw": 0.27771705444521144,
+   "p_away": 0.3530488875128497,
+   "xg_home": 1.2974348036431715,
+   "xg_away": 1.263120923850985,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Home advantage (Spain, fitted from results): \u00d71.32 on Osasuna's scoring rate.",
+   "effect": 0.2739
+  },
+  {
+   "text": "Osasuna attack vs Ath Bilbao defence: time-weighted strength gap multiplies Osasuna's scoring rate by \u00d70.77 relative to an average pairing (from 33/35 decay-weighted matches).",
+   "effect": 0.256
+  },
+  {
+   "text": "Independent results-only Elo: Osasuna 1505 vs Ath Bilbao 1597 (gap -91 before home advantage).",
+   "effect": 0.1371
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.3610578568493273,
+  "p_draw": 0.2850925538834298,
+  "p_away": 0.35384958926724286,
+  "xg_home": 1.296621308458126,
+  "xg_away": 1.2814389173082166
+ },
+ "context": {
+  "fetched_at": "2026-11-07T17:10:05+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5868126",
+    "fetched_at": "2026-11-07T17:10:05+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "confirmed",
+    "source": "FotMob official team sheet",
+    "formation": "4-2-3-1",
+    "starters": [
+     {
+      "name": "Aitor Fern\u00e1ndez",
+      "pos": "G"
+     },
+     {
+      "name": "Valentin Rosier",
+      "pos": "D"
+     },
+     {
+      "name": "Alejandro Catena",
+      "pos": "D"
+     },
+     {
+      "name": "Flavien Boyomo",
+      "pos": "D"
+     },
+     {
+      "name": "Abel Bretones",
+      "pos": "D"
+     },
+     {
+      "name": "Lucas Torr\u00f3",
+      "pos": "M"
+     },
+     {
+      "name": "Jon Moncayola",
+      "pos": "M"
+     },
+     {
+      "name": "Rub\u00e9n Garcia",
+      "pos": "F"
+     },
+     {
+      "name": "Moi G\u00f3mez",
+      "pos": "M"
+     },
+     {
+      "name": "Ra\u00fal Moro",
+      "pos": "F"
+     },
+     {
+      "name": "Ante Budimir",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-11-07T17:10:05+00:00",
+    "n_configurations": 1,
+    "unmatched_players": [
+     "Flavien Boyomo"
+    ],
+    "mean_xi_attack_index": 0.0,
+    "mean_continuity": 0.721,
+    "p_backup_gk": 0.0
+   },
+   "away": {
+    "status": "confirmed",
+    "source": "FotMob official team sheet",
+    "formation": "4-2-3-1",
+    "starters": [
+     {
+      "name": "Unai Sim\u00f3n",
+      "pos": "G"
+     },
+     {
+      "name": "Hugo Rinc\u00f3n",
+      "pos": "D"
+     },
+     {
+      "name": "Daniel Vivian",
+      "pos": "D"
+     },
+     {
+      "name": "Aymeric Laporte",
+      "pos": "D"
+     },
+     {
+      "name": "Yuri Berchiche",
+      "pos": "D"
+     },
+     {
+      "name": "Peio Canales",
+      "pos": "M"
+     },
+     {
+      "name": "Be\u00f1at Gerenabarrena",
+      "pos": "M"
+     },
+     {
+      "name": "Robert Navarro",
+      "pos": "F"
+     },
+     {
+      "name": "Alex Berenguer",
+      "pos": "F"
+     },
+     {
+      "name": "Nico Williams",
+      "pos": "F"
+     },
+     {
+      "name": "I\u00f1aki Williams",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-11-07T17:10:05+00:00",
+    "n_configurations": 1,
+    "unmatched_players": [
+     "Yuri Berchiche"
+    ],
+    "mean_xi_attack_index": -0.03,
+    "mean_continuity": -0.306,
+    "p_backup_gk": 0.0
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Asier Bonel",
+     "type": "injury",
+     "expected_return": "About 1-2 weeks",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868126",
+     "fetched_at": "2026-11-07T17:10:05+00:00"
+    },
+    {
+     "player": "Jorge Herrando",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868126",
+     "fetched_at": "2026-11-07T17:10:05+00:00"
+    },
+    {
+     "player": "Aimar Oroz",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868126",
+     "fetched_at": "2026-11-07T17:10:05+00:00"
+    },
+    {
+     "player": "Romain Del Castillo",
+     "type": "injury",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868126",
+     "fetched_at": "2026-11-07T17:10:05+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "Nico Serrano",
+     "type": "injury",
+     "expected_return": "About 1-2 weeks",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868126",
+     "fetched_at": "2026-11-07T17:10:05+00:00"
+    },
+    {
+     "player": "Aitor Paredes",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868126",
+     "fetched_at": "2026-11-07T17:10:05+00:00"
+    },
+    {
+     "player": "Unai Eguiluz",
+     "type": "injury",
+     "expected_return": "Mid January 2027",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868126",
+     "fetched_at": "2026-11-07T17:10:05+00:00"
+    },
+    {
+     "player": "Gorka Guruzeta",
+     "type": "injury",
+     "expected_return": "Out for season",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868126",
+     "fetched_at": "2026-11-07T17:10:05+00:00"
+    },
+    {
+     "player": "Maroan Sannadi",
+     "type": "injury",
+     "expected_return": "Early December 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868126",
+     "fetched_at": "2026-11-07T17:10:05+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 5,
+    "n21": 3,
+    "last_match": "2026-11-02"
+   },
+   "away": {
+    "rest_days": 6,
+    "n21": 4,
+    "last_match": "2026-11-01"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 118.7
+  },
+  "venue": {
+   "name": "Estadio El Sadar",
+   "city": "Pamplona (Iru\u00f1ea)",
+   "lat": 42.796676994,
+   "lon": -1.637141258
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 0.47,
+   "temp_c": 14.8,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=42.797&longitude=-1.637",
+   "fetched_at": "2026-11-07T17:10:05+00:00",
+   "lat": 42.796676994,
+   "lon": -1.637141258
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": 0.33,
+    "d_p_draw_pp": 0.44,
+    "d_p_away_pp": -0.77,
+    "d_xg_home": 0.021,
+    "d_xg_away": -0.002
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": -0.0,
+    "d_p_draw_pp": -0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": -0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0121,
+    "away_rate_mult": 1.0051,
+    "d_p_home_pp": 0.28,
+    "d_p_draw_pp": -0.14,
+    "d_p_away_pp": -0.14,
+    "d_xg_home": 0.015,
+    "d_xg_away": 0.006,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": -0.0,
+    "d_p_draw_pp": -0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": -0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "home_rate_mult": 1.0236,
+    "away_rate_mult": 0.9721,
+    "d_p_home_pp": 1.51,
+    "d_p_draw_pp": 0.01,
+    "d_p_away_pp": -1.51,
+    "d_xg_home": 0.029,
+    "d_xg_away": -0.034,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": -0.0,
+   "d_p_draw_pp": -0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": -0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 5.0,
+   "rest_a": 6.0,
+   "n21_h": 3.0,
+   "n21_a": 4.0,
+   "travel_km": 118.65347334121725,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 0.47,
+   "temp_c": 14.8
+  }
+ },
+ "confidence": {
+  "tier": "LOW",
+  "p_max": 0.36105785684932723,
+  "entropy_nats": 1.0931986942767398,
+  "text": "Most likely result has P = 36.1%. In the out-of-sample backtest, favourites priced 0.33\u20130.40 won 37.6% \u00b1 0.5% (n=8383, mean forecast 37.8%). Backtest RPS for SP1: 0.1930; exact-score top-5 hit rate 55.1% (n=1239). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: LOW (entropy 1.093 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Osasuna: lineup CONFIRMED (FotMob official team sheet).",
+  "Osasuna: no Understat history for Flavien Boyomo \u2014 rated at the positional prior.",
+  "Ath Bilbao: lineup CONFIRMED (FotMob official team sheet).",
+  "Ath Bilbao: no Understat history for Yuri Berchiche \u2014 rated at the positional prior."
+ ],
+ "verdict": "Osasuna 1\u20131 Ath Bilbao is the single most probable scoreline at 13.9%: expected goals 1.30\u20131.28 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.046). Exact scores are inherently uncertain; the 1X2 split is 36.1%/28.5%/35.4%.",
+ "resolved": {
+  "home_key": "Spain:Osasuna",
+  "away_key": "Spain:Ath Bilbao",
+  "div": "SP1",
+  "home_div": "SP1",
+  "away_div": "SP1",
+  "country": "Spain"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: Athletic Club at CA Osasuna\nCompetition: La Liga 2025\nDate: 2026-11-07 12:30 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-11-06\n\nPRIMARY FINAL SCORE PREDICTION\n\nCA Osasuna 1 \u2013 1 Athletic Club\n(modal exact score, probability 13.9%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.30\nAway: 1.28\nExpected Total: 2.58\nMedian Total: 2\n\nRESULT PROBABILITIES\n\nHome Win: 36.1%\nDraw: 28.5%\nAway Win: 35.4%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 13.9%\n2. 1\u20130: 9.2%\n3. 0\u20131: 9.1%\n4. 2\u20131: 8.4%\n5. 1\u20132: 8.3%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 26.1%\nTotal 2 goals: 26.2%\nTotal 3 goals: 21.8%\nTotal 4 goals: 14.3%\nTotal 5+ goals: 11.6%\n\nBoth Teams Score: 54.3%\nClean sheet CA Osasuna: 27.0% \u00b7 Clean sheet Athletic Club: 26.5%\n\nMATCH INTELLIGENCE\n\n1. Home advantage (Spain, fitted from results): \u00d71.32 on Osasuna's scoring rate.\n2. Osasuna attack vs Ath Bilbao defence: time-weighted strength gap multiplies Osasuna's scoring rate by \u00d70.77 relative to an average pairing (from 33/35 decay-weighted matches).\n3. Independent results-only Elo: Osasuna 1505 vs Ath Bilbao 1597 (gap -91 before home advantage).\n\nMODEL CONFIDENCE\n\nMost likely result has P = 36.1%. In the out-of-sample backtest, favourites priced 0.33\u20130.40 won 37.6% \u00b1 0.5% (n=8383, mean forecast 37.8%). Backtest RPS for SP1: 0.1930; exact-score top-5 hit rate 55.1% (n=1239). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: LOW (entropy 1.093 nats of max 1.099).\nParameter-uncertainty 80% bands: xG CA Osasuna 0.99\u20131.63, xG Athletic Club 0.97\u20131.61; P(home win) 27.0%\u201347.1%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0005 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nOsasuna: CONFIRMED \u2014 FotMob official team sheet, fetched 2026-11-07 12:10 EST (4-2-3-1)\n  Aitor Fern\u00e1ndez (G), Valentin Rosier (D), Alejandro Catena (D), Flavien Boyomo (D), Abel Bretones (D), Lucas Torr\u00f3 (M), Jon Moncayola (M), Rub\u00e9n Garcia (F), Moi G\u00f3mez (M), Ra\u00fal Moro (F), Ante Budimir (F)\n  1 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs +0.000 (log) \u00b7 continuity +0.72 \u00b7 P(backup GK) 0%\nAth Bilbao: CONFIRMED \u2014 FotMob official team sheet, fetched 2026-11-07 12:10 EST (4-2-3-1)\n  Unai Sim\u00f3n (G), Hugo Rinc\u00f3n (D), Daniel Vivian (D), Aymeric Laporte (D), Yuri Berchiche (D), Peio Canales (M), Be\u00f1at Gerenabarrena (M), Robert Navarro (F), Alex Berenguer (F), Nico Williams (F), I\u00f1aki Williams (F)\n  1 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs -0.030 (log) \u00b7 continuity -0.31 \u00b7 P(backup GK) 0%\n\nKEY ABSENCES\n\n- Osasuna: Asier Bonel \u2014 injury, About 1-2 weeks [FotMob, 2026-11-07 12:10 EST]\n- Osasuna: Jorge Herrando \u2014 injury, Doubtful [FotMob, 2026-11-07 12:10 EST]\n- Osasuna: Aimar Oroz \u2014 injury, Doubtful [FotMob, 2026-11-07 12:10 EST]\n- Osasuna: Romain Del Castillo \u2014 injury, Mid November 2026 [FotMob, 2026-11-07 12:10 EST]\n- Ath Bilbao: Nico Serrano \u2014 injury, About 1-2 weeks [FotMob, 2026-11-07 12:10 EST]\n- Ath Bilbao: Aitor Paredes \u2014 injury, Late November 2026 [FotMob, 2026-11-07 12:10 EST]\n- Ath Bilbao: Unai Eguiluz \u2014 injury, Mid January 2027 [FotMob, 2026-11-07 12:10 EST]\n- Ath Bilbao: Gorka Guruzeta \u2014 injury, Out for season [FotMob, 2026-11-07 12:10 EST]\n- Ath Bilbao: Maroan Sannadi \u2014 injury, Early December 2026 [FotMob, 2026-11-07 12:10 EST]\n\nWEATHER AT VENUE\n\nEstadio El Sadar, Pamplona (Iru\u00f1ea): 14.8 \u00b0C, wind 0.5 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-11-07 12:10 EST]\n\nREST & TRAVEL\n\nOsasuna: 5 days' rest, 3 matches in previous 21 days \u00b7 Ath Bilbao: 6 days' rest, 4 in 21 days \u00b7 away travel 118.7 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 36.1% / 28.5% / 35.4%, xG 1.30\u20131.28\n- Understat xG component (validated, in ensemble): home +0.33 pp, draw +0.44 pp, away -0.77 pp; xG +0.021 / -0.002\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home -0.00 pp, draw -0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.28 pp, draw -0.14 pp, away -0.14 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home -0.00 pp, draw -0.00 pp, away +0.00 pp\n- lineup: NOT APPLIED (failed out-of-sample validation); would have moved home +1.51 pp, draw +0.01 pp, away -1.51 pp\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Osasuna: lineup CONFIRMED (FotMob official team sheet).\n- Osasuna: no Understat history for Flavien Boyomo \u2014 rated at the positional prior.\n- Ath Bilbao: lineup CONFIRMED (FotMob official team sheet).\n- Ath Bilbao: no Understat history for Yuri Berchiche \u2014 rated at the positional prior.\n\nFINAL VERDICT\n\nOsasuna 1\u20131 Ath Bilbao is the single most probable scoreline at 13.9%: expected goals 1.30\u20131.28 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.046). Exact scores are inherently uncertain; the 1X2 split is 36.1%/28.5%/35.4%.\n",
+ "frozen_at": "2026-11-07T17:10:05+00:00",
+ "sha256": "6602dece257fd295eff0b4402f068f36e6724c0813e7588e61364947ab54b149"
+}
