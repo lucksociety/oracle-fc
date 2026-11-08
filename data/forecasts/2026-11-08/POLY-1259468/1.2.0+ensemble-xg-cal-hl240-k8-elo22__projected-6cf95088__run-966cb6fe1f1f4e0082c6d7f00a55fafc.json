@@ -1,0 +1,627 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-11-06",
+ "input_fingerprint": "2041f3102bae828a2a87036744d059ae608def99029777ba85e1ed81e378bfc1",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-11-08T17:07:57+00:00",
+ "fixture": {
+  "event_id": "POLY-1259468",
+  "home_name": "FC Utrecht",
+  "away_name": "NEC",
+  "competition": "Eredivisie 2025",
+  "subcategory": "ere",
+  "kickoff_utc": "2026-11-08T19:00:00+00:00",
+  "kickoff_local": "2026-11-08 14:00 EST",
+  "home_matched": "Utrecht",
+  "away_matched": "Nijmegen",
+  "match_methods": {
+   "home": {
+    "source": "FC Utrecht",
+    "matched": "Utrecht",
+    "method": "core-tokens",
+    "score": 0.97
+   },
+   "away": {
+    "source": "NEC",
+    "matched": "Nijmegen",
+    "method": "alias",
+    "score": 1.0
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.40799449484979833,
+  "p_draw": 0.24601604892729254,
+  "p_away": 0.34598945622290905,
+  "xg_home": 1.7312150202589678,
+  "xg_away": 1.589951753381102,
+  "xg_total": 3.32116677364007,
+  "median_total": 3,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.1082151237898331
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.1082151237898331
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.08772473478205613
+   },
+   {
+    "home": 1,
+    "away": 2,
+    "p": 0.07962658670489195
+   },
+   {
+    "home": 2,
+    "away": 2,
+    "p": 0.07387441547289103
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.058468871228616145
+   }
+  ],
+  "btts": 0.6703996134831498,
+  "totals_over": {
+   "over_0.5": 0.962299858318246,
+   "over_1.5": 0.8517184342156171,
+   "over_2.5": 0.6466749908265095,
+   "over_3.5": 0.4260467132365554,
+   "over_4.5": 0.23853443445898273,
+   "over_5.5": 0.11737212976109801,
+   "over_6.5": 0.05001164762544597
+  },
+  "total_buckets": {
+   "0-1": 0.14828156578438287,
+   "2": 0.20504344338910768,
+   "3": 0.22062827758995404,
+   "4": 0.18751227877757268,
+   "5+": 0.23853443445898273
+  },
+  "clean_sheet_home": 0.19863920369466712,
+  "clean_sheet_away": 0.16866132450393712,
+  "home_goal_dist": [
+   0.16866132450393712,
+   0.31134287184126824,
+   0.27216184915822816,
+   0.15431493718937725,
+   0.0645993072993806,
+   0.021390522502424302,
+   0.005843807411082942,
+   0.0016853800943013337
+  ],
+  "away_goal_dist": [
+   0.19863920369466712,
+   0.3286328018415834,
+   0.26118041796633995,
+   0.1362995771728366,
+   0.0531497102748732,
+   0.016588950205071222,
+   0.004318792807550133,
+   0.0011905460370783825
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    3
+   ],
+   "away_goals_80": [
+    0,
+    3
+   ],
+   "total_goals_80": [
+    1,
+    6
+   ],
+   "goal_diff_80": [
+    -2,
+    2
+   ]
+  },
+  "score_grid": [
+   [
+    0.0377,
+    0.052113,
+    0.043408,
+    0.022791,
+    0.008929,
+    0.002793,
+    0.000727
+   ],
+   [
+    0.058469,
+    0.108215,
+    0.079627,
+    0.041817,
+    0.016386,
+    0.005126,
+    0.001336
+   ],
+   [
+    0.05342,
+    0.087725,
+    0.073874,
+    0.03674,
+    0.0144,
+    0.004506,
+    0.001174
+   ],
+   [
+    0.030486,
+    0.050076,
+    0.039935,
+    0.022162,
+    0.008225,
+    0.002574,
+    0.000671
+   ],
+   [
+    0.012817,
+    0.021058,
+    0.016798,
+    0.008828,
+    0.003656,
+    0.001083,
+    0.000282
+   ],
+   [
+    0.004251,
+    0.006986,
+    0.005574,
+    0.00293,
+    0.001149,
+    0.00038,
+    9.4e-05
+   ],
+   [
+    0.001162,
+    0.00191,
+    0.001524,
+    0.000801,
+    0.000314,
+    9.8e-05,
+    2.7e-05
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.40815,
+  "p_draw": 0.24687,
+  "p_away": 0.34498,
+  "se": [
+   0.001099007683094163,
+   0.0009641711546712025,
+   0.0010629412015723165
+  ],
+  "max_abs_dev_vs_exact": 0.0010094562229090442,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   1.3421373002035404,
+   2.1548628375281744
+  ],
+  "xg_away_80": [
+   1.219472853272176,
+   1.9841738667372266
+  ],
+  "p_home_80": [
+   0.30607283820874887,
+   0.5274436445013531
+  ],
+  "p_draw_80": [
+   0.20739358013898485,
+   0.2614926745790627
+  ],
+  "p_away_80": [
+   0.24851399210504477,
+   0.4587326994878792
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.18771296619343203,
+   0.1806548548763298
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.3794247012780657,
+   "p_draw": 0.23493620283811986,
+   "p_away": 0.3856390958838144,
+   "xg_home": 1.6967109702008407,
+   "xg_away": 1.711677443359392,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.45251157232475053,
+   "p_draw": 0.23727171809141615,
+   "p_away": 0.3102167095838334,
+   "xg_home": 1.6889952703605933,
+   "xg_away": 1.3616945003534313,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.34822219717109704,
+   "p_draw": 0.23558735995722174,
+   "p_away": 0.4161904428716814,
+   "xg_home": 1.6404311181046696,
+   "xg_away": 1.8050891832126652,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.44985146120777714,
+   "p_draw": 0.23037964668378577,
+   "p_away": 0.31976889210843695,
+   "xg_home": 1.7666963945119498,
+   "xg_away": 1.4600285135931563,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.37947222041415324,
+   "p_draw": 0.23483605952170766,
+   "p_away": 0.38569172006413915,
+   "xg_home": 1.6966131373179334,
+   "xg_away": 1.7115915381694935,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Nijmegen attack vs Utrecht defence: rate multiplier \u00d71.42 for the away side.",
+   "effect": 0.3502
+  },
+  {
+   "text": "Utrecht attack vs Nijmegen defence: time-weighted strength gap multiplies Utrecht's scoring rate by \u00d71.23 relative to an average pairing (from 30/30 decay-weighted matches).",
+   "effect": 0.2083
+  },
+  {
+   "text": "Home advantage (Netherlands, fitted from results): \u00d71.14 on Utrecht's scoring rate.",
+   "effect": 0.1332
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.40799449484979833,
+  "p_draw": 0.24601604892729254,
+  "p_away": 0.34598945622290905,
+  "xg_home": 1.7312150202589678,
+  "xg_away": 1.589951753381102
+ },
+ "context": {
+  "fetched_at": "2026-11-08T17:07:57+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5781795",
+    "fetched_at": "2026-11-08T17:07:57+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "projected",
+    "source": "FotMob projected XI (enetpulse)",
+    "formation": "4-2-3-1",
+    "starters": [
+     {
+      "name": "Sergio Padt",
+      "pos": "G"
+     },
+     {
+      "name": "Siebe Horemans",
+      "pos": "D"
+     },
+     {
+      "name": "Matisse Didden",
+      "pos": "D"
+     },
+     {
+      "name": "Nikolas Panayiotou",
+      "pos": "D"
+     },
+     {
+      "name": "Arthur Zagr\u00e9",
+      "pos": "D"
+     },
+     {
+      "name": "Joris van Overeem",
+      "pos": "M"
+     },
+     {
+      "name": "Oualid Agougil",
+      "pos": "M"
+     },
+     {
+      "name": "Niklas Vesterlund",
+      "pos": "D"
+     },
+     {
+      "name": "Marius Broholm",
+      "pos": "F"
+     },
+     {
+      "name": "Yoann Cathline",
+      "pos": "F"
+     },
+     {
+      "name": "Dani de Wit",
+      "pos": "M"
+     }
+    ],
+    "fetched_at": "2026-11-08T17:07:57+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   },
+   "away": {
+    "status": "projected",
+    "source": "FotMob projected XI (enetpulse)",
+    "formation": "3-1-4-2",
+    "starters": [
+     {
+      "name": "Gonzalo Crettaz",
+      "pos": "G"
+     },
+     {
+      "name": "Gabriel Br\u00e1s",
+      "pos": "D"
+     },
+     {
+      "name": "Yassin Moslih",
+      "pos": "D"
+     },
+     {
+      "name": "Ahmetcan Kaplan",
+      "pos": "D"
+     },
+     {
+      "name": "Darko Neja\u0161mi\u0107",
+      "pos": "M"
+     },
+     {
+      "name": "Kevin Kers",
+      "pos": "M"
+     },
+     {
+      "name": "No\u00e9 Lebreton",
+      "pos": "M"
+     },
+     {
+      "name": "Jamiro Monteiro",
+      "pos": "M"
+     },
+     {
+      "name": "Clement Bischoff",
+      "pos": "M"
+     },
+     {
+      "name": "Tjaronn Chery",
+      "pos": "M"
+     },
+     {
+      "name": "Bryan Linssen",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-11-08T17:07:57+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Alonzo Engwanda",
+     "type": "injury",
+     "expected_return": "Day to day",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5781795",
+     "fetched_at": "2026-11-08T17:07:57+00:00"
+    },
+    {
+     "player": "Kevin Paredes",
+     "type": "injury",
+     "expected_return": "Day to day",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5781795",
+     "fetched_at": "2026-11-08T17:07:57+00:00"
+    },
+    {
+     "player": "Victor Jensen",
+     "type": "injury",
+     "expected_return": "Day to day",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5781795",
+     "fetched_at": "2026-11-08T17:07:57+00:00"
+    },
+    {
+     "player": "Miliano Jonathans",
+     "type": "injury",
+     "expected_return": "Day to day",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5781795",
+     "fetched_at": "2026-11-08T17:07:57+00:00"
+    },
+    {
+     "player": "Noah Ohio",
+     "type": "injury",
+     "expected_return": "Early January 2027",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5781795",
+     "fetched_at": "2026-11-08T17:07:57+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "Bram Nuytinck",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5781795",
+     "fetched_at": "2026-11-08T17:07:57+00:00"
+    },
+    {
+     "player": "Emre Mor",
+     "type": "injury",
+     "expected_return": "Day to day",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5781795",
+     "fetched_at": "2026-11-08T17:07:57+00:00"
+    },
+    {
+     "player": "Dennis Geiger",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5781795",
+     "fetched_at": "2026-11-08T17:07:57+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 7,
+    "n21": 3,
+    "last_match": "2026-11-01"
+   },
+   "away": {
+    "rest_days": 8,
+    "n21": 3,
+    "last_match": "2026-10-31"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 55.3
+  },
+  "venue": {
+   "name": "Stadion Galgenwaard",
+   "city": "Utrecht",
+   "lat": 52.078319141,
+   "lon": 5.145903826
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 2.0999999999999996,
+   "temp_c": 8.9,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=52.078&longitude=5.146",
+   "fetched_at": "2026-11-08T17:07:58+00:00",
+   "lat": 52.078319141,
+   "lon": 5.145903826
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": -3.53,
+    "d_p_draw_pp": -0.09,
+    "d_p_away_pp": 3.62,
+    "d_xg_home": 0.005,
+    "d_xg_away": 0.168
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0068,
+    "away_rate_mult": 1.0029,
+    "d_p_home_pp": 0.17,
+    "d_p_draw_pp": -0.07,
+    "d_p_away_pp": -0.1,
+    "d_xg_home": 0.011,
+    "d_xg_away": 0.005,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "reason": "failed validation; no live features"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 7.0,
+   "rest_a": 8.0,
+   "n21_h": 3.0,
+   "n21_a": 3.0,
+   "travel_km": 55.26358539950731,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 2.0999999999999996,
+   "temp_c": 8.9
+  }
+ },
+ "confidence": {
+  "tier": "LOW",
+  "p_max": 0.40799449484979833,
+  "entropy_nats": 1.0779852789049855,
+  "text": "Most likely result has P = 40.8%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.3% \u00b1 0.4% (n=16754, mean forecast 44.6%). Backtest RPS for N1: 0.1916; exact-score top-5 hit rate 44.8% (n=1008). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: LOW (entropy 1.078 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Utrecht: lineup is PROJECTED (FotMob projected XI (enetpulse)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Utrecht: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.",
+  "Nijmegen: lineup is PROJECTED (FotMob projected XI (enetpulse)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Nijmegen: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+ ],
+ "verdict": "Utrecht 1\u20131 Nijmegen is the single most probable scoreline at 10.8%: expected goals 1.73\u20131.59 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.046). Exact scores are inherently uncertain; the 1X2 split is 40.8%/24.6%/34.6%.",
+ "resolved": {
+  "home_key": "Netherlands:Utrecht",
+  "away_key": "Netherlands:Nijmegen",
+  "div": "N1",
+  "home_div": "N1",
+  "away_div": "N1",
+  "country": "Netherlands"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: NEC at FC Utrecht\nCompetition: Eredivisie 2025\nDate: 2026-11-08 14:00 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-11-06\n\nPRIMARY FINAL SCORE PREDICTION\n\nFC Utrecht 1 \u2013 1 NEC\n(modal exact score, probability 10.8%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.73\nAway: 1.59\nExpected Total: 3.32\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 40.8%\nDraw: 24.6%\nAway Win: 34.6%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 10.8%\n2. 2\u20131: 8.8%\n3. 1\u20132: 8.0%\n4. 2\u20132: 7.4%\n5. 1\u20130: 5.8%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 14.8%\nTotal 2 goals: 20.5%\nTotal 3 goals: 22.1%\nTotal 4 goals: 18.8%\nTotal 5+ goals: 23.9%\n\nBoth Teams Score: 67.0%\nClean sheet FC Utrecht: 19.9% \u00b7 Clean sheet NEC: 16.9%\n\nMATCH INTELLIGENCE\n\n1. Nijmegen attack vs Utrecht defence: rate multiplier \u00d71.42 for the away side.\n2. Utrecht attack vs Nijmegen defence: time-weighted strength gap multiplies Utrecht's scoring rate by \u00d71.23 relative to an average pairing (from 30/30 decay-weighted matches).\n3. Home advantage (Netherlands, fitted from results): \u00d71.14 on Utrecht's scoring rate.\n\nMODEL CONFIDENCE\n\nMost likely result has P = 40.8%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.3% \u00b1 0.4% (n=16754, mean forecast 44.6%). Backtest RPS for N1: 0.1916; exact-score top-5 hit rate 44.8% (n=1008). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: LOW (entropy 1.078 nats of max 1.099).\nParameter-uncertainty 80% bands: xG FC Utrecht 1.34\u20132.15, xG NEC 1.22\u20131.98; P(home win) 30.6%\u201352.7%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0010 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nUtrecht: PROJECTED \u2014 FotMob projected XI (enetpulse), fetched 2026-11-08 12:07 EST (4-2-3-1)\n  Sergio Padt (G), Siebe Horemans (D), Matisse Didden (D), Nikolas Panayiotou (D), Arthur Zagr\u00e9 (D), Joris van Overeem (M), Oualid Agougil (M), Niklas Vesterlund (D), Marius Broholm (F), Yoann Cathline (F), Dani de Wit (M)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\nNijmegen: PROJECTED \u2014 FotMob projected XI (enetpulse), fetched 2026-11-08 12:07 EST (3-1-4-2)\n  Gonzalo Crettaz (G), Gabriel Br\u00e1s (D), Yassin Moslih (D), Ahmetcan Kaplan (D), Darko Neja\u0161mi\u0107 (M), Kevin Kers (M), No\u00e9 Lebreton (M), Jamiro Monteiro (M), Clement Bischoff (M), Tjaronn Chery (M), Bryan Linssen (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nKEY ABSENCES\n\n- Utrecht: Alonzo Engwanda \u2014 injury, Day to day [FotMob, 2026-11-08 12:07 EST]\n- Utrecht: Kevin Paredes \u2014 injury, Day to day [FotMob, 2026-11-08 12:07 EST]\n- Utrecht: Victor Jensen \u2014 injury, Day to day [FotMob, 2026-11-08 12:07 EST]\n- Utrecht: Miliano Jonathans \u2014 injury, Day to day [FotMob, 2026-11-08 12:07 EST]\n- Utrecht: Noah Ohio \u2014 injury, Early January 2027 [FotMob, 2026-11-08 12:07 EST]\n- Nijmegen: Bram Nuytinck \u2014 injury, Late November 2026 [FotMob, 2026-11-08 12:07 EST]\n- Nijmegen: Emre Mor \u2014 injury, Day to day [FotMob, 2026-11-08 12:07 EST]\n- Nijmegen: Dennis Geiger \u2014 injury, Late November 2026 [FotMob, 2026-11-08 12:07 EST]\n\nWEATHER AT VENUE\n\nStadion Galgenwaard, Utrecht: 8.9 \u00b0C, wind 2.1 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-11-08 12:07 EST]\n\nREST & TRAVEL\n\nUtrecht: 7 days' rest, 3 matches in previous 21 days \u00b7 Nijmegen: 8 days' rest, 3 in 21 days \u00b7 away travel 55.3 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 40.8% / 24.6% / 34.6%, xG 1.73\u20131.59\n- Understat xG component (validated, in ensemble): home -3.53 pp, draw -0.09 pp, away +3.62 pp; xG +0.005 / +0.168\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.17 pp, draw -0.07 pp, away -0.10 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- lineup: not applied (failed validation; no live features)\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Utrecht: lineup is PROJECTED (FotMob projected XI (enetpulse)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Utrecht: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n- Nijmegen: lineup is PROJECTED (FotMob projected XI (enetpulse)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Nijmegen: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nFINAL VERDICT\n\nUtrecht 1\u20131 Nijmegen is the single most probable scoreline at 10.8%: expected goals 1.73\u20131.59 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.046). Exact scores are inherently uncertain; the 1X2 split is 40.8%/24.6%/34.6%.\n",
+ "refresh_id": "966cb6fe1f1f4e0082c6d7f00a55fafc",
+ "frozen_at": "2026-11-08T17:07:58+00:00",
+ "sha256": "556c2647d073dd0b78b78796425bc1122b3d529557fea42d4522c3093bf1697c"
+}
