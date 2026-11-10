@@ -178,6 +178,15 @@ const STATUS_WHY = {
   unsupported: "no forecast: competition not covered by the model's data",
   not_forecast_before_kickoff: "no forecast: kicked off before one was frozen",
 };
+function forecastReason(f) {
+  if(f.status !== 'unsupported')return STATUS_WHY[f.status] || `no forecast (${f.status || 'unknown'})`;
+  const methods=f.fixture?.match_methods || {};
+  if(Object.values(methods).some(m=>m.method==='unsupported-competition'))return STATUS_WHY.unsupported;
+  const missing=['home','away'].filter(s=>methods[s]?.method==='unmatched').map(s=>f.fixture[s+'_name']);
+  if(missing.length)return `no rated historical results for ${missing.join(' / ')}`;
+  if((f.data_quality||[]).some(x=>/sparse|stale/i.test(x)))return 'not enough recent historical results for a forecast';
+  return 'historical team data unavailable or insufficient';
+}
 export function allGames(scan) {
   const byId = new Map(scan.games.map((g) => [g.event_id, g]));
   const rows = new Map();
@@ -187,8 +196,8 @@ export function allGames(scan) {
     if (!id) continue;
     const ok = f.status === "ok" && f.simulation;
     rows.set(id, { event_id: id, home: fx.home_name || fx.home, away: fx.away_name || fx.away, competition: fx.competition,
-      kickoff_utc: fx.kickoff_utc, sim: ok ? f.simulation : null,
-      why: ok ? null : STATUS_WHY[f.status] || `no forecast (${f.status || "unknown"})`, g: byId.get(id) || null });
+      kickoff_utc: fx.kickoff_utc, sim: ok ? f.simulation : null, forecastOnly: f.forecast_only === true,
+      why: ok ? null : forecastReason(f), g: byId.get(id) || null });
   }
   for (const g of scan.games) if (!rows.has(g.event_id)) {
     rows.set(g.event_id, { event_id: g.event_id, home: g.home, away: g.away, competition: g.competition, kickoff_utc: g.kickoff_utc,
@@ -224,7 +233,7 @@ export function gameEmbed(r, now = Date.now()) {
     lines.push(`🔮 **${s.modal_score ? sc(s.modal_score) : "?"}**${s.modal_score?.p != null ? ` (${pct(s.modal_score.p)})` : ""}${top ? ` · next: ${top}` : ""}`);
     lines.push(`H/D/A **${pct(s.p_home, 0)} / ${pct(s.p_draw, 0)} / ${pct(s.p_away, 0)}** · xG ${Number(s.xg_home).toFixed(2)}–${Number(s.xg_away).toFixed(2)}`);
   } else lines.push(`🔮 ${r.why}`);
-  lines.push(pickText(g));
+  lines.push(r.forecastOnly ? "**NO BET** · forecast only; competition calibration pending" : pickText(g));
   const rt = resultText(r);
   if (rt) lines.push(rt);
   else if (g?.locked) lines.push(`🔒 locked at the pre-kick-off price (${String(g.locked_from_snapshot || "").slice(11, 16)} UTC)`);
@@ -262,7 +271,8 @@ export function buildEmbeds(scan, site, opts = {}) {
     const priced = Date.parse(r.g.priced_at || scan.fetchedAt);
     const started = Number.isFinite(kickoff) && kickoff <= now;
     const consistent = b => b && BB.scoreSupports(b.outcome || {}, r.sim?.modal_score);
-    const reason = r.g.bet && !consistent(r.g.bet) ? "bet does not win at displayed predicted score"
+    const reason = r.forecastOnly ? "forecast only — competition calibration pending"
+      : r.g.bet && !consistent(r.g.bet) ? "bet does not win at displayed predicted score"
       : !Number.isFinite(kickoff) || started
       ? "kickoff passed or unavailable — no new pregame bet"
       : !Number.isFinite(priced) || priced > now || now - priced > 300000
@@ -283,7 +293,8 @@ export function buildEmbeds(scan, site, opts = {}) {
     thumbnail: { url: `${site}/assets/logo.jpg` },
     footer: { text: `${dash.replace(/^https?:\/\//, "")}${scan.modelVersion ? ` · model ${scan.modelVersion}` : ""}` },
   };
-  const shown = onlyBets ? bets : rows;
+  // Even an explicitly bets-only view falls back to forecasts when the whole card is a pass.
+  const shown = onlyBets && (bets.length || !rows.some(r=>r.sim)) ? bets : rows;
   return [summary, ...shown.filter((r) => r.sim || isBet(r.g)).map((r) => gameEmbed(r, now)),
     ...unforecastEmbeds(shown.filter((r) => !r.sim && !isBet(r.g)))];
 }
@@ -297,6 +308,10 @@ function summaryLines(scan, games, rows, bets, nobets, opts) {
       : `No ORACLE FC scan stored for **${scan.date}**. The pipeline covers today to +7 days, because Jupiter only lists upcoming games.`);
   } else {
     lines.push(`**${rows.length}** games · **${bets.length}** bet · **${nobets.length}** NO BET · score predictions for **${nFc}**${rows.length > nFc ? ` (${rows.length - nFc} not forecast)` : ""}`);
+    if(nFc===0 && rows.length){
+      const late=rows.filter(r=>r.why===STATUS_WHY.not_forecast_before_kickoff).length;
+      lines.push(`No score forecasts available: ${rows.length-late} game(s) lack sufficient rated history${late?`; ${late} kicked off without a saved pregame forecast`:''}. This is a coverage gap, not a betting pass.`);
+    }
     if (!scan.hasEdge) lines.push("Jupiter prices not captured yet for this date, so every game is NO BET for now.");
     if (scan.fetchedAt) lines.push(`Prices: Jupiter snapshot <t:${unix(scan.fetchedAt)}:f> (<t:${unix(scan.fetchedAt)}:R>)`);
     if (scan.modelVersion) lines.push(`Model: **${scan.modelVersion}**`);
@@ -306,7 +321,8 @@ function summaryLines(scan, games, rows, bets, nobets, opts) {
     if (stale) lines.push(`⏱️ ${stale} game(s) already kicked off without a pre-kick-off lock.`);
     const day = scan.results;
     if (day && day.bets && (day.bets.wins + day.bets.losses) > 0) lines.push(`📊 ${scan.date} graded: bets **${day.bets.wins}-${day.bets.losses}** · **${units(day.bets.units)}** (${day.n_final}/${day.n_games} final)`);
-    if (opts.onlyBets && nobets.length) lines.push(`_Showing bets only (only_bets: true); ${nobets.length} NO BET games hidden._`);
+    if (opts.onlyBets && !bets.length && nFc) lines.push("_No qualifying bets; showing available score predictions._");
+    else if (opts.onlyBets && nobets.length) lines.push(`_Showing bets only (only_bets: true); ${nobets.length} NO BET games hidden._`);
   }
   const rec = scan.record?.bets;
   if (rec && (rec.wins + rec.losses) > 0) lines.push(`📒 Running record${scan.recordSince ? ` since ${scan.recordSince}` : ""}: **${rec.wins}-${rec.losses}** · **${units(rec.units)}** · ROI ${rec.roi == null ? "–" : (100 * rec.roi).toFixed(1) + "%"} (1u per bet at ask + fees)`);

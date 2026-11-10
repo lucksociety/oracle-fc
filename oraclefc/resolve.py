@@ -10,6 +10,10 @@ from .teams import match_team
 
 EURO_COMPS = {"ucl", "uel", "ucol"}
 SUPPLEMENTAL_ALIASES = {
+    # Explicit identities checked against the ESPN women's competition records.
+    "uwcl": {"BK Häcken FF":"BK Häcken", "Chelsea FC":"Chelsea", "Real Madrid CF Femenino":"Real Madrid",
+             "AS Roma":"Roma", "Servette FC Chênois Féminin":"Servette", "FC Internazionale Milano":"Internazionale",
+             "Manchester City WFC":"Manchester City", "Paris Saint-Germain FC":"Paris Saint-Germain", "FC Bayern München":"Bayern Munich"},
     "col1": {"Cúcuta Deportivo FC": "Cúcuta Deportivo", "Millonarios FC": "Millonarios", "América de Cali": "América de Cali"},
     "fpd": {"Escorpiones de Belén": "Escorpiones Belén", "LD Alajuelense": "Alajuelense"},
     "mex2": {"Atletico Morelia": "Club Atlético Morelia"},
@@ -99,7 +103,9 @@ class Resolver:
         if r.home_key and r.home_key == r.away_key:
             r.notes.append("INVALID team identity: both opponents resolved to the same club; no forecast is produced.")
         if r.ok:
-            if sub in EURO_COMPS:
+            if sub == "uwcl":
+                r.div, r.country = "WCL", "Women"
+            elif sub in EURO_COMPS:
                 r.div, r.country = "UCL", "Europe"
                 if sub != "ucl":
                     r.notes.append("Europa/Conference League: modelled with the Champions League home-advantage and "
