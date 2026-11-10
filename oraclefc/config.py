@@ -66,7 +66,11 @@ EXTRA_LEAGUES: dict[str, tuple[str, str, int]] = {
     "USA": ("USA", "MLS", 1),
 }
 
+WOMEN_DIVISIONS = {"WCL", "WSL", "WFRA"}
 SUPPLEMENTAL_DIVISIONS = {
+    "WCL": ("Women", "UEFA Women's Champions League", 1),
+    "WSL": ("Women", "English Women's Super League", 1),
+    "WFRA": ("Women", "French Premiere Ligue", 1),
     "COL": ("Colombia", "Primera A", 1),
     "CRC": ("Costa Rica", "Primera Division", 1),
     "MEX2": ("Mexico", "Liga de Expansion MX", 2),
@@ -74,9 +78,9 @@ SUPPLEMENTAL_DIVISIONS = {
     "PER": ("Peru", "Liga 1", 1),
     "VEN": ("Venezuela", "Primera Division", 1),
 }
-SUPPLEMENTAL_FEEDS = {"COL": "col.1", "CRC": "crc.1", "MEX2": "mex.2",
+SUPPLEMENTAL_FEEDS = {"WCL":"uefa.wchampions", "WSL":"eng.w.1", "WFRA":"fra.w.1", "COL": "col.1", "CRC": "crc.1", "MEX2": "mex.2",
                       "PAR": "par.1", "PER": "per.1", "VEN": "ven.1"}
-SUPPLEMENTAL_SUBCATEGORIES = {"col1": "COL", "fpd": "CRC", "mex2": "MEX2",
+SUPPLEMENTAL_SUBCATEGORIES = {"uwcl":"WCL", "col1": "COL", "fpd": "CRC", "mex2": "MEX2",
                              "par1": "PAR", "per1": "PER", "ven1": "VEN"}
 
 ALL_DIVISIONS = {**SUPPLEMENTAL_DIVISIONS, **MAIN_DIVISIONS, **EXTRA_LEAGUES, "UCL": ("Europe", "UEFA Champions League", 0)}
@@ -119,6 +123,6 @@ JUPITER_SUBCATEGORY_DIVS: dict[str, list[str]] = {
     "aut": ["AUT"], "fin1": ["FIN"], "mex": ["MEX"], "pol": ["POL"], "chi": ["CHN"],
     "bra": ["BRA"], "arg": ["ARG"], "mls": ["USA"], "jap": ["JPN"], "nor": ["NOR"],
     "swe": ["SWE"], "den": ["DNK"], "swi": ["SWZ"], "rom": ["ROU"], "irl": ["IRL"],
-    **{sub: [div] for sub, div in SUPPLEMENTAL_SUBCATEGORIES.items()},
+    **{sub: sorted(WOMEN_DIVISIONS) if div in WOMEN_DIVISIONS else [div] for sub, div in SUPPLEMENTAL_SUBCATEGORIES.items()},
     "ucl": EUROPE_ALL, "uel": EUROPE_ALL, "ucol": EUROPE_ALL,
 }

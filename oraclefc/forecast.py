@@ -37,9 +37,11 @@ class Engine:
     def __init__(self, df: pd.DataFrame | None = None, as_of: pd.Timestamp | None = None, with_context: bool = True, *, supplemental: bool = False):
         self.with_context = with_context
         raw = df if df is not None else store.load(include_supplemental=True)
+        if supplemental and raw['div'].isin(config.WOMEN_DIVISIONS).any() and (~raw['div'].isin(config.WOMEN_DIVISIONS)).any():
+            raise ValueError('Women and men require separate supplemental model pools')
         self.supplemental = supplemental
         self.supplemental_data = raw.loc[raw["div"].isin(config.SUPPLEMENTAL_DIVISIONS)]
-        self.supplemental_engine = None
+        self.supplemental_engines = {}
         if not supplemental:
             raw = raw.loc[~raw["div"].isin(config.SUPPLEMENTAL_DIVISIONS)]
         self.as_of = as_of if as_of is not None else (raw["date"].max() + pd.Timedelta(days=1))
@@ -58,7 +60,7 @@ class Engine:
         if supplemental:
             self.champion = "dynamic_dc"
             self.weights = {"dynamic_dc": 1.0}
-            self.version = "supplemental-results-v1"
+            self.version = "supplemental-women-results-v1" if set(self.df["div"]) <= config.WOMEN_DIVISIONS else "supplemental-results-v1"
             self.confidence = {}
         # results-only calibration layer (validated in docs/CALIBRATION.md); None = not adopted
         self.calibration = calibrate.from_json(ch["calibration"]) if ch.get("calibration") and not supplemental else None
@@ -241,12 +243,16 @@ class Engine:
                  kickoff_utc: str | None = None, event_id: str | None = None, neutral: bool = False,
                  mc_sims: int = 200_000) -> dict:
         if not self.supplemental and (subcategory or '').lower() in config.SUPPLEMENTAL_SUBCATEGORIES:
-            history = self.supplemental_data.loc[self.supplemental_data["date"] < self.as_of]
+            div = config.SUPPLEMENTAL_SUBCATEGORIES[subcategory.lower()]
+            women = div in config.WOMEN_DIVISIONS
+            pool = config.WOMEN_DIVISIONS if women else set(config.SUPPLEMENTAL_DIVISIONS) - config.WOMEN_DIVISIONS
+            history = self.supplemental_data.loc[(self.supplemental_data["date"] < self.as_of) & self.supplemental_data["div"].isin(pool)]
             if not history.empty:
-                if self.supplemental_engine is None:
-                    self.supplemental_engine = Engine(history, self.as_of, with_context=False, supplemental=True)
-                return self.supplemental_engine.forecast(home_name, away_name, competition, subcategory,
-                                                         kickoff_utc, event_id, neutral, mc_sims)
+                group = "women" if women else "men"
+                if group not in self.supplemental_engines:
+                    self.supplemental_engines[group] = Engine(history, self.as_of, with_context=False, supplemental=True)
+                return self.supplemental_engines[group].forecast(home_name, away_name, competition, subcategory,
+                                                                kickoff_utc, event_id, neutral, mc_sims)
         r = self.resolver.resolve(home_name, away_name, subcategory, neutral)
         kickoff_local = ""
         if kickoff_utc:
