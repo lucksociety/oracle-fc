@@ -133,5 +133,6 @@ def fetch_all_soccer(use_cache: bool = True, through_date: str | None = None, tz
 
 
 def fixtures_for_date(date: str, tz: str = config.USER_TZ, use_cache: bool = True) -> list[Fixture]:
-    fx = [f for f in fetch_all_soccer(use_cache, through_date=date, tz=tz) if f.local_date(tz) == date]
-    return sorted(fx, key=lambda f: (f.kickoff_utc, f.competition, f.home_name))
+    # Full-day inventory must include settled/started fixtures and unsupported men's leagues.
+    from .polymarket import fixtures_for_date as full_day_fixtures
+    return full_day_fixtures(date, tz=tz, use_cache=use_cache)

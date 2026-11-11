@@ -153,6 +153,7 @@ export async function loadScan(site, date) {
   }
   return {
     date,
+    inventoryScope: dates?.fixture_scope || null,
     games,
     fetchedAt: edge?.market_fetched_at || null,
     nFixtures: dates?.forecasts?.length ? forecasts.length : games.length,
@@ -308,9 +309,12 @@ function summaryLines(scan, games, rows, bets, nobets, opts) {
   if (!scan.hasEdge && !rows.length) {
     lines.push(scan.hasDates
       ? `Forecasts are frozen for **${scan.nForecast}** games, but the pipeline hasn't captured Jupiter prices for ${scan.date} yet, so there are no picks. It snapshots every 3 hours, or open the dashboard and hit **Fetch live Jupiter prices now**.`
-      : `No ORACLE FC scan stored for **${scan.date}**. The pipeline covers today to +7 days, because Jupiter only lists upcoming games.`);
+      : `No ORACLE FC scan stored for **${scan.date}**. Run /soccer to load the full day’s men’s Polymarket fixtures.`);
   } else {
     lines.push(`**${rows.length}** games · **${bets.length}** bet · **${nobets.length}** NO BET · score predictions for **${nFc}**${rows.length > nFc ? ` (${rows.length - nFc} not forecast)` : ""}`);
+    const earlier=rows.filter(r=>!r.sim && r.why===STATUS_WHY.not_forecast_before_kickoff).length;
+    const gaps=rows.filter(r=>!r.sim && r.why!==STATUS_WHY.not_forecast_before_kickoff).length;
+    if(earlier || gaps)lines.push(`📋 ${scan.inventoryScope==='full-day-men-v1'?"Full-day men's inventory":"Coverage"}: ${nFc} predictions · ${gaps} data/coverage gaps · ${earlier} started without a saved pregame forecast.`);
     if(nFc===0 && rows.length){
       const late=rows.filter(r=>r.why===STATUS_WHY.not_forecast_before_kickoff).length;
       lines.push(`No score forecasts available: ${rows.length-late} game(s) lack sufficient rated history${late?`; ${late} kicked off without a saved pregame forecast`:''}. This is a coverage gap, not a betting pass.`);

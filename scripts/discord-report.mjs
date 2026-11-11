@@ -21,8 +21,8 @@ if (!scan.hasDates) throw new Error('Model did not produce a date file');
 const messages = chunkEmbeds(buildEmbeds(scan, site, { onlyBets: !suppressPrices && process.env.ONLY_BETS === '1' })).map(embeds => ({ embeds }));
 if (fallback) {
   messages[0].content = dates.n_forecast
-    ? '⚠️ Jupiter fixture feed unavailable. Showing saved pregame forecasts for this date. No bets recommended.'
-    : '⚠️ Jupiter fixture feed unavailable. No saved pregame forecasts for this date. No bets recommended.';
+    ? '⚠️ Fixture feed unavailable. Showing saved pregame forecasts for this date. No bets recommended.'
+    : '⚠️ Fixture feed unavailable. No saved pregame forecasts for this date. No bets recommended.';
 }
 await fs.mkdir('out', { recursive: true });
 await fs.writeFile('out/discord.json', JSON.stringify(messages));
