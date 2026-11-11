@@ -1,3 +1,5 @@
+// Owner policy applies to live output and previously cached cards alike.
+export const womensFixture = f => /women|female|femeni|femini|frauen|kvinner|vrouwen/i.test([f.competition,f.home_name,f.away_name,f.home,f.away].filter(Boolean).join(' ')) || ['uwcl','uwec','nwsl','wsl'].includes(String(f.subcategory||'').toLowerCase());
 import BB from '../../web/bestbet.js';
 // Encrypt short-lived interaction credentials before putting them in public workflow inputs.
 export async function dispatchModel(env, interaction, date, workflow, repo) {
@@ -142,8 +144,8 @@ export async function loadScan(site, date) {
     getJSON(`${site}/data/results/${date}.json`).catch(() => null),
     getJSON(`${site}/data/results/record.json`).catch(() => null),
   ]);
-  const forecasts = dates?.forecasts || [];
-  const games = edge ? gamesFromEdge(edge) : [];
+  const forecasts = (dates?.forecasts || []).filter(f=>!womensFixture(f.fixture||{}));
+  const games = (edge ? gamesFromEdge(edge) : []).filter(g=>!womensFixture(g));
   const graded = new Map((results?.games || []).map((g) => [g.event_id, g]));
   for (const g of games) {
     const r = graded.get(g.event_id);
@@ -153,7 +155,7 @@ export async function loadScan(site, date) {
     date,
     games,
     fetchedAt: edge?.market_fetched_at || null,
-    nFixtures: dates?.n_fixtures ?? forecasts.length,
+    nFixtures: dates?.forecasts?.length ? forecasts.length : games.length,
     nForecast: forecasts.filter((f) => f.status === "ok").length,
     modelVersion: modelVersionOf(games, dates, edge),
     results: results?.summary || null,
@@ -191,6 +193,7 @@ export function allGames(scan) {
   const byId = new Map(scan.games.map((g) => [g.event_id, g]));
   const rows = new Map();
   for (const f of scan.forecasts || []) {
+    if(womensFixture(f.fixture||{}))continue;
     const fx = f.fixture || {};
     const id = fx.event_id;
     if (!id) continue;
@@ -199,7 +202,7 @@ export function allGames(scan) {
       kickoff_utc: fx.kickoff_utc, sim: ok ? f.simulation : null, forecastOnly: f.forecast_only === true,
       why: ok ? null : forecastReason(f), g: byId.get(id) || null });
   }
-  for (const g of scan.games) if (!rows.has(g.event_id)) {
+  for (const g of scan.games) if (!womensFixture(g) && !rows.has(g.event_id)) {
     rows.set(g.event_id, { event_id: g.event_id, home: g.home, away: g.away, competition: g.competition, kickoff_utc: g.kickoff_utc,
       sim: null, why: "forecast not in the published date file", g });
   }

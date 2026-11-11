@@ -8,6 +8,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
+from oraclefc.sports_policy import fixture_allowed, WOMEN
 from oraclefc import config  # noqa: E402
 from oraclefc.experiments import load_registry  # noqa: E402
 
@@ -24,7 +25,15 @@ def main():
         (data / sub).mkdir(parents=True, exist_ok=True)
         if src.exists():
             for f in src.glob("*.json"):
-                shutil.copy(f, data / sub / f.name)
+                obj=json.loads(f.read_text())
+                if sub=='dates':
+                    obj['forecasts']=[r for r in obj.get('forecasts',[]) if fixture_allowed(r.get('fixture',{}))]
+                    obj['n_fixtures']=len(obj['forecasts']);obj['n_forecast']=sum(r.get('status')=='ok' for r in obj['forecasts'])
+                if sub=='edge':
+                    obj['events']=[r for r in obj.get('events',[]) if not WOMEN.search(str(r.get('competition','')))]
+                    bb=obj.get('best_bets') or {}
+                    if 'games' in bb:bb['games']=[r for r in bb['games'] if not WOMEN.search(str(r.get('competition','')))]
+                (data / sub / f.name).write_text(json.dumps(obj,default=str))
     # past dates no longer listed by Jupiter: rebuild the date view from frozen forecasts
     from oraclefc import frozen
     if config.FORECAST_DIR.exists():
@@ -32,7 +41,7 @@ def main():
             out = data / "dates" / f"{d}.json"
             if out.exists():
                 continue
-            fcs = frozen.load_date(d)
+            fcs = [f for f in frozen.load_date(d) if fixture_allowed(f.get("fixture",{}))]
             out.write_text(json.dumps({"date": d, "tz": config.USER_TZ, "from_frozen_archive": True,
                                        "n_fixtures": len(fcs), "n_forecast": len(fcs),
                                        "model_version": fcs[0]["model_version"] if fcs else None,

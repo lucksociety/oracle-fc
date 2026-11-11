@@ -9,7 +9,7 @@ import pandas as pd
 
 from . import config
 from .governance import CLEAN_MATCH_SCHEMA, validate_clean_matches, now_utc_iso
-from .ingest import espn_results, footballdata, openfootball_cl
+from .ingest import fotmob_results, espn_results, footballdata, openfootball_cl
 from .teams import core_tokens, match_team, team_key
 
 CLEAN_PARQUET = config.CLEAN_DIR / "matches.parquet"
@@ -59,6 +59,10 @@ def build(seasons: list[str] | None = None, include_extra: bool = True, include_
     parts = [dom]
     if include_extra:
         extra_results, extra_provenance = espn_results.fetch()
+        fm_results, fm_provenance = fotmob_results.fetch()
+        if not fm_results.empty:
+            parts.append(fm_results)
+            prov += fm_provenance
         if not extra_results.empty:
             parts.append(extra_results)
             prov += extra_provenance
@@ -99,6 +103,7 @@ def build(seasons: list[str] | None = None, include_extra: bool = True, include_
 def load(path=None, *, include_supplemental: bool = False) -> pd.DataFrame:
     df = pd.read_parquet(path or CLEAN_PARQUET)
     df = validate_clean_matches(df)
+    df = df.loc[~df["div"].isin(config.WOMEN_DIVISIONS) & (df["country"]!="Women")].copy()
     return df if include_supplemental else df.loc[~df["div"].isin(config.SUPPLEMENTAL_DIVISIONS)].copy()
 
 

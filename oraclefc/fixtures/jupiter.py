@@ -16,12 +16,13 @@ import os
 import re
 import time
 from dataclasses import asdict, dataclass
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 from zoneinfo import ZoneInfo
 
 import requests
 
 from .. import config
+from ..sports_policy import allowed, fixture_allowed
 from ..governance import assert_no_market_keys, now_utc_iso
 
 BASE = os.environ.get("JUPITER_API_BASE", "https://api.jup.ag/prediction/v1")
@@ -59,15 +60,17 @@ def _headers():
     return h
 
 
-def _get(url: str, params: dict, retries: int = 6):
+def _get(url: str, params: dict, retries: int = 4):
     for i in range(retries):
-        r = requests.get(url, params=params, headers=_headers(), timeout=30)
-        if r.status_code == 429:
-            time.sleep(min(30, 2 ** i + 1))
-            continue
-        r.raise_for_status()
-        return r.json()
-    raise requests.HTTPError("Jupiter fixture API rate limit persisted (HTTP 429)", response=r)
+        try:
+            r = requests.get(url, params=params, headers=_headers(), timeout=20)
+            r.raise_for_status()
+            return r.json()
+        except requests.RequestException as exc:
+            status=getattr(getattr(exc,'response',None),'status_code',None)
+            if status is not None and status!=429 and status<500: raise
+            if i+1==retries: raise
+            time.sleep(min(8,2**i+1))
 
 
 def sanitise_event(ev: dict) -> Fixture | None:
@@ -81,6 +84,8 @@ def sanitise_event(ev: dict) -> Fixture | None:
     begin = ev.get("beginAt")
     if not m or not begin:
         return None  # outrights / futures ("EPL: 2027 Champion") are not matches
+    if not fixture_allowed({"subcategory":ev.get("subcategory"),"competition":md.get("league"),"home_name":m.group("h"),"away_name":m.group("a")}):
+        return None
     if "soccer" not in (ev.get("tags") or []):
         return None
     kickoff = datetime.fromtimestamp(int(begin), timezone.utc).isoformat()
@@ -90,32 +95,43 @@ def sanitise_event(ev: dict) -> Fixture | None:
         subcategory=str(ev.get("subcategory") or ""), kickoff_utc=kickoff, slug=str(md.get("slug") or ""))
 
 
-def fetch_all_soccer(use_cache: bool = True) -> list[Fixture]:
-    if use_cache and CACHE.exists() and time.time() - CACHE.stat().st_mtime < CACHE_TTL:
-        return [Fixture(**d) for d in json.loads(CACHE.read_text())["fixtures"]
-                if d["event_id"].startswith("POLY-")]
+def fetch_all_soccer(use_cache: bool = True, through_date: str | None = None, tz: str = config.USER_TZ) -> list[Fixture]:
+    cached = None
+    if use_cache and CACHE.exists() and time.time()-CACHE.stat().st_mtime<CACHE_TTL:
+        try: cached=json.loads(CACHE.read_text())
+        except (ValueError,OSError): pass
+    if cached and cached.get('scope')=='upcoming-men-v2' and (cached.get('complete') or through_date and cached.get('through_date','')>=through_date):
+        return [Fixture(**d) for d in cached['fixtures'] if d['event_id'].startswith('POLY-') and fixture_allowed(d)]
+    end_time=(datetime.fromisoformat(through_date).replace(tzinfo=ZoneInfo(tz))+timedelta(days=1)).timestamp() if through_date else None
+    previous=0;ordered=True;complete=False
     out, start, page = [], 0, 100
     while True:
-        js = _get(f"{BASE}/events", {"category": "sports", "tags": "soccer", "start": start,
+        js = _get(f"{BASE}/events", {"category": "sports", "tags": "soccer", "filter":"upcoming", "start": start,
                                      "end": start + page, "sortBy": "beginAt", "sortDirection": "asc"})
         for ev in js.get("data", []):
             fx = sanitise_event(ev)
             if fx:
                 out.append(fx)
-        if not js.get("pagination", {}).get("hasNext") or start > 5000:
-            break
+        times=[int(e['beginAt']) for e in js.get('data',[]) if str(e.get('beginAt','')).isdigit()]
+        ordered=ordered and times==sorted(times) and (not times or times[0]>=previous)
+        if times: previous=times[-1]
+        if not js.get('pagination',{}).get('hasNext'):
+            complete=True;break
+        # The requested date is complete once the sorted feed reaches tomorrow.
+        if end_time and ordered and times and times[-1]>=end_time:break
+        if start>=5000:raise requests.HTTPError('Jupiter fixture pagination exceeded safety limit; refusing a partial slate')
         start += page
-        time.sleep(0.6)
+        time.sleep(0.25 if os.environ.get("JUPITER_API_KEY") else 2.1)
     seen, uniq = set(), []
     for f in out:
         if f.event_id not in seen:
             seen.add(f.event_id)
             uniq.append(f)
     CACHE.parent.mkdir(parents=True, exist_ok=True)
-    CACHE.write_text(json.dumps({"fetched_at": now_utc_iso(), "fixtures": [f.to_dict() for f in uniq]}))
+    CACHE.write_text(json.dumps({"scope":"upcoming-men-v2", "complete":complete, "through_date":through_date, "fetched_at": now_utc_iso(), "fixtures": [f.to_dict() for f in uniq]}))
     return uniq
 
 
 def fixtures_for_date(date: str, tz: str = config.USER_TZ, use_cache: bool = True) -> list[Fixture]:
-    fx = [f for f in fetch_all_soccer(use_cache) if f.local_date(tz) == date]
+    fx = [f for f in fetch_all_soccer(use_cache, through_date=date, tz=tz) if f.local_date(tz) == date]
     return sorted(fx, key=lambda f: (f.kickoff_utc, f.competition, f.home_name))

@@ -10,13 +10,12 @@ from .teams import match_team
 
 EURO_COMPS = {"ucl", "uel", "ucol"}
 SUPPLEMENTAL_ALIASES = {
-    # Explicit identities checked against the ESPN women's competition records.
-    "uwcl": {"BK Häcken FF":"BK Häcken", "Chelsea FC":"Chelsea", "Real Madrid CF Femenino":"Real Madrid",
-             "AS Roma":"Roma", "Servette FC Chênois Féminin":"Servette", "FC Internazionale Milano":"Internazionale",
-             "Manchester City WFC":"Manchester City", "Paris Saint-Germain FC":"Paris Saint-Germain", "FC Bayern München":"Bayern Munich"},
+    "bra2": {"Londrina EC":"Londrina", "Clube Náutico Capibaribe":"Náutico"},
+    "col2": {"Real Cartagena FC":"Real Cartagena"},
+    "clf": {"SC Wiedenbruck":"SC Wiedenbrück", "Preussen Munster II":"Preußen Münster II", "FC Wegberg-Beeck":"FC Wegberg-Beeck"},
     "col1": {"Cúcuta Deportivo FC": "Cúcuta Deportivo", "Millonarios FC": "Millonarios", "América de Cali": "América de Cali"},
     "fpd": {"Escorpiones de Belén": "Escorpiones Belén", "LD Alajuelense": "Alajuelense"},
-    "mex2": {"Atletico Morelia": "Club Atlético Morelia"},
+    "mex2": {"Atletico Morelia": "Atletico Morelia", "Club Atletico La Paz":"Atlético La Paz", "Piratas Veracruz":"Piratas"},
     "par1": {"Libertad Asuncion": "Libertad", "Club Guarani Asuncion": "Guaraní", "Recoleta FC": "Deportivo Recoleta"},
     "per1": {"Club Universitario de Deportes": "Universitario", "Sport Boys Association": "Sport Boys"},
     "ven1": {"Portuguesa FC": "Portuguesa", "Metropolitanos FC": "Metropolitanos", "Carabobo FC": "Carabobo"},
@@ -72,6 +71,7 @@ class Resolver:
     def resolve(self, home_name: str, away_name: str, subcategory: str = "", neutral: bool = False) -> Resolved:
         sub = (subcategory or "").lower()
         divs = config.JUPITER_SUBCATEGORY_DIVS.get(sub)
+        if sub=="clf": divs = list(self.by_div)
         r = Resolved(home_name, away_name, neutral=neutral)
         if divs is None:
             r.notes.append(f"UNSUPPORTED competition '{subcategory}': no free historical results source is "
@@ -103,9 +103,7 @@ class Resolver:
         if r.home_key and r.home_key == r.away_key:
             r.notes.append("INVALID team identity: both opponents resolved to the same club; no forecast is produced.")
         if r.ok:
-            if sub == "uwcl":
-                r.div, r.country = "WCL", "Women"
-            elif sub in EURO_COMPS:
+            if sub in EURO_COMPS:
                 r.div, r.country = "UCL", "Europe"
                 if sub != "ucl":
                     r.notes.append("Europa/Conference League: modelled with the Champions League home-advantage and "

@@ -17,6 +17,7 @@ import numpy as np
 import pandas as pd
 
 from . import __version__, config, frozen, store
+from .sports_policy import allowed, fixture_allowed
 from .experiments import load_registry
 from .governance import assert_no_price_keys, now_utc_iso
 from .models.baselines import HomeAwayRate
@@ -37,8 +38,7 @@ class Engine:
     def __init__(self, df: pd.DataFrame | None = None, as_of: pd.Timestamp | None = None, with_context: bool = True, *, supplemental: bool = False):
         self.with_context = with_context
         raw = df if df is not None else store.load(include_supplemental=True)
-        if supplemental and raw['div'].isin(config.WOMEN_DIVISIONS).any() and (~raw['div'].isin(config.WOMEN_DIVISIONS)).any():
-            raise ValueError('Women and men require separate supplemental model pools')
+        raw=raw.loc[~raw["div"].isin(config.WOMEN_DIVISIONS) & (raw["country"]!="Women")].copy()
         self.supplemental = supplemental
         self.supplemental_data = raw.loc[raw["div"].isin(config.SUPPLEMENTAL_DIVISIONS)]
         self.supplemental_engines = {}
@@ -60,7 +60,7 @@ class Engine:
         if supplemental:
             self.champion = "dynamic_dc"
             self.weights = {"dynamic_dc": 1.0}
-            self.version = "supplemental-women-results-v1" if set(self.df["div"]) <= config.WOMEN_DIVISIONS else "supplemental-results-v1"
+            self.version = "supplemental-results-v1"
             self.confidence = {}
         # results-only calibration layer (validated in docs/CALIBRATION.md); None = not adopted
         self.calibration = calibrate.from_json(ch["calibration"]) if ch.get("calibration") and not supplemental else None
@@ -242,13 +242,15 @@ class Engine:
     def forecast(self, home_name: str, away_name: str, competition: str = "", subcategory: str = "",
                  kickoff_utc: str | None = None, event_id: str | None = None, neutral: bool = False,
                  mc_sims: int = 200_000) -> dict:
-        if not self.supplemental and (subcategory or '').lower() in config.SUPPLEMENTAL_SUBCATEGORIES:
-            div = config.SUPPLEMENTAL_SUBCATEGORIES[subcategory.lower()]
-            women = div in config.WOMEN_DIVISIONS
-            pool = config.WOMEN_DIVISIONS if women else set(config.SUPPLEMENTAL_DIVISIONS) - config.WOMEN_DIVISIONS
+        if not fixture_allowed({"subcategory":subcategory,"competition":competition,"home_name":home_name,"away_name":away_name}):
+            return {"status":"excluded","fixture":{"home_name":home_name,"away_name":away_name,"subcategory":subcategory,"competition":competition,"event_id":event_id,"kickoff_utc":kickoff_utc},"data_quality":["Competition excluded by men's-only coverage policy."]}
+        fallback_friendly=subcategory.lower()=='clf' and not self.resolver.resolve(home_name,away_name,subcategory,neutral).ok
+        if not self.supplemental and ((subcategory or '').lower() in config.SUPPLEMENTAL_SUBCATEGORIES or fallback_friendly):
+            div = config.SUPPLEMENTAL_SUBCATEGORIES.get(subcategory.lower())
+            pool = set(config.SUPPLEMENTAL_DIVISIONS)
             history = self.supplemental_data.loc[(self.supplemental_data["date"] < self.as_of) & self.supplemental_data["div"].isin(pool)]
             if not history.empty:
-                group = "women" if women else "men"
+                group = "men"
                 if group not in self.supplemental_engines:
                     self.supplemental_engines[group] = Engine(history, self.as_of, with_context=False, supplemental=True)
                 return self.supplemental_engines[group].forecast(home_name, away_name, competition, subcategory,
@@ -333,7 +335,7 @@ class Engine:
                    f"{self.champion} model put the joint mode there "
                    f"(DC low-score dependence rho={float(rho[0]):+.3f}). Exact scores are inherently uncertain; "
                    f"the 1X2 split is {s['p_home']:.1%}/{s['p_draw']:.1%}/{s['p_away']:.1%}.")
-        out = {**base, "status": "ok", **({"forecast_only": True} if self.supplemental else {}), "simulation": s, "monte_carlo": mc, "uncertainty": unc,
+        out = {**base, "status": "ok", **({"forecast_only": True} if self.supplemental or subcategory.lower()=="clf" else {}), "simulation": s, "monte_carlo": mc, "uncertainty": unc,
                "components": comp_summary, "key_factors": self._key_factors(r, fx, context),
                "base_simulation": {k: s0[k] for k in ("p_home", "p_draw", "p_away", "xg_home", "xg_away")},
                "context": context,
@@ -355,7 +357,7 @@ def forecast_date(date: str, engine: Engine | None = None, freeze: bool = True, 
     refresh_id = uuid4().hex if not use_cache else None
 
     saved_for_date = [record for record in frozen.load_date(date)
-                      if str(record["fixture"].get("event_id") or "").startswith("POLY-")]
+                      if str(record["fixture"].get("event_id") or "").startswith("POLY-") and fixture_allowed(record["fixture"])]
     try:
         fixtures = fixtures_for_date(date, use_cache=use_cache)
     except RequestException as exc:
@@ -369,6 +371,7 @@ def forecast_date(date: str, engine: Engine | None = None, freeze: bool = True, 
 
     engine = engine or Engine()
     out = []
+    fixtures=[f for f in fixtures if allowed(f.subcategory,f.competition)]
     for f in fixtures:
         now = datetime.now(timezone.utc)
         existing = [x for x in saved_for_date if x["fixture"].get("event_id") == f.event_id]
@@ -402,5 +405,5 @@ def forecast_date(date: str, engine: Engine | None = None, freeze: bool = True, 
             out.append(x)
     out.sort(key=lambda x: (x["fixture"].get("kickoff_utc") or "", x["fixture"].get("home_name", "")))
     return {"date": date, "tz": config.USER_TZ, "generated_at": now_utc_iso(), "model_version": engine.version,
-            "data_cutoff": engine.cutoff, "n_fixtures": len(fixtures),
+            "data_cutoff": engine.cutoff, "n_fixtures": len(out),
             "n_forecast": sum(1 for x in out if x.get("status") == "ok"), "forecasts": out}

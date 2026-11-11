@@ -139,7 +139,7 @@ def test_js_mirror_matches_python():
 
 def _fc(eid, frozen_at, kickoff):
     return {"status": "ok", "frozen_at": frozen_at, "model_version": "t", "fixture": {
-        "event_id": eid, "home_name": "Home FC", "away_name": "Away FC", "competition": "X", "kickoff_utc": kickoff},
+        "event_id": eid, "home_name": "Home FC", "away_name": "Away FC", "competition": "Premier League", "subcategory":"epl", "kickoff_utc": kickoff},
         "simulation": {"modal_score": {"home": 1, "away": 0}, "p_home": .5, "p_draw": .25, "p_away": .25, "btts": .5, "totals_over": {"over_2.5": .5},
                        "top_scores": [], "score_grid": _grid(1.6, 1.0, 7)}}
 
