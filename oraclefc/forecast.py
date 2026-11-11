@@ -349,7 +349,7 @@ class Engine:
 
 def forecast_date(date: str, engine: Engine | None = None, freeze: bool = True, use_cache: bool = True,
                   within_hours: float | None = None, allow_frozen_fallback: bool = False) -> dict:
-    """Discover the date's Jupiter soccer fixtures and forecast each one."""
+    """Load the full day's men's Polymarket inventory and forecast eligible pregame fixtures."""
     from .fixtures.jupiter import fixtures_for_date
 
     from requests import RequestException
@@ -364,7 +364,7 @@ def forecast_date(date: str, engine: Engine | None = None, freeze: bool = True, 
         if not allow_frozen_fallback:
             raise
         saved = [record for record in saved_for_date if frozen.verify(record)]
-        print(f"Jupiter fixture request failed for {date}: {exc}")
+        print(f"Polymarket fixture request failed for {date}: {exc}")
         return {"date": date, "tz": config.USER_TZ, "generated_at": now_utc_iso(),
                 "fixture_feed_unavailable": True, "n_fixtures": len(saved),
                 "n_forecast": len(saved), "forecasts": saved}
@@ -404,6 +404,6 @@ def forecast_date(date: str, engine: Engine | None = None, freeze: bool = True, 
         if x["fixture"].get("event_id") not in seen:
             out.append(x)
     out.sort(key=lambda x: (x["fixture"].get("kickoff_utc") or "", x["fixture"].get("home_name", "")))
-    return {"date": date, "tz": config.USER_TZ, "generated_at": now_utc_iso(), "model_version": engine.version,
+    return {"date": date, "tz": config.USER_TZ, "fixture_scope":"full-day-men-v1", "generated_at": now_utc_iso(), "model_version": engine.version,
             "data_cutoff": engine.cutoff, "n_fixtures": len(out),
             "n_forecast": sum(1 for x in out if x.get("status") == "ok"), "forecasts": out}

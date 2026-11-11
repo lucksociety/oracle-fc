@@ -57,7 +57,7 @@ def cmd_run(a):
         res = forecast_date(d, eng, freeze=not a.no_freeze, use_cache=not a.refresh, within_hours=a.within_hours,
                             allow_frozen_fallback=a.allow_frozen_fallback)
         (out_dir / f"{d}.json").write_text(json.dumps(res, default=str))
-        print(f"{d}: {res['n_fixtures']} Jupiter fixtures, {res['n_forecast']} forecast")
+        print(f"{d}: {res['n_fixtures']} Polymarket fixtures, {res['n_forecast']} forecast")
         if a.print:
             for f in res["forecasts"]:
                 if f.get("status") == "ok":
