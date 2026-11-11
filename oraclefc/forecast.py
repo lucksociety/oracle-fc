@@ -24,7 +24,7 @@ from .models.baselines import HomeAwayRate
 from .models.dixon_coles import dynamic_dc, standard_dc, xg_dc
 from .models.elo import EloGoals
 from .models.ensemble import combine
-from . import calibrate
+from . import calibrate, supplemental_validation
 from .report import render
 from .resolve import Resolver
 from .simulate import monte_carlo, param_uncertainty, summarise
@@ -57,10 +57,11 @@ class Engine:
         self.weights = ch.get("ensemble_weights", DEFAULT_WEIGHTS) if self.champion == "ensemble" else DEFAULT_WEIGHTS
         self.version = ch.get("version", f"{__version__}+dynamic_dc-untuned")
         self.confidence = reg.get("confidence", {})
+        self.supplemental_policy=supplemental_validation.load_policy(self.as_of,p)if supplemental else {}
         if supplemental:
             self.champion = "dynamic_dc"
             self.weights = {"dynamic_dc": 1.0}
-            self.version = "supplemental-results-v1"
+            self.version = "supplemental-results-v2"if self.supplemental_policy else"supplemental-results-v1"
             self.confidence = {}
         # results-only calibration layer (validated in docs/CALIBRATION.md); None = not adopted
         self.calibration = calibrate.from_json(ch["calibration"]) if ch.get("calibration") and not supplemental else None
@@ -103,6 +104,7 @@ class Engine:
         settings = json.dumps({"params": p, "weights": self.weights, "calibration": ch.get("calibration"),
                                "context": ctx_reg, "as_of": str(self.as_of),
                                "identity_policy": "explicit-alias-v2"}, sort_keys=True, default=str).encode()
+        if self.supplemental_policy:settings+=json.dumps(self.supplemental_policy,sort_keys=True).encode()
         self.input_fingerprint = hashlib.sha256(result_hash + settings).hexdigest()
         self.resolver = Resolver(self.df)
         self.player_book = None
@@ -119,6 +121,8 @@ class Engine:
         return self.calibrated(combine(mats, w), fx)[0], comp
 
     def calibrated(self, m: np.ndarray, fx: pd.DataFrame) -> np.ndarray:
+        if self.supplemental_policy:
+            m=np.array([supplemental_validation.adjust(x,self.supplemental_policy["leagues"][str(div)]["temperature"])if supplemental_validation.eligible(self.supplemental_policy,div)else x for x,div in zip(m,fx["div"])])
         if not self.calibration:
             return m
         return calibrate.apply(m, self.calibration["coef"], fx["div"].astype(str).to_numpy(),
@@ -278,7 +282,7 @@ class Engine:
                    (self.as_of - self.resolver.last_match_date(key)).days > 60 for key in keys):
                 return {**base, "status": "unsupported",
                         "data_quality": dq + ["Supplemental results are too sparse or stale for this pairing."]}
-            dq.append("Supplemental results model. Forecast only until league calibration is validated.")
+            dq.append("Results-only league passed chronological validation; team-level availability model."if supplemental_validation.eligible(self.supplemental_policy,fx.iloc[0]["div"])else"Supplemental results model. Forecast only until league calibration is validated.")
         m, comps = self.matrix(fx)
         if not np.isfinite(m).all():
             return {**base, "status": "unsupported", "data_quality": dq + ["Component models could not rate this pairing."]}
@@ -335,7 +339,7 @@ class Engine:
                    f"{self.champion} model put the joint mode there "
                    f"(DC low-score dependence rho={float(rho[0]):+.3f}). Exact scores are inherently uncertain; "
                    f"the 1X2 split is {s['p_home']:.1%}/{s['p_draw']:.1%}/{s['p_away']:.1%}.")
-        out = {**base, "status": "ok", **({"forecast_only": True} if self.supplemental or subcategory.lower()=="clf" else {}), "simulation": s, "monte_carlo": mc, "uncertainty": unc,
+        out = {**base, "status": "ok", **({"forecast_only": True} if (self.supplemental and not supplemental_validation.eligible(self.supplemental_policy,fx.iloc[0]["div"])) or subcategory.lower()=="clf" else {}), "simulation": s, "monte_carlo": mc, "uncertainty": unc,
                "components": comp_summary, "key_factors": self._key_factors(r, fx, context),
                "base_simulation": {k: s0[k] for k in ("p_home", "p_draw", "p_away", "xg_home", "xg_away")},
                "context": context,

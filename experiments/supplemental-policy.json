@@ -1,0 +1,227 @@
+{
+  "schema": 1,
+  "policy": "supplemental-chronological-v1",
+  "model_params": {
+    "half_life_days": 240.0,
+    "kappa": 8.0,
+    "elo_k": 22.0
+  },
+  "tune_year": 2025,
+  "test_window": [
+    "2026-01-01",
+    "2026-11-10"
+  ],
+  "result_through": "2026-11-10",
+  "data_source": "allowlisted men-only historical results",
+  "oos_input_sha256": "cbfda46367f650a521012e81df83a731a80485d8985a2baf05664c4843143eb0",
+  "adoption": "At least 200 tuning and 200 heldout forecasts per league; candidate temperature selected only on 2025; 99% week-clustered CIs beat results-only league H/D/A prior on log loss and Brier; heldout 1X2 and exact-score loss no worse than uncalibrated model. No betting prices used; this does not establish profitable betting edge.",
+  "leagues": {
+    "BRA2": {
+      "eligible": false,
+      "temperature": 1.1,
+      "tune_n": 322,
+      "test_n": 323,
+      "test_logloss": 1.0325815228528668,
+      "baseline_logloss": 1.0650903982060695,
+      "test_brier": 0.620896604269549,
+      "baseline_brier": 0.6429768909284657,
+      "raw_model_logloss": 1.030571857057402,
+      "exact_score_logloss": 2.711465289045628,
+      "raw_exact_score_logloss": 2.709455623250163,
+      "baseline_delta_week_bootstrap_99": {
+        "ll": [
+          -0.06422023068496528,
+          -0.0017764240941957965
+        ],
+        "bs": [
+          -0.044392381788027305,
+          -0.0009412845770364382
+        ]
+      }
+    },
+    "COL": {
+      "eligible": false,
+      "temperature": 1.0,
+      "tune_n": 434,
+      "test_n": 361,
+      "test_logloss": 1.0141557916822348,
+      "baseline_logloss": 1.0594291231021375,
+      "test_brier": 0.6101921091890586,
+      "baseline_brier": 0.6396044582212532,
+      "raw_model_logloss": 1.014155791682235,
+      "exact_score_logloss": 2.7290485439668255,
+      "raw_exact_score_logloss": 2.729048543966825,
+      "baseline_delta_week_bootstrap_99": {
+        "ll": [
+          -0.08752305596859467,
+          -0.0018916825642927152
+        ],
+        "bs": [
+          -0.05820966433335141,
+          0.00045394834472527114
+        ]
+      }
+    },
+    "COL2": {
+      "eligible": false,
+      "temperature": 1.0,
+      "tune_n": 288,
+      "test_n": 271,
+      "test_logloss": 1.0872194383701843,
+      "baseline_logloss": 1.1179562051652183,
+      "test_brier": 0.6580619263947034,
+      "baseline_brier": 0.6804327038910449,
+      "raw_model_logloss": 1.0872194383701845,
+      "exact_score_logloss": 2.651159259411233,
+      "raw_exact_score_logloss": 2.651159259411233,
+      "baseline_delta_week_bootstrap_99": {
+        "ll": [
+          -0.07568666552071901,
+          0.015988367530672617
+        ],
+        "bs": [
+          -0.05176352138294973,
+          0.00837425703929782
+        ]
+      }
+    },
+    "D3": {
+      "eligible": false,
+      "temperature": 1.0,
+      "tune_n": 361,
+      "test_n": 301,
+      "test_logloss": 1.0214077335130005,
+      "baseline_logloss": 1.0512293081092003,
+      "test_brier": 0.6136833872143949,
+      "baseline_brier": 0.6345003939054324,
+      "raw_model_logloss": 1.0214077335130003,
+      "exact_score_logloss": 3.2237727345326594,
+      "raw_exact_score_logloss": 3.223772734532659,
+      "baseline_delta_week_bootstrap_99": {
+        "ll": [
+          -0.07149856590800566,
+          0.004319886411748338
+        ],
+        "bs": [
+          -0.05111265660129374,
+          0.004662194589523232
+        ]
+      }
+    },
+    "MEX2": {
+      "eligible": false,
+      "temperature": 1.25,
+      "tune_n": 230,
+      "test_n": 224,
+      "test_logloss": 1.0320459013310856,
+      "baseline_logloss": 1.0202801602137943,
+      "test_brier": 0.6205968656843618,
+      "baseline_brier": 0.6109481023638409,
+      "raw_model_logloss": 1.0368061659044485,
+      "exact_score_logloss": 3.0669195676515364,
+      "raw_exact_score_logloss": 3.0716798322248993,
+      "baseline_delta_week_bootstrap_99": {
+        "ll": [
+          -0.034365180107160206,
+          0.05955805688129719
+        ],
+        "bs": [
+          -0.0227822187268476,
+          0.04447244685850603
+        ]
+      }
+    },
+    "PAR": {
+      "eligible": false,
+      "temperature": 1.0,
+      "tune_n": 245,
+      "test_n": 217,
+      "test_logloss": 1.0383375365164098,
+      "baseline_logloss": 1.0845615305616838,
+      "test_brier": 0.6227181195978017,
+      "baseline_brier": 0.6570252481729164,
+      "raw_model_logloss": 1.0383375365164098,
+      "exact_score_logloss": 2.7466273856615495,
+      "raw_exact_score_logloss": 2.7466273856615495,
+      "baseline_delta_week_bootstrap_99": {
+        "ll": [
+          -0.10718006920695275,
+          0.020749979336053215
+        ],
+        "bs": [
+          -0.07721622356849099,
+          0.011605735435248352
+        ]
+      }
+    },
+    "PER": {
+      "eligible": true,
+      "temperature": 1.0,
+      "tune_n": 293,
+      "test_n": 267,
+      "test_logloss": 0.9730200580413162,
+      "baseline_logloss": 1.0244730096071533,
+      "test_brier": 0.5774878073001072,
+      "baseline_brier": 0.6142757464141833,
+      "raw_model_logloss": 0.9730200580413162,
+      "exact_score_logloss": 2.876381035051966,
+      "raw_exact_score_logloss": 2.876381035051966,
+      "baseline_delta_week_bootstrap_99": {
+        "ll": [
+          -0.09201987725347363,
+          -0.011019007256733155
+        ],
+        "bs": [
+          -0.06298002619540327,
+          -0.010126125309551948
+        ]
+      }
+    },
+    "RG": {
+      "eligible": false,
+      "temperature": 1.1,
+      "tune_n": 1355,
+      "test_n": 1279,
+      "test_logloss": 1.0278927602898427,
+      "baseline_logloss": 1.0774863475793837,
+      "test_brier": 0.6162634991946835,
+      "baseline_brier": 0.6532577221326125,
+      "raw_model_logloss": 1.0277975373795698,
+      "exact_score_logloss": 3.1516050907718305,
+      "raw_exact_score_logloss": 3.151509867861558,
+      "baseline_delta_week_bootstrap_99": {
+        "ll": [
+          -0.07126933804947772,
+          -0.02828023636961788
+        ],
+        "bs": [
+          -0.05274740246325428,
+          -0.021751394955097373
+        ]
+      }
+    },
+    "VEN": {
+      "eligible": true,
+      "temperature": 1.0,
+      "tune_n": 214,
+      "test_n": 211,
+      "test_logloss": 1.0167228959045298,
+      "baseline_logloss": 1.0875705867051235,
+      "test_brier": 0.6087148514014478,
+      "baseline_brier": 0.6591235022355577,
+      "raw_model_logloss": 1.0167228959045298,
+      "exact_score_logloss": 2.8485501451444093,
+      "raw_exact_score_logloss": 2.8485501451444093,
+      "baseline_delta_week_bootstrap_99": {
+        "ll": [
+          -0.12123513961609529,
+          -0.02052353990179666
+        ],
+        "bs": [
+          -0.08595344632371095,
+          -0.014811714203053458
+        ]
+      }
+    }
+  }
+}
