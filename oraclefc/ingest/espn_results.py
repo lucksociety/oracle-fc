@@ -14,6 +14,8 @@ BASE = "https://site.api.espn.com/apis/site/v2/sports/soccer"
 
 
 def parse_results(data, div, year, url):
+    if div not in config.SUPPLEMENTAL_DIVISIONS or div in config.WOMEN_DIVISIONS:
+        return
     country = config.SUPPLEMENTAL_DIVISIONS[div][0]
     for event in data.get("events", []):
         if event.get("status", {}).get("type", {}).get("name") != "STATUS_FULL_TIME":

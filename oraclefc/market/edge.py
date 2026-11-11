@@ -8,6 +8,7 @@ from __future__ import annotations
 import json
 from datetime import datetime
 
+from ..sports_policy import fixture_allowed
 from .. import config, frozen
 from ..governance import now_utc_iso
 from .best_bet import FEES, MIN_P, best_bet
@@ -66,7 +67,7 @@ def fresh_quote(priced_at: str, now: datetime) -> bool:
 
 
 def edge_for_date(date: str, take_snapshot: bool = True) -> dict:
-    fcs = [f for f in frozen.load_date(date) if f.get("status") == "ok" and str(f["fixture"].get("event_id") or "").startswith("POLY-")]
+    fcs = [f for f in [f for f in frozen.load_date(date) if fixture_allowed(f.get("fixture",{}))] if f.get("status") == "ok" and str(f["fixture"].get("event_id") or "").startswith("POLY-")]
     fixtures = {f["fixture"]["event_id"]: f["fixture"] for f in fcs}
     snap = snapshot(list(fixtures), date, fixtures) if take_snapshot else None
     out = {"date": date, "label": "POST-HOC COMPARISON — market prices were fetched after the forecasts were "
