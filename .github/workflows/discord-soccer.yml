@@ -66,6 +66,8 @@ jobs:
           retention-days: 90
           if-no-files-found: error
       - name: Deliver result
+        env:
+          DELIVERY_RENDER_SCRIPT: scripts/discord-report.mjs
         run: node scripts/discord-relay.mjs post
       - name: Report failure
         if: failure() && env.INTERACTION_TOKEN != ''
