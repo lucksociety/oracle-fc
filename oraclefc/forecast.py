@@ -398,11 +398,9 @@ def forecast_date(date: str, engine: Engine | None = None, freeze: bool = True, 
                 fc = existing[-1] if existing else {"status": "not_forecast_before_kickoff", "fixture": f.to_dict(),
                     "data_quality": ["Fit finished after kickoff; no new forecast was published."]}
         out.append(fc)
-    # Events Jupiter no longer lists (settled / past dates): show what was frozen.
-    seen = {f.event_id for f in fixtures}
-    for x in saved_for_date:
-        if x["fixture"].get("event_id") not in seen:
-            out.append(x)
+    # Full-day open+closed discovery is authoritative for date membership.
+    # Do not reintroduce a saved fixture that moved to another day or was delisted.
+    # Its immutable forecast remains in the archive; feed failures use the explicit fallback above.
     out.sort(key=lambda x: (x["fixture"].get("kickoff_utc") or "", x["fixture"].get("home_name", "")))
     return {"date": date, "tz": config.USER_TZ, "fixture_scope":"full-day-men-v1", "generated_at": now_utc_iso(), "model_version": engine.version,
             "data_cutoff": engine.cutoff, "n_fixtures": len(out),

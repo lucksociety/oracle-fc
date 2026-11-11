@@ -93,3 +93,13 @@ def test_unrated_mens_international_is_a_coverage_gap_not_a_gender_exclusion(syn
     result=e.forecast('Vietnam','Chinese Taipei','FIFA Friendlies','fif',mc_sims=1000)
     assert result['status']=='unsupported' and 'simulation' not in result
     assert result['fixture']['match_methods']['home']['method']=='unsupported-competition'
+
+def test_rescheduled_or_delisted_saved_game_does_not_inflate_full_day_count(monkeypatch):
+    from oraclefc.fixtures import jupiter
+    old={'status':'ok','fixture':{'event_id':'POLY-old','subcategory':'epl','competition':'Premier League',
+                                'home_name':'Home','away_name':'Away','kickoff_utc':'2000-11-11T12:00:00Z'}}
+    monkeypatch.setattr(jupiter,'fixtures_for_date',lambda *a,**k:[])
+    monkeypatch.setattr(frozen,'load_date',lambda _:[old])
+    class Engine:version='test';cutoff='2000-11-10'
+    r=forecast.forecast_date('2000-11-11',Engine(),freeze=False)
+    assert r['n_fixtures']==0 and r['forecasts']==[] and old['status']=='ok'
