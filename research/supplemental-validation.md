@@ -38,3 +38,10 @@ python research/validate_supplemental.py \
 Review future research prospectively. Do not promote parameters or unlock leagues
 from daily betting outcomes. Existing results reconciliation and prospective
 forecast/bet ledgers continue collecting future evidence.
+
+
+Policy timing correction (November 12): a live scan uses the current decision
+time for validation eligibility, independently of the last ingested results date.
+Nested supplemental engines inherit that decision time. Explicit historical
+cutoffs retain point-in-time restrictions. Training inputs and their cutoff are
+unchanged; stale results cannot make a published validation policy disappear.
