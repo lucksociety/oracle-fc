@@ -172,6 +172,27 @@ def _pre_kickoff_forecast(date: str, event_id: str, kickoff: str) -> dict | None
     return best
 
 
+def verified_result(date: str, event_id: str, fixture: dict, now: datetime) -> dict | None:
+    """Explicit, sourced post-match corrections; never used as forecast inputs."""
+    path=config.DATA_DIR / 'verified_results.json'
+    if not path.exists():return None
+    records=json.loads(path.read_text())
+    row=records.get(str(event_id))
+    if not row:return None
+    expected={"date":date,"home":fixture["home_name"],"away":fixture["away_name"],"scope":"regulation"}
+    if any(row.get(k)!=v for k,v in expected.items()):return None
+    kickoff=datetime.fromisoformat(fixture['kickoff_utc'].replace('Z','+00:00'))
+    if datetime.fromisoformat(row['kickoff_utc'].replace('Z','+00:00'))!=kickoff:return None
+    verified=datetime.fromisoformat(row['verified_at'].replace('Z','+00:00'))
+    score=row.get('score_90')
+    if verified>now or verified<kickoff+timedelta(minutes=90):return None
+    if not isinstance(score,list) or len(score)!=2 or any(type(x)is not int or not 0<=x<=30 for x in score):return None
+    from urllib.parse import urlsplit
+    source=urlsplit(row.get('source_url',''))
+    if source.scheme!='https' or not source.hostname or source.username or source.password:return None
+    return {'finished':True,'score_ft':score,'score_note':row.get('note'),'source':row['source'], 'source_url':row['source_url']}
+
+
 # ------------------------------------------------------------------ grading
 def grade_date(date: str, fetch=None, now: datetime | None = None) -> dict:
     now = now or datetime.now(timezone.utc)
@@ -203,6 +224,8 @@ def grade_date(date: str, fetch=None, now: datetime | None = None) -> dict:
         else:
             row["no_bet_reason"] = bb.get("reason")
         r = find_result(fx, results)
+        if r is None or not r.get('finished') or r.get('score_ft') is None:
+            r = verified_result(date,eid,fx,now) or r
         if r is None or not r.get("finished") or r.get("score_ft") is None:
             started = datetime.fromisoformat(fx["kickoff_utc"]) < now
             row["status"] = "unknown" if started else "pending"
@@ -214,8 +237,8 @@ def grade_date(date: str, fetch=None, now: datetime | None = None) -> dict:
         hg, ag = r["score_ft"]
         row["status"] = "final"
         row["result"] = {"score_90": f"{hg}-{ag}", "note": r.get("score_note"),
-                         "source": f"FotMob match {r['fm_match_id']}",
-                         "url": f"https://www.fotmob.com/match/{r['fm_match_id']}"}
+                         "source": r.get("source") or f"FotMob match {r['fm_match_id']}",
+                         "url": r.get("source_url") or f"https://www.fotmob.com/match/{r['fm_match_id']}"}
         if fc:
             row["metrics"] = forecast_metrics(fc["simulation"], hg, ag)
         if row.get("bet"):

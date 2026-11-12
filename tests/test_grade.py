@@ -61,3 +61,22 @@ def test_corrected_identity_still_grades_original_espanyol_fixture():
         'away_matched':'Barcelona','kickoff_utc':'2026-10-30T20:00:00+00:00'}
     actual={'home':'Villarreal','away':'Espanyol','utc':'2026-10-30T20:00:00Z'}
     assert find_result(fx,[actual]) is actual
+
+
+def test_verified_regulation_result_keeps_shootout_out_of_score(tmp_path,monkeypatch):
+    import json
+    from datetime import datetime,timezone
+    from oraclefc.market import grade as G
+    monkeypatch.setattr(G.config,'DATA_DIR',tmp_path)
+    fixture={'home_name':'Real Valladolid','away_name':'Santa Clara','kickoff_utc':'2026-11-11T19:00:00Z'}
+    row={'date':'2026-11-11','home':'Real Valladolid','away':'Santa Clara','scope':'regulation','kickoff_utc':fixture['kickoff_utc'],'verified_at':'2026-11-12T12:00:00Z','score_90':[2,2],'source':'Official club report','source_url':'https://example.test/official','note':'Home won shootout; regulation draw'}
+    p=tmp_path/'verified_results.json'
+    def write(r):p.write_text(json.dumps({'e':r}))
+    now=datetime(2026,11,12,13,tzinfo=timezone.utc);write(row)
+    r=G.verified_result('2026-11-11','e',fixture,now)
+    assert r['score_ft']==[2,2]and settle({'kind':'1x2','res':'D'},*r['score_ft'])
+    assert not settle({'kind':'1x2','res':'H'},*r['score_ft'])
+    assert not G.verified_result('2026-11-12','e',fixture,now)
+    assert not G.verified_result('2026-11-11','e',{**fixture,'away_name':'Different club'},now)
+    for key,value in [('scope','shootout'),('score_90',[3,True]),('verified_at','2026-11-13T12:00:00Z'),('source_url','http://example.test')]:
+        write({**row,key:value});assert not G.verified_result('2026-11-11','e',fixture,now)
