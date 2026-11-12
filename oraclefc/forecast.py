@@ -35,7 +35,7 @@ DEFAULT_WEIGHTS = {"dynamic_dc": 1.0}
 class Engine:
     """Fits the champion's component models once on all data available now."""
 
-    def __init__(self, df: pd.DataFrame | None = None, as_of: pd.Timestamp | None = None, with_context: bool = True, *, supplemental: bool = False):
+    def __init__(self, df: pd.DataFrame | None = None, as_of: pd.Timestamp | None = None, with_context: bool = True, *, supplemental: bool = False, validation_as_of: pd.Timestamp | None = None):
         self.with_context = with_context
         raw = df if df is not None else store.load(include_supplemental=True)
         raw=raw.loc[~raw["div"].isin(config.WOMEN_DIVISIONS) & (raw["country"]!="Women")].copy()
@@ -44,6 +44,7 @@ class Engine:
         self.supplemental_engines = {}
         if not supplemental:
             raw = raw.loc[~raw["div"].isin(config.SUPPLEMENTAL_DIVISIONS)]
+        self.validation_as_of = supplemental_validation.decision_time(as_of,inherited=validation_as_of)
         self.as_of = as_of if as_of is not None else (raw["date"].max() + pd.Timedelta(days=1))
         # Resolution, context and metadata must share the models' point-in-time cutoff.
         self.df = raw.loc[raw["date"] < self.as_of].copy()
@@ -57,7 +58,7 @@ class Engine:
         self.weights = ch.get("ensemble_weights", DEFAULT_WEIGHTS) if self.champion == "ensemble" else DEFAULT_WEIGHTS
         self.version = ch.get("version", f"{__version__}+dynamic_dc-untuned")
         self.confidence = reg.get("confidence", {})
-        self.supplemental_policy=supplemental_validation.load_policy(self.as_of,p)if supplemental else {}
+        self.supplemental_policy=supplemental_validation.load_policy(self.validation_as_of,p)if supplemental else {}
         if supplemental:
             self.champion = "dynamic_dc"
             self.weights = {"dynamic_dc": 1.0}
@@ -104,7 +105,7 @@ class Engine:
         settings = json.dumps({"params": p, "weights": self.weights, "calibration": ch.get("calibration"),
                                "context": ctx_reg, "as_of": str(self.as_of),
                                "identity_policy": "explicit-alias-v2"}, sort_keys=True, default=str).encode()
-        if self.supplemental_policy:settings+=json.dumps(self.supplemental_policy,sort_keys=True).encode()
+        if self.supplemental_policy:settings+=json.dumps({"policy":self.supplemental_policy,"decision_as_of":str(self.validation_as_of)},sort_keys=True).encode()
         self.input_fingerprint = hashlib.sha256(result_hash + settings).hexdigest()
         self.resolver = Resolver(self.df)
         self.player_book = None
@@ -256,7 +257,7 @@ class Engine:
             if not history.empty:
                 group = "men"
                 if group not in self.supplemental_engines:
-                    self.supplemental_engines[group] = Engine(history, self.as_of, with_context=False, supplemental=True)
+                    self.supplemental_engines[group] = Engine(history, self.as_of, with_context=False, supplemental=True, validation_as_of=self.validation_as_of)
                 return self.supplemental_engines[group].forecast(home_name, away_name, competition, subcategory,
                                                                 kickoff_utc, event_id, neutral, mc_sims)
         r = self.resolver.resolve(home_name, away_name, subcategory, neutral)

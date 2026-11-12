@@ -6,13 +6,24 @@ import pandas as pd
 from . import config
 
 
+def decision_time(as_of=None,*,inherited=None,now=None):
+    """Live policy knowledge is independent of the last ingested result date.
+
+    Explicit historical cutoffs remain point-in-time; nested supplemental models
+    inherit the parent's decision time, not its stale training cutoff.
+    """
+    value=inherited if inherited is not None else as_of if as_of is not None else now if now is not None else pd.Timestamp.now(tz='UTC')
+    stamp=pd.Timestamp(value)
+    return stamp.tz_convert('UTC').tz_localize(None) if stamp.tzinfo is not None else stamp
+
+
 def load_policy(as_of,params):
     path=config.ROOT/'experiments/supplemental-policy.json'
     if not path.exists():return {}
     policy=json.loads(path.read_text())
     if policy.get('schema')!=1 or policy.get('model_params')!=params:return {}
     # Every evaluation outcome must have been available before this forecast.
-    if pd.Timestamp(policy['result_through'])+pd.Timedelta(days=1)>pd.Timestamp(as_of):return {}
+    if pd.Timestamp(policy['result_through'])+pd.Timedelta(days=1)>decision_time(as_of):return {}
     return policy
 
 
