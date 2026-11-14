@@ -1,0 +1,728 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-11-09",
+ "input_fingerprint": "44dc80a85f9e047407a952b6e3054aa22939bb9257769703ef816e03acaef708",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-11-14T13:40:53+00:00",
+ "fixture": {
+  "event_id": "POLY-1337869",
+  "home_name": "Coventry City FC",
+  "away_name": "Crystal Palace FC",
+  "competition": "Premier League",
+  "subcategory": "epl",
+  "kickoff_utc": "2026-11-21T15:00:00+00:00",
+  "kickoff_local": "2026-11-21 10:00 EST",
+  "home_matched": "Coventry",
+  "away_matched": "Crystal Palace",
+  "match_methods": {
+   "home": {
+    "source": "Coventry City FC",
+    "matched": "Coventry",
+    "method": "alias",
+    "score": 1.0
+   },
+   "away": {
+    "source": "Crystal Palace FC",
+    "matched": "Crystal Palace",
+    "method": "core-tokens",
+    "score": 0.97
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.42355718901106576,
+  "p_draw": 0.2582429990497548,
+  "p_away": 0.3181998119391797,
+  "xg_home": 1.6279172070824497,
+  "xg_away": 1.3889672170647145,
+  "xg_total": 3.016884424147164,
+  "median_total": 3,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.12109215446254393
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.12109215446254393
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.09191847935058053
+   },
+   {
+    "home": 1,
+    "away": 2,
+    "p": 0.07809643482358504
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.07418702592206253
+   },
+   {
+    "home": 2,
+    "away": 2,
+    "p": 0.06773794222811698
+   }
+  ],
+  "btts": 0.6199505672194021,
+  "totals_over": {
+   "over_0.5": 0.949480469634282,
+   "over_1.5": 0.8122711347428448,
+   "over_2.5": 0.5822077649663862,
+   "over_3.5": 0.35740695756550367,
+   "over_4.5": 0.18428724974873337,
+   "over_5.5": 0.08305335261093022,
+   "over_6.5": 0.0322143996125329
+  },
+  "total_buckets": {
+   "0-1": 0.18772886525715532,
+   "2": 0.23006336977645883,
+   "3": 0.2248008074008825,
+   "4": 0.17311970781677027,
+   "5+": 0.18428724974873337
+  },
+  "clean_sheet_home": 0.24107442909967422,
+  "clean_sheet_away": 0.18949453404664218,
+  "home_goal_dist": [
+   0.18949453404664218,
+   0.3246849134691474,
+   0.2649079094091204,
+   0.14128947316783097,
+   0.056035933722312706,
+   0.017682714107986424,
+   0.004628384833089289,
+   0.0012761372438709507
+  ],
+  "away_goal_dist": [
+   0.24107442909967422,
+   0.3534123303633176,
+   0.24559466599185945,
+   0.11073676574384088,
+   0.036880948634216315,
+   0.009721588210842808,
+   0.0021153415634163845,
+   0.00046393039283268265
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    3
+   ],
+   "away_goals_80": [
+    0,
+    3
+   ],
+   "total_goals_80": [
+    1,
+    5
+   ],
+   "goal_diff_80": [
+    -2,
+    2
+   ]
+  },
+  "score_grid": [
+   [
+    0.05052,
+    0.063022,
+    0.045825,
+    0.020822,
+    0.006973,
+    0.001843,
+    0.000402
+   ],
+   [
+    0.074187,
+    0.121092,
+    0.078096,
+    0.035467,
+    0.011872,
+    0.003137,
+    0.000683
+   ],
+   [
+    0.063146,
+    0.091918,
+    0.067738,
+    0.02911,
+    0.00974,
+    0.002573,
+    0.00056
+   ],
+   [
+    0.033964,
+    0.049402,
+    0.034446,
+    0.016505,
+    0.005226,
+    0.00138,
+    0.0003
+   ],
+   [
+    0.01354,
+    0.019678,
+    0.013712,
+    0.006217,
+    0.002195,
+    0.000548,
+    0.000119
+   ],
+   [
+    0.004284,
+    0.00622,
+    0.004331,
+    0.001963,
+    0.000656,
+    0.000183,
+    3.8e-05
+   ],
+   [
+    0.001123,
+    0.001629,
+    0.001134,
+    0.000513,
+    0.000171,
+    4.5e-05,
+    1e-05
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.42400000000000004,
+  "p_draw": 0.258565,
+  "p_away": 0.317435,
+  "se": [
+   0.0011050429855892485,
+   0.0009790534734502503,
+   0.001040841056009514
+  ],
+  "max_abs_dev_vs_exact": 0.0007648119391796548,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   1.2837759901793575,
+   2.000633265693592
+  ],
+  "xg_away_80": [
+   1.0286172958072155,
+   1.7774392866508169
+  ],
+  "p_home_80": [
+   0.32644077572905583,
+   0.5405545653933721
+  ],
+  "p_draw_80": [
+   0.2193207511681482,
+   0.2762881738034096
+  ],
+  "p_away_80": [
+   0.2194523778336526,
+   0.42816582471912135
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.1758959774560296,
+   0.20298668773494064
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.474226494993313,
+   "p_draw": 0.24998143713757473,
+   "p_away": 0.2757920678691123,
+   "xg_home": 1.6829731340847356,
+   "xg_away": 1.2338713593213455,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.3934282689949148,
+   "p_draw": 0.25075378786373004,
+   "p_away": 0.3558179431413553,
+   "xg_home": 1.459237289991192,
+   "xg_away": 1.375831005889672,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.6003514379805259,
+   "p_draw": 0.22562398500940506,
+   "p_away": 0.17402457701006904,
+   "xg_home": 1.9736186385082177,
+   "xg_away": 0.9735974956958252,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.42198305431276095,
+   "p_draw": 0.24991696182741033,
+   "p_away": 0.32809998385982864,
+   "xg_home": 1.5172354512974406,
+   "xg_away": 1.309017128372267,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.4488415882387887,
+   "p_draw": 0.2455615264573299,
+   "p_away": 0.3055968853038813,
+   "xg_home": 1.70198167861566,
+   "xg_away": 1.3713789226521356,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Home advantage (England, fitted from results): \u00d71.23 on Coventry's scoring rate.",
+   "effect": 0.2049
+  },
+  {
+   "text": "Coventry attack vs Crystal Palace defence: time-weighted strength gap multiplies Coventry's scoring rate by \u00d71.14 relative to an average pairing (from 36/32 decay-weighted matches).",
+   "effect": 0.129
+  },
+  {
+   "text": "Context \u2014 Understat xG component (validated, in ensemble): home win +2.5 pp, draw -0.3 pp, away win -2.2 pp (xG +0.12 / +0.01).",
+   "effect": 0.075
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.42355718901106565,
+  "p_draw": 0.2582429990497548,
+  "p_away": 0.31819981193917957,
+  "xg_home": 1.6279172070824495,
+  "xg_away": 1.3889672170647145
+ },
+ "context": {
+  "fetched_at": "2026-11-14T13:40:53+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5795519",
+    "fetched_at": "2026-11-14T13:40:54+00:00"
+   },
+   {
+    "name": "Fantasy Premier League availability",
+    "url": "https://fantasy.premierleague.com/api/bootstrap-static/",
+    "fetched_at": "2026-11-14T13:40:54+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "inferred",
+    "source": null,
+    "formation": null,
+    "starters": [
+     {
+      "name": "Carl Rushworth",
+      "pos": "G"
+     },
+     {
+      "name": "Jay Dasilva",
+      "pos": "D"
+     },
+     {
+      "name": "Milan van Ewijk",
+      "pos": "D"
+     },
+     {
+      "name": "Jack Rudoni",
+      "pos": "F"
+     },
+     {
+      "name": "Ethan Pinnock",
+      "pos": "D"
+     },
+     {
+      "name": "Matt Grimes",
+      "pos": "M"
+     },
+     {
+      "name": "Bobby Thomas",
+      "pos": "D"
+     },
+     {
+      "name": "Caleb Yirenkyi",
+      "pos": "M"
+     },
+     {
+      "name": "Brandon Thomas-Asante",
+      "pos": "F"
+     },
+     {
+      "name": "Tatsuhiro Sakamoto",
+      "pos": "F"
+     },
+     {
+      "name": "Taiwo Awoniyi",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-11-14T13:40:54+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [],
+    "mean_xi_attack_index": -0.013,
+    "mean_continuity": -0.296,
+    "p_backup_gk": 0.0
+   },
+   "away": {
+    "status": "inferred",
+    "source": null,
+    "formation": null,
+    "starters": [
+     {
+      "name": "Walter Ben\u00edtez",
+      "pos": "G"
+     },
+     {
+      "name": "Tyrick Mitchell",
+      "pos": "M"
+     },
+     {
+      "name": "Chris Richards",
+      "pos": "D"
+     },
+     {
+      "name": "Adam Wharton",
+      "pos": "M"
+     },
+     {
+      "name": "Daichi Kamada",
+      "pos": "M"
+     },
+     {
+      "name": "Jaydee Canvot",
+      "pos": "D"
+     },
+     {
+      "name": "Yeremi Pino",
+      "pos": "F"
+     },
+     {
+      "name": "Anan Khalaili",
+      "pos": "M"
+     },
+     {
+      "name": "J\u00f8rgen Strand Larsen",
+      "pos": "F"
+     },
+     {
+      "name": "Axel Disasi",
+      "pos": "D"
+     },
+     {
+      "name": "Quinten Timber",
+      "pos": "M"
+     }
+    ],
+    "fetched_at": "2026-11-14T13:40:54+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [],
+    "mean_xi_attack_index": -0.076,
+    "mean_continuity": -0.618,
+    "p_backup_gk": 0.29
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Frank Onyeka",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795519",
+     "fetched_at": "2026-11-14T13:40:54+00:00",
+     "chance_of_playing": 50,
+     "fpl_status": "doubtful",
+     "fpl_news": "Groin injury - 50% chance of playing",
+     "fpl_news_added": "2026-11-05T09:00:09.236330Z"
+    },
+    {
+     "player": "Bobby Thomas",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795519",
+     "fetched_at": "2026-11-14T13:40:54+00:00",
+     "chance_of_playing": 50,
+     "fpl_status": "doubtful",
+     "fpl_news": "Calf injury - 50% chance of playing",
+     "fpl_news_added": "2026-10-24T17:00:09.115906Z"
+    },
+    {
+     "player": "Aur\u00e8le Amenda",
+     "type": "injury",
+     "expected_return": "Early January 2027",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795519",
+     "fetched_at": "2026-11-14T13:40:54+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Calf injury - Unknown return date",
+     "fpl_news_added": "2026-09-17T07:30:09.329041Z"
+    },
+    {
+     "player": "Josh Eccles",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795519",
+     "fetched_at": "2026-11-14T13:40:54+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Ankle injury - Unknown return date",
+     "fpl_news_added": "2026-09-10T18:30:08.877110Z"
+    },
+    {
+     "player": "Luke Woolfenden",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795519",
+     "fetched_at": "2026-11-14T13:40:54+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Knee injury - Unknown return date",
+     "fpl_news_added": "2026-08-27T14:56:28.718566Z"
+    },
+    {
+     "player": "Haji Wright",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795519",
+     "fetched_at": "2026-11-14T13:40:54+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Thigh injury - Unknown return date",
+     "fpl_news_added": "2026-08-14T22:00:07.214508Z"
+    },
+    {
+     "player": "Oliver Dovin",
+     "type": "unavailable",
+     "expected_return": "not included in squad.",
+     "chance_of_playing": 0,
+     "source": "FPL",
+     "source_url": "https://fantasy.premierleague.com/api/bootstrap-static/",
+     "fetched_at": "2026-09-02T15:44:14.839336Z"
+    }
+   ],
+   "away": [
+    {
+     "player": "Jean-Philippe Mateta",
+     "type": "suspension",
+     "expected_return": null,
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795519",
+     "fetched_at": "2026-11-14T13:40:54+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "suspended",
+     "fpl_news": "Suspended until 2 Dec",
+     "fpl_news_added": "2026-10-31T18:00:09.547671Z"
+    },
+    {
+     "player": "Isma\u00efla Sarr",
+     "type": "injury",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795519",
+     "fetched_at": "2026-11-14T13:40:54+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Groin injury - Expected back 21 Nov",
+     "fpl_news_added": "2026-10-27T10:30:09.385934Z"
+    },
+    {
+     "player": "Takehiro Tomiyasu",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795519",
+     "fetched_at": "2026-11-14T13:40:54+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Calf injury - Expected back 21 Nov",
+     "fpl_news_added": "2026-09-21T13:30:09.030724Z"
+    },
+    {
+     "player": "Chadi Riad",
+     "type": "injury",
+     "expected_return": "Late June 2027",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795519",
+     "fetched_at": "2026-11-14T13:40:54+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Knee injury - Unknown return date",
+     "fpl_news_added": "2026-08-22T18:00:07.352049Z"
+    },
+    {
+     "player": "J\u00f8rgen Strand Larsen",
+     "type": "doubtful",
+     "expected_return": "Ankle injury - 75% chance of playing",
+     "chance_of_playing": 75,
+     "source": "FPL",
+     "source_url": "https://fantasy.premierleague.com/api/bootstrap-static/",
+     "fetched_at": "2026-11-11T13:00:09.556609Z"
+    },
+    {
+     "player": "Christantus Uche",
+     "type": "unavailable",
+     "expected_return": "has returned to Getafe CF",
+     "chance_of_playing": 0,
+     "source": "FPL",
+     "source_url": "https://fantasy.premierleague.com/api/bootstrap-static/",
+     "fetched_at": "2026-07-23T12:18:56.275922Z"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 15,
+    "n21": 2,
+    "last_match": "2026-11-06"
+   },
+   "away": {
+    "rest_days": 13,
+    "n21": 2,
+    "last_match": "2026-11-08"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 151.6
+  },
+  "venue": {
+   "name": "Coventry Building Society Arena",
+   "city": "Coventry, West Midlands",
+   "lat": 52.448111389,
+   "lon": -1.495629251
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 3.7800000000000002,
+   "temp_c": 4.9,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=52.448&longitude=-1.496",
+   "fetched_at": "2026-11-14T13:40:54+00:00",
+   "lat": 52.448111389,
+   "lon": -1.495629251
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": 2.5,
+    "d_p_draw_pp": -0.28,
+    "d_p_away_pp": -2.22,
+    "d_xg_home": 0.117,
+    "d_xg_away": 0.007
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0143,
+    "away_rate_mult": 1.006,
+    "d_p_home_pp": 0.38,
+    "d_p_draw_pp": -0.17,
+    "d_p_away_pp": -0.21,
+    "d_xg_home": 0.023,
+    "d_xg_away": 0.008,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "home_rate_mult": 1.0094,
+    "away_rate_mult": 0.9692,
+    "d_p_home_pp": 1.25,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": -1.25,
+    "d_xg_home": 0.015,
+    "d_xg_away": -0.041,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 15.0,
+   "rest_a": 13.0,
+   "n21_h": 2.0,
+   "n21_a": 2.0,
+   "travel_km": 151.57993158003245,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 3.7800000000000002,
+   "temp_c": 4.9
+  }
+ },
+ "confidence": {
+  "tier": "LOW",
+  "p_max": 0.42355718901106576,
+  "entropy_nats": 1.0778501707513417,
+  "text": "Most likely result has P = 42.4%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.3% \u00b1 0.4% (n=16754, mean forecast 44.6%). Backtest RPS for E0: 0.2018; exact-score top-5 hit rate 46.6% (n=1220). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: LOW (entropy 1.078 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Coventry: no lineup published yet \u2014 XI inferred from recent minutes share minus known absences; 200 configurations simulated (start P=0.7, UNVALIDATED prior).",
+  "Crystal Palace: no lineup published yet \u2014 XI inferred from recent minutes share minus known absences; 200 configurations simulated (start P=0.7, UNVALIDATED prior)."
+ ],
+ "verdict": "Coventry 1\u20131 Crystal Palace is the single most probable scoreline at 12.1%: expected goals 1.63\u20131.39 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.044). Exact scores are inherently uncertain; the 1X2 split is 42.4%/25.8%/31.8%.",
+ "resolved": {
+  "home_key": "England:Coventry",
+  "away_key": "England:Crystal Palace",
+  "div": "E0",
+  "home_div": "E0",
+  "away_div": "E0",
+  "country": "England"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: Crystal Palace FC at Coventry City FC\nCompetition: Premier League\nDate: 2026-11-21 10:00 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-11-09\n\nPRIMARY FINAL SCORE PREDICTION\n\nCoventry City FC 1 \u2013 1 Crystal Palace FC\n(modal exact score, probability 12.1%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.63\nAway: 1.39\nExpected Total: 3.02\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 42.4%\nDraw: 25.8%\nAway Win: 31.8%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 12.1%\n2. 2\u20131: 9.2%\n3. 1\u20132: 7.8%\n4. 1\u20130: 7.4%\n5. 2\u20132: 6.8%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 18.8%\nTotal 2 goals: 23.0%\nTotal 3 goals: 22.5%\nTotal 4 goals: 17.3%\nTotal 5+ goals: 18.4%\n\nBoth Teams Score: 62.0%\nClean sheet Coventry City FC: 24.1% \u00b7 Clean sheet Crystal Palace FC: 18.9%\n\nMATCH INTELLIGENCE\n\n1. Home advantage (England, fitted from results): \u00d71.23 on Coventry's scoring rate.\n2. Coventry attack vs Crystal Palace defence: time-weighted strength gap multiplies Coventry's scoring rate by \u00d71.14 relative to an average pairing (from 36/32 decay-weighted matches).\n3. Context \u2014 Understat xG component (validated, in ensemble): home win +2.5 pp, draw -0.3 pp, away win -2.2 pp (xG +0.12 / +0.01).\n\nMODEL CONFIDENCE\n\nMost likely result has P = 42.4%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.3% \u00b1 0.4% (n=16754, mean forecast 44.6%). Backtest RPS for E0: 0.2018; exact-score top-5 hit rate 46.6% (n=1220). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: LOW (entropy 1.078 nats of max 1.099).\nParameter-uncertainty 80% bands: xG Coventry City FC 1.28\u20132.00, xG Crystal Palace FC 1.03\u20131.78; P(home win) 32.6%\u201354.1%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0008 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nCoventry: INFERRED, fetched 2026-11-14 08:40 EST\n  Carl Rushworth (G), Jay Dasilva (D), Milan van Ewijk (D), Jack Rudoni (F), Ethan Pinnock (D), Matt Grimes (M), Bobby Thomas (D), Caleb Yirenkyi (M), Brandon Thomas-Asante (F), Tatsuhiro Sakamoto (F), Taiwo Awoniyi (F)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs -0.013 (log) \u00b7 continuity -0.30 \u00b7 P(backup GK) 0%\nCrystal Palace: INFERRED, fetched 2026-11-14 08:40 EST\n  Walter Ben\u00edtez (G), Tyrick Mitchell (M), Chris Richards (D), Adam Wharton (M), Daichi Kamada (M), Jaydee Canvot (D), Yeremi Pino (F), Anan Khalaili (M), J\u00f8rgen Strand Larsen (F), Axel Disasi (D), Quinten Timber (M)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs -0.076 (log) \u00b7 continuity -0.62 \u00b7 P(backup GK) 29%\n\nKEY ABSENCES\n\n- Coventry: Frank Onyeka \u2014 injury, Doubtful, 50% chance of playing [FotMob + FPL, 2026-11-14 08:40 EST] \u2014 FPL: Groin injury - 50% chance of playing (updated 2026-11-05 04:00 EST)\n- Coventry: Bobby Thomas \u2014 injury, Doubtful, 50% chance of playing [FotMob + FPL, 2026-11-14 08:40 EST] \u2014 FPL: Calf injury - 50% chance of playing (updated 2026-10-24 13:00 EDT)\n- Coventry: Aur\u00e8le Amenda \u2014 injury, Early January 2027, 0% chance of playing [FotMob + FPL, 2026-11-14 08:40 EST] \u2014 FPL: Calf injury - Unknown return date (updated 2026-09-17 03:30 EDT)\n- Coventry: Josh Eccles \u2014 injury, Late November 2026, 0% chance of playing [FotMob + FPL, 2026-11-14 08:40 EST] \u2014 FPL: Ankle injury - Unknown return date (updated 2026-09-10 14:30 EDT)\n- Coventry: Luke Woolfenden \u2014 injury, Late November 2026, 0% chance of playing [FotMob + FPL, 2026-11-14 08:40 EST] \u2014 FPL: Knee injury - Unknown return date (updated 2026-08-27 10:56 EDT)\n- Coventry: Haji Wright \u2014 injury, Late November 2026, 0% chance of playing [FotMob + FPL, 2026-11-14 08:40 EST] \u2014 FPL: Thigh injury - Unknown return date (updated 2026-08-14 18:00 EDT)\n- Coventry: Oliver Dovin \u2014 unavailable, not included in squad., 0% chance of playing [FPL, 2026-09-02 11:44 EDT]\n- Crystal Palace: Jean-Philippe Mateta \u2014 suspension, return unknown, 0% chance of playing [FotMob + FPL, 2026-11-14 08:40 EST] \u2014 FPL: Suspended until 2 Dec (updated 2026-10-31 14:00 EDT)\n- Crystal Palace: Isma\u00efla Sarr \u2014 injury, Mid November 2026, 0% chance of playing [FotMob + FPL, 2026-11-14 08:40 EST] \u2014 FPL: Groin injury - Expected back 21 Nov (updated 2026-10-27 06:30 EDT)\n- Crystal Palace: Takehiro Tomiyasu \u2014 injury, Late November 2026, 0% chance of playing [FotMob + FPL, 2026-11-14 08:40 EST] \u2014 FPL: Calf injury - Expected back 21 Nov (updated 2026-09-21 09:30 EDT)\n- Crystal Palace: Chadi Riad \u2014 injury, Late June 2027, 0% chance of playing [FotMob + FPL, 2026-11-14 08:40 EST] \u2014 FPL: Knee injury - Unknown return date (updated 2026-08-22 14:00 EDT)\n- Crystal Palace: J\u00f8rgen Strand Larsen \u2014 doubtful, Ankle injury - 75% chance of playing, 75% chance of playing [FPL, 2026-11-11 08:00 EST]\n- Crystal Palace: Christantus Uche \u2014 unavailable, has returned to Getafe CF, 0% chance of playing [FPL, 2026-07-23 08:18 EDT]\n\nWEATHER AT VENUE\n\nCoventry Building Society Arena, Coventry, West Midlands: 4.9 \u00b0C, wind 3.8 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-11-14 08:40 EST]\n\nREST & TRAVEL\n\nCoventry: 15 days' rest, 2 matches in previous 21 days \u00b7 Crystal Palace: 13 days' rest, 2 in 21 days \u00b7 away travel 151.6 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 42.4% / 25.8% / 31.8%, xG 1.63\u20131.39\n- Understat xG component (validated, in ensemble): home +2.50 pp, draw -0.28 pp, away -2.22 pp; xG +0.117 / +0.007\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.38 pp, draw -0.17 pp, away -0.21 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- lineup: NOT APPLIED (failed out-of-sample validation); would have moved home +1.25 pp, draw +0.00 pp, away -1.25 pp\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Coventry: no lineup published yet \u2014 XI inferred from recent minutes share minus known absences; 200 configurations simulated (start P=0.7, UNVALIDATED prior).\n- Crystal Palace: no lineup published yet \u2014 XI inferred from recent minutes share minus known absences; 200 configurations simulated (start P=0.7, UNVALIDATED prior).\n\nFINAL VERDICT\n\nCoventry 1\u20131 Crystal Palace is the single most probable scoreline at 12.1%: expected goals 1.63\u20131.39 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.044). Exact scores are inherently uncertain; the 1X2 split is 42.4%/25.8%/31.8%.\n",
+ "refresh_id": "9c47ceb15e0e40649b50492261cb7c1d",
+ "frozen_at": "2026-11-14T13:40:54+00:00",
+ "sha256": "8632c37ba4ef1dd3507e748ce4e434e3bb2a5b4d6bae3ca845755c7cf9b254e1"
+}

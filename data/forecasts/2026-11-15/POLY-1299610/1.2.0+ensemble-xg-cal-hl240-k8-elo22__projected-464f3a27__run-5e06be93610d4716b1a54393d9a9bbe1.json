@@ -1,0 +1,595 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-11-09",
+ "input_fingerprint": "44dc80a85f9e047407a952b6e3054aa22939bb9257769703ef816e03acaef708",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-11-14T13:40:09+00:00",
+ "fixture": {
+  "event_id": "POLY-1299610",
+  "home_name": "CD Eldense",
+  "away_name": "CE Sabadell FC",
+  "competition": "LaLiga2",
+  "subcategory": "es2",
+  "kickoff_utc": "2026-11-15T17:30:00+00:00",
+  "kickoff_local": "2026-11-15 12:30 EST",
+  "home_matched": "Eldense",
+  "away_matched": "Sabadell",
+  "match_methods": {
+   "home": {
+    "source": "CD Eldense",
+    "matched": "Eldense",
+    "method": "core-tokens",
+    "score": 0.97
+   },
+   "away": {
+    "source": "CE Sabadell FC",
+    "matched": "Sabadell",
+    "method": "alias",
+    "score": 1.0
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.34950674638937296,
+  "p_draw": 0.3160827585290885,
+  "p_away": 0.3344104950815385,
+  "xg_home": 1.0987884443755807,
+  "xg_away": 1.0682094442898826,
+  "xg_total": 2.1669978886654633,
+  "median_total": 2,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.1461748310184194
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.1461748310184194
+   },
+   {
+    "home": 0,
+    "away": 0,
+    "p": 0.1215724501158261
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.11946213226634583
+   },
+   {
+    "home": 0,
+    "away": 1,
+    "p": 0.11658376281488435
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.07393231453775728
+   }
+  ],
+  "btts": 0.45271649596212665,
+  "totals_over": {
+   "over_0.5": 0.8784275498841737,
+   "over_1.5": 0.6423816548029436,
+   "over_2.5": 0.36698393078085856,
+   "over_3.5": 0.17580878568691582,
+   "over_4.5": 0.06956086889928662,
+   "over_5.5": 0.024118278216398815,
+   "over_6.5": 0.007186744635718683
+  },
+  "total_buckets": {
+   "0-1": 0.35761834519705626,
+   "2": 0.27539772402208507,
+   "3": 0.19117514509394276,
+   "4": 0.1062479167876292,
+   "5+": 0.06956086889928662
+  },
+  "clean_sheet_home": 0.33908174397228313,
+  "clean_sheet_away": 0.32977421018141617,
+  "home_goal_dist": [
+   0.32977421018141617,
+   0.37090564924148484,
+   0.2015107891175713,
+   0.0727518000675613,
+   0.019788498377333253,
+   0.004330071772826734,
+   0.0007938295801151458,
+   0.0001451516616911696
+  ],
+  "away_goal_dist": [
+   0.33908174397228313,
+   0.37279812564128373,
+   0.1968966484634277,
+   0.06871389460148539,
+   0.017973187491074856,
+   0.003764802229551018,
+   0.0006581312822227518,
+   0.00011346631867139026
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    2
+   ],
+   "away_goals_80": [
+    0,
+    2
+   ],
+   "total_goals_80": [
+    0,
+    4
+   ],
+   "goal_diff_80": [
+    -2,
+    2
+   ]
+  },
+  "score_grid": [
+   [
+    0.121572,
+    0.116584,
+    0.062905,
+    0.021725,
+    0.005601,
+    0.001155,
+    0.000199
+   ],
+   [
+    0.119462,
+    0.146175,
+    0.071812,
+    0.025194,
+    0.006598,
+    0.001381,
+    0.000241
+   ],
+   [
+    0.066318,
+    0.073932,
+    0.042246,
+    0.014253,
+    0.00379,
+    0.000805,
+    0.000142
+   ],
+   [
+    0.023706,
+    0.026846,
+    0.014751,
+    0.005635,
+    0.001439,
+    0.000309,
+    5.5e-05
+   ],
+   [
+    0.00636,
+    0.007314,
+    0.004079,
+    0.001496,
+    0.000431,
+    8.9e-05,
+    1.6e-05
+   ],
+   [
+    0.001371,
+    0.0016,
+    0.000904,
+    0.000336,
+    9.3e-05,
+    2.2e-05,
+    4e-06
+   ],
+   [
+    0.000248,
+    0.000293,
+    0.000168,
+    6.3e-05,
+    1.8e-05,
+    4e-06,
+    1e-06
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.350115,
+  "p_draw": 0.316815,
+  "p_away": 0.33307,
+  "se": [
+   0.001066617285569196,
+   0.0010402962457276292,
+   0.0010538841850507104
+  ],
+  "max_abs_dev_vs_exact": 0.0013404950815384953,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   0.7282741819797907,
+   1.5212736218305785
+  ],
+  "xg_away_80": [
+   0.6991657284599263,
+   1.4838104125993568
+  ],
+  "p_home_80": [
+   0.2297306083924416,
+   0.5008436224747608
+  ],
+  "p_draw_80": [
+   0.25221987704789456,
+   0.35658891307715673
+  ],
+  "p_away_80": [
+   0.2112021028194657,
+   0.47302727228769464
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.29204808619588274,
+   0.2792600568235922
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.33829794822531556,
+   "p_draw": 0.3275114495127968,
+   "p_away": 0.33419060226188757,
+   "xg_home": 0.9666332564259307,
+   "xg_away": 0.9589121443088199,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.3767637815518484,
+   "p_draw": 0.2732370663077949,
+   "p_away": 0.3499991521403567,
+   "xg_home": 1.2521261640973014,
+   "xg_away": 1.196467411704043,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.2730097304126996,
+   "p_draw": 0.36335311605320486,
+   "p_away": 0.36363715353409554,
+   "xg_home": 0.7344675233019359,
+   "xg_away": 0.8941137351329026,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.4527660264829484,
+   "p_draw": 0.25820104125948606,
+   "p_away": 0.28903293225756543,
+   "xg_home": 1.4836908584897956,
+   "xg_away": 1.1315213930992352,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.33789922021843954,
+   "p_draw": 0.32803112238195886,
+   "p_away": 0.33406965739960154,
+   "xg_home": 0.9629655883051811,
+   "xg_away": 0.955777010258144,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Eldense attack vs Sabadell defence: time-weighted strength gap multiplies Eldense's scoring rate by \u00d70.61 relative to an average pairing (from 19/11 decay-weighted matches).",
+   "effect": 0.4872
+  },
+  {
+   "text": "Home advantage (Spain, fitted from results): \u00d71.31 on Eldense's scoring rate.",
+   "effect": 0.2666
+  },
+  {
+   "text": "Sabadell attack vs Eldense defence: rate multiplier \u00d70.80 for the away side.",
+   "effect": 0.2286
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.34950674638937296,
+  "p_draw": 0.3160827585290885,
+  "p_away": 0.3344104950815385,
+  "xg_home": 1.0987884443755807,
+  "xg_away": 1.0682094442898826
+ },
+ "context": {
+  "fetched_at": "2026-11-14T13:40:09+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5868539",
+    "fetched_at": "2026-11-14T13:40:10+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "4-2-3-1",
+    "starters": [
+     {
+      "name": "Ram\u00f3n Vil\u00e0",
+      "pos": "G"
+     },
+     {
+      "name": "Jes\u00fas Clemente",
+      "pos": "D"
+     },
+     {
+      "name": "\u00c1lex Serra",
+      "pos": "D"
+     },
+     {
+      "name": "Iker Recio",
+      "pos": "D"
+     },
+     {
+      "name": "Juan Larios",
+      "pos": "D"
+     },
+     {
+      "name": "Marcos Bustillo",
+      "pos": "M"
+     },
+     {
+      "name": "Justin Smith",
+      "pos": "M"
+     },
+     {
+      "name": "Fidel Chaves",
+      "pos": "F"
+     },
+     {
+      "name": "Roberto L\u00f3pez",
+      "pos": "M"
+     },
+     {
+      "name": "Jorge Rastrojo",
+      "pos": "F"
+     },
+     {
+      "name": "Mariano Carmona",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-11-14T13:40:10+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   },
+   "away": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "4-4-2",
+    "starters": [
+     {
+      "name": "Diego Fuoli",
+      "pos": "G"
+     },
+     {
+      "name": "Ton Ripoll",
+      "pos": "M"
+     },
+     {
+      "name": "Jos\u00e9 Luis Catal\u00e0",
+      "pos": "D"
+     },
+     {
+      "name": "Edgar Gonz\u00e1lez",
+      "pos": "D"
+     },
+     {
+      "name": "Genar Forn\u00e9s",
+      "pos": "D"
+     },
+     {
+      "name": "Yanis Rahmani",
+      "pos": "F"
+     },
+     {
+      "name": "Quadri Liameed",
+      "pos": "M"
+     },
+     {
+      "name": "Pere Pons",
+      "pos": "M"
+     },
+     {
+      "name": "\u00c1ngel Baena",
+      "pos": "F"
+     },
+     {
+      "name": "Joel Priego",
+      "pos": "F"
+     },
+     {
+      "name": "Gast\u00f3n Vall\u00e9s",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-11-14T13:40:10+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Juan Larios",
+     "type": "suspension",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868539",
+     "fetched_at": "2026-11-14T13:40:10+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "Urri",
+     "type": "suspension",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868539",
+     "fetched_at": "2026-11-14T13:40:10+00:00"
+    },
+    {
+     "player": "Peque",
+     "type": "injury",
+     "expected_return": "Back in training",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868539",
+     "fetched_at": "2026-11-14T13:40:10+00:00"
+    },
+    {
+     "player": "Nicholas Gioacchini",
+     "type": "injury",
+     "expected_return": "Out for season",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868539",
+     "fetched_at": "2026-11-14T13:40:10+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 6,
+    "n21": 3,
+    "last_match": "2026-11-09"
+   },
+   "away": {
+    "rest_days": 6,
+    "n21": 3,
+    "last_match": "2026-11-09"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 422.2
+  },
+  "venue": {
+   "name": "Estadio Municipal Nuevo Pepico Amat",
+   "city": "Elda",
+   "lat": 38.467446282,
+   "lon": -0.796106458
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 1.655,
+   "temp_c": 17.8,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=38.467&longitude=-0.796",
+   "fetched_at": "2026-11-14T13:40:10+00:00",
+   "lat": 38.467446282,
+   "lon": -0.796106458
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": -1.86,
+    "d_p_draw_pp": 2.62,
+    "d_p_away_pp": -0.76,
+    "d_xg_home": -0.14,
+    "d_xg_away": -0.117
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0258,
+    "away_rate_mult": 1.0108,
+    "d_p_home_pp": 0.57,
+    "d_p_draw_pp": -0.34,
+    "d_p_away_pp": -0.23,
+    "d_xg_home": 0.028,
+    "d_xg_away": 0.012,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "reason": "failed validation; no live features"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 6.0,
+   "rest_a": 6.0,
+   "n21_h": 3.0,
+   "n21_a": 3.0,
+   "travel_km": 422.24567876784204,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 1.655,
+   "temp_c": 17.8
+  }
+ },
+ "confidence": {
+  "tier": "LOW",
+  "p_max": 0.34950674638937296,
+  "entropy_nats": 1.097770098168215,
+  "text": "Most likely result has P = 35.0%. In the out-of-sample backtest, favourites priced 0.33\u20130.40 won 37.6% \u00b1 0.5% (n=8383, mean forecast 37.8%). Backtest RPS for SP2: 0.2154; exact-score top-5 hit rate 53.8% (n=1507). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: LOW (entropy 1.098 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Eldense: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Eldense: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.",
+  "Sabadell: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Sabadell: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+ ],
+ "verdict": "Eldense 1\u20131 Sabadell is the single most probable scoreline at 14.6%: expected goals 1.10\u20131.07 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.044). Exact scores are inherently uncertain; the 1X2 split is 35.0%/31.6%/33.4%.",
+ "resolved": {
+  "home_key": "Spain:Eldense",
+  "away_key": "Spain:Sabadell",
+  "div": "SP2",
+  "home_div": "SP2",
+  "away_div": "SP2",
+  "country": "Spain"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: CE Sabadell FC at CD Eldense\nCompetition: LaLiga2\nDate: 2026-11-15 12:30 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-11-09\n\nPRIMARY FINAL SCORE PREDICTION\n\nCD Eldense 1 \u2013 1 CE Sabadell FC\n(modal exact score, probability 14.6%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.10\nAway: 1.07\nExpected Total: 2.17\nMedian Total: 2\n\nRESULT PROBABILITIES\n\nHome Win: 35.0%\nDraw: 31.6%\nAway Win: 33.4%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 14.6%\n2. 0\u20130: 12.2%\n3. 1\u20130: 11.9%\n4. 0\u20131: 11.7%\n5. 2\u20131: 7.4%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 35.8%\nTotal 2 goals: 27.5%\nTotal 3 goals: 19.1%\nTotal 4 goals: 10.6%\nTotal 5+ goals: 7.0%\n\nBoth Teams Score: 45.3%\nClean sheet CD Eldense: 33.9% \u00b7 Clean sheet CE Sabadell FC: 33.0%\n\nMATCH INTELLIGENCE\n\n1. Eldense attack vs Sabadell defence: time-weighted strength gap multiplies Eldense's scoring rate by \u00d70.61 relative to an average pairing (from 19/11 decay-weighted matches).\n2. Home advantage (Spain, fitted from results): \u00d71.31 on Eldense's scoring rate.\n3. Sabadell attack vs Eldense defence: rate multiplier \u00d70.80 for the away side.\n\nMODEL CONFIDENCE\n\nMost likely result has P = 35.0%. In the out-of-sample backtest, favourites priced 0.33\u20130.40 won 37.6% \u00b1 0.5% (n=8383, mean forecast 37.8%). Backtest RPS for SP2: 0.2154; exact-score top-5 hit rate 53.8% (n=1507). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: LOW (entropy 1.098 nats of max 1.099).\nParameter-uncertainty 80% bands: xG CD Eldense 0.73\u20131.52, xG CE Sabadell FC 0.70\u20131.48; P(home win) 23.0%\u201350.1%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0013 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nEldense: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-11-14 08:40 EST (4-2-3-1)\n  Ram\u00f3n Vil\u00e0 (G), Jes\u00fas Clemente (D), \u00c1lex Serra (D), Iker Recio (D), Juan Larios (D), Marcos Bustillo (M), Justin Smith (M), Fidel Chaves (F), Roberto L\u00f3pez (M), Jorge Rastrojo (F), Mariano Carmona (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\nSabadell: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-11-14 08:40 EST (4-4-2)\n  Diego Fuoli (G), Ton Ripoll (M), Jos\u00e9 Luis Catal\u00e0 (D), Edgar Gonz\u00e1lez (D), Genar Forn\u00e9s (D), Yanis Rahmani (F), Quadri Liameed (M), Pere Pons (M), \u00c1ngel Baena (F), Joel Priego (F), Gast\u00f3n Vall\u00e9s (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nKEY ABSENCES\n\n- Eldense: Juan Larios \u2014 suspension, Mid November 2026 [FotMob, 2026-11-14 08:40 EST]\n- Sabadell: Urri \u2014 suspension, Mid November 2026 [FotMob, 2026-11-14 08:40 EST]\n- Sabadell: Peque \u2014 injury, Back in training [FotMob, 2026-11-14 08:40 EST]\n- Sabadell: Nicholas Gioacchini \u2014 injury, Out for season [FotMob, 2026-11-14 08:40 EST]\n\nWEATHER AT VENUE\n\nEstadio Municipal Nuevo Pepico Amat, Elda: 17.8 \u00b0C, wind 1.7 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-11-14 08:40 EST]\n\nREST & TRAVEL\n\nEldense: 6 days' rest, 3 matches in previous 21 days \u00b7 Sabadell: 6 days' rest, 3 in 21 days \u00b7 away travel 422.2 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 35.0% / 31.6% / 33.4%, xG 1.10\u20131.07\n- Understat xG component (validated, in ensemble): home -1.86 pp, draw +2.62 pp, away -0.76 pp; xG -0.140 / -0.117\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.57 pp, draw -0.34 pp, away -0.23 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- lineup: not applied (failed validation; no live features)\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Eldense: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Eldense: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n- Sabadell: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Sabadell: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nFINAL VERDICT\n\nEldense 1\u20131 Sabadell is the single most probable scoreline at 14.6%: expected goals 1.10\u20131.07 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.044). Exact scores are inherently uncertain; the 1X2 split is 35.0%/31.6%/33.4%.\n",
+ "refresh_id": "5e06be93610d4716b1a54393d9a9bbe1",
+ "frozen_at": "2026-11-14T13:40:10+00:00",
+ "sha256": "97423b6be2abc82cb82363745f1b6b1264d0e4b10f9242ff2f9faf89e21c117a"
+}
