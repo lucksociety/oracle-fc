@@ -1,0 +1,656 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-11-09",
+ "input_fingerprint": "44dc80a85f9e047407a952b6e3054aa22939bb9257769703ef816e03acaef708",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-11-15T22:58:27+00:00",
+ "fixture": {
+  "event_id": "POLY-1346291",
+  "home_name": "FC Augsburg",
+  "away_name": "1. FSV Mainz 05",
+  "competition": "Bundesliga",
+  "subcategory": "bun",
+  "kickoff_utc": "2026-11-22T14:30:00+00:00",
+  "kickoff_local": "2026-11-22 09:30 EST",
+  "home_matched": "Augsburg",
+  "away_matched": "Mainz",
+  "match_methods": {
+   "home": {
+    "source": "FC Augsburg",
+    "matched": "Augsburg",
+    "method": "core-tokens",
+    "score": 0.97
+   },
+   "away": {
+    "source": "1. FSV Mainz 05",
+    "matched": "Mainz",
+    "method": "alias",
+    "score": 1.0
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.414091856736733,
+  "p_draw": 0.24560549688786457,
+  "p_away": 0.34030264637540253,
+  "xg_home": 1.7568587938976616,
+  "xg_away": 1.5855525013505234,
+  "xg_total": 3.3424112952481853,
+  "median_total": 3,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.10733850138331247
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.10733850138331247
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.08813828194317348
+   },
+   {
+    "home": 1,
+    "away": 2,
+    "p": 0.07884052651163548
+   },
+   {
+    "home": 2,
+    "away": 2,
+    "p": 0.07427948770901889
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.05808748231267576
+   }
+  ],
+  "btts": 0.673991418085996,
+  "totals_over": {
+   "over_0.5": 0.962942876408532,
+   "over_1.5": 0.8534264553259671,
+   "over_2.5": 0.650333267025496,
+   "over_3.5": 0.4306300562628372,
+   "over_4.5": 0.2427497653909417,
+   "over_5.5": 0.12044204260639836,
+   "over_6.5": 0.05182912290818112
+  },
+  "total_buckets": {
+   "0-1": 0.1465735446740332,
+   "2": 0.20309318830047107,
+   "3": 0.21970321076265872,
+   "4": 0.18788029087189545,
+   "5+": 0.2427497653909417
+  },
+  "clean_sheet_home": 0.19826391257339226,
+  "clean_sheet_away": 0.16480179293207997,
+  "home_goal_dist": [
+   0.16480179293207997,
+   0.307653188519122,
+   0.27264379835301594,
+   0.15708114611932317,
+   0.06697250079133682,
+   0.022637415490680764,
+   0.006327071292886631,
+   0.001883086501554814
+  ],
+  "away_goal_dist": [
+   0.19826391257339226,
+   0.32973459178668285,
+   0.2620684772816852,
+   0.13603701856361344,
+   0.05250445060412475,
+   0.016151502169489792,
+   0.004130275323252837,
+   0.0011097716977589202
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    3
+   ],
+   "away_goals_80": [
+    0,
+    3
+   ],
+   "total_goals_80": [
+    1,
+    6
+   ],
+   "goal_diff_80": [
+    -2,
+    2
+   ]
+  },
+  "score_grid": [
+   [
+    0.037057,
+    0.051429,
+    0.042423,
+    0.021994,
+    0.008469,
+    0.002594,
+    0.000659
+   ],
+   [
+    0.058087,
+    0.107339,
+    0.078841,
+    0.041052,
+    0.015874,
+    0.004881,
+    0.001246
+   ],
+   [
+    0.053332,
+    0.088138,
+    0.074279,
+    0.036774,
+    0.014279,
+    0.004408,
+    0.001129
+   ],
+   [
+    0.03073,
+    0.051005,
+    0.040872,
+    0.022668,
+    0.008367,
+    0.002593,
+    0.000667
+   ],
+   [
+    0.013075,
+    0.021795,
+    0.017538,
+    0.009247,
+    0.003823,
+    0.001126,
+    0.00029
+   ],
+   [
+    0.004399,
+    0.007364,
+    0.005951,
+    0.00315,
+    0.001238,
+    0.000408,
+    0.0001
+   ],
+   [
+    0.001222,
+    0.002055,
+    0.001667,
+    0.000886,
+    0.000349,
+    0.000109,
+    3e-05
+   ]
+  ],
+  "mass_check": 1.0000000000000002
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.41521499999999995,
+  "p_draw": 0.246395,
+  "p_away": 0.33838999999999997,
+  "se": [
+   0.0011018427831932286,
+   0.0009635468436329394,
+   0.0010580222301539793
+  ],
+  "max_abs_dev_vs_exact": 0.0019126463754025602,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   1.3521285569020054,
+   2.1985505552479494
+  ],
+  "xg_away_80": [
+   1.2035240042252502,
+   1.9936495218709491
+  ],
+  "p_home_80": [
+   0.3090530523915988,
+   0.5384623667587125
+  ],
+  "p_draw_80": [
+   0.20572640260908928,
+   0.26049591776231834
+  ],
+  "p_away_80": [
+   0.24081001010218223,
+   0.4565666253831386
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.19273007028087966,
+   0.18730865181750175
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.4354340441084472,
+   "p_draw": 0.24056732743275155,
+   "p_away": 0.3239986284588011,
+   "xg_home": 1.7392520871104864,
+   "xg_away": 1.477169152996681,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.4278040494006825,
+   "p_draw": 0.2398219041539644,
+   "p_away": 0.33237404644535307,
+   "xg_home": 1.6271951363877046,
+   "xg_away": 1.4086686071434482,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.4583648018305134,
+   "p_draw": 0.24547167372621853,
+   "p_away": 0.29616352444326804,
+   "xg_home": 1.7546173459364307,
+   "xg_away": 1.3766494473762594,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.45129577683744393,
+   "p_draw": 0.2304770231975399,
+   "p_away": 0.31822719996501625,
+   "xg_home": 1.7673020050044714,
+   "xg_away": 1.4537914313487212,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.4063072264638322,
+   "p_draw": 0.231343471019681,
+   "p_away": 0.362349302516487,
+   "xg_home": 1.7923914408541437,
+   "xg_away": 1.685505224284435,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Home advantage (Germany, fitted from results): \u00d71.31 on Augsburg's scoring rate.",
+   "effect": 0.2682
+  },
+  {
+   "text": "Mainz attack vs Augsburg defence: rate multiplier \u00d71.23 for the away side.",
+   "effect": 0.2035
+  },
+  {
+   "text": "Augsburg attack vs Mainz defence: time-weighted strength gap multiplies Augsburg's scoring rate by \u00d71.10 relative to an average pairing (from 29/29 decay-weighted matches).",
+   "effect": 0.0987
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.4140918567367329,
+  "p_draw": 0.24560549688786446,
+  "p_away": 0.3403026463754024,
+  "xg_home": 1.756858793897661,
+  "xg_away": 1.5855525013505227
+ },
+ "context": {
+  "fetched_at": "2026-11-15T22:58:27+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5881224",
+    "fetched_at": "2026-11-15T22:58:27+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "inferred",
+    "source": null,
+    "formation": null,
+    "starters": [
+     {
+      "name": "Finn Dahmen",
+      "pos": "G"
+     },
+     {
+      "name": "Fabian Rieder",
+      "pos": "M"
+     },
+     {
+      "name": "Han-Noah Massengo",
+      "pos": "M"
+     },
+     {
+      "name": "Hennes Behrens",
+      "pos": "M"
+     },
+     {
+      "name": "Robin Fellhauer",
+      "pos": "M"
+     },
+     {
+      "name": "Michael Gregoritsch",
+      "pos": "F"
+     },
+     {
+      "name": "Calvin Brackelmann",
+      "pos": "D"
+     },
+     {
+      "name": "Marius Wolf",
+      "pos": "M"
+     },
+     {
+      "name": "Anton Kade",
+      "pos": "F"
+     },
+     {
+      "name": "Jeffrey Gouweleeuw",
+      "pos": "D"
+     },
+     {
+      "name": "Rodrigo Ribeiro",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-11-15T22:58:27+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [],
+    "mean_xi_attack_index": 0.095,
+    "mean_continuity": -1.363,
+    "p_backup_gk": 0.0
+   },
+   "away": {
+    "status": "inferred",
+    "source": null,
+    "formation": null,
+    "starters": [
+     {
+      "name": "Alexander Schwolow",
+      "pos": "G"
+     },
+     {
+      "name": "Kaishu Sano",
+      "pos": "M"
+     },
+     {
+      "name": "Phillip Tietz",
+      "pos": "F"
+     },
+     {
+      "name": "Stefan Posch",
+      "pos": "D"
+     },
+     {
+      "name": "Philipp Mwene",
+      "pos": "M"
+     },
+     {
+      "name": "Nadiem Amiri",
+      "pos": "M"
+     },
+     {
+      "name": "Sheraldo Becker",
+      "pos": "F"
+     },
+     {
+      "name": "Kacper Potulski",
+      "pos": "D"
+     },
+     {
+      "name": "Anthony Caci",
+      "pos": "M"
+     },
+     {
+      "name": "Danny da Costa",
+      "pos": "D"
+     },
+     {
+      "name": "Jae-Sung Lee",
+      "pos": "M"
+     }
+    ],
+    "fetched_at": "2026-11-15T22:58:27+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [],
+    "mean_xi_attack_index": -0.05,
+    "mean_continuity": -0.954,
+    "p_backup_gk": 0.31
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Chrislain Matsima",
+     "type": "injury",
+     "expected_return": "A few weeks",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881224",
+     "fetched_at": "2026-11-15T22:58:27+00:00"
+    },
+    {
+     "player": "Arijon Ibrahimovi\u0107",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881224",
+     "fetched_at": "2026-11-15T22:58:27+00:00"
+    },
+    {
+     "player": "Calvin Brackelmann",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881224",
+     "fetched_at": "2026-11-15T22:58:27+00:00"
+    },
+    {
+     "player": "Sima Suso",
+     "type": "injury",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881224",
+     "fetched_at": "2026-11-15T22:58:27+00:00"
+    },
+    {
+     "player": "Steve Mouni\u00e9",
+     "type": "injury",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881224",
+     "fetched_at": "2026-11-15T22:58:27+00:00"
+    },
+    {
+     "player": "Noahkai Banks",
+     "type": "injury",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881224",
+     "fetched_at": "2026-11-15T22:58:27+00:00"
+    },
+    {
+     "player": "Faik Sakar",
+     "type": "injury",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881224",
+     "fetched_at": "2026-11-15T22:58:27+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "Otto Ruoppi",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881224",
+     "fetched_at": "2026-11-15T22:58:27+00:00"
+    },
+    {
+     "player": "Dominik Kohr",
+     "type": "injury",
+     "expected_return": "Early January 2027",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881224",
+     "fetched_at": "2026-11-15T22:58:27+00:00"
+    },
+    {
+     "player": "Silas Katompa Mvumpa",
+     "type": "injury",
+     "expected_return": "Early January 2027",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881224",
+     "fetched_at": "2026-11-15T22:58:27+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 15,
+    "n21": 1,
+    "last_match": "2026-11-07"
+   },
+   "away": {
+    "rest_days": 15,
+    "n21": 1,
+    "last_match": "2026-11-07"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 267.6
+  },
+  "venue": {
+   "name": "WWK Arena",
+   "city": "Augsburg",
+   "lat": 48.32310136,
+   "lon": 10.885949135
+  },
+  "weather": {
+   "precip_mm_2h": 0.8,
+   "wind_ms": 0.865,
+   "temp_c": 4.5,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=48.323&longitude=10.886",
+   "fetched_at": "2026-11-15T22:58:27+00:00",
+   "lat": 48.32310136,
+   "lon": 10.885949135
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": -1.21,
+    "d_p_draw_pp": -0.44,
+    "d_p_away_pp": 1.65,
+    "d_xg_home": 0.083,
+    "d_xg_away": 0.145
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0202,
+    "away_rate_mult": 1.0085,
+    "d_p_home_pp": 0.53,
+    "d_p_draw_pp": -0.22,
+    "d_p_away_pp": -0.3,
+    "d_xg_home": 0.034,
+    "d_xg_away": 0.014,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0178,
+    "away_rate_mult": 1.0178,
+    "d_p_home_pp": 0.15,
+    "d_p_draw_pp": -0.24,
+    "d_p_away_pp": 0.09,
+    "d_xg_home": 0.03,
+    "d_xg_away": 0.028,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "home_rate_mult": 1.019,
+    "away_rate_mult": 0.9856,
+    "d_p_home_pp": 1.2,
+    "d_p_draw_pp": -0.16,
+    "d_p_away_pp": -1.04,
+    "d_xg_home": 0.033,
+    "d_xg_away": -0.02,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 15.0,
+   "rest_a": 15.0,
+   "n21_h": 1.0,
+   "n21_a": 1.0,
+   "travel_km": 267.5634525029643,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.8,
+   "wind_ms": 0.865,
+   "temp_c": 4.5
+  }
+ },
+ "confidence": {
+  "tier": "LOW",
+  "p_max": 0.414091856736733,
+  "entropy_nats": 1.0767474814241011,
+  "text": "Most likely result has P = 41.4%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.3% \u00b1 0.4% (n=16754, mean forecast 44.6%). Backtest RPS for D1: 0.2000; exact-score top-5 hit rate 42.2% (n=981). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: LOW (entropy 1.077 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Augsburg: no lineup published yet \u2014 XI inferred from recent minutes share minus known absences; 200 configurations simulated (start P=0.7, UNVALIDATED prior).",
+  "Mainz: no lineup published yet \u2014 XI inferred from recent minutes share minus known absences; 200 configurations simulated (start P=0.7, UNVALIDATED prior)."
+ ],
+ "verdict": "Augsburg 1\u20131 Mainz is the single most probable scoreline at 10.7%: expected goals 1.76\u20131.59 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.044). Exact scores are inherently uncertain; the 1X2 split is 41.4%/24.6%/34.0%.",
+ "resolved": {
+  "home_key": "Germany:Augsburg",
+  "away_key": "Germany:Mainz",
+  "div": "D1",
+  "home_div": "D1",
+  "away_div": "D1",
+  "country": "Germany"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: 1. FSV Mainz 05 at FC Augsburg\nCompetition: Bundesliga\nDate: 2026-11-22 09:30 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-11-09\n\nPRIMARY FINAL SCORE PREDICTION\n\nFC Augsburg 1 \u2013 1 1. FSV Mainz 05\n(modal exact score, probability 10.7%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.76\nAway: 1.59\nExpected Total: 3.34\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 41.4%\nDraw: 24.6%\nAway Win: 34.0%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 10.7%\n2. 2\u20131: 8.8%\n3. 1\u20132: 7.9%\n4. 2\u20132: 7.4%\n5. 1\u20130: 5.8%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 14.7%\nTotal 2 goals: 20.3%\nTotal 3 goals: 22.0%\nTotal 4 goals: 18.8%\nTotal 5+ goals: 24.3%\n\nBoth Teams Score: 67.4%\nClean sheet FC Augsburg: 19.8% \u00b7 Clean sheet 1. FSV Mainz 05: 16.5%\n\nMATCH INTELLIGENCE\n\n1. Home advantage (Germany, fitted from results): \u00d71.31 on Augsburg's scoring rate.\n2. Mainz attack vs Augsburg defence: rate multiplier \u00d71.23 for the away side.\n3. Augsburg attack vs Mainz defence: time-weighted strength gap multiplies Augsburg's scoring rate by \u00d71.10 relative to an average pairing (from 29/29 decay-weighted matches).\n\nMODEL CONFIDENCE\n\nMost likely result has P = 41.4%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.3% \u00b1 0.4% (n=16754, mean forecast 44.6%). Backtest RPS for D1: 0.2000; exact-score top-5 hit rate 42.2% (n=981). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: LOW (entropy 1.077 nats of max 1.099).\nParameter-uncertainty 80% bands: xG FC Augsburg 1.35\u20132.20, xG 1. FSV Mainz 05 1.20\u20131.99; P(home win) 30.9%\u201353.8%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0019 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nAugsburg: INFERRED, fetched 2026-11-15 17:58 EST\n  Finn Dahmen (G), Fabian Rieder (M), Han-Noah Massengo (M), Hennes Behrens (M), Robin Fellhauer (M), Michael Gregoritsch (F), Calvin Brackelmann (D), Marius Wolf (M), Anton Kade (F), Jeffrey Gouweleeuw (D), Rodrigo Ribeiro (F)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs +0.095 (log) \u00b7 continuity -1.36 \u00b7 P(backup GK) 0%\nMainz: INFERRED, fetched 2026-11-15 17:58 EST\n  Alexander Schwolow (G), Kaishu Sano (M), Phillip Tietz (F), Stefan Posch (D), Philipp Mwene (M), Nadiem Amiri (M), Sheraldo Becker (F), Kacper Potulski (D), Anthony Caci (M), Danny da Costa (D), Jae-Sung Lee (M)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs -0.050 (log) \u00b7 continuity -0.95 \u00b7 P(backup GK) 31%\n\nKEY ABSENCES\n\n- Augsburg: Chrislain Matsima \u2014 injury, A few weeks [FotMob, 2026-11-15 17:58 EST]\n- Augsburg: Arijon Ibrahimovi\u0107 \u2014 injury, Late November 2026 [FotMob, 2026-11-15 17:58 EST]\n- Augsburg: Calvin Brackelmann \u2014 injury, Doubtful [FotMob, 2026-11-15 17:58 EST]\n- Augsburg: Sima Suso \u2014 injury, Mid November 2026 [FotMob, 2026-11-15 17:58 EST]\n- Augsburg: Steve Mouni\u00e9 \u2014 injury, Mid November 2026 [FotMob, 2026-11-15 17:58 EST]\n- Augsburg: Noahkai Banks \u2014 injury, Mid November 2026 [FotMob, 2026-11-15 17:58 EST]\n- Augsburg: Faik Sakar \u2014 injury, Mid November 2026 [FotMob, 2026-11-15 17:58 EST]\n- Mainz: Otto Ruoppi \u2014 injury, Late November 2026 [FotMob, 2026-11-15 17:58 EST]\n- Mainz: Dominik Kohr \u2014 injury, Early January 2027 [FotMob, 2026-11-15 17:58 EST]\n- Mainz: Silas Katompa Mvumpa \u2014 injury, Early January 2027 [FotMob, 2026-11-15 17:58 EST]\n\nWEATHER AT VENUE\n\nWWK Arena, Augsburg: 4.5 \u00b0C, wind 0.9 m/s, precipitation 0.8 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-11-15 17:58 EST]\n\nREST & TRAVEL\n\nAugsburg: 15 days' rest, 1 matches in previous 21 days \u00b7 Mainz: 15 days' rest, 1 in 21 days \u00b7 away travel 267.6 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 41.4% / 24.6% / 34.0%, xG 1.76\u20131.59\n- Understat xG component (validated, in ensemble): home -1.21 pp, draw -0.44 pp, away +1.65 pp; xG +0.083 / +0.145\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.53 pp, draw -0.22 pp, away -0.30 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.15 pp, draw -0.24 pp, away +0.09 pp\n- lineup: NOT APPLIED (failed out-of-sample validation); would have moved home +1.20 pp, draw -0.16 pp, away -1.04 pp\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Augsburg: no lineup published yet \u2014 XI inferred from recent minutes share minus known absences; 200 configurations simulated (start P=0.7, UNVALIDATED prior).\n- Mainz: no lineup published yet \u2014 XI inferred from recent minutes share minus known absences; 200 configurations simulated (start P=0.7, UNVALIDATED prior).\n\nFINAL VERDICT\n\nAugsburg 1\u20131 Mainz is the single most probable scoreline at 10.7%: expected goals 1.76\u20131.59 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.044). Exact scores are inherently uncertain; the 1X2 split is 41.4%/24.6%/34.0%.\n",
+ "refresh_id": "2bf4317506524ed29375fba4ddffdbc6",
+ "frozen_at": "2026-11-15T22:58:27+00:00",
+ "sha256": "9898edf66347f7581c3d41abc1dad423f67eb6191e257480ed1ab21d66a5a881"
+}

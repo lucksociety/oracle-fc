@@ -1,0 +1,648 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-11-09",
+ "input_fingerprint": "44dc80a85f9e047407a952b6e3054aa22939bb9257769703ef816e03acaef708",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-11-15T22:58:27+00:00",
+ "fixture": {
+  "event_id": "POLY-1344721",
+  "home_name": "Bologna FC 1909",
+  "away_name": "Udinese Calcio",
+  "competition": "Serie A",
+  "subcategory": "sea",
+  "kickoff_utc": "2026-11-22T14:00:00+00:00",
+  "kickoff_local": "2026-11-22 09:00 EST",
+  "home_matched": "Bologna",
+  "away_matched": "Udinese",
+  "match_methods": {
+   "home": {
+    "source": "Bologna FC 1909",
+    "matched": "Bologna",
+    "method": "core-tokens",
+    "score": 0.97
+   },
+   "away": {
+    "source": "Udinese Calcio",
+    "matched": "Udinese",
+    "method": "core-tokens",
+    "score": 0.97
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.5491104911184268,
+  "p_draw": 0.2507433733385712,
+  "p_away": 0.20014613554300198,
+  "xg_home": 1.757615941464872,
+  "xg_away": 0.9872771957964254,
+  "xg_total": 2.7448931372612972,
+  "median_total": 3,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.12202541310440403
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.12202541310440403
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.10775730741868329
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.10075456684397657
+   },
+   {
+    "home": 2,
+    "away": 0,
+    "p": 0.09868767532397929
+   },
+   {
+    "home": 0,
+    "away": 0,
+    "p": 0.06587994148913773
+   }
+  ],
+  "btts": 0.5349158063181705,
+  "totals_over": {
+   "over_0.5": 0.9341200585108623,
+   "over_1.5": 0.7685634383891725,
+   "over_2.5": 0.5183267815225628,
+   "over_3.5": 0.2956932442106483,
+   "over_4.5": 0.14057698710279146,
+   "over_5.5": 0.058048762116325966,
+   "over_6.5": 0.02059966261695921
+  },
+  "total_buckets": {
+   "0-1": 0.23143656161082743,
+   "2": 0.2502366568666097,
+   "3": 0.22263353731191457,
+   "4": 0.15511625710785684,
+   "5+": 0.14057698710279146
+  },
+  "clean_sheet_home": 0.3656852192067931,
+  "clean_sheet_away": 0.16527891596417427,
+  "home_goal_dist": [
+   0.16527891596417427,
+   0.3074565430670549,
+   0.27177250054451935,
+   0.15709813080221963,
+   0.0672925131477315,
+   0.022815665618131212,
+   0.00638550294515374,
+   0.0019002279110154378
+  ],
+  "away_goal_dist": [
+   0.3656852192067931,
+   0.3760654108271174,
+   0.1835635881949282,
+   0.05812668309027999,
+   0.013597029328671384,
+   0.0025195723367269726,
+   0.0003858904369133047,
+   5.660657856964698e-05
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    3
+   ],
+   "away_goals_80": [
+    0,
+    2
+   ],
+   "total_goals_80": [
+    1,
+    5
+   ],
+   "goal_diff_80": [
+    -1,
+    3
+   ]
+  },
+  "score_grid": [
+   [
+    0.06588,
+    0.057799,
+    0.029524,
+    0.009391,
+    0.002204,
+    0.000409,
+    6.3e-05
+   ],
+   [
+    0.107757,
+    0.122025,
+    0.055106,
+    0.017546,
+    0.004122,
+    0.000765,
+    0.000117
+   ],
+   [
+    0.098688,
+    0.100755,
+    0.052103,
+    0.015723,
+    0.003697,
+    0.000687,
+    0.000105
+   ],
+   [
+    0.057381,
+    0.05865,
+    0.028747,
+    0.009688,
+    0.002159,
+    0.000402,
+    6.2e-05
+   ],
+   [
+    0.024613,
+    0.025187,
+    0.012359,
+    0.003948,
+    0.000982,
+    0.000173,
+    2.7e-05
+   ],
+   [
+    0.008341,
+    0.008545,
+    0.004198,
+    0.001342,
+    0.000317,
+    6.2e-05,
+    9e-06
+   ],
+   [
+    0.002332,
+    0.002392,
+    0.001176,
+    0.000377,
+    8.9e-05,
+    1.7e-05,
+    3e-06
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.5477399999999999,
+  "p_draw": 0.25117,
+  "p_away": 0.20109000000000002,
+  "se": [
+   0.0011129260811033228,
+   0.0009697515947396014,
+   0.00089624999832636
+  ],
+  "max_abs_dev_vs_exact": 0.0013704911184269086,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   1.3630567613760574,
+   2.187187788918923
+  ],
+  "xg_away_80": [
+   0.7311900540569555,
+   1.2633428352060012
+  ],
+  "p_home_80": [
+   0.43726272716592185,
+   0.6605767274903955
+  ],
+  "p_draw_80": [
+   0.2019111907162501,
+   0.2847418807946609
+  ],
+  "p_away_80": [
+   0.133217156953044,
+   0.2877711166720314
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.1874842354165521,
+   0.20294395575033247
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.530446621571765,
+   "p_draw": 0.2515109200642933,
+   "p_away": 0.21804245836394165,
+   "xg_home": 1.6873663364696974,
+   "xg_away": 0.9976624337219069,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.5437328730119126,
+   "p_draw": 0.24393867816903314,
+   "p_away": 0.2123284488190543,
+   "xg_home": 1.6608257905361357,
+   "xg_away": 0.9378562222802966,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.4371131700783232,
+   "p_draw": 0.2753421964150903,
+   "p_away": 0.28754463350658666,
+   "xg_home": 1.4556378244241668,
+   "xg_away": 1.1355152422727859,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.3922560236284115,
+   "p_draw": 0.2667612672813542,
+   "p_away": 0.34098270909023437,
+   "xg_home": 1.3267179375625444,
+   "xg_away": 1.2182532533096748,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.5507438518375462,
+   "p_draw": 0.24179565774901438,
+   "p_away": 0.2074604904134395,
+   "xg_home": 1.7832371290631952,
+   "xg_away": 1.0086799499596406,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Independent results-only Elo: Bologna 1657 vs Udinese 1509 (gap +148 before home advantage).",
+   "effect": 0.2225
+  },
+  {
+   "text": "Udinese attack vs Bologna defence: rate multiplier \u00d70.83 for the away side.",
+   "effect": 0.1889
+  },
+  {
+   "text": "Bologna attack vs Udinese defence: time-weighted strength gap multiplies Bologna's scoring rate by \u00d71.20 relative to an average pairing (from 34/33 decay-weighted matches).",
+   "effect": 0.1808
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.5491104911184268,
+  "p_draw": 0.2507433733385712,
+  "p_away": 0.20014613554300198,
+  "xg_home": 1.757615941464872,
+  "xg_away": 0.9872771957964254
+ },
+ "context": {
+  "fetched_at": "2026-11-15T22:58:27+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5749752",
+    "fetched_at": "2026-11-15T22:58:27+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "inferred",
+    "source": null,
+    "formation": "",
+    "starters": [
+     {
+      "name": "Lukasz Skorupski",
+      "pos": "G"
+     },
+     {
+      "name": "Lewis Ferguson",
+      "pos": "M"
+     },
+     {
+      "name": "Tommaso Pobega",
+      "pos": "M"
+     },
+     {
+      "name": "Federico Bernardeschi",
+      "pos": "F"
+     },
+     {
+      "name": "Nadir Zortea",
+      "pos": "M"
+     },
+     {
+      "name": "Arthur Theate",
+      "pos": "D"
+     },
+     {
+      "name": "Nicol\u00f2 Casale",
+      "pos": "D"
+     },
+     {
+      "name": "Jens Odgaard",
+      "pos": "F"
+     },
+     {
+      "name": "Matteo Darmian",
+      "pos": "D"
+     },
+     {
+      "name": "Torbj\u00f8rn Heggem",
+      "pos": "D"
+     },
+     {
+      "name": "Roberto Piccoli",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-11-15T22:58:27+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [],
+    "mean_xi_attack_index": -0.004,
+    "mean_continuity": -0.727,
+    "p_backup_gk": 0.3
+   },
+   "away": {
+    "status": "inferred",
+    "source": null,
+    "formation": "",
+    "starters": [
+     {
+      "name": "Maduka Okoye",
+      "pos": "G"
+     },
+     {
+      "name": "Jesper Karlstr\u00f6m",
+      "pos": "M"
+     },
+     {
+      "name": "Jurgen Ekkelenkamp",
+      "pos": "F"
+     },
+     {
+      "name": "Hassane Kamara",
+      "pos": "M"
+     },
+     {
+      "name": "James Abankwah",
+      "pos": "D"
+     },
+     {
+      "name": "Mergim Vojvoda",
+      "pos": "M"
+     },
+     {
+      "name": "Keinan Davis",
+      "pos": "F"
+     },
+     {
+      "name": "Christian Kabasele",
+      "pos": "D"
+     },
+     {
+      "name": "Giorgi Chakvetadze",
+      "pos": "M"
+     },
+     {
+      "name": "Matteo Palma",
+      "pos": "D"
+     },
+     {
+      "name": "Enzo Ebosse",
+      "pos": "D"
+     }
+    ],
+    "fetched_at": "2026-11-15T22:58:27+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [],
+    "mean_xi_attack_index": -0.106,
+    "mean_continuity": -0.355,
+    "p_backup_gk": 0.0
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Nicol\u00f2 Cambiaghi",
+     "type": "injury",
+     "expected_return": "About 1-2 weeks",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5749752",
+     "fetched_at": "2026-11-15T22:58:27+00:00"
+    },
+    {
+     "player": "Juan Miranda",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5749752",
+     "fetched_at": "2026-11-15T22:58:27+00:00"
+    },
+    {
+     "player": "Lorenzo De Silvestri",
+     "type": "injury",
+     "expected_return": "About 1-2 weeks",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5749752",
+     "fetched_at": "2026-11-15T22:58:27+00:00"
+    },
+    {
+     "player": "Jay Enem",
+     "type": "injury",
+     "expected_return": "About 1-2 weeks",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5749752",
+     "fetched_at": "2026-11-15T22:58:27+00:00"
+    },
+    {
+     "player": "Emil Holm",
+     "type": "injury",
+     "expected_return": "Late February 2027",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5749752",
+     "fetched_at": "2026-11-15T22:58:27+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "Nicol\u00f2 Bertola",
+     "type": "injury",
+     "expected_return": "Early December 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5749752",
+     "fetched_at": "2026-11-15T22:58:27+00:00"
+    },
+    {
+     "player": "Alessandro Zanoli",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5749752",
+     "fetched_at": "2026-11-15T22:58:27+00:00"
+    },
+    {
+     "player": "David Alaba",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5749752",
+     "fetched_at": "2026-11-15T22:58:27+00:00"
+    },
+    {
+     "player": "Idrissa Gueye",
+     "type": "injury",
+     "expected_return": "Late December 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5749752",
+     "fetched_at": "2026-11-15T22:58:27+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 15,
+    "n21": 1,
+    "last_match": "2026-11-07"
+   },
+   "away": {
+    "rest_days": 16,
+    "n21": 1,
+    "last_match": "2026-11-06"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 230.4
+  },
+  "venue": {
+   "name": "Stadio Renato Dall'Ara",
+   "city": "Bologna",
+   "lat": 44.492290396,
+   "lon": 11.309956759
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 2.75,
+   "temp_c": 15.7,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=44.492&longitude=11.31",
+   "fetched_at": "2026-11-15T22:58:27+00:00",
+   "lat": 44.492290396,
+   "lon": 11.309956759
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": 0.5,
+    "d_p_draw_pp": -0.16,
+    "d_p_away_pp": -0.33,
+    "d_xg_home": 0.066,
+    "d_xg_away": 0.034
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0186,
+    "away_rate_mult": 1.0078,
+    "d_p_home_pp": 0.57,
+    "d_p_draw_pp": -0.32,
+    "d_p_away_pp": -0.24,
+    "d_xg_home": 0.032,
+    "d_xg_away": 0.008,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "home_rate_mult": 0.9866,
+    "away_rate_mult": 0.9849,
+    "d_p_home_pp": -0.2,
+    "d_p_draw_pp": 0.21,
+    "d_p_away_pp": -0.01,
+    "d_xg_home": -0.022,
+    "d_xg_away": -0.014,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 15.0,
+   "rest_a": 16.0,
+   "n21_h": 1.0,
+   "n21_a": 1.0,
+   "travel_km": 230.41406917439085,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 2.75,
+   "temp_c": 15.7
+  }
+ },
+ "confidence": {
+  "tier": "MODERATE",
+  "p_max": 0.5491104911184268,
+  "entropy_nats": 0.9980035950366974,
+  "text": "Most likely result has P = 54.9%. In the out-of-sample backtest, favourites priced 0.50\u20130.60 won 53.9% \u00b1 0.5% (n=9522, mean forecast 54.4%). Backtest RPS for I1: 0.1939; exact-score top-5 hit rate 54.8% (n=1228). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: MODERATE (entropy 0.998 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Bologna: no lineup published yet \u2014 XI inferred from recent minutes share minus known absences; 200 configurations simulated (start P=0.7, UNVALIDATED prior).",
+  "Udinese: no lineup published yet \u2014 XI inferred from recent minutes share minus known absences; 200 configurations simulated (start P=0.7, UNVALIDATED prior)."
+ ],
+ "verdict": "Bologna 1\u20131 Udinese is the single most probable scoreline at 12.2%: expected goals 1.76\u20130.99 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.044). Exact scores are inherently uncertain; the 1X2 split is 54.9%/25.1%/20.0%.",
+ "resolved": {
+  "home_key": "Italy:Bologna",
+  "away_key": "Italy:Udinese",
+  "div": "I1",
+  "home_div": "I1",
+  "away_div": "I1",
+  "country": "Italy"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: Udinese Calcio at Bologna FC 1909\nCompetition: Serie A\nDate: 2026-11-22 09:00 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-11-09\n\nPRIMARY FINAL SCORE PREDICTION\n\nBologna FC 1909 1 \u2013 1 Udinese Calcio\n(modal exact score, probability 12.2%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.76\nAway: 0.99\nExpected Total: 2.74\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 54.9%\nDraw: 25.1%\nAway Win: 20.0%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 12.2%\n2. 1\u20130: 10.8%\n3. 2\u20131: 10.1%\n4. 2\u20130: 9.9%\n5. 0\u20130: 6.6%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 23.1%\nTotal 2 goals: 25.0%\nTotal 3 goals: 22.3%\nTotal 4 goals: 15.5%\nTotal 5+ goals: 14.1%\n\nBoth Teams Score: 53.5%\nClean sheet Bologna FC 1909: 36.6% \u00b7 Clean sheet Udinese Calcio: 16.5%\n\nMATCH INTELLIGENCE\n\n1. Independent results-only Elo: Bologna 1657 vs Udinese 1509 (gap +148 before home advantage).\n2. Udinese attack vs Bologna defence: rate multiplier \u00d70.83 for the away side.\n3. Bologna attack vs Udinese defence: time-weighted strength gap multiplies Bologna's scoring rate by \u00d71.20 relative to an average pairing (from 34/33 decay-weighted matches).\n\nMODEL CONFIDENCE\n\nMost likely result has P = 54.9%. In the out-of-sample backtest, favourites priced 0.50\u20130.60 won 53.9% \u00b1 0.5% (n=9522, mean forecast 54.4%). Backtest RPS for I1: 0.1939; exact-score top-5 hit rate 54.8% (n=1228). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: MODERATE (entropy 0.998 nats of max 1.099).\nParameter-uncertainty 80% bands: xG Bologna FC 1909 1.36\u20132.19, xG Udinese Calcio 0.73\u20131.26; P(home win) 43.7%\u201366.1%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0014 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nBologna: INFERRED, fetched 2026-11-15 17:58 EST\n  Lukasz Skorupski (G), Lewis Ferguson (M), Tommaso Pobega (M), Federico Bernardeschi (F), Nadir Zortea (M), Arthur Theate (D), Nicol\u00f2 Casale (D), Jens Odgaard (F), Matteo Darmian (D), Torbj\u00f8rn Heggem (D), Roberto Piccoli (F)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs -0.004 (log) \u00b7 continuity -0.73 \u00b7 P(backup GK) 30%\nUdinese: INFERRED, fetched 2026-11-15 17:58 EST\n  Maduka Okoye (G), Jesper Karlstr\u00f6m (M), Jurgen Ekkelenkamp (F), Hassane Kamara (M), James Abankwah (D), Mergim Vojvoda (M), Keinan Davis (F), Christian Kabasele (D), Giorgi Chakvetadze (M), Matteo Palma (D), Enzo Ebosse (D)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs -0.106 (log) \u00b7 continuity -0.35 \u00b7 P(backup GK) 0%\n\nKEY ABSENCES\n\n- Bologna: Nicol\u00f2 Cambiaghi \u2014 injury, About 1-2 weeks [FotMob, 2026-11-15 17:58 EST]\n- Bologna: Juan Miranda \u2014 injury, Late November 2026 [FotMob, 2026-11-15 17:58 EST]\n- Bologna: Lorenzo De Silvestri \u2014 injury, About 1-2 weeks [FotMob, 2026-11-15 17:58 EST]\n- Bologna: Jay Enem \u2014 injury, About 1-2 weeks [FotMob, 2026-11-15 17:58 EST]\n- Bologna: Emil Holm \u2014 injury, Late February 2027 [FotMob, 2026-11-15 17:58 EST]\n- Udinese: Nicol\u00f2 Bertola \u2014 injury, Early December 2026 [FotMob, 2026-11-15 17:58 EST]\n- Udinese: Alessandro Zanoli \u2014 injury, Late November 2026 [FotMob, 2026-11-15 17:58 EST]\n- Udinese: David Alaba \u2014 injury, Late November 2026 [FotMob, 2026-11-15 17:58 EST]\n- Udinese: Idrissa Gueye \u2014 injury, Late December 2026 [FotMob, 2026-11-15 17:58 EST]\n\nWEATHER AT VENUE\n\nStadio Renato Dall'Ara, Bologna: 15.7 \u00b0C, wind 2.8 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-11-15 17:58 EST]\n\nREST & TRAVEL\n\nBologna: 15 days' rest, 1 matches in previous 21 days \u00b7 Udinese: 16 days' rest, 1 in 21 days \u00b7 away travel 230.4 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 54.9% / 25.1% / 20.0%, xG 1.76\u20130.99\n- Understat xG component (validated, in ensemble): home +0.50 pp, draw -0.16 pp, away -0.33 pp; xG +0.066 / +0.034\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.57 pp, draw -0.32 pp, away -0.24 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- lineup: NOT APPLIED (failed out-of-sample validation); would have moved home -0.20 pp, draw +0.21 pp, away -0.01 pp\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Bologna: no lineup published yet \u2014 XI inferred from recent minutes share minus known absences; 200 configurations simulated (start P=0.7, UNVALIDATED prior).\n- Udinese: no lineup published yet \u2014 XI inferred from recent minutes share minus known absences; 200 configurations simulated (start P=0.7, UNVALIDATED prior).\n\nFINAL VERDICT\n\nBologna 1\u20131 Udinese is the single most probable scoreline at 12.2%: expected goals 1.76\u20130.99 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.044). Exact scores are inherently uncertain; the 1X2 split is 54.9%/25.1%/20.0%.\n",
+ "refresh_id": "2bf4317506524ed29375fba4ddffdbc6",
+ "frozen_at": "2026-11-15T22:58:27+00:00",
+ "sha256": "02e2cc2d1e8f729ad4612f9ea2bb211bc1b72c14c0a65b9c7a8e56a30a91649e"
+}
