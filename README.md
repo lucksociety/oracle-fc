@@ -152,3 +152,7 @@ programmatically by `scripts/extract_palette.py` (median-cut quantisation → ro
 coin gold `#d69c08` / `#f9d731`, clover green `#026016`, Vegas-night teal `#011419` / `#031d20`, bronze `#b18423`.
 
 *Research tool, not betting advice.*
+
+### November 16 validation repair
+
+The weekly context challenger could crash after a long walk-forward run because it unconditionally opened the optional FotMob fixture file. Historical kickoff lookup now falls back to football-data's documented UK kickoff time when that file is absent. If neither source has a valid time, kickoff remains unknown; an invented afternoon time cannot enter historical weather features. Sparse rest histories and empty weather results retain their column schema, so uncovered matches stay explicitly missing and the context/calibration evaluation can continue. Existing champion models and betting thresholds are unchanged. Regression tests cover the exact missing-file feature-builder path, mapped UTC priority, UK daylight saving and missing-weather merges; the full multi-season weekly evaluation is still a separate scheduled run.
