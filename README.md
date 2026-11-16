@@ -3,12 +3,12 @@
 # ORACLE FC
 
 **Independent football match simulation for [@lucksociety](https://x.com/lucksociety).**
-Pick a date → ORACLE FC finds every soccer game listed on the **Jupiter prediction market** that day →
+Pick a date → ORACLE FC finds every soccer game listed on **Polymarket** that day →
 runs the full ORACLE FC forecast (exact score distribution, xG, 1X2, BTTS, totals, top-5 scores) for each →
-freezes it → and only *afterwards* compares it with Jupiter prices on a separate **Edge (post-hoc)** tab.
+freezes it → and only *afterwards* compares it with Polymarket prices on a separate **Edge (post-hoc)** tab.
 
 > **Directive Zero.** Odds, market prices, implied probabilities and third-party predictions are **never**
-> inputs, priors, calibration targets or weights. Jupiter is used for fixture *identity* only; prices live in a
+> inputs, priors, calibration targets or weights. Polymarket is used for fixture *identity* only; prices live in a
 > physically separate package (`oraclefc/market/`) that the forecasting code is forbidden to import (tested).
 
 Live dashboard: **https://lucksociety.github.io/oracle-fc/** (rebuilt every 3 hours by GitHub Actions)
@@ -39,14 +39,19 @@ On top of the ensemble, `oraclefc/calibrate.py` reshapes each score matrix as Q 
 
 ## Best Bets (post-hoc, after freezing)
 
-For every game the Edge layer (`oraclefc/market/best_bet.py`, mirrored in `web/bestbet.js`) prices every **buyable** Jupiter side we can model from the frozen score grid — 1X2 (YES and NO), BTTS, match totals, team totals, spreads, exact score — and picks **one** best bet:
+For every game the Edge layer (`oraclefc/market/best_bet.py`, mirrored in `web/bestbet.js`) prices every **buyable** Polymarket side we can model from the frozen score grid and picks at most **one** bet. Prices come straight from Polymarket's public APIs (`oraclefc/market/polymarket_prices.py`): Gamma for the match's markets, the CLOB order book for the executable ask/bid.
 
-* **Eligible** only if model P > 50% **and** EV > 0 buying at the Jupiter **ask** (not mid).
-* **EV per $1** = P / (ask + fee) − 1. Fee per contract = Jupiter builder fee 2%·ask + Polymarket sports taker fee 0.05·ask·(1−ask) ([Jupiter fees](https://docs.jup.ag/user-docs/trade/predict/fees), [Polymarket fees](https://docs.polymarket.com/trading/fees), market `feeSchedule` `sports_fees_v3`, checked 2026-10-28). Jupiter rounds each order's fee up to the cent, so tiny orders cost slightly more.
+**Rule `market-shrink-w25-edgecap8-v4` (since 2026-11-16).** The first 328 settled bets under the old rule (raw model EV, highest EV wins) averaged model 62.2%, ask 53.1%, and won 48.8%: −32 units, −9.8% ROI. Where the model and the market disagreed, the market was right, and the biggest "edges" were the worst calibrated. So:
+
+* **Bet probability** = market mid + 0.25 × (model − mid). The model is shrunk 75% toward the market before EV is computed; the raw model number is still shown.
+* **Eligible** only if model P > 50% **and** EV > 0 buying at the Polymarket **ask** with the shrunk probability, **and** the raw model-minus-ask edge is at most 8 pts (larger gaps are treated as model error), **and** traded volume ≥ 500, two-sided book ≤ 10¢ wide, 90-minute contract.
+* **Not bet:** team totals and BTTS (−23% and −56% ROI in the review). They are still priced and shown.
+* **EV per $1** = bet probability / (ask + fee) − 1. Fee per contract = Polymarket taker fee `rate·(p(1−p))^exponent`, read from each market's own `feeSchedule` ([Polymarket fees](https://docs.polymarket.com/trading/fees)); when a market exposes none, the sports rate 0.05 is assumed and flagged. There is no Polymarket builder fee any more.
 * Highest EV wins; otherwise **NO BET** (with the closest miss shown). Prices fetched after kick-off, or forecasts frozen after the snapshot, are always NO BET.
-* Shown as a banner on every game card and as a **Best Bets** table per date. Half-time, corners and first-to-score markets are not modelled and never selected.
-* There is no backtest of betting returns (Directive Zero forbids historical odds), so these are research flags, not advice.
+* Expect far fewer bets than before. That is the point: the old rule bet on roughly three games in four.
+* **Benchmark.** Every priced game (bet or not) stores the pre-kick-off no-vig Polymarket 1X2. Grading reports model vs market log loss (`vs_market` in `data/results/*.json` and `record.json`), and the bet record is split by selection policy. Until the model matches the market there, there is no evidence of an edge.
 * **Locking.** The lineups job re-prices every 20 min; once a game kicks off, its last **pre-kick-off** verdict is kept (`locked: true`) instead of being overwritten by an in-play NO BET.
+* Half-time, corners and first-to-score markets are not modelled and never selected. These are research flags, not advice.
 
 ## Automation cadence
 
@@ -54,7 +59,7 @@ For every game the Edge layer (`oraclefc/market/best_bet.py`, mirrored in `web/b
 
 ## Results grading (post-match)
 
-`python -m oraclefc.cli grade` (run by the daily pipeline for the last 3 days) fetches final scores from FotMob (allow-listed fields only, no odds), takes the **90-minute** score (extra time / penalties ignored, as Jupiter soccer markets settle on regulation time), and grades:
+`python -m oraclefc.cli grade` (run by the daily pipeline for the last 3 days) fetches final scores from FotMob (allow-listed fields only, no odds), takes the **90-minute** score (extra time / penalties ignored, as Polymarket soccer markets settle on regulation time), and grades:
 
 * the forecast frozen **before kick-off**: modal score, 1X2 RPS and log loss, exact-score / top-5 hit, predicted vs actual goals;
 * the locked best bet: WIN/LOSS and P&L for 1 unit bought at the recorded ask + fees (win = 1/cost − 1, loss = −1), plus the model-expected units.
@@ -105,7 +110,7 @@ python -m oraclefc.cli ingest                     # ~80 s: download + clean perm
 python -m oraclefc.cli ingest-context             # refresh the Understat player/xG snapshot (data/context)
 python -m oraclefc.run_context_backtest           # ~25 min: context-feature champion/challenger
 python -m oraclefc.cli backtest                   # ~15 min: tune, walk-forward, champion/challenger
-python -m oraclefc.cli run --date 2026-10-31 --print   # forecast + freeze every Jupiter game that day
+python -m oraclefc.cli run --date 2026-10-31 --print   # forecast + freeze every Polymarket game that day
 python -m oraclefc.cli edge --date 2026-10-31     # POST-HOC price comparison (after freezing)
 python -m oraclefc.run_calibration                # season-ahead calibration layer (needs the context backtest cache)
 python -m oraclefc.cli grade --date 2026-10-31    # POST-MATCH grading vs final scores
@@ -113,7 +118,7 @@ python -m oraclefc.cli serve                      # dashboard at http://127.0.0.
 python -m pytest -q
 ```
 
-Optional: `JUPITER_API_KEY` (env var / repo secret) raises Jupiter rate limits; the keyless API works.
+No API key is needed: Polymarket's Gamma and CLOB read endpoints are public.
 
 ## How it works
 
@@ -125,7 +130,7 @@ Optional: `JUPITER_API_KEY` (env var / repo secret) raises Jupiter rate limits; 
   Monte Carlo cross-check with convergence diagnostics, parameter-uncertainty intervals.
 * **Governance**: allow/deny lists, schema validation, provenance with SHA-256, firewall tests,
   write-once frozen forecasts with a hash ledger, no forecasts after kickoff.
-* **Team mapping**: Jupiter names → data names with aliases + conservative fuzzy matching; anything that
+* **Team mapping**: Polymarket names → data names with aliases + conservative fuzzy matching; anything that
   cannot be matched is shown as **Not forecast** with the reason (never guessed).
 
 Architecture: [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) · Roadmap: [`docs/ROADMAP.md`](docs/ROADMAP.md)
@@ -142,7 +147,7 @@ Architecture: [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) · Roadmap: [`docs/
   Saudi Pro League, Qatar, Colombia, Turkey 1. Lig and Brazil Série B cannot be forecast yet.
 * Champions League links come from openfootball 2016–2026; the 2026/27 UCL file isn't published yet, and
   Europa/Conference League use the UCL environment.
-* Jupiter only lists active/upcoming events, so past dates show the frozen archive.
+* Polymarket only lists active/upcoming events, so past dates show the frozen archive.
 
 ## Brand
 

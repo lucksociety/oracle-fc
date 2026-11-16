@@ -7,7 +7,7 @@ under the predefined rule (95% block-bootstrap CI of ΔRPS and Δexact log score
 1. **Current-season European results** (UCL/UEL/UECL 2026/27) via football-data.org free tier or
    openfootball once published; separate UEL/UECL environments instead of borrowing UCL's.
 2. **Domestic cups** (FA Cup, EFL Cup, Copa del Rey, DFB-Pokal) results + a cup-rotation term.
-3. **More leagues** on Jupiter that lack a free results feed today: Saudi Pro League, Qatar, Colombia,
+3. **More leagues** on Polymarket that lack a free results feed today: Saudi Pro League, Qatar, Colombia,
    Turkey 1. Lig, Brazil Série B, Spanish Primera/Segunda RFEF (needed for Copa del Rey ties).
 4. ~~xG-informed strengths~~ **Done (1.1.0)**: Understat xG-blended Dixon–Coles is now an ensemble component
    (validated). Next: extend xG beyond the top-5 leagues (football-data 2026/27 xG columns).

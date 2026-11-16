@@ -219,7 +219,8 @@ def grade_date(date: str, fetch=None, now: datetime | None = None) -> dict:
                                  "xg_home": s["xg_home"], "xg_away": s["xg_away"]}
         if bb.get("verdict") == "BET":
             row["bet"] = {k: bb["bet"].get(k) for k in ("label", "market_type", "side", "ask", "fee_per_contract",
-                                                         "cost_per_contract", "model_p", "ev_per_dollar", "volume")}
+                                                         "cost_per_contract", "model_p", "bet_p", "ev_per_dollar", "volume")}
+            row["selection_policy"] = bb.get("selection_policy")
             row["bet_locked_at"] = bb.get("locked_from_snapshot") or edge.get("market_fetched_at")
         else:
             row["no_bet_reason"] = bb.get("reason")
@@ -241,6 +242,12 @@ def grade_date(date: str, fetch=None, now: datetime | None = None) -> dict:
                          "url": r.get("source_url") or f"https://www.fotmob.com/match/{r['fm_match_id']}"}
         if fc:
             row["metrics"] = forecast_metrics(fc["simulation"], hg, ag)
+            mk = bb.get("market_1x2")
+            if mk:  # same game, same outcome: model vs the pre-kick-off no-vig market
+                row["market_1x2"] = mk
+                bench = forecast_metrics({"p_home": mk["p_home"], "p_draw": mk["p_draw"], "p_away": mk["p_away"]}, hg, ag)
+                row["metrics"]["market_log_loss"] = bench["log_loss"]
+                row["metrics"]["market_rps"] = bench["rps"]
         if row.get("bet"):
             spec = bb["bet"].get("outcome") or parse_label(bb["bet"]["label"], fx["home_name"], fx["away_name"])
             if spec is None:
@@ -253,8 +260,21 @@ def grade_date(date: str, fetch=None, now: datetime | None = None) -> dict:
     return {"date": date, "graded_at": now.isoformat(timespec="seconds"),
             "label": "POST-MATCH grading. Results never feed the model's market-free inputs except as the "
                      "ordinary historical results every model is fitted on.",
-            "stake": "1 unit per bet, bought at the recorded Jupiter ask + fees",
+            "stake": "1 unit per bet, bought at the recorded Polymarket ask + fees",
             "games": games, "summary": summarise(games)}
+
+
+def _vs_market(fin: list[dict]) -> dict | None:
+    """Model vs pre-kick-off no-vig Polymarket 1X2 on the games where both exist. Negative diff = model better."""
+    both = [g["metrics"] for g in fin if g["metrics"].get("market_log_loss") is not None]
+    if not both:
+        return None
+    d = np.array([m["log_loss"] - m["market_log_loss"] for m in both])
+    se = float(d.std(ddof=1) / math.sqrt(len(d))) if len(d) > 1 else None
+    return {"n": len(both), "model_log_loss": float(np.mean([m["log_loss"] for m in both])),
+            "market_log_loss": float(np.mean([m["market_log_loss"] for m in both])),
+            "model_rps": float(np.mean([m["rps"] for m in both])), "market_rps": float(np.mean([m["market_rps"] for m in both])),
+            "log_loss_diff": float(d.mean()), "log_loss_diff_se": se}
 
 
 def summarise(games: list[dict]) -> dict:
@@ -271,6 +291,7 @@ def summarise(games: list[dict]) -> dict:
                  "roi": round(pnl / staked, 4) if staked else None,
                  "expected_units": round(sum(g["bet"]["ev_per_dollar"] for g in bets), 4),
                  "pending_or_unknown": sum(1 for g in games if g.get("bet") and g.get("bet_result") not in ("WIN", "LOSS"))},
+        "vs_market": _vs_market(fin),
         "forecast": None if not fin else {
             "rps": float(np.mean([g["metrics"]["rps"] for g in fin])),
             "log_loss": float(np.mean([g["metrics"]["log_loss"] for g in fin])),
@@ -287,7 +308,7 @@ def running_record() -> dict:
     days, all_games = [], []
     for p in sorted(RESULTS_DIR.glob("20*.json")):
         d = json.loads(p.read_text())
-        days.append({"date": d["date"], **{k: d["summary"][k] for k in ("n_final", "bets")},
+        days.append({"date": d["date"], **{k: d["summary"][k] for k in ("n_final", "bets")}, "vs_market": d["summary"].get("vs_market"),
                      "rps": (d["summary"].get("forecast") or {}).get("rps")})
         all_games.extend(d["games"])
     s = summarise(all_games)
@@ -295,7 +316,12 @@ def running_record() -> dict:
     for g in sorted((g for g in all_games if g.get("bet_result") in ("WIN", "LOSS")), key=lambda g: g["kickoff_utc"]):
         cum += g["pnl_units"]
         curve.append({"kickoff_utc": g["kickoff_utc"], "units": round(cum, 4)})
-    return {"updated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"), "overall": s,
+    policies = {}
+    for g in all_games:
+        if g.get("bet_result") in ("WIN", "LOSS"):
+            policies.setdefault(g.get("selection_policy") or "pre-2026-11-16 (raw model EV, Jupiter ask)", []).append(g)
+    by_policy = {k: summarise(v)["bets"] for k, v in policies.items()}
+    return {"updated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"), "overall": s, "bets_by_selection_policy": by_policy,
             "by_day": days, "units_curve": curve,
             "caveat": "Small sample. There is no historical betting backtest (Directive Zero forbids historical "
                       "odds), so this live record is the only evidence of betting performance."}

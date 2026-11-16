@@ -11,8 +11,8 @@ from datetime import datetime
 from ..sports_policy import fixture_allowed
 from .. import config, frozen
 from ..governance import now_utc_iso
-from .best_bet import FEES, MIN_P, best_bet
-from .jupiter_prices import snapshot
+from .best_bet import FEES, MAX_RAW_EDGE, MIN_P, MIN_VOLUME, SHRINK_W, best_bet
+from .polymarket_prices import snapshot
 
 
 def _edge_row(market, label, model_p, mkt):
@@ -83,7 +83,7 @@ def edge_for_date(date: str, take_snapshot: bool = True) -> dict:
                   "frozen_at": fc["frozen_at"], "model_version": fc["model_version"]}
         rows.append(bb_row)
         if not mk or "error" in mk:
-            bb_row.update(verdict="NO BET", reason="no Jupiter prices captured for this game")
+            bb_row.update(verdict="NO BET", reason="no Polymarket prices captured for this game")
             continue
         priced_at = mk.get("fetched_at") or snap["fetched_at"]
         bb_row["priced_at"] = priced_at
@@ -95,6 +95,13 @@ def edge_for_date(date: str, take_snapshot: bool = True) -> dict:
             continue  # forecast frozen after the snapshot: not a valid post-hoc comparison
         after = priced_at >= fc["fixture"]["kickoff_utc"]
         e = compute_edges(fc, mk)
+        if not after:
+            # Benchmark for every priced game (bet or not): no-vig pre-match 1X2. Locked with the row at kick-off.
+            norm = {r["selection"]: r.get("market_norm") for r in e["rows"] if r["market"] == "1X2"}
+            keys = (fc["fixture"]["home_name"], "Draw", fc["fixture"]["away_name"])
+            if all(isinstance(norm.get(k), float) for k in keys):
+                bb_row["market_1x2"] = {"p_home": norm[keys[0]], "p_draw": norm[keys[1]], "p_away": norm[keys[2]],
+                                        "overround": e["overround"]}
         e.update({"home": fc["fixture"]["home_name"], "away": fc["fixture"]["away_name"],
                   "competition": fc["fixture"]["competition"], "kickoff_utc": fc["fixture"]["kickoff_utc"],
                   "frozen_at": fc["frozen_at"], "model_version": fc["model_version"],
@@ -155,9 +162,13 @@ def lock_pre_kickoff(rows: list[dict], prev: dict) -> list[dict]:
 
 
 def best_bets_meta() -> dict:
-    return {"rule": f"Per game, the single selection with the highest EV among those with model P > {MIN_P:.0%} "
-                    "and EV > 0 when buying at the Jupiter ask (YES or NO) including trading fees. Match-result bets also require agreement from the two highest-weight components; otherwise NO BET.",
-            "ev_formula": "EV per $1 = p_model / (ask + fee per contract) - 1",
+    return {"rule": f"Per game, the single selection with the highest EV among those with model P > {MIN_P:.0%}, "
+                    f"EV > 0 buying at the Polymarket ask (YES or NO) including the taker fee, where the bet probability is the model "
+                    f"shrunk {1 - SHRINK_W:.0%} toward the market mid; raw model-minus-ask edge at most {MAX_RAW_EDGE * 100:.0f} pts; "
+                    f"traded volume at least {MIN_VOLUME:.0f}; team totals and BTTS excluded. Match-result bets also require "
+                    "agreement from the two highest-weight components; otherwise NO BET.",
+            "ev_formula": "EV per $1 = (mid + w * (p_model - mid)) / (ask + fee per contract) - 1",
+            "shrink_weight_on_model": SHRINK_W, "max_raw_edge": MAX_RAW_EDGE, "min_volume": MIN_VOLUME,
             "fees": FEES,
-            "markets": "full-time goals markets priced from the frozen score grid: 1X2 (YES/NO), BTTS, totals, "
-                       "team totals, spreads, exact score. Half-time, corners and first-to-score are not modelled."}
+            "markets": "full-time goals markets priced from the frozen score grid: 1X2 (YES/NO), totals, "
+                       "spreads, exact score. Half-time, corners and first-to-score are not modelled."}

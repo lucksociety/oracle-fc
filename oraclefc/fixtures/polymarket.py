@@ -13,7 +13,7 @@ import requests
 from .. import config
 from ..governance import now_utc_iso
 from ..sports_policy import fixture_allowed, WOMEN, WOMEN_COMPETITIONS
-from .jupiter import Fixture, TITLE_RE
+from .base import Fixture, TITLE_RE
 
 BASE='https://gamma-api.polymarket.com/events'
 CACHE_DIR=config.DATA_DIR/'cache'/'polymarket-fixtures'

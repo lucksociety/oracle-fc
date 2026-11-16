@@ -70,7 +70,7 @@ class Resolver:
 
     def resolve(self, home_name: str, away_name: str, subcategory: str = "", neutral: bool = False) -> Resolved:
         sub = (subcategory or "").lower()
-        divs = config.JUPITER_SUBCATEGORY_DIVS.get(sub)
+        divs = config.SUBCATEGORY_DIVS.get(sub)
         if sub=="clf": divs = list(self.by_div)
         r = Resolved(home_name, away_name, neutral=neutral)
         if divs is None:

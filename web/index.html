@@ -34,7 +34,7 @@
   <section id="status" class="status"></section>
 
   <section id="tab-forecasts" class="tab active">
-    <div class="directive">🍀 <b>Directive Zero:</b> forecasts are built only from historical results. No odds, market prices or third-party predictions are ever model inputs. Jupiter is used here only to list which games are on.</div>
+    <div class="directive">🍀 <b>Directive Zero:</b> forecasts are built only from historical results. No odds, market prices or third-party predictions are ever model inputs. Polymarket is used here only to list which games are on.</div>
     <div id="summary" class="summary"></div>
     <section id="best-bets" class="best-bets"></section>
     <div id="cards" class="cards"></div>
@@ -44,7 +44,7 @@
   <section id="tab-edge" class="tab">
     <div class="posthoc">⚠️ <b>POST-HOC COMPARISON.</b> Market prices below were fetched <i>after</i> the forecasts were frozen and are never fed back into the model. Edge = model probability − market price (mid of bid/ask; illiquid books without a two-sided quote are skipped). This is a research comparison, not betting advice.</div>
     <div class="edge-controls">
-      <button id="live-edge">Fetch live Jupiter prices now</button>
+      <button id="live-edge">Fetch live Polymarket prices now</button>
       <label>Min |edge| <input type="number" id="min-edge" value="0.03" step="0.01" min="0" max="1"></label>
       <label class="chk"><input type="checkbox" id="only-1x2" checked> 1X2 / BTTS / totals only</label>
       <label class="chk"><input type="checkbox" id="pre-only" checked> Pre-kickoff prices only</label>
@@ -54,7 +54,7 @@
   </section>
 
   <section id="tab-results" class="tab">
-    <div class="posthoc">📒 <b>POST-MATCH GRADING.</b> Final 90-minute scores (FotMob) vs the forecast frozen before kick-off and the best bet locked at the last pre-kick-off Jupiter snapshot. 1 unit per bet bought at the recorded ask + fees. Small samples are noisy; there is no historical betting backtest.</div>
+    <div class="posthoc">📒 <b>POST-MATCH GRADING.</b> Final 90-minute scores (FotMob) vs the forecast frozen before kick-off and the best bet locked at the last pre-kick-off Polymarket snapshot. 1 unit per bet bought at the recorded ask + fees. Small samples are noisy; there is no historical betting backtest.</div>
     <div id="record"></div>
     <div id="results"></div>
   </section>
@@ -63,12 +63,13 @@
 </main>
 
 <footer>
-  ORACLE FC · data: football-data.co.uk, openfootball · fixtures: Jupiter Prediction API ·
+  ORACLE FC · data: football-data.co.uk, openfootball · fixtures: Polymarket Gamma API ·
   <a href="https://github.com/lucksociety/oracle-fc" target="_blank" rel="noopener">source</a>
 </footer>
 
 <template id="card-tpl"><article class="card"></article></template>
 <script src="bestbet.js"></script>
+<script src="polymarket.js"></script>
 <script src="app.js"></script>
 </body>
 </html>

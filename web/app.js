@@ -1,6 +1,5 @@
 // ORACLE FC dashboard. Forecast views never read market prices.
 // The Edge tab fetches prices only to compare against already-frozen forecasts.
-const JUP = "https://api.jup.ag/prediction/v1";
 const $ = (s) => document.querySelector(s);
 const pct = (x, d = 1) => (x == null ? "–" : (100 * x).toFixed(d) + "%");
 const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
@@ -23,35 +22,18 @@ async function detectMode() {
 }
 
 // ---------------------------------------------------------------- fixtures (live, prices stripped)
-async function jupiterFixturesLive(date) {
-  const now = Math.floor(Date.now() / 1000);
-  let start = 0, out = [];
-  for (let page = 0; page < 12; page++) {
-    const u = `${JUP}/events?category=sports&tags=soccer&start=${start}&end=${start + 100}&sortBy=beginAt&sortDirection=asc`;
-    const j = await getJSON(u);
-    for (const ev of j.data || []) {
-      const t = ev.metadata?.title || "";
-      const m = t.match(/^(.+?)\s+vs\.?\s+(.+)$/);
-      if (!m || !ev.beginAt) continue;
-      const iso = new Date(Number(ev.beginAt) * 1000).toISOString();
-      if (new Intl.DateTimeFormat("en-CA", { timeZone: "America/New_York" }).format(new Date(iso)) !== date) continue;
-      // allow-list: identity fields only; prices/volumes are deliberately not copied
-      out.push({ event_id: ev.eventId, home_name: m[1], away_name: m[2], competition: ev.metadata?.league || ev.subcategory, subcategory: ev.subcategory, kickoff_utc: iso });
-    }
-    if (!j.pagination?.hasNext) break;
-    start += 100;
-    await new Promise((r) => setTimeout(r, 600));
-  }
-  return out;
+async function polymarketFixturesLive(date) {
+  const dateOf = (iso) => new Intl.DateTimeFormat("en-CA", { timeZone: "America/New_York" }).format(new Date(iso));
+  return Polymarket.fixturesLive(date, dateOf);
 }
 
 // ---------------------------------------------------------------- forecasts
 async function loadForecasts(date) {
-  $("#status").textContent = MODE === "api" ? "Running ORACLE FC for every Jupiter game on " + date + "…" : "Loading frozen forecasts…";
+  $("#status").textContent = MODE === "api" ? "Running ORACLE FC for every Polymarket game on " + date + "…" : "Loading frozen forecasts…";
   if (MODE === "api") return getJSON(`api/forecasts?date=${date}`);
   try { return await getJSON(`data/dates/${date}.json`); }
   catch (_) {
-    const fx = await jupiterFixturesLive(date).catch(() => []);
+    const fx = await polymarketFixturesLive(date).catch(() => []);
     return { date, live_only: true, n_fixtures: fx.length, n_forecast: 0,
       forecasts: fx.map((f) => ({ status: "pending_pipeline", fixture: f, data_quality: ["Not yet simulated: the scheduled pipeline forecasts today → +7 days every 3 hours (or run the 'pipeline' workflow with this date)."] })) };
   }
@@ -89,7 +71,7 @@ function render(res) {
   const bad = res.forecasts.filter((f) => f.status !== "ok");
   $("#status").textContent = "";
   $("#summary").innerHTML = [
-    `<span class="pill">${res.n_fixtures} Jupiter soccer games on ${esc(res.date)} (ET)</span>`,
+    `<span class="pill">${res.n_fixtures} Polymarket soccer games on ${esc(res.date)} (ET)</span>`,
     `<span class="pill">${ok.length} simulated</span>`,
     `<span class="pill">${bad.length} without forecast</span>`,
     res.model_version ? `<span class="pill">model ${esc(res.model_version)}</span>` : "",
@@ -102,15 +84,15 @@ function render(res) {
   const uns = bad.filter((f) => f.status !== "pending_pipeline");
   $("#unsupported").innerHTML = uns.length ? `<div class="unsup"><h3>Not forecast (${uns.length}) — honest gaps</h3><ul>${uns.map((f) => `<li><b>${esc(f.fixture.home_name)} vs ${esc(f.fixture.away_name)}</b> (${esc(f.fixture.competition)}): ${esc((f.data_quality || []).filter((d) => /UNMATCHED|UNSUPPORTED|Kick-off/.test(d)).join(" ") || f.status)}</li>`).join("")}</ul></div>` : "";
   renderBestBets();
-  if (!res.forecasts.length) $("#status").textContent = "No Jupiter soccer games found for this date (Jupiter only lists active/upcoming events).";
+  if (!res.forecasts.length) $("#status").textContent = "No Polymarket soccer games found for this date (Polymarket only lists active/upcoming events).";
 }
 
 // ---------------------------------------------------------------- post-hoc BEST BET (after freezing)
 const cents = (x) => (x == null ? "–" : (100 * x).toFixed(1) + "¢");
 const evp = (x) => (x >= 0 ? "+" : "") + (100 * x).toFixed(1) + "%";
 function bbBanner(g) {
-  if (!window.BB || window.BB.date !== CURRENT_DATE()) return `<div class="bb-wait muted">Best bet: waiting for post-hoc Jupiter prices…</div>`;
-  if (!g) return `<div class="bb-no"><b>NO BET</b> <span class="muted">— no Jupiter prices captured for this game</span></div>`;
+  if (!window.BB || window.BB.date !== CURRENT_DATE()) return `<div class="bb-wait muted">Best bet: waiting for post-hoc Polymarket prices…</div>`;
+  if (!g) return `<div class="bb-no"><b>NO BET</b> <span class="muted">— no Polymarket prices captured for this game</span></div>`;
   if (g.verdict !== "BET") {
     const c = g.closest;
     return `<div class="bb-no"><b>NO BET</b> <span class="muted">— ${esc(g.reason || "no selection with model P > 50% and positive EV at the ask after fees")}${c ? ` · closest: ${esc(c.label)} (P ${pct(c.model_p)}, ask ${cents(c.ask)}, EV ${evp(c.ev_per_dollar)})` : ""}</span></div>`;
@@ -137,7 +119,7 @@ function renderBestBets() {
           : `<td class="l"><b>NO BET</b> <span class="small">${esc(g.reason || "")}</span></td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td>`}</tr>`;
   }).join("");
   box.innerHTML = `<h2>Best Bets · ${esc(B.date)} <small class="muted">${nb} bet · ${n - nb} no bet</small></h2>
-    <p class="posthoc small">⚠️ POST-HOC: prices ${esc(B.source)} ${B.fetchedAt ? etTime(B.fetchedAt) : ""}, after the forecasts were frozen; they never feed the model. Eligible = model P &gt; 50% and EV &gt; 0 buying at the Jupiter ask (YES or NO) incl. Jupiter 2% builder fee + Polymarket sports taker fee 0.05·p(1−p). EV per $1 = P / (ask + fee) − 1. Highest EV per game. Research comparison, not betting advice.</p>
+    <p class="posthoc small">⚠️ POST-HOC: prices ${esc(B.source)} ${B.fetchedAt ? etTime(B.fetchedAt) : ""}, after the forecasts were frozen; they never feed the model. Eligible = model P &gt; 50%, EV &gt; 0 buying at the Polymarket ask (YES or NO) incl. the taker fee, with the model shrunk 75% toward the market mid; raw edge at most 8 pts; volume at least 500; no team totals or BTTS. EV shown is the shrunk EV. Highest EV per game, otherwise NO BET.</p>
     <details open><summary>Summary table (${n} games)</summary><table><tr><th class="l">Kick-off</th><th class="l">Match</th><th class="l">Best bet</th><th>EV</th><th>Model P</th><th>Ask</th><th>Cost incl. fee</th><th>Edge pp</th></tr>${rows}</table></details>`;
 }
 
@@ -205,19 +187,20 @@ async function liveEdge() {
   for (const fc of fcs) {
     if (fc.frozen_at > fetchedAt) continue; // only forecasts frozen before the price snapshot
     try {
-      const ev = await getJSON(`${JUP}/events/${encodeURIComponent(fc.fixture.event_id)}?includeMarkets=true&includeAllMarkets=true`);
-      const mk = parseMarkets(ev.data || ev, fc.fixture.home_name, fc.fixture.away_name);
+      const ev = await Polymarket.fetchEvent(fc.fixture);
+      if (ev.isLive) throw new Error("market already live");
+      const mk = parseMarkets(ev, fc.fixture.home_name, fc.fixture.away_name);
       events.push({ home: fc.fixture.home_name, away: fc.fixture.away_name, competition: fc.fixture.competition, frozen_at: fc.frozen_at, market_after_kickoff: fetchedAt >= fc.fixture.kickoff_utc, rows: edges(fc, mk) });
       const g = { event_id: fc.fixture.event_id, home: fc.fixture.home_name, away: fc.fixture.away_name, competition: fc.fixture.competition, kickoff_utc: fc.fixture.kickoff_utc };
       if (fetchedAt >= fc.fixture.kickoff_utc) Object.assign(g, { verdict: "NO BET", reason: "prices fetched after kick-off (in-play), not pre-match" });
-      else Object.assign(g, BestBet.bestBet(BestBet.selectionsFromEvent(ev.data || ev, fc.fixture.home_name, fc.fixture.away_name), fc.simulation.score_grid, fc.simulation, fc.components));
+      else Object.assign(g, BestBet.bestBet(BestBet.selectionsFromEvent(ev, fc.fixture.home_name, fc.fixture.away_name), fc.simulation.score_grid, fc.simulation, fc.components));
       games.push(g);
     } catch (e) { console.warn(e); }
-    await new Promise((r) => setTimeout(r, 350));
+    await new Promise((r) => setTimeout(r, 100));
   }
   games.sort((a, b) => (a.kickoff_utc || "").localeCompare(b.kickoff_utc || ""));
   setBestBets(CURRENT.date, games, fetchedAt, "fetched live in your browser at");
-  window.EDGE = { events, meta: `Live Jupiter prices fetched ${etTime(fetchedAt)} for ${events.length} events · compared against forecasts frozen earlier.` };
+  window.EDGE = { events, meta: `Live Polymarket prices fetched ${etTime(fetchedAt)} for ${events.length} events · compared against forecasts frozen earlier.` };
   renderEdge(EDGE.events, EDGE.meta);
 }
 async function loadEdge(date) {
@@ -230,8 +213,8 @@ async function loadEdge(date) {
     renderEdge(EDGE.events, EDGE.meta);
   } catch (_) {
     setBestBets(date, [], null, "not captured");
-    $("#best-bets").innerHTML = `<p class="muted">Best bets: no stored post-hoc price snapshot for this date yet — use “Fetch live Jupiter prices now” on the Edge tab.</p>`;
-    $("#edge-meta").textContent = "No stored post-hoc snapshot for this date yet. Use “Fetch live Jupiter prices now”.";
+    $("#best-bets").innerHTML = `<p class="muted">Best bets: no stored post-hoc price snapshot for this date yet — use “Fetch live Polymarket prices now” on the Edge tab.</p>`;
+    $("#edge-meta").textContent = "No stored post-hoc snapshot for this date yet. Use “Fetch live Polymarket prices now”.";
     $("#edge-table").innerHTML = "";
   }
 }

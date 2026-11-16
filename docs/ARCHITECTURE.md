@@ -5,7 +5,7 @@
 football-data.co.uk ─┐                                                              │
 openfootball UCL ────┼─► ingest/ ─► governance (allow-list + deny-list + schema) ─► store (Parquet + DuckDB)
                      │                                                              │
-Jupiter /events ─────┴─► fixtures/jupiter.py  (identity fields only, prices never requested)
+Polymarket Gamma /events ─────┴─► fixtures/polymarket.py  (identity fields only, prices never requested)
                                    │                                                │
                                    ▼                                                │
                          resolve.py (team mapping, honest UNMATCHED)                │
@@ -21,7 +21,7 @@ Jupiter /events ─────┴─► fixtures/jupiter.py  (identity fields o
              └──────────────────────────────────────────────────────────────────────┘
                                    │  (forecasts are FROZEN before anything below runs)
                                    ▼
-   market/ (physically separate) ─► jupiter_prices.py snapshot ─► edge.py (model − market)  POST-HOC
+   market/ (physically separate) ─► polymarket_prices.py snapshot ─► edge.py (model − market)  POST-HOC
 ```
 
 ## Directive Zero enforcement
@@ -94,14 +94,14 @@ of the joint distribution — never rounded xG (tested).
 
 ## Runtime topology
 
-* **GitHub Actions `pipeline.yml`** (every 3 h + manual with a date): ingest → discover Jupiter
+* **GitHub Actions `pipeline.yml`** (every 3 h + manual with a date): ingest → discover Polymarket
   fixtures for today…+7 days (ET) → forecast & freeze → post-hoc price snapshot → build static site
   → commit frozen forecasts → deploy GitHub Pages.
 * **GitHub Actions `lineups.yml`** (every 20 min) re-forecasts only fixtures within 3 h of
   kickoff, to capture confirmed team sheets. It shares the `pipeline` concurrency group.
 * **Static dashboard** (GitHub Pages): date picker loads frozen forecasts; dates the pipeline has not
-  reached show the live Jupiter fixture list (fetched in the browser) as *awaiting simulation*.
-  The Edge tab can fetch live Jupiter prices in the browser and compare them to the frozen forecasts.
+  reached show the live Polymarket fixture list (fetched in the browser) as *awaiting simulation*.
+  The Edge tab can fetch live Polymarket prices in the browser and compare them to the frozen forecasts.
 * **Local/self-hosted FastAPI** (`python -m oraclefc.cli serve`): the same UI, but picking a date
   runs the full pipeline on demand.
 * **`backtest.yml`** (weekly): re-tunes, re-runs the walk-forward backtest, updates `docs/BACKTEST.md`

@@ -355,7 +355,7 @@ class Engine:
 def forecast_date(date: str, engine: Engine | None = None, freeze: bool = True, use_cache: bool = True,
                   within_hours: float | None = None, allow_frozen_fallback: bool = False) -> dict:
     """Load the full day's men's Polymarket inventory and forecast eligible pregame fixtures."""
-    from .fixtures.jupiter import fixtures_for_date
+    from .fixtures.base import fixtures_for_date
 
     from requests import RequestException
     from uuid import uuid4

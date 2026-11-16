@@ -31,6 +31,6 @@ def test_no_market_imports_in_forecasting_code():
 
 
 def test_fixture_module_never_reads_prices():
-    src = (PKG / "fixtures" / "jupiter.py").read_text()
+    src = (PKG / "fixtures" / "base.py").read_text()
     for token in ("pricing", "buyYesPriceUsd", "sellYesPriceUsd", "includeMarkets"):
         assert token not in src.replace("# ", ""), token

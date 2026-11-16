@@ -25,7 +25,6 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 60
     env:
-      JUPITER_API_KEY: ${{ secrets.JUPITER_API_KEY }}
       DATE: ${{ github.event.inputs.date }}
       DAYS: ${{ github.event.inputs.days || '8' }}
     steps:

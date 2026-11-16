@@ -31,15 +31,15 @@ team or competition is not covered, ORACLE FC says so and produces no forecast.
 | Purpose | Cross-league calibration: the global Dixon–Coles fit links leagues through promotion/relegation *and* through European matches, so a Bundesliga vs Premier League strength gap is learned from data instead of assumed |
 | Mapping | Clubs are mapped to domestic names within their country (`teams.match_team`). Unmatched clubs (e.g. from leagues not ingested) keep a namespaced key and are reported in `store.build()` output |
 
-## 3. Jupiter Prediction API — fixture discovery ONLY
+## 3. Polymarket Gamma API — fixture discovery ONLY
 
-| Item | Detail |
+| | |
 |---|---|
-| URL | `https://api.jup.ag/prediction/v1/events?category=sports&tags=soccer` (keyless, rate-limited; optional `x-api-key` header via `JUPITER_API_KEY`) |
-| Used for | *Which* games exist on a date: event id, team names, competition, kickoff |
-| Stripped | All prices, volumes, liquidity and market objects. `fixtures/jupiter.py::sanitise_event` copies an allow-list of identity fields and never requests `includeMarkets` (enforced by `tests/test_firewall.py`) |
-| Separate use | `oraclefc/market/` (physically separate, never imported by forecasting code) fetches prices **after** forecasts are frozen for the post-hoc Edge tab |
-| Limits | Only active/upcoming events are listed — past dates disappear, so ORACLE FC stores frozen forecasts and serves those for past dates. HTTP 429 on rapid paging (handled with back-off + 10-minute cache) |
+| URL | `https://gamma-api.polymarket.com/events?tag_id=100350&start_time_min=…&start_time_max=…` (public, no key) |
+| Used for | Which men's soccer games exist on a date: teams, competition, kickoff, slug |
+| Stripped | All prices, volumes, liquidity and market objects. `fixtures/polymarket.py::sanitise_event` copies an allow-list of identity fields (enforced by `tests/test_firewall.py` and `tests/test_full_day_inventory.py`). |
+
+Prices are a separate, post-freeze layer: `oraclefc/market/polymarket_prices.py` reads Gamma `events/{id}` (plus the `-more-markets` and `-exact-score` sibling events) and CLOB `POST /books`. Forecasting code cannot import it.
 
 ## 4. Match-context sources (added 2026-10-28; each verified live with curl that day)
 
@@ -88,7 +88,7 @@ forecast error that the backtest does not.
 * Outside the top-5 leagues, lineups and absences are shown but not applied, because no
   player-rating history exists there.
 
-## Competitions on Jupiter that ORACLE FC cannot yet forecast
+## Competitions on Polymarket that ORACLE FC cannot yet forecast
 
 Saudi Pro League (`spl`), Qatar (`qat1`), Colombia (`col1`), Turkey 1. Lig (`tur2`),
 Brazil Série B (`bra2`) and lower-league clubs in domestic cups (e.g. Copa del Rey

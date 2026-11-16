@@ -3,7 +3,7 @@ import pandas as pd
 from oraclefc import forecast,config
 from oraclefc.sports_policy import allowed
 from oraclefc.ingest.espn_results import parse_results
-from oraclefc.fixtures.jupiter import sanitise_event
+from oraclefc.fixtures.polymarket import sanitise_event
 
 def test_mens_only_configuration():
     assert not set(config.SUPPLEMENTAL_DIVISIONS)&config.WOMEN_DIVISIONS
@@ -22,6 +22,7 @@ def test_women_excluded_from_engine_training_and_manual_forecast(synthetic_match
     assert r['status']=='excluded' and 'simulation' not in r
 
 def test_women_discovery_and_results_rejected():
-    raw={'eventId':'POLY-1','tags':['soccer'],'subcategory':'uwcl','beginAt':'1794409200','metadata':{'title':'Chelsea vs Arsenal','league':"Women's Champions League"}}
-    assert sanitise_event(raw) is None
+    raw={'id':'1','slug':'uwcl-che-ars-2026-11-11','title':'Chelsea vs. Arsenal','startTime':'2026-11-11T19:00:00Z',
+         'sport':{'sport':'uwcl','name':"Women's Champions League"},'tags':[{'slug':'soccer','label':'Soccer'}]}
+    assert sanitise_event(raw,'2026-11-11') is None
     assert list(parse_results({'events':[]},'WCL',2026,'source'))==[]
