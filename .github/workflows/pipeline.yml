@@ -1,5 +1,5 @@
 name: pipeline
-# Discover Jupiter soccer fixtures -> forecast -> FREEZE -> (post-hoc) market snapshot -> static site.
+# Discover Polymarket soccer fixtures -> forecast -> FREEZE -> (post-hoc) market snapshot -> static site.
 on:
   push:
     branches: [main]
@@ -16,7 +16,7 @@ on:
       - oraclefc/resolve.py
       - oraclefc/sports_policy.py
       - oraclefc/fixtures/polymarket.py
-      - oraclefc/fixtures/jupiter.py
+      - oraclefc/fixtures/base.py
       - .github/workflows/pipeline.yml
   schedule:
     - cron: "17 */3 * * *"
@@ -41,7 +41,6 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 60
     env:
-      JUPITER_API_KEY: ${{ secrets.JUPITER_API_KEY }}
       DATE: ${{ github.event.inputs.date }}
       DAYS: ${{ github.event.inputs.days || '8' }}
     steps:

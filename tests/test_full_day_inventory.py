@@ -4,7 +4,7 @@ import pytest
 import requests
 from oraclefc.fixtures import polymarket as P
 from oraclefc import forecast,frozen
-from oraclefc.fixtures.jupiter import Fixture
+from oraclefc.fixtures.base import Fixture
 
 def event(**changes):
     e={'id':'123','slug':'fif-vie-tpe-2026-11-11','title':'Vietnam vs. Chinese Taipei',
@@ -64,9 +64,9 @@ def test_dst_day_is_25_hours_and_failures_do_not_cache_partial_inventory(monkeyp
     assert hours==25 and not list(tmp_path.glob('*.json'))
 
 def test_past_discovered_game_never_calls_prediction_engine(monkeypatch):
-    from oraclefc.fixtures import jupiter
+    from oraclefc.fixtures import base
     f=Fixture('POLY-1','Vietnam','Chinese Taipei','FIFA Friendlies','fif','2000-11-11T12:00:00+00:00','fif-vie-tpe-2000-11-11')
-    monkeypatch.setattr(jupiter,'fixtures_for_date',lambda *a,**k:[f]);monkeypatch.setattr(frozen,'load_date',lambda _:[])
+    monkeypatch.setattr(base,'fixtures_for_date',lambda *a,**k:[f]);monkeypatch.setattr(frozen,'load_date',lambda _:[])
     class Engine:
         version='test';cutoff='2000-11-10'
         def forecast(self,*a,**k):raise AssertionError('post-kickoff prediction prohibited')
@@ -75,11 +75,11 @@ def test_past_discovered_game_never_calls_prediction_engine(monkeypatch):
     assert r['forecasts'][0]['status']=='not_forecast_before_kickoff'
 
 def test_existing_pre_game_forecast_is_retained_for_earlier_game(monkeypatch):
-    from oraclefc.fixtures import jupiter
+    from oraclefc.fixtures import base
     f=Fixture('POLY-1','Vietnam','Chinese Taipei','FIFA Friendlies','fif','2000-11-11T12:00:00+00:00','fif-vie-tpe-2000-11-11')
     saved={'status':'ok','fixture':f.to_dict(),'frozen_at':'2000-11-11T11:00:00+00:00','simulation':{'saved':True}}
     saved['sha256']=frozen.canonical_hash(saved)
-    monkeypatch.setattr(jupiter,'fixtures_for_date',lambda *a,**k:[f]);monkeypatch.setattr(frozen,'load_date',lambda _:[saved])
+    monkeypatch.setattr(base,'fixtures_for_date',lambda *a,**k:[f]);monkeypatch.setattr(frozen,'load_date',lambda _:[saved])
     class Engine:
         version='test';cutoff='2000-11-10'
         def forecast(self,*a,**k):raise AssertionError('must retain old forecast')
@@ -95,10 +95,10 @@ def test_unrated_mens_international_is_a_coverage_gap_not_a_gender_exclusion(syn
     assert result['fixture']['match_methods']['home']['method']=='unsupported-competition'
 
 def test_rescheduled_or_delisted_saved_game_does_not_inflate_full_day_count(monkeypatch):
-    from oraclefc.fixtures import jupiter
+    from oraclefc.fixtures import base
     old={'status':'ok','fixture':{'event_id':'POLY-old','subcategory':'epl','competition':'Premier League',
                                 'home_name':'Home','away_name':'Away','kickoff_utc':'2000-11-11T12:00:00Z'}}
-    monkeypatch.setattr(jupiter,'fixtures_for_date',lambda *a,**k:[])
+    monkeypatch.setattr(base,'fixtures_for_date',lambda *a,**k:[])
     monkeypatch.setattr(frozen,'load_date',lambda _:[old])
     class Engine:version='test';cutoff='2000-11-10'
     r=forecast.forecast_date('2000-11-11',Engine(),freeze=False)

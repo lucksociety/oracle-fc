@@ -34,7 +34,7 @@ def main():
                     bb=obj.get('best_bets') or {}
                     if 'games' in bb:bb['games']=[r for r in bb['games'] if not WOMEN.search(str(r.get('competition','')))]
                 (data / sub / f.name).write_text(json.dumps(obj,default=str))
-    # past dates no longer listed by Jupiter: rebuild the date view from frozen forecasts
+    # past dates no longer listed by Polymarket: rebuild the date view from frozen forecasts
     from oraclefc import frozen
     if config.FORECAST_DIR.exists():
         for d in sorted(p.name for p in config.FORECAST_DIR.iterdir() if p.is_dir()):

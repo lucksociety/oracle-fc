@@ -125,7 +125,7 @@ export function gamesFromEdge(edge) {
   return (edge?.events || []).map((e) => {
     const bb = e.best_bet || {};
     const g = { event_id: e.event_id, home: e.home, away: e.away, competition: e.competition, kickoff_utc: e.kickoff_utc, ...bb };
-    if (!e.best_bet) Object.assign(g, { verdict: "NO BET", reason: e.market_after_kickoff ? "prices captured after kick-off (in-play)" : "no Jupiter prices captured for this game" });
+    if (!e.best_bet) Object.assign(g, { verdict: "NO BET", reason: e.market_after_kickoff ? "prices captured after kick-off (in-play)" : "no Polymarket prices captured for this game" });
     else if (e.market_after_kickoff && bb.verdict === "BET") Object.assign(g, { verdict: "NO BET", reason: "prices captured after kick-off (in-play)", bet: undefined });
     return g;
   });
@@ -217,9 +217,9 @@ function pickText(g) {
     const b = g.bet;
     const agreement = Number.isFinite(b.component_min_p) && Number.isFinite(b.component_max_p)
       ? `\nMain component range **${pct(b.component_min_p)}–${pct(b.component_max_p)}** · EV at lowest estimate **${evp(b.conservative_ev_per_dollar)}**` : "";
-    return `**BET** 🍀 ${clip(b.label, 90)} (buy ${b.side}) @ ${cents(b.ask)} · model ${pct(b.model_p)} · EV ${evp(b.ev_per_dollar)}${g.locked ? " 🔒" : ""}${agreement}`;
+    return `**BET** 🍀 ${clip(b.label, 90)} (buy ${b.side}) @ ${cents(b.ask)} · model ${pct(b.model_p)}${Number.isFinite(b.bet_p) ? ` → ${pct(b.bet_p)} after market shrink` : ""} · EV ${evp(b.ev_per_dollar)}${g.locked ? " 🔒" : ""}${agreement}`;
   }
-  if (!g) return "**NO BET** · no Jupiter prices for this game";
+  if (!g) return "**NO BET** · no Polymarket prices for this game";
   const c = g.closest;
   return `**NO BET** · ${c ? `closest: ${clip(c.label, 60)} (P ${pct(c.model_p)}, ask ${cents(c.ask)}, EV ${evp(c.ev_per_dollar)})` : clip(g.reason || "no side with model P > 50% and +EV at the ask", 120)}`;
 }
@@ -308,7 +308,7 @@ function summaryLines(scan, games, rows, bets, nobets, opts) {
   const nFc = rows.filter((r) => r.sim).length;
   if (!scan.hasEdge && !rows.length) {
     lines.push(scan.hasDates
-      ? `Forecasts are frozen for **${scan.nForecast}** games, but the pipeline hasn't captured Jupiter prices for ${scan.date} yet, so there are no picks. It snapshots every 3 hours, or open the dashboard and hit **Fetch live Jupiter prices now**.`
+      ? `Forecasts are frozen for **${scan.nForecast}** games, but the pipeline hasn't captured Polymarket prices for ${scan.date} yet, so there are no picks. It snapshots every 3 hours, or open the dashboard and hit **Fetch live Polymarket prices now**.`
       : `No ORACLE FC scan stored for **${scan.date}**. Run /soccer to load the full day’s men’s Polymarket fixtures.`);
   } else {
     lines.push(`**${rows.length}** games · **${bets.length}** bet · **${nobets.length}** NO BET · score predictions for **${nFc}**${rows.length > nFc ? ` (${rows.length - nFc} not forecast)` : ""}`);
@@ -319,8 +319,8 @@ function summaryLines(scan, games, rows, bets, nobets, opts) {
       const late=rows.filter(r=>r.why===STATUS_WHY.not_forecast_before_kickoff).length;
       lines.push(`No score forecasts available: ${rows.length-late} game(s) lack sufficient rated history${late?`; ${late} kicked off without a saved pregame forecast`:''}. This is a coverage gap, not a betting pass.`);
     }
-    if (!scan.hasEdge) lines.push("Jupiter prices not captured yet for this date, so every game is NO BET for now.");
-    if (scan.fetchedAt) lines.push(`Prices: Jupiter snapshot <t:${unix(scan.fetchedAt)}:f> (<t:${unix(scan.fetchedAt)}:R>)`);
+    if (!scan.hasEdge) lines.push("Polymarket prices not captured yet for this date, so every game is NO BET for now.");
+    if (scan.fetchedAt) lines.push(`Prices: Polymarket snapshot <t:${unix(scan.fetchedAt)}:f> (<t:${unix(scan.fetchedAt)}:R>)`);
     if (scan.modelVersion) lines.push(`Model: **${scan.modelVersion}**`);
     const locked = games.filter((g) => g.started && g.locked).length;
     const stale = games.filter((g) => g.started && !g.locked && g.graded?.status !== "final").length;
@@ -333,7 +333,7 @@ function summaryLines(scan, games, rows, bets, nobets, opts) {
   }
   const rec = scan.record?.bets;
   if (rec && (rec.wins + rec.losses) > 0) lines.push(`📒 Running record${scan.recordSince ? ` since ${scan.recordSince}` : ""}: **${rec.wins}-${rec.losses}** · **${units(rec.units)}** · ROI ${rec.roi == null ? "–" : (100 * rec.roi).toFixed(1) + "%"} (1u per bet at ask + fees)`);
-  lines.push("", "Rule: model P > 50% **and** +EV buying at the Jupiter ask incl. fees; highest EV per game. Prices are compared only *after* each forecast is frozen and never feed the model. Research, not financial advice.");
+  lines.push("", "Rule: model P > 50% **and** +EV buying at the Polymarket ask incl. fees, after shrinking the model 75% toward the market price; model-vs-market gaps over 8 pts are treated as model error and skipped; no team totals or BTTS; highest EV per game. EV shown is the shrunk EV. Prices are compared only *after* each forecast is frozen and never feed the model. Research, not financial advice.");
   return lines;
 }
 

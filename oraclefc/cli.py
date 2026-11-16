@@ -2,7 +2,7 @@
 
   python -m oraclefc.cli ingest                 # download + clean permitted data
   python -m oraclefc.cli backtest [--skip-tune]  # walk-forward validation, champion/challenger
-  python -m oraclefc.cli run [--date D] [--days N]   # discover Jupiter fixtures, forecast, freeze
+  python -m oraclefc.cli run [--date D] [--days N]   # discover Polymarket fixtures, forecast, freeze
   python -m oraclefc.cli edge [--date D]         # POST-HOC: snapshot market prices, compare to frozen forecasts
   python -m oraclefc.cli grade [--date D] [--days N]  # POST-MATCH: grade forecasts + bets vs results
   python -m oraclefc.cli predict HOME AWAY --comp epl

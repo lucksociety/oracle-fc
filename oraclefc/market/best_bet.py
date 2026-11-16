@@ -1,24 +1,28 @@
 """POST-HOC best bet per game (runs only after forecasts are frozen; never feeds the model).
 
-For every buyable Jupiter selection on a full-time goals market we can price from the frozen
-score grid (1X2, double-chance via NO, BTTS, totals, team totals, spreads/handicaps, exact
-score), compute
+For every buyable Polymarket selection on a full-time goals market we can price from the
+frozen score grid, compute
 
-    cost per contract = ask + Jupiter/Polymarket trading fee      (taker: you pay the ask)
-    EV per $1 staked   = p_model / cost - 1
-    edge (pp)          = p_model - ask
+    market mid         = (best ask + best bid) / 2                 (two-sided CLOB book)
+    bet probability    = mid + SHRINK_W * (p_model - mid)          (model shrunk toward the market)
+    cost per contract  = ask + Polymarket taker fee                (taker: you pay the ask)
+    EV per $1 staked   = bet probability / cost - 1
 
-A selection is ELIGIBLE only if p_model > 0.50 AND EV > 0 after fees. The best bet is the
-eligible selection with the highest EV; if none qualifies the game is "NO BET".
+WHY THE SHRINK (review of 2026-11-16, 328 settled bets): selections averaged model 62.2%,
+ask 53.1%, and won 48.8% (-9.8% ROI). Where the raw model and the market disagreed, the market
+was right, and the largest raw edges were the worst calibrated. The raw model probability is
+therefore no longer used as the bet probability.
 
-Fees (Polymarket-sourced markets on Jupiter Predict, checked 2026-10-28):
-  * Jupiter builder fee: 2% of trade value, buys and sells
-    (https://docs.jup.ag/user-docs/trade/predict/fees)
-  * Polymarket taker fee: C * rate * p * (1 - p), sports rate 0.05, exponent 1, taker only
-    (https://docs.polymarket.com/trading/fees; market feeSchedule "sports_fees_v3")
-  Jupiter rounds each order's fee UP to the nearest cent, so very small orders pay more than
-  the proportional fee used here; EV is quoted for an order large enough that rounding is
-  negligible.
+A selection is ELIGIBLE only if ALL hold:
+  * p_model > 0.50 and EV > 0 after fees using the SHRUNK probability;
+  * raw edge (p_model - ask) <= MAX_RAW_EDGE (bigger disagreements are treated as model error);
+  * market kind is not in EXCLUDED_KINDS (team totals and BTTS lost most per bet);
+  * traded volume >= MIN_VOLUME and a two-sided book no wider than 10c, 90-minute contract.
+The best bet is the eligible selection with the highest EV; otherwise the game is "NO BET".
+
+Fees: Polymarket taker fee = rate * (p * (1 - p)) ** exponent per contract, read from each
+market's own ``feeSchedule`` (https://docs.polymarket.com/trading/fees). When a market exposes
+no schedule the documented sports rate (0.05, exponent 1) is assumed and flagged.
 """
 from __future__ import annotations
 
@@ -28,24 +32,40 @@ import re
 import numpy as np
 
 FEES = {
-    "polymarket": {"builder_rate": 0.02, "taker_rate": 0.05, "exponent": 1.0,
-                   "source": "docs.jup.ag/user-docs/trade/predict/fees + docs.polymarket.com/trading/fees "
-                             "(sports_fees_v3, checked 2026-10-28)"},
+    "polymarket": {"taker_rate": 0.05, "exponent": 1.0,
+                   "source": "docs.polymarket.com/trading/fees (per-market feeSchedule; sports default shown)"},
 }
-DEFAULT_FEE = "polymarket"   # unknown routes are charged the Polymarket schedule (conservative) and flagged
+DEFAULT_FEE = "polymarket"
 MIN_P, MIN_EV = 0.50, 0.0
+SHRINK_W = 0.25          # weight on the model; 1 - SHRINK_W on the market mid
+MAX_RAW_EDGE = 0.08      # p_model - ask above this is never bet
+MIN_VOLUME = 500.0       # contracts traded on the market
+EXCLUDED_KINDS = frozenset({"team_total", "btts"})
+SELECTION_POLICY = "market-shrink-w25-edgecap8-v4"
 EXACT_RE = re.compile(r"^(?P<h>.+?)\s+(?P<hg>\d+)\s*-\s*(?P<ag>\d+)\s+(?P<a>.+)$")
 HCP_RE = re.compile(r"([+-]\d+(?:\.\d+)?)\s*$")
 
 
-def fee_per_contract(price: float, provider: str | None = "polymarket") -> float:
-    f = FEES.get((provider or "").lower(), FEES[DEFAULT_FEE])
-    q = price * (1 - price)
-    return f["builder_rate"] * price + f["taker_rate"] * (q ** f["exponent"])
+def fee_per_contract(price: float, provider: str | None = "polymarket", fee: dict | None = None) -> float:
+    """Taker fee for one contract bought at ``price``. ``fee`` is the market's own {rate, exponent}."""
+    if fee and fee.get("rate") is not None:
+        rate, exponent = float(fee["rate"]), float(fee.get("exponent", 1.0))
+    else:
+        f = FEES.get((provider or "").lower(), FEES[DEFAULT_FEE])
+        rate, exponent = f["taker_rate"], f["exponent"]
+    return rate * ((price * (1 - price)) ** exponent)
 
 
-def ev_per_dollar(p_model: float, price: float, provider: str | None = "polymarket") -> float:
-    return p_model / (price + fee_per_contract(price, provider)) - 1.0
+def ev_per_dollar(p: float, price: float, provider: str | None = "polymarket", fee: dict | None = None) -> float:
+    return p / (price + fee_per_contract(price, provider, fee)) - 1.0
+
+
+def bet_probability(p_model: float, ask: float, bid) -> float | None:
+    """Model probability shrunk toward the market mid. None without a usable two-sided quote."""
+    if not (isinstance(bid, (int, float)) and math.isfinite(bid) and 0 < bid <= ask < 1):
+        return None
+    mid = (ask + bid) / 2
+    return mid + SHRINK_W * (p_model - mid)
 
 
 # ------------------------------------------------------------------ market -> outcome specs
@@ -56,7 +76,7 @@ def _usd(x):
 def _side(m, outcome, label, side, ask, bid, provider):
     return {"market_id": m.get("marketId"), "market_type": m.get("sportsMarketType"), "label": label,
             "side": side, "outcome": outcome, "ask": ask, "bid": bid or None,
-            "volume": (m.get("pricing") or {}).get("volume"), "provider": provider,
+            "volume": (m.get("pricing") or {}).get("volume"), "provider": provider, "fee": m.get("fee"),
             "regulation_only": bool(re.search(r"\b90\s+minutes?\b", m.get("rulesPrimary") or "", re.I)
                                     and "stoppage" in (m.get("rulesPrimary") or "").lower())}
 
@@ -195,20 +215,28 @@ def evaluate(selections: list[dict], score_grid, sim: dict | None = None) -> lis
     rows = []
     for s in selections:
         p = model_prob(s["outcome"], score_grid, sim)
-        fee = fee_per_contract(s["ask"], s.get("provider"))
-        ev = p / (s["ask"] + fee) - 1.0
+        fee = fee_per_contract(s["ask"], s.get("provider"), s.get("fee"))
+        cost = s["ask"] + fee
         bid = s.get("bid")
         thin = not (isinstance(bid, (int, float)) and math.isfinite(bid)
                     and 0 < bid <= s["ask"] and s["ask"] - bid <= 0.10 + 1e-9)
+        bet_p = bet_probability(p, s["ask"], bid)
+        raw_ev = p / cost - 1.0
+        ev = (bet_p / cost - 1.0) if bet_p is not None else raw_ev
         volume = s.get("volume")
-        liquid = isinstance(volume, (int, float)) and math.isfinite(volume) and volume > 0
+        liquid = isinstance(volume, (int, float)) and math.isfinite(volume) and volume >= MIN_VOLUME
         consistent = score_supports(s["outcome"], (sim or {}).get("modal_score"))
-        rows.append({**s, "score_consistent": consistent, "model_p": p, "fee_per_contract": fee, "cost_per_contract": s["ask"] + fee,
-                     "ev_per_dollar": ev, "edge_pp": 100 * (p - s["ask"]), "thin_book": bool(thin),
-                     "fee_assumed": (s.get("provider") or "") not in FEES,
-                     "quote_valid": bool(not thin and liquid and s.get("regulation_only") is True),
-                     "eligible": bool(not thin and liquid and s.get("regulation_only") is True
-                                      and consistent and p > MIN_P and ev > MIN_EV)})
+        raw_edge = p - s["ask"]
+        excluded = s["outcome"]["kind"] in EXCLUDED_KINDS
+        fee_known = bool(s.get("fee")) and (s["fee"].get("source") != "assumed")
+        valid = bool(not thin and liquid and s.get("regulation_only") is True)
+        rows.append({**s, "score_consistent": consistent, "model_p": p, "bet_p": bet_p, "market_mid": (s["ask"] + bid) / 2 if not thin else None,
+                     "fee_per_contract": fee, "cost_per_contract": cost,
+                     "ev_per_dollar": ev, "raw_ev_per_dollar": raw_ev, "edge_pp": 100 * raw_edge, "thin_book": bool(thin),
+                     "fee_assumed": not fee_known, "excluded_market": excluded, "edge_capped": bool(raw_edge > MAX_RAW_EDGE + 1e-12),
+                     "quote_valid": valid,
+                     "eligible": bool(valid and consistent and not excluded and raw_edge <= MAX_RAW_EDGE + 1e-12
+                                      and bet_p is not None and p > MIN_P and ev > MIN_EV)})
     return rows
 
 
@@ -232,15 +260,20 @@ def best_bet(selections: list[dict], score_grid, sim: dict | None = None, *, com
                 blocked.append(row)
     elig = sorted((r for r in rows if r["eligible"]), key=lambda r: (-r["ev_per_dollar"], -r["model_p"]))
     out = {"n_priced": len(rows), "n_eligible": len(elig),
-           "selection_policy": "score-consistent-component-agreement-v3",
-           "rule": f"model P > {MIN_P:.0%} and EV > 0 at the Jupiter ask incl. fees; bet must win at displayed predicted score; highest EV wins"}
+           "selection_policy": SELECTION_POLICY,
+           "rule": (f"model P > {MIN_P:.0%}; EV > 0 at the Polymarket ask incl. fees using the model shrunk {1 - SHRINK_W:.0%} toward the market mid; "
+                    f"raw edge <= {MAX_RAW_EDGE * 100:.0f} pts; no team totals or BTTS; volume >= {MIN_VOLUME:.0f}; "
+                    "bet must win at displayed predicted score; highest EV wins")}
     if not elig:
         out["verdict"] = "NO BET"
         if blocked:
             out["reason"] = "main model components do not both clear 50% and after-fee break-even"
         if rows and not any(r["quote_valid"] for r in rows):
-            out["reason"] = "no verified two-sided 90-minute quote with traded volume"
-        cands = [r for r in rows if r["quote_valid"] and r["score_consistent"] and r["model_p"] > MIN_P and r not in blocked]
+            out["reason"] = f"no verified two-sided 90-minute quote with at least {MIN_VOLUME:.0f} traded volume"
+        elif rows and not blocked and any(r["quote_valid"] and r["edge_capped"] and r["model_p"] > MIN_P for r in rows):
+            out["reason"] = f"model disagrees with the market by more than {MAX_RAW_EDGE * 100:.0f} pts; treated as model error, not edge"
+        cands = [r for r in rows if r["quote_valid"] and r["score_consistent"] and not r["excluded_market"] and not r["edge_capped"]
+                 and r["model_p"] > MIN_P and r not in blocked]
         if cands:  # closest miss, for transparency
             out["closest"] = _public(max(cands, key=lambda r: r["ev_per_dollar"]))
         return out
@@ -251,8 +284,8 @@ def best_bet(selections: list[dict], score_grid, sim: dict | None = None, *, com
 
 
 def _public(r: dict) -> dict:
-    keys = ("score_consistent", "market_id", "market_type", "label", "side", "ask", "bid", "volume", "model_p", "fee_per_contract",
-            "cost_per_contract", "ev_per_dollar", "edge_pp", "thin_book", "fee_assumed")
+    keys = ("score_consistent", "market_id", "market_type", "label", "side", "ask", "bid", "volume", "model_p", "bet_p", "market_mid",
+            "fee_per_contract", "cost_per_contract", "ev_per_dollar", "raw_ev_per_dollar", "edge_pp", "thin_book", "fee_assumed")
     out = {k: (round(r[k], 6) if isinstance(r[k], float) else r[k]) for k in keys}
     for key in ("component_probabilities", "component_min_p", "component_max_p", "conservative_ev_per_dollar"):
         if key in r:

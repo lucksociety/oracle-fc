@@ -6,7 +6,7 @@ A Cloudflare Worker that serves the Discord interactions endpoint for the `/socc
 GitHub Pages (`data/edge/<date>.json`, plus `data/dates/<date>.json` for counts) and posts:
 
 - a summary embed (bets / no bets / games not forecast, price snapshot time, the rule),
-- one gold embed per BET game: pick + side, Jupiter ask, model probability, EV per $1, edge, cost incl. fee, volume / thin-book flag,
+- one gold embed per BET game: pick + side, Polymarket ask, model probability, EV per $1, edge, cost incl. fee, volume / thin-book flag,
 - compact "NO BET" embeds listing each remaining game with the reason or the closest miss,
 - a button linking to the dashboard for that date.
 - the **model version** that produced the picks (newest frozen forecast version among the games),

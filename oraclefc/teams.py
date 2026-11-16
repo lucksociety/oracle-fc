@@ -1,4 +1,4 @@
-"""Team identity resolution between fixture sources (Jupiter, openfootball,
+"""Team identity resolution between fixture sources (Polymarket, openfootball,
 manual input) and the canonical football-data.co.uk team names.
 
 Unmatched teams are *reported*, never guessed: a match below the fuzzy

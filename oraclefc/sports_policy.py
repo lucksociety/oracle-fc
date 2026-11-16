@@ -20,6 +20,6 @@ MEN_COMPETITIONS = frozenset(['acl2', 'acle', 'afc', 'afcl', 'afcq', 'afwq', 'ar
 WOMEN_COMPETITIONS = frozenset(['aseanw', 'fifaw', 'nwsl', 'tpew', 'u20wwc', 'uwcl', 'uwec', 'weuc', 'weuq', 'wsl', 'wsl2', 'wwcquefa'])
 def allowed(subcategory='',competition=''):
     code=str(subcategory).lower()
-    return code not in WOMEN_COMPETITIONS and (code in MEN_COMPETITIONS or code in config.JUPITER_SUBCATEGORY_DIVS) and not WOMEN.search(str(competition))
+    return code not in WOMEN_COMPETITIONS and (code in MEN_COMPETITIONS or code in config.SUBCATEGORY_DIVS) and not WOMEN.search(str(competition))
 def fixture_allowed(fixture):
     return allowed(fixture.get('subcategory',''),fixture.get('competition','')) and not WOMEN.search(str(fixture.get('home_name',fixture.get('home','')))+' '+str(fixture.get('away_name',fixture.get('away',''))))

@@ -1,5 +1,5 @@
 from oraclefc.market.edge import compute_edges
-from oraclefc.market.jupiter_prices import parse_event_markets
+from oraclefc.market.polymarket_prices import parse_event_markets
 
 
 def _m(t, title, buy, sell, **kw):

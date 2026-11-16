@@ -14,7 +14,7 @@ from oraclefc.market import edge as EDGE
 ROOT = Path(__file__).resolve().parent.parent
 
 
-def _pr(by, bs, nb=0, ns=0, vol=10):
+def _pr(by, bs, nb=0, ns=0, vol=1000):
     return {"buyYesPriceUsd": int(by * 1e6), "sellYesPriceUsd": int(bs * 1e6),
             "buyNoPriceUsd": int(nb * 1e6), "sellNoPriceUsd": int(ns * 1e6), "volume": vol}
 
@@ -45,6 +45,14 @@ def _ev():
     ]}
 
 
+def _quote(ev, market_id, model_p, edge=0.075, spread=0.01):
+    """Price one market so the raw model edge sits inside the bettable window (below the 8-pt cap)."""
+    m = next(x for x in ev["markets"] if x["marketId"] == market_id)
+    ask = round(model_p - edge, 6)
+    m["pricing"] = _pr(ask, ask - spread, vol=m["pricing"]["volume"])
+    return m
+
+
 def _grid(lh=1.6, la=1.0, n=11):
     from scipy.stats import poisson
     return np.outer(poisson.pmf(range(n), lh), poisson.pmf(range(n), la)).tolist()
@@ -54,12 +62,14 @@ def test_fee_matches_published_schedules():
     # Polymarket sports taker fee table (100 shares): $0.94 at 25c, $1.25 at 50c, $0.45 at 90c
     for p, fee in ((.25, .94), (.5, 1.25), (.9, .45)):
         assert abs(100 * 0.05 * p * (1 - p) - fee) < 0.006
-    # + Jupiter builder fee 2% of trade value: 100 @ $0.25 -> $0.50
-    assert abs(100 * BB.fee_per_contract(.25) - (0.9375 + 0.50)) < 1e-9
+    assert abs(100 * BB.fee_per_contract(.25) - 0.9375) < 1e-9   # Polymarket taker fee only (no Jupiter builder fee)
+    # a market's own feeSchedule overrides the default; a fee-free market costs nothing
+    assert abs(BB.fee_per_contract(.5, fee={"rate": 0.03, "exponent": 1}) - 0.0075) < 1e-12
+    assert BB.fee_per_contract(.5, fee={"rate": 0.0, "exponent": 1}) == 0
 
 
 def test_ev_formula_uses_ask_plus_fee():
-    cost = 0.5 + 0.02 * 0.5 + 0.05 * 0.25
+    cost = 0.5 + 0.05 * 0.25
     assert math.isclose(BB.ev_per_dollar(0.6, 0.5), 0.6 / cost - 1)
     assert BB.ev_per_dollar(0.5, 0.5) < 0  # a fair price is negative EV after fees
 
@@ -96,10 +106,16 @@ def test_model_probabilities_and_complements():
 def test_eligibility_and_choice():
     H, A, ev = _ev()
     g = _grid()
+    _quote(ev, "T-U", BB.model_prob({"kind": "total", "line": 2.5, "over": False}, g))
     res = BB.best_bet(BB.selections_from_event(ev, H, A), g, {"modal_score": {"home": 1, "away": 0}})
     rows = BB.evaluate(BB.selections_from_event(ev, H, A), g, {"modal_score": {"home": 1, "away": 0}})
     for r in rows:
-        assert r["eligible"] == (r["score_consistent"] and not r["thin_book"] and r["model_p"] > 0.5 and r["ev_per_dollar"] > 0)
+        assert r["eligible"] == (r["score_consistent"] and not r["thin_book"] and r["model_p"] > 0.5 and r["ev_per_dollar"] > 0
+                                 and not r["excluded_market"] and not r["edge_capped"])
+        if not r["thin_book"]:  # EV is computed from the model shrunk 75% toward the market mid, never the raw model
+            mid = (r["ask"] + r["bid"]) / 2
+            assert math.isclose(r["bet_p"], mid + BB.SHRINK_W * (r["model_p"] - mid))
+            assert math.isclose(r["ev_per_dollar"], r["bet_p"] / r["cost_per_contract"] - 1)
     elig = [r for r in rows if r["eligible"]]
     assert res["verdict"] == "BET" and res["n_eligible"] == len(elig)
     assert math.isclose(res["bet"]["ev_per_dollar"], max(r["ev_per_dollar"] for r in elig), abs_tol=1e-5)
@@ -121,32 +137,36 @@ def test_js_mirror_matches_python():
     H, A, ev = _ev()
     g = _grid(1.3, 1.2, 7)
     sim = {"modal_score": {"home": 1, "away": 0}, "p_home": 0.41, "p_draw": 0.27, "p_away": 0.32, "btts": 0.52, "totals_over": {"over_2.5": 0.49}}
+    _quote(ev, "T-U", 0.51)
     py = BB.best_bet(BB.selections_from_event(ev, H, A), g, sim)
     js = json.loads(subprocess.check_output(["node", "-e", (
         "const B=require(process.argv[1]);const [ev,g,sim,h,a]=JSON.parse(process.argv[2]);"
         "const r=B.bestBet(B.selectionsFromEvent(ev,h,a),g,sim);"
         "const rows=B.evaluate(B.selectionsFromEvent(ev,h,a),g,sim);"
-        "console.log(JSON.stringify({r,rows:rows.map(x=>[x.market_id,x.side,x.label,x.model_p,x.ev_per_dollar,x.eligible])}))"),
+        "console.log(JSON.stringify({r,rows:rows.map(x=>[x.market_id,x.side,x.label,x.model_p,x.ev_per_dollar,x.eligible,x.bet_p,x.raw_ev_per_dollar])}))"),
         str(ROOT / "web" / "bestbet.js"), json.dumps([ev, g, sim, H, A])]))
-    pyrows = [[r["market_id"], r["side"], r["label"], r["model_p"], r["ev_per_dollar"], r["eligible"]]
+    pyrows = [[r["market_id"], r["side"], r["label"], r["model_p"], r["ev_per_dollar"], r["eligible"], r["bet_p"], r["raw_ev_per_dollar"]]
               for r in BB.evaluate(BB.selections_from_event(ev, H, A), g, sim)]
     assert len(js["rows"]) == len(pyrows)
     for a, b in zip(js["rows"], pyrows):
         assert a[:3] == b[:3] and a[5] == b[5]
         assert math.isclose(a[3], b[3], abs_tol=1e-12) and math.isclose(a[4], b[4], abs_tol=1e-12)
+        assert (a[6] is None) == (b[6] is None) and (a[6] is None or math.isclose(a[6], b[6], abs_tol=1e-12))
+        assert math.isclose(a[7], b[7], abs_tol=1e-12)
     assert js["r"]["verdict"] == py["verdict"] and js["r"]["bet"]["market_id"] == py["bet"]["market_id"]
 
 
 def _fc(eid, frozen_at, kickoff):
     return {"status": "ok", "frozen_at": frozen_at, "model_version": "t", "fixture": {
         "event_id": eid, "home_name": "Home FC", "away_name": "Away FC", "competition": "Premier League", "subcategory":"epl", "kickoff_utc": kickoff},
-        "simulation": {"modal_score": {"home": 1, "away": 0}, "p_home": .5, "p_draw": .25, "p_away": .25, "btts": .5, "totals_over": {"over_2.5": .5},
+        "simulation": {"modal_score": {"home": 1, "away": 0}, "p_home": .5, "p_draw": .25, "p_away": .25, "btts": .5, "totals_over": {"over_2.5": .47},
                        "top_scores": [], "score_grid": _grid(1.6, 1.0, 7)}}
 
 
 def test_edge_best_bets_respect_freeze_and_kickoff(monkeypatch):
     H, A, ev = _ev()
-    from oraclefc.market.jupiter_prices import parse_event_markets
+    _quote(ev, "T-U", 0.53)
+    from oraclefc.market.polymarket_prices import parse_event_markets
     mk = parse_event_markets(ev, H, A)
     mk["selections"] = [{**row, "market_id": f"POLY-{i}"}
                         for i, row in enumerate(BB.selections_from_event(ev, H, A))]
@@ -160,10 +180,14 @@ def test_edge_best_bets_respect_freeze_and_kickoff(monkeypatch):
     monkeypatch.setattr(EDGE, "now_utc_iso", lambda: snap["fetched_at"])
     out = EDGE.edge_for_date("2026-10-30")
     g = {r["event_id"]: r for r in out["best_bets"]["games"]}
-    assert g["POLY-1"]["verdict"] == "BET"
+    assert g["POLY-1"]["verdict"] == "BET" and g["POLY-1"]["selection_policy"] == BB.SELECTION_POLICY
+    # every priced pre-kick-off game carries the no-vig 1X2 benchmark, bet or not
+    m = g["POLY-1"]["market_1x2"]
+    assert math.isclose(m["p_home"] + m["p_draw"] + m["p_away"], 1.0) and math.isclose(m["p_home"], .495 / (.495 + .255 + .255))
+    assert "market_1x2" not in g["POLY-3"] and "market_1x2" not in g["POLY-4"]
     assert g["POLY-2"]["verdict"] == "NO BET" and "after the price snapshot" in g["POLY-2"]["reason"]
     assert g["POLY-3"]["verdict"] == "NO BET" and "kick-off" in g["POLY-3"]["reason"]
-    assert g["POLY-4"]["verdict"] == "NO BET" and "no Jupiter prices" in g["POLY-4"]["reason"]
+    assert g["POLY-4"]["verdict"] == "NO BET" and "no Polymarket prices" in g["POLY-4"]["reason"]
     assert out["best_bets"]["n_bet"] == 1 and out["best_bets"]["n_no_bet"] == 3
 
 
@@ -174,10 +198,10 @@ def test_report_confidence_describes_current_champion():
 
 
 def test_match_result_must_clear_probability_and_break_even_in_both_components():
-    offer = {"outcome": {"kind": "1x2", "res": "A", "neg": True}, "ask": .18,
-             "bid": .17, "provider": "polymarket", "label": "Home or draw",
-             "market_id": "POLY-1", "market_type": "moneyline", "side": "NO", "volume": 100, "regulation_only": True}
-    blend = {"modal_score": {"home": 1, "away": 0}, "p_away": .468749}
+    offer = {"outcome": {"kind": "1x2", "res": "A", "neg": True}, "ask": .47,
+             "bid": .46, "provider": "polymarket", "label": "Home or draw",
+             "market_id": "POLY-1", "market_type": "moneyline", "side": "NO", "volume": 1000, "regulation_only": True}
+    blend = {"modal_score": {"home": 1, "away": 0}, "p_away": .455}
     components = {"elo": {"weight": .44, "p_away": .34168},
                   "xg_dc": {"weight": .51, "p_away": .5728}}
     assert BB.best_bet([offer], _grid(), blend)["verdict"] == "BET"
@@ -188,9 +212,58 @@ def test_match_result_must_clear_probability_and_break_even_in_both_components()
     assert BB.best_bet([offer], _grid(), blend, components=components)["verdict"] == "BET"
     offer["ask"] = .54
     offer["bid"] = .53
-    blend["p_away"] = .40
+    blend["p_away"] = .385
     assert BB.best_bet([offer], _grid(), blend)["verdict"] == "BET"
     assert BB.best_bet([offer], _grid(), blend, components=components)["verdict"] == "NO BET"
+
+
+def _offer(**change):
+    base = {"outcome": {"kind": "1x2", "res": "H"}, "ask": .50, "bid": .49, "provider": "polymarket", "label": "Home FC to win",
+            "market_id": "POLY-9", "market_type": "moneyline", "side": "YES", "volume": 1000, "regulation_only": True,
+            "fee": {"rate": 0.05, "exponent": 1, "source": "market"}}
+    return {**base, **change}
+
+
+SIM = {"modal_score": {"home": 1, "away": 0}}
+
+
+def test_bet_uses_shrunk_probability_and_reports_raw_model():
+    res = BB.best_bet([_offer()], _grid(), {**SIM, "p_home": .575})
+    assert res["verdict"] == "BET" and res["selection_policy"] == BB.SELECTION_POLICY
+    bet = res["bet"]
+    assert bet["model_p"] == .575 and math.isclose(bet["bet_p"], .495 + .25 * (.575 - .495))
+    assert math.isclose(bet["ev_per_dollar"], bet["bet_p"] / (.50 + .0125) - 1, abs_tol=1e-6)
+    assert bet["raw_ev_per_dollar"] > bet["ev_per_dollar"] > 0 and bet["fee_assumed"] is False
+
+
+def test_raw_model_edge_alone_is_not_enough():
+    # +4 pts raw edge was a BET under the old rule (raw EV +5%); after shrinking toward the market it is not.
+    res = BB.best_bet([_offer()], _grid(), {**SIM, "p_home": .54})
+    assert res["verdict"] == "NO BET" and res["closest"]["raw_ev_per_dollar"] > 0 > res["closest"]["ev_per_dollar"]
+
+
+@pytest.mark.parametrize("p_home", [.59, .65, .80])
+def test_large_disagreement_with_market_is_never_bet(p_home):
+    res = BB.best_bet([_offer()], _grid(), {**SIM, "p_home": p_home})
+    assert res["verdict"] == "NO BET" and "model error" in res["reason"] and "closest" not in res
+
+
+@pytest.mark.parametrize("outcome,label", [
+    ({"kind": "team_total", "team": "away", "line": 1.5, "over": False}, "Away FC under 1.5 goals"),
+    ({"kind": "btts", "neg": True}, "Both teams to score — NO"),
+])
+def test_team_totals_and_btts_are_excluded(outcome, label):
+    g = _grid()
+    p = BB.model_prob(outcome, g)
+    offer = _offer(outcome=outcome, label=label, ask=round(p - .075, 4), bid=round(p - .085, 4))
+    row = BB.evaluate([offer], g, SIM)[0]
+    assert row["ev_per_dollar"] > 0 and row["excluded_market"] and not row["eligible"]
+    assert BB.best_bet([offer], g, SIM)["verdict"] == "NO BET"
+
+
+@pytest.mark.parametrize("volume,verdict", [(499, "NO BET"), (500, "BET")])
+def test_volume_floor(volume, verdict):
+    assert BB.best_bet([_offer(volume=volume)], _grid(), {**SIM, "p_home": .575})["verdict"] == verdict
 
 
 @pytest.mark.parametrize("change", [
@@ -200,8 +273,10 @@ def test_match_result_must_clear_probability_and_break_even_in_both_components()
 def test_unexecutable_quotes_never_qualify(change):
     home, away, event = _ev()
     offer = BB.selections_from_event(event, home, away)[0]
+    sim = {**SIM, "p_home": .575}
+    assert BB.best_bet([offer], _grid(), sim)["verdict"] == "BET"
     offer.update(change)
-    assert BB.best_bet([offer], _grid(), {"p_home": .8})["verdict"] == "NO BET"
+    assert BB.best_bet([offer], _grid(), sim)["verdict"] == "NO BET"
 
 
 def test_period_and_unverified_regulation_contracts_never_qualify():
@@ -210,14 +285,16 @@ def test_period_and_unverified_regulation_contracts_never_qualify():
     market["periodType"] = "1st"
     assert all(s["market_id"] != market["marketId"] for s in BB.selections_from_event(event, home, away))
     del market["periodType"]
+    offer = BB.selections_from_event(event, home, away)[0]
+    assert BB.best_bet([offer], _grid(), {**SIM, "p_home": .575})["verdict"] == "BET"
     market["rulesPrimary"] = "Includes extra time and penalties"
     offer = BB.selections_from_event(event, home, away)[0]
-    assert BB.best_bet([offer], _grid(), {"p_home": .8})["verdict"] == "NO BET"
+    assert BB.best_bet([offer], _grid(), {**SIM, "p_home": .575})["verdict"] == "NO BET"
 
 
 def test_individual_quote_time_controls_kickoff_boundary(monkeypatch):
     home, away, event = _ev()
-    from oraclefc.market.jupiter_prices import parse_event_markets
+    from oraclefc.market.polymarket_prices import parse_event_markets
     market = parse_event_markets(event, home, away)
     market["selections"] = [{**s, "market_id": "POLY-1"}
                             for s in BB.selections_from_event(event, home, away)]
@@ -243,12 +320,14 @@ def test_quote_age_validation():
 @pytest.mark.skipif(shutil.which("node") is None, reason="node not installed")
 def test_component_range_and_conservative_ev_match_javascript():
     home, away, event = _ev()
+    _quote(event, "ML-H", .70, edge=.07)
     selections = BB.selections_from_event(event, home, away)
     grid = _grid()
     sim = {"modal_score": {"home": 1, "away": 0}, "p_home": .70, "p_draw": .15, "p_away": .15}
     components = {"elo": {"weight": .44, "p_home": .65, "p_draw": .15, "p_away": .20},
                   "xg": {"weight": .51, "p_home": .72, "p_draw": .13, "p_away": .15}}
     py = BB.best_bet(selections, grid, sim, components=components)
+    assert py["verdict"] == "BET" and py["bet"]["outcome"] == {"kind": "1x2", "res": "H"}
     script = "const B=require(process.argv[1]); console.log(JSON.stringify(B.bestBet(...JSON.parse(process.argv[2]))));"
     js = json.loads(subprocess.check_output(["node", "-e", script, str(ROOT / "web/bestbet.js"),
                                            json.dumps([selections, grid, sim, components])]))

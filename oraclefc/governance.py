@@ -30,7 +30,7 @@ PERMITTED_PROVIDERS = {
     "espn-results": "Completed domestic fixture identities and regulation scores only.",
     "openfootball": "Public-domain UEFA Champions League results (football.txt)",
     "polymarket-fixtures": "Full-day soccer fixture identities only; no market fields are copied.",
-    "jupiter-fixtures": "Fixture identity only (teams, competition, kickoff). Prices never pass this layer.",
+    "jupiter-fixtures": "Legacy (pre-2026-11-16) fixture identities; kept so old frozen forecasts still validate.",
     "user-input": "Manually entered fixture (home, away, date, competition)",
     # match-context providers (allow-list parsed; any odds / poll / prediction fields are dropped)
     "understat": "Match xG and per-player minutes/xG/xA (top-5 leagues). The site's 'forecast' field is never read.",

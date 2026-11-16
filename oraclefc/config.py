@@ -112,9 +112,9 @@ UEFA_CC = {
     "SWE": "Sweden", "MCO": "France", "POL": "Poland", "ROU": "Romania", "IRL": "Ireland", "FIN": "Finland",
 }
 
-# Jupiter subcategory -> candidate data divisions (where the two teams are looked up)
+# Polymarket league code (subcategory) -> candidate data divisions (where the two teams are looked up)
 EUROPE_ALL = [d for d, v in ALL_DIVISIONS.items() if d not in SUPPLEMENTAL_DIVISIONS and v[0] not in {"Argentina", "Brazil", "China", "Japan", "Mexico", "USA"}]
-JUPITER_SUBCATEGORY_DIVS: dict[str, list[str]] = {
+SUBCATEGORY_DIVS: dict[str, list[str]] = {
     "epl": ["E0"], "elc": ["E1"], "el1": ["E2"], "el2": ["E3"],
     "efl": ["E0", "E1", "E2", "E3", "EC"], "fac": ["E0", "E1", "E2", "E3", "EC"],
     "sea": ["I1"], "itb": ["I2"], "ser": ["I2"], "cit": ["I1", "I2"],

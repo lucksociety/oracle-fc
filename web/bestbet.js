@@ -1,15 +1,21 @@
 // POST-HOC best bet per game — mirror of oraclefc/market/best_bet.py (kept in sync by tests/test_best_bet.py).
 // Runs only on forecasts that were frozen BEFORE the prices were fetched; nothing flows back into the model.
 (function (root) {
-  const FEES = { polymarket: { builder_rate: 0.02, taker_rate: 0.05, exponent: 1.0 } };
-  const MIN_P = 0.5, MIN_EV = 0.0;
+  const FEES = { polymarket: { taker_rate: 0.05, exponent: 1.0 } };
+  const MIN_P = 0.5, MIN_EV = 0.0, SHRINK_W = 0.25, MAX_RAW_EDGE = 0.08, MIN_VOLUME = 500;
+  const EXCLUDED_KINDS = new Set(["team_total", "btts"]);
   const EXACT_RE = /^(.+?)\s+(\d+)\s*-\s*(\d+)\s+(.+)$/, HCP_RE = /([+-]\d+(?:\.\d+)?)\s*$/;
   const fmtLine = (x) => String(Number(x));
   const fmtHcp = (x) => (x > 0 ? "+" : "") + String(Number(x));
 
-  function feePerContract(price, provider) {
+  function feePerContract(price, provider, fee) {
     const f = FEES[(provider || "").toLowerCase()] || FEES.polymarket;
-    return f.builder_rate * price + f.taker_rate * Math.pow(price * (1 - price), f.exponent);
+    const rate = fee && fee.rate != null ? Number(fee.rate) : f.taker_rate, exponent = fee && fee.rate != null ? Number(fee.exponent ?? 1) : f.exponent;
+    return rate * Math.pow(price * (1 - price), exponent);
+  }
+  function betProbability(p, ask, bid) {
+    if (!(Number.isFinite(bid) && bid > 0 && bid <= ask && ask < 1)) return null;
+    const mid = (ask + bid) / 2; return mid + SHRINK_W * (p - mid);
   }
   function negLabel(spec, label, home, away) {
     if (spec.kind === "1x2") return { H: `${away} or draw (NO on ${home})`, A: `${home} or draw (NO on ${away})`, D: "Either team to win (NO on draw)" }[spec.res];
@@ -47,7 +53,7 @@
       if (!spec) continue;
       const u = (x) => (x || 0) / 1e6;
       const ay = u(pr.buyYesPriceUsd), by = u(pr.sellYesPriceUsd), an = u(pr.buyNoPriceUsd), bn = u(pr.sellNoPriceUsd);
-      const base = { market_id: m.marketId, market_type: t, volume: pr.volume, provider,
+      const base = { market_id: m.marketId, market_type: t, volume: pr.volume, provider, fee: m.fee ?? null,
         regulation_only: /\b90\s+minutes?\b/i.test(m.rulesPrimary || "") && /stoppage/i.test(m.rulesPrimary || "") };
       if (ay > 0 && ay < 1) out.push({ ...base, label, side: "YES", outcome: spec, ask: ay, bid: by || null });
       if (an > 0 && an < 1) out.push({ ...base, label: negLabel(spec, label, home, away), side: "NO", outcome: { ...spec, neg: true }, ask: an, bid: bn || null });
@@ -101,12 +107,17 @@
   }
   function evaluate(sels, grid, sim) {
     return sels.map((s) => {
-      const p = modelProb(s.outcome, grid, sim), fee = feePerContract(s.ask, s.provider), ev = p / (s.ask + fee) - 1;
+      const p = modelProb(s.outcome, grid, sim), fee = feePerContract(s.ask, s.provider, s.fee), cost = s.ask + fee;
       const thin = !(Number.isFinite(s.bid) && s.bid > 0 && s.bid <= s.ask && s.ask - s.bid <= .10 + 1e-9);
-      const liquid = Number.isFinite(s.volume) && s.volume > 0;
+      const betP = betProbability(p, s.ask, s.bid), rawEv = p / cost - 1, ev = betP != null ? betP / cost - 1 : rawEv;
+      const liquid = Number.isFinite(s.volume) && s.volume >= MIN_VOLUME;
       const consistent=scoreSupports(s.outcome,sim?.modal_score);
-      return { ...s, score_consistent: consistent, model_p: p, fee_per_contract: fee, cost_per_contract: s.ask + fee, ev_per_dollar: ev, edge_pp: 100 * (p - s.ask),
-        quote_valid: !thin && liquid && s.regulation_only === true, thin_book: thin, fee_assumed: !((s.provider || "") in FEES), eligible: consistent && !thin && liquid && s.regulation_only === true && p > MIN_P && ev > MIN_EV };
+      const rawEdge = p - s.ask, excluded = EXCLUDED_KINDS.has(s.outcome.kind), capped = rawEdge > MAX_RAW_EDGE + 1e-12;
+      const valid = !thin && liquid && s.regulation_only === true;
+      return { ...s, score_consistent: consistent, model_p: p, bet_p: betP, market_mid: thin ? null : (s.ask + s.bid) / 2, fee_per_contract: fee, cost_per_contract: cost,
+        ev_per_dollar: ev, raw_ev_per_dollar: rawEv, edge_pp: 100 * rawEdge, quote_valid: valid, thin_book: thin,
+        fee_assumed: !(s.fee && s.fee.source !== "assumed"), excluded_market: excluded, edge_capped: capped,
+        eligible: valid && consistent && !excluded && !capped && betP != null && p > MIN_P && ev > MIN_EV };
     });
   }
   function bestBet(sels, grid, sim, components) {
@@ -124,13 +135,13 @@
     const out = { n_priced: rows.length, n_eligible: elig.length };
     if (!elig.length) {
       out.verdict = "NO BET";
-      const c = rows.filter((r) => r.quote_valid && r.score_consistent && r.model_p > MIN_P && (!Number.isFinite(r.component_min_p) || r.component_min_p > Math.max(MIN_P, r.cost_per_contract))).sort((a, b) => b.ev_per_dollar - a.ev_per_dollar)[0];
+      const c = rows.filter((r) => r.quote_valid && r.score_consistent && !r.excluded_market && !r.edge_capped && r.model_p > MIN_P && (!Number.isFinite(r.component_min_p) || r.component_min_p > Math.max(MIN_P, r.cost_per_contract))).sort((a, b) => b.ev_per_dollar - a.ev_per_dollar)[0];
       if (c) out.closest = c;
       return out;
     }
     out.verdict = "BET"; out.bet = elig[0]; out.alternatives = elig.slice(1, 3);
     return out;
   }
-  const api = { FEES, MIN_P, feePerContract, selectionsFromEvent, modelProb, scoreSupports, evaluate, bestBet };
+  const api = { FEES, MIN_P, SHRINK_W, MAX_RAW_EDGE, MIN_VOLUME, feePerContract, betProbability, selectionsFromEvent, modelProb, scoreSupports, evaluate, bestBet };
   if (typeof module !== "undefined" && module.exports) module.exports = api; else root.BestBet = api;
 })(typeof window !== "undefined" ? window : globalThis);

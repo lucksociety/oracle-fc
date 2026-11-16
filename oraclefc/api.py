@@ -46,7 +46,7 @@ def health():
 
 @app.get("/api/fixtures")
 def fixtures(date: str = Query(...)):
-    from .fixtures.jupiter import fixtures_for_date
+    from .fixtures.base import fixtures_for_date
     return {"date": _check_date(date), "fixtures": [f.to_dict() for f in fixtures_for_date(date)]}
 
 
