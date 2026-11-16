@@ -1,0 +1,635 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-11-15",
+ "input_fingerprint": "528f19500f72e7f41ab5a766af6adfa38043e8db4eb886eefa045ad0dfb47f4e",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-11-16T23:08:08+00:00",
+ "fixture": {
+  "event_id": "POLY-1330885",
+  "home_name": "Hellas Verona FC",
+  "away_name": "Cesena FC",
+  "competition": "Serie B",
+  "subcategory": "itsb",
+  "kickoff_utc": "2026-11-20T19:30:00+00:00",
+  "kickoff_local": "2026-11-20 14:30 EST",
+  "home_matched": "Verona",
+  "away_matched": "Cesena",
+  "match_methods": {
+   "home": {
+    "source": "Hellas Verona FC",
+    "matched": "Verona",
+    "method": "alias",
+    "score": 1.0
+   },
+   "away": {
+    "source": "Cesena FC",
+    "matched": "Cesena",
+    "method": "core-tokens",
+    "score": 0.97
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.5317019913937626,
+  "p_draw": 0.2655892872558903,
+  "p_away": 0.202708721350347,
+  "xg_home": 1.6152608313220536,
+  "xg_away": 0.9164375658227395,
+  "xg_total": 2.531698397144793,
+  "median_total": 2,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.1290682161772979
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.1290682161772979
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.12315638692516577
+   },
+   {
+    "home": 2,
+    "away": 0,
+    "p": 0.10324444392764132
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.09765823432962478
+   },
+   {
+    "home": 0,
+    "away": 0,
+    "p": 0.08160689062700595
+   }
+  ],
+  "btts": 0.49640569640710414,
+  "totals_over": {
+   "over_0.5": 0.9183931093729939,
+   "over_1.5": 0.7284264360243425,
+   "over_2.5": 0.46458197685505365,
+   "over_3.5": 0.24861893772273916,
+   "over_4.5": 0.1100940368101032,
+   "over_5.5": 0.042245193260876814,
+   "over_6.5": 0.013888373893276568
+  },
+  "total_buckets": {
+   "0-1": 0.2715735639756574,
+   "2": 0.26384445916928884,
+   "3": 0.21596303913231457,
+   "4": 0.13852490091263595,
+   "5+": 0.1100940368101032
+  },
+  "clean_sheet_home": 0.39352385357487074,
+  "clean_sheet_away": 0.19167734064503106,
+  "home_goal_dist": [
+   0.19167734064503106,
+   0.32634169652351314,
+   0.26427867745269185,
+   0.14006478094693398,
+   0.054997761715591675,
+   0.017087643079721028,
+   0.004381470282135819,
+   0.0011706293543815459
+  ],
+  "away_goal_dist": [
+   0.39352385357487074,
+   0.37460306348944095,
+   0.16923640396128548,
+   0.049684865307734645,
+   0.010792486316887348,
+   0.0018587435036712533,
+   0.00026474932806786047,
+   3.583451804180596e-05
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    3
+   ],
+   "away_goals_80": [
+    0,
+    2
+   ],
+   "total_goals_80": [
+    1,
+    5
+   ],
+   "goal_diff_80": [
+    -1,
+    3
+   ]
+  },
+  "score_grid": [
+   [
+    0.081607,
+    0.06681,
+    0.031532,
+    0.009299,
+    0.002025,
+    0.000349,
+    5e-05
+   ],
+   [
+    0.123156,
+    0.129068,
+    0.053996,
+    0.015947,
+    0.003477,
+    0.0006,
+    8.5e-05
+   ],
+   [
+    0.103244,
+    0.097658,
+    0.046826,
+    0.013112,
+    0.002863,
+    0.000495,
+    7.1e-05
+   ],
+   [
+    0.05501,
+    0.052109,
+    0.023691,
+    0.007412,
+    0.001535,
+    0.000265,
+    3.8e-05
+   ],
+   [
+    0.021618,
+    0.020509,
+    0.009338,
+    0.00277,
+    0.000641,
+    0.000105,
+    1.5e-05
+   ],
+   [
+    0.006711,
+    0.006376,
+    0.002907,
+    0.000864,
+    0.000189,
+    3.5e-05,
+    5e-06
+   ],
+   [
+    0.001719,
+    0.001635,
+    0.000747,
+    0.000222,
+    4.9e-05,
+    8e-06,
+    1e-06
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.530995,
+  "p_draw": 0.26605,
+  "p_away": 0.202955,
+  "se": [
+   0.0011158837528501794,
+   0.0009880976609121185,
+   0.0008993449504361493
+  ],
+  "max_abs_dev_vs_exact": 0.0007069913937626238,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   1.210230098236653,
+   2.0609420266841214
+  ],
+  "xg_away_80": [
+   0.6791927709013215,
+   1.1721261550083835
+  ],
+  "p_home_80": [
+   0.41396897705040975,
+   0.6478246500081701
+  ],
+  "p_draw_80": [
+   0.21254363509105917,
+   0.3033268446623847
+  ],
+  "p_away_80": [
+   0.1344515026938855,
+   0.2901642934020153
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.21106051604641562,
+   0.20250844777719929
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.5029522700873109,
+   "p_draw": 0.2748124086173199,
+   "p_away": 0.22223532129536927,
+   "xg_home": 1.475075655041968,
+   "xg_away": 0.8910584578670697,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.5356155939453715,
+   "p_draw": 0.2454426995193226,
+   "p_away": 0.21894170653530587,
+   "xg_home": 1.6467228905965836,
+   "xg_away": 0.9567128649700021,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.5772326454373164,
+   "p_draw": 0.25254973406022085,
+   "p_away": 0.17021762050246253,
+   "xg_home": 1.689129151254342,
+   "xg_away": 0.8065082002062233,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.4437134029678178,
+   "p_draw": 0.2624481547419372,
+   "p_away": 0.293838442290245,
+   "xg_home": 1.4378342847898111,
+   "xg_away": 1.1189186091188883,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.526617915212596,
+   "p_draw": 0.26640359085924986,
+   "p_away": 0.20697849392815415,
+   "xg_home": 1.5472584190785201,
+   "xg_away": 0.8725637160882136,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Cesena attack vs Verona defence: rate multiplier \u00d70.74 for the away side.",
+   "effect": 0.302
+  },
+  {
+   "text": "Home advantage (Italy, fitted from results): \u00d71.17 on Verona's scoring rate.",
+   "effect": 0.1559
+  },
+  {
+   "text": "Independent results-only Elo: Verona 1399 vs Cesena 1295 (gap +104 before home advantage).",
+   "effect": 0.1558
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.5317019913937626,
+  "p_draw": 0.2655892872558903,
+  "p_away": 0.202708721350347,
+  "xg_home": 1.6152608313220536,
+  "xg_away": 0.9164375658227395
+ },
+ "context": {
+  "fetched_at": "2026-11-16T23:08:08+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5967158",
+    "fetched_at": "2026-11-16T23:08:08+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "4-2-3-1",
+    "starters": [
+     {
+      "name": "Simone Perilli",
+      "pos": "G"
+     },
+     {
+      "name": "Gabriele Zappa",
+      "pos": "D"
+     },
+     {
+      "name": "Andrias Edmundsson",
+      "pos": "D"
+     },
+     {
+      "name": "Pawe\u0142 Dawidowicz",
+      "pos": "D"
+     },
+     {
+      "name": "Martin Frese",
+      "pos": "M"
+     },
+     {
+      "name": "Antoine Bernede",
+      "pos": "M"
+     },
+     {
+      "name": "Edoardo Iannoni",
+      "pos": "M"
+     },
+     {
+      "name": "Dailon Livramento",
+      "pos": "F"
+     },
+     {
+      "name": "Abdou Harroui",
+      "pos": "M"
+     },
+     {
+      "name": "Amin Sarr",
+      "pos": "F"
+     },
+     {
+      "name": "Daniel Mosquera",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-11-16T23:08:08+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   },
+   "away": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "4-3-3",
+    "starters": [
+     {
+      "name": "Alessandro Siano",
+      "pos": "G"
+     },
+     {
+      "name": "Andrea Ciofi",
+      "pos": "D"
+     },
+     {
+      "name": "Jacopo Gelli",
+      "pos": "D"
+     },
+     {
+      "name": "Massimiliano Mangraviti",
+      "pos": "D"
+     },
+     {
+      "name": "Gianluca Frabotta",
+      "pos": "M"
+     },
+     {
+      "name": "Dimitri Bisoli",
+      "pos": "M"
+     },
+     {
+      "name": "Emil Bohinen",
+      "pos": "M"
+     },
+     {
+      "name": "Riccardo Pagano",
+      "pos": "M"
+     },
+     {
+      "name": "Xavello Druiventak",
+      "pos": "F"
+     },
+     {
+      "name": "Cristian Shpendi",
+      "pos": "F"
+     },
+     {
+      "name": "Luca D'Andrea",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-11-16T23:08:08+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Tom\u00e1s Suslov",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5967158",
+     "fetched_at": "2026-11-16T23:08:08+00:00"
+    },
+    {
+     "player": "Giacomo Toniolo",
+     "type": "injury",
+     "expected_return": "Day to day",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5967158",
+     "fetched_at": "2026-11-16T23:08:08+00:00"
+    },
+    {
+     "player": "Mattia Compagnon",
+     "type": "injury",
+     "expected_return": "Day to day",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5967158",
+     "fetched_at": "2026-11-16T23:08:08+00:00"
+    },
+    {
+     "player": "Seid Kora\u010d",
+     "type": "injury",
+     "expected_return": "Day to day",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5967158",
+     "fetched_at": "2026-11-16T23:08:08+00:00"
+    },
+    {
+     "player": "Domagoj Bradari\u0107",
+     "type": "injury",
+     "expected_return": "Day to day",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5967158",
+     "fetched_at": "2026-11-16T23:08:08+00:00"
+    },
+    {
+     "player": "Leorat Bega",
+     "type": "injury",
+     "expected_return": "Day to day",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5967158",
+     "fetched_at": "2026-11-16T23:08:08+00:00"
+    },
+    {
+     "player": "Suat Serdar",
+     "type": "injury",
+     "expected_return": "Day to day",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5967158",
+     "fetched_at": "2026-11-16T23:08:08+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "Luca Schirone",
+     "type": "injury",
+     "expected_return": "Day to day",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5967158",
+     "fetched_at": "2026-11-16T23:08:08+00:00"
+    },
+    {
+     "player": "Jonathan Klinsmann",
+     "type": "injury",
+     "expected_return": "Day to day",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5967158",
+     "fetched_at": "2026-11-16T23:08:08+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 13,
+    "n21": 2,
+    "last_match": "2026-11-07"
+   },
+   "away": {
+    "rest_days": 13,
+    "n21": 2,
+    "last_match": "2026-11-07"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 176.5
+  },
+  "venue": {
+   "name": "Stadio Marcantonio Bentegodi",
+   "city": "Verona",
+   "lat": 45.435323795,
+   "lon": 10.968585312
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 0.9099999999999999,
+   "temp_c": 6.9,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=45.435&longitude=10.969",
+   "fetched_at": "2026-11-16T23:08:08+00:00",
+   "lat": 45.435323795,
+   "lon": 10.968585312
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": -0.33,
+    "d_p_draw_pp": 0.96,
+    "d_p_away_pp": -0.63,
+    "d_xg_home": -0.045,
+    "d_xg_away": -0.042
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0158,
+    "away_rate_mult": 1.0066,
+    "d_p_home_pp": 0.47,
+    "d_p_draw_pp": -0.28,
+    "d_p_away_pp": -0.19,
+    "d_xg_home": 0.025,
+    "d_xg_away": 0.006,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "reason": "failed validation; no live features"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 13.0,
+   "rest_a": 13.0,
+   "n21_h": 2.0,
+   "n21_a": 2.0,
+   "travel_km": 176.47784447951057,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 0.9099999999999999,
+   "temp_c": 6.9
+  }
+ },
+ "confidence": {
+  "tier": "MODERATE",
+  "p_max": 0.5317019913937626,
+  "entropy_nats": 1.011500831306012,
+  "text": "Most likely result has P = 53.2%. In the out-of-sample backtest, favourites priced 0.50\u20130.60 won 53.9% \u00b1 0.5% (n=9522, mean forecast 54.4%). Backtest RPS for I2: 0.2127; exact-score top-5 hit rate 52.5% (n=1230). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: MODERATE (entropy 1.012 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Verona: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Verona: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.",
+  "Cesena: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Cesena: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+ ],
+ "verdict": "Verona 1\u20131 Cesena is the single most probable scoreline at 12.9%: expected goals 1.62\u20130.92 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.043). Exact scores are inherently uncertain; the 1X2 split is 53.2%/26.6%/20.3%.",
+ "resolved": {
+  "home_key": "Italy:Verona",
+  "away_key": "Italy:Cesena",
+  "div": "I2",
+  "home_div": "I2",
+  "away_div": "I2",
+  "country": "Italy"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: Cesena FC at Hellas Verona FC\nCompetition: Serie B\nDate: 2026-11-20 14:30 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-11-15\n\nPRIMARY FINAL SCORE PREDICTION\n\nHellas Verona FC 1 \u2013 1 Cesena FC\n(modal exact score, probability 12.9%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.62\nAway: 0.92\nExpected Total: 2.53\nMedian Total: 2\n\nRESULT PROBABILITIES\n\nHome Win: 53.2%\nDraw: 26.6%\nAway Win: 20.3%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 12.9%\n2. 1\u20130: 12.3%\n3. 2\u20130: 10.3%\n4. 2\u20131: 9.8%\n5. 0\u20130: 8.2%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 27.2%\nTotal 2 goals: 26.4%\nTotal 3 goals: 21.6%\nTotal 4 goals: 13.9%\nTotal 5+ goals: 11.0%\n\nBoth Teams Score: 49.6%\nClean sheet Hellas Verona FC: 39.4% \u00b7 Clean sheet Cesena FC: 19.2%\n\nMATCH INTELLIGENCE\n\n1. Cesena attack vs Verona defence: rate multiplier \u00d70.74 for the away side.\n2. Home advantage (Italy, fitted from results): \u00d71.17 on Verona's scoring rate.\n3. Independent results-only Elo: Verona 1399 vs Cesena 1295 (gap +104 before home advantage).\n\nMODEL CONFIDENCE\n\nMost likely result has P = 53.2%. In the out-of-sample backtest, favourites priced 0.50\u20130.60 won 53.9% \u00b1 0.5% (n=9522, mean forecast 54.4%). Backtest RPS for I2: 0.2127; exact-score top-5 hit rate 52.5% (n=1230). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: MODERATE (entropy 1.012 nats of max 1.099).\nParameter-uncertainty 80% bands: xG Hellas Verona FC 1.21\u20132.06, xG Cesena FC 0.68\u20131.17; P(home win) 41.4%\u201364.8%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0007 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nVerona: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-11-16 18:08 EST (4-2-3-1)\n  Simone Perilli (G), Gabriele Zappa (D), Andrias Edmundsson (D), Pawe\u0142 Dawidowicz (D), Martin Frese (M), Antoine Bernede (M), Edoardo Iannoni (M), Dailon Livramento (F), Abdou Harroui (M), Amin Sarr (F), Daniel Mosquera (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\nCesena: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-11-16 18:08 EST (4-3-3)\n  Alessandro Siano (G), Andrea Ciofi (D), Jacopo Gelli (D), Massimiliano Mangraviti (D), Gianluca Frabotta (M), Dimitri Bisoli (M), Emil Bohinen (M), Riccardo Pagano (M), Xavello Druiventak (F), Cristian Shpendi (F), Luca D'Andrea (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nKEY ABSENCES\n\n- Verona: Tom\u00e1s Suslov \u2014 injury, Late November 2026 [FotMob, 2026-11-16 18:08 EST]\n- Verona: Giacomo Toniolo \u2014 injury, Day to day [FotMob, 2026-11-16 18:08 EST]\n- Verona: Mattia Compagnon \u2014 injury, Day to day [FotMob, 2026-11-16 18:08 EST]\n- Verona: Seid Kora\u010d \u2014 injury, Day to day [FotMob, 2026-11-16 18:08 EST]\n- Verona: Domagoj Bradari\u0107 \u2014 injury, Day to day [FotMob, 2026-11-16 18:08 EST]\n- Verona: Leorat Bega \u2014 injury, Day to day [FotMob, 2026-11-16 18:08 EST]\n- Verona: Suat Serdar \u2014 injury, Day to day [FotMob, 2026-11-16 18:08 EST]\n- Cesena: Luca Schirone \u2014 injury, Day to day [FotMob, 2026-11-16 18:08 EST]\n- Cesena: Jonathan Klinsmann \u2014 injury, Day to day [FotMob, 2026-11-16 18:08 EST]\n\nWEATHER AT VENUE\n\nStadio Marcantonio Bentegodi, Verona: 6.9 \u00b0C, wind 0.9 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-11-16 18:08 EST]\n\nREST & TRAVEL\n\nVerona: 13 days' rest, 2 matches in previous 21 days \u00b7 Cesena: 13 days' rest, 2 in 21 days \u00b7 away travel 176.5 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 53.2% / 26.6% / 20.3%, xG 1.62\u20130.92\n- Understat xG component (validated, in ensemble): home -0.33 pp, draw +0.96 pp, away -0.63 pp; xG -0.045 / -0.042\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.47 pp, draw -0.28 pp, away -0.19 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- lineup: not applied (failed validation; no live features)\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Verona: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Verona: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n- Cesena: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Cesena: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nFINAL VERDICT\n\nVerona 1\u20131 Cesena is the single most probable scoreline at 12.9%: expected goals 1.62\u20130.92 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.043). Exact scores are inherently uncertain; the 1X2 split is 53.2%/26.6%/20.3%.\n",
+ "refresh_id": "5f27039ffe224f88a6698b4b20b7aad3",
+ "frozen_at": "2026-11-16T23:08:08+00:00",
+ "sha256": "66bc2dea00c1e04181ac80a4ea842a0a60295047d4e3f50c0becc09a69e331e1"
+}
