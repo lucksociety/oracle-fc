@@ -8,16 +8,20 @@ import pandas as pd
 from . import config, store
 from .teams import match_team
 
-EURO_COMPS = {"ucl", "uel", "ucol"}
+EURO_COMPS = {"ucl", "uel", "ucol", "col"}
 SUPPLEMENTAL_ALIASES = {
     "bra2": {"Londrina EC":"Londrina", "Clube Náutico Capibaribe":"Náutico"},
     "col2": {"Real Cartagena FC":"Real Cartagena"},
     "clf": {"SC Wiedenbruck":"SC Wiedenbrück", "Preussen Munster II":"Preußen Münster II", "FC Wegberg-Beeck":"FC Wegberg-Beeck"},
     "col1": {"Cúcuta Deportivo FC": "Cúcuta Deportivo", "Millonarios FC": "Millonarios", "América de Cali": "América de Cali"},
-    "fpd": {"Escorpiones de Belén": "Escorpiones Belén", "LD Alajuelense": "Alajuelense"},
+    "fpd": {"Escorpiones de Belén": "Escorpiones Belén", "LD Alajuelense": "Alajuelense",
+            "AD Municipal Pérez Zeledón": "Pérez Zeledón", "CS Cartaginés": "Cartaginés", "CS Herediano": "Herediano",
+            "Deportivo Saprissa": "Saprissa", "Inter San Carlos": "Inter de San Carlos", "Sporting FC": "Sporting San José"},
     "mex2": {"Atletico Morelia": "Atletico Morelia", "Club Atletico La Paz":"Atlético La Paz", "Piratas Veracruz":"Piratas"},
     "par1": {"Libertad Asuncion": "Libertad", "Club Guarani Asuncion": "Guaraní", "Recoleta FC": "Deportivo Recoleta"},
-    "per1": {"Club Universitario de Deportes": "Universitario", "Sport Boys Association": "Sport Boys"},
+    "per1": {"Club Universitario de Deportes": "Universitario", "Sport Boys Association": "Sport Boys",
+             "CS Cienciano": "Cienciano del Cusco", "CS Cristal": "Sporting Cristal", "Club Alianza Atlético": "Alianza Atlético",
+             "Club Alianza Lima": "Alianza Lima", "FBC Melgar": "Melgar"},
     "ven1": {"Portuguesa FC": "Portuguesa", "Metropolitanos FC": "Metropolitanos", "Carabobo FC": "Carabobo"},
 }
 

@@ -83,7 +83,7 @@ SUPPLEMENTAL_DIVISIONS = {
 }
 SUPPLEMENTAL_FEEDS = {"BRA2":"bra.2", "COL": "col.1", "CRC": "crc.1",
                       "PAR": "par.1", "PER": "per.1", "VEN": "ven.1"}
-SUPPLEMENTAL_SUBCATEGORIES = {"bra2":"BRA2", "col2":"COL2", "col1": "COL", "fpd": "CRC", "mex2": "MEX2",
+SUPPLEMENTAL_SUBCATEGORIES = {"bl3":"D3", "bra2":"BRA2", "col2":"COL2", "col1": "COL", "fpd": "CRC", "mex2": "MEX2",
                              "par1": "PAR", "per1": "PER", "ven1": "VEN"}
 
 ALL_DIVISIONS = {**SUPPLEMENTAL_DIVISIONS, **MAIN_DIVISIONS, **EXTRA_LEAGUES, "UCL": ("Europe", "UEFA Champions League", 0)}
@@ -126,7 +126,10 @@ SUBCATEGORY_DIVS: dict[str, list[str]] = {
     "aut": ["AUT"], "fin1": ["FIN"], "mex": ["MEX"], "pol": ["POL"], "chi": ["CHN"],
     "bra": ["BRA"], "arg": ["ARG"], "mls": ["USA"], "jap": ["JPN"], "nor": ["NOR"],
     "swe": ["SWE"], "den": ["DNK"], "swi": ["SWZ"], "rom": ["ROU"], "irl": ["IRL"],
+    # Polymarket's own codes for leagues whose results are already ingested.
+    "itsb": ["I2"], "fr2": ["F2"], "rou1": ["ROU"], "gre1": ["G1"], "sui": ["SWZ"], "enl": ["EC"],
+    "scoc": ["SC0", "SC1", "SC2", "SC3"], "ptc": ["P1"],
     **{sub: [div] for sub, div in SUPPLEMENTAL_SUBCATEGORIES.items()},
     "clf": EUROPE_ALL + ["ARG", "BRA", "CHN", "JPN", "MEX", "USA"],
-    "ucl": EUROPE_ALL, "uel": EUROPE_ALL, "ucol": EUROPE_ALL,
+    "ucl": EUROPE_ALL, "uel": EUROPE_ALL, "ucol": EUROPE_ALL, "col": EUROPE_ALL,
 }
