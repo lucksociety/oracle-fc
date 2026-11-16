@@ -10,6 +10,10 @@ from .teams import match_team
 
 EURO_COMPS = {"ucl", "uel", "ucol", "col"}
 SUPPLEMENTAL_ALIASES = {
+    "bl3": {"1. FC Saarbrucken":"Saarbrücken", "FC Ingolstadt 04":"Ingolstadt", "FC Viktoria Cologne":"Viktoria Köln 1904",
+            "FC Wurzburger Kickers":"Würzburger Kickers", "Fortuna Cologne":"Fortuna Köln", "Rot-Weiss Essen":"RW Essen",
+            "SC Preussen 06 Munster":"Preussen Münster", "SG Sonnenhof Grossaspach":"Sonnenhof Großaspach", "SV Meppen 1912":"Meppen",
+            "SV Waldhof Mannheim 07":"Waldhof Mannheim", "SV Wehen Wiesbaden":"Wehen Wiesbaden", "TSG Hoffenheim II":"Hoffenheim II"},
     "bra2": {"Londrina EC":"Londrina", "Clube Náutico Capibaribe":"Náutico"},
     "col2": {"Real Cartagena FC":"Real Cartagena"},
     "clf": {"SC Wiedenbruck":"SC Wiedenbrück", "Preussen Munster II":"Preußen Münster II", "FC Wegberg-Beeck":"FC Wegberg-Beeck"},

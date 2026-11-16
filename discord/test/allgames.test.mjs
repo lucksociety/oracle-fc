@@ -7,7 +7,7 @@ try {
   for (const count of [0, 23, 81]) {
     const date = '2030-10-29';
     const forecasts = Array.from({length:count}, (_,i) => ({
-      fixture: {event_id:`f${i}`,home_name:`Home ${i}`,away_name:`Away ${i}`,competition:'Test',kickoff_utc:`${date}T20:00:00Z`},
+      fixture: {event_id:`f${i}`,subcategory:'epl',home_name:`Home ${i}`,away_name:`Away ${i}`,competition:'Test',kickoff_utc:`${date}T20:00:00Z`},
       status:i%3 ? 'ok' : 'unsupported',
       ...(i%3 ? {simulation:{p_home:.5,p_draw:.2,p_away:.3,xg_home:1.5,xg_away:1,modal_score:{home:1,away:0,p:.15}}}:{}),
     }));

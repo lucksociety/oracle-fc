@@ -1,3 +1,5 @@
+// Mirror of oraclefc/config.py CORE_BET_SUBCATEGORIES.
+const CORE_BET_SUBCATEGORIES = new Set(["epl","lal","bun","sea","fl1","ucl","por","ere","tur","bel1","scop","gre","gre1"]);
 // ORACLE FC dashboard. Forecast views never read market prices.
 // The Edge tab fetches prices only to compare against already-frozen forecasts.
 const $ = (s) => document.querySelector(s);
@@ -193,6 +195,7 @@ async function liveEdge() {
       events.push({ home: fc.fixture.home_name, away: fc.fixture.away_name, competition: fc.fixture.competition, frozen_at: fc.frozen_at, market_after_kickoff: fetchedAt >= fc.fixture.kickoff_utc, rows: edges(fc, mk) });
       const g = { event_id: fc.fixture.event_id, home: fc.fixture.home_name, away: fc.fixture.away_name, competition: fc.fixture.competition, kickoff_utc: fc.fixture.kickoff_utc };
       if (fetchedAt >= fc.fixture.kickoff_utc) Object.assign(g, { verdict: "NO BET", reason: "prices fetched after kick-off (in-play), not pre-match" });
+      else if (!CORE_BET_SUBCATEGORIES.has(String(fc.fixture.subcategory || "").toLowerCase())) Object.assign(g, { verdict: "NO BET", reason: "outside the core leagues; bets are limited to the competitions with the deepest data and best backtest record" });
       else Object.assign(g, BestBet.bestBet(BestBet.selectionsFromEvent(ev, fc.fixture.home_name, fc.fixture.away_name), fc.simulation.score_grid, fc.simulation, fc.components));
       games.push(g);
     } catch (e) { console.warn(e); }

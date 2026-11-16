@@ -8,7 +8,7 @@ const game = {
   bet: { outcome:{kind:'1x2',res:'H'}, label: 'CURRENT_PICK', side: 'YES', model_p: .7, ask: .5, ev_per_dollar: .3 },
 };
 const scan = { date: '2026-11-05', games: [game], forecasts: [], hasEdge: true };
-const render = g => JSON.stringify(buildEmbeds({ ...scan, games: [g], forecasts:[{status:'ok',fixture:{event_id:g.event_id,home_name:g.home,away_name:g.away,kickoff_utc:g.kickoff_utc},simulation:g.sim}] }, 'https://example.test', { now }));
+const render = g => JSON.stringify(buildEmbeds({ ...scan, games: [g], forecasts:[{status:'ok',fixture:{event_id:g.event_id,subcategory:'epl',home_name:g.home,away_name:g.away,kickoff_utc:g.kickoff_utc},simulation:g.sim}] }, 'https://example.test', { now }));
 assert(render(game).includes('CURRENT_PICK'));
 for (const priced_at of [null, 'invalid', '2026-11-05T12:00:01Z', '2026-11-05T11:54:59Z']) {
   assert(!render({ ...game, priced_at }).includes('CURRENT_PICK'));
