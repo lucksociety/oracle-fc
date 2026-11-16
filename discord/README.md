@@ -80,3 +80,7 @@ https://discord.com/oauth2/authorize?client_id=1565128574128754708&scope=bot%20a
 node test/local.test.mjs                 # signature verify, PING, deferred reply, date parsing
 node test/embeds.test.mjs 2026-10-31     # builds the embeds from live dashboard data (no Discord calls)
 ```
+
+## Deploys
+
+The `oracle-fc-discord` Worker is connected to this repo through Cloudflare Workers Builds (root directory `discord`, watch path `discord/*`). A push to `main` that changes anything under `discord/` redeploys it with `npx wrangler deploy`; data-only commits do not.
