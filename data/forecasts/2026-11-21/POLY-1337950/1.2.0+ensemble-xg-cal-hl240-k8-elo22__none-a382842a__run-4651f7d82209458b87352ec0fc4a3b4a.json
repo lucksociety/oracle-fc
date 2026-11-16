@@ -1,0 +1,593 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-11-15",
+ "input_fingerprint": "20c6278907982f874cd25c5c67dcd20ac1cb767113c1bfde33334014a8accc50",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-11-16T12:17:47+00:00",
+ "fixture": {
+  "event_id": "POLY-1337950",
+  "home_name": "Bolton Wanderers FC",
+  "away_name": "Portsmouth FC",
+  "competition": "EFL Championship",
+  "subcategory": "elc",
+  "kickoff_utc": "2026-11-21T15:00:00+00:00",
+  "kickoff_local": "2026-11-21 10:00 EST",
+  "home_matched": "Bolton",
+  "away_matched": "Portsmouth",
+  "match_methods": {
+   "home": {
+    "source": "Bolton Wanderers FC",
+    "matched": "Bolton",
+    "method": "core-tokens",
+    "score": 0.97
+   },
+   "away": {
+    "source": "Portsmouth FC",
+    "matched": "Portsmouth",
+    "method": "core-tokens",
+    "score": 0.97
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.3486571790619779,
+  "p_draw": 0.2771170524543943,
+  "p_away": 0.3742257684836279,
+  "xg_home": 1.3238423757055393,
+  "xg_away": 1.3793970821181354,
+  "xg_total": 2.703239457823675,
+  "median_total": 3,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.13434716485507975
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.13434716485507975
+   },
+   {
+    "home": 0,
+    "away": 1,
+    "p": 0.08655420799723897
+   },
+   {
+    "home": 1,
+    "away": 2,
+    "p": 0.08602129646355516
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.08318230596911512
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.08248802672276843
+   }
+  ],
+  "btts": 0.5666983482201152,
+  "totals_over": {
+   "over_0.5": 0.9309226574984959,
+   "over_1.5": 0.7611861435321419,
+   "over_2.5": 0.5077780619925464,
+   "over_3.5": 0.2866297044899717,
+   "over_4.5": 0.13440903219666578,
+   "over_5.5": 0.05489308970509899,
+   "over_6.5": 0.019192055220895607
+  },
+  "total_buckets": {
+   "0-1": 0.2388138564678583,
+   "2": 0.25340808153959554,
+   "3": 0.22114835750257456,
+   "4": 0.15222067229330594,
+   "5+": 0.13440903219666578
+  },
+  "clean_sheet_home": 0.2443759510707703,
+  "clean_sheet_away": 0.25800304321061884,
+  "home_goal_dist": [
+   0.25800304321061884,
+   0.3598404258009513,
+   0.23761824593376044,
+   0.1019974333124975,
+   0.03237454416056378,
+   0.008131771330187174,
+   0.0016854781045840313,
+   0.0003490581468368976
+  ],
+  "away_goal_dist": [
+   0.2443759510707703,
+   0.35397329386444715,
+   0.24357573422954087,
+   0.10939018878923758,
+   0.036457870368322355,
+   0.009646056106136553,
+   0.0021123448431997313,
+   0.0004685607283456473
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    3
+   ],
+   "away_goals_80": [
+    0,
+    3
+   ],
+   "total_goals_80": [
+    1,
+    5
+   ],
+   "goal_diff_80": [
+    -2,
+    2
+   ]
+  },
+  "score_grid": [
+   [
+    0.069077,
+    0.086554,
+    0.061922,
+    0.027973,
+    0.009344,
+    0.002472,
+    0.000541
+   ],
+   [
+    0.083182,
+    0.134347,
+    0.086021,
+    0.038908,
+    0.013013,
+    0.003447,
+    0.000755
+   ],
+   [
+    0.057139,
+    0.082488,
+    0.060466,
+    0.025926,
+    0.008682,
+    0.002302,
+    0.000505
+   ],
+   [
+    0.024666,
+    0.035655,
+    0.024776,
+    0.011866,
+    0.003766,
+    0.001,
+    0.000219
+   ],
+   [
+    0.007848,
+    0.011358,
+    0.007903,
+    0.003588,
+    0.001272,
+    0.00032,
+    7e-05
+   ],
+   [
+    0.001971,
+    0.002856,
+    0.00199,
+    0.000904,
+    0.000304,
+    8.5e-05,
+    1.8e-05
+   ],
+   [
+    0.000408,
+    0.000592,
+    0.000413,
+    0.000188,
+    6.3e-05,
+    1.7e-05,
+    4e-06
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.3498,
+  "p_draw": 0.276975,
+  "p_away": 0.37322500000000003,
+  "se": [
+   0.0010663957051676456,
+   0.0010006494125691576,
+   0.0010814991894934549
+  ],
+  "max_abs_dev_vs_exact": 0.0011428209380220933,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   1.0430404487539913,
+   1.6280466669861826
+  ],
+  "xg_away_80": [
+   1.0580568190325887,
+   1.7213220517586725
+  ],
+  "p_home_80": [
+   0.2683612789094432,
+   0.4510675265597702
+  ],
+  "p_draw_80": [
+   0.23992143736182653,
+   0.29429801071924916
+  ],
+  "p_away_80": [
+   0.2775171704188996,
+   0.476513214269423
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.17652356180442663,
+   0.18060832861752874
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.34360605276446415,
+   "p_draw": 0.2648951623291374,
+   "p_away": 0.39149878490639833,
+   "xg_home": 1.327701879721269,
+   "xg_away": 1.4326818460579325,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.3677381125946591,
+   "p_draw": 0.2675248069522495,
+   "p_away": 0.3647370804530915,
+   "xg_home": 1.2733028288854378,
+   "xg_away": 1.2669626910687979,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.3249390855809544,
+   "p_draw": 0.27225675269549227,
+   "p_away": 0.4028041617235533,
+   "xg_home": 1.2590651166862654,
+   "xg_away": 1.4278525450089434,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.4385110791555984,
+   "p_draw": 0.25962486351614494,
+   "p_away": 0.3018640573282566,
+   "xg_home": 1.4547061729599138,
+   "xg_away": 1.1612314373446975,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.34360816032478314,
+   "p_draw": 0.2649040208656466,
+   "p_away": 0.39148781880957023,
+   "xg_home": 1.3264665696828406,
+   "xg_away": 1.4313751715208471,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Home advantage (England, fitted from results): \u00d71.23 on Bolton's scoring rate.",
+   "effect": 0.2068
+  },
+  {
+   "text": "Portsmouth attack vs Bolton defence: rate multiplier \u00d71.19 for the away side.",
+   "effect": 0.1729
+  },
+  {
+   "text": "Independent results-only Elo: Bolton 1349 vs Portsmouth 1426 (gap -77 before home advantage).",
+   "effect": 0.1156
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.34865717906197785,
+  "p_draw": 0.2771170524543942,
+  "p_away": 0.3742257684836278,
+  "xg_home": 1.3238423757055389,
+  "xg_away": 1.3793970821181352
+ },
+ "context": {
+  "fetched_at": "2026-11-16T12:17:47+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5836934",
+    "fetched_at": "2026-11-16T12:17:48+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "none",
+    "source": null,
+    "formation": null,
+    "starters": [],
+    "fetched_at": "2026-11-16T12:17:48+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   },
+   "away": {
+    "status": "none",
+    "source": null,
+    "formation": null,
+    "starters": [],
+    "fetched_at": "2026-11-16T12:17:48+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Jayden Nelson",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836934",
+     "fetched_at": "2026-11-16T12:17:48+00:00"
+    },
+    {
+     "player": "Eoin Toal",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836934",
+     "fetched_at": "2026-11-16T12:17:48+00:00"
+    },
+    {
+     "player": "Gavin Bazunu",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836934",
+     "fetched_at": "2026-11-16T12:17:48+00:00"
+    },
+    {
+     "player": "Ryan Hardie",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836934",
+     "fetched_at": "2026-11-16T12:17:48+00:00"
+    },
+    {
+     "player": "John McAtee",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836934",
+     "fetched_at": "2026-11-16T12:17:48+00:00"
+    },
+    {
+     "player": "Ethan Erhahon",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836934",
+     "fetched_at": "2026-11-16T12:17:48+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "Iyad Mohamed",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836934",
+     "fetched_at": "2026-11-16T12:17:48+00:00"
+    },
+    {
+     "player": "Marezi",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836934",
+     "fetched_at": "2026-11-16T12:17:48+00:00"
+    },
+    {
+     "player": "Colby Bishop",
+     "type": "injury",
+     "expected_return": "Early December 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836934",
+     "fetched_at": "2026-11-16T12:17:48+00:00"
+    },
+    {
+     "player": "John Swift",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836934",
+     "fetched_at": "2026-11-16T12:17:48+00:00"
+    },
+    {
+     "player": "Keshi Anderson",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836934",
+     "fetched_at": "2026-11-16T12:17:48+00:00"
+    },
+    {
+     "player": "Benjamin Arthur",
+     "type": "injury",
+     "expected_return": "Back in training",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836934",
+     "fetched_at": "2026-11-16T12:17:48+00:00"
+    },
+    {
+     "player": "Luke Brooke-Smith",
+     "type": "injury",
+     "expected_return": "Out for season",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836934",
+     "fetched_at": "2026-11-16T12:17:48+00:00"
+    },
+    {
+     "player": "Connor Ogilvie",
+     "type": "injury",
+     "expected_return": "Unknown",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836934",
+     "fetched_at": "2026-11-16T12:17:48+00:00"
+    },
+    {
+     "player": "M\u00e1rk Kosznovszky",
+     "type": "injury",
+     "expected_return": "Unknown",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836934",
+     "fetched_at": "2026-11-16T12:17:48+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 15,
+    "n21": 3,
+    "last_match": "2026-11-06"
+   },
+   "away": {
+    "rest_days": 14,
+    "n21": 3,
+    "last_match": "2026-11-07"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 325.4
+  },
+  "venue": {
+   "name": "Toughsheet Community Stadium",
+   "city": "Bolton",
+   "lat": 53.580584154,
+   "lon": -2.535661161
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 3.7,
+   "temp_c": 6.1,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=53.581&longitude=-2.536",
+   "fetched_at": "2026-11-16T12:17:48+00:00",
+   "lat": 53.580584154,
+   "lon": -2.535661161
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": -1.17,
+    "d_p_draw_pp": -0.11,
+    "d_p_away_pp": 1.29,
+    "d_xg_home": 0.026,
+    "d_xg_away": 0.079
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0225,
+    "away_rate_mult": 1.0095,
+    "d_p_home_pp": 0.5,
+    "d_p_draw_pp": -0.24,
+    "d_p_away_pp": -0.26,
+    "d_xg_home": 0.029,
+    "d_xg_away": 0.013,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "reason": "failed validation; no live features"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 15.0,
+   "rest_a": 14.0,
+   "n21_h": 3.0,
+   "n21_a": 3.0,
+   "travel_km": 325.4274702237433,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 3.7,
+   "temp_c": 6.1
+  }
+ },
+ "confidence": {
+  "tier": "LOW",
+  "p_max": 0.3742257684836279,
+  "entropy_nats": 1.09082182534571,
+  "text": "Most likely result has P = 37.4%. In the out-of-sample backtest, favourites priced 0.33\u20130.40 won 37.6% \u00b1 0.5% (n=8383, mean forecast 37.8%). Backtest RPS for E1: 0.2179; exact-score top-5 hit rate 51.6% (n=1800). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: LOW (entropy 1.091 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Bolton: no lineup information.",
+  "Bolton: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.",
+  "Portsmouth: no lineup information.",
+  "Portsmouth: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+ ],
+ "verdict": "Bolton 1\u20131 Portsmouth is the single most probable scoreline at 13.4%: expected goals 1.32\u20131.38 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.043). Exact scores are inherently uncertain; the 1X2 split is 34.9%/27.7%/37.4%.",
+ "resolved": {
+  "home_key": "England:Bolton",
+  "away_key": "England:Portsmouth",
+  "div": "E1",
+  "home_div": "E1",
+  "away_div": "E1",
+  "country": "England"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: Portsmouth FC at Bolton Wanderers FC\nCompetition: EFL Championship\nDate: 2026-11-21 10:00 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-11-15\n\nPRIMARY FINAL SCORE PREDICTION\n\nBolton Wanderers FC 1 \u2013 1 Portsmouth FC\n(modal exact score, probability 13.4%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.32\nAway: 1.38\nExpected Total: 2.70\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 34.9%\nDraw: 27.7%\nAway Win: 37.4%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 13.4%\n2. 0\u20131: 8.7%\n3. 1\u20132: 8.6%\n4. 1\u20130: 8.3%\n5. 2\u20131: 8.2%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 23.9%\nTotal 2 goals: 25.3%\nTotal 3 goals: 22.1%\nTotal 4 goals: 15.2%\nTotal 5+ goals: 13.4%\n\nBoth Teams Score: 56.7%\nClean sheet Bolton Wanderers FC: 24.4% \u00b7 Clean sheet Portsmouth FC: 25.8%\n\nMATCH INTELLIGENCE\n\n1. Home advantage (England, fitted from results): \u00d71.23 on Bolton's scoring rate.\n2. Portsmouth attack vs Bolton defence: rate multiplier \u00d71.19 for the away side.\n3. Independent results-only Elo: Bolton 1349 vs Portsmouth 1426 (gap -77 before home advantage).\n\nMODEL CONFIDENCE\n\nMost likely result has P = 37.4%. In the out-of-sample backtest, favourites priced 0.33\u20130.40 won 37.6% \u00b1 0.5% (n=8383, mean forecast 37.8%). Backtest RPS for E1: 0.2179; exact-score top-5 hit rate 51.6% (n=1800). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: LOW (entropy 1.091 nats of max 1.099).\nParameter-uncertainty 80% bands: xG Bolton Wanderers FC 1.04\u20131.63, xG Portsmouth FC 1.06\u20131.72; P(home win) 26.8%\u201345.1%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0011 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nBolton: NONE, fetched 2026-11-16 07:17 EST\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\nPortsmouth: NONE, fetched 2026-11-16 07:17 EST\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nKEY ABSENCES\n\n- Bolton: Jayden Nelson \u2014 injury, Late November 2026 [FotMob, 2026-11-16 07:17 EST]\n- Bolton: Eoin Toal \u2014 injury, Late November 2026 [FotMob, 2026-11-16 07:17 EST]\n- Bolton: Gavin Bazunu \u2014 injury, Late November 2026 [FotMob, 2026-11-16 07:17 EST]\n- Bolton: Ryan Hardie \u2014 injury, Late November 2026 [FotMob, 2026-11-16 07:17 EST]\n- Bolton: John McAtee \u2014 injury, Late November 2026 [FotMob, 2026-11-16 07:17 EST]\n- Bolton: Ethan Erhahon \u2014 injury, Late November 2026 [FotMob, 2026-11-16 07:17 EST]\n- Portsmouth: Iyad Mohamed \u2014 injury, Doubtful [FotMob, 2026-11-16 07:17 EST]\n- Portsmouth: Marezi \u2014 injury, Late November 2026 [FotMob, 2026-11-16 07:17 EST]\n- Portsmouth: Colby Bishop \u2014 injury, Early December 2026 [FotMob, 2026-11-16 07:17 EST]\n- Portsmouth: John Swift \u2014 injury, Late November 2026 [FotMob, 2026-11-16 07:17 EST]\n- Portsmouth: Keshi Anderson \u2014 injury, Late November 2026 [FotMob, 2026-11-16 07:17 EST]\n- Portsmouth: Benjamin Arthur \u2014 injury, Back in training [FotMob, 2026-11-16 07:17 EST]\n- Portsmouth: Luke Brooke-Smith \u2014 injury, Out for season [FotMob, 2026-11-16 07:17 EST]\n- Portsmouth: Connor Ogilvie \u2014 injury, Unknown [FotMob, 2026-11-16 07:17 EST]\n- Portsmouth: M\u00e1rk Kosznovszky \u2014 injury, Unknown [FotMob, 2026-11-16 07:17 EST]\n\nWEATHER AT VENUE\n\nToughsheet Community Stadium, Bolton: 6.1 \u00b0C, wind 3.7 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-11-16 07:17 EST]\n\nREST & TRAVEL\n\nBolton: 15 days' rest, 3 matches in previous 21 days \u00b7 Portsmouth: 14 days' rest, 3 in 21 days \u00b7 away travel 325.4 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 34.9% / 27.7% / 37.4%, xG 1.32\u20131.38\n- Understat xG component (validated, in ensemble): home -1.17 pp, draw -0.11 pp, away +1.29 pp; xG +0.026 / +0.079\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.50 pp, draw -0.24 pp, away -0.26 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- lineup: not applied (failed validation; no live features)\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Bolton: no lineup information.\n- Bolton: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n- Portsmouth: no lineup information.\n- Portsmouth: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nFINAL VERDICT\n\nBolton 1\u20131 Portsmouth is the single most probable scoreline at 13.4%: expected goals 1.32\u20131.38 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.043). Exact scores are inherently uncertain; the 1X2 split is 34.9%/27.7%/37.4%.\n",
+ "refresh_id": "4651f7d82209458b87352ec0fc4a3b4a",
+ "frozen_at": "2026-11-16T12:17:48+00:00",
+ "sha256": "02b73929ce391b38bbb2145cfa04221b88d1cfb75e831d36947f04a918ebf52a"
+}
