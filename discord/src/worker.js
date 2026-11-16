@@ -1,4 +1,6 @@
 // Owner policy applies to live output and previously cached cards alike.
+// Mirror of oraclefc/config.py CORE_BET_SUBCATEGORIES.
+export const CORE_BET_SUBCATEGORIES = new Set(["epl","lal","bun","sea","fl1","ucl","por","ere","tur","bel1","scop","gre","gre1"]);
 export const womensFixture = f => /women|female|femeni|femini|frauen|kvinner|vrouwen/i.test([f.competition,f.home_name,f.away_name,f.home,f.away].filter(Boolean).join(' ')) || ['uwcl','uwec','nwsl','wsl'].includes(String(f.subcategory||'').toLowerCase());
 import BB from '../../web/bestbet.js';
 // Encrypt short-lived interaction credentials before putting them in public workflow inputs.
@@ -200,7 +202,7 @@ export function allGames(scan) {
     if (!id) continue;
     const ok = f.status === "ok" && f.simulation;
     rows.set(id, { event_id: id, home: fx.home_name || fx.home, away: fx.away_name || fx.away, competition: fx.competition,
-      kickoff_utc: fx.kickoff_utc, sim: ok ? f.simulation : null, forecastOnly: f.forecast_only === true,
+      kickoff_utc: fx.kickoff_utc, sim: ok ? f.simulation : null, forecastOnly: f.forecast_only === true, outsideCore: !CORE_BET_SUBCATEGORIES.has(String(fx.subcategory || "").toLowerCase()),
       why: ok ? null : forecastReason(f), g: byId.get(id) || null });
   }
   for (const g of scan.games) if (!womensFixture(g) && !rows.has(g.event_id)) {
@@ -237,7 +239,7 @@ export function gameEmbed(r, now = Date.now()) {
     lines.push(`🔮 **${s.modal_score ? sc(s.modal_score) : "?"}**${s.modal_score?.p != null ? ` (${pct(s.modal_score.p)})` : ""}${top ? ` · next: ${top}` : ""}`);
     lines.push(`H/D/A **${pct(s.p_home, 0)} / ${pct(s.p_draw, 0)} / ${pct(s.p_away, 0)}** · xG ${Number(s.xg_home).toFixed(2)}–${Number(s.xg_away).toFixed(2)}`);
   } else lines.push(`🔮 ${r.why}`);
-  lines.push(r.forecastOnly ? "**NO BET** · forecast only; competition calibration pending" : pickText(g));
+  lines.push(r.forecastOnly ? "**NO BET** · forecast only; competition calibration pending" : r.outsideCore ? "**NO BET** · forecast only; bets are limited to the core leagues" : pickText(g));
   const rt = resultText(r);
   if (rt) lines.push(rt);
   else if (g?.locked) lines.push(`🔒 locked at the pre-kick-off price (${String(g.locked_from_snapshot || "").slice(11, 16)} UTC)`);
@@ -276,6 +278,7 @@ export function buildEmbeds(scan, site, opts = {}) {
     const started = Number.isFinite(kickoff) && kickoff <= now;
     const consistent = b => b && BB.scoreSupports(b.outcome || {}, r.sim?.modal_score);
     const reason = r.forecastOnly ? "forecast only — competition calibration pending"
+      : r.outsideCore ? "forecast only — bets are limited to the core leagues"
       : r.g.bet && !consistent(r.g.bet) ? "bet does not win at displayed predicted score"
       : !Number.isFinite(kickoff) || started
       ? "kickoff passed or unavailable — no new pregame bet"

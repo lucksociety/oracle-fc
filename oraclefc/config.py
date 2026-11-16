@@ -112,6 +112,13 @@ UEFA_CC = {
     "SWE": "Sweden", "MCO": "France", "POL": "Poland", "ROU": "Romania", "IRL": "Ireland", "FIN": "Finland",
 }
 
+# Bets are limited to the competitions where the model has the deepest data and the best
+# backtest record: every league here beat the naive home/away baseline by at least 0.07 log loss
+# on 700+ test matches (experiments/backtests/latest_summary.json), and the five biggest also
+# have xG and line-up context. Every other supported competition is forecast but not bet.
+CORE_BET_SUBCATEGORIES = frozenset({"epl", "lal", "bun", "sea", "fl1", "ucl", "por", "ere", "tur", "bel1", "scop", "gre", "gre1"})
+CORE_BET_REASON = "outside the core leagues; bets are limited to the competitions with the deepest data and best backtest record"
+
 # Polymarket league code (subcategory) -> candidate data divisions (where the two teams are looked up)
 EUROPE_ALL = [d for d, v in ALL_DIVISIONS.items() if d not in SUPPLEMENTAL_DIVISIONS and v[0] not in {"Argentina", "Brazil", "China", "Japan", "Mexico", "USA"}]
 SUBCATEGORY_DIVS: dict[str, list[str]] = {

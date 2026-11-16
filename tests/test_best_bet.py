@@ -334,3 +334,12 @@ def test_component_range_and_conservative_ev_match_javascript():
     assert py["bet"]["market_id"] == js["bet"]["market_id"]
     for key in ("component_min_p", "component_max_p", "conservative_ev_per_dollar"):
         assert py["bet"][key] == pytest.approx(js["bet"][key])
+
+
+def test_core_bet_leagues_are_the_validated_top_flights():
+    from oraclefc import config
+    core_divs = {d for sub in config.CORE_BET_SUBCATEGORIES for d in config.SUBCATEGORY_DIVS[sub]}
+    assert {"E0", "SP1", "D1", "I1", "F1"} <= core_divs
+    assert not core_divs & set(config.SUPPLEMENTAL_DIVISIONS)
+    for sub in ("el1", "pol", "arg", "mls", "uel", "fac"):
+        assert sub not in config.CORE_BET_SUBCATEGORIES
