@@ -40,6 +40,8 @@ def rest_table(df: pd.DataFrame) -> pd.DataFrame:
         n21[idx] = hi - lo
     long["n21"] = n21
     w = long.pivot_table(index="match_id", columns="side", values=["rest", "n21"], aggfunc="first")
+    # A sparse history can have no known rest values for either side; keep the missing columns.
+    w = w.reindex(columns=pd.MultiIndex.from_product([["rest", "n21"], ["a", "h"]]))
     w.columns = [f"{a}_{b}" for a, b in w.columns]
     return w.reset_index()
 
@@ -72,8 +74,10 @@ def travel_table(df: pd.DataFrame, ven: pd.DataFrame) -> pd.DataFrame:
 # ------------------------------------------------------------------ kickoff times
 def kickoff_utc(df: pd.DataFrame) -> pd.Series:
     """Exact UTC kickoff from FotMob fixtures where mapped; else football-data's UK
-    kickoff time; else 14:00 UTC (flagged by the caller as approximate)."""
-    fx = pd.read_parquet(config.CLEAN_DIR / "fotmob_fixtures.parquet").dropna(subset=["home_key", "away_key", "utc"])
+    kickoff time; else NaT (unknown kickoff cannot establish historical weather)."""
+    path = config.CLEAN_DIR / "fotmob_fixtures.parquet"
+    fx = (pd.read_parquet(path) if path.exists() else pd.DataFrame(columns=["home_key", "away_key", "utc"]))
+    fx = fx.dropna(subset=["home_key", "away_key", "utc"])
     fx["utc"] = pd.to_datetime(fx["utc"], utc=True).dt.tz_localize(None)
     fx["d"] = fx["utc"].dt.normalize()
     out = pd.Series(pd.NaT, index=df.index, dtype="datetime64[ns]")
@@ -85,8 +89,10 @@ def kickoff_utc(df: pd.DataFrame) -> pd.Series:
                                          df.loc[miss, "date"] + pd.Timedelta(days=shift)])
         out.loc[miss] = key.reindex(idx).to_numpy()
     miss = out.isna()
-    ko = df.loc[miss, "kickoff"].fillna("")
-    t = pd.to_datetime(df.loc[miss, "date"].dt.strftime("%Y-%m-%d") + " " + ko.where(ko.str.match(r"^\d\d:\d\d$"), "14:00"))
+    ko = df.loc[miss, "kickoff"].fillna("").astype(str)
+    valid = ko.str.match(r"^(?:[01]\d|2[0-3]):[0-5]\d$")
+    text = df.loc[miss, "date"].dt.strftime("%Y-%m-%d") + " " + ko
+    t = pd.to_datetime(text.where(valid), errors="coerce")
     uk = t.dt.tz_localize("Europe/London", ambiguous="NaT", nonexistent="NaT").dt.tz_convert("UTC").dt.tz_localize(None)
     out.loc[miss] = uk.to_numpy()
     return out
@@ -134,7 +140,7 @@ def weather_table(df: pd.DataFrame, start="20220601", end=None, workers: int = 4
             continue
         rows.append({"match_id": r.match_id, "precip_mm_2h": float(win["PRECTOTCORR"].sum()),
                      "wind_ms": float(win["WS10M"].mean()), "temp_c": float(win["T2M"].iloc[0])})
-    return pd.DataFrame(rows)
+    return pd.DataFrame(rows, columns=["match_id", "precip_mm_2h", "wind_ms", "temp_c"])
 
 
 # ------------------------------------------------------------------ Understat -> our matches
