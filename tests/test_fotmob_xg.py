@@ -80,3 +80,32 @@ def test_finished_filter_and_superseded_rows():
     p = pd.DataFrame({"us_id": [30000, F.OFFSET + 555, F.OFFSET + 556]})
     m2, p2 = F.drop_superseded(m, p)
     assert list(m2["us_id"]) == [30000, F.OFFSET + 556] and list(p2["us_id"]) == [30000, F.OFFSET + 556]
+
+
+def test_club_aliases_only_apply_when_the_title_exists():
+    assert F.club_title("RB Leipzig", ["RasenBallsport Leipzig", "Bayern Munich"]) == "RasenBallsport Leipzig"
+    assert F.club_title("1. FC Köln", ["Bayern Munich"]) is None
+    assert F.club_title("Bayern Munich", ["Bayern Munich"]) == "Bayern Munich"
+
+
+def test_fill_refetches_pages_cached_before_kickoff(monkeypatch, tmp_path):
+    monkeypatch.setattr(F, "ID_MAP", tmp_path / "ids.json")
+    kick = pd.Timestamp.now(tz="UTC").tz_localize(None).floor("min") - pd.Timedelta(hours=30)
+    body = {"fixtures": {"allMatches": [{"id": "555", "status": {"finished": True, "utcTime": kick.isoformat() + "Z", "reason": {"shortKey": "fulltime_short"}}}]}}
+    monkeypatch.setattr(F.fotmob, "league", lambda lid, max_age_h=6: body if lid == 47 else {})
+    ages = []
+    def details(mid, max_age_h=0.5):
+        ages.append(max_age_h); d = _details(mid); d["general"]["matchTimeUTCDate"] = kick.isoformat() + "Z"; return d
+    monkeypatch.setattr(F.fotmob, "match_details_raw", details)
+    cols = ["us_id", "side", "team_id", "player_id", "player", "position", "positionOrder", "time", "xG", "xA", "goals", "assists", "shots", "key_passes", "roster_in", "roster_out", "red_card", "own_goals"]
+    old_m = pd.DataFrame([{"us_id": 1, "league": "EPL", "div": "E0", "season": 2026, "datetime": kick - pd.Timedelta(days=7), "is_result": True,
+                           "home": "Manchester United", "away": "Aston Villa", "hg": 1.0, "ag": 0.0, "hxg": 1.2, "axg": 0.7}])
+    old_p = pd.DataFrame([{**dict.fromkeys(cols, 0), "us_id": 1, "side": "h", "team_id": "89", "player_id": "u100", "player": "Player 100", "position": "GK", "roster_in": "0", "roster_out": "0"}])[cols]
+    m, p = F.fill(old_m, old_p, season=2026, max_seconds=None)
+    assert 26 < ages[0] < 28                                            # cache only accepted if fetched after full time
+    assert len(m) == 2 and list(p.columns) == cols and len(p) == 25
+    new = p[p.us_id == F.OFFSET + 555]
+    assert new[new.player == "Player 100"].player_id.iloc[0] == "u100"   # existing player keeps his id
+    assert new[new.player == "Player 101"].player_id.iloc[0] == "fm101"
+    m2, p2 = F.fill(m, p, season=2026, max_seconds=None)
+    assert m2 is m and p2 is p                                           # nothing new: same objects, no rewrite
