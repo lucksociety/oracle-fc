@@ -1,0 +1,603 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-11-16",
+ "input_fingerprint": "937aecb8f6d5c2dbf57f4a041c6b856dc02848ebbdf929f9c7318e10ebed359f",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-11-17T22:21:55+00:00",
+ "fixture": {
+  "event_id": "POLY-1350193",
+  "home_name": "Orlando City SC",
+  "away_name": "FC Cincinnati",
+  "competition": "MLS",
+  "subcategory": "mls",
+  "kickoff_utc": "2026-11-20T00:30:00+00:00",
+  "kickoff_local": "2026-11-19 19:30 EST",
+  "home_matched": "Orlando City",
+  "away_matched": "FC Cincinnati",
+  "match_methods": {
+   "home": {
+    "source": "Orlando City SC",
+    "matched": "Orlando City",
+    "method": "core-tokens",
+    "score": 0.97
+   },
+   "away": {
+    "source": "FC Cincinnati",
+    "matched": "FC Cincinnati",
+    "method": "exact",
+    "score": 1.0
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.4794239079211411,
+  "p_draw": 0.22508351914852898,
+  "p_away": 0.29549257293033004,
+  "xg_home": 2.1368405511852604,
+  "xg_away": 1.6746018259077455,
+  "xg_total": 3.811442377093006,
+  "median_total": 4,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.08642925019047581
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.08642925019047581
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.08401746360777877
+   },
+   {
+    "home": 2,
+    "away": 2,
+    "p": 0.07379527599410018
+   },
+   {
+    "home": 1,
+    "away": 2,
+    "p": 0.06501502984704965
+   },
+   {
+    "home": 3,
+    "away": 1,
+    "p": 0.05870499928904129
+   }
+  ],
+  "btts": 0.7241891883149454,
+  "totals_over": {
+   "over_0.5": 0.9736456742522629,
+   "over_1.5": 0.8902282307786982,
+   "over_2.5": 0.7244074103699236,
+   "over_3.5": 0.5259206502911234,
+   "over_4.5": 0.33465394005004523,
+   "over_5.5": 0.19124901546859488,
+   "over_6.5": 0.0969197644969582
+  },
+  "total_buckets": {
+   "0-1": 0.10977176922130194,
+   "2": 0.1658208204087746,
+   "3": 0.1984867600788001,
+   "4": 0.1912667102410783,
+   "5+": 0.33465394005004523
+  },
+  "clean_sheet_home": 0.18523189535070023,
+  "clean_sheet_away": 0.11693324208209184,
+  "home_goal_dist": [
+   0.11693324208209184,
+   0.25454766129480666,
+   0.26984152190047683,
+   0.19044749137057906,
+   0.10165267805011821,
+   0.04386918268166405,
+   0.015925910871802087,
+   0.006782311748461336
+  ],
+  "away_goal_dist": [
+   0.18523189535070023,
+   0.3163543611125361,
+   0.26365733381311657,
+   0.1458994210305176,
+   0.060836314352481234,
+   0.020460783639625398,
+   0.005781097450379991,
+   0.0017787932506430205
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    4
+   ],
+   "away_goals_80": [
+    0,
+    3
+   ],
+   "total_goals_80": [
+    1,
+    6
+   ],
+   "goal_diff_80": [
+    -2,
+    3
+   ]
+  },
+  "score_grid": [
+   [
+    0.026354,
+    0.036229,
+    0.029745,
+    0.01566,
+    0.006232,
+    0.002007,
+    0.000545
+   ],
+   [
+    0.047188,
+    0.086429,
+    0.065015,
+    0.035134,
+    0.014343,
+    0.004729,
+    0.001312
+   ],
+   [
+    0.049646,
+    0.084017,
+    0.073795,
+    0.038729,
+    0.016189,
+    0.005452,
+    0.00154
+   ],
+   [
+    0.033795,
+    0.058705,
+    0.050074,
+    0.030017,
+    0.012132,
+    0.00416,
+    0.001193
+   ],
+   [
+    0.0174,
+    0.031001,
+    0.027073,
+    0.015692,
+    0.007204,
+    0.002375,
+    0.00069
+   ],
+   [
+    0.007251,
+    0.013227,
+    0.011795,
+    0.006961,
+    0.003072,
+    0.001144,
+    0.000318
+   ],
+   [
+    0.002549,
+    0.004749,
+    0.004312,
+    0.002583,
+    0.001154,
+    0.000411,
+    0.000128
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.4811,
+  "p_draw": 0.22411,
+  "p_away": 0.29479,
+  "se": [
+   0.0011172349573836293,
+   0.0009324288388397261,
+   0.0010195314019195289
+  ],
+  "max_abs_dev_vs_exact": 0.0016760920788589373,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   1.7127549898524097,
+   2.593769961626402
+  ],
+  "xg_away_80": [
+   1.3156639360325861,
+   2.0530830284472312
+  ],
+  "p_home_80": [
+   0.3775931597174017,
+   0.5952557834112715
+  ],
+  "p_draw_80": [
+   0.18819203427006137,
+   0.23537233287833298
+  ],
+  "p_away_80": [
+   0.21075950489016518,
+   0.39909653957050234
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.16453765409594737,
+   0.16514845239607917
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.4938954099663262,
+   "p_draw": 0.20168477076842387,
+   "p_away": 0.30441981926524997,
+   "xg_home": 2.3567011213180487,
+   "xg_away": 1.8500882409760444,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.4612002004479353,
+   "p_draw": 0.23537633918774703,
+   "p_away": 0.30342346036431767,
+   "xg_home": 1.7202352164084753,
+   "xg_away": 1.3556309912767548,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.5057713510301928,
+   "p_draw": 0.17744406572014243,
+   "p_away": 0.31678458324966474,
+   "xg_home": 2.9262203384896295,
+   "xg_away": 2.364191071997454,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.4622296840323131,
+   "p_draw": 0.2332309217728032,
+   "p_away": 0.30453939419488374,
+   "xg_home": 1.7464300674840119,
+   "xg_away": 1.379373205189922,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.4937468501345144,
+   "p_draw": 0.20163700092512526,
+   "p_away": 0.3046161489403602,
+   "xg_home": 2.356060713715718,
+   "xg_away": 1.8504028505350414,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Orlando City attack vs FC Cincinnati defence: time-weighted strength gap multiplies Orlando City's scoring rate by \u00d71.54 relative to an average pairing (from 35/36 decay-weighted matches).",
+   "effect": 0.4308
+  },
+  {
+   "text": "FC Cincinnati attack vs Orlando City defence: rate multiplier \u00d71.54 for the away side.",
+   "effect": 0.4287
+  },
+  {
+   "text": "Home advantage (USA, fitted from results): \u00d71.27 on Orlando City's scoring rate.",
+   "effect": 0.24
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.4794239079211409,
+  "p_draw": 0.22508351914852895,
+  "p_away": 0.29549257293033,
+  "xg_home": 2.13684055118526,
+  "xg_away": 1.674601825907745
+ },
+ "context": {
+  "fetched_at": "2026-11-17T22:21:55+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/6580833",
+    "fetched_at": "2026-11-17T22:21:55+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "4-4-2",
+    "starters": [
+     {
+      "name": "Maxime Cr\u00e9peau",
+      "pos": "G"
+     },
+     {
+      "name": "Zakaria Taifi",
+      "pos": "D"
+     },
+     {
+      "name": "David Brekalo",
+      "pos": "D"
+     },
+     {
+      "name": "Wilder Cartagena",
+      "pos": "M"
+     },
+     {
+      "name": "Vin\u00edcius Nogueira",
+      "pos": "D"
+     },
+     {
+      "name": "Marco Pa\u0161ali\u0107",
+      "pos": "F"
+     },
+     {
+      "name": "Braian Ojeda",
+      "pos": "M"
+     },
+     {
+      "name": "Eduard Atuesta",
+      "pos": "M"
+     },
+     {
+      "name": "Iv\u00e1n Angulo",
+      "pos": "M"
+     },
+     {
+      "name": "Antoine Griezmann",
+      "pos": "F"
+     },
+     {
+      "name": "Mart\u00edn Ojeda",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-11-17T22:21:55+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   },
+   "away": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "3-5-2",
+    "starters": [
+     {
+      "name": "Roman Celentano",
+      "pos": "G"
+     },
+     {
+      "name": "Kyle Smith",
+      "pos": "D"
+     },
+     {
+      "name": "Teenage Lingani Hadebe",
+      "pos": "D"
+     },
+     {
+      "name": "Samuel Gidi",
+      "pos": "M"
+     },
+     {
+      "name": "David Doud\u011bra",
+      "pos": "M"
+     },
+     {
+      "name": "Pavel Bucha",
+      "pos": "M"
+     },
+     {
+      "name": "Evander Ferreira",
+      "pos": "M"
+     },
+     {
+      "name": "Obinna Nwobodo",
+      "pos": "M"
+     },
+     {
+      "name": "Bryan Ram\u00edrez",
+      "pos": "M"
+     },
+     {
+      "name": "K\u00e9vin Denkey",
+      "pos": "F"
+     },
+     {
+      "name": "Tom Barlow",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-11-17T22:21:55+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Griffin Dorsey",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6580833",
+     "fetched_at": "2026-11-17T22:21:55+00:00"
+    },
+    {
+     "player": "Robin Jansson",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6580833",
+     "fetched_at": "2026-11-17T22:21:55+00:00"
+    },
+    {
+     "player": "Tyrese Spicer",
+     "type": "injury",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6580833",
+     "fetched_at": "2026-11-17T22:21:55+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "Juli\u00e1n Malatini",
+     "type": "injury",
+     "expected_return": "Mid December 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6580833",
+     "fetched_at": "2026-11-17T22:21:55+00:00"
+    },
+    {
+     "player": "Nick Hagglund",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6580833",
+     "fetched_at": "2026-11-17T22:21:55+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 13,
+    "n21": 2,
+    "last_match": "2026-11-07"
+   },
+   "away": {
+    "rest_days": 13,
+    "n21": 2,
+    "last_match": "2026-11-07"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 1210.2
+  },
+  "venue": {
+   "name": "Inter.co Stadium",
+   "city": "Orlando, Florida",
+   "lat": 28.541117637,
+   "lon": -81.389311068
+  },
+  "weather": {
+   "precip_mm_2h": 0.7999999999999999,
+   "wind_ms": 3.735,
+   "temp_c": 21.0,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=28.541&longitude=-81.389",
+   "fetched_at": "2026-11-17T22:21:56+00:00",
+   "lat": 28.541117637,
+   "lon": -81.389311068
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": 1.59,
+    "d_p_draw_pp": -1.63,
+    "d_p_away_pp": 0.04,
+    "d_xg_home": 0.309,
+    "d_xg_away": 0.24
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0404,
+    "away_rate_mult": 1.0169,
+    "d_p_home_pp": 1.22,
+    "d_p_draw_pp": -0.51,
+    "d_p_away_pp": -0.7,
+    "d_xg_home": 0.088,
+    "d_xg_away": 0.032,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0178,
+    "away_rate_mult": 1.0178,
+    "d_p_home_pp": 0.21,
+    "d_p_draw_pp": -0.24,
+    "d_p_away_pp": 0.03,
+    "d_xg_home": 0.04,
+    "d_xg_away": 0.031,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "reason": "failed validation; no live features"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 13.0,
+   "rest_a": 13.0,
+   "n21_h": 2.0,
+   "n21_a": 2.0,
+   "travel_km": 1210.199254994153,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.7999999999999999,
+   "wind_ms": 3.735,
+   "temp_c": 21.0
+  }
+ },
+ "confidence": {
+  "tier": "LOW",
+  "p_max": 0.4794239079211411,
+  "entropy_nats": 1.048359927200736,
+  "text": "Most likely result has P = 47.9%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.3% \u00b1 0.4% (n=16754, mean forecast 44.6%). Backtest RPS for USA: 0.2201; exact-score top-5 hit rate 42.9% (n=1770). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: LOW (entropy 1.048 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Orlando City: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Orlando City: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.",
+  "FC Cincinnati: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "FC Cincinnati: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+ ],
+ "verdict": "Orlando City 1\u20131 FC Cincinnati is the single most probable scoreline at 8.6%: expected goals 2.14\u20131.67 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.043). Exact scores are inherently uncertain; the 1X2 split is 47.9%/22.5%/29.5%.",
+ "resolved": {
+  "home_key": "USA:Orlando City",
+  "away_key": "USA:FC Cincinnati",
+  "div": "USA",
+  "home_div": "USA",
+  "away_div": "USA",
+  "country": "USA"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: FC Cincinnati at Orlando City SC\nCompetition: MLS\nDate: 2026-11-19 19:30 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-11-16\n\nPRIMARY FINAL SCORE PREDICTION\n\nOrlando City SC 1 \u2013 1 FC Cincinnati\n(modal exact score, probability 8.6%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 2.14\nAway: 1.67\nExpected Total: 3.81\nMedian Total: 4\n\nRESULT PROBABILITIES\n\nHome Win: 47.9%\nDraw: 22.5%\nAway Win: 29.5%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 8.6%\n2. 2\u20131: 8.4%\n3. 2\u20132: 7.4%\n4. 1\u20132: 6.5%\n5. 3\u20131: 5.9%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 11.0%\nTotal 2 goals: 16.6%\nTotal 3 goals: 19.8%\nTotal 4 goals: 19.1%\nTotal 5+ goals: 33.5%\n\nBoth Teams Score: 72.4%\nClean sheet Orlando City SC: 18.5% \u00b7 Clean sheet FC Cincinnati: 11.7%\n\nMATCH INTELLIGENCE\n\n1. Orlando City attack vs FC Cincinnati defence: time-weighted strength gap multiplies Orlando City's scoring rate by \u00d71.54 relative to an average pairing (from 35/36 decay-weighted matches).\n2. FC Cincinnati attack vs Orlando City defence: rate multiplier \u00d71.54 for the away side.\n3. Home advantage (USA, fitted from results): \u00d71.27 on Orlando City's scoring rate.\n\nMODEL CONFIDENCE\n\nMost likely result has P = 47.9%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.3% \u00b1 0.4% (n=16754, mean forecast 44.6%). Backtest RPS for USA: 0.2201; exact-score top-5 hit rate 42.9% (n=1770). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: LOW (entropy 1.048 nats of max 1.099).\nParameter-uncertainty 80% bands: xG Orlando City SC 1.71\u20132.59, xG FC Cincinnati 1.32\u20132.05; P(home win) 37.8%\u201359.5%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0017 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nOrlando City: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-11-17 17:21 EST (4-4-2)\n  Maxime Cr\u00e9peau (G), Zakaria Taifi (D), David Brekalo (D), Wilder Cartagena (M), Vin\u00edcius Nogueira (D), Marco Pa\u0161ali\u0107 (F), Braian Ojeda (M), Eduard Atuesta (M), Iv\u00e1n Angulo (M), Antoine Griezmann (F), Mart\u00edn Ojeda (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\nFC Cincinnati: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-11-17 17:21 EST (3-5-2)\n  Roman Celentano (G), Kyle Smith (D), Teenage Lingani Hadebe (D), Samuel Gidi (M), David Doud\u011bra (M), Pavel Bucha (M), Evander Ferreira (M), Obinna Nwobodo (M), Bryan Ram\u00edrez (M), K\u00e9vin Denkey (F), Tom Barlow (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nKEY ABSENCES\n\n- Orlando City: Griffin Dorsey \u2014 injury, Doubtful [FotMob, 2026-11-17 17:21 EST]\n- Orlando City: Robin Jansson \u2014 injury, Late November 2026 [FotMob, 2026-11-17 17:21 EST]\n- Orlando City: Tyrese Spicer \u2014 injury, Mid November 2026 [FotMob, 2026-11-17 17:21 EST]\n- FC Cincinnati: Juli\u00e1n Malatini \u2014 injury, Mid December 2026 [FotMob, 2026-11-17 17:21 EST]\n- FC Cincinnati: Nick Hagglund \u2014 injury, Late November 2026 [FotMob, 2026-11-17 17:21 EST]\n\nWEATHER AT VENUE\n\nInter.co Stadium, Orlando, Florida: 21.0 \u00b0C, wind 3.7 m/s, precipitation 0.8 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-11-17 17:21 EST]\n\nREST & TRAVEL\n\nOrlando City: 13 days' rest, 2 matches in previous 21 days \u00b7 FC Cincinnati: 13 days' rest, 2 in 21 days \u00b7 away travel 1210.2 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 47.9% / 22.5% / 29.5%, xG 2.14\u20131.67\n- Understat xG component (validated, in ensemble): home +1.59 pp, draw -1.63 pp, away +0.04 pp; xG +0.309 / +0.240\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +1.22 pp, draw -0.51 pp, away -0.70 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.21 pp, draw -0.24 pp, away +0.03 pp\n- lineup: not applied (failed validation; no live features)\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Orlando City: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Orlando City: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n- FC Cincinnati: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- FC Cincinnati: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nFINAL VERDICT\n\nOrlando City 1\u20131 FC Cincinnati is the single most probable scoreline at 8.6%: expected goals 2.14\u20131.67 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.043). Exact scores are inherently uncertain; the 1X2 split is 47.9%/22.5%/29.5%.\n",
+ "refresh_id": "fccf6ad4c3fc4adf9ceacfa0a689ef34",
+ "frozen_at": "2026-11-17T22:21:56+00:00",
+ "sha256": "a37177c4cf2407ee82c1ea50b0d3337dc44fe517b9237d6c08ab8e9715d17176"
+}
