@@ -19,6 +19,7 @@ import os
 from .. import config
 from ..governance import assert_no_market_columns
 from .http import get_json
+from . import fotmob_xg
 
 BASE = "https://understat.com"
 HDR = {"X-Requested-With": "XMLHttpRequest", "Referer": "https://understat.com/"}
@@ -133,12 +134,20 @@ def update(max_age_h: float = 3.0, max_seconds: float | None = None):
     new_m = matches(range(cur - 1, cur + 1), deadline=deadline)
     if new_m.empty:
         print('Understat unavailable within refresh budget; retaining last good context snapshot')
+        m, p, todo, r = old_m, old_p, [], old_p.iloc[:0]
+    else:
+        m = pd.concat([old_m[~old_m["us_id"].isin(new_m["us_id"])], new_m], ignore_index=True)
+        have = set(old_p["us_id"].unique())
+        todo = [i for i in m.loc[m["is_result"], "us_id"] if i not in have and not fotmob_xg.is_fotmob(i)]
+        r = rosters(todo, deadline=deadline) if todo else old_p.iloc[:0]
+        p = pd.concat([old_p, r], ignore_index=True) if len(r) else old_p
+    # Understat has not answered the pipeline since 2026-11-02; FotMob supplies the same observations for newer matches.
+    try:
+        m, p = fotmob_xg.fill(*fotmob_xg.drop_superseded(m, p), season=cur)
+    except Exception as e:  # noqa: BLE001
+        print(f"fotmob xg fill failed (non-fatal): {e!r}")
+    if m is old_m and p is old_p:        # nothing new from either source: leave the snapshot files untouched
         return old_m, old_p
-    m = pd.concat([old_m[~old_m["us_id"].isin(new_m["us_id"])], new_m], ignore_index=True)
-    have = set(old_p["us_id"].unique())
-    todo = [i for i in m.loc[m["is_result"], "us_id"] if i not in have]
-    r = rosters(todo, deadline=deadline) if todo else old_p.iloc[:0]
-    p = pd.concat([old_p, r], ignore_index=True) if len(r) else old_p
     for frame, path in ((m, pm), (p, pp)):
         temporary = path.with_suffix('.tmp.parquet')
         frame.to_parquet(temporary, index=False)
