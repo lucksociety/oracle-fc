@@ -2,7 +2,7 @@
 // Runs only on forecasts that were frozen BEFORE the prices were fetched; nothing flows back into the model.
 (function (root) {
   const FEES = { polymarket: { taker_rate: 0.05, exponent: 1.0 } };
-  const MIN_P = 0.5, MIN_EV = 0.0, SHRINK_W = 0.25, MAX_RAW_EDGE = 0.08, MIN_VOLUME = 500;
+  const MIN_P = 0.5, MIN_EV = 0.0, SHRINK_W = 0.5, MAX_RAW_EDGE = 0.08, MIN_VOLUME = 500;
   const EXCLUDED_KINDS = new Set(["team_total", "btts"]);
   const EXACT_RE = /^(.+?)\s+(\d+)\s*-\s*(\d+)\s+(.+)$/, HCP_RE = /([+-]\d+(?:\.\d+)?)\s*$/;
   const fmtLine = (x) => String(Number(x));
