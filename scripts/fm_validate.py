@@ -5,13 +5,17 @@ from oraclefc.ingest import understat, fotmob, fotmob_xg as F
 from oraclefc.teams import match_team
 pm, pp = config.CONTEXT_DIR / "understat_matches.parquet", config.CONTEXT_DIR / "understat_players.parquet"
 before = pd.read_parquet(pm)
+import traceback
+try:
+    F.fill(*F.drop_superseded(before, pd.read_parquet(pp)), season=2026)
+except Exception: traceback.print_exc()
 t0 = time.time(); understat.update(max_seconds=60); print(f"update took {time.time()-t0:.0f}s")
 m, p = pd.read_parquet(pm), pd.read_parquet(pp)
 fm = m[m.us_id >= F.OFFSET]
 print("matches before", len(before), "after", len(m), "| FotMob rows", len(fm))
 print(fm.groupby("div").agg(n=("us_id", "size"), first=("datetime", "min"), last=("datetime", "max")).to_string())
 fp = p[p.us_id >= F.OFFSET]
-print("FotMob player rows", len(fp), "| mapped to existing ids", (~fp.player_id.astype(str).str.startswith("fm")).mean().round(3), "| starters per match-side", (fp[fp.position != "Sub"].groupby(["us_id", "side"]).size().describe()[["min", "max"]].to_dict()))
+print("FotMob player rows", len(fp), "| mapped to existing ids", round(float((~fp.player_id.astype(str).str.startswith("fm")).mean()), 3) if len(fp) else None, "| starters per match-side", (fp[fp.position != "Sub"].groupby(["us_id", "side"]).size().describe()[["min", "max"]].to_dict() if len(fp) else None))
 print("unmapped players by club (top):")
 x = fp[fp.player_id.astype(str).str.startswith("fm")].merge(fm[["us_id", "home", "away"]], on="us_id")
 x["club"] = np.where(x.side == "h", x.home, x.away); print(x.groupby("club").player.nunique().sort_values(ascending=False).head(12).to_string())
@@ -37,5 +41,5 @@ print(c.groupby("div").apply(lambda g: pd.Series({"n": len(g), "fotmob": np.r_[g
 from oraclefc import store
 from oraclefc.context import history as H
 df = store.load(); mp = H.map_understat(df)
-fmm = mp[mp.us_id >= F.OFFSET]; print("FotMob rows mapped to results:", fmm.match_id.notna().mean().round(3), "of", len(fmm)); print(fmm[fmm.match_id.isna()][["div", "home", "away", "datetime"]].head(12).to_string(index=False))
+fmm = mp[mp.us_id >= F.OFFSET]; print("FotMob rows mapped to results:", round(float(fmm.match_id.notna().mean()), 3) if len(fmm) else None, "of", len(fmm)); print(fmm[fmm.match_id.isna()][["div", "home", "away", "datetime"]].head(12).to_string(index=False))
 lh, book = H.lineup_history(mp); print("lineup features rows", len(lh), "latest", book.last_date)
