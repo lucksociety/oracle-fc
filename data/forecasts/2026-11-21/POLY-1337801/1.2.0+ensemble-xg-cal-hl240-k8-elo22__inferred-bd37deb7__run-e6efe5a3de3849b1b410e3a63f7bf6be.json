@@ -1,0 +1,648 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-11-16",
+ "input_fingerprint": "993fd34ff449f31124f2566178f1450e838372e88673562b22cc4d769b4c522d",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-11-17T04:02:22+00:00",
+ "fixture": {
+  "event_id": "POLY-1337801",
+  "home_name": "OGC Nice",
+  "away_name": "Paris Saint-Germain FC",
+  "competition": "Ligue 1",
+  "subcategory": "fl1",
+  "kickoff_utc": "2026-11-21T16:15:00+00:00",
+  "kickoff_local": "2026-11-21 11:15 EST",
+  "home_matched": "Nice",
+  "away_matched": "Paris SG",
+  "match_methods": {
+   "home": {
+    "source": "OGC Nice",
+    "matched": "Nice",
+    "method": "core-tokens",
+    "score": 0.97
+   },
+   "away": {
+    "source": "Paris Saint-Germain FC",
+    "matched": "Paris SG",
+    "method": "alias",
+    "score": 1.0
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.1531119744014557,
+  "p_draw": 0.2050959287068272,
+  "p_away": 0.6417920968917171,
+  "xg_home": 1.0236636017862768,
+  "xg_away": 2.2183092615346256,
+  "xg_total": 3.2419728633209024,
+  "median_total": 3,
+  "modal_score": {
+   "home": 1,
+   "away": 2,
+   "p": 0.1006597006252582
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 2,
+    "p": 0.1006597006252582
+   },
+   {
+    "home": 0,
+    "away": 2,
+    "p": 0.09647682310113742
+   },
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.09565093364173313
+   },
+   {
+    "home": 0,
+    "away": 1,
+    "p": 0.08274860225356015
+   },
+   {
+    "home": 1,
+    "away": 3,
+    "p": 0.0746058687382
+   }
+  ],
+  "btts": 0.5830936067805585,
+  "totals_over": {
+   "over_0.5": 0.959861614387396,
+   "over_1.5": 0.8419325858006806,
+   "over_2.5": 0.6310159617923631,
+   "over_3.5": 0.40801207455204563,
+   "over_4.5": 0.22410782401238327,
+   "over_5.5": 0.10760718748557484,
+   "over_6.5": 0.044877759583945215
+  },
+  "total_buckets": {
+   "0-1": 0.15806741419931922,
+   "2": 0.21091662400831768,
+   "3": 0.22300388724031747,
+   "4": 0.18390425053966236,
+   "5+": 0.22410782401238327
+  },
+  "clean_sheet_home": 0.1023066248898995,
+  "clean_sheet_away": 0.35473815394214603,
+  "home_goal_dist": [
+   0.35473815394214603,
+   0.3732273343894264,
+   0.18949695694059684,
+   0.06312909409154079,
+   0.015686079943459906,
+   0.0031196385951124178,
+   0.0005183034340525493,
+   8.443866366516322e-05
+  ],
+  "away_goal_dist": [
+   0.1023066248898995,
+   0.24264555116362102,
+   0.2733591529744788,
+   0.20118851713493113,
+   0.10964089838130056,
+   0.047265751709545396,
+   0.01680916675058921,
+   0.006784336995634407
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    2
+   ],
+   "away_goals_80": [
+    0,
+    4
+   ],
+   "total_goals_80": [
+    1,
+    6
+   ],
+   "goal_diff_80": [
+    -3,
+    1
+   ]
+  },
+  "score_grid": [
+   [
+    0.040138,
+    0.082749,
+    0.096477,
+    0.071364,
+    0.038915,
+    0.016754,
+    0.005947
+   ],
+   [
+    0.03518,
+    0.095651,
+    0.10066,
+    0.074606,
+    0.040765,
+    0.017586,
+    0.006255
+   ],
+   [
+    0.018789,
+    0.044715,
+    0.053897,
+    0.037893,
+    0.020746,
+    0.008968,
+    0.003196
+   ],
+   [
+    0.006265,
+    0.014924,
+    0.017056,
+    0.0134,
+    0.006959,
+    0.003014,
+    0.001076
+   ],
+   [
+    0.001562,
+    0.003721,
+    0.004257,
+    0.003171,
+    0.00184,
+    0.000756,
+    0.00027
+   ],
+   [
+    0.000312,
+    0.000742,
+    0.000849,
+    0.000633,
+    0.000348,
+    0.00016,
+    5.4e-05
+   ],
+   [
+    5.2e-05,
+    0.000123,
+    0.000141,
+    0.000105,
+    5.8e-05,
+    2.5e-05,
+    1e-05
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.15230000000000005,
+  "p_draw": 0.20655,
+  "p_away": 0.64115,
+  "se": [
+   0.0008034448020866151,
+   0.000905226760265073,
+   0.0010725592699240448
+  ],
+  "max_abs_dev_vs_exact": 0.0014540712931728206,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   0.7775953304367066,
+   1.293291896199624
+  ],
+  "xg_away_80": [
+   1.7174524088833407,
+   2.7493847640337523
+  ],
+  "p_home_80": [
+   0.10209089402337483,
+   0.2408261654089436
+  ],
+  "p_draw_80": [
+   0.15484282877745262,
+   0.24605257117527812
+  ],
+  "p_away_80": [
+   0.5143047310903617,
+   0.738969038469303
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.2016988038813639,
+   0.1746246020876645
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.17135450611038527,
+   "p_draw": 0.21162262176506516,
+   "p_away": 0.6170228721245496,
+   "xg_home": 1.020107172072501,
+   "xg_away": 2.0970008079079454,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.14501570853090995,
+   "p_draw": 0.19582190918709091,
+   "p_away": 0.6591623822819992,
+   "xg_home": 0.8822240514957286,
+   "xg_away": 2.1237879161532662,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.08054569555025146,
+   "p_draw": 0.15443757835070474,
+   "p_away": 0.7650167260990438,
+   "xg_home": 0.7400715603297007,
+   "xg_away": 2.5757488284703323,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.44656628343789845,
+   "p_draw": 0.24508439946811447,
+   "p_away": 0.30834931709398716,
+   "xg_home": 1.5986635883742164,
+   "xg_away": 1.2885559786529155,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.17811616317845852,
+   "p_draw": 0.20422019489104482,
+   "p_away": 0.6176636419304964,
+   "xg_home": 1.1176139004441166,
+   "xg_away": 2.2110398055844076,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Paris SG attack vs Nice defence: rate multiplier \u00d71.74 for the away side.",
+   "effect": 0.554
+  },
+  {
+   "text": "Independent results-only Elo: Nice 1604 vs Paris SG 1944 (gap -340 before home advantage).",
+   "effect": 0.5101
+  },
+  {
+   "text": "Nice attack vs Paris SG defence: time-weighted strength gap multiplies Nice's scoring rate by \u00d70.72 relative to an average pairing (from 29/40 decay-weighted matches).",
+   "effect": 0.33
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.15311197440145569,
+  "p_draw": 0.20509592870682714,
+  "p_away": 0.6417920968917171,
+  "xg_home": 1.0236636017862766,
+  "xg_away": 2.2183092615346247
+ },
+ "context": {
+  "fetched_at": "2026-11-17T04:02:22+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5802996",
+    "fetched_at": "2026-11-17T04:02:22+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "inferred",
+    "source": null,
+    "formation": null,
+    "starters": [
+     {
+      "name": "Yehvann Diouf",
+      "pos": "G"
+     },
+     {
+      "name": "Jonathan Clauss",
+      "pos": "M"
+     },
+     {
+      "name": "Youssouf Ndayishimiye",
+      "pos": "D"
+     },
+     {
+      "name": "Mohamed Abdelmonem",
+      "pos": "D"
+     },
+     {
+      "name": "Sepe Elye Wahi",
+      "pos": "F"
+     },
+     {
+      "name": "Xavier Mandza",
+      "pos": "D"
+     },
+     {
+      "name": "Niels Nkounkou",
+      "pos": "M"
+     },
+     {
+      "name": "Mohammed Amoura",
+      "pos": "F"
+     },
+     {
+      "name": "Gauthier Hein",
+      "pos": "F"
+     },
+     {
+      "name": "Axel Witsel",
+      "pos": "M"
+     },
+     {
+      "name": "Hichem Boudaoui",
+      "pos": "M"
+     }
+    ],
+    "fetched_at": "2026-11-17T04:02:22+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [],
+    "mean_xi_attack_index": -0.02,
+    "mean_continuity": -0.339,
+    "p_backup_gk": 0.3
+   },
+   "away": {
+    "status": "inferred",
+    "source": null,
+    "formation": null,
+    "starters": [
+     {
+      "name": "Matvey Safonov",
+      "pos": "G"
+     },
+     {
+      "name": "Warren Za\u00efre-Emery",
+      "pos": "M"
+     },
+     {
+      "name": "Ferr\u00e1n Torres",
+      "pos": "F"
+     },
+     {
+      "name": "Illia Zabarnyi",
+      "pos": "D"
+     },
+     {
+      "name": "Achraf Hakimi",
+      "pos": "D"
+     },
+     {
+      "name": "Vitinha",
+      "pos": "M"
+     },
+     {
+      "name": "Jo\u00e3o Neves",
+      "pos": "M"
+     },
+     {
+      "name": "Lucas Hern\u00e1ndez",
+      "pos": "D"
+     },
+     {
+      "name": "William Pacho",
+      "pos": "D"
+     },
+     {
+      "name": "D\u00e9sir\u00e9 Dou\u00e9",
+      "pos": "F"
+     },
+     {
+      "name": "Fabi\u00e1n",
+      "pos": "M"
+     }
+    ],
+    "fetched_at": "2026-11-17T04:02:22+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [],
+    "mean_xi_attack_index": -0.127,
+    "mean_continuity": 0.068,
+    "p_backup_gk": 0.25
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Ali Abdi",
+     "type": "injury",
+     "expected_return": "About 1-2 weeks",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5802996",
+     "fetched_at": "2026-11-17T04:02:22+00:00"
+    },
+    {
+     "player": "Antoine Mendy",
+     "type": "injury",
+     "expected_return": "Late May 2027",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5802996",
+     "fetched_at": "2026-11-17T04:02:22+00:00"
+    },
+    {
+     "player": "Mo\u00efse Bombito",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5802996",
+     "fetched_at": "2026-11-17T04:02:22+00:00"
+    },
+    {
+     "player": "Laurent Abergel",
+     "type": "injury",
+     "expected_return": "Late April 2027",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5802996",
+     "fetched_at": "2026-11-17T04:02:22+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "Maghnes Akliouche",
+     "type": "injury",
+     "expected_return": "About 1-2 weeks",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5802996",
+     "fetched_at": "2026-11-17T04:02:22+00:00"
+    },
+    {
+     "player": "Ousmane Demb\u00e9l\u00e9",
+     "type": "injury",
+     "expected_return": "A few weeks",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5802996",
+     "fetched_at": "2026-11-17T04:02:22+00:00"
+    },
+    {
+     "player": "Khvicha Kvaratskhelia",
+     "type": "injury",
+     "expected_return": "Out for season",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5802996",
+     "fetched_at": "2026-11-17T04:02:22+00:00"
+    },
+    {
+     "player": "Marquinhos",
+     "type": "injury",
+     "expected_return": "A few weeks",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5802996",
+     "fetched_at": "2026-11-17T04:02:22+00:00"
+    },
+    {
+     "player": "Nuno Mendes",
+     "type": "injury",
+     "expected_return": "A few weeks",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5802996",
+     "fetched_at": "2026-11-17T04:02:22+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 13,
+    "n21": 1,
+    "last_match": "2026-11-08"
+   },
+   "away": {
+    "rest_days": 14,
+    "n21": 1,
+    "last_match": "2026-11-07"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 685.5
+  },
+  "venue": {
+   "name": "Allianz Riviera",
+   "city": "Nice",
+   "lat": 43.705119412,
+   "lon": 7.192622423
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 1.0050000000000001,
+   "temp_c": 15.6,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=43.705&longitude=7.193",
+   "fetched_at": "2026-11-17T04:02:23+00:00",
+   "lat": 43.705119412,
+   "lon": 7.192622423
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": 1.55,
+    "d_p_draw_pp": 0.46,
+    "d_p_away_pp": -2.01,
+    "d_xg_home": 0.119,
+    "d_xg_away": 0.048
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0322,
+    "away_rate_mult": 1.0135,
+    "d_p_home_pp": 0.31,
+    "d_p_draw_pp": -0.14,
+    "d_p_away_pp": -0.18,
+    "d_xg_home": 0.032,
+    "d_xg_away": 0.029,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "home_rate_mult": 0.9935,
+    "away_rate_mult": 0.9833,
+    "d_p_home_pp": 0.29,
+    "d_p_draw_pp": 0.29,
+    "d_p_away_pp": -0.58,
+    "d_xg_home": -0.006,
+    "d_xg_away": -0.034,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 13.0,
+   "rest_a": 14.0,
+   "n21_h": 1.0,
+   "n21_a": 1.0,
+   "travel_km": 685.4711912401698,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 1.0050000000000001,
+   "temp_c": 15.6
+  }
+ },
+ "confidence": {
+  "tier": "MODERATE",
+  "p_max": 0.6417920968917171,
+  "entropy_nats": 0.896885541506973,
+  "text": "Most likely result has P = 64.2%. In the out-of-sample backtest, favourites priced 0.60\u20130.70 won 66.4% \u00b1 0.7% (n=4069, mean forecast 64.2%). Backtest RPS for F1: 0.2071; exact-score top-5 hit rate 45.4% (n=990). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: MODERATE (entropy 0.897 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Nice: no lineup published yet \u2014 XI inferred from recent minutes share minus known absences; 200 configurations simulated (start P=0.7, UNVALIDATED prior).",
+  "Paris SG: no lineup published yet \u2014 XI inferred from recent minutes share minus known absences; 200 configurations simulated (start P=0.7, UNVALIDATED prior)."
+ ],
+ "verdict": "Nice 1\u20132 Paris SG is the single most probable scoreline at 10.1%: expected goals 1.02\u20132.22 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.043). Exact scores are inherently uncertain; the 1X2 split is 15.3%/20.5%/64.2%.",
+ "resolved": {
+  "home_key": "France:Nice",
+  "away_key": "France:Paris SG",
+  "div": "F1",
+  "home_div": "F1",
+  "away_div": "F1",
+  "country": "France"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: Paris Saint-Germain FC at OGC Nice\nCompetition: Ligue 1\nDate: 2026-11-21 11:15 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-11-16\n\nPRIMARY FINAL SCORE PREDICTION\n\nOGC Nice 1 \u2013 2 Paris Saint-Germain FC\n(modal exact score, probability 10.1%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.02\nAway: 2.22\nExpected Total: 3.24\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 15.3%\nDraw: 20.5%\nAway Win: 64.2%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20132: 10.1%\n2. 0\u20132: 9.6%\n3. 1\u20131: 9.6%\n4. 0\u20131: 8.3%\n5. 1\u20133: 7.5%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 15.8%\nTotal 2 goals: 21.1%\nTotal 3 goals: 22.3%\nTotal 4 goals: 18.4%\nTotal 5+ goals: 22.4%\n\nBoth Teams Score: 58.3%\nClean sheet OGC Nice: 10.2% \u00b7 Clean sheet Paris Saint-Germain FC: 35.5%\n\nMATCH INTELLIGENCE\n\n1. Paris SG attack vs Nice defence: rate multiplier \u00d71.74 for the away side.\n2. Independent results-only Elo: Nice 1604 vs Paris SG 1944 (gap -340 before home advantage).\n3. Nice attack vs Paris SG defence: time-weighted strength gap multiplies Nice's scoring rate by \u00d70.72 relative to an average pairing (from 29/40 decay-weighted matches).\n\nMODEL CONFIDENCE\n\nMost likely result has P = 64.2%. In the out-of-sample backtest, favourites priced 0.60\u20130.70 won 66.4% \u00b1 0.7% (n=4069, mean forecast 64.2%). Backtest RPS for F1: 0.2071; exact-score top-5 hit rate 45.4% (n=990). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: MODERATE (entropy 0.897 nats of max 1.099).\nParameter-uncertainty 80% bands: xG OGC Nice 0.78\u20131.29, xG Paris Saint-Germain FC 1.72\u20132.75; P(home win) 10.2%\u201324.1%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0015 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nNice: INFERRED, fetched 2026-11-16 23:02 EST\n  Yehvann Diouf (G), Jonathan Clauss (M), Youssouf Ndayishimiye (D), Mohamed Abdelmonem (D), Sepe Elye Wahi (F), Xavier Mandza (D), Niels Nkounkou (M), Mohammed Amoura (F), Gauthier Hein (F), Axel Witsel (M), Hichem Boudaoui (M)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs -0.020 (log) \u00b7 continuity -0.34 \u00b7 P(backup GK) 30%\nParis SG: INFERRED, fetched 2026-11-16 23:02 EST\n  Matvey Safonov (G), Warren Za\u00efre-Emery (M), Ferr\u00e1n Torres (F), Illia Zabarnyi (D), Achraf Hakimi (D), Vitinha (M), Jo\u00e3o Neves (M), Lucas Hern\u00e1ndez (D), William Pacho (D), D\u00e9sir\u00e9 Dou\u00e9 (F), Fabi\u00e1n (M)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs -0.127 (log) \u00b7 continuity +0.07 \u00b7 P(backup GK) 25%\n\nKEY ABSENCES\n\n- Nice: Ali Abdi \u2014 injury, About 1-2 weeks [FotMob, 2026-11-16 23:02 EST]\n- Nice: Antoine Mendy \u2014 injury, Late May 2027 [FotMob, 2026-11-16 23:02 EST]\n- Nice: Mo\u00efse Bombito \u2014 injury, Late November 2026 [FotMob, 2026-11-16 23:02 EST]\n- Nice: Laurent Abergel \u2014 injury, Late April 2027 [FotMob, 2026-11-16 23:02 EST]\n- Paris SG: Maghnes Akliouche \u2014 injury, About 1-2 weeks [FotMob, 2026-11-16 23:02 EST]\n- Paris SG: Ousmane Demb\u00e9l\u00e9 \u2014 injury, A few weeks [FotMob, 2026-11-16 23:02 EST]\n- Paris SG: Khvicha Kvaratskhelia \u2014 injury, Out for season [FotMob, 2026-11-16 23:02 EST]\n- Paris SG: Marquinhos \u2014 injury, A few weeks [FotMob, 2026-11-16 23:02 EST]\n- Paris SG: Nuno Mendes \u2014 injury, A few weeks [FotMob, 2026-11-16 23:02 EST]\n\nWEATHER AT VENUE\n\nAllianz Riviera, Nice: 15.6 \u00b0C, wind 1.0 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-11-16 23:02 EST]\n\nREST & TRAVEL\n\nNice: 13 days' rest, 1 matches in previous 21 days \u00b7 Paris SG: 14 days' rest, 1 in 21 days \u00b7 away travel 685.5 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 15.3% / 20.5% / 64.2%, xG 1.02\u20132.22\n- Understat xG component (validated, in ensemble): home +1.55 pp, draw +0.46 pp, away -2.01 pp; xG +0.119 / +0.048\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.31 pp, draw -0.14 pp, away -0.18 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- lineup: NOT APPLIED (failed out-of-sample validation); would have moved home +0.29 pp, draw +0.29 pp, away -0.58 pp\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Nice: no lineup published yet \u2014 XI inferred from recent minutes share minus known absences; 200 configurations simulated (start P=0.7, UNVALIDATED prior).\n- Paris SG: no lineup published yet \u2014 XI inferred from recent minutes share minus known absences; 200 configurations simulated (start P=0.7, UNVALIDATED prior).\n\nFINAL VERDICT\n\nNice 1\u20132 Paris SG is the single most probable scoreline at 10.1%: expected goals 1.02\u20132.22 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.043). Exact scores are inherently uncertain; the 1X2 split is 15.3%/20.5%/64.2%.\n",
+ "refresh_id": "e6efe5a3de3849b1b410e3a63f7bf6be",
+ "frozen_at": "2026-11-17T04:02:23+00:00",
+ "sha256": "472b7107e814950c884811769e5c88a3e70195cefa1c1e6862d5d9a9d7a59015"
+}

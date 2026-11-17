@@ -1,0 +1,577 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-11-16",
+ "input_fingerprint": "993fd34ff449f31124f2566178f1450e838372e88673562b22cc4d769b4c522d",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-11-17T04:02:51+00:00",
+ "fixture": {
+  "event_id": "POLY-1395719",
+  "home_name": "FK Austria Wien",
+  "away_name": "FC Salzburg",
+  "competition": "Austria Bundesliga",
+  "subcategory": "aut",
+  "kickoff_utc": "2026-11-22T16:00:00+00:00",
+  "kickoff_local": "2026-11-22 11:00 EST",
+  "home_matched": "Austria Vienna",
+  "away_matched": "Salzburg",
+  "match_methods": {
+   "home": {
+    "source": "FK Austria Wien",
+    "matched": "Austria Vienna",
+    "method": "fuzzy",
+    "score": 0.846
+   },
+   "away": {
+    "source": "FC Salzburg",
+    "matched": "Salzburg",
+    "method": "core-tokens",
+    "score": 0.97
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.2244358839523667,
+  "p_draw": 0.24811744835794114,
+  "p_away": 0.5274466676896923,
+  "xg_home": 1.116791187608029,
+  "xg_away": 1.7991374534207587,
+  "xg_total": 2.9159286410287875,
+  "median_total": 3,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.11890017033621869
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.11890017033621869
+   },
+   {
+    "home": 1,
+    "away": 2,
+    "p": 0.10049201778398373
+   },
+   {
+    "home": 0,
+    "away": 1,
+    "p": 0.09248680947111614
+   },
+   {
+    "home": 0,
+    "away": 2,
+    "p": 0.08673406407849585
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.060975093544946596
+   }
+  ],
+  "btts": 0.5774397923546636,
+  "totals_over": {
+   "over_0.5": 0.9442339838913246,
+   "over_1.5": 0.796548250319579,
+   "over_2.5": 0.5589706499589933,
+   "over_3.5": 0.3343942377426028,
+   "over_4.5": 0.16771154314614087,
+   "over_5.5": 0.07333818257245185,
+   "over_6.5": 0.027627309800257724
+  },
+  "total_buckets": {
+   "0-1": 0.2034517496804211,
+   "2": 0.2375776003605858,
+   "3": 0.22457641221639052,
+   "4": 0.1666826945964619,
+   "5+": 0.16771154314614087
+  },
+  "clean_sheet_home": 0.15829061769448902,
+  "clean_sheet_away": 0.3200356060595229,
+  "home_goal_dist": [
+   0.3200356060595229,
+   0.3734583319637479,
+   0.20709181257281267,
+   0.07454279781015366,
+   0.019833172044950814,
+   0.004183694142744604,
+   0.0007301903335634091,
+   0.00012439507250416404
+  ],
+  "away_goal_dist": [
+   0.15829061769448902,
+   0.3017939034064482,
+   0.2732852920920615,
+   0.16171005146422862,
+   0.07096278685706368,
+   0.024679793543555706,
+   0.007092915498594135,
+   0.002184639443559405
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    2
+   ],
+   "away_goals_80": [
+    0,
+    4
+   ],
+   "total_goals_80": [
+    1,
+    5
+   ],
+   "goal_diff_80": [
+    -3,
+    1
+   ]
+  },
+  "score_grid": [
+   [
+    0.055766,
+    0.092487,
+    0.086734,
+    0.051581,
+    0.022652,
+    0.007867,
+    0.002256
+   ],
+   [
+    0.055199,
+    0.1189,
+    0.100492,
+    0.05989,
+    0.026357,
+    0.009173,
+    0.002636
+   ],
+   [
+    0.031943,
+    0.060975,
+    0.05902,
+    0.033371,
+    0.014716,
+    0.005132,
+    0.001478
+   ],
+   [
+    0.011529,
+    0.022047,
+    0.020244,
+    0.012794,
+    0.005352,
+    0.00187,
+    0.00054
+   ],
+   [
+    0.003073,
+    0.005887,
+    0.005415,
+    0.003246,
+    0.001518,
+    0.000503,
+    0.000145
+   ],
+   [
+    0.000648,
+    0.001243,
+    0.001146,
+    0.000688,
+    0.000305,
+    0.000113,
+    3.1e-05
+   ],
+   [
+    0.000113,
+    0.000217,
+    0.0002,
+    0.00012,
+    5.3e-05,
+    1.9e-05,
+    6e-06
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.22411000000000003,
+  "p_draw": 0.24881,
+  "p_away": 0.52708,
+  "se": [
+   0.0009324288388397262,
+   0.0009667046702587094,
+   0.001116393016818002
+  ],
+  "max_abs_dev_vs_exact": 0.000692551642058864,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   0.836344511137009,
+   1.4254304362317889
+  ],
+  "xg_away_80": [
+   1.3748464364793178,
+   2.2512442454282247
+  ],
+  "p_home_80": [
+   0.15584215440603907,
+   0.3272237417778981
+  ],
+  "p_draw_80": [
+   0.2005318037987083,
+   0.27530167031851566
+  ],
+  "p_away_80": [
+   0.4038729521166499,
+   0.6384776553067839
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.21139189045400192,
+   0.18301408060739827
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.23085645153404188,
+   "p_draw": 0.23739694014399046,
+   "p_away": 0.5317466083219677,
+   "xg_home": 1.1432834842301536,
+   "xg_away": 1.838493510726893,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.2368822861479899,
+   "p_draw": 0.24290342160027104,
+   "p_away": 0.5202142922517391,
+   "xg_home": 1.0452138456760536,
+   "xg_away": 1.6717557474255766,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.21082533153766675,
+   "p_draw": 0.24175509484770294,
+   "p_away": 0.5474195736146303,
+   "xg_home": 1.053238194468567,
+   "xg_away": 1.8220656087419824,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.43664486324335683,
+   "p_draw": 0.24872195737231204,
+   "p_away": 0.314633179384331,
+   "xg_home": 1.5499927434610867,
+   "xg_away": 1.2789462198003696,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.23100506470870008,
+   "p_draw": 0.2372584216289842,
+   "p_away": 0.5317365136623158,
+   "xg_home": 1.1437969140616862,
+   "xg_away": 1.8387019311673158,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Salzburg attack vs Austria Vienna defence: rate multiplier \u00d71.53 for the away side.",
+   "effect": 0.4224
+  },
+  {
+   "text": "Independent results-only Elo: Austria Vienna 1488 vs Salzburg 1706 (gap -218 before home advantage).",
+   "effect": 0.3277
+  },
+  {
+   "text": "Austria Vienna attack vs Salzburg defence: time-weighted strength gap multiplies Austria Vienna's scoring rate by \u00d70.76 relative to an average pairing (from 29/30 decay-weighted matches).",
+   "effect": 0.2788
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.2244358839523667,
+  "p_draw": 0.24811744835794114,
+  "p_away": 0.5274466676896923,
+  "xg_home": 1.116791187608029,
+  "xg_away": 1.7991374534207587
+ },
+ "context": {
+  "fetched_at": "2026-11-17T04:02:51+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5846024",
+    "fetched_at": "2026-11-17T04:02:51+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "none",
+    "source": null,
+    "formation": "",
+    "starters": [],
+    "fetched_at": "2026-11-17T04:02:51+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   },
+   "away": {
+    "status": "none",
+    "source": null,
+    "formation": "",
+    "starters": [],
+    "fetched_at": "2026-11-17T04:02:51+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Philipp Wiesinger",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5846024",
+     "fetched_at": "2026-11-17T04:02:51+00:00"
+    },
+    {
+     "player": "Julian Hettwer",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5846024",
+     "fetched_at": "2026-11-17T04:02:51+00:00"
+    },
+    {
+     "player": "Lee Kang-Hee",
+     "type": "injury",
+     "expected_return": "A few weeks",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5846024",
+     "fetched_at": "2026-11-17T04:02:51+00:00"
+    },
+    {
+     "player": "Noah Boti\u0107",
+     "type": "injury",
+     "expected_return": "Unknown",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5846024",
+     "fetched_at": "2026-11-17T04:02:51+00:00"
+    },
+    {
+     "player": "Manprit Sarkaria",
+     "type": "injury",
+     "expected_return": "Unknown",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5846024",
+     "fetched_at": "2026-11-17T04:02:51+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "Danny R\u00f6hl",
+     "type": "suspension",
+     "expected_return": "Late November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5846024",
+     "fetched_at": "2026-11-17T04:02:51+00:00"
+    },
+    {
+     "player": "Haris Tabakovi\u0107",
+     "type": "injury",
+     "expected_return": "Early January 2027",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5846024",
+     "fetched_at": "2026-11-17T04:02:51+00:00"
+    },
+    {
+     "player": "K\u00e9vin Boma",
+     "type": "injury",
+     "expected_return": "Unknown",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5846024",
+     "fetched_at": "2026-11-17T04:02:51+00:00"
+    },
+    {
+     "player": "John Mellberg",
+     "type": "injury",
+     "expected_return": "About 1-2 weeks",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5846024",
+     "fetched_at": "2026-11-17T04:02:51+00:00"
+    },
+    {
+     "player": "Sota Kitano",
+     "type": "injury",
+     "expected_return": "About 1-2 weeks",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5846024",
+     "fetched_at": "2026-11-17T04:02:51+00:00"
+    },
+    {
+     "player": "Dominik Schmid",
+     "type": "injury",
+     "expected_return": "Early January 2027",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5846024",
+     "fetched_at": "2026-11-17T04:02:51+00:00"
+    },
+    {
+     "player": "Nikolas Veratschnig",
+     "type": "injury",
+     "expected_return": "Mid December 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5846024",
+     "fetched_at": "2026-11-17T04:02:51+00:00"
+    },
+    {
+     "player": "Justin Omoregie",
+     "type": "injury",
+     "expected_return": "Out for season",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5846024",
+     "fetched_at": "2026-11-17T04:02:51+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 14,
+    "n21": 2,
+    "last_match": "2026-11-08"
+   },
+   "away": {
+    "rest_days": 14,
+    "n21": 2,
+    "last_match": "2026-11-08"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 255.1
+  },
+  "venue": {
+   "name": "Generali Arena",
+   "city": "Wien",
+   "lat": 48.162400024,
+   "lon": 16.386988163
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 0.9550000000000001,
+   "temp_c": 6.2,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=48.162&longitude=16.387",
+   "fetched_at": "2026-11-17T04:02:51+00:00",
+   "lat": 48.162400024,
+   "lon": 16.386988163
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": -0.31,
+    "d_p_draw_pp": -0.27,
+    "d_p_away_pp": 0.58,
+    "d_xg_home": 0.048,
+    "d_xg_away": 0.081
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0197,
+    "away_rate_mult": 1.0083,
+    "d_p_home_pp": 0.28,
+    "d_p_draw_pp": -0.13,
+    "d_p_away_pp": -0.16,
+    "d_xg_home": 0.021,
+    "d_xg_away": 0.015,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "reason": "failed validation; no live features"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 14.0,
+   "rest_a": 14.0,
+   "n21_h": 2.0,
+   "n21_a": 2.0,
+   "travel_km": 255.09018143770672,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 0.9550000000000001,
+   "temp_c": 6.2
+  }
+ },
+ "confidence": {
+  "tier": "MODERATE",
+  "p_max": 0.5274466676896923,
+  "entropy_nats": 1.0185951555598014,
+  "text": "Most likely result has P = 52.7%. In the out-of-sample backtest, favourites priced 0.50\u20130.60 won 53.9% \u00b1 0.5% (n=9522, mean forecast 54.4%). Backtest RPS for AUT: 0.2117; exact-score top-5 hit rate 46.8% (n=639). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: MODERATE (entropy 1.019 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Austria Vienna: no lineup information.",
+  "Austria Vienna: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.",
+  "Salzburg: no lineup information.",
+  "Salzburg: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+ ],
+ "verdict": "Austria Vienna 1\u20131 Salzburg is the single most probable scoreline at 11.9%: expected goals 1.12\u20131.80 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.043). Exact scores are inherently uncertain; the 1X2 split is 22.4%/24.8%/52.7%.",
+ "resolved": {
+  "home_key": "Austria:Austria Vienna",
+  "away_key": "Austria:Salzburg",
+  "div": "AUT",
+  "home_div": "AUT",
+  "away_div": "AUT",
+  "country": "Austria"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: FC Salzburg at FK Austria Wien\nCompetition: Austria Bundesliga\nDate: 2026-11-22 11:00 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-11-16\n\nPRIMARY FINAL SCORE PREDICTION\n\nFK Austria Wien 1 \u2013 1 FC Salzburg\n(modal exact score, probability 11.9%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.12\nAway: 1.80\nExpected Total: 2.92\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 22.4%\nDraw: 24.8%\nAway Win: 52.7%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 11.9%\n2. 1\u20132: 10.0%\n3. 0\u20131: 9.2%\n4. 0\u20132: 8.7%\n5. 2\u20131: 6.1%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 20.3%\nTotal 2 goals: 23.8%\nTotal 3 goals: 22.5%\nTotal 4 goals: 16.7%\nTotal 5+ goals: 16.8%\n\nBoth Teams Score: 57.7%\nClean sheet FK Austria Wien: 15.8% \u00b7 Clean sheet FC Salzburg: 32.0%\n\nMATCH INTELLIGENCE\n\n1. Salzburg attack vs Austria Vienna defence: rate multiplier \u00d71.53 for the away side.\n2. Independent results-only Elo: Austria Vienna 1488 vs Salzburg 1706 (gap -218 before home advantage).\n3. Austria Vienna attack vs Salzburg defence: time-weighted strength gap multiplies Austria Vienna's scoring rate by \u00d70.76 relative to an average pairing (from 29/30 decay-weighted matches).\n\nMODEL CONFIDENCE\n\nMost likely result has P = 52.7%. In the out-of-sample backtest, favourites priced 0.50\u20130.60 won 53.9% \u00b1 0.5% (n=9522, mean forecast 54.4%). Backtest RPS for AUT: 0.2117; exact-score top-5 hit rate 46.8% (n=639). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: MODERATE (entropy 1.019 nats of max 1.099).\nParameter-uncertainty 80% bands: xG FK Austria Wien 0.84\u20131.43, xG FC Salzburg 1.37\u20132.25; P(home win) 15.6%\u201332.7%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0007 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nAustria Vienna: NONE, fetched 2026-11-16 23:02 EST\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\nSalzburg: NONE, fetched 2026-11-16 23:02 EST\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nKEY ABSENCES\n\n- Austria Vienna: Philipp Wiesinger \u2014 injury, Doubtful [FotMob, 2026-11-16 23:02 EST]\n- Austria Vienna: Julian Hettwer \u2014 injury, Doubtful [FotMob, 2026-11-16 23:02 EST]\n- Austria Vienna: Lee Kang-Hee \u2014 injury, A few weeks [FotMob, 2026-11-16 23:02 EST]\n- Austria Vienna: Noah Boti\u0107 \u2014 injury, Unknown [FotMob, 2026-11-16 23:02 EST]\n- Austria Vienna: Manprit Sarkaria \u2014 injury, Unknown [FotMob, 2026-11-16 23:02 EST]\n- Salzburg: Danny R\u00f6hl \u2014 suspension, Late November 2026 [FotMob, 2026-11-16 23:02 EST]\n- Salzburg: Haris Tabakovi\u0107 \u2014 injury, Early January 2027 [FotMob, 2026-11-16 23:02 EST]\n- Salzburg: K\u00e9vin Boma \u2014 injury, Unknown [FotMob, 2026-11-16 23:02 EST]\n- Salzburg: John Mellberg \u2014 injury, About 1-2 weeks [FotMob, 2026-11-16 23:02 EST]\n- Salzburg: Sota Kitano \u2014 injury, About 1-2 weeks [FotMob, 2026-11-16 23:02 EST]\n- Salzburg: Dominik Schmid \u2014 injury, Early January 2027 [FotMob, 2026-11-16 23:02 EST]\n- Salzburg: Nikolas Veratschnig \u2014 injury, Mid December 2026 [FotMob, 2026-11-16 23:02 EST]\n- Salzburg: Justin Omoregie \u2014 injury, Out for season [FotMob, 2026-11-16 23:02 EST]\n\nWEATHER AT VENUE\n\nGenerali Arena, Wien: 6.2 \u00b0C, wind 1.0 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-11-16 23:02 EST]\n\nREST & TRAVEL\n\nAustria Vienna: 14 days' rest, 2 matches in previous 21 days \u00b7 Salzburg: 14 days' rest, 2 in 21 days \u00b7 away travel 255.1 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 22.4% / 24.8% / 52.7%, xG 1.12\u20131.80\n- Understat xG component (validated, in ensemble): home -0.31 pp, draw -0.27 pp, away +0.58 pp; xG +0.048 / +0.081\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.28 pp, draw -0.13 pp, away -0.16 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- lineup: not applied (failed validation; no live features)\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Austria Vienna: no lineup information.\n- Austria Vienna: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n- Salzburg: no lineup information.\n- Salzburg: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nFINAL VERDICT\n\nAustria Vienna 1\u20131 Salzburg is the single most probable scoreline at 11.9%: expected goals 1.12\u20131.80 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.043). Exact scores are inherently uncertain; the 1X2 split is 22.4%/24.8%/52.7%.\n",
+ "refresh_id": "868187766af4420a8ed6a22ef14d6c38",
+ "frozen_at": "2026-11-17T04:02:52+00:00",
+ "sha256": "2807364d1fc5cea6e23fbd336b7452fc372716124f17c64785cbe2b1c6a581e7"
+}
