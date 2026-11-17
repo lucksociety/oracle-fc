@@ -1,0 +1,637 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-11-16",
+ "input_fingerprint": "993fd34ff449f31124f2566178f1450e838372e88673562b22cc4d769b4c522d",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-11-17T07:15:49+00:00",
+ "fixture": {
+  "event_id": "POLY-1338750",
+  "home_name": "Real Madrid CF",
+  "away_name": "RC Celta de Vigo",
+  "competition": "LaLiga",
+  "subcategory": "lal",
+  "kickoff_utc": "2026-11-21T20:00:00+00:00",
+  "kickoff_local": "2026-11-21 15:00 EST",
+  "home_matched": "Real Madrid",
+  "away_matched": "Celta",
+  "match_methods": {
+   "home": {
+    "source": "Real Madrid CF",
+    "matched": "Real Madrid",
+    "method": "core-tokens",
+    "score": 0.97
+   },
+   "away": {
+    "source": "RC Celta de Vigo",
+    "matched": "Celta",
+    "method": "alias",
+    "score": 1.0
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.7356876117516579,
+  "p_draw": 0.17220017257916087,
+  "p_away": 0.0921122156691811,
+  "xg_home": 2.3955870228915974,
+  "xg_away": 0.7588198906253641,
+  "xg_total": 3.1544069135169615,
+  "median_total": 3,
+  "modal_score": {
+   "home": 2,
+   "away": 0,
+   "p": 0.12297557046770392
+  },
+  "top_scores": [
+   {
+    "home": 2,
+    "away": 0,
+    "p": 0.12297557046770392
+   },
+   {
+    "home": 3,
+    "away": 0,
+    "p": 0.09892266728732911
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.09746595875558517
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.09514377594635122
+   },
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.08355833617709167
+   }
+  ],
+  "btts": 0.4935610248566341,
+  "totals_over": {
+   "over_0.5": 0.9570360897829808,
+   "over_1.5": 0.8314817294007943,
+   "over_2.5": 0.6137337423271644,
+   "over_3.5": 0.38809322104434574,
+   "over_4.5": 0.20796489900365828,
+   "over_5.5": 0.0967775429908178,
+   "over_6.5": 0.039119431838505296
+  },
+  "total_buckets": {
+   "0-1": 0.16851827059920538,
+   "2": 0.21774798707363008,
+   "3": 0.22564052128281864,
+   "4": 0.18012832204068752,
+   "5+": 0.20796489900365828
+  },
+  "clean_sheet_home": 0.46379903875005046,
+  "clean_sheet_away": 0.0856038466103344,
+  "home_goal_dist": [
+   0.0856038466103344,
+   0.21839745023529983,
+   0.26613619158930985,
+   0.21259033456879242,
+   0.12570937414218541,
+   0.05875375066124879,
+   0.02264297674483843,
+   0.010166075447990823
+  ],
+  "away_goal_dist": [
+   0.46379903875005046,
+   0.36135964505189555,
+   0.13505201745613069,
+   0.03289128249565377,
+   0.00593328791586028,
+   0.0008516601819188556,
+   0.00010166188502661009,
+   1.1406263463733398e-05
+  ],
+  "intervals": {
+   "home_goals_80": [
+    1,
+    4
+   ],
+   "away_goals_80": [
+    0,
+    2
+   ],
+   "total_goals_80": [
+    1,
+    5
+   ],
+   "goal_diff_80": [
+    0,
+    4
+   ]
+  },
+  "score_grid": [
+   [
+    0.042964,
+    0.028088,
+    0.011214,
+    0.002753,
+    0.000502,
+    7.3e-05,
+    9e-06
+   ],
+   [
+    0.097466,
+    0.083558,
+    0.028821,
+    0.007059,
+    0.001283,
+    0.000185,
+    2.2e-05
+   ],
+   [
+    0.122976,
+    0.095144,
+    0.037507,
+    0.008679,
+    0.001574,
+    0.000227,
+    2.7e-05
+   ],
+   [
+    0.098923,
+    0.076405,
+    0.028466,
+    0.007335,
+    0.001257,
+    0.000181,
+    2.2e-05
+   ],
+   [
+    0.058657,
+    0.04523,
+    0.016823,
+    0.004097,
+    0.000782,
+    0.000106,
+    1.3e-05
+   ],
+   [
+    0.027456,
+    0.021137,
+    0.007849,
+    0.001908,
+    0.000344,
+    5.2e-05,
+    6e-06
+   ],
+   [
+    0.010594,
+    0.008143,
+    0.003019,
+    0.000733,
+    0.000132,
+    1.9e-05,
+    2e-06
+   ]
+  ],
+  "mass_check": 0.9999999999999999
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.73558,
+  "p_draw": 0.17239,
+  "p_away": 0.09203,
+  "se": [
+   0.000986159377585591,
+   0.000844605493410977,
+   0.0006463763574729509
+  ],
+  "max_abs_dev_vs_exact": 0.00018982742083911708,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   1.886485546963882,
+   2.9472071669305637
+  ],
+  "xg_away_80": [
+   0.5676181783437356,
+   0.964182392177687
+  ],
+  "p_home_80": [
+   0.63092739056244,
+   0.8202187241888907
+  ],
+  "p_draw_80": [
+   0.12307531386754877,
+   0.22421163202229735
+  ],
+  "p_away_80": [
+   0.05630899831763379,
+   0.14629861816215206
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.17688094703428037,
+   0.1966306238121172
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.6997881626017496,
+   "p_draw": 0.18880591027262028,
+   "p_away": 0.1114059271256302,
+   "xg_home": 2.211218862399249,
+   "xg_away": 0.7660643405953143,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.7520611648586804,
+   "p_draw": 0.15937302032152206,
+   "p_away": 0.08856581481979771,
+   "xg_home": 2.3872204970056004,
+   "xg_away": 0.686948167872369,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.6746496499403049,
+   "p_draw": 0.20850689138277803,
+   "p_away": 0.11684345867691709,
+   "xg_home": 2.0315187152039744,
+   "xg_away": 0.7225209670562023,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.4552115934330994,
+   "p_draw": 0.25248472105328607,
+   "p_away": 0.2923036855136146,
+   "xg_home": 1.5372273318978065,
+   "xg_away": 1.1808505371504674,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.7058213297648299,
+   "p_draw": 0.18203159325934729,
+   "p_away": 0.11214707697582293,
+   "xg_home": 2.3060966367618643,
+   "xg_away": 0.8130457322192712,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Independent results-only Elo: Real Madrid 1894 vs Celta 1577 (gap +316 before home advantage).",
+   "effect": 0.4745
+  },
+  {
+   "text": "Celta attack vs Real Madrid defence: rate multiplier \u00d70.64 for the away side.",
+   "effect": 0.4531
+  },
+  {
+   "text": "Real Madrid attack vs Celta defence: time-weighted strength gap multiplies Real Madrid's scoring rate by \u00d71.40 relative to an average pairing (from 42/33 decay-weighted matches).",
+   "effect": 0.3371
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.7356876117516581,
+  "p_draw": 0.17220017257916093,
+  "p_away": 0.09211221566918112,
+  "xg_home": 2.395587022891598,
+  "xg_away": 0.7588198906253643
+ },
+ "context": {
+  "fetched_at": "2026-11-17T07:15:49+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5868139",
+    "fetched_at": "2026-11-17T07:15:49+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "4-2-3-1",
+    "starters": [
+     {
+      "name": "Thibaut Courtois",
+      "pos": "G"
+     },
+     {
+      "name": "Federico Valverde",
+      "pos": "M"
+     },
+     {
+      "name": "Ibrahima Konat\u00e9",
+      "pos": "D"
+     },
+     {
+      "name": "Dean Huijsen",
+      "pos": "D"
+     },
+     {
+      "name": "Marc Cucurella",
+      "pos": "D"
+     },
+     {
+      "name": "Bernardo Silva",
+      "pos": "M"
+     },
+     {
+      "name": "Aur\u00e9lien Tchouam\u00e9ni",
+      "pos": "M"
+     },
+     {
+      "name": "Arda G\u00fcler",
+      "pos": "M"
+     },
+     {
+      "name": "Jude Bellingham",
+      "pos": "M"
+     },
+     {
+      "name": "Yan Diomande",
+      "pos": "F"
+     },
+     {
+      "name": "Kylian Mbapp\u00e9",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-11-17T07:15:49+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [],
+    "mean_xi_attack_index": -0.113,
+    "mean_continuity": 0.401,
+    "p_backup_gk": 0.2
+   },
+   "away": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "3-4-2-1",
+    "starters": [
+     {
+      "name": "Altay Bay\u0131nd\u0131r",
+      "pos": "G"
+     },
+     {
+      "name": "Hugo Burcio",
+      "pos": "D"
+     },
+     {
+      "name": "Yoel Lago",
+      "pos": "D"
+     },
+     {
+      "name": "Abdoulaye Faye",
+      "pos": "D"
+     },
+     {
+      "name": "Germain Milla",
+      "pos": "M"
+     },
+     {
+      "name": "Andr\u00e9s Anta\u00f1\u00f3n",
+      "pos": "M"
+     },
+     {
+      "name": "Aleix Febas",
+      "pos": "M"
+     },
+     {
+      "name": "Javi Gal\u00e1n",
+      "pos": "M"
+     },
+     {
+      "name": "Hugo Gonz\u00e1lez",
+      "pos": "M"
+     },
+     {
+      "name": "\u00c1ngel Arcos",
+      "pos": "M"
+     },
+     {
+      "name": "Ferr\u00e1n Jutgl\u00e0",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-11-17T07:15:49+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [
+     "Altay Bay\u0131nd\u0131r",
+     "Germain Milla",
+     "\u00c1ngel Arcos"
+    ],
+    "mean_xi_attack_index": -0.112,
+    "mean_continuity": -2.727,
+    "p_backup_gk": 0.845
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Aur\u00e9lien Tchouam\u00e9ni",
+     "type": "injury",
+     "expected_return": "About 1-2 weeks",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868139",
+     "fetched_at": "2026-11-17T07:15:49+00:00"
+    },
+    {
+     "player": "Ferland Mendy",
+     "type": "injury",
+     "expected_return": "Back in training",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868139",
+     "fetched_at": "2026-11-17T07:15:49+00:00"
+    },
+    {
+     "player": "Ra\u00fal Asencio",
+     "type": "injury",
+     "expected_return": "Back in training",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868139",
+     "fetched_at": "2026-11-17T07:15:49+00:00"
+    },
+    {
+     "player": "Rodrygo",
+     "type": "injury",
+     "expected_return": "Early January 2027",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868139",
+     "fetched_at": "2026-11-17T07:15:49+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "Ilaix Moriba",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868139",
+     "fetched_at": "2026-11-17T07:15:49+00:00"
+    },
+    {
+     "player": "Borja Iglesias",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868139",
+     "fetched_at": "2026-11-17T07:15:49+00:00"
+    },
+    {
+     "player": "Miguel Rom\u00e1n",
+     "type": "injury",
+     "expected_return": "Back in training",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868139",
+     "fetched_at": "2026-11-17T07:15:49+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 14,
+    "n21": 2,
+    "last_match": "2026-11-07"
+   },
+   "away": {
+    "rest_days": 13,
+    "n21": 2,
+    "last_match": "2026-11-08"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 464.8
+  },
+  "venue": {
+   "name": "Estadio Bernab\u00e9u",
+   "city": "Madrid",
+   "lat": 40.453068279,
+   "lon": -3.688353896
+  },
+  "weather": {
+   "precip_mm_2h": 2.2,
+   "wind_ms": 0.88,
+   "temp_c": 9.2,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=40.453&longitude=-3.688",
+   "fetched_at": "2026-11-17T07:15:49+00:00",
+   "lat": 40.453068279,
+   "lon": -3.688353896
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": -2.13,
+    "d_p_draw_pp": 1.1,
+    "d_p_away_pp": 1.03,
+    "d_xg_home": -0.033,
+    "d_xg_away": 0.062
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": -0.0,
+    "d_p_draw_pp": -0.0,
+    "d_p_away_pp": -0.0,
+    "d_xg_home": -0.0,
+    "d_xg_away": -0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.027,
+    "away_rate_mult": 1.0113,
+    "d_p_home_pp": 0.83,
+    "d_p_draw_pp": -0.55,
+    "d_p_away_pp": -0.29,
+    "d_xg_home": 0.062,
+    "d_xg_away": 0.008,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0496,
+    "away_rate_mult": 1.0496,
+    "d_p_home_pp": 1.04,
+    "d_p_draw_pp": -0.83,
+    "d_p_away_pp": -0.2,
+    "d_xg_home": 0.114,
+    "d_xg_away": 0.037,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "home_rate_mult": 1.0562,
+    "away_rate_mult": 0.9054,
+    "d_p_home_pp": 3.61,
+    "d_p_draw_pp": -1.78,
+    "d_p_away_pp": -1.82,
+    "d_xg_home": 0.132,
+    "d_xg_away": -0.07,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": -0.0,
+   "d_p_draw_pp": -0.0,
+   "d_p_away_pp": -0.0,
+   "d_xg_home": -0.0,
+   "d_xg_away": -0.0
+  },
+  "features": {
+   "rest_h": 14.0,
+   "rest_a": 13.0,
+   "n21_h": 2.0,
+   "n21_a": 2.0,
+   "travel_km": 464.79628413089756,
+   "neutral": 0.0,
+   "precip_mm_2h": 2.2,
+   "wind_ms": 0.88,
+   "temp_c": 9.2
+  }
+ },
+ "confidence": {
+  "tier": "HIGH",
+  "p_max": 0.7356876117516579,
+  "entropy_nats": 0.7484004052861577,
+  "text": "Most likely result has P = 73.6%. In the out-of-sample backtest, favourites priced 0.70\u20130.80 won 76.5% \u00b1 1.1% (n=1436, mean forecast 74.2%). Backtest RPS for SP1: 0.1930; exact-score top-5 hit rate 55.1% (n=1239). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: HIGH (entropy 0.748 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Real Madrid: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Celta: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Celta: no Understat history for Altay Bay\u0131nd\u0131r, Germain Milla, \u00c1ngel Arcos \u2014 rated at the positional prior."
+ ],
+ "verdict": "Real Madrid 2\u20130 Celta is the single most probable scoreline at 12.3%: expected goals 2.40\u20130.76 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.043). Exact scores are inherently uncertain; the 1X2 split is 73.6%/17.2%/9.2%.",
+ "resolved": {
+  "home_key": "Spain:Real Madrid",
+  "away_key": "Spain:Celta",
+  "div": "SP1",
+  "home_div": "SP1",
+  "away_div": "SP1",
+  "country": "Spain"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: RC Celta de Vigo at Real Madrid CF\nCompetition: LaLiga\nDate: 2026-11-21 15:00 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-11-16\n\nPRIMARY FINAL SCORE PREDICTION\n\nReal Madrid CF 2 \u2013 0 RC Celta de Vigo\n(modal exact score, probability 12.3%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 2.40\nAway: 0.76\nExpected Total: 3.15\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 73.6%\nDraw: 17.2%\nAway Win: 9.2%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 2\u20130: 12.3%\n2. 3\u20130: 9.9%\n3. 1\u20130: 9.7%\n4. 2\u20131: 9.5%\n5. 1\u20131: 8.4%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 16.9%\nTotal 2 goals: 21.8%\nTotal 3 goals: 22.6%\nTotal 4 goals: 18.0%\nTotal 5+ goals: 20.8%\n\nBoth Teams Score: 49.4%\nClean sheet Real Madrid CF: 46.4% \u00b7 Clean sheet RC Celta de Vigo: 8.6%\n\nMATCH INTELLIGENCE\n\n1. Independent results-only Elo: Real Madrid 1894 vs Celta 1577 (gap +316 before home advantage).\n2. Celta attack vs Real Madrid defence: rate multiplier \u00d70.64 for the away side.\n3. Real Madrid attack vs Celta defence: time-weighted strength gap multiplies Real Madrid's scoring rate by \u00d71.40 relative to an average pairing (from 42/33 decay-weighted matches).\n\nMODEL CONFIDENCE\n\nMost likely result has P = 73.6%. In the out-of-sample backtest, favourites priced 0.70\u20130.80 won 76.5% \u00b1 1.1% (n=1436, mean forecast 74.2%). Backtest RPS for SP1: 0.1930; exact-score top-5 hit rate 55.1% (n=1239). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: HIGH (entropy 0.748 nats of max 1.099).\nParameter-uncertainty 80% bands: xG Real Madrid CF 1.89\u20132.95, xG RC Celta de Vigo 0.57\u20130.96; P(home win) 63.1%\u201382.0%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0002 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nReal Madrid: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-11-17 02:15 EST (4-2-3-1)\n  Thibaut Courtois (G), Federico Valverde (M), Ibrahima Konat\u00e9 (D), Dean Huijsen (D), Marc Cucurella (D), Bernardo Silva (M), Aur\u00e9lien Tchouam\u00e9ni (M), Arda G\u00fcler (M), Jude Bellingham (M), Yan Diomande (F), Kylian Mbapp\u00e9 (F)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs -0.113 (log) \u00b7 continuity +0.40 \u00b7 P(backup GK) 20%\nCelta: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-11-17 02:15 EST (3-4-2-1)\n  Altay Bay\u0131nd\u0131r (G), Hugo Burcio (D), Yoel Lago (D), Abdoulaye Faye (D), Germain Milla (M), Andr\u00e9s Anta\u00f1\u00f3n (M), Aleix Febas (M), Javi Gal\u00e1n (M), Hugo Gonz\u00e1lez (M), \u00c1ngel Arcos (M), Ferr\u00e1n Jutgl\u00e0 (F)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs -0.112 (log) \u00b7 continuity -2.73 \u00b7 P(backup GK) 84%\n\nKEY ABSENCES\n\n- Real Madrid: Aur\u00e9lien Tchouam\u00e9ni \u2014 injury, About 1-2 weeks [FotMob, 2026-11-17 02:15 EST]\n- Real Madrid: Ferland Mendy \u2014 injury, Back in training [FotMob, 2026-11-17 02:15 EST]\n- Real Madrid: Ra\u00fal Asencio \u2014 injury, Back in training [FotMob, 2026-11-17 02:15 EST]\n- Real Madrid: Rodrygo \u2014 injury, Early January 2027 [FotMob, 2026-11-17 02:15 EST]\n- Celta: Ilaix Moriba \u2014 injury, Late November 2026 [FotMob, 2026-11-17 02:15 EST]\n- Celta: Borja Iglesias \u2014 injury, Late November 2026 [FotMob, 2026-11-17 02:15 EST]\n- Celta: Miguel Rom\u00e1n \u2014 injury, Back in training [FotMob, 2026-11-17 02:15 EST]\n\nWEATHER AT VENUE\n\nEstadio Bernab\u00e9u, Madrid: 9.2 \u00b0C, wind 0.9 m/s, precipitation 2.2 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-11-17 02:15 EST]\n\nREST & TRAVEL\n\nReal Madrid: 14 days' rest, 2 matches in previous 21 days \u00b7 Celta: 13 days' rest, 2 in 21 days \u00b7 away travel 464.8 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 73.6% / 17.2% / 9.2%, xG 2.40\u20130.76\n- Understat xG component (validated, in ensemble): home -2.13 pp, draw +1.10 pp, away +1.03 pp; xG -0.033 / +0.062\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home -0.00 pp, draw -0.00 pp, away -0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.83 pp, draw -0.55 pp, away -0.29 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +1.04 pp, draw -0.83 pp, away -0.20 pp\n- lineup: NOT APPLIED (failed out-of-sample validation); would have moved home +3.61 pp, draw -1.78 pp, away -1.82 pp\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Real Madrid: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Celta: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Celta: no Understat history for Altay Bay\u0131nd\u0131r, Germain Milla, \u00c1ngel Arcos \u2014 rated at the positional prior.\n\nFINAL VERDICT\n\nReal Madrid 2\u20130 Celta is the single most probable scoreline at 12.3%: expected goals 2.40\u20130.76 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.043). Exact scores are inherently uncertain; the 1X2 split is 73.6%/17.2%/9.2%.\n",
+ "refresh_id": "142349742fe848bca2d49a00e8880c20",
+ "frozen_at": "2026-11-17T07:15:49+00:00",
+ "sha256": "d5858e42eb1784f9786d8dedba06bd9cef44bc99a7b7673337e64b7261d77a09"
+}
