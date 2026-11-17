@@ -146,6 +146,8 @@ def update(max_age_h: float = 3.0, max_seconds: float | None = None):
         m, p = fotmob_xg.fill(*fotmob_xg.drop_superseded(m, p), season=cur)
     except Exception as e:  # noqa: BLE001
         print(f"fotmob xg fill failed (non-fatal): {e!r}")
+    if m is old_m and p is old_p:        # nothing new from either source: leave the snapshot files untouched
+        return old_m, old_p
     for frame, path in ((m, pm), (p, pp)):
         temporary = path.with_suffix('.tmp.parquet')
         frame.to_parquet(temporary, index=False)
