@@ -28,6 +28,15 @@ OFFSET = 10_000_000_000
 LEAGUES = {"E0": ("EPL", 47), "SP1": ("La_liga", 87), "D1": ("Bundesliga", 54), "I1": ("Serie_A", 55), "F1": ("Ligue_1", 53)}
 ID_MAP = config.CONTEXT_DIR / "fotmob_player_ids.json"
 POS = {"G": "GK", "D": "DC", "M": "MC", "F": "FW"}
+# FotMob club names that the shared matcher does not link to Understat's titles (checked against all five leagues).
+CLUB_ALIASES = {"1. FC Köln": "FC Cologne", "RB Leipzig": "RasenBallsport Leipzig"}
+
+
+def club_title(name: str, titles: list[str]):
+    alias = CLUB_ALIASES.get(name)
+    return alias if alias in titles else match_team(name, titles).canonical
+
+
 MATCH_COLS = ["us_id", "league", "div", "season", "datetime", "is_result", "home", "away", "hg", "ag", "hxg", "axg"]
 
 
@@ -144,7 +153,7 @@ def drop_superseded(matches: pd.DataFrame, players: pd.DataFrame):
         u = us[us["div"] == div]
         titles = sorted(set(u["home"]) | set(u["away"]))
         for r in g.itertuples():
-            home = match_team(r.home, titles).canonical
+            home = club_title(r.home, titles)
             if home is not None and ((u["home"] == home) & ((u["datetime"] - r.datetime).abs() <= pd.Timedelta(days=1))).any():
                 drop.append(r.us_id)
     if not drop:
@@ -173,13 +182,18 @@ def fill(matches: pd.DataFrame, players: pd.DataFrame, season: int, max_seconds:
             if deadline is not None and time.monotonic() > deadline:
                 skipped += 1
                 continue
-            parsed = parse_match(fotmob.match_details_raw(x["fm_id"], max_age_h=None) or {}, div, league, season)
+            # The pipeline caches match pages before kick-off for line-ups. Only accept a copy fetched after full time.
+            hours_since_end = (pd.Timestamp.now(tz="UTC").tz_localize(None) - x["datetime"]).total_seconds() / 3600 - 3
+            if hours_since_end <= 0:
+                skipped += 1
+                continue
+            parsed = parse_match(fotmob.match_details_raw(x["fm_id"], max_age_h=hours_since_end) or {}, div, league, season)
             if parsed is None:
                 skipped += 1
                 continue
             match, rows = parsed
             for side, name in (("h", match["home"]), ("a", match["away"])):
-                club = match_team(name, titles).canonical
+                club = club_title(name, titles)
                 assign_ids([r for r in rows if r["side"] == side], rosters.get(club, {}), known)
             new_m.append(match); new_p.extend(rows)
     if new_m:
