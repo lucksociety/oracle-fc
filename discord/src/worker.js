@@ -336,7 +336,7 @@ function summaryLines(scan, games, rows, bets, nobets, opts) {
   }
   const rec = scan.record?.bets;
   if (rec && (rec.wins + rec.losses) > 0) lines.push(`📒 Running record${scan.recordSince ? ` since ${scan.recordSince}` : ""}: **${rec.wins}-${rec.losses}** · **${units(rec.units)}** · ROI ${rec.roi == null ? "–" : (100 * rec.roi).toFixed(1) + "%"} (1u per bet at ask + fees)`);
-  lines.push("", "Rule: model P > 50% **and** +EV buying at the Polymarket ask incl. fees, after shrinking the model 75% toward the market price; model-vs-market gaps over 8 pts are treated as model error and skipped; no team totals or BTTS; highest EV per game. EV shown is the shrunk EV. Prices are compared only *after* each forecast is frozen and never feed the model. Research, not financial advice.");
+  lines.push("", "Rule: model P > 50% **and** +EV buying at the Polymarket ask incl. fees, after shrinking the model 50% toward the market price; model-vs-market gaps over 8 pts are treated as model error and skipped; no team totals or BTTS; highest EV per game. EV shown is the shrunk EV. Prices are compared only *after* each forecast is frozen and never feed the model. Research, not financial advice.");
   return lines;
 }
 

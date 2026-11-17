@@ -37,11 +37,11 @@ FEES = {
 }
 DEFAULT_FEE = "polymarket"
 MIN_P, MIN_EV = 0.50, 0.0
-SHRINK_W = 0.25          # weight on the model; 1 - SHRINK_W on the market mid
+SHRINK_W = 0.50          # weight on the model; 1 - SHRINK_W on the market mid
 MAX_RAW_EDGE = 0.08      # p_model - ask above this is never bet
 MIN_VOLUME = 500.0       # contracts traded on the market
 EXCLUDED_KINDS = frozenset({"team_total", "btts"})
-SELECTION_POLICY = "market-shrink-w25-edgecap8-v4"
+SELECTION_POLICY = "market-shrink-w50-edgecap8-core-v5"
 EXACT_RE = re.compile(r"^(?P<h>.+?)\s+(?P<hg>\d+)\s*-\s*(?P<ag>\d+)\s+(?P<a>.+)$")
 HCP_RE = re.compile(r"([+-]\d+(?:\.\d+)?)\s*$")
 

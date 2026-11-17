@@ -112,7 +112,7 @@ def test_eligibility_and_choice():
     for r in rows:
         assert r["eligible"] == (r["score_consistent"] and not r["thin_book"] and r["model_p"] > 0.5 and r["ev_per_dollar"] > 0
                                  and not r["excluded_market"] and not r["edge_capped"])
-        if not r["thin_book"]:  # EV is computed from the model shrunk 75% toward the market mid, never the raw model
+        if not r["thin_book"]:  # EV is computed from the model shrunk toward the market mid, never the raw model
             mid = (r["ask"] + r["bid"]) / 2
             assert math.isclose(r["bet_p"], mid + BB.SHRINK_W * (r["model_p"] - mid))
             assert math.isclose(r["ev_per_dollar"], r["bet_p"] / r["cost_per_contract"] - 1)
@@ -231,14 +231,14 @@ def test_bet_uses_shrunk_probability_and_reports_raw_model():
     res = BB.best_bet([_offer()], _grid(), {**SIM, "p_home": .575})
     assert res["verdict"] == "BET" and res["selection_policy"] == BB.SELECTION_POLICY
     bet = res["bet"]
-    assert bet["model_p"] == .575 and math.isclose(bet["bet_p"], .495 + .25 * (.575 - .495))
+    assert bet["model_p"] == .575 and math.isclose(bet["bet_p"], .495 + BB.SHRINK_W * (.575 - .495))
     assert math.isclose(bet["ev_per_dollar"], bet["bet_p"] / (.50 + .0125) - 1, abs_tol=1e-6)
     assert bet["raw_ev_per_dollar"] > bet["ev_per_dollar"] > 0 and bet["fee_assumed"] is False
 
 
 def test_raw_model_edge_alone_is_not_enough():
-    # +4 pts raw edge was a BET under the old rule (raw EV +5%); after shrinking toward the market it is not.
-    res = BB.best_bet([_offer()], _grid(), {**SIM, "p_home": .54})
+    # +2.5 pts raw edge was a BET under the original rule (raw EV +2%); after shrinking toward the market it is not.
+    res = BB.best_bet([_offer()], _grid(), {**SIM, "p_home": .525})
     assert res["verdict"] == "NO BET" and res["closest"]["raw_ev_per_dollar"] > 0 > res["closest"]["ev_per_dollar"]
 
 
