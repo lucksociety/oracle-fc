@@ -39,11 +39,11 @@ def _details(mid=555, home="Manchester United", away="Aston Villa"):
 def test_parse_match_writes_understat_schema_and_skips_unused_subs():
     match, players = F.parse_match(_details(), "E0", "EPL", 2026)
     assert match["us_id"] == F.OFFSET + 555 and F.is_fotmob(match["us_id"]) and not F.is_fotmob(30000)
-    assert (match["hxg"], match["axg"], match["hg"], match["ag"]) == (3.55, 2.88, 4.0, 4.0)
+    assert (match["hxg"], match["axg"], match["hg"], match["ag"]) == (round(3.55 * F.XG_SCALE, 4), round(2.88 * F.XG_SCALE, 4), 4.0, 4.0)
     assert match["datetime"] == pd.Timestamp("2026-11-08 16:30") and match["is_result"] is True
     assert len(players) == 24 and sum(p["position"] == "Sub" for p in players) == 2
     gk = next(p for p in players if p["fm_player_id"] == 100)
-    assert gk["position"] == "GK" and gk["time"] == 90 and gk["xG"] == 0.1 and gk["key_passes"] == 3
+    assert gk["position"] == "GK" and gk["time"] == 90 and gk["xG"] == round(0.1 * F.XG_SCALE, 4) and gk["key_passes"] == 3
     assert not any("Unused" in p["player"] for p in players)
     assert set(match) == set(F.MATCH_COLS)
 

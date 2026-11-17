@@ -27,6 +27,9 @@ from . import fotmob
 OFFSET = 10_000_000_000
 LEAGUES = {"E0": ("EPL", 47), "SP1": ("La_liga", 87), "D1": ("Bundesliga", 54), "I1": ("Serie_A", 55), "F1": ("Ligue_1", 53)}
 ID_MAP = config.CONTEXT_DIR / "fotmob_player_ids.json"
+# FotMob's xG ran 4.6% below Understat's on the 107 October 2026 matches both covered (correlation 0.93), so it is
+# scaled up to keep one consistent series for the fit and the player ratings.
+XG_SCALE = 1.048
 POS = {"G": "GK", "D": "DC", "M": "MC", "F": "FW"}
 # FotMob club names that the shared matcher does not link to Understat's titles (checked against all five leagues).
 CLUB_ALIASES = {"1. FC Köln": "FC Cologne", "RB Leipzig": "RasenBallsport Leipzig"}
@@ -92,7 +95,7 @@ def parse_match(details: dict, div: str, league: str, season: int):
     except (KeyError, TypeError, ValueError):
         return None
     match = {"us_id": OFFSET + mid, "league": league, "div": div, "season": season, "datetime": when, "is_result": True,
-             "home": teams[0]["name"], "away": teams[1]["name"], "hg": float(hg), "ag": float(ag), "hxg": xg[0], "axg": xg[1]}
+             "home": teams[0]["name"], "away": teams[1]["name"], "hg": float(hg), "ag": float(ag), "hxg": round(xg[0] * XG_SCALE, 4), "axg": round(xg[1] * XG_SCALE, 4)}
     players = []
     for side, key in (("h", "homeTeam"), ("a", "awayTeam")):
         t = lineup.get(key) or {}
@@ -109,7 +112,7 @@ def parse_match(details: dict, div: str, league: str, season: int):
                 players.append({"us_id": OFFSET + mid, "side": side, "team_id": str(t.get("id")), "fm_player_id": int(p["id"]), "player": str(p["name"]),
                                 "position": POS.get(fotmob._pos_group(p) or "M", "MC") if group == "start" else "Sub",
                                 "positionOrder": order if group == "start" else 17, "time": int(minutes),
-                                "xG": _stat(top, "expected_goals") or 0.0, "xA": _stat(top, "expected_assists") or 0.0,
+                                "xG": round((_stat(top, "expected_goals") or 0.0) * XG_SCALE, 4), "xA": round((_stat(top, "expected_assists") or 0.0) * XG_SCALE, 4),
                                 "goals": int(_stat(top, "goals") or 0), "assists": int(_stat(top, "assists") or 0),
                                 "shots": int(_stat(top, "total_shots") or 0), "key_passes": int(_stat(top, "chances_created") or 0),
                                 "roster_in": "0", "roster_out": "0", "red_card": 0, "own_goals": 0})

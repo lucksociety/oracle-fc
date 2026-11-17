@@ -93,3 +93,15 @@ forecast error that the backtest does not.
 Saudi Pro League (`spl`), Qatar (`qat1`), Colombia (`col1`), Turkey 1. Lig (`tur2`),
 Brazil Série B (`bra2`) and lower-league clubs in domestic cups (e.g. Copa del Rey
 Segunda RFEF sides). These appear in the dashboard under *Not forecast* with the exact reason.
+
+
+## FotMob as the stand-in for Understat (since 2026-11-17)
+
+Understat has returned its error page to every pipeline request since 2026-11-02, so top-five match xG and the player rows behind the line-up features stopped at 1 November. `oraclefc/ingest/fotmob_xg.py` now fills every top-five match played after the last Understat-recorded one from FotMob match pages:
+
+* **Fields read:** team xG, and per player minutes, xG, xA, goals, assists, shots and chances created, plus the official starting XI. Nothing else on the page is read.
+* **Same schema:** rows go into `understat_matches.parquet` and `understat_players.parquet`. FotMob match ids are offset by 10,000,000,000.
+* **Player continuity:** each FotMob player is linked to his existing Understat id by name within the club (96.6% of rows on the first fill). The link is stored in `data/context/fotmob_player_ids.json`. Unlinked players get a stable `fm<id>`.
+* **Scale:** on 107 October 2026 matches covered by both sources, FotMob xG correlated 0.93 with Understat and averaged 4.6% lower, so FotMob xG and xA are multiplied by 1.048.
+* **If Understat returns:** a FotMob match is dropped once Understat has the same fixture.
+* **Stale pages:** the pipeline caches match pages before kick-off for line-ups; the fill only accepts a copy fetched after full time.
