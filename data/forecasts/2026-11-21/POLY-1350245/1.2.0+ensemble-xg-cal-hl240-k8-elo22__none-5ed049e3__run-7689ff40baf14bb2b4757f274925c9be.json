@@ -1,0 +1,513 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-11-16",
+ "input_fingerprint": "993fd34ff449f31124f2566178f1450e838372e88673562b22cc4d769b4c522d",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-11-17T10:27:31+00:00",
+ "fixture": {
+  "event_id": "POLY-1350245",
+  "home_name": "Inter Miami CF",
+  "away_name": "Columbus Crew",
+  "competition": "MLS",
+  "subcategory": "mls",
+  "kickoff_utc": "2026-11-21T23:00:00+00:00",
+  "kickoff_local": "2026-11-21 18:00 EST",
+  "home_matched": "Inter Miami",
+  "away_matched": "Columbus Crew",
+  "match_methods": {
+   "home": {
+    "source": "Inter Miami CF",
+    "matched": "Inter Miami",
+    "method": "core-tokens",
+    "score": 0.97
+   },
+   "away": {
+    "source": "Columbus Crew",
+    "matched": "Columbus Crew",
+    "method": "exact",
+    "score": 1.0
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.5487814549686372,
+  "p_draw": 0.21604325903719024,
+  "p_away": 0.2351752859941727,
+  "xg_home": 2.2565591918169257,
+  "xg_away": 1.466957721529686,
+  "xg_total": 3.7235169133466117,
+  "median_total": 4,
+  "modal_score": {
+   "home": 2,
+   "away": 1,
+   "p": 0.09087674380004403
+  },
+  "top_scores": [
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.09087674380004403
+   },
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.08672358790624582
+   },
+   {
+    "home": 2,
+    "away": 2,
+    "p": 0.06997868968201817
+   },
+   {
+    "home": 3,
+    "away": 1,
+    "p": 0.06780082763802057
+   },
+   {
+    "home": 2,
+    "away": 0,
+    "p": 0.06075627373092812
+   }
+  ],
+  "btts": 0.6993821502919848,
+  "totals_over": {
+   "over_0.5": 0.9730000728874475,
+   "over_1.5": 0.8868649211732539,
+   "over_2.5": 0.7149760966590895,
+   "over_3.5": 0.5104561723964635,
+   "over_4.5": 0.31684970255392786,
+   "over_5.5": 0.17523028996450918,
+   "over_6.5": 0.08538713362479045
+  },
+  "total_buckets": {
+   "0-1": 0.1131350788267462,
+   "2": 0.17188882451416446,
+   "3": 0.20451992426262594,
+   "4": 0.19360646984253566,
+   "5+": 0.31684970255392786
+  },
+  "clean_sheet_home": 0.22631840299493153,
+  "clean_sheet_away": 0.10129937382563631,
+  "home_goal_dist": [
+   0.10129937382563631,
+   0.23814887736911375,
+   0.2694246345430092,
+   0.2010232950141594,
+   0.11244403184321518,
+   0.050436484907193546,
+   0.018898455515970476,
+   0.008324846981702164
+  ],
+  "away_goal_dist": [
+   0.22631840299493153,
+   0.3422434173575983,
+   0.25065150816011095,
+   0.1208470715192674,
+   0.04355614139525444,
+   0.012580599109062271,
+   0.0030371289319434556,
+   0.0007657305318318128
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    4
+   ],
+   "away_goals_80": [
+    0,
+    3
+   ],
+   "total_goals_80": [
+    1,
+    6
+   ],
+   "goal_diff_80": [
+    -2,
+    3
+   ]
+  },
+  "score_grid": [
+   [
+    0.027,
+    0.033065,
+    0.024409,
+    0.011392,
+    0.003987,
+    0.00112,
+    0.000263
+   ],
+   [
+    0.053071,
+    0.086724,
+    0.057666,
+    0.027361,
+    0.009729,
+    0.002774,
+    0.000661
+   ],
+   [
+    0.060756,
+    0.090877,
+    0.069979,
+    0.031943,
+    0.011531,
+    0.003333,
+    0.000804
+   ],
+   [
+    0.044585,
+    0.067801,
+    0.050231,
+    0.025969,
+    0.008998,
+    0.002633,
+    0.000642
+   ],
+   [
+    0.02448,
+    0.037831,
+    0.028456,
+    0.014124,
+    0.005527,
+    0.001548,
+    0.000381
+   ],
+   [
+    0.010766,
+    0.016893,
+    0.012886,
+    0.006476,
+    0.002426,
+    0.000765,
+    0.00018
+   ],
+   [
+    0.003957,
+    0.006298,
+    0.004864,
+    0.002472,
+    0.000934,
+    0.000281,
+    7.4e-05
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.54991,
+  "p_draw": 0.21698,
+  "p_away": 0.23311,
+  "se": [
+   0.0011124499806732886,
+   0.0009216823737058229,
+   0.0009454356876593986
+  ],
+  "max_abs_dev_vs_exact": 0.0020652859941726887,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   1.810953027653071,
+   2.736485950916371
+  ],
+  "xg_away_80": [
+   1.1458473256703903,
+   1.8063014992374546
+  ],
+  "p_home_80": [
+   0.4415624018034249,
+   0.6583399803138409
+  ],
+  "p_draw_80": [
+   0.17423747627559388,
+   0.23522847135164918
+  ],
+  "p_away_80": [
+   0.1611338571069,
+   0.3282752992284314
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.16367023657387766,
+   0.16891006087911675
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.5572902262894655,
+   "p_draw": 0.19754905159578368,
+   "p_away": 0.24516072211475082,
+   "xg_home": 2.42499584552547,
+   "xg_away": 1.596250895052809,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.5311139199506559,
+   "p_draw": 0.2232138706477902,
+   "p_away": 0.24567220940155388,
+   "xg_home": 1.9046072775421592,
+   "xg_away": 1.2311887117713862,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.6070285118313294,
+   "p_draw": 0.1883845225827448,
+   "p_away": 0.2045869655859258,
+   "xg_home": 2.5723076102198084,
+   "xg_away": 1.4828974007787088,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.4622296840323131,
+   "p_draw": 0.2332309217728032,
+   "p_away": 0.30453939419488374,
+   "xg_home": 1.7464300674840119,
+   "xg_away": 1.379373205189922,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.557202989523236,
+   "p_draw": 0.1975123143936318,
+   "p_away": 0.24528469608313216,
+   "xg_home": 2.4243195813570635,
+   "xg_away": 1.5962278268889267,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Inter Miami attack vs Columbus Crew defence: time-weighted strength gap multiplies Inter Miami's scoring rate by \u00d71.58 relative to an average pairing (from 37/36 decay-weighted matches).",
+   "effect": 0.4596
+  },
+  {
+   "text": "Columbus Crew attack vs Inter Miami defence: rate multiplier \u00d71.32 for the away side.",
+   "effect": 0.2812
+  },
+  {
+   "text": "Home advantage (USA, fitted from results): \u00d71.27 on Inter Miami's scoring rate.",
+   "effect": 0.24
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.548781454968637,
+  "p_draw": 0.21604325903719024,
+  "p_away": 0.2351752859941727,
+  "xg_home": 2.256559191816925,
+  "xg_away": 1.4669577215296856
+ },
+ "context": {
+  "fetched_at": "2026-11-17T10:27:31+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/6580837",
+    "fetched_at": "2026-11-17T10:27:31+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "none",
+    "source": null,
+    "formation": "",
+    "starters": [],
+    "fetched_at": "2026-11-17T10:27:31+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   },
+   "away": {
+    "status": "none",
+    "source": null,
+    "formation": "",
+    "starters": [],
+    "fetched_at": "2026-11-17T10:27:31+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Ezequiel Abadia-Reda",
+     "type": "injury",
+     "expected_return": "Mid December 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6580837",
+     "fetched_at": "2026-11-17T10:27:31+00:00"
+    },
+    {
+     "player": "Fricio Caicedo",
+     "type": "injury",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6580837",
+     "fetched_at": "2026-11-17T10:27:31+00:00"
+    },
+    {
+     "player": "Mateo Silvetti",
+     "type": "injury",
+     "expected_return": "Out for season",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6580837",
+     "fetched_at": "2026-11-17T10:27:31+00:00"
+    },
+    {
+     "player": "Tadeo Allende",
+     "type": "injury",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6580837",
+     "fetched_at": "2026-11-17T10:27:31+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "Wessam Abou Ali",
+     "type": "injury",
+     "expected_return": "Unknown",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6580837",
+     "fetched_at": "2026-11-17T10:27:31+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 14,
+    "n21": 2,
+    "last_match": "2026-11-07"
+   },
+   "away": {
+    "rest_days": 14,
+    "n21": 2,
+    "last_match": "2026-11-07"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 1596.9
+  },
+  "venue": {
+   "name": "Nu Stadium",
+   "city": "Miami, Florida",
+   "lat": 25.792775779,
+   "lon": -80.259473606
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 4.855,
+   "temp_c": 26.8,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=25.793&longitude=-80.259",
+   "fetched_at": "2026-11-17T10:27:31+00:00",
+   "lat": 25.792775779,
+   "lon": -80.259473606
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": 1.27,
+    "d_p_draw_pp": -1.24,
+    "d_p_away_pp": -0.02,
+    "d_xg_home": 0.254,
+    "d_xg_away": 0.178
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0445,
+    "away_rate_mult": 1.0186,
+    "d_p_home_pp": 1.41,
+    "d_p_draw_pp": -0.66,
+    "d_p_away_pp": -0.75,
+    "d_xg_home": 0.1,
+    "d_xg_away": 0.029,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0174,
+    "away_rate_mult": 1.0174,
+    "d_p_home_pp": 0.26,
+    "d_p_draw_pp": -0.24,
+    "d_p_away_pp": -0.02,
+    "d_xg_home": 0.04,
+    "d_xg_away": 0.026,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "reason": "failed validation; no live features"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 14.0,
+   "rest_a": 14.0,
+   "n21_h": 2.0,
+   "n21_a": 2.0,
+   "travel_km": 1596.918901870058,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 4.855,
+   "temp_c": 26.8
+  }
+ },
+ "confidence": {
+  "tier": "MODERATE",
+  "p_max": 0.5487814549686372,
+  "entropy_nats": 1.0007354748455235,
+  "text": "Most likely result has P = 54.9%. In the out-of-sample backtest, favourites priced 0.50\u20130.60 won 53.9% \u00b1 0.5% (n=9522, mean forecast 54.4%). Backtest RPS for USA: 0.2201; exact-score top-5 hit rate 42.9% (n=1770). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: MODERATE (entropy 1.001 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Inter Miami: no lineup information.",
+  "Inter Miami: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.",
+  "Columbus Crew: no lineup information.",
+  "Columbus Crew: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+ ],
+ "verdict": "Inter Miami 2\u20131 Columbus Crew is the single most probable scoreline at 9.1%: expected goals 2.26\u20131.47 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.043). Exact scores are inherently uncertain; the 1X2 split is 54.9%/21.6%/23.5%.",
+ "resolved": {
+  "home_key": "USA:Inter Miami",
+  "away_key": "USA:Columbus Crew",
+  "div": "USA",
+  "home_div": "USA",
+  "away_div": "USA",
+  "country": "USA"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: Columbus Crew at Inter Miami CF\nCompetition: MLS\nDate: 2026-11-21 18:00 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-11-16\n\nPRIMARY FINAL SCORE PREDICTION\n\nInter Miami CF 2 \u2013 1 Columbus Crew\n(modal exact score, probability 9.1%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 2.26\nAway: 1.47\nExpected Total: 3.72\nMedian Total: 4\n\nRESULT PROBABILITIES\n\nHome Win: 54.9%\nDraw: 21.6%\nAway Win: 23.5%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 2\u20131: 9.1%\n2. 1\u20131: 8.7%\n3. 2\u20132: 7.0%\n4. 3\u20131: 6.8%\n5. 2\u20130: 6.1%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 11.3%\nTotal 2 goals: 17.2%\nTotal 3 goals: 20.5%\nTotal 4 goals: 19.4%\nTotal 5+ goals: 31.7%\n\nBoth Teams Score: 69.9%\nClean sheet Inter Miami CF: 22.6% \u00b7 Clean sheet Columbus Crew: 10.1%\n\nMATCH INTELLIGENCE\n\n1. Inter Miami attack vs Columbus Crew defence: time-weighted strength gap multiplies Inter Miami's scoring rate by \u00d71.58 relative to an average pairing (from 37/36 decay-weighted matches).\n2. Columbus Crew attack vs Inter Miami defence: rate multiplier \u00d71.32 for the away side.\n3. Home advantage (USA, fitted from results): \u00d71.27 on Inter Miami's scoring rate.\n\nMODEL CONFIDENCE\n\nMost likely result has P = 54.9%. In the out-of-sample backtest, favourites priced 0.50\u20130.60 won 53.9% \u00b1 0.5% (n=9522, mean forecast 54.4%). Backtest RPS for USA: 0.2201; exact-score top-5 hit rate 42.9% (n=1770). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: MODERATE (entropy 1.001 nats of max 1.099).\nParameter-uncertainty 80% bands: xG Inter Miami CF 1.81\u20132.74, xG Columbus Crew 1.15\u20131.81; P(home win) 44.2%\u201365.8%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0021 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nInter Miami: NONE, fetched 2026-11-17 05:27 EST\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\nColumbus Crew: NONE, fetched 2026-11-17 05:27 EST\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nKEY ABSENCES\n\n- Inter Miami: Ezequiel Abadia-Reda \u2014 injury, Mid December 2026 [FotMob, 2026-11-17 05:27 EST]\n- Inter Miami: Fricio Caicedo \u2014 injury, Mid November 2026 [FotMob, 2026-11-17 05:27 EST]\n- Inter Miami: Mateo Silvetti \u2014 injury, Out for season [FotMob, 2026-11-17 05:27 EST]\n- Inter Miami: Tadeo Allende \u2014 injury, Mid November 2026 [FotMob, 2026-11-17 05:27 EST]\n- Columbus Crew: Wessam Abou Ali \u2014 injury, Unknown [FotMob, 2026-11-17 05:27 EST]\n\nWEATHER AT VENUE\n\nNu Stadium, Miami, Florida: 26.8 \u00b0C, wind 4.9 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-11-17 05:27 EST]\n\nREST & TRAVEL\n\nInter Miami: 14 days' rest, 2 matches in previous 21 days \u00b7 Columbus Crew: 14 days' rest, 2 in 21 days \u00b7 away travel 1596.9 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 54.9% / 21.6% / 23.5%, xG 2.26\u20131.47\n- Understat xG component (validated, in ensemble): home +1.27 pp, draw -1.24 pp, away -0.02 pp; xG +0.254 / +0.178\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +1.41 pp, draw -0.66 pp, away -0.75 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.26 pp, draw -0.24 pp, away -0.02 pp\n- lineup: not applied (failed validation; no live features)\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Inter Miami: no lineup information.\n- Inter Miami: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n- Columbus Crew: no lineup information.\n- Columbus Crew: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nFINAL VERDICT\n\nInter Miami 2\u20131 Columbus Crew is the single most probable scoreline at 9.1%: expected goals 2.26\u20131.47 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.043). Exact scores are inherently uncertain; the 1X2 split is 54.9%/21.6%/23.5%.\n",
+ "refresh_id": "7689ff40baf14bb2b4757f274925c9be",
+ "frozen_at": "2026-11-17T10:27:31+00:00",
+ "sha256": "9b0b088c3bcc8db60a632f251bb90c05302b2f72623d615ba85c4f1bdaaa58e1"
+}

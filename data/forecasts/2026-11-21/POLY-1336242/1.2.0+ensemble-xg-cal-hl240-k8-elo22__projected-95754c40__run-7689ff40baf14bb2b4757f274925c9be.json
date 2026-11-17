@@ -1,0 +1,647 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-11-16",
+ "input_fingerprint": "993fd34ff449f31124f2566178f1450e838372e88673562b22cc4d769b4c522d",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-11-17T10:27:11+00:00",
+ "fixture": {
+  "event_id": "POLY-1336242",
+  "home_name": "Parma Calcio 1913",
+  "away_name": "AS Roma",
+  "competition": "Serie A",
+  "subcategory": "sea",
+  "kickoff_utc": "2026-11-21T17:00:00+00:00",
+  "kickoff_local": "2026-11-21 12:00 EST",
+  "home_matched": "Parma",
+  "away_matched": "Roma",
+  "match_methods": {
+   "home": {
+    "source": "Parma Calcio 1913",
+    "matched": "Parma",
+    "method": "core-tokens",
+    "score": 0.97
+   },
+   "away": {
+    "source": "AS Roma",
+    "matched": "Roma",
+    "method": "core-tokens",
+    "score": 0.97
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.15839844616738458,
+  "p_draw": 0.2353410610966112,
+  "p_away": 0.6062604927360042,
+  "xg_home": 0.8591600192296953,
+  "xg_away": 1.8628223169301668,
+  "xg_total": 2.7219823361598623,
+  "median_total": 3,
+  "modal_score": {
+   "home": 0,
+   "away": 1,
+   "p": 0.11744056683783637
+  },
+  "top_scores": [
+   {
+    "home": 0,
+    "away": 1,
+    "p": 0.11744056683783637
+   },
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.11475108337270354
+   },
+   {
+    "home": 0,
+    "away": 2,
+    "p": 0.11425893278860616
+   },
+   {
+    "home": 1,
+    "away": 2,
+    "p": 0.10070757712413221
+   },
+   {
+    "home": 0,
+    "away": 3,
+    "p": 0.07071751306177733
+   }
+  ],
+  "btts": 0.5007863061290865,
+  "totals_over": {
+   "over_0.5": 0.9329886966854725,
+   "over_1.5": 0.7646940405235116,
+   "over_2.5": 0.5130137454400997,
+   "over_3.5": 0.29035436011863175,
+   "over_4.5": 0.13694379340702934,
+   "over_5.5": 0.05593484145847039,
+   "over_6.5": 0.019655044964636114
+  },
+  "total_buckets": {
+   "0-1": 0.2353059594764884,
+   "2": 0.2516802950834119,
+   "3": 0.2226593853214681,
+   "4": 0.15341056671160236,
+   "5+": 0.13694379340702934
+  },
+  "clean_sheet_home": 0.14836437137772435,
+  "clean_sheet_away": 0.41786062580771705,
+  "home_goal_dist": [
+   0.41786062580771705,
+   0.3712338051014262,
+   0.15715656625367438,
+   0.04327490682577495,
+   0.008826329727647091,
+   0.001430777158049479,
+   0.00019243435144971352,
+   2.4554774261298144e-05
+  ],
+  "away_goal_dist": [
+   0.14836437137772435,
+   0.29262774806268027,
+   0.2747721866179064,
+   0.16889414393839416,
+   0.0768613522300913,
+   0.027653481610551166,
+   0.008204388208970069,
+   0.002622327953682372
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    2
+   ],
+   "away_goals_80": [
+    0,
+    4
+   ],
+   "total_goals_80": [
+    1,
+    5
+   ],
+   "goal_diff_80": [
+    -3,
+    1
+   ]
+  },
+  "score_grid": [
+   [
+    0.067011,
+    0.117441,
+    0.114259,
+    0.070718,
+    0.032262,
+    0.011618,
+    0.003449
+   ],
+   [
+    0.050854,
+    0.114751,
+    0.100708,
+    0.062294,
+    0.028403,
+    0.010223,
+    0.003033
+   ],
+   [
+    0.02267,
+    0.044942,
+    0.045104,
+    0.026395,
+    0.012027,
+    0.004326,
+    0.001283
+   ],
+   [
+    0.006292,
+    0.012458,
+    0.011825,
+    0.007713,
+    0.003325,
+    0.001195,
+    0.000354
+   ],
+   [
+    0.001293,
+    0.002557,
+    0.002423,
+    0.001495,
+    0.000718,
+    0.000244,
+    7.2e-05
+   ],
+   [
+    0.000211,
+    0.000416,
+    0.000394,
+    0.000243,
+    0.00011,
+    4.2e-05,
+    1.2e-05
+   ],
+   [
+    2.9e-05,
+    5.6e-05,
+    5.3e-05,
+    3.3e-05,
+    1.5e-05,
+    5e-06,
+    2e-06
+   ]
+  ],
+  "mass_check": 1.0000000000000002
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.158605,
+  "p_draw": 0.23538,
+  "p_away": 0.6060150000000001,
+  "se": [
+   0.0008168520489507265,
+   0.0009486207239987961,
+   0.0010926134260913142
+  ],
+  "max_abs_dev_vs_exact": 0.00024549273600416033,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   0.6301145993993871,
+   1.112824501087417
+  ],
+  "xg_away_80": [
+   1.4215082049689807,
+   2.3333164757158897
+  ],
+  "p_home_80": [
+   0.10634717360531575,
+   0.24450807802631222
+  ],
+  "p_draw_80": [
+   0.18119224428402692,
+   0.2780194103976757
+  ],
+  "p_away_80": [
+   0.4800642415935285,
+   0.7068862901407689
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.22549283863392292,
+   0.18391634269636664
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.1579559362947377,
+   "p_draw": 0.24598856811430903,
+   "p_away": 0.5960554955909534,
+   "xg_home": 0.7540174357933115,
+   "xg_away": 1.7029403653345248,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.1557722060818013,
+   "p_draw": 0.2192974911691783,
+   "p_away": 0.6249303027490204,
+   "xg_home": 0.8041239334087856,
+   "xg_away": 1.8656656286151305,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.11684429070246369,
+   "p_draw": 0.2352905206732095,
+   "p_away": 0.6478651886243267,
+   "xg_home": 0.608394987868447,
+   "xg_away": 1.7644617759874819,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.3920297358330217,
+   "p_draw": 0.2669524536061198,
+   "p_away": 0.34101781056085867,
+   "xg_home": 1.324898515616634,
+   "xg_away": 1.2170432333835435,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.17987427744485157,
+   "p_draw": 0.23727372942954275,
+   "p_away": 0.5828519931256055,
+   "xg_home": 0.9029466957002369,
+   "xg_away": 1.8092557316578912,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Parma attack vs Roma defence: time-weighted strength gap multiplies Parma's scoring rate by \u00d70.54 relative to an average pairing (from 33/33 decay-weighted matches).",
+   "effect": 0.6248
+  },
+  {
+   "text": "Independent results-only Elo: Parma 1514 vs Roma 1824 (gap -311 before home advantage).",
+   "effect": 0.4658
+  },
+  {
+   "text": "Roma attack vs Parma defence: rate multiplier \u00d71.41 for the away side.",
+   "effect": 0.3459
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.15839844616738458,
+  "p_draw": 0.23534106109661118,
+  "p_away": 0.6062604927360041,
+  "xg_home": 0.8591600192296952,
+  "xg_away": 1.8628223169301668
+ },
+ "context": {
+  "fetched_at": "2026-11-17T10:27:11+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5749758",
+    "fetched_at": "2026-11-17T10:27:11+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "3-5-2",
+    "starters": [
+     {
+      "name": "Giovanni Daffara",
+      "pos": "G"
+     },
+     {
+      "name": "Enrico Del Prato",
+      "pos": "D"
+     },
+     {
+      "name": "Mariano Troilo",
+      "pos": "D"
+     },
+     {
+      "name": "Abdoulaye Ndiaye",
+      "pos": "D"
+     },
+     {
+      "name": "Benjam\u00edn Cremaschi",
+      "pos": "M"
+     },
+     {
+      "name": "Giovanni Fabbian",
+      "pos": "M"
+     },
+     {
+      "name": "Vincent Sierro",
+      "pos": "M"
+     },
+     {
+      "name": "Mandela Keita",
+      "pos": "M"
+     },
+     {
+      "name": "Emanuele Valeri",
+      "pos": "M"
+     },
+     {
+      "name": "Simone Lontani",
+      "pos": "F"
+     },
+     {
+      "name": "David Romero",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-11-17T10:27:11+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [
+     "Abdoulaye Ndiaye"
+    ],
+    "mean_xi_attack_index": -0.04,
+    "mean_continuity": -1.106,
+    "p_backup_gk": 0.83
+   },
+   "away": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "3-4-2-1",
+    "starters": [
+     {
+      "name": "Devis V\u00e1squez",
+      "pos": "G"
+     },
+     {
+      "name": "Leonardo Balerdi",
+      "pos": "D"
+     },
+     {
+      "name": "Evan N'Dicka",
+      "pos": "D"
+     },
+     {
+      "name": "Mario Hermoso",
+      "pos": "D"
+     },
+     {
+      "name": "Nahuel Molina",
+      "pos": "D"
+     },
+     {
+      "name": "Bryan Cristante",
+      "pos": "M"
+     },
+     {
+      "name": "Manu Kon\u00e9",
+      "pos": "M"
+     },
+     {
+      "name": "Wesley",
+      "pos": "M"
+     },
+     {
+      "name": "Mat\u00edas Soul\u00e9",
+      "pos": "M"
+     },
+     {
+      "name": "Rodrigo Mora",
+      "pos": "M"
+     },
+     {
+      "name": "Donyell Malen",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-11-17T10:27:11+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [
+     "Devis V\u00e1squez",
+     "Manu Kon\u00e9"
+    ],
+    "mean_xi_attack_index": 0.024,
+    "mean_continuity": -0.311,
+    "p_backup_gk": 1.0
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Abdoulaye Ndiaye",
+     "type": "suspension",
+     "expected_return": "Late November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5749758",
+     "fetched_at": "2026-11-17T10:27:11+00:00"
+    },
+    {
+     "player": "Diego Carlos",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5749758",
+     "fetched_at": "2026-11-17T10:27:11+00:00"
+    },
+    {
+     "player": "David Romero",
+     "type": "injury",
+     "expected_return": "Early December 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5749758",
+     "fetched_at": "2026-11-17T10:27:11+00:00"
+    },
+    {
+     "player": "Adri\u00e1n Bernab\u00e9",
+     "type": "injury",
+     "expected_return": "About 1-2 weeks",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5749758",
+     "fetched_at": "2026-11-17T10:27:11+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "Pierluigi Gollini",
+     "type": "injury",
+     "expected_return": "About 1-2 weeks",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5749758",
+     "fetched_at": "2026-11-17T10:27:11+00:00"
+    },
+    {
+     "player": "Devyne Rensch",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5749758",
+     "fetched_at": "2026-11-17T10:27:11+00:00"
+    },
+    {
+     "player": "Lorenzo Pellegrini",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5749758",
+     "fetched_at": "2026-11-17T10:27:11+00:00"
+    },
+    {
+     "player": "Paulo Dybala",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5749758",
+     "fetched_at": "2026-11-17T10:27:11+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 14,
+    "n21": 2,
+    "last_match": "2026-11-07"
+   },
+   "away": {
+    "rest_days": 14,
+    "n21": 2,
+    "last_match": "2026-11-07"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 361.2
+  },
+  "venue": {
+   "name": "Stadio Ennio Tardini",
+   "city": "Parma",
+   "lat": 44.794905165,
+   "lon": 10.338386893
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 1.51,
+   "temp_c": 10.4,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=44.795&longitude=10.338",
+   "fetched_at": "2026-11-17T10:27:11+00:00",
+   "lat": 44.794905165,
+   "lon": 10.338386893
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": 1.2,
+    "d_p_draw_pp": 0.88,
+    "d_p_away_pp": -2.09,
+    "d_xg_home": 0.055,
+    "d_xg_away": -0.021
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0238,
+    "away_rate_mult": 1.01,
+    "d_p_home_pp": 0.23,
+    "d_p_draw_pp": -0.14,
+    "d_p_away_pp": -0.09,
+    "d_xg_home": 0.02,
+    "d_xg_away": 0.018,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "home_rate_mult": 1.001,
+    "away_rate_mult": 1.0473,
+    "d_p_home_pp": -0.89,
+    "d_p_draw_pp": -0.97,
+    "d_p_away_pp": 1.86,
+    "d_xg_home": 0.001,
+    "d_xg_away": 0.086,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 14.0,
+   "rest_a": 14.0,
+   "n21_h": 2.0,
+   "n21_a": 2.0,
+   "travel_km": 361.17717471270504,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 1.51,
+   "temp_c": 10.4
+  }
+ },
+ "confidence": {
+  "tier": "MODERATE",
+  "p_max": 0.6062604927360042,
+  "entropy_nats": 0.9357444215389719,
+  "text": "Most likely result has P = 60.6%. In the out-of-sample backtest, favourites priced 0.60\u20130.70 won 66.4% \u00b1 0.7% (n=4069, mean forecast 64.2%). Backtest RPS for I1: 0.1939; exact-score top-5 hit rate 54.8% (n=1228). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: MODERATE (entropy 0.936 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Parma: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Parma: no Understat history for Abdoulaye Ndiaye \u2014 rated at the positional prior.",
+  "Roma: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Roma: no Understat history for Devis V\u00e1squez, Manu Kon\u00e9 \u2014 rated at the positional prior."
+ ],
+ "verdict": "Parma 0\u20131 Roma is the single most probable scoreline at 11.7%: expected goals 0.86\u20131.86 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.043). Exact scores are inherently uncertain; the 1X2 split is 15.8%/23.5%/60.6%.",
+ "resolved": {
+  "home_key": "Italy:Parma",
+  "away_key": "Italy:Roma",
+  "div": "I1",
+  "home_div": "I1",
+  "away_div": "I1",
+  "country": "Italy"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: AS Roma at Parma Calcio 1913\nCompetition: Serie A\nDate: 2026-11-21 12:00 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-11-16\n\nPRIMARY FINAL SCORE PREDICTION\n\nParma Calcio 1913 0 \u2013 1 AS Roma\n(modal exact score, probability 11.7%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 0.86\nAway: 1.86\nExpected Total: 2.72\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 15.8%\nDraw: 23.5%\nAway Win: 60.6%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 0\u20131: 11.7%\n2. 1\u20131: 11.5%\n3. 0\u20132: 11.4%\n4. 1\u20132: 10.1%\n5. 0\u20133: 7.1%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 23.5%\nTotal 2 goals: 25.2%\nTotal 3 goals: 22.3%\nTotal 4 goals: 15.3%\nTotal 5+ goals: 13.7%\n\nBoth Teams Score: 50.1%\nClean sheet Parma Calcio 1913: 14.8% \u00b7 Clean sheet AS Roma: 41.8%\n\nMATCH INTELLIGENCE\n\n1. Parma attack vs Roma defence: time-weighted strength gap multiplies Parma's scoring rate by \u00d70.54 relative to an average pairing (from 33/33 decay-weighted matches).\n2. Independent results-only Elo: Parma 1514 vs Roma 1824 (gap -311 before home advantage).\n3. Roma attack vs Parma defence: rate multiplier \u00d71.41 for the away side.\n\nMODEL CONFIDENCE\n\nMost likely result has P = 60.6%. In the out-of-sample backtest, favourites priced 0.60\u20130.70 won 66.4% \u00b1 0.7% (n=4069, mean forecast 64.2%). Backtest RPS for I1: 0.1939; exact-score top-5 hit rate 54.8% (n=1228). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: MODERATE (entropy 0.936 nats of max 1.099).\nParameter-uncertainty 80% bands: xG Parma Calcio 1913 0.63\u20131.11, xG AS Roma 1.42\u20132.33; P(home win) 10.6%\u201324.5%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0002 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nParma: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-11-17 05:27 EST (3-5-2)\n  Giovanni Daffara (G), Enrico Del Prato (D), Mariano Troilo (D), Abdoulaye Ndiaye (D), Benjam\u00edn Cremaschi (M), Giovanni Fabbian (M), Vincent Sierro (M), Mandela Keita (M), Emanuele Valeri (M), Simone Lontani (F), David Romero (F)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs -0.040 (log) \u00b7 continuity -1.11 \u00b7 P(backup GK) 83%\nRoma: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-11-17 05:27 EST (3-4-2-1)\n  Devis V\u00e1squez (G), Leonardo Balerdi (D), Evan N'Dicka (D), Mario Hermoso (D), Nahuel Molina (D), Bryan Cristante (M), Manu Kon\u00e9 (M), Wesley (M), Mat\u00edas Soul\u00e9 (M), Rodrigo Mora (M), Donyell Malen (F)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs +0.024 (log) \u00b7 continuity -0.31 \u00b7 P(backup GK) 100%\n\nKEY ABSENCES\n\n- Parma: Abdoulaye Ndiaye \u2014 suspension, Late November 2026 [FotMob, 2026-11-17 05:27 EST]\n- Parma: Diego Carlos \u2014 injury, Doubtful [FotMob, 2026-11-17 05:27 EST]\n- Parma: David Romero \u2014 injury, Early December 2026 [FotMob, 2026-11-17 05:27 EST]\n- Parma: Adri\u00e1n Bernab\u00e9 \u2014 injury, About 1-2 weeks [FotMob, 2026-11-17 05:27 EST]\n- Roma: Pierluigi Gollini \u2014 injury, About 1-2 weeks [FotMob, 2026-11-17 05:27 EST]\n- Roma: Devyne Rensch \u2014 injury, Late November 2026 [FotMob, 2026-11-17 05:27 EST]\n- Roma: Lorenzo Pellegrini \u2014 injury, Late November 2026 [FotMob, 2026-11-17 05:27 EST]\n- Roma: Paulo Dybala \u2014 injury, Doubtful [FotMob, 2026-11-17 05:27 EST]\n\nWEATHER AT VENUE\n\nStadio Ennio Tardini, Parma: 10.4 \u00b0C, wind 1.5 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-11-17 05:27 EST]\n\nREST & TRAVEL\n\nParma: 14 days' rest, 2 matches in previous 21 days \u00b7 Roma: 14 days' rest, 2 in 21 days \u00b7 away travel 361.2 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 15.8% / 23.5% / 60.6%, xG 0.86\u20131.86\n- Understat xG component (validated, in ensemble): home +1.20 pp, draw +0.88 pp, away -2.09 pp; xG +0.055 / -0.021\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.23 pp, draw -0.14 pp, away -0.09 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- lineup: NOT APPLIED (failed out-of-sample validation); would have moved home -0.89 pp, draw -0.97 pp, away +1.86 pp\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Parma: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Parma: no Understat history for Abdoulaye Ndiaye \u2014 rated at the positional prior.\n- Roma: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Roma: no Understat history for Devis V\u00e1squez, Manu Kon\u00e9 \u2014 rated at the positional prior.\n\nFINAL VERDICT\n\nParma 0\u20131 Roma is the single most probable scoreline at 11.7%: expected goals 0.86\u20131.86 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.043). Exact scores are inherently uncertain; the 1X2 split is 15.8%/23.5%/60.6%.\n",
+ "refresh_id": "7689ff40baf14bb2b4757f274925c9be",
+ "frozen_at": "2026-11-17T10:27:11+00:00",
+ "sha256": "d182d074a7cead9eff16d58b7371878c9b71152bcb37db05dbdb6468845ef52a"
+}
