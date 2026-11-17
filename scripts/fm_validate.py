@@ -43,3 +43,12 @@ from oraclefc.context import history as H
 df = store.load(); mp = H.map_understat(df)
 fmm = mp[mp.us_id >= F.OFFSET]; print("FotMob rows mapped to results:", round(float(fmm.match_id.notna().mean()), 3) if len(fmm) else None, "of", len(fmm)); print(fmm[fmm.match_id.isna()][["div", "home", "away", "datetime"]].head(12).to_string(index=False))
 lh, book = H.lineup_history(mp); print("lineup features rows", len(lh), "latest", book.last_date)
+print("\n=== club name check: FotMob league names vs Understat titles")
+for div, (lg, lid) in F.LEAGUES.items():
+    us = before[(before["div"] == div) & (before.season == 2026)]
+    titles = sorted(set(us.home) | set(us.away))
+    body = fotmob.league(lid, max_age_h=6) or {}
+    names = sorted({t["name"] for m in (body.get("fixtures") or {}).get("allMatches", []) for t in (m["home"], m["away"])})
+    miss = [n for n in names if match_team(n, titles).canonical is None]
+    hit = {match_team(n, titles).canonical for n in names} - {None}
+    print(div, "fotmob clubs", len(names), "unmatched:", miss, "| understat titles not hit:", sorted(set(titles) - hit))
