@@ -1,0 +1,22 @@
+name: Diagnose forecast coverage (temporary)
+on:
+  push:
+    branches: [diagnose-coverage]
+permissions:
+  contents: read
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12', cache: pip }
+      - run: pip install -r requirements.txt
+      - uses: actions/cache/restore@v4
+        with:
+          path: data/raw
+          key: raw-diagnose-${{ github.run_id }}
+          restore-keys: raw-
+      - run: python -m oraclefc.cli ingest
+      - run: PYTHONPATH=. python scripts/fm_validate.py
