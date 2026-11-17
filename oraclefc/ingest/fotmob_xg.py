@@ -62,8 +62,9 @@ def _stat(block: dict, key: str):
 
 def team_xg(details: dict):
     """(home xG, away xG) from the full-match team statistics, or None."""
-    for grp in (((details.get("content") or {}).get("stats") or {}).get("Periods") or {}).get("All", {}).get("stats", []):
-        for s in grp.get("stats", []):
+    periods = ((details.get("content") or {}).get("stats") or {}).get("Periods") or {}
+    for grp in (periods.get("All") or {}).get("stats") or []:
+        for s in (grp or {}).get("stats") or []:
             raw = s.get("rawStats") or []
             if s.get("key") == "expected_goals" and len(raw) == 2 and all(isinstance(x, dict) and isinstance(x.get("value"), (int, float)) for x in raw):
                 return float(raw[0]["value"]), float(raw[1]["value"])
