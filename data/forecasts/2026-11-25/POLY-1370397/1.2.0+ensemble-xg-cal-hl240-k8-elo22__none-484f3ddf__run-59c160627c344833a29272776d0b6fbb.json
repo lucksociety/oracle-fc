@@ -1,0 +1,569 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-11-16",
+ "input_fingerprint": "937aecb8f6d5c2dbf57f4a041c6b856dc02848ebbdf929f9c7318e10ebed359f",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-11-18T18:38:42+00:00",
+ "fixture": {
+  "event_id": "POLY-1370397",
+  "home_name": "Calcio Padova",
+  "away_name": "UC Sampdoria",
+  "competition": "Serie B",
+  "subcategory": "itsb",
+  "kickoff_utc": "2026-11-25T19:00:00+00:00",
+  "kickoff_local": "2026-11-25 14:00 EST",
+  "home_matched": "Padova",
+  "away_matched": "Sampdoria",
+  "match_methods": {
+   "home": {
+    "source": "Calcio Padova",
+    "matched": "Padova",
+    "method": "core-tokens",
+    "score": 0.97
+   },
+   "away": {
+    "source": "UC Sampdoria",
+    "matched": "Sampdoria",
+    "method": "fuzzy",
+    "score": 0.857
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.4413462853936705,
+  "p_draw": 0.2952354836604302,
+  "p_away": 0.2634182309458992,
+  "xg_home": 1.3478777338171972,
+  "xg_away": 0.988337179815959,
+  "xg_total": 2.3362149136331563,
+  "median_total": 2,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.14103192371958367
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.14103192371958367
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.12485901120967399
+   },
+   {
+    "home": 0,
+    "away": 0,
+    "p": 0.1008778401529644
+   },
+   {
+    "home": 0,
+    "away": 1,
+    "p": 0.08932400139621827
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.08827048672991779
+   }
+  ],
+  "btts": 0.48063890857640923,
+  "totals_over": {
+   "over_0.5": 0.8991221598470356,
+   "over_1.5": 0.6849391472411432,
+   "over_2.5": 0.4126199411103391,
+   "over_3.5": 0.2081718899239473,
+   "over_4.5": 0.08663549232535091,
+   "over_5.5": 0.03139549691388208,
+   "over_6.5": 0.009746532639901155
+  },
+  "total_buckets": {
+   "0-1": 0.31506085275885665,
+   "2": 0.2723192061308042,
+   "3": 0.20444805118639187,
+   "4": 0.12153639759859637,
+   "5+": 0.08663549232535091
+  },
+  "clean_sheet_home": 0.36649889433991345,
+  "clean_sheet_away": 0.2537400372366416,
+  "home_goal_dist": [
+   0.2537400372366416,
+   0.3561796535287497,
+   0.23883327366513787,
+   0.10526967455590543,
+   0.03456109395081418,
+   0.009028678173514139,
+   0.001957049415789811,
+   0.0004305394734471403
+  ],
+  "away_goal_dist": [
+   0.36649889433991345,
+   0.3749611413222774,
+   0.18298112567635863,
+   0.05850027232861675,
+   0.013932717858471607,
+   0.00264491075670144,
+   0.00041724182344095095,
+   6.369589421977454e-05
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    3
+   ],
+   "away_goals_80": [
+    0,
+    2
+   ],
+   "total_goals_80": [
+    0,
+    4
+   ],
+   "goal_diff_80": [
+    -1,
+    2
+   ]
+  },
+  "score_grid": [
+   [
+    0.100878,
+    0.089324,
+    0.045025,
+    0.014358,
+    0.0034,
+    0.00064,
+    0.0001
+   ],
+   [
+    0.124859,
+    0.141032,
+    0.063809,
+    0.020496,
+    0.004888,
+    0.000927,
+    0.000146
+   ],
+   [
+    0.086262,
+    0.08827,
+    0.046043,
+    0.014104,
+    0.003388,
+    0.000647,
+    0.000103
+   ],
+   [
+    0.03801,
+    0.039177,
+    0.019488,
+    0.006708,
+    0.001536,
+    0.000295,
+    4.7e-05
+   ],
+   [
+    0.012421,
+    0.012895,
+    0.006461,
+    0.00212,
+    0.000545,
+    0.0001,
+    1.6e-05
+   ],
+   [
+    0.003224,
+    0.003371,
+    0.001701,
+    0.000562,
+    0.000138,
+    2.8e-05,
+    4e-06
+   ],
+   [
+    0.000694,
+    0.000731,
+    0.000371,
+    0.000123,
+    3e-05,
+    6e-06,
+    1e-06
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.442905,
+  "p_draw": 0.29481,
+  "p_away": 0.262285,
+  "se": [
+   0.0011107208492123482,
+   0.0010195515286144199,
+   0.0009835943746662036
+  ],
+  "max_abs_dev_vs_exact": 0.0015587146063295032,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   0.9989374531774099,
+   1.7331106230819258
+  ],
+  "xg_away_80": [
+   0.709002961299471,
+   1.2929782895756374
+  ],
+  "p_home_80": [
+   0.3315596294473856,
+   0.5652390510215091
+  ],
+  "p_draw_80": [
+   0.24451139934306296,
+   0.3243614955387222
+  ],
+  "p_away_80": [
+   0.1789171956885005,
+   0.365616168104387
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.2184460261887462,
+   0.22298467586531184
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.4278417185954248,
+   "p_draw": 0.30207722749052074,
+   "p_away": 0.27008105391405446,
+   "xg_home": 1.2298209111712881,
+   "xg_away": 0.9181407179210764,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.45649891376396057,
+   "p_draw": 0.262732132322016,
+   "p_away": 0.28076895391402334,
+   "xg_home": 1.4497725497351068,
+   "xg_away": 1.0771358307783707,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.4123870464813475,
+   "p_draw": 0.31857372438077364,
+   "p_away": 0.2690392291378788,
+   "xg_home": 1.1457382856577252,
+   "xg_away": 0.8701446319538253,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.4437134029678178,
+   "p_draw": 0.2624481547419372,
+   "p_away": 0.293838442290245,
+   "xg_home": 1.4378342847898111,
+   "xg_away": 1.1189186091188883,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.43322077776064083,
+   "p_draw": 0.3015629938117723,
+   "p_away": 0.26521622842758685,
+   "xg_home": 1.2379955772730058,
+   "xg_away": 0.9061205039618037,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Sampdoria attack vs Padova defence: rate multiplier \u00d70.76 for the away side.",
+   "effect": 0.2719
+  },
+  {
+   "text": "Home advantage (Italy, fitted from results): \u00d71.17 on Padova's scoring rate.",
+   "effect": 0.156
+  },
+  {
+   "text": "Padova attack vs Sampdoria defence: time-weighted strength gap multiplies Padova's scoring rate by \u00d70.87 relative to an average pairing (from 25/32 decay-weighted matches).",
+   "effect": 0.1356
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.4413462853936705,
+  "p_draw": 0.2952354836604302,
+  "p_away": 0.2634182309458992,
+  "xg_home": 1.3478777338171972,
+  "xg_away": 0.988337179815959
+ },
+ "context": {
+  "fetched_at": "2026-11-18T18:38:42+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5967166",
+    "fetched_at": "2026-11-18T18:38:42+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "none",
+    "source": null,
+    "formation": null,
+    "starters": [],
+    "fetched_at": "2026-11-18T18:38:42+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   },
+   "away": {
+    "status": "none",
+    "source": null,
+    "formation": null,
+    "starters": [],
+    "fetched_at": "2026-11-18T18:38:42+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Kevin Lasagna",
+     "type": "injury",
+     "expected_return": "Day to day",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5967166",
+     "fetched_at": "2026-11-18T18:38:42+00:00"
+    },
+    {
+     "player": "Gianluca Caprari",
+     "type": "injury",
+     "expected_return": "Day to day",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5967166",
+     "fetched_at": "2026-11-18T18:38:42+00:00"
+    },
+    {
+     "player": "Cristian Buonaiuto",
+     "type": "injury",
+     "expected_return": "Day to day",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5967166",
+     "fetched_at": "2026-11-18T18:38:42+00:00"
+    },
+    {
+     "player": "Luca Zanimacchia",
+     "type": "injury",
+     "expected_return": "Day to day",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5967166",
+     "fetched_at": "2026-11-18T18:38:42+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "Salvatore Esposito",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5967166",
+     "fetched_at": "2026-11-18T18:38:42+00:00"
+    },
+    {
+     "player": "Alessandro Di Pardo",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5967166",
+     "fetched_at": "2026-11-18T18:38:42+00:00"
+    },
+    {
+     "player": "Lorenzo Insigne",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5967166",
+     "fetched_at": "2026-11-18T18:38:42+00:00"
+    },
+    {
+     "player": "Yari Verschaeren",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5967166",
+     "fetched_at": "2026-11-18T18:38:42+00:00"
+    },
+    {
+     "player": "Nikola Sekulov",
+     "type": "injury",
+     "expected_return": "Day to day",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5967166",
+     "fetched_at": "2026-11-18T18:38:42+00:00"
+    },
+    {
+     "player": "Fabio Depaoli",
+     "type": "injury",
+     "expected_return": "Early December 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5967166",
+     "fetched_at": "2026-11-18T18:38:42+00:00"
+    },
+    {
+     "player": "Danel Sinani",
+     "type": "injury",
+     "expected_return": "Day to day",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5967166",
+     "fetched_at": "2026-11-18T18:38:42+00:00"
+    },
+    {
+     "player": "Mattia Viti",
+     "type": "injury",
+     "expected_return": "Day to day",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5967166",
+     "fetched_at": "2026-11-18T18:38:42+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 18,
+    "n21": 1,
+    "last_match": "2026-11-07"
+   },
+   "away": {
+    "rest_days": 17,
+    "n21": 1,
+    "last_match": "2026-11-08"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 255.1
+  },
+  "venue": {
+   "name": "Stadio Comunale Euganeo",
+   "city": "Padova",
+   "lat": 45.432370635,
+   "lon": 11.858346462
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 1.825,
+   "temp_c": 7.3,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=45.432&longitude=11.858",
+   "fetched_at": "2026-11-18T18:38:42+00:00",
+   "lat": 45.432370635,
+   "lon": 11.858346462
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": -1.1,
+    "d_p_draw_pp": 1.85,
+    "d_p_away_pp": -0.76,
+    "d_xg_home": -0.102,
+    "d_xg_away": -0.083
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0197,
+    "away_rate_mult": 1.0083,
+    "d_p_home_pp": 0.53,
+    "d_p_draw_pp": -0.31,
+    "d_p_away_pp": -0.22,
+    "d_xg_home": 0.026,
+    "d_xg_away": 0.008,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "reason": "failed validation; no live features"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 18.0,
+   "rest_a": 17.0,
+   "n21_h": 1.0,
+   "n21_a": 1.0,
+   "travel_km": 255.12384353715947,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 1.825,
+   "temp_c": 7.3
+  }
+ },
+ "confidence": {
+  "tier": "LOW",
+  "p_max": 0.4413462853936705,
+  "entropy_nats": 1.0725735017508748,
+  "text": "Most likely result has P = 44.1%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.3% \u00b1 0.4% (n=16754, mean forecast 44.6%). Backtest RPS for I2: 0.2127; exact-score top-5 hit rate 52.5% (n=1230). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: LOW (entropy 1.073 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Padova: no lineup information.",
+  "Padova: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.",
+  "Sampdoria: no lineup information.",
+  "Sampdoria: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+ ],
+ "verdict": "Padova 1\u20131 Sampdoria is the single most probable scoreline at 14.1%: expected goals 1.35\u20130.99 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.043). Exact scores are inherently uncertain; the 1X2 split is 44.1%/29.5%/26.3%.",
+ "resolved": {
+  "home_key": "Italy:Padova",
+  "away_key": "Italy:Sampdoria",
+  "div": "I2",
+  "home_div": "I2",
+  "away_div": "I2",
+  "country": "Italy"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: UC Sampdoria at Calcio Padova\nCompetition: Serie B\nDate: 2026-11-25 14:00 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-11-16\n\nPRIMARY FINAL SCORE PREDICTION\n\nCalcio Padova 1 \u2013 1 UC Sampdoria\n(modal exact score, probability 14.1%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.35\nAway: 0.99\nExpected Total: 2.34\nMedian Total: 2\n\nRESULT PROBABILITIES\n\nHome Win: 44.1%\nDraw: 29.5%\nAway Win: 26.3%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 14.1%\n2. 1\u20130: 12.5%\n3. 0\u20130: 10.1%\n4. 0\u20131: 8.9%\n5. 2\u20131: 8.8%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 31.5%\nTotal 2 goals: 27.2%\nTotal 3 goals: 20.4%\nTotal 4 goals: 12.2%\nTotal 5+ goals: 8.7%\n\nBoth Teams Score: 48.1%\nClean sheet Calcio Padova: 36.6% \u00b7 Clean sheet UC Sampdoria: 25.4%\n\nMATCH INTELLIGENCE\n\n1. Sampdoria attack vs Padova defence: rate multiplier \u00d70.76 for the away side.\n2. Home advantage (Italy, fitted from results): \u00d71.17 on Padova's scoring rate.\n3. Padova attack vs Sampdoria defence: time-weighted strength gap multiplies Padova's scoring rate by \u00d70.87 relative to an average pairing (from 25/32 decay-weighted matches).\n\nMODEL CONFIDENCE\n\nMost likely result has P = 44.1%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.3% \u00b1 0.4% (n=16754, mean forecast 44.6%). Backtest RPS for I2: 0.2127; exact-score top-5 hit rate 52.5% (n=1230). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: LOW (entropy 1.073 nats of max 1.099).\nParameter-uncertainty 80% bands: xG Calcio Padova 1.00\u20131.73, xG UC Sampdoria 0.71\u20131.29; P(home win) 33.2%\u201356.5%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0016 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nPadova: NONE, fetched 2026-11-18 13:38 EST\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\nSampdoria: NONE, fetched 2026-11-18 13:38 EST\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nKEY ABSENCES\n\n- Padova: Kevin Lasagna \u2014 injury, Day to day [FotMob, 2026-11-18 13:38 EST]\n- Padova: Gianluca Caprari \u2014 injury, Day to day [FotMob, 2026-11-18 13:38 EST]\n- Padova: Cristian Buonaiuto \u2014 injury, Day to day [FotMob, 2026-11-18 13:38 EST]\n- Padova: Luca Zanimacchia \u2014 injury, Day to day [FotMob, 2026-11-18 13:38 EST]\n- Sampdoria: Salvatore Esposito \u2014 injury, Late November 2026 [FotMob, 2026-11-18 13:38 EST]\n- Sampdoria: Alessandro Di Pardo \u2014 injury, Late November 2026 [FotMob, 2026-11-18 13:38 EST]\n- Sampdoria: Lorenzo Insigne \u2014 injury, Late November 2026 [FotMob, 2026-11-18 13:38 EST]\n- Sampdoria: Yari Verschaeren \u2014 injury, Late November 2026 [FotMob, 2026-11-18 13:38 EST]\n- Sampdoria: Nikola Sekulov \u2014 injury, Day to day [FotMob, 2026-11-18 13:38 EST]\n- Sampdoria: Fabio Depaoli \u2014 injury, Early December 2026 [FotMob, 2026-11-18 13:38 EST]\n- Sampdoria: Danel Sinani \u2014 injury, Day to day [FotMob, 2026-11-18 13:38 EST]\n- Sampdoria: Mattia Viti \u2014 injury, Day to day [FotMob, 2026-11-18 13:38 EST]\n\nWEATHER AT VENUE\n\nStadio Comunale Euganeo, Padova: 7.3 \u00b0C, wind 1.8 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-11-18 13:38 EST]\n\nREST & TRAVEL\n\nPadova: 18 days' rest, 1 matches in previous 21 days \u00b7 Sampdoria: 17 days' rest, 1 in 21 days \u00b7 away travel 255.1 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 44.1% / 29.5% / 26.3%, xG 1.35\u20130.99\n- Understat xG component (validated, in ensemble): home -1.10 pp, draw +1.85 pp, away -0.76 pp; xG -0.102 / -0.083\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.53 pp, draw -0.31 pp, away -0.22 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- lineup: not applied (failed validation; no live features)\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Padova: no lineup information.\n- Padova: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n- Sampdoria: no lineup information.\n- Sampdoria: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nFINAL VERDICT\n\nPadova 1\u20131 Sampdoria is the single most probable scoreline at 14.1%: expected goals 1.35\u20130.99 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.043). Exact scores are inherently uncertain; the 1X2 split is 44.1%/29.5%/26.3%.\n",
+ "refresh_id": "59c160627c344833a29272776d0b6fbb",
+ "frozen_at": "2026-11-18T18:38:42+00:00",
+ "sha256": "bec4a0411d5c1772b95d294a95537f2f1128a6dd53ced144bd5dfd5d0d9f6e9c"
+}
