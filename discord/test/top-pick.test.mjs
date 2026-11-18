@@ -1,0 +1,12 @@
+import assert from "node:assert";
+import { topPick, CORE_BET_SUBCATEGORIES, SECOND_TIER_BET_SUBCATEGORIES } from "../src/worker.js";
+const m = { p_home: 0.60, p_draw: 0.22, p_away: 0.18 };
+assert.match(topPick("Arsenal", "Fulham", { p_home: 0.64, p_draw: 0.2, p_away: 0.16 }, m), /Top pick: Arsenal to win\*\* · model 64% · price about 60¢ · model rates it above the price/);
+assert.match(topPick("Arsenal", "Fulham", { p_home: 0.2, p_draw: 0.21, p_away: 0.59 }, { p_home: 0.2, p_draw: 0.2, p_away: 0.6 }), /Top pick: Fulham to win\*\* · model 59% · price about 60¢ · in line with the price/);
+assert.match(topPick("Arsenal", "Fulham", { p_home: 0.47, p_draw: 0.27, p_away: 0.26 }, m), /Top pick: Arsenal or draw\*\* · model 74% · price about 82¢ · price is above the model’s number/);
+assert.match(topPick("Arsenal", "Fulham", { p_home: 0.38, p_draw: 0.28, p_away: 0.34 }, m), /none, too close to call \(Arsenal 38%, draw 28%\)/);
+assert.match(topPick("Arsenal", "Fulham", { p_home: 0.64, p_draw: 0.2, p_away: 0.16 }, null), /no price available/);
+assert.equal(topPick("A", "B", null, m), null);
+assert.match(topPick("Arsenal", "Fulham", { p_home: 0.64, p_draw: 0.2, p_away: 0.16 }, m), /not a value bet/);
+assert.ok(SECOND_TIER_BET_SUBCATEGORIES.has("es2") && SECOND_TIER_BET_SUBCATEGORIES.has("bl2") && !CORE_BET_SUBCATEGORIES.has("es2") && !SECOND_TIER_BET_SUBCATEGORIES.has("elc"));
+console.log("top pick: ok");

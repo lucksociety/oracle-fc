@@ -1,5 +1,5 @@
 // Mirror of oraclefc/config.py CORE_BET_SUBCATEGORIES.
-const CORE_BET_SUBCATEGORIES = new Set(["epl","lal","bun","sea","fl1","ucl","por","ere","tur","bel1","scop","gre","gre1"]);
+const CORE_BET_SUBCATEGORIES = new Set(["epl","lal","bun","sea","fl1","ucl","por","ere","tur","bel1","scop","gre","gre1","es2","bl2"]); // core leagues plus the second tier (es2, bl2)
 // ORACLE FC dashboard. Forecast views never read market prices.
 // The Edge tab fetches prices only to compare against already-frozen forecasts.
 const $ = (s) => document.querySelector(s);

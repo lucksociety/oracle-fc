@@ -117,6 +117,11 @@ UEFA_CC = {
 # on 700+ test matches (experiments/backtests/latest_summary.json), and the five biggest also
 # have xG and line-up context. Every other supported competition is forecast but not bet.
 CORE_BET_SUBCATEGORIES = frozenset({"epl", "lal", "bun", "sea", "fl1", "ucl", "por", "ere", "tur", "bel1", "scop", "gre", "gre1"})
+# Second tier, shown as lower-confidence bets. Of the non-core leagues, only these two were ahead on the settled bets
+# once team totals and BTTS are excluded (LaLiga2 +16% on 32 bets, 2. Bundesliga +13% on 28). Championship (-29% on 29),
+# Brazil (-45% on 14) and MLS (-23% on 8) stay forecast-only. Small samples: re-check as results accumulate.
+SECOND_TIER_BET_SUBCATEGORIES = frozenset({"es2", "bl2"})
+BET_SUBCATEGORIES = CORE_BET_SUBCATEGORIES | SECOND_TIER_BET_SUBCATEGORIES
 CORE_BET_REASON = "outside the core leagues; bets are limited to the competitions with the deepest data and best backtest record"
 
 # Polymarket league code (subcategory) -> candidate data divisions (where the two teams are looked up)

@@ -343,3 +343,12 @@ def test_core_bet_leagues_are_the_validated_top_flights():
     assert not core_divs & set(config.SUPPLEMENTAL_DIVISIONS)
     for sub in ("el1", "pol", "arg", "mls", "uel", "fac"):
         assert sub not in config.CORE_BET_SUBCATEGORIES
+
+
+def test_second_tier_leagues_can_bet_and_the_losing_ones_cannot():
+    from oraclefc import config
+    assert config.SECOND_TIER_BET_SUBCATEGORIES == {"es2", "bl2"} and not config.SECOND_TIER_BET_SUBCATEGORIES & config.CORE_BET_SUBCATEGORIES
+    assert config.BET_SUBCATEGORIES == config.CORE_BET_SUBCATEGORIES | config.SECOND_TIER_BET_SUBCATEGORIES
+    for sub in ("elc", "bra", "mls", "el1", "arg"):
+        assert sub not in config.BET_SUBCATEGORIES
+    assert all(sub in config.SUBCATEGORY_DIVS for sub in config.BET_SUBCATEGORIES)
