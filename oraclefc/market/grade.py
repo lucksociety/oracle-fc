@@ -242,6 +242,11 @@ def grade_date(date: str, fetch=None, now: datetime | None = None) -> dict:
                          "url": r.get("source_url") or f"https://www.fotmob.com/match/{r['fm_match_id']}"}
         if fc:
             row["metrics"] = forecast_metrics(fc["simulation"], hg, ag)
+            ls = fc.get("lineup_simulation") or {}
+            if ls.get("applied") and not ls.get("validated"):  # same game: tested forecast vs lineup-adjusted
+                lm = forecast_metrics(ls, hg, ag)
+                row["metrics"]["lineup_log_loss"] = lm["log_loss"]
+                row["metrics"]["lineup_rps"] = lm["rps"]
             mk = bb.get("market_1x2")
             if mk:  # same game, same outcome: model vs the pre-kick-off no-vig market
                 row["market_1x2"] = mk
@@ -277,6 +282,20 @@ def _vs_market(fin: list[dict]) -> dict | None:
             "log_loss_diff": float(d.mean()), "log_loss_diff_se": se}
 
 
+def _vs_lineup(fin: list[dict]) -> dict | None:
+    """Tested forecast vs the lineup-adjusted simulator forecast on the games that have both.
+    Negative diff = the lineup-adjusted forecast was better."""
+    both = [g["metrics"] for g in fin if g["metrics"].get("lineup_log_loss") is not None]
+    if not both:
+        return None
+    d = np.array([m["lineup_log_loss"] - m["log_loss"] for m in both])
+    se = float(d.std(ddof=1) / math.sqrt(len(d))) if len(d) > 1 else None
+    return {"n": len(both), "model_log_loss": float(np.mean([m["log_loss"] for m in both])),
+            "lineup_log_loss": float(np.mean([m["lineup_log_loss"] for m in both])),
+            "model_rps": float(np.mean([m["rps"] for m in both])), "lineup_rps": float(np.mean([m["lineup_rps"] for m in both])),
+            "log_loss_diff": float(d.mean()), "log_loss_diff_se": se}
+
+
 def summarise(games: list[dict]) -> dict:
     fin = [g for g in games if g.get("metrics")]
     bets = [g for g in games if g.get("bet_result") in ("WIN", "LOSS")]
@@ -292,6 +311,7 @@ def summarise(games: list[dict]) -> dict:
                  "expected_units": round(sum(g["bet"]["ev_per_dollar"] for g in bets), 4),
                  "pending_or_unknown": sum(1 for g in games if g.get("bet") and g.get("bet_result") not in ("WIN", "LOSS"))},
         "vs_market": _vs_market(fin),
+        "vs_lineup": _vs_lineup(fin),
         "forecast": None if not fin else {
             "rps": float(np.mean([g["metrics"]["rps"] for g in fin])),
             "log_loss": float(np.mean([g["metrics"]["log_loss"] for g in fin])),

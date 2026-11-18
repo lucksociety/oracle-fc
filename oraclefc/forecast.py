@@ -176,6 +176,31 @@ class Engine:
         out += ctx.get("flags", [])
         return out
 
+    def _lineup_simulation(self, lx: dict, ctx, s: dict, r) -> dict:
+        """Lineup-adjusted score grid for the simulator and dashboard. Bets and grading of the
+        main forecast keep using ``simulation``; this block is graded separately (vs_lineup)."""
+        lus = (ctx or {}).get("lineups") or {}
+        basis = {sd: (lus.get(sd) or {}).get("status") or "none" for sd in ("home", "away")}
+        keys = ("p_home", "p_draw", "p_away", "xg_home", "xg_away", "xg_total", "btts", "totals_over",
+                "modal_score", "top_scores", "score_grid")
+        if lx.get("lineup_matrix") is None:
+            if ctx is None:
+                why = "Match context unavailable, so no lineup was read."
+            elif r.div not in {"E0", "SP1", "D1", "I1", "F1"}:
+                why = ("No player ratings exist for this league, so the lineup and formation are shown "
+                       "but cannot change the probabilities.")
+            else:
+                why = "No usable lineup or player history for this match yet."
+            return {"applied": False, "basis": basis, "reason": why}
+        from .context.live import LINEUP_SIM_SCALE
+        sl = s if lx.get("in_main_forecast") else summarise(lx["lineup_matrix"])
+        return {"applied": True, "validated": "lineup" in self.context_kept and "lineup" not in self.context_unvalidated,
+                "scale": 1.0 if lx.get("in_main_forecast") else LINEUP_SIM_SCALE, "basis": basis,
+                "home_rate_mult": lx.get("home_rate_mult"), "away_rate_mult": lx.get("away_rate_mult"),
+                "note": ("Starting-XI strength, continuity and backup-keeper adjustment at half the fitted size. "
+                         "It did not pass the out-of-sample test, so bets are not priced from it."),
+                **{k: sl[k] for k in keys}}
+
     @staticmethod
     def _prior(k):
         from .context.live import PRIORS
@@ -297,10 +322,11 @@ class Engine:
             xg_shift.pop("home_rate_mult"), xg_shift.pop("away_rate_mult")
         s0 = summarise(m)
         context = None
+        lx: dict = {}
         if self.with_context:
             try:
                 from .context import live
-                context, m = live.build(self, r, fixture, m, self.context_kept, self.context_shadow)
+                context, m = live.build(self, r, fixture, m, self.context_kept, self.context_shadow, extras=lx)
                 if xg_shift:
                     context["factor_shifts"].insert(0, xg_shift)
             except Exception as e:  # context must never block a forecast; it is reported instead
@@ -343,7 +369,7 @@ class Engine:
         out = {**base, "status": "ok", **({"forecast_only": True} if (self.supplemental and not supplemental_validation.eligible(self.supplemental_policy,fx.iloc[0]["div"])) or subcategory.lower()=="clf" else {}), "simulation": s, "monte_carlo": mc, "uncertainty": unc,
                "components": comp_summary, "key_factors": self._key_factors(r, fx, context),
                "base_simulation": {k: s0[k] for k in ("p_home", "p_draw", "p_away", "xg_home", "xg_away")},
-               "context": context,
+               "context": context, "lineup_simulation": self._lineup_simulation(lx, context, s, r),
                "confidence": self._confidence(s, r.div), "data_quality": dq, "verdict": verdict,
                "resolved": {"home_key": r.home_key, "away_key": r.away_key, "div": r.div,
                             "home_div": r.home_div, "away_div": r.away_div, "country": r.country}}

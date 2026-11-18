@@ -63,6 +63,7 @@ function card(fc) {
     ${ctxBlock(fc)}
     <details><summary>Score grid (home rows × away cols, %)</summary><table class="grid"><tr><th></th>${[0, 1, 2, 3, 4, 5].map((x) => `<th>${x}</th>`).join("")}</tr>${grid}</table></details>
     <details><summary>Full ORACLE FC report</summary><pre class="report">${esc(fc.report_text)}</pre></details>
+    <button class="ghost sim-open" data-sim="${esc(f.event_id || "")}">Simulate this match</button>
     <div class="muted">Matched as ${esc(f.home_matched)} v ${esc(f.away_matched)} · frozen ${fc.frozen_at ? etTime(fc.frozen_at) : "(not frozen)"}</div>`;
   return el;
 }
@@ -86,6 +87,7 @@ function render(res) {
   const uns = bad.filter((f) => f.status !== "pending_pipeline");
   $("#unsupported").innerHTML = uns.length ? `<div class="unsup"><h3>Not forecast (${uns.length}) — honest gaps</h3><ul>${uns.map((f) => `<li><b>${esc(f.fixture.home_name)} vs ${esc(f.fixture.away_name)}</b> (${esc(f.fixture.competition)}): ${esc((f.data_quality || []).filter((d) => /UNMATCHED|UNSUPPORTED|Kick-off/.test(d)).join(" ") || f.status)}</li>`).join("")}</ul></div>` : "";
   renderBestBets();
+  if (window.Sim) Sim.setForecasts(res);
   if (!res.forecasts.length) $("#status").textContent = "No Polymarket soccer games found for this date (Polymarket only lists active/upcoming events).";
 }
 
@@ -212,6 +214,7 @@ async function loadEdge(date) {
     const events = j.events.map((e) => ({ ...e, rows: e.rows.map((r) => ({ market: r.market === "Exact score" ? "Exact" : r.market, sel: r.selection, model: r.model_p, mkt: r.market_mid, ask: r.market_ask, edge: r.edge_vs_mid })) }));
     if (j.best_bets && j.best_bets.games) setBestBets(date, j.best_bets.games, j.market_fetched_at, "snapshot by the pipeline at");
     else setBestBets(date, [], null, "not captured");
+    if (window.Sim) Sim.setMarket(j.events);
     window.EDGE = { events, meta: `Pipeline price snapshot ${j.market_fetched_at ? etTime(j.market_fetched_at) : ""} · ${events.length} events.` };
     renderEdge(EDGE.events, EDGE.meta);
   } catch (_) {
@@ -317,6 +320,10 @@ document.querySelectorAll(".tabs button").forEach((b) => b.addEventListener("cli
   document.querySelectorAll(".tabs button").forEach((x) => x.classList.toggle("active", x === b));
   document.querySelectorAll(".tab").forEach((t) => t.classList.toggle("active", t.id === "tab-" + b.dataset.tab));
 }));
+document.addEventListener("click", (e) => {
+  const b = e.target.closest(".sim-open"); if (!b || !window.Sim) return;
+  document.querySelector('.tabs button[data-tab="simulator"]').click(); Sim.open(b.dataset.sim); window.scrollTo({ top: 0 });
+});
 $("#go").addEventListener("click", run);
 $("#live-edge").addEventListener("click", liveEdge);
 $("#min-edge").addEventListener("input", () => window.EDGE && renderEdge(EDGE.events, EDGE.meta));
