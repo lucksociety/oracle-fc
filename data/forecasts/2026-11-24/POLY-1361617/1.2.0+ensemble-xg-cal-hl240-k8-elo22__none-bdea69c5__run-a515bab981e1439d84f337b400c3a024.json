@@ -1,0 +1,585 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-11-16",
+ "input_fingerprint": "937aecb8f6d5c2dbf57f4a041c6b856dc02848ebbdf929f9c7318e10ebed359f",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-11-18T15:16:03+00:00",
+ "fixture": {
+  "event_id": "POLY-1361617",
+  "home_name": "Wolverhampton Wanderers FC",
+  "away_name": "Derby County FC",
+  "competition": "EFL Championship",
+  "subcategory": "elc",
+  "kickoff_utc": "2026-11-24T20:00:00+00:00",
+  "kickoff_local": "2026-11-24 15:00 EST",
+  "home_matched": "Wolves",
+  "away_matched": "Derby",
+  "match_methods": {
+   "home": {
+    "source": "Wolverhampton Wanderers FC",
+    "matched": "Wolves",
+    "method": "alias",
+    "score": 1.0
+   },
+   "away": {
+    "source": "Derby County FC",
+    "matched": "Derby",
+    "method": "core-tokens",
+    "score": 0.97
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.5856631804939699,
+  "p_draw": 0.23815952879418517,
+  "p_away": 0.1761772907118449,
+  "xg_home": 1.8610755130121752,
+  "xg_away": 0.9378387982889898,
+  "xg_total": 2.798914311301165,
+  "median_total": 3,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.11604172796725347
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.11604172796725347
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.10798158205346325
+   },
+   {
+    "home": 2,
+    "away": 0,
+    "p": 0.10524896209278535
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.10158417405940522
+   },
+   {
+    "home": 3,
+    "away": 0,
+    "p": 0.06516461840954473
+   }
+  ],
+  "btts": 0.5282553822847693,
+  "totals_over": {
+   "over_0.5": 0.9379168466248976,
+   "over_1.5": 0.7783848895935024,
+   "over_2.5": 0.5318692411116229,
+   "over_3.5": 0.3076642516752776,
+   "over_4.5": 0.14854668581707092,
+   "over_5.5": 0.062208552793362334,
+   "over_6.5": 0.022407815918470728
+  },
+  "total_buckets": {
+   "0-1": 0.22161511040649787,
+   "2": 0.24651564848187946,
+   "3": 0.2242049894363452,
+   "4": 0.15911756585820663,
+   "5+": 0.14854668581707092
+  },
+  "clean_sheet_home": 0.3852156855350168,
+  "clean_sheet_away": 0.14861208555531658,
+  "home_goal_dist": [
+   0.14861208555531658,
+   0.2930027379713236,
+   0.27472344069291843,
+   0.16857782586223563,
+   0.07666194372995018,
+   0.02759370464142488,
+   0.008198786438657298,
+   0.0026294751081734793
+  ],
+  "away_goal_dist": [
+   0.3852156855350168,
+   0.3748567217370702,
+   0.17362934618570802,
+   0.05226004166018913,
+   0.011638003962283828,
+   0.0020570135421515904,
+   0.0003011056964450648,
+   4.208168113544949e-05
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    4
+   ],
+   "away_goals_80": [
+    0,
+    2
+   ],
+   "total_goals_80": [
+    1,
+    5
+   ],
+   "goal_diff_80": [
+    -1,
+    3
+   ]
+  },
+  "score_grid": [
+   [
+    0.062083,
+    0.05155,
+    0.025225,
+    0.007671,
+    0.001724,
+    0.000307,
+    4.5e-05
+   ],
+   [
+    0.107982,
+    0.116042,
+    0.049786,
+    0.015104,
+    0.003388,
+    0.000602,
+    8.8e-05
+   ],
+   [
+    0.105249,
+    0.101584,
+    0.049775,
+    0.014264,
+    0.003192,
+    0.000566,
+    8.3e-05
+   ],
+   [
+    0.065165,
+    0.062748,
+    0.029041,
+    0.009262,
+    0.001958,
+    0.000346,
+    5.1e-05
+   ],
+   [
+    0.029766,
+    0.028596,
+    0.013204,
+    0.003978,
+    0.000936,
+    0.000156,
+    2.3e-05
+   ],
+   [
+    0.010743,
+    0.010297,
+    0.004743,
+    0.001426,
+    0.000317,
+    5.9e-05,
+    8e-06
+   ],
+   [
+    0.003199,
+    0.003059,
+    0.001406,
+    0.000422,
+    9.3e-05,
+    1.6e-05,
+    3e-06
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.585445,
+  "p_draw": 0.23808,
+  "p_away": 0.17647500000000002,
+  "se": [
+   0.0011015878357511942,
+   0.0009523599991599815,
+   0.0008524422982671613
+  ],
+  "max_abs_dev_vs_exact": 0.000297709288155118,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   1.4438980497590137,
+   2.3152131521246764
+  ],
+  "xg_away_80": [
+   0.7174275790638296,
+   1.1726065448775205
+  ],
+  "p_home_80": [
+   0.4742397048720397,
+   0.6901511510187812
+  ],
+  "p_draw_80": [
+   0.18783838679777545,
+   0.27663163316822786
+  ],
+  "p_away_80": [
+   0.11862121512370814,
+   0.25108025005455203
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.1871942252428151,
+   0.18233542970941474
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.5449650979765746,
+   "p_draw": 0.2468536911388981,
+   "p_away": 0.20818121088452723,
+   "xg_home": 1.7304523380964179,
+   "xg_away": 0.981141879852387,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.6158782416146964,
+   "p_draw": 0.21792637325873115,
+   "p_away": 0.16619538512657248,
+   "xg_home": 1.8980324613868313,
+   "xg_away": 0.8683290420458,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.4636066026924469,
+   "p_draw": 0.2727686782263438,
+   "p_away": 0.26362471908120944,
+   "xg_home": 1.4998537609293916,
+   "xg_away": 1.0717573393827726,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.4385110791555984,
+   "p_draw": 0.25962486351614494,
+   "p_away": 0.3018640573282566,
+   "xg_home": 1.4547061729599138,
+   "xg_away": 1.1612314373446975,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.5557314429662554,
+   "p_draw": 0.24254538733794698,
+   "p_away": 0.2017231696957976,
+   "xg_home": 1.7707291068858368,
+   "xg_away": 0.9764548172562996,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Independent results-only Elo: Wolves 1526 vs Derby 1351 (gap +175 before home advantage).",
+   "effect": 0.2629
+  },
+  {
+   "text": "Home advantage (England, fitted from results): \u00d71.23 on Wolves's scoring rate.",
+   "effect": 0.2068
+  },
+  {
+   "text": "Derby attack vs Wolves defence: rate multiplier \u00d70.81 for the away side.",
+   "effect": 0.2056
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.5856631804939699,
+  "p_draw": 0.23815952879418517,
+  "p_away": 0.1761772907118449,
+  "xg_home": 1.8610755130121752,
+  "xg_away": 0.9378387982889898
+ },
+ "context": {
+  "fetched_at": "2026-11-18T15:16:03+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5836953",
+    "fetched_at": "2026-11-18T15:16:03+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "none",
+    "source": null,
+    "formation": null,
+    "starters": [],
+    "fetched_at": "2026-11-18T15:16:03+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   },
+   "away": {
+    "status": "none",
+    "source": null,
+    "formation": null,
+    "starters": [],
+    "fetched_at": "2026-11-18T15:16:03+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Jean-Ricner Bellegarde",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836953",
+     "fetched_at": "2026-11-18T15:16:03+00:00"
+    },
+    {
+     "player": "Fer L\u00f3pez",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836953",
+     "fetched_at": "2026-11-18T15:16:03+00:00"
+    },
+    {
+     "player": "Jordan James",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836953",
+     "fetched_at": "2026-11-18T15:16:03+00:00"
+    },
+    {
+     "player": "Bertrand Traor\u00e9",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836953",
+     "fetched_at": "2026-11-18T15:16:03+00:00"
+    },
+    {
+     "player": "Boubacar Traor\u00e9",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836953",
+     "fetched_at": "2026-11-18T15:16:03+00:00"
+    },
+    {
+     "player": "Ra\u00fal Jim\u00e9nez",
+     "type": "injury",
+     "expected_return": "Early January 2027",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836953",
+     "fetched_at": "2026-11-18T15:16:03+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "Ryan Hedges",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836953",
+     "fetched_at": "2026-11-18T15:16:03+00:00"
+    },
+    {
+     "player": "Joe Ward",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836953",
+     "fetched_at": "2026-11-18T15:16:03+00:00"
+    },
+    {
+     "player": "Sammie Szmodics",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836953",
+     "fetched_at": "2026-11-18T15:16:03+00:00"
+    },
+    {
+     "player": "Sondre Klingen Lang\u00e5s",
+     "type": "injury",
+     "expected_return": "Early January 2027",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836953",
+     "fetched_at": "2026-11-18T15:16:03+00:00"
+    },
+    {
+     "player": "Eiran Cashin",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836953",
+     "fetched_at": "2026-11-18T15:16:03+00:00"
+    },
+    {
+     "player": "Charlie Taylor",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836953",
+     "fetched_at": "2026-11-18T15:16:03+00:00"
+    },
+    {
+     "player": "Craig Forsyth",
+     "type": "injury",
+     "expected_return": "Early January 2027",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836953",
+     "fetched_at": "2026-11-18T15:16:03+00:00"
+    },
+    {
+     "player": "Derry Murkin",
+     "type": "injury",
+     "expected_return": "Early December 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836953",
+     "fetched_at": "2026-11-18T15:16:03+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 17,
+    "n21": 2,
+    "last_match": "2026-11-07"
+   },
+   "away": {
+    "rest_days": 18,
+    "n21": 2,
+    "last_match": "2026-11-06"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 58.5
+  },
+  "venue": {
+   "name": "Molineux Stadium",
+   "city": "Wolverhampton, West Midlands",
+   "lat": 52.590238498,
+   "lon": -2.130433023
+  },
+  "weather": {
+   "precip_mm_2h": 0.4,
+   "wind_ms": 5.8,
+   "temp_c": 9.1,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=52.59&longitude=-2.13",
+   "fetched_at": "2026-11-18T15:16:03+00:00",
+   "lat": 52.590238498,
+   "lon": -2.130433023
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": -2.81,
+    "d_p_draw_pp": 1.22,
+    "d_p_away_pp": 1.58,
+    "d_xg_home": -0.058,
+    "d_xg_away": 0.051
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0071,
+    "away_rate_mult": 1.003,
+    "d_p_home_pp": 0.22,
+    "d_p_draw_pp": -0.13,
+    "d_p_away_pp": -0.09,
+    "d_xg_home": 0.013,
+    "d_xg_away": 0.003,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0088,
+    "away_rate_mult": 1.0088,
+    "d_p_home_pp": 0.16,
+    "d_p_draw_pp": -0.15,
+    "d_p_away_pp": -0.01,
+    "d_xg_home": 0.016,
+    "d_xg_away": 0.008,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "reason": "failed validation; no live features"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 17.0,
+   "rest_a": 18.0,
+   "n21_h": 2.0,
+   "n21_a": 2.0,
+   "travel_km": 58.4591579875261,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.4,
+   "wind_ms": 5.8,
+   "temp_c": 9.1
+  }
+ },
+ "confidence": {
+  "tier": "MODERATE",
+  "p_max": 0.5856631804939699,
+  "entropy_nats": 0.960941034187297,
+  "text": "Most likely result has P = 58.6%. In the out-of-sample backtest, favourites priced 0.50\u20130.60 won 53.9% \u00b1 0.5% (n=9522, mean forecast 54.4%). Backtest RPS for E1: 0.2179; exact-score top-5 hit rate 51.6% (n=1800). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: MODERATE (entropy 0.961 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Wolves: no lineup information.",
+  "Wolves: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.",
+  "Derby: no lineup information.",
+  "Derby: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+ ],
+ "verdict": "Wolves 1\u20131 Derby is the single most probable scoreline at 11.6%: expected goals 1.86\u20130.94 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.043). Exact scores are inherently uncertain; the 1X2 split is 58.6%/23.8%/17.6%.",
+ "resolved": {
+  "home_key": "England:Wolves",
+  "away_key": "England:Derby",
+  "div": "E1",
+  "home_div": "E1",
+  "away_div": "E1",
+  "country": "England"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: Derby County FC at Wolverhampton Wanderers FC\nCompetition: EFL Championship\nDate: 2026-11-24 15:00 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-11-16\n\nPRIMARY FINAL SCORE PREDICTION\n\nWolverhampton Wanderers FC 1 \u2013 1 Derby County FC\n(modal exact score, probability 11.6%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.86\nAway: 0.94\nExpected Total: 2.80\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 58.6%\nDraw: 23.8%\nAway Win: 17.6%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 11.6%\n2. 1\u20130: 10.8%\n3. 2\u20130: 10.5%\n4. 2\u20131: 10.2%\n5. 3\u20130: 6.5%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 22.2%\nTotal 2 goals: 24.7%\nTotal 3 goals: 22.4%\nTotal 4 goals: 15.9%\nTotal 5+ goals: 14.9%\n\nBoth Teams Score: 52.8%\nClean sheet Wolverhampton Wanderers FC: 38.5% \u00b7 Clean sheet Derby County FC: 14.9%\n\nMATCH INTELLIGENCE\n\n1. Independent results-only Elo: Wolves 1526 vs Derby 1351 (gap +175 before home advantage).\n2. Home advantage (England, fitted from results): \u00d71.23 on Wolves's scoring rate.\n3. Derby attack vs Wolves defence: rate multiplier \u00d70.81 for the away side.\n\nMODEL CONFIDENCE\n\nMost likely result has P = 58.6%. In the out-of-sample backtest, favourites priced 0.50\u20130.60 won 53.9% \u00b1 0.5% (n=9522, mean forecast 54.4%). Backtest RPS for E1: 0.2179; exact-score top-5 hit rate 51.6% (n=1800). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: MODERATE (entropy 0.961 nats of max 1.099).\nParameter-uncertainty 80% bands: xG Wolverhampton Wanderers FC 1.44\u20132.32, xG Derby County FC 0.72\u20131.17; P(home win) 47.4%\u201369.0%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0003 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nWolves: NONE, fetched 2026-11-18 10:16 EST\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\nDerby: NONE, fetched 2026-11-18 10:16 EST\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nKEY ABSENCES\n\n- Wolves: Jean-Ricner Bellegarde \u2014 injury, Doubtful [FotMob, 2026-11-18 10:16 EST]\n- Wolves: Fer L\u00f3pez \u2014 injury, Doubtful [FotMob, 2026-11-18 10:16 EST]\n- Wolves: Jordan James \u2014 injury, Late November 2026 [FotMob, 2026-11-18 10:16 EST]\n- Wolves: Bertrand Traor\u00e9 \u2014 injury, Late November 2026 [FotMob, 2026-11-18 10:16 EST]\n- Wolves: Boubacar Traor\u00e9 \u2014 injury, Late November 2026 [FotMob, 2026-11-18 10:16 EST]\n- Wolves: Ra\u00fal Jim\u00e9nez \u2014 injury, Early January 2027 [FotMob, 2026-11-18 10:16 EST]\n- Derby: Ryan Hedges \u2014 injury, Doubtful [FotMob, 2026-11-18 10:16 EST]\n- Derby: Joe Ward \u2014 injury, Doubtful [FotMob, 2026-11-18 10:16 EST]\n- Derby: Sammie Szmodics \u2014 injury, Doubtful [FotMob, 2026-11-18 10:16 EST]\n- Derby: Sondre Klingen Lang\u00e5s \u2014 injury, Early January 2027 [FotMob, 2026-11-18 10:16 EST]\n- Derby: Eiran Cashin \u2014 injury, Late November 2026 [FotMob, 2026-11-18 10:16 EST]\n- Derby: Charlie Taylor \u2014 injury, Doubtful [FotMob, 2026-11-18 10:16 EST]\n- Derby: Craig Forsyth \u2014 injury, Early January 2027 [FotMob, 2026-11-18 10:16 EST]\n- Derby: Derry Murkin \u2014 injury, Early December 2026 [FotMob, 2026-11-18 10:16 EST]\n\nWEATHER AT VENUE\n\nMolineux Stadium, Wolverhampton, West Midlands: 9.1 \u00b0C, wind 5.8 m/s, precipitation 0.4 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-11-18 10:16 EST]\n\nREST & TRAVEL\n\nWolves: 17 days' rest, 2 matches in previous 21 days \u00b7 Derby: 18 days' rest, 2 in 21 days \u00b7 away travel 58.5 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 58.6% / 23.8% / 17.6%, xG 1.86\u20130.94\n- Understat xG component (validated, in ensemble): home -2.81 pp, draw +1.22 pp, away +1.58 pp; xG -0.058 / +0.051\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.22 pp, draw -0.13 pp, away -0.09 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.16 pp, draw -0.15 pp, away -0.01 pp\n- lineup: not applied (failed validation; no live features)\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Wolves: no lineup information.\n- Wolves: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n- Derby: no lineup information.\n- Derby: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nFINAL VERDICT\n\nWolves 1\u20131 Derby is the single most probable scoreline at 11.6%: expected goals 1.86\u20130.94 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.043). Exact scores are inherently uncertain; the 1X2 split is 58.6%/23.8%/17.6%.\n",
+ "refresh_id": "a515bab981e1439d84f337b400c3a024",
+ "frozen_at": "2026-11-18T15:16:03+00:00",
+ "sha256": "e7ae068e054a8b91bf34d5905e3b8499d9fd76c5a89d95b18fada5e3cc8153c4"
+}
