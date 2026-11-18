@@ -111,7 +111,7 @@ def edge_for_date(date: str, take_snapshot: bool = True) -> dict:
             bb_row.update(verdict="NO BET", reason="prices were fetched after kick-off (in-play), not pre-match")
         elif fc.get("forecast_only"):
             bb_row.update(verdict="NO BET", reason="supplemental league forecasts pending calibration")
-        elif str(fc["fixture"].get("subcategory") or "").lower() not in config.CORE_BET_SUBCATEGORIES:
+        elif str(fc["fixture"].get("subcategory") or "").lower() not in config.BET_SUBCATEGORIES:
             bb_row.update(verdict="NO BET", reason=config.CORE_BET_REASON)
         elif "selections" not in mk:
             bb_row.update(verdict="NO BET", reason="snapshot has no buyable-side data")
@@ -119,6 +119,7 @@ def edge_for_date(date: str, take_snapshot: bool = True) -> dict:
             selections = [s for s in mk["selections"] if str(s.get("market_id") or "").startswith("POLY-")]
             bb_row.update(best_bet(selections, fc["simulation"]["score_grid"], fc["simulation"],
                                    components=fc.get("components")))
+            bb_row["league_tier"] = 1 if str(fc["fixture"].get("subcategory") or "").lower() in config.CORE_BET_SUBCATEGORIES else 2
         e["best_bet"] = {k: v for k, v in bb_row.items() if k not in ("home", "away", "competition", "kickoff_utc")}
         out["events"].append(e)
     for r in rows:

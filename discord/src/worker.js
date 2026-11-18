@@ -1,6 +1,21 @@
 // Owner policy applies to live output and previously cached cards alike.
 // Mirror of oraclefc/config.py CORE_BET_SUBCATEGORIES.
 export const CORE_BET_SUBCATEGORIES = new Set(["epl","lal","bun","sea","fl1","ucl","por","ere","tur","bel1","scop","gre","gre1"]);
+// Mirror of oraclefc/config.py SECOND_TIER_BET_SUBCATEGORIES: bets allowed, shown as lower confidence.
+export const SECOND_TIER_BET_SUBCATEGORIES = new Set(["es2","bl2"]);
+/** The model's most likely result as a plain pick, shown when no value bet qualifies. `sim` has p_home/p_draw/p_away; `market` the no-vig 1X2. */
+export function topPick(home, away, sim, market) {
+  if (!sim || ![sim.p_home, sim.p_draw, sim.p_away].every(Number.isFinite)) return null;
+  const isHome = sim.p_home >= sim.p_away, team = clip(isHome ? home : away, 40), pf = isHome ? sim.p_home : sim.p_away;
+  const mf = market && Number.isFinite(market.p_home) ? (isHome ? market.p_home : market.p_away) : null;
+  const line = (label, p, m) => {
+    const price = !Number.isFinite(m) ? "no price available" : `price about ${(m * 100).toFixed(0)}¢` + (p - m >= 0.02 ? " · model rates it above the price" : p - m <= -0.02 ? " · price is above the model’s number" : " · in line with the price");
+    return `🎯 **Top pick: ${label}** · model ${(p * 100).toFixed(0)}% · ${price}\n_A pick is the model’s most likely result, not a value bet._`;
+  };
+  if (pf >= 0.55) return line(`${team} to win`, pf, mf);
+  if (pf + sim.p_draw >= 0.70) return line(`${team} or draw`, pf + sim.p_draw, mf === null || !Number.isFinite(market.p_draw) ? null : mf + market.p_draw);
+  return `🎯 Top pick: none, too close to call (${team} ${(pf * 100).toFixed(0)}%, draw ${(sim.p_draw * 100).toFixed(0)}%)`;
+}
 export const womensFixture = f => /women|female|femeni|femini|frauen|kvinner|vrouwen/i.test([f.competition,f.home_name,f.away_name,f.home,f.away].filter(Boolean).join(' ')) || ['uwcl','uwec','nwsl','wsl'].includes(String(f.subcategory||'').toLowerCase());
 import BB from '../../web/bestbet.js';
 // Encrypt short-lived interaction credentials before putting them in public workflow inputs.
@@ -202,7 +217,7 @@ export function allGames(scan) {
     if (!id) continue;
     const ok = f.status === "ok" && f.simulation;
     rows.set(id, { event_id: id, home: fx.home_name || fx.home, away: fx.away_name || fx.away, competition: fx.competition,
-      kickoff_utc: fx.kickoff_utc, sim: ok ? f.simulation : null, forecastOnly: f.forecast_only === true, outsideCore: !CORE_BET_SUBCATEGORIES.has(String(fx.subcategory || "").toLowerCase()),
+      kickoff_utc: fx.kickoff_utc, sim: ok ? f.simulation : null, forecastOnly: f.forecast_only === true, outsideCore: !CORE_BET_SUBCATEGORIES.has(String(fx.subcategory || "").toLowerCase()) && !SECOND_TIER_BET_SUBCATEGORIES.has(String(fx.subcategory || "").toLowerCase()), secondTier: SECOND_TIER_BET_SUBCATEGORIES.has(String(fx.subcategory || "").toLowerCase()),
       why: ok ? null : forecastReason(f), g: byId.get(id) || null });
   }
   for (const g of scan.games) if (!womensFixture(g) && !rows.has(g.event_id)) {
@@ -239,7 +254,9 @@ export function gameEmbed(r, now = Date.now()) {
     lines.push(`🔮 **${s.modal_score ? sc(s.modal_score) : "?"}**${s.modal_score?.p != null ? ` (${pct(s.modal_score.p)})` : ""}${top ? ` · next: ${top}` : ""}`);
     lines.push(`H/D/A **${pct(s.p_home, 0)} / ${pct(s.p_draw, 0)} / ${pct(s.p_away, 0)}** · xG ${Number(s.xg_home).toFixed(2)}–${Number(s.xg_away).toFixed(2)}`);
   } else lines.push(`🔮 ${r.why}`);
-  lines.push(r.forecastOnly ? "**NO BET** · forecast only; competition calibration pending" : r.outsideCore ? "**NO BET** · forecast only; bets are limited to the core leagues" : pickText(g));
+  lines.push(r.forecastOnly ? "**NO BET** · forecast only; competition calibration pending" : r.outsideCore ? "**NO BET** · forecast only; bets are limited to the core leagues" : pickText(g) + (isBet(g) && r.secondTier ? "\n_Lower-confidence league: smaller record behind this one._" : ""));
+  const started = ko && ko * 1000 <= Date.now();
+  if (s && !started && res?.status !== "final" && !(isBet(g) && !r.forecastOnly && !r.outsideCore)) { const tp = topPick(r.home, r.away, s, g?.market_1x2); if (tp) lines.push(tp); }
   const rt = resultText(r);
   if (rt) lines.push(rt);
   else if (g?.locked) lines.push(`🔒 locked at the pre-kick-off price (${String(g.locked_from_snapshot || "").slice(11, 16)} UTC)`);
