@@ -193,7 +193,11 @@ class LineupModel:
 
 
 # ------------------------------------------------------------------ main entry point
-def build(engine, r, fixture: dict, base_matrix: np.ndarray, kept: dict, shadow: dict | None = None):
+LINEUP_SIM_SCALE = 0.5  # lineup-adjusted simulator grid uses the same 50% size as the owner opt-in
+
+
+def build(engine, r, fixture: dict, base_matrix: np.ndarray, kept: dict, shadow: dict | None = None,
+          extras: dict | None = None):
     """Return the context block for one resolved fixture: raw information, features,
     the per-family log-rate deltas, the adjusted matrix and per-factor shifts.
     ``kept``: {family: coefficient list} for families that passed validation."""
@@ -263,7 +267,7 @@ def build(engine, r, fixture: dict, base_matrix: np.ndarray, kept: dict, shadow:
                 unavailable_pids.add(pid)
             else:
                 start_prob[pid] = 0.5
-        xi_named = [{"name": p["name"], "pos": p["pos"]} for p in t.get("starters", [])] if t else []
+        xi_named = [{"name": p["name"], "pos": p["pos"], "shirt": p.get("shirt")} for p in t.get("starters", [])] if t else []
         mode = {"confirmed": "confirmed", "projected": "projected"}.get(status, "none") if xi_named else "none"
         info = {"status": mode, "source": (fm or {}).get("lineup_source") if xi_named else None,
                 "formation": t.get("formation") if t else None, "starters": xi_named,
@@ -383,6 +387,19 @@ def build(engine, r, fixture: dict, base_matrix: np.ndarray, kept: dict, shadow:
                      lineup_mix[0] + dh_tot, lineup_mix[1] + da_tot).mean(0)
     else:
         final = tilt(base, dh_tot, da_tot)
+    # Lineup-adjusted grid for the simulator/dashboard only. It never replaces ``final`` (the
+    # forecast bets are priced from) unless the lineup family is validated or opted in above.
+    if extras is not None:
+        if "lineup" in kept:
+            extras.update({"lineup_matrix": final, "in_main_forecast": True})
+        elif shadow and "lineup" in shadow:
+            res = family("lineup", [LINEUP_SIM_SCALE * b for b in shadow["lineup"]])
+            if res is not None:
+                _, ldh, lda = res
+                extras.update({"lineup_matrix": tilt(np.broadcast_to(base, (len(ldh),) + base.shape),
+                                                     ldh + dh_tot, lda + da_tot).mean(0),
+                               "home_rate_mult": round(math.exp(float(np.mean(ldh))), 4),
+                               "away_rate_mult": round(math.exp(float(np.mean(lda))), 4), "in_main_forecast": False})
     ctx["factor_shifts"] = shifts
     mh = float(np.mean(lineup_mix[0])) if lineup_mix is not None else 0.0
     ma = float(np.mean(lineup_mix[1])) if lineup_mix is not None else 0.0

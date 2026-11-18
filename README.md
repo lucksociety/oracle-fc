@@ -37,6 +37,14 @@ see the weakness analysis in the backtest report.
 
 On top of the ensemble, `oraclefc/calibrate.py` reshapes each score matrix as Q ∝ P^(1+t)·exp(dh·h + da·a + dd·1[draw] + d0·1[0-0]), fitted by maximum likelihood on walk-forward **out-of-sample** matrices and **results only** (`python -m oraclefc.run_calibration`, weekly in the backtest workflow; season-ahead nested in the backtest). Adopted variant `global+sharpen`: about +4.7% home and away goals, a small draw lift (+5.6% relative) and slight sharpening (t = 0.06). Over 2023-07-01 → 2026-10-28 (n = 40,603): ΔRPS −0.00008 [−0.00014, −0.00002], Δ1X2 log loss −0.00058 [−0.00082, −0.00033], Δexact-score log score −0.00106 [−0.00156, −0.00052]. Why it was needed: the base ensemble **over-stated unders and BTTS-No by 1–3 pp** in exactly the probability bands the best-bet rule trades, and slightly under-stated draws. Per-division variants overfit and were rejected. See [docs/CALIBRATION.md](docs/CALIBRATION.md).
 
+## Match simulator (dashboard front page, since 2026-11-18)
+
+The dashboard opens on a **Simulator** tab (`web/simulator.js`). Pick a match and it draws both starting elevens as circles in their real formation, plays one match, and runs 100,000 simulations.
+
+* **Scores come from the forecast.** Every simulated final score is drawn from the frozen score grid, so the 100,000-run percentages equal the forecast within about ±0.3 points. The minute-by-minute match is then written to fit a drawn score; forwards take most shots, so the formation decides who shoots.
+* **Line-ups.** Each forecast now carries a second grid, `lineup_simulation`: the tested forecast adjusted for the starting eleven (strength of the XI, continuity, backup keeper) at half the fitted size. The simulator uses it when "Use lineups" is ticked. It exists only for the top-five leagues, where player ratings exist; elsewhere the real line-up and formation are drawn but the probabilities are unchanged, and the page says so. Formation itself has no fitted effect on probabilities.
+* **Bets are not priced from it.** The lineup adjustment failed the out-of-sample test (see [docs/CONTEXT_BACKTEST.md](docs/CONTEXT_BACKTEST.md)), so `simulation` remains the forecast that the bet rule, the Edge tab and the market benchmark use. Grading reports both on the same games (`vs_lineup` in `data/results/*.json` and `record.json`; negative `log_loss_diff` = line-ups helped).
+
 ## Best Bets (post-hoc, after freezing)
 
 For every game the Edge layer (`oraclefc/market/best_bet.py`, mirrored in `web/bestbet.js`) prices every **buyable** Polymarket side we can model from the frozen score grid and picks at most **one** bet. Prices come straight from Polymarket's public APIs (`oraclefc/market/polymarket_prices.py`): Gamma for the match's markets, the CLOB order book for the executable ask/bid.
