@@ -1,0 +1,561 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-11-16",
+ "input_fingerprint": "937aecb8f6d5c2dbf57f4a041c6b856dc02848ebbdf929f9c7318e10ebed359f",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-11-18T01:05:48+00:00",
+ "fixture": {
+  "event_id": "POLY-1339495",
+  "home_name": "Oxford United FC",
+  "away_name": "Wycombe Wanderers FC",
+  "competition": "League One",
+  "subcategory": "el1",
+  "kickoff_utc": "2026-11-21T15:00:00+00:00",
+  "kickoff_local": "2026-11-21 10:00 EST",
+  "home_matched": "Oxford",
+  "away_matched": "Wycombe",
+  "match_methods": {
+   "home": {
+    "source": "Oxford United FC",
+    "matched": "Oxford",
+    "method": "alias",
+    "score": 1.0
+   },
+   "away": {
+    "source": "Wycombe Wanderers FC",
+    "matched": "Wycombe",
+    "method": "core-tokens",
+    "score": 0.97
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.5237296957290744,
+  "p_draw": 0.25875245636250127,
+  "p_away": 0.2175178479084245,
+  "xg_home": 1.6819917161774558,
+  "xg_away": 1.015483296502195,
+  "xg_total": 2.697475012679651,
+  "median_total": 3,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.12619712473412947
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.12619712473412947
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.10792388936000245
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.09963262465308209
+   },
+   {
+    "home": 2,
+    "away": 0,
+    "p": 0.09469113351316918
+   },
+   {
+    "home": 0,
+    "away": 0,
+    "p": 0.06882837666057075
+   }
+  ],
+  "btts": 0.5354990954967395,
+  "totals_over": {
+   "over_0.5": 0.9311716233394293,
+   "over_1.5": 0.7606767327882069,
+   "over_2.5": 0.506858502384352,
+   "over_3.5": 0.28501250835925185,
+   "over_4.5": 0.13313846627503279,
+   "over_5.5": 0.05396023168723198,
+   "over_6.5": 0.018743630842678598
+  },
+  "total_buckets": {
+   "0-1": 0.23932326721179303,
+   "2": 0.253818230403855,
+   "3": 0.2218459940251002,
+   "4": 0.15187404208421906,
+   "5+": 0.13313846627503279
+  },
+  "clean_sheet_home": 0.35499581940287145,
+  "clean_sheet_away": 0.17833346176095982,
+  "home_goal_dist": [
+   0.17833346176095982,
+   0.31786904606947536,
+   0.2687162652833428,
+   0.14829653086622457,
+   0.06056712130086719,
+   0.019556964066747395,
+   0.005206500597190797,
+   0.0014541100551921807
+  ],
+  "away_goal_dist": [
+   0.35499581940287145,
+   0.37627581020250644,
+   0.1890250994575271,
+   0.06156866734165914,
+   0.014806652176291764,
+   0.002818276225349792,
+   0.0004428909587297578,
+   6.678423506469567e-05
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    3
+   ],
+   "away_goals_80": [
+    0,
+    2
+   ],
+   "total_goals_80": [
+    1,
+    5
+   ],
+   "goal_diff_80": [
+    -1,
+    3
+   ]
+  },
+  "score_grid": [
+   [
+    0.068828,
+    0.062571,
+    0.03293,
+    0.010803,
+    0.002612,
+    0.000499,
+    7.8e-05
+   ],
+   [
+    0.107924,
+    0.126197,
+    0.058766,
+    0.019273,
+    0.004659,
+    0.000889,
+    0.00014
+   ],
+   [
+    0.094691,
+    0.099633,
+    0.053049,
+    0.016467,
+    0.003979,
+    0.000759,
+    0.000119
+   ],
+   [
+    0.052644,
+    0.055376,
+    0.027908,
+    0.009661,
+    0.00221,
+    0.000421,
+    6.6e-05
+   ],
+   [
+    0.021564,
+    0.022676,
+    0.011425,
+    0.003744,
+    0.000955,
+    0.000172,
+    2.7e-05
+   ],
+   [
+    0.00697,
+    0.007327,
+    0.003691,
+    0.001209,
+    0.000292,
+    5.9e-05,
+    9e-06
+   ],
+   [
+    0.001856,
+    0.001951,
+    0.000982,
+    0.000322,
+    7.8e-05,
+    1.5e-05,
+    2e-06
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.52234,
+  "p_draw": 0.25878,
+  "p_away": 0.21888000000000002,
+  "se": [
+   0.0011169174642738826,
+   0.0009793184150213863,
+   0.0009245851653579567
+  ],
+  "max_abs_dev_vs_exact": 0.001389695729074325,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   1.3019554409779683,
+   2.0959949942311775
+  ],
+  "xg_away_80": [
+   0.7743659800008696,
+   1.2726109584104741
+  ],
+  "p_home_80": [
+   0.41472236407761626,
+   0.6316531536966968
+  ],
+  "p_draw_80": [
+   0.21237096372540212,
+   0.28889313161100283
+  ],
+  "p_away_80": [
+   0.14965878307165487,
+   0.3020767518799875
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.1887823694368124,
+   0.18436507252881368
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.5294145526494061,
+   "p_draw": 0.2530716683866078,
+   "p_away": 0.21751377896398613,
+   "xg_home": 1.670165353365059,
+   "xg_away": 0.9850291754821323,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.5140216217050291,
+   "p_draw": 0.24681352800202086,
+   "p_away": 0.23916485029295004,
+   "xg_home": 1.6309712589018774,
+   "xg_away": 1.0294122587240941,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.5658636678960615,
+   "p_draw": 0.2494644950455767,
+   "p_away": 0.1846718370583618,
+   "xg_home": 1.728454135036033,
+   "xg_away": 0.8879962272635479,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.4347520086549741,
+   "p_draw": 0.258716772972445,
+   "p_away": 0.3065312183725808,
+   "xg_home": 1.457452497512889,
+   "xg_away": 1.1811522624827004,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.5280072273661782,
+   "p_draw": 0.2533303357313221,
+   "p_away": 0.21866243690249965,
+   "xg_home": 1.666346510876075,
+   "xg_away": 0.9872344467749643,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Home advantage (England, fitted from results): \u00d71.23 on Oxford's scoring rate.",
+   "effect": 0.2068
+  },
+  {
+   "text": "Wycombe attack vs Oxford defence: rate multiplier \u00d70.82 for the away side.",
+   "effect": 0.2017
+  },
+  {
+   "text": "Independent results-only Elo: Oxford 1396 vs Wycombe 1312 (gap +84 before home advantage).",
+   "effect": 0.1259
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.5237296957290744,
+  "p_draw": 0.25875245636250127,
+  "p_away": 0.2175178479084245,
+  "xg_home": 1.6819917161774558,
+  "xg_away": 1.015483296502195
+ },
+ "context": {
+  "fetched_at": "2026-11-18T01:05:48+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5837276",
+    "fetched_at": "2026-11-18T01:05:48+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "4-2-3-1",
+    "starters": [
+     {
+      "name": "Jamie Cumming",
+      "pos": "G"
+     },
+     {
+      "name": "Peter Kioso",
+      "pos": "D"
+     },
+     {
+      "name": "James Golding",
+      "pos": "D"
+     },
+     {
+      "name": "Sam Long",
+      "pos": "D"
+     },
+     {
+      "name": "Jack Currie",
+      "pos": "D"
+     },
+     {
+      "name": "Cameron Brannagan",
+      "pos": "M"
+     },
+     {
+      "name": "Harrison Bradney",
+      "pos": "M"
+     },
+     {
+      "name": "Aidomo Emakhu",
+      "pos": "F"
+     },
+     {
+      "name": "Louis Griffiths",
+      "pos": "M"
+     },
+     {
+      "name": "Ruben Roosken",
+      "pos": "F"
+     },
+     {
+      "name": "Leo Snowden",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-11-18T01:05:48+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   },
+   "away": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "4-4-2",
+    "starters": [
+     {
+      "name": "Joe Wildsmith",
+      "pos": "G"
+     },
+     {
+      "name": "Sam Parker",
+      "pos": "D"
+     },
+     {
+      "name": "Dan Casey",
+      "pos": "D"
+     },
+     {
+      "name": "Connor Taylor",
+      "pos": "D"
+     },
+     {
+      "name": "Daniel Harvie",
+      "pos": "D"
+     },
+     {
+      "name": "Malik Mothersille",
+      "pos": "M"
+     },
+     {
+      "name": "Luke Leahy",
+      "pos": "M"
+     },
+     {
+      "name": "Aaron Morley",
+      "pos": "M"
+     },
+     {
+      "name": "Silko Thomas",
+      "pos": "F"
+     },
+     {
+      "name": "Danny Ings",
+      "pos": "F"
+     },
+     {
+      "name": "Emre Tezgel",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-11-18T01:05:48+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   }
+  },
+  "absences": {
+   "home": [],
+   "away": []
+  },
+  "rest": {
+   "home": {
+    "rest_days": 17,
+    "n21": 2,
+    "last_match": "2026-11-04"
+   },
+   "away": {
+    "rest_days": 21,
+    "n21": 1,
+    "last_match": "2026-10-31"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 29.7
+  },
+  "venue": {
+   "name": "The Kassam Stadium",
+   "city": "Oxford, Oxfordshire",
+   "lat": 51.71648711,
+   "lon": -1.207939535
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 2.95,
+   "temp_c": 5.9,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=51.716&longitude=-1.208",
+   "fetched_at": "2026-11-18T01:05:48+00:00",
+   "lat": 51.71648711,
+   "lon": -1.207939535
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": 0.66,
+    "d_p_draw_pp": 0.3,
+    "d_p_away_pp": -0.96,
+    "d_xg_home": 0.017,
+    "d_xg_away": -0.02
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.004,
+    "away_rate_mult": 1.0017,
+    "d_p_home_pp": 0.12,
+    "d_p_draw_pp": -0.07,
+    "d_p_away_pp": -0.05,
+    "d_xg_home": 0.007,
+    "d_xg_away": 0.002,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "reason": "failed validation; no live features"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 17.0,
+   "rest_a": 21.0,
+   "n21_h": 2.0,
+   "n21_a": 1.0,
+   "travel_km": 29.69466697906921,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 2.95,
+   "temp_c": 5.9
+  }
+ },
+ "confidence": {
+  "tier": "MODERATE",
+  "p_max": 0.5237296957290744,
+  "entropy_nats": 1.020358734014588,
+  "text": "Most likely result has P = 52.4%. In the out-of-sample backtest, favourites priced 0.50\u20130.60 won 53.9% \u00b1 0.5% (n=9522, mean forecast 54.4%). Backtest RPS for E2: 0.2163; exact-score top-5 hit rate 51.4% (n=1799). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: MODERATE (entropy 1.020 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Oxford: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Oxford: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.",
+  "Wycombe: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Wycombe: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+ ],
+ "verdict": "Oxford 1\u20131 Wycombe is the single most probable scoreline at 12.6%: expected goals 1.68\u20131.02 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.043). Exact scores are inherently uncertain; the 1X2 split is 52.4%/25.9%/21.8%.",
+ "resolved": {
+  "home_key": "England:Oxford",
+  "away_key": "England:Wycombe",
+  "div": "E2",
+  "home_div": "E2",
+  "away_div": "E2",
+  "country": "England"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: Wycombe Wanderers FC at Oxford United FC\nCompetition: League One\nDate: 2026-11-21 10:00 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-11-16\n\nPRIMARY FINAL SCORE PREDICTION\n\nOxford United FC 1 \u2013 1 Wycombe Wanderers FC\n(modal exact score, probability 12.6%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.68\nAway: 1.02\nExpected Total: 2.70\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 52.4%\nDraw: 25.9%\nAway Win: 21.8%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 12.6%\n2. 1\u20130: 10.8%\n3. 2\u20131: 10.0%\n4. 2\u20130: 9.5%\n5. 0\u20130: 6.9%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 23.9%\nTotal 2 goals: 25.4%\nTotal 3 goals: 22.2%\nTotal 4 goals: 15.2%\nTotal 5+ goals: 13.3%\n\nBoth Teams Score: 53.5%\nClean sheet Oxford United FC: 35.5% \u00b7 Clean sheet Wycombe Wanderers FC: 17.8%\n\nMATCH INTELLIGENCE\n\n1. Home advantage (England, fitted from results): \u00d71.23 on Oxford's scoring rate.\n2. Wycombe attack vs Oxford defence: rate multiplier \u00d70.82 for the away side.\n3. Independent results-only Elo: Oxford 1396 vs Wycombe 1312 (gap +84 before home advantage).\n\nMODEL CONFIDENCE\n\nMost likely result has P = 52.4%. In the out-of-sample backtest, favourites priced 0.50\u20130.60 won 53.9% \u00b1 0.5% (n=9522, mean forecast 54.4%). Backtest RPS for E2: 0.2163; exact-score top-5 hit rate 51.4% (n=1799). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: MODERATE (entropy 1.020 nats of max 1.099).\nParameter-uncertainty 80% bands: xG Oxford United FC 1.30\u20132.10, xG Wycombe Wanderers FC 0.77\u20131.27; P(home win) 41.5%\u201363.2%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0014 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nOxford: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-11-17 20:05 EST (4-2-3-1)\n  Jamie Cumming (G), Peter Kioso (D), James Golding (D), Sam Long (D), Jack Currie (D), Cameron Brannagan (M), Harrison Bradney (M), Aidomo Emakhu (F), Louis Griffiths (M), Ruben Roosken (F), Leo Snowden (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\nWycombe: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-11-17 20:05 EST (4-4-2)\n  Joe Wildsmith (G), Sam Parker (D), Dan Casey (D), Connor Taylor (D), Daniel Harvie (D), Malik Mothersille (M), Luke Leahy (M), Aaron Morley (M), Silko Thomas (F), Danny Ings (F), Emre Tezgel (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nKEY ABSENCES\n\n- None listed by the sources.\n\nWEATHER AT VENUE\n\nThe Kassam Stadium, Oxford, Oxfordshire: 5.9 \u00b0C, wind 3.0 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-11-17 20:05 EST]\n\nREST & TRAVEL\n\nOxford: 17 days' rest, 2 matches in previous 21 days \u00b7 Wycombe: 21 days' rest, 1 in 21 days \u00b7 away travel 29.7 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 52.4% / 25.9% / 21.8%, xG 1.68\u20131.02\n- Understat xG component (validated, in ensemble): home +0.66 pp, draw +0.30 pp, away -0.96 pp; xG +0.017 / -0.020\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.12 pp, draw -0.07 pp, away -0.05 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- lineup: not applied (failed validation; no live features)\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Oxford: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Oxford: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n- Wycombe: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Wycombe: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nFINAL VERDICT\n\nOxford 1\u20131 Wycombe is the single most probable scoreline at 12.6%: expected goals 1.68\u20131.02 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.043). Exact scores are inherently uncertain; the 1X2 split is 52.4%/25.9%/21.8%.\n",
+ "refresh_id": "a6f8e8dce5ee440385e98e18db4cdc1c",
+ "frozen_at": "2026-11-18T01:05:48+00:00",
+ "sha256": "adc25db5c55d2a2efa195936d5092d105d4a1409d00369a704ea41b1b3a5ebd0"
+}
