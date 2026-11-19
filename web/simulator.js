@@ -75,18 +75,24 @@
   const names = () => [CUR.fixture.home_name, CUR.fixture.away_name];
 
   // ---------------------------------------------------------------- 100,000 runs
+  let RUNS = 0;
+  // 100,000 draws take a few hundredths of a second, so they are paced over about half a second
+  // with a live count: otherwise a click changes the numbers by tenths and looks like nothing ran.
   function runSims() {
     const a = active(); if (!a || running) return; running = true;
-    const Gn = a.grid.length, counts = new Int32Array(Gn * Gn), cdf = gridCdf(a.grid); let done = 0; const t0 = performance.now();
-    $("sim-run").disabled = true; $("sim-info").textContent = "Running…"; $("sim-prog").style.width = "0";
+    const Gn = a.grid.length, counts = new Int32Array(Gn * Gn), cdf = gridCdf(a.grid), CH = 2500; let done = 0;
+    const btn = $("sim-run"); btn.disabled = true; btn.textContent = "Running…"; $("sim-prog").style.width = "0";
     (function step() {
-      for (let j = 0; j < 10000; j++) counts[sampleGrid(cdf)]++;
-      done += 10000; $("sim-prog").style.width = done / N_SIMS * 100 + "%";
-      if (done < N_SIMS) { setTimeout(step, 0); return; }
-      running = false; $("sim-run").disabled = false;
+      for (let j = 0; j < CH; j++) counts[sampleGrid(cdf)]++;
+      done += CH; $("sim-prog").style.width = done / N_SIMS * 100 + "%";
+      const s = summarise(counts, done, Gn);
+      $("sim-info").textContent = done.toLocaleString() + " of " + N_SIMS.toLocaleString();
+      $("sim-bar").innerHTML = `<div class="h" style="width:${s.h * 100}%">${pct(s.h)}</div><div class="d" style="width:${s.d * 100}%">${pct(s.d)}</div><div class="a" style="width:${s.a * 100}%">${pct(s.a)}</div>`;
+      if (done < N_SIMS) { requestAnimationFrame(step); return; }
+      running = false; btn.disabled = false; btn.textContent = "Run 100,000 again";
       const now = active(); if (!now || now.key !== a.key) { runSims(); return; }
-      RES = { s: summarise(counts, N_SIMS, Gn), counts, G: Gn, key: a.key };
-      $("sim-info").textContent = N_SIMS.toLocaleString() + " matches in " + ((performance.now() - t0) / 1000).toFixed(1) + " s" + (a.lineups ? " · line-ups applied" : " · tested forecast");
+      RES = { s, counts, G: Gn, key: a.key }; RUNS++;
+      $("sim-info").textContent = "Run " + RUNS + " finished " + new Date().toLocaleTimeString() + " · " + N_SIMS.toLocaleString() + " matches" + (a.lineups ? " · line-ups applied" : " · tested forecast");
       renderResults();
     })();
   }
