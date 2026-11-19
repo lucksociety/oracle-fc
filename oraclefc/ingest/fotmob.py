@@ -131,6 +131,29 @@ def match_context(mid: int, max_age_h: float = 0.5) -> dict | None:
     return parse_details(match_details_raw(mid, max_age_h))
 
 
+def last_starting_xi(tid: int, before_utc: str) -> dict | None:
+    """The official XI and formation from a team's most recent finished match before
+    ``before_utc``. Used for display when FotMob publishes no lineup for the upcoming match."""
+    d = team(tid, max_age_h=6.0) or {}
+    cands = []
+    for m in (((d.get("fixtures") or {}).get("allFixtures") or {}).get("fixtures") or []) + \
+            [((d.get("overview") or {}).get("lastMatch") or {})]:
+        st = m.get("status") or {}
+        if m.get("id") and st.get("utcTime") and st.get("finished") and not st.get("cancelled"):
+            cands.append((pd.Timestamp(st["utcTime"]).tz_convert("UTC"), int(m["id"])))
+    cut = pd.Timestamp(before_utc)
+    cut = cut.tz_convert("UTC") if cut.tzinfo else cut.tz_localize("UTC")
+    for when, mid in sorted({c for c in cands if c[0] < cut}, reverse=True)[:2]:
+        mc = parse_details(match_details_raw(mid, 24.0 * 30))
+        if not mc or mc["lineup_status"] != "confirmed":
+            continue
+        for side in mc["teams"].values():
+            if side.get("fm_team_id") == tid and len(side["starters"]) == 11:
+                return {"formation": side.get("formation"), "starters": side["starters"],
+                        "played_utc": when.isoformat(), "source_url": mc["source_url"]}
+    return None
+
+
 def day_fixtures(date: str) -> list[dict]:
     d = matches_on(date)
     rows = []
