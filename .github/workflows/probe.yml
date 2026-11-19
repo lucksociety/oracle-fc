@@ -1,0 +1,17 @@
+# One-off data probes. Runs only on pushes to probe/** branches; never touches main or the site.
+name: probe
+on:
+  push:
+    branches: ["probe/**"]
+permissions:
+  contents: read
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12", cache: pip }
+      - run: pip install -r requirements.txt
+      - run: python -m research.xg_coverage BRA ARG USA MEX JPN P1 N1 T1 B1 SC0 G1 SP2 D2 E1
