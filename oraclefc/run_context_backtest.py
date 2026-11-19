@@ -124,7 +124,7 @@ def main():
     df = store.load()
     cutoff = df["date"].max()
     us_map = H.map_understat(df)
-    df = H.attach_xg(df, us_map)
+    df = H.attach_xg(df, H.xg_rows(df, us_map))
     reg = load_registry()
     params = reg.get("champion", {}).get("params") or {"half_life_days": 240.0, "kappa": 8.0, "elo_k": 22.0}
     wf = run_wf(df, cutoff, params)

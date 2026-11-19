@@ -144,8 +144,8 @@ def weather_table(df: pd.DataFrame, start="20220601", end=None, workers: int = 4
 
 
 # ------------------------------------------------------------------ Understat -> our matches
-def map_understat(df: pd.DataFrame, um: pd.DataFrame | None = None) -> pd.DataFrame:
-    um = um if um is not None else pd.read_parquet(config.CONTEXT_DIR / "understat_matches.parquet")
+def _map_xg(df: pd.DataFrame, um: pd.DataFrame, aliases: dict | None = None, label: str = "understat") -> pd.DataFrame:
+    """Link xG match rows to our results by (home club, away club, date ± 1 day)."""
     um = um[um["is_result"]].copy()
     um["d"] = um["datetime"].dt.normalize()
     out = []
@@ -155,9 +155,10 @@ def map_understat(df: pd.DataFrame, um: pd.DataFrame | None = None) -> pd.DataFr
             continue
         names = sorted(set(sub["home"]) | set(sub["away"]))
         country = sub["country"].iloc[0]
+        alias = (aliases or {}).get(div, {})
         nm = {}
         for n in set(g["home"]) | set(g["away"]):
-            m = match_team(n, names)
+            m = match_team(alias.get(n, n), names)
             nm[n] = f"{country}:{m.canonical}" if m.canonical else None
         g = g.assign(home_key=g["home"].map(nm), away_key=g["away"].map(nm))
         key = sub.set_index(["home_key", "away_key", "date"])["match_id"]
@@ -169,9 +170,35 @@ def map_understat(df: pd.DataFrame, um: pd.DataFrame | None = None) -> pd.DataFr
                                              g.loc[miss, "d"] + pd.Timedelta(days=s)])
             mid.loc[miss] = key.reindex(idx).to_numpy()
         out.append(g.assign(match_id=mid))
+    if not out:
+        return um.assign(home_key=None, away_key=None, match_id=np.nan).iloc[:0]
     res = pd.concat(out)
-    print(f"   understat->results mapping: {res['match_id'].notna().mean():.1%} of {len(res)} matches")
+    print(f"   {label}->results mapping: {res['match_id'].notna().mean():.1%} of {len(res)} matches")
     return res
+
+
+def map_understat(df: pd.DataFrame) -> pd.DataFrame:
+    return _map_xg(df, pd.read_parquet(config.CONTEXT_DIR / "understat_matches.parquet"))
+
+
+def map_extra_xg(df: pd.DataFrame) -> pd.DataFrame | None:
+    """FotMob team xG for leagues outside the top five (ingest/fotmob_xg.EXTRA_LEAGUES), linked to our
+    results. Validated walk-forward on 14 leagues (experiments/backtests/xg_extra_summary.json)."""
+    from ..ingest import fotmob_xg
+    if not fotmob_xg.EXTRA_M.exists():
+        return None
+    um = pd.read_parquet(fotmob_xg.EXTRA_M)
+    return _map_xg(df, um[um["div"].isin(fotmob_xg.EXTRA_LEAGUES)], fotmob_xg.EXTRA_CLUB_ALIASES, "fotmob extra xG")
+
+
+def xg_rows(df: pd.DataFrame, us_map: pd.DataFrame | None, as_of=None) -> pd.DataFrame | None:
+    """Understat rows plus the extra-league FotMob rows, for the xG fitting target only (the player
+    book keeps using ``us_map``). ``as_of`` keeps the extra rows point-in-time."""
+    extra = map_extra_xg(df)
+    if extra is not None and as_of is not None:
+        extra = extra.loc[extra["datetime"] < as_of]
+    parts = [x for x in (us_map, extra) if x is not None and len(x)]
+    return pd.concat(parts, ignore_index=True) if parts else us_map
 
 
 def attach_xg(df: pd.DataFrame, us_map: pd.DataFrame | None = None) -> pd.DataFrame:

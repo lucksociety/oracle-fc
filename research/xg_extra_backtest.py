@@ -25,20 +25,16 @@ from oraclefc.models.ensemble import combine
 
 def main(start="2024-04-01"):
     df = store.load()
-    um = pd.read_parquet(config.CONTEXT_DIR / "fotmob_extra_matches.parquet")
-    divs = sorted(um["div"].unique())
+    from oraclefc.ingest import fotmob_xg
+    divs = sorted(fotmob_xg.EXTRA_LEAGUES)
     df = df[df["div"].isin(divs)].copy()
-    mp = H.map_understat(df, um)
+    mp = H.map_extra_xg(df)
+    import difflib
     for d, g in mp.groupby("div"):
         miss = g[g["match_id"].isna()]
+        clubs = sorted(set(miss["home"][miss["home_key"].isna()]) | set(miss["away"][miss["away_key"].isna()]))
         print(f"{d}: {len(g)} xG matches, {g['match_id'].notna().mean():.1%} linked to results; unlinked clubs: "
-              f"{sorted(set(miss['home'][miss['home_key'].isna()]) | set(miss['away'][miss['away_key'].isna()]))[:12]}")
-    for d, g in mp.groupby("div"):  # help fix unlinked clubs: show the closest names in the results data
-        miss = g[g["match_id"].isna()]
-        names = sorted(set(df.loc[df["div"] == d, "home"]))
-        import difflib
-        for club in sorted(set(miss["home"][miss["home_key"].isna()]) | set(miss["away"][miss["away_key"].isna()])):
-            print(f"   {d} unlinked '{club}': closest in results {difflib.get_close_matches(club, names, 3, 0.3)}")
+              + str({c: difflib.get_close_matches(c, sorted(set(df.loc[df['div'] == d, 'home'])), 2, 0.3) for c in clubs}))
     df = H.attach_xg(df, mp)
     cov = df[df["date"] >= "2023-01-01"].groupby("div")["hxg"].agg(lambda s: s.notna().mean())
     print("share of results since 2023 with xG:", cov.round(3).to_dict())
