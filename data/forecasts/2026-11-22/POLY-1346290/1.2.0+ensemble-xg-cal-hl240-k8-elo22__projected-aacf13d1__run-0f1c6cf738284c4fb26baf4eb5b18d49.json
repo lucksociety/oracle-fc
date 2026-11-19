@@ -1,0 +1,908 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-11-16",
+ "input_fingerprint": "937aecb8f6d5c2dbf57f4a041c6b856dc02848ebbdf929f9c7318e10ebed359f",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-11-19T16:17:56+00:00",
+ "fixture": {
+  "event_id": "POLY-1346290",
+  "home_name": "Hull City AFC",
+  "away_name": "Brighton & Hove Albion FC",
+  "competition": "Premier League",
+  "subcategory": "epl",
+  "kickoff_utc": "2026-11-22T14:00:00+00:00",
+  "kickoff_local": "2026-11-22 09:00 EST",
+  "home_matched": "Hull",
+  "away_matched": "Brighton",
+  "match_methods": {
+   "home": {
+    "source": "Hull City AFC",
+    "matched": "Hull",
+    "method": "alias",
+    "score": 1.0
+   },
+   "away": {
+    "source": "Brighton & Hove Albion FC",
+    "matched": "Brighton",
+    "method": "core-tokens",
+    "score": 0.97
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.17549278939647361,
+  "p_draw": 0.22703747786155487,
+  "p_away": 0.5974697327419716,
+  "xg_home": 0.9976545322912928,
+  "xg_away": 1.9854367720449433,
+  "xg_total": 2.983091304336236,
+  "median_total": 3,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.10937200810578035
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.10937200810578035
+   },
+   {
+    "home": 1,
+    "away": 2,
+    "p": 0.10169399087537229
+   },
+   {
+    "home": 0,
+    "away": 2,
+    "p": 0.09898747223850145
+   },
+   {
+    "home": 0,
+    "away": 1,
+    "p": 0.09497685644889549
+   },
+   {
+    "home": 1,
+    "away": 3,
+    "p": 0.06717454425590205
+   }
+  ],
+  "btts": 0.5575706000303444,
+  "totals_over": {
+   "over_0.5": 0.9480028064143298,
+   "over_1.5": 0.8073286611182755,
+   "over_2.5": 0.5748787459117872,
+   "over_3.5": 0.3494607749246869,
+   "over_4.5": 0.17861221522838247,
+   "over_5.5": 0.07946213067861138,
+   "over_6.5": 0.0305308297768468
+  },
+  "total_buckets": {
+   "0-1": 0.1926713388817247,
+   "2": 0.23244991520648817,
+   "3": 0.22541797098710037,
+   "4": 0.17084855969630444,
+   "5+": 0.17861221522838247
+  },
+  "clean_sheet_home": 0.13198160724521732,
+  "clean_sheet_away": 0.3624449863101088,
+  "home_goal_dist": [
+   0.3624449863101088,
+   0.37533911303871303,
+   0.18536396138179398,
+   0.05953476567969593,
+   0.014157816184849662,
+   0.0026759886289230987,
+   0.0004197497799965213,
+   6.361899591909909e-05
+  ],
+  "away_goal_dist": [
+   0.13198160724521732,
+   0.27551659485505875,
+   0.2747512971608909,
+   0.18022139620451844,
+   0.08812649506136061,
+   0.0343136582327675,
+   0.0110931481862888,
+   0.0039958030538977665
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    2
+   ],
+   "away_goals_80": [
+    0,
+    4
+   ],
+   "total_goals_80": [
+    1,
+    5
+   ],
+   "goal_diff_80": [
+    -3,
+    1
+   ]
+  },
+  "score_grid": [
+   [
+    0.051997,
+    0.094977,
+    0.098987,
+    0.065752,
+    0.032412,
+    0.012697,
+    0.004127
+   ],
+   [
+    0.045697,
+    0.109372,
+    0.101694,
+    0.067175,
+    0.03293,
+    0.012829,
+    0.004148
+   ],
+   [
+    0.02409,
+    0.050108,
+    0.053093,
+    0.033019,
+    0.016096,
+    0.006236,
+    0.002005
+   ],
+   [
+    0.007864,
+    0.016268,
+    0.01623,
+    0.011197,
+    0.005138,
+    0.00198,
+    0.000633
+   ],
+   [
+    0.001901,
+    0.00391,
+    0.003879,
+    0.00252,
+    0.001283,
+    0.000465,
+    0.000148
+   ],
+   [
+    0.000364,
+    0.000745,
+    0.000735,
+    0.000475,
+    0.000228,
+    9.2e-05,
+    2.7e-05
+   ],
+   [
+    5.8e-05,
+    0.000118,
+    0.000115,
+    7.4e-05,
+    3.5e-05,
+    1.3e-05,
+    4e-06
+   ]
+  ],
+  "mass_check": 1.0000000000000002
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.17487999999999998,
+  "p_draw": 0.228725,
+  "p_away": 0.596395,
+  "se": [
+   0.0008494026889526546,
+   0.0009391748356269987,
+   0.0010970597157288202
+  ],
+  "max_abs_dev_vs_exact": 0.001687522138445141,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   0.7589122195287776,
+   1.2591415126255066
+  ],
+  "xg_away_80": [
+   1.5039604537281004,
+   2.500162599467791
+  ],
+  "p_home_80": [
+   0.11687895887946353,
+   0.26597406280298247
+  ],
+  "p_draw_80": [
+   0.17402448817790583,
+   0.26681692333166496
+  ],
+  "p_away_80": [
+   0.47083644483220943,
+   0.7053513408477858
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.2007312068106828,
+   0.18862273724294942
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.1992638351169229,
+   "p_draw": 0.2430416073132861,
+   "p_away": 0.5576945575697912,
+   "xg_home": 0.963324557488345,
+   "xg_away": 1.7656799510392827,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.15117245073360613,
+   "p_draw": 0.19690618034136947,
+   "p_away": 0.6519213689250243,
+   "xg_home": 0.9153103503587025,
+   "xg_away": 2.127157214759298,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.21215139762257412,
+   "p_draw": 0.2630800992260771,
+   "p_away": 0.5247685031513487,
+   "xg_home": 0.935942072984764,
+   "xg_away": 1.6100779421933553,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.42222412904420675,
+   "p_draw": 0.2499474388561885,
+   "p_away": 0.3278284320996049,
+   "xg_home": 1.5173274019126641,
+   "xg_away": 1.3079985715500382,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.21297338291712747,
+   "p_draw": 0.23952034780432857,
+   "p_away": 0.5475062692785438,
+   "xg_home": 1.046790130893669,
+   "xg_away": 1.8082498526124846,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Independent results-only Elo: Hull 1479 vs Brighton 1804 (gap -324 before home advantage).",
+   "effect": 0.4865
+  },
+  {
+   "text": "Hull attack vs Brighton defence: time-weighted strength gap multiplies Hull's scoring rate by \u00d70.65 relative to an average pairing (from 35/31 decay-weighted matches).",
+   "effect": 0.4306
+  },
+  {
+   "text": "Brighton attack vs Hull defence: rate multiplier \u00d71.47 for the away side.",
+   "effect": 0.3821
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.1754927893964735,
+  "p_draw": 0.2270374778615548,
+  "p_away": 0.5974697327419713,
+  "xg_home": 0.9976545322912924,
+  "xg_away": 1.9854367720449428
+ },
+ "context": {
+  "fetched_at": "2026-11-19T16:17:56+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5795520",
+    "fetched_at": "2026-11-19T16:17:56+00:00"
+   },
+   {
+    "name": "Fantasy Premier League availability",
+    "url": "https://fantasy.premierleague.com/api/bootstrap-static/",
+    "fetched_at": "2026-11-19T16:17:56+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "projected",
+    "source": "FotMob projected XI (enetpulse)",
+    "formation": "5-3-2",
+    "starters": [
+     {
+      "name": "Konstantinos Tzolakis",
+      "pos": "G",
+      "shirt": "19"
+     },
+     {
+      "name": "Semi Ajayi",
+      "pos": "D",
+      "shirt": "6"
+     },
+     {
+      "name": "John Egan",
+      "pos": "D",
+      "shirt": "15"
+     },
+     {
+      "name": "Lucas Herrington",
+      "pos": "D",
+      "shirt": "22"
+     },
+     {
+      "name": "Lewie Coyle",
+      "pos": "D",
+      "shirt": "2"
+     },
+     {
+      "name": "Elliot Stroud",
+      "pos": "M",
+      "shirt": "21"
+     },
+     {
+      "name": "Tim Iroegbunam",
+      "pos": "M",
+      "shirt": "42"
+     },
+     {
+      "name": "Lucas Gourna-Douath",
+      "pos": "M",
+      "shirt": "29"
+     },
+     {
+      "name": "Regan Slater",
+      "pos": "M",
+      "shirt": "27"
+     },
+     {
+      "name": "Mohamed-Ali Cho",
+      "pos": "F",
+      "shirt": "50"
+     },
+     {
+      "name": "Oli McBurnie",
+      "pos": "F",
+      "shirt": "9"
+     }
+    ],
+    "fetched_at": "2026-11-19T16:17:56+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [],
+    "mean_xi_attack_index": 0.017,
+    "mean_continuity": -0.827,
+    "p_backup_gk": 0.0
+   },
+   "away": {
+    "status": "projected",
+    "source": "FotMob projected XI (enetpulse)",
+    "formation": "4-2-3-1",
+    "starters": [
+     {
+      "name": "Bart Verbruggen",
+      "pos": "G",
+      "shirt": "1"
+     },
+     {
+      "name": "Costinha",
+      "pos": "D",
+      "shirt": "20"
+     },
+     {
+      "name": "Luka Vu\u0161kovi\u0107",
+      "pos": "D",
+      "shirt": "44"
+     },
+     {
+      "name": "Lewis Dunk",
+      "pos": "D",
+      "shirt": "5"
+     },
+     {
+      "name": "Olivier Boscagli",
+      "pos": "D",
+      "shirt": "21"
+     },
+     {
+      "name": "Pascal Gro\u00df",
+      "pos": "M",
+      "shirt": "13"
+     },
+     {
+      "name": "Jack Hinshelwood",
+      "pos": "M",
+      "shirt": "8"
+     },
+     {
+      "name": "Diego G\u00f3mez",
+      "pos": "F",
+      "shirt": "25"
+     },
+     {
+      "name": "Yasin Ayari",
+      "pos": "M",
+      "shirt": "26"
+     },
+     {
+      "name": "Maxim De Cuyper",
+      "pos": "F",
+      "shirt": "29"
+     },
+     {
+      "name": "Charalampos Kostoulas",
+      "pos": "F",
+      "shirt": "19"
+     }
+    ],
+    "fetched_at": "2026-11-19T16:17:56+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [],
+    "mean_xi_attack_index": 0.034,
+    "mean_continuity": -0.255,
+    "p_backup_gk": 0.0
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Charlie Hughes",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795520",
+     "fetched_at": "2026-11-19T16:17:56+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Groin injury - Unknown return date",
+     "fpl_news_added": "2026-08-02T09:00:11.030017Z"
+    },
+    {
+     "player": "Matt Targett",
+     "type": "injury",
+     "expected_return": "Mid December 2026",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795520",
+     "fetched_at": "2026-11-19T16:17:56+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Ankle injury - Unknown return date",
+     "fpl_news_added": "2026-09-17T14:00:26.419938Z"
+    },
+    {
+     "player": "Darko Gyabi",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795520",
+     "fetched_at": "2026-11-19T16:17:56+00:00",
+     "chance_of_playing": 75,
+     "fpl_status": "doubtful",
+     "fpl_news": "Thigh injury - 75% chance of playing",
+     "fpl_news_added": "2026-08-04T18:30:11.027155Z"
+    },
+    {
+     "player": "Eliot Matazo",
+     "type": "injury",
+     "expected_return": "Early February 2027",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795520",
+     "fetched_at": "2026-11-19T16:17:56+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Knee injury - Unknown return date",
+     "fpl_news_added": "2026-07-23T12:01:23.532635Z"
+    },
+    {
+     "player": "Hidemasa Morita",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795520",
+     "fetched_at": "2026-11-19T16:17:56+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Groin injury - Unknown return date",
+     "fpl_news_added": "2026-11-05T18:30:08.257672Z"
+    },
+    {
+     "player": "Ilyas Ansah",
+     "type": "injury",
+     "expected_return": "Early December 2026",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795520",
+     "fetched_at": "2026-11-19T16:17:56+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Back injury - Unknown return date",
+     "fpl_news_added": "2026-09-09T10:00:08.919489Z"
+    },
+    {
+     "player": "Mohamed Belloumi",
+     "type": "doubtful",
+     "expected_return": "Hamstring injury - 75% chance of playing",
+     "chance_of_playing": 75,
+     "source": "FPL",
+     "source_url": "https://fantasy.premierleague.com/api/bootstrap-static/",
+     "fetched_at": "2026-11-10T19:00:09.431074Z"
+    },
+    {
+     "player": "Nobel Mendy",
+     "type": "doubtful",
+     "expected_return": "Knee injury - 75% chance of playing",
+     "chance_of_playing": 75,
+     "source": "FPL",
+     "source_url": "https://fantasy.premierleague.com/api/bootstrap-static/",
+     "fetched_at": "2026-11-16T19:00:05.574151Z"
+    }
+   ],
+   "away": [
+    {
+     "player": "Pascal Struijk",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795520",
+     "fetched_at": "2026-11-19T16:17:56+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Hamstring injury - Expected back 8 Nov",
+     "fpl_news_added": "2026-10-16T17:30:09.428175Z"
+    },
+    {
+     "player": "Evan Ferguson",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795520",
+     "fetched_at": "2026-11-19T16:17:56+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Ankle injury - Unknown return date",
+     "fpl_news_added": "2026-07-23T12:01:23.448357Z"
+    },
+    {
+     "player": "Femi Azeez",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795520",
+     "fetched_at": "2026-11-19T16:17:56+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Hamstring injury - Expected back 8 Nov",
+     "fpl_news_added": "2026-09-04T11:30:08.661589Z"
+    },
+    {
+     "player": "Kaoru Mitoma",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795520",
+     "fetched_at": "2026-11-19T16:17:56+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Hamstring injury - Expected back 22 Nov",
+     "fpl_news_added": "2026-07-24T18:30:10.661894Z"
+    },
+    {
+     "player": "Stefanos Tzimas",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795520",
+     "fetched_at": "2026-11-19T16:17:56+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Knee injury - Unknown return date",
+     "fpl_news_added": "2026-07-23T12:01:23.432796Z"
+    },
+    {
+     "player": "Zadok Yohanna",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795520",
+     "fetched_at": "2026-11-19T16:17:56+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Unspecified injury - Expected back 22 Nov",
+     "fpl_news_added": "2026-09-10T13:00:08.617941Z"
+    },
+    {
+     "player": "Jaouen Hadjam",
+     "type": "doubtful",
+     "expected_return": "Unspecified injury - 75% chance of playing",
+     "chance_of_playing": 75,
+     "source": "FPL",
+     "source_url": "https://fantasy.premierleague.com/api/bootstrap-static/",
+     "fetched_at": "2026-11-14T15:00:05.225678Z"
+    },
+    {
+     "player": "Jos\u00e9 Mar\u00eda Andr\u00e9s Baixauli",
+     "type": "doubtful",
+     "expected_return": "Hip injury - 75% chance of playing",
+     "chance_of_playing": 75,
+     "source": "FPL",
+     "source_url": "https://fantasy.premierleague.com/api/bootstrap-static/",
+     "fetched_at": "2026-11-14T15:00:05.235535Z"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 15,
+    "n21": 1,
+    "last_match": "2026-11-07"
+   },
+   "away": {
+    "rest_days": 14,
+    "n21": 1,
+    "last_match": "2026-11-08"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 321.3
+  },
+  "venue": {
+   "name": "MKM Stadium",
+   "city": "Hull",
+   "lat": 53.746239635,
+   "lon": -0.367639661
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 1.7000000000000002,
+   "temp_c": 7.4,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=53.746&longitude=-0.368",
+   "fetched_at": "2026-11-19T16:17:56+00:00",
+   "lat": 53.746239635,
+   "lon": -0.367639661
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": 2.9,
+    "d_p_draw_pp": 2.14,
+    "d_p_away_pp": -5.04,
+    "d_xg_home": 0.066,
+    "d_xg_away": -0.15
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0224,
+    "away_rate_mult": 1.0094,
+    "d_p_home_pp": 0.24,
+    "d_p_draw_pp": -0.12,
+    "d_p_away_pp": -0.12,
+    "d_xg_home": 0.022,
+    "d_xg_away": 0.018,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "home_rate_mult": 0.9882,
+    "away_rate_mult": 1.0172,
+    "d_p_home_pp": -0.61,
+    "d_p_draw_pp": -0.38,
+    "d_p_away_pp": 0.99,
+    "d_xg_home": -0.011,
+    "d_xg_away": 0.034,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 15.0,
+   "rest_a": 14.0,
+   "n21_h": 1.0,
+   "n21_a": 1.0,
+   "travel_km": 321.3395269691954,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 1.7000000000000002,
+   "temp_c": 7.4
+  }
+ },
+ "lineup_simulation": {
+  "applied": true,
+  "validated": false,
+  "scale": 0.5,
+  "basis": {
+   "home": "projected",
+   "away": "projected"
+  },
+  "home_rate_mult": 0.9941,
+  "away_rate_mult": 1.0086,
+  "note": "Starting-XI strength, continuity and backup-keeper adjustment at half the fitted size. It did not pass the out-of-sample test, so bets are not priced from it.",
+  "p_home": 0.17240955503724947,
+  "p_draw": 0.2251711670070263,
+  "p_away": 0.602419277955724,
+  "xg_home": 0.9919938665594951,
+  "xg_away": 2.0021011151821884,
+  "xg_total": 2.9940949817416835,
+  "btts": 0.5570445134832752,
+  "totals_over": {
+   "over_0.5": 0.9485779026221037,
+   "over_1.5": 0.8089284721673549,
+   "over_2.5": 0.577377268498174,
+   "over_3.5": 0.3519506343786149,
+   "over_4.5": 0.18047525089739228,
+   "over_5.5": 0.08056168984619456,
+   "over_6.5": 0.031069239974755764
+  },
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.1084348907975386
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.1084348907975386
+   },
+   {
+    "home": 1,
+    "away": 2,
+    "p": 0.10167982656220576
+   },
+   {
+    "home": 0,
+    "away": 2,
+    "p": 0.0995661990362437
+   },
+   {
+    "home": 0,
+    "away": 1,
+    "p": 0.09472071582068
+   },
+   {
+    "home": 1,
+    "away": 3,
+    "p": 0.06774354270939355
+   }
+  ],
+  "score_grid": [
+   [
+    0.051422,
+    0.094721,
+    0.099566,
+    0.06671,
+    0.033173,
+    0.013111,
+    0.0043
+   ],
+   [
+    0.044929,
+    0.108435,
+    0.10168,
+    0.067744,
+    0.033498,
+    0.013166,
+    0.004295
+   ],
+   [
+    0.02355,
+    0.049392,
+    0.052776,
+    0.033102,
+    0.016276,
+    0.006361,
+    0.002063
+   ],
+   [
+    0.007645,
+    0.015945,
+    0.01604,
+    0.01116,
+    0.005166,
+    0.002007,
+    0.000647
+   ],
+   [
+    0.001838,
+    0.003812,
+    0.003813,
+    0.002497,
+    0.001282,
+    0.000469,
+    0.00015
+   ],
+   [
+    0.000351,
+    0.000723,
+    0.000719,
+    0.000468,
+    0.000226,
+    9.2e-05,
+    2.8e-05
+   ],
+   [
+    5.5e-05,
+    0.000114,
+    0.000112,
+    7.3e-05,
+    3.5e-05,
+    1.3e-05,
+    4e-06
+   ]
+  ]
+ },
+ "confidence": {
+  "tier": "MODERATE",
+  "p_max": 0.5974697327419716,
+  "entropy_nats": 0.9497277218156137,
+  "text": "Most likely result has P = 59.7%. In the out-of-sample backtest, favourites priced 0.50\u20130.60 won 53.9% \u00b1 0.5% (n=9522, mean forecast 54.4%). Backtest RPS for E0: 0.2018; exact-score top-5 hit rate 46.6% (n=1220). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: MODERATE (entropy 0.950 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Hull: lineup is PROJECTED (FotMob projected XI (enetpulse)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Brighton: lineup is PROJECTED (FotMob projected XI (enetpulse)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior)."
+ ],
+ "verdict": "Hull 1\u20131 Brighton is the single most probable scoreline at 10.9%: expected goals 1.00\u20131.99 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.043). Exact scores are inherently uncertain; the 1X2 split is 17.5%/22.7%/59.7%.",
+ "resolved": {
+  "home_key": "England:Hull",
+  "away_key": "England:Brighton",
+  "div": "E0",
+  "home_div": "E0",
+  "away_div": "E0",
+  "country": "England"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: Brighton & Hove Albion FC at Hull City AFC\nCompetition: Premier League\nDate: 2026-11-22 09:00 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-11-16\n\nPRIMARY FINAL SCORE PREDICTION\n\nHull City AFC 1 \u2013 1 Brighton & Hove Albion FC\n(modal exact score, probability 10.9%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.00\nAway: 1.99\nExpected Total: 2.98\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 17.5%\nDraw: 22.7%\nAway Win: 59.7%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 10.9%\n2. 1\u20132: 10.2%\n3. 0\u20132: 9.9%\n4. 0\u20131: 9.5%\n5. 1\u20133: 6.7%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 19.3%\nTotal 2 goals: 23.2%\nTotal 3 goals: 22.5%\nTotal 4 goals: 17.1%\nTotal 5+ goals: 17.9%\n\nBoth Teams Score: 55.8%\nClean sheet Hull City AFC: 13.2% \u00b7 Clean sheet Brighton & Hove Albion FC: 36.2%\n\nMATCH INTELLIGENCE\n\n1. Independent results-only Elo: Hull 1479 vs Brighton 1804 (gap -324 before home advantage).\n2. Hull attack vs Brighton defence: time-weighted strength gap multiplies Hull's scoring rate by \u00d70.65 relative to an average pairing (from 35/31 decay-weighted matches).\n3. Brighton attack vs Hull defence: rate multiplier \u00d71.47 for the away side.\n\nMODEL CONFIDENCE\n\nMost likely result has P = 59.7%. In the out-of-sample backtest, favourites priced 0.50\u20130.60 won 53.9% \u00b1 0.5% (n=9522, mean forecast 54.4%). Backtest RPS for E0: 0.2018; exact-score top-5 hit rate 46.6% (n=1220). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: MODERATE (entropy 0.950 nats of max 1.099).\nParameter-uncertainty 80% bands: xG Hull City AFC 0.76\u20131.26, xG Brighton & Hove Albion FC 1.50\u20132.50; P(home win) 11.7%\u201326.6%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0017 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nHull: PROJECTED \u2014 FotMob projected XI (enetpulse), fetched 2026-11-19 11:17 EST (5-3-2)\n  Konstantinos Tzolakis (G), Semi Ajayi (D), John Egan (D), Lucas Herrington (D), Lewie Coyle (D), Elliot Stroud (M), Tim Iroegbunam (M), Lucas Gourna-Douath (M), Regan Slater (M), Mohamed-Ali Cho (F), Oli McBurnie (F)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs +0.017 (log) \u00b7 continuity -0.83 \u00b7 P(backup GK) 0%\nBrighton: PROJECTED \u2014 FotMob projected XI (enetpulse), fetched 2026-11-19 11:17 EST (4-2-3-1)\n  Bart Verbruggen (G), Costinha (D), Luka Vu\u0161kovi\u0107 (D), Lewis Dunk (D), Olivier Boscagli (D), Pascal Gro\u00df (M), Jack Hinshelwood (M), Diego G\u00f3mez (F), Yasin Ayari (M), Maxim De Cuyper (F), Charalampos Kostoulas (F)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs +0.034 (log) \u00b7 continuity -0.26 \u00b7 P(backup GK) 0%\n\nKEY ABSENCES\n\n- Hull: Charlie Hughes \u2014 injury, Late November 2026, 0% chance of playing [FotMob + FPL, 2026-11-19 11:17 EST] \u2014 FPL: Groin injury - Unknown return date (updated 2026-08-02 05:00 EDT)\n- Hull: Matt Targett \u2014 injury, Mid December 2026, 0% chance of playing [FotMob + FPL, 2026-11-19 11:17 EST] \u2014 FPL: Ankle injury - Unknown return date (updated 2026-09-17 10:00 EDT)\n- Hull: Darko Gyabi \u2014 injury, Late November 2026, 75% chance of playing [FotMob + FPL, 2026-11-19 11:17 EST] \u2014 FPL: Thigh injury - 75% chance of playing (updated 2026-08-04 14:30 EDT)\n- Hull: Eliot Matazo \u2014 injury, Early February 2027, 0% chance of playing [FotMob + FPL, 2026-11-19 11:17 EST] \u2014 FPL: Knee injury - Unknown return date (updated 2026-07-23 08:01 EDT)\n- Hull: Hidemasa Morita \u2014 injury, Late November 2026, 0% chance of playing [FotMob + FPL, 2026-11-19 11:17 EST] \u2014 FPL: Groin injury - Unknown return date (updated 2026-11-05 13:30 EST)\n- Hull: Ilyas Ansah \u2014 injury, Early December 2026, 0% chance of playing [FotMob + FPL, 2026-11-19 11:17 EST] \u2014 FPL: Back injury - Unknown return date (updated 2026-09-09 06:00 EDT)\n- Hull: Mohamed Belloumi \u2014 doubtful, Hamstring injury - 75% chance of playing, 75% chance of playing [FPL, 2026-11-10 14:00 EST]\n- Hull: Nobel Mendy \u2014 doubtful, Knee injury - 75% chance of playing, 75% chance of playing [FPL, 2026-11-16 14:00 EST]\n- Brighton: Pascal Struijk \u2014 injury, Doubtful, 0% chance of playing [FotMob + FPL, 2026-11-19 11:17 EST] \u2014 FPL: Hamstring injury - Expected back 8 Nov (updated 2026-10-16 13:30 EDT)\n- Brighton: Evan Ferguson \u2014 injury, Late November 2026, 0% chance of playing [FotMob + FPL, 2026-11-19 11:17 EST] \u2014 FPL: Ankle injury - Unknown return date (updated 2026-07-23 08:01 EDT)\n- Brighton: Femi Azeez \u2014 injury, Doubtful, 0% chance of playing [FotMob + FPL, 2026-11-19 11:17 EST] \u2014 FPL: Hamstring injury - Expected back 8 Nov (updated 2026-09-04 07:30 EDT)\n- Brighton: Kaoru Mitoma \u2014 injury, Late November 2026, 0% chance of playing [FotMob + FPL, 2026-11-19 11:17 EST] \u2014 FPL: Hamstring injury - Expected back 22 Nov (updated 2026-07-24 14:30 EDT)\n- Brighton: Stefanos Tzimas \u2014 injury, Late November 2026, 0% chance of playing [FotMob + FPL, 2026-11-19 11:17 EST] \u2014 FPL: Knee injury - Unknown return date (updated 2026-07-23 08:01 EDT)\n- Brighton: Zadok Yohanna \u2014 injury, Late November 2026, 0% chance of playing [FotMob + FPL, 2026-11-19 11:17 EST] \u2014 FPL: Unspecified injury - Expected back 22 Nov (updated 2026-09-10 09:00 EDT)\n- Brighton: Jaouen Hadjam \u2014 doubtful, Unspecified injury - 75% chance of playing, 75% chance of playing [FPL, 2026-11-14 10:00 EST]\n- Brighton: Jos\u00e9 Mar\u00eda Andr\u00e9s Baixauli \u2014 doubtful, Hip injury - 75% chance of playing, 75% chance of playing [FPL, 2026-11-14 10:00 EST]\n\nWEATHER AT VENUE\n\nMKM Stadium, Hull: 7.4 \u00b0C, wind 1.7 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-11-19 11:17 EST]\n\nREST & TRAVEL\n\nHull: 15 days' rest, 1 matches in previous 21 days \u00b7 Brighton: 14 days' rest, 1 in 21 days \u00b7 away travel 321.3 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 17.5% / 22.7% / 59.7%, xG 1.00\u20131.99\n- Understat xG component (validated, in ensemble): home +2.90 pp, draw +2.14 pp, away -5.04 pp; xG +0.066 / -0.150\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.24 pp, draw -0.12 pp, away -0.12 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- lineup: NOT APPLIED (failed out-of-sample validation); would have moved home -0.61 pp, draw -0.38 pp, away +0.99 pp\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Hull: lineup is PROJECTED (FotMob projected XI (enetpulse)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Brighton: lineup is PROJECTED (FotMob projected XI (enetpulse)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n\nFINAL VERDICT\n\nHull 1\u20131 Brighton is the single most probable scoreline at 10.9%: expected goals 1.00\u20131.99 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.043). Exact scores are inherently uncertain; the 1X2 split is 17.5%/22.7%/59.7%.\n",
+ "refresh_id": "0f1c6cf738284c4fb26baf4eb5b18d49",
+ "frozen_at": "2026-11-19T16:17:56+00:00",
+ "sha256": "da2305107515b74b77f978ee204927e75507131d0aae611ab54fc6359ff5ab12"
+}
