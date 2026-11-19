@@ -39,10 +39,10 @@ On top of the ensemble, `oraclefc/calibrate.py` reshapes each score matrix as Q 
 
 ## Match simulator (dashboard front page, since 2026-11-18)
 
-The dashboard opens on a **Simulator** tab (`web/simulator.js`). Pick a match and it draws both starting elevens as circles in their real formation, plays one match, and runs 100,000 simulations.
+The dashboard opens on a **Simulator** tab (`web/simulator.js`). Pick a match and it runs 100,000 simulations and lists both starting elevens with their formations. (An animated match view shipped on 18 November and was removed the next day at the owner's request: it was not realistic.)
 
-* **Scores come from the forecast.** Every simulated final score is drawn from the frozen score grid, so the 100,000-run percentages equal the forecast within about ±0.3 points. The minute-by-minute match is then written to fit a drawn score; forwards take most shots, so the formation decides who shoots.
-* **Line-ups.** Each forecast now carries a second grid, `lineup_simulation`: the tested forecast adjusted for the starting eleven (strength of the XI, continuity, backup keeper) at half the fitted size. The simulator uses it when "Use lineups" is ticked. It exists only for the top-five leagues, where player ratings exist; elsewhere the real line-up and formation are drawn but the probabilities are unchanged, and the page says so. Formation itself has no fitted effect on probabilities.
+* **Scores come from the forecast.** Every simulated final score is drawn from the frozen score grid, so the 100,000-run percentages equal the forecast within about ±0.3 points.
+* **Line-ups.** Each forecast now carries a second grid, `lineup_simulation`: the tested forecast adjusted for the starting eleven (strength of the XI, continuity, backup keeper) at half the fitted size. The simulator uses it when "Use lineups" is ticked. It exists only for the top-five leagues, where player ratings exist; elsewhere the real line-up and formation are listed but the probabilities are unchanged, and the page says so. Formation itself has no fitted effect on probabilities.
 * **Bets are not priced from it.** The lineup adjustment failed the out-of-sample test (see [docs/CONTEXT_BACKTEST.md](docs/CONTEXT_BACKTEST.md)), so `simulation` remains the forecast that the bet rule, the Edge tab and the market benchmark use. Grading reports both on the same games (`vs_lineup` in `data/results/*.json` and `record.json`; negative `log_loss_diff` = line-ups helped).
 
 ## Best Bets (post-hoc, after freezing)
