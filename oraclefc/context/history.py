@@ -144,13 +144,15 @@ def weather_table(df: pd.DataFrame, start="20220601", end=None, workers: int = 4
 
 
 # ------------------------------------------------------------------ Understat -> our matches
-def map_understat(df: pd.DataFrame) -> pd.DataFrame:
-    um = pd.read_parquet(config.CONTEXT_DIR / "understat_matches.parquet")
+def map_understat(df: pd.DataFrame, um: pd.DataFrame | None = None) -> pd.DataFrame:
+    um = um if um is not None else pd.read_parquet(config.CONTEXT_DIR / "understat_matches.parquet")
     um = um[um["is_result"]].copy()
     um["d"] = um["datetime"].dt.normalize()
     out = []
     for div, g in um.groupby("div"):
         sub = df[df["div"] == div]
+        if sub.empty:
+            continue
         names = sorted(set(sub["home"]) | set(sub["away"]))
         country = sub["country"].iloc[0]
         nm = {}
