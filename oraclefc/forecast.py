@@ -97,7 +97,7 @@ class Engine:
             if self._us_map is not None:
                 self._us_map = self._us_map.loc[self._us_map["datetime"] < self.as_of].copy()
             if "xg_dc" in self.models and self._us_map is not None:
-                self.df = H.attach_xg(self.df, self._us_map)
+                self.df = H.attach_xg(self.df, H.xg_rows(self.df, self._us_map, self.as_of))
         for m in self.models.values():
             m.fit(self.df, self.as_of)
         ordered = self.df.sort_values(["date", "home_key", "away_key"])[sorted(self.df.columns)]
