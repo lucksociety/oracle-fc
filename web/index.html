@@ -38,24 +38,10 @@
     <div class="sim-controls">
       <label class="sim-grow">Match<select id="sim-match"><option value="">Loading matches…</option></select></label>
       <label class="chk"><input type="checkbox" id="sim-lineups" checked> Use lineups</label>
-      <button id="sim-play">Play match</button>
-      <label>Speed<select id="sim-speed"><option value="1">1×</option><option value="3">3×</option><option value="10">10×</option></select></label>
-      <button id="sim-skip" class="ghost" disabled>Skip to end</button>
-      <button id="sim-run" class="ghost">Run 100,000</button>
+      <button id="sim-run">Run 100,000</button>
     </div>
     <div id="sim-lineup-note" class="sim-note"></div>
     <div class="sim-grid">
-      <div class="sim-col">
-        <div class="sim-panel">
-          <div class="sim-board"><div class="sim-nm"><i class="sim-dot h"></i><span id="sim-home">Home</span></div><div class="sim-sc" id="sim-score">0 – 0</div><div class="sim-nm r"><span id="sim-away">Away</span><i class="sim-dot a"></i></div></div>
-          <div class="sim-clock" id="sim-clock">Kick-off</div>
-          <canvas id="sim-pitch" width="1320" height="876" role="img" aria-label="Top-down pitch showing both starting line-ups in formation and the ball"></canvas>
-          <div class="sim-live" id="sim-live" aria-live="polite">Press Play match to watch one simulated game.</div>
-          <div class="sim-stats" id="sim-stats"></div>
-        </div>
-        <div class="sim-panel"><h3>Match events</h3><ol class="sim-feed" id="sim-feed"><li class="muted">Goals and red cards appear here.</li></ol></div>
-        <div class="sim-panel"><h3>Line-ups</h3><div class="lineups" id="sim-xi"></div></div>
-      </div>
       <div class="sim-col">
         <div class="sim-panel">
           <div class="sim-row"><h3>100,000 simulations</h3><span class="muted" id="sim-info"></span></div>
@@ -65,6 +51,9 @@
           <p class="muted small">Simulated uses the line-ups when the box above is ticked. Tested forecast is the one bets are priced from. Market is the Polymarket mid from the last price snapshot, where one exists; you can edit it. Big gaps have more often been the model's mistake than the market's.</p>
           <div class="kv" id="sim-kv"></div>
         </div>
+        <div class="sim-panel"><h3>Line-ups</h3><div class="lineups" id="sim-xi"></div></div>
+      </div>
+      <div class="sim-col">
         <div class="sim-panel">
           <h3>Score probabilities</h3>
           <div class="sim-heat" id="sim-heat"></div>
