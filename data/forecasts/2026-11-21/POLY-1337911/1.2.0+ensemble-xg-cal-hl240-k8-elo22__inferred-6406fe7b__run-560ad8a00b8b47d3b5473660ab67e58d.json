@@ -1,0 +1,757 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-11-16",
+ "input_fingerprint": "937aecb8f6d5c2dbf57f4a041c6b856dc02848ebbdf929f9c7318e10ebed359f",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-11-19T10:00:13+00:00",
+ "fixture": {
+  "event_id": "POLY-1337911",
+  "home_name": "Racing Club de Lens",
+  "away_name": "Toulouse FC",
+  "competition": "Ligue 1",
+  "subcategory": "fl1",
+  "kickoff_utc": "2026-11-21T19:45:00+00:00",
+  "kickoff_local": "2026-11-21 14:45 EST",
+  "home_matched": "Lens",
+  "away_matched": "Toulouse",
+  "match_methods": {
+   "home": {
+    "source": "Racing Club de Lens",
+    "matched": "Lens",
+    "method": "alias",
+    "score": 1.0
+   },
+   "away": {
+    "source": "Toulouse FC",
+    "matched": "Toulouse",
+    "method": "core-tokens",
+    "score": 0.97
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.5115604790993569,
+  "p_draw": 0.2485696946881383,
+  "p_away": 0.23986982621250486,
+  "xg_home": 1.796091620410522,
+  "xg_away": 1.1816676154862638,
+  "xg_total": 2.9777592358967855,
+  "median_total": 3,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.11819585463801109
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.11819585463801109
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.09981761360942011
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.08629146522870149
+   },
+   {
+    "home": 2,
+    "away": 0,
+    "p": 0.08127320248964864
+   },
+   {
+    "home": 1,
+    "away": 2,
+    "p": 0.06432023243685761
+   }
+  ],
+  "btts": 0.5949066898123215,
+  "totals_over": {
+   "over_0.5": 0.9478477601619842,
+   "over_1.5": 0.806920963417362,
+   "over_2.5": 0.5737737311423425,
+   "over_3.5": 0.34840524724396776,
+   "over_4.5": 0.1774332877680416,
+   "over_5.5": 0.07876644772271801,
+   "over_6.5": 0.030086156519816068
+  },
+  "total_buckets": {
+   "0-1": 0.19307903658263817,
+   "2": 0.2331472322750194,
+   "3": 0.2253684838983747,
+   "4": 0.1709719594759262,
+   "5+": 0.1774332877680416
+  },
+  "clean_sheet_home": 0.29919434516918036,
+  "clean_sheet_away": 0.15805120485651414,
+  "home_goal_dist": [
+   0.15805120485651414,
+   0.30239955740487656,
+   0.2739529453338864,
+   0.16164603703341476,
+   0.0705574171950168,
+   0.024356177180248156,
+   0.00693323014854877,
+   0.0021034308474944803
+  ],
+  "away_goal_dist": [
+   0.29919434516918036,
+   0.37028415720301067,
+   0.2176857124686453,
+   0.08304891094937669,
+   0.023413410641926688,
+   0.005231338076767325,
+   0.0009665436213796993,
+   0.00017558186971343277
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    4
+   ],
+   "away_goals_80": [
+    0,
+    3
+   ],
+   "total_goals_80": [
+    1,
+    5
+   ],
+   "goal_diff_80": [
+    -1,
+    3
+   ]
+  },
+  "score_grid": [
+   [
+    0.052152,
+    0.054635,
+    0.033678,
+    0.012925,
+    0.003662,
+    0.00082,
+    0.000152
+   ],
+   [
+    0.086291,
+    0.118196,
+    0.06432,
+    0.024688,
+    0.006995,
+    0.001567,
+    0.00029
+   ],
+   [
+    0.081273,
+    0.099818,
+    0.062133,
+    0.022582,
+    0.006399,
+    0.001434,
+    0.000265
+   ],
+   [
+    0.048306,
+    0.059337,
+    0.034975,
+    0.014183,
+    0.003806,
+    0.000853,
+    0.000158
+   ],
+   [
+    0.021152,
+    0.025986,
+    0.01532,
+    0.005883,
+    0.001761,
+    0.000374,
+    6.9e-05
+   ],
+   [
+    0.007308,
+    0.008979,
+    0.005294,
+    0.002033,
+    0.000576,
+    0.000136,
+    2.4e-05
+   ],
+   [
+    0.00208,
+    0.002557,
+    0.001508,
+    0.000579,
+    0.000164,
+    3.7e-05,
+    7e-06
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.512625,
+  "p_draw": 0.247815,
+  "p_away": 0.23956,
+  "se": [
+   0.0011176775236511648,
+   0.0009654085295226057,
+   0.0009543872547346805
+  ],
+  "max_abs_dev_vs_exact": 0.0010645209006431289,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   1.3747714565284366,
+   2.2566693452852014
+  ],
+  "xg_away_80": [
+   0.8686960289064706,
+   1.5199737379522082
+  ],
+  "p_home_80": [
+   0.39528252126108826,
+   0.6342612221335873
+  ],
+  "p_draw_80": [
+   0.20242971923190173,
+   0.2741556441895741
+  ],
+  "p_away_80": [
+   0.15869843069843104,
+   0.3441936596567473
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.19649026167545033,
+   0.20762449303770802
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.5090082649959692,
+   "p_draw": 0.24648030643533303,
+   "p_away": 0.24451142856869776,
+   "xg_home": 1.735725917647496,
+   "xg_away": 1.137355506464714,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.5244931218049231,
+   "p_draw": 0.2354408079575487,
+   "p_away": 0.24006607023752796,
+   "xg_home": 1.7532978471324776,
+   "xg_away": 1.1093998031816992,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.5523601389973517,
+   "p_draw": 0.22999714600283133,
+   "p_away": 0.21764271499981702,
+   "xg_home": 1.9614151482663564,
+   "xg_away": 1.1672531262137997,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.44656628343789845,
+   "p_draw": 0.24508439946811447,
+   "p_away": 0.30834931709398716,
+   "xg_home": 1.5986635883742164,
+   "xg_away": 1.2885559786529155,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.4983183144574606,
+   "p_draw": 0.243324181393831,
+   "p_away": 0.2583575041487085,
+   "xg_home": 1.7648553865040528,
+   "xg_away": 1.2144988437745827,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Lens attack vs Toulouse defence: time-weighted strength gap multiplies Lens's scoring rate by \u00d71.22 relative to an average pairing (from 29/29 decay-weighted matches).",
+   "effect": 0.2015
+  },
+  {
+   "text": "Home advantage (France, fitted from results): \u00d71.18 on Lens's scoring rate.",
+   "effect": 0.1635
+  },
+  {
+   "text": "Independent results-only Elo: Lens 1706 vs Toulouse 1612 (gap +94 before home advantage).",
+   "effect": 0.1407
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.5115604790993569,
+  "p_draw": 0.2485696946881383,
+  "p_away": 0.23986982621250486,
+  "xg_home": 1.796091620410522,
+  "xg_away": 1.1816676154862638
+ },
+ "context": {
+  "fetched_at": "2026-11-19T10:00:13+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5802991",
+    "fetched_at": "2026-11-19T10:00:13+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "inferred",
+    "source": null,
+    "formation": null,
+    "starters": [
+     {
+      "name": "Robin Risser",
+      "pos": "G"
+     },
+     {
+      "name": "Florian Thauvin",
+      "pos": "M"
+     },
+     {
+      "name": "Matthieu Udol",
+      "pos": "M"
+     },
+     {
+      "name": "Ruben Aguilar",
+      "pos": "D"
+     },
+     {
+      "name": "Florian Sotoca",
+      "pos": "M"
+     },
+     {
+      "name": "Micha\u00ebl Cuisance",
+      "pos": "M"
+     },
+     {
+      "name": "Amadou Haidara",
+      "pos": "M"
+     },
+     {
+      "name": "Samson Baidoo",
+      "pos": "D"
+     },
+     {
+      "name": "Saud Abdulhamid",
+      "pos": "M"
+     },
+     {
+      "name": "Yacine Titraoui",
+      "pos": "M"
+     },
+     {
+      "name": "Jean-Clair Todibo",
+      "pos": "D"
+     }
+    ],
+    "fetched_at": "2026-11-19T10:00:13+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [],
+    "mean_xi_attack_index": -0.2,
+    "mean_continuity": 0.349,
+    "p_backup_gk": 0.0
+   },
+   "away": {
+    "status": "inferred",
+    "source": null,
+    "formation": null,
+    "starters": [
+     {
+      "name": "Guillaume Restes",
+      "pos": "G"
+     },
+     {
+      "name": "Cristian C\u00e1sseres",
+      "pos": "M"
+     },
+     {
+      "name": "Mark McKenzie",
+      "pos": "D"
+     },
+     {
+      "name": "Christ Tap\u00e9",
+      "pos": "D"
+     },
+     {
+      "name": "Thomas J\u00f8rgensen",
+      "pos": "M"
+     },
+     {
+      "name": "Rasmus Nicolaisen",
+      "pos": "D"
+     },
+     {
+      "name": "Casper Tengstedt",
+      "pos": "F"
+     },
+     {
+      "name": "Jacen Russell-Rowe",
+      "pos": "F"
+     },
+     {
+      "name": "Niko Sigur",
+      "pos": "M"
+     },
+     {
+      "name": "Santiago Hidalgo",
+      "pos": "F"
+     },
+     {
+      "name": "Isma\u00efl Diallo",
+      "pos": "D"
+     }
+    ],
+    "fetched_at": "2026-11-19T10:00:13+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [],
+    "mean_xi_attack_index": -0.047,
+    "mean_continuity": -0.655,
+    "p_backup_gk": 0.29
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Franjo Ivanovi\u0107",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5802991",
+     "fetched_at": "2026-11-19T10:00:13+00:00"
+    },
+    {
+     "player": "Odsonne \u00c9douard",
+     "type": "injury",
+     "expected_return": "Early January 2027",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5802991",
+     "fetched_at": "2026-11-19T10:00:13+00:00"
+    },
+    {
+     "player": "Isma\u00eblo Ganiou",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5802991",
+     "fetched_at": "2026-11-19T10:00:13+00:00"
+    },
+    {
+     "player": "Abdallah Sima",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5802991",
+     "fetched_at": "2026-11-19T10:00:13+00:00"
+    },
+    {
+     "player": "Maik Nawrocki",
+     "type": "injury",
+     "expected_return": "Mid May 2027",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5802991",
+     "fetched_at": "2026-11-19T10:00:13+00:00"
+    },
+    {
+     "player": "Jhoanner Ch\u00e1vez",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5802991",
+     "fetched_at": "2026-11-19T10:00:13+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "Rafik Messali",
+     "type": "injury",
+     "expected_return": "Early December 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5802991",
+     "fetched_at": "2026-11-19T10:00:13+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 13,
+    "n21": 1,
+    "last_match": "2026-11-08"
+   },
+   "away": {
+    "rest_days": 15,
+    "n21": 2,
+    "last_match": "2026-11-06"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 768.8
+  },
+  "venue": {
+   "name": "Stade Bollaert-Delelis",
+   "city": "Lens",
+   "lat": 50.432866762,
+   "lon": 2.81494081
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 2.515,
+   "temp_c": 4.0,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=50.433&longitude=2.815",
+   "fetched_at": "2026-11-19T10:00:13+00:00",
+   "lat": 50.432866762,
+   "lon": 2.81494081
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": -1.33,
+    "d_p_draw_pp": 0.4,
+    "d_p_away_pp": 0.94,
+    "d_xg_home": 0.007,
+    "d_xg_away": 0.054
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0338,
+    "away_rate_mult": 1.0142,
+    "d_p_home_pp": 1.0,
+    "d_p_draw_pp": -0.51,
+    "d_p_away_pp": -0.48,
+    "d_xg_home": 0.059,
+    "d_xg_away": 0.017,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "home_rate_mult": 0.9754,
+    "away_rate_mult": 0.9654,
+    "d_p_home_pp": -0.09,
+    "d_p_draw_pp": 0.35,
+    "d_p_away_pp": -0.26,
+    "d_xg_home": -0.041,
+    "d_xg_away": -0.039,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 13.0,
+   "rest_a": 15.0,
+   "n21_h": 1.0,
+   "n21_a": 2.0,
+   "travel_km": 768.7635243405093,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 2.515,
+   "temp_c": 4.0
+  }
+ },
+ "lineup_simulation": {
+  "applied": true,
+  "validated": false,
+  "scale": 0.5,
+  "basis": {
+   "home": "inferred",
+   "away": "inferred"
+  },
+  "home_rate_mult": 0.9876,
+  "away_rate_mult": 0.9825,
+  "note": "Starting-XI strength, continuity and backup-keeper adjustment at half the fitted size. It did not pass the out-of-sample test, so bets are not priced from it.",
+  "p_home": 0.5110997358358662,
+  "p_draw": 0.2504192062335211,
+  "p_away": 0.23848105793061267,
+  "xg_home": 1.7749597576617384,
+  "xg_away": 1.161732322945251,
+  "xg_total": 2.9366920806069894,
+  "btts": 0.5871344280015983,
+  "totals_over": {
+   "over_0.5": 0.9455564588713485,
+   "over_1.5": 0.8005936198665219,
+   "over_2.5": 0.5642657593818492,
+   "over_3.5": 0.3390875958919125,
+   "over_4.5": 0.17068923301499234,
+   "over_5.5": 0.07486231915275053,
+   "over_6.5": 0.0282395992642887
+  },
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.11965553066240844
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.11965553066240844
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.09978590213123867
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.08891888491593285
+   },
+   {
+    "home": 2,
+    "away": 0,
+    "p": 0.08271472682483884
+   },
+   {
+    "home": 1,
+    "away": 2,
+    "p": 0.06399325107128974
+   }
+  ],
+  "score_grid": [
+   [
+    0.054444,
+    0.056044,
+    0.033958,
+    0.012814,
+    0.003571,
+    0.000787,
+    0.000143
+   ],
+   [
+    0.088919,
+    0.119656,
+    0.063993,
+    0.024148,
+    0.006729,
+    0.001483,
+    0.00027
+   ],
+   [
+    0.082715,
+    0.099786,
+    0.061033,
+    0.021804,
+    0.006076,
+    0.001339,
+    0.000244
+   ],
+   [
+    0.048585,
+    0.05861,
+    0.03394,
+    0.013526,
+    0.003568,
+    0.000786,
+    0.000143
+   ],
+   [
+    0.021036,
+    0.025377,
+    0.014694,
+    0.005544,
+    0.001632,
+    0.00034,
+    6.2e-05
+   ],
+   [
+    0.007191,
+    0.008674,
+    0.005023,
+    0.001895,
+    0.000528,
+    0.000123,
+    2.1e-05
+   ],
+   [
+    0.002027,
+    0.002444,
+    0.001415,
+    0.000534,
+    0.000149,
+    3.3e-05,
+    6e-06
+   ]
+  ]
+ },
+ "confidence": {
+  "tier": "MODERATE",
+  "p_max": 0.5115604790993569,
+  "entropy_nats": 1.0313628609728034,
+  "text": "Most likely result has P = 51.2%. In the out-of-sample backtest, favourites priced 0.50\u20130.60 won 53.9% \u00b1 0.5% (n=9522, mean forecast 54.4%). Backtest RPS for F1: 0.2071; exact-score top-5 hit rate 45.4% (n=990). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: MODERATE (entropy 1.031 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Lens: no lineup published yet \u2014 XI inferred from recent minutes share minus known absences; 200 configurations simulated (start P=0.7, UNVALIDATED prior).",
+  "Toulouse: no lineup published yet \u2014 XI inferred from recent minutes share minus known absences; 200 configurations simulated (start P=0.7, UNVALIDATED prior)."
+ ],
+ "verdict": "Lens 1\u20131 Toulouse is the single most probable scoreline at 11.8%: expected goals 1.80\u20131.18 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.043). Exact scores are inherently uncertain; the 1X2 split is 51.2%/24.9%/24.0%.",
+ "resolved": {
+  "home_key": "France:Lens",
+  "away_key": "France:Toulouse",
+  "div": "F1",
+  "home_div": "F1",
+  "away_div": "F1",
+  "country": "France"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: Toulouse FC at Racing Club de Lens\nCompetition: Ligue 1\nDate: 2026-11-21 14:45 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-11-16\n\nPRIMARY FINAL SCORE PREDICTION\n\nRacing Club de Lens 1 \u2013 1 Toulouse FC\n(modal exact score, probability 11.8%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.80\nAway: 1.18\nExpected Total: 2.98\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 51.2%\nDraw: 24.9%\nAway Win: 24.0%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 11.8%\n2. 2\u20131: 10.0%\n3. 1\u20130: 8.6%\n4. 2\u20130: 8.1%\n5. 1\u20132: 6.4%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 19.3%\nTotal 2 goals: 23.3%\nTotal 3 goals: 22.5%\nTotal 4 goals: 17.1%\nTotal 5+ goals: 17.7%\n\nBoth Teams Score: 59.5%\nClean sheet Racing Club de Lens: 29.9% \u00b7 Clean sheet Toulouse FC: 15.8%\n\nMATCH INTELLIGENCE\n\n1. Lens attack vs Toulouse defence: time-weighted strength gap multiplies Lens's scoring rate by \u00d71.22 relative to an average pairing (from 29/29 decay-weighted matches).\n2. Home advantage (France, fitted from results): \u00d71.18 on Lens's scoring rate.\n3. Independent results-only Elo: Lens 1706 vs Toulouse 1612 (gap +94 before home advantage).\n\nMODEL CONFIDENCE\n\nMost likely result has P = 51.2%. In the out-of-sample backtest, favourites priced 0.50\u20130.60 won 53.9% \u00b1 0.5% (n=9522, mean forecast 54.4%). Backtest RPS for F1: 0.2071; exact-score top-5 hit rate 45.4% (n=990). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: MODERATE (entropy 1.031 nats of max 1.099).\nParameter-uncertainty 80% bands: xG Racing Club de Lens 1.37\u20132.26, xG Toulouse FC 0.87\u20131.52; P(home win) 39.5%\u201363.4%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0011 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nLens: INFERRED, fetched 2026-11-19 05:00 EST\n  Robin Risser (G), Florian Thauvin (M), Matthieu Udol (M), Ruben Aguilar (D), Florian Sotoca (M), Micha\u00ebl Cuisance (M), Amadou Haidara (M), Samson Baidoo (D), Saud Abdulhamid (M), Yacine Titraoui (M), Jean-Clair Todibo (D)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs -0.200 (log) \u00b7 continuity +0.35 \u00b7 P(backup GK) 0%\nToulouse: INFERRED, fetched 2026-11-19 05:00 EST\n  Guillaume Restes (G), Cristian C\u00e1sseres (M), Mark McKenzie (D), Christ Tap\u00e9 (D), Thomas J\u00f8rgensen (M), Rasmus Nicolaisen (D), Casper Tengstedt (F), Jacen Russell-Rowe (F), Niko Sigur (M), Santiago Hidalgo (F), Isma\u00efl Diallo (D)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs -0.047 (log) \u00b7 continuity -0.66 \u00b7 P(backup GK) 29%\n\nKEY ABSENCES\n\n- Lens: Franjo Ivanovi\u0107 \u2014 injury, Doubtful [FotMob, 2026-11-19 05:00 EST]\n- Lens: Odsonne \u00c9douard \u2014 injury, Early January 2027 [FotMob, 2026-11-19 05:00 EST]\n- Lens: Isma\u00eblo Ganiou \u2014 injury, Late November 2026 [FotMob, 2026-11-19 05:00 EST]\n- Lens: Abdallah Sima \u2014 injury, Late November 2026 [FotMob, 2026-11-19 05:00 EST]\n- Lens: Maik Nawrocki \u2014 injury, Mid May 2027 [FotMob, 2026-11-19 05:00 EST]\n- Lens: Jhoanner Ch\u00e1vez \u2014 injury, Late November 2026 [FotMob, 2026-11-19 05:00 EST]\n- Toulouse: Rafik Messali \u2014 injury, Early December 2026 [FotMob, 2026-11-19 05:00 EST]\n\nWEATHER AT VENUE\n\nStade Bollaert-Delelis, Lens: 4.0 \u00b0C, wind 2.5 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-11-19 05:00 EST]\n\nREST & TRAVEL\n\nLens: 13 days' rest, 1 matches in previous 21 days \u00b7 Toulouse: 15 days' rest, 2 in 21 days \u00b7 away travel 768.8 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 51.2% / 24.9% / 24.0%, xG 1.80\u20131.18\n- Understat xG component (validated, in ensemble): home -1.33 pp, draw +0.40 pp, away +0.94 pp; xG +0.007 / +0.054\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +1.00 pp, draw -0.51 pp, away -0.48 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- lineup: NOT APPLIED (failed out-of-sample validation); would have moved home -0.09 pp, draw +0.35 pp, away -0.26 pp\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Lens: no lineup published yet \u2014 XI inferred from recent minutes share minus known absences; 200 configurations simulated (start P=0.7, UNVALIDATED prior).\n- Toulouse: no lineup published yet \u2014 XI inferred from recent minutes share minus known absences; 200 configurations simulated (start P=0.7, UNVALIDATED prior).\n\nFINAL VERDICT\n\nLens 1\u20131 Toulouse is the single most probable scoreline at 11.8%: expected goals 1.80\u20131.18 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.043). Exact scores are inherently uncertain; the 1X2 split is 51.2%/24.9%/24.0%.\n",
+ "refresh_id": "560ad8a00b8b47d3b5473660ab67e58d",
+ "frozen_at": "2026-11-19T10:00:13+00:00",
+ "sha256": "7a4ee45861b2819492f06a0ffe245c375e3a9f06d78e497aa2f086d8a05ba688"
+}

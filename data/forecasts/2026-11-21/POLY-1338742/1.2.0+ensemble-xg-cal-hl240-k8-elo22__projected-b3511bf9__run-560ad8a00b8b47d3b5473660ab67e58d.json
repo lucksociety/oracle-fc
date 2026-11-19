@@ -1,0 +1,779 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-11-16",
+ "input_fingerprint": "937aecb8f6d5c2dbf57f4a041c6b856dc02848ebbdf929f9c7318e10ebed359f",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-11-19T10:00:05+00:00",
+ "fixture": {
+  "event_id": "POLY-1338742",
+  "home_name": "Sevilla FC",
+  "away_name": "Real Betis Balompi\u00e9",
+  "competition": "LaLiga",
+  "subcategory": "lal",
+  "kickoff_utc": "2026-11-21T17:30:00+00:00",
+  "kickoff_local": "2026-11-21 12:30 EST",
+  "home_matched": "Sevilla",
+  "away_matched": "Betis",
+  "match_methods": {
+   "home": {
+    "source": "Sevilla FC",
+    "matched": "Sevilla",
+    "method": "core-tokens",
+    "score": 0.97
+   },
+   "away": {
+    "source": "Real Betis Balompi\u00e9",
+    "matched": "Betis",
+    "method": "alias",
+    "score": 1.0
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.32291717464115127,
+  "p_draw": 0.2752834162084354,
+  "p_away": 0.40179940915041334,
+  "xg_home": 1.2726725011261308,
+  "xg_away": 1.4398025755425086,
+  "xg_total": 2.7124750766686394,
+  "median_total": 3,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.13324979968328163
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.13324979968328163
+   },
+   {
+    "home": 0,
+    "away": 1,
+    "p": 0.0905181636940954
+   },
+   {
+    "home": 1,
+    "away": 2,
+    "p": 0.08936036289405247
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.07839413031580061
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.0783602386359806
+   }
+  ],
+  "btts": 0.5660674732454712,
+  "totals_over": {
+   "over_0.5": 0.9313963761328773,
+   "over_1.5": 0.7624840821229812,
+   "over_2.5": 0.5098983752343323,
+   "over_3.5": 0.2887561079951473,
+   "over_4.5": 0.13599480440059866,
+   "over_5.5": 0.05581682185560404,
+   "over_6.5": 0.019633049695952958
+  },
+  "total_buckets": {
+   "0-1": 0.2375159178770187,
+   "2": 0.2525857068886489,
+   "3": 0.22114226723918512,
+   "4": 0.1527613035945486,
+   "5+": 0.13599480440059866
+  },
+  "clean_sheet_home": 0.2288489976583708,
+  "clean_sheet_away": 0.2736871529632807,
+  "home_goal_dist": [
+   0.2736871529632807,
+   0.36300331482086495,
+   0.2297543545762887,
+   0.09518919033236702,
+   0.029368364210914707,
+   0.0072205554497472265,
+   0.0014745429873618977,
+   0.0003025246591747598
+  ],
+  "away_goal_dist": [
+   0.2288489976583708,
+   0.34804232430774157,
+   0.2506411819153165,
+   0.11746734683141713,
+   0.04072283995476943,
+   0.011169465081811967,
+   0.002527426658568439,
+   0.0005804175920042244
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    3
+   ],
+   "away_goals_80": [
+    0,
+    3
+   ],
+   "total_goals_80": [
+    1,
+    5
+   ],
+   "goal_diff_80": [
+    -2,
+    2
+   ]
+  },
+  "score_grid": [
+   [
+    0.068604,
+    0.090518,
+    0.067693,
+    0.031907,
+    0.011083,
+    0.003038,
+    0.000687
+   ],
+   [
+    0.078394,
+    0.13325,
+    0.08936,
+    0.042179,
+    0.014672,
+    0.004028,
+    0.000911
+   ],
+   [
+    0.051643,
+    0.07836,
+    0.060158,
+    0.02692,
+    0.009377,
+    0.002578,
+    0.000584
+   ],
+   [
+    0.021514,
+    0.032686,
+    0.023789,
+    0.011891,
+    0.003926,
+    0.001081,
+    0.000245
+   ],
+   [
+    0.006655,
+    0.010123,
+    0.007376,
+    0.003495,
+    0.001289,
+    0.000336,
+    7.6e-05
+   ],
+   [
+    0.001636,
+    0.002492,
+    0.001818,
+    0.000862,
+    0.000301,
+    8.8e-05,
+    1.9e-05
+   ],
+   [
+    0.000334,
+    0.000509,
+    0.000372,
+    0.000176,
+    6.2e-05,
+    1.7e-05,
+    4e-06
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.32252000000000003,
+  "p_draw": 0.27671,
+  "p_away": 0.40077,
+  "se": [
+   0.0010452292801103498,
+   0.0010003538771354865,
+   0.0010957951612869988
+  ],
+  "max_abs_dev_vs_exact": 0.0014265837915646284,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   0.9698615100382042,
+   1.6041481022940351
+  ],
+  "xg_away_80": [
+   1.099286234847022,
+   1.802762167005866
+  ],
+  "p_home_80": [
+   0.23872619931218128,
+   0.4331131150082127
+  ],
+  "p_draw_80": [
+   0.23518519449295053,
+   0.2948410399332538
+  ],
+  "p_away_80": [
+   0.2977591999400293,
+   0.508350344724516
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.1995003807913269,
+   0.183577407975507
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.3408113655942834,
+   "p_draw": 0.2606033485319119,
+   "p_away": 0.3985852858738048,
+   "xg_home": 1.3529868447230509,
+   "xg_away": 1.481138883121033,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.30474110286014944,
+   "p_draw": 0.2657340843844665,
+   "p_away": 0.4295248127553842,
+   "xg_home": 1.1299490963472218,
+   "xg_away": 1.393610858423176,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.3050806059907111,
+   "p_draw": 0.25960735877246494,
+   "p_away": 0.43531203523682405,
+   "xg_home": 1.291540665173496,
+   "xg_away": 1.5830347146178911,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.4552115934330994,
+   "p_draw": 0.25248472105328607,
+   "p_away": 0.2923036855136146,
+   "xg_home": 1.5372273318978065,
+   "xg_away": 1.1808505371504674,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.34921178551376725,
+   "p_draw": 0.26367725528795277,
+   "p_away": 0.3871109591982801,
+   "xg_home": 1.3491554666085872,
+   "xg_away": 1.4324978243687072,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Home advantage (Spain, fitted from results): \u00d71.31 on Sevilla's scoring rate.",
+   "effect": 0.2699
+  },
+  {
+   "text": "Independent results-only Elo: Sevilla 1549 vs Betis 1705 (gap -156 before home advantage).",
+   "effect": 0.2344
+  },
+  {
+   "text": "Betis attack vs Sevilla defence: rate multiplier \u00d71.23 for the away side.",
+   "effect": 0.2063
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.32291717464115127,
+  "p_draw": 0.2752834162084354,
+  "p_away": 0.40179940915041334,
+  "xg_home": 1.2726725011261308,
+  "xg_away": 1.4398025755425086
+ },
+ "context": {
+  "fetched_at": "2026-11-19T10:00:05+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5868140",
+    "fetched_at": "2026-11-19T10:00:05+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "projected",
+    "source": "FotMob projected XI (enetpulse)",
+    "formation": "4-2-3-1",
+    "starters": [
+     {
+      "name": "Odysseas Vlachodimos",
+      "pos": "G",
+      "shirt": "1"
+     },
+     {
+      "name": "Juan Iglesias",
+      "pos": "D",
+      "shirt": "2"
+     },
+     {
+      "name": "Arouna Sangante",
+      "pos": "D",
+      "shirt": "12"
+     },
+     {
+      "name": "Kike Salas",
+      "pos": "D",
+      "shirt": "4"
+     },
+     {
+      "name": "Gabriel Suazo",
+      "pos": "D",
+      "shirt": "17"
+     },
+     {
+      "name": "Youssouf Fofana",
+      "pos": "M",
+      "shirt": "24"
+     },
+     {
+      "name": "Lucien Agoum\u00e9",
+      "pos": "M",
+      "shirt": "6"
+     },
+     {
+      "name": "Alfon Gonz\u00e1lez",
+      "pos": "F",
+      "shirt": "7"
+     },
+     {
+      "name": "Isaac Romero",
+      "pos": "F",
+      "shirt": "16"
+     },
+     {
+      "name": "F\u00e9lix Correia",
+      "pos": "F",
+      "shirt": "20"
+     },
+     {
+      "name": "Lucas Stassin",
+      "pos": "F",
+      "shirt": "19"
+     }
+    ],
+    "fetched_at": "2026-11-19T10:00:05+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [],
+    "mean_xi_attack_index": 0.079,
+    "mean_continuity": -0.208,
+    "p_backup_gk": 0.0
+   },
+   "away": {
+    "status": "projected",
+    "source": "FotMob projected XI (enetpulse)",
+    "formation": "4-2-3-1",
+    "starters": [
+     {
+      "name": "\u00c1lvaro Vall\u00e9s",
+      "pos": "G",
+      "shirt": "1"
+     },
+     {
+      "name": "H\u00e9ctor Beller\u00edn",
+      "pos": "D",
+      "shirt": "2"
+     },
+     {
+      "name": "Marc Bartra",
+      "pos": "D",
+      "shirt": "5"
+     },
+     {
+      "name": "Natan",
+      "pos": "D",
+      "shirt": "4"
+     },
+     {
+      "name": "Fran Garc\u00eda",
+      "pos": "D",
+      "shirt": "11"
+     },
+     {
+      "name": "Pablo Fornals",
+      "pos": "M",
+      "shirt": "8"
+     },
+     {
+      "name": "Marc Roca",
+      "pos": "M",
+      "shirt": "21"
+     },
+     {
+      "name": "Antony",
+      "pos": "F",
+      "shirt": "7"
+     },
+     {
+      "name": "Isco",
+      "pos": "M",
+      "shirt": "22"
+     },
+     {
+      "name": "Abdessamad Ezzalzouli",
+      "pos": "F",
+      "shirt": "10"
+     },
+     {
+      "name": "Troy Parrott",
+      "pos": "F",
+      "shirt": "19"
+     }
+    ],
+    "fetched_at": "2026-11-19T10:00:05+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [],
+    "mean_xi_attack_index": 0.003,
+    "mean_continuity": 0.426,
+    "p_backup_gk": 0.0
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Jos\u00e9 \u00c1ngel Carmona",
+     "type": "injury",
+     "expected_return": "Out for season",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868140",
+     "fetched_at": "2026-11-19T10:00:05+00:00"
+    },
+    {
+     "player": "Miguel Sierra",
+     "type": "injury",
+     "expected_return": "Early December 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868140",
+     "fetched_at": "2026-11-19T10:00:05+00:00"
+    },
+    {
+     "player": "Marc\u00e3o",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868140",
+     "fetched_at": "2026-11-19T10:00:05+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "Dani Ceballos",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868140",
+     "fetched_at": "2026-11-19T10:00:05+00:00"
+    },
+    {
+     "player": "Jos\u00e9 Antonio Morante",
+     "type": "injury",
+     "expected_return": "Early December 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868140",
+     "fetched_at": "2026-11-19T10:00:05+00:00"
+    },
+    {
+     "player": "Facundo Bernal",
+     "type": "suspension",
+     "expected_return": "Late November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868140",
+     "fetched_at": "2026-11-19T10:00:05+00:00"
+    },
+    {
+     "player": "Juan Hern\u00e1ndez",
+     "type": "injury",
+     "expected_return": "Early December 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868140",
+     "fetched_at": "2026-11-19T10:00:05+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 15,
+    "n21": 2,
+    "last_match": "2026-11-06"
+   },
+   "away": {
+    "rest_days": 13,
+    "n21": 2,
+    "last_match": "2026-11-08"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 4.8
+  },
+  "venue": {
+   "name": "Estadio Ram\u00f3n S\u00e1nchez Pizju\u00e1n",
+   "city": "Sevilla",
+   "lat": 37.384045627,
+   "lon": -5.970591903
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 2.355,
+   "temp_c": 19.1,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=37.384&longitude=-5.971",
+   "fetched_at": "2026-11-19T10:00:05+00:00",
+   "lat": 37.384045627,
+   "lon": -5.970591903
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": 2.16,
+    "d_p_draw_pp": -0.05,
+    "d_p_away_pp": -2.11,
+    "d_xg_home": 0.105,
+    "d_xg_away": 0.017
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0007,
+    "away_rate_mult": 1.0003,
+    "d_p_home_pp": 0.01,
+    "d_p_draw_pp": -0.01,
+    "d_p_away_pp": -0.01,
+    "d_xg_home": 0.001,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "home_rate_mult": 1.0093,
+    "away_rate_mult": 1.0152,
+    "d_p_home_pp": -0.09,
+    "d_p_draw_pp": -0.22,
+    "d_p_away_pp": 0.31,
+    "d_xg_home": 0.012,
+    "d_xg_away": 0.022,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 15.0,
+   "rest_a": 13.0,
+   "n21_h": 2.0,
+   "n21_a": 2.0,
+   "travel_km": 4.759763759520039,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 2.355,
+   "temp_c": 19.1
+  }
+ },
+ "lineup_simulation": {
+  "applied": true,
+  "validated": false,
+  "scale": 0.5,
+  "basis": {
+   "home": "projected",
+   "away": "projected"
+  },
+  "home_rate_mult": 1.0047,
+  "away_rate_mult": 1.0076,
+  "note": "Starting-XI strength, continuity and backup-keeper adjustment at half the fitted size. It did not pass the out-of-sample test, so bets are not priced from it.",
+  "p_home": 0.32245480517925756,
+  "p_draw": 0.2742287094287934,
+  "p_away": 0.40331648539194914,
+  "xg_home": 1.2786136666997898,
+  "xg_away": 1.4505007843300062,
+  "xg_total": 2.7291144510297958,
+  "btts": 0.5690920806752063,
+  "totals_over": {
+   "over_0.5": 0.9325431209248318,
+   "over_1.5": 0.7654282915838602,
+   "over_2.5": 0.5139839105267133,
+   "over_3.5": 0.29246549418547557,
+   "over_4.5": 0.13848664772123312,
+   "over_5.5": 0.05715917655792296,
+   "over_6.5": 0.02022452474150375
+  },
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.13261142852600985
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.13261142852600985
+   },
+   {
+    "home": 0,
+    "away": 1,
+    "p": 0.0896709040744228
+   },
+   {
+    "home": 1,
+    "away": 2,
+    "p": 0.08960820043375638
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.07835138928435553
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.0774439252665488
+   }
+  ],
+  "score_grid": [
+   [
+    0.067457,
+    0.089671,
+    0.067573,
+    0.0321,
+    0.01124,
+    0.003107,
+    0.000708
+   ],
+   [
+    0.077444,
+    0.132611,
+    0.089608,
+    0.042625,
+    0.014945,
+    0.004136,
+    0.000944
+   ],
+   [
+    0.05126,
+    0.078351,
+    0.060605,
+    0.02733,
+    0.009594,
+    0.002659,
+    0.000607
+   ],
+   [
+    0.021458,
+    0.032839,
+    0.024079,
+    0.012128,
+    0.004036,
+    0.00112,
+    0.000256
+   ],
+   [
+    0.00667,
+    0.01022,
+    0.007502,
+    0.003582,
+    0.001331,
+    0.00035,
+    8e-05
+   ],
+   [
+    0.001648,
+    0.002528,
+    0.001858,
+    0.000888,
+    0.000313,
+    9.2e-05,
+    2e-05
+   ],
+   [
+    0.000338,
+    0.000519,
+    0.000382,
+    0.000183,
+    6.4e-05,
+    1.8e-05,
+    4e-06
+   ]
+  ]
+ },
+ "confidence": {
+  "tier": "LOW",
+  "p_max": 0.40179940915041334,
+  "entropy_nats": 1.086477066006878,
+  "text": "Most likely result has P = 40.2%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.3% \u00b1 0.4% (n=16754, mean forecast 44.6%). Backtest RPS for SP1: 0.1930; exact-score top-5 hit rate 55.1% (n=1239). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: LOW (entropy 1.086 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Sevilla: lineup is PROJECTED (FotMob projected XI (enetpulse)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Betis: lineup is PROJECTED (FotMob projected XI (enetpulse)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior)."
+ ],
+ "verdict": "Sevilla 1\u20131 Betis is the single most probable scoreline at 13.3%: expected goals 1.27\u20131.44 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.043). Exact scores are inherently uncertain; the 1X2 split is 32.3%/27.5%/40.2%.",
+ "resolved": {
+  "home_key": "Spain:Sevilla",
+  "away_key": "Spain:Betis",
+  "div": "SP1",
+  "home_div": "SP1",
+  "away_div": "SP1",
+  "country": "Spain"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: Real Betis Balompi\u00e9 at Sevilla FC\nCompetition: LaLiga\nDate: 2026-11-21 12:30 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-11-16\n\nPRIMARY FINAL SCORE PREDICTION\n\nSevilla FC 1 \u2013 1 Real Betis Balompi\u00e9\n(modal exact score, probability 13.3%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.27\nAway: 1.44\nExpected Total: 2.71\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 32.3%\nDraw: 27.5%\nAway Win: 40.2%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 13.3%\n2. 0\u20131: 9.1%\n3. 1\u20132: 8.9%\n4. 1\u20130: 7.8%\n5. 2\u20131: 7.8%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 23.8%\nTotal 2 goals: 25.3%\nTotal 3 goals: 22.1%\nTotal 4 goals: 15.3%\nTotal 5+ goals: 13.6%\n\nBoth Teams Score: 56.6%\nClean sheet Sevilla FC: 22.9% \u00b7 Clean sheet Real Betis Balompi\u00e9: 27.4%\n\nMATCH INTELLIGENCE\n\n1. Home advantage (Spain, fitted from results): \u00d71.31 on Sevilla's scoring rate.\n2. Independent results-only Elo: Sevilla 1549 vs Betis 1705 (gap -156 before home advantage).\n3. Betis attack vs Sevilla defence: rate multiplier \u00d71.23 for the away side.\n\nMODEL CONFIDENCE\n\nMost likely result has P = 40.2%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.3% \u00b1 0.4% (n=16754, mean forecast 44.6%). Backtest RPS for SP1: 0.1930; exact-score top-5 hit rate 55.1% (n=1239). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: LOW (entropy 1.086 nats of max 1.099).\nParameter-uncertainty 80% bands: xG Sevilla FC 0.97\u20131.60, xG Real Betis Balompi\u00e9 1.10\u20131.80; P(home win) 23.9%\u201343.3%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0014 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nSevilla: PROJECTED \u2014 FotMob projected XI (enetpulse), fetched 2026-11-19 05:00 EST (4-2-3-1)\n  Odysseas Vlachodimos (G), Juan Iglesias (D), Arouna Sangante (D), Kike Salas (D), Gabriel Suazo (D), Youssouf Fofana (M), Lucien Agoum\u00e9 (M), Alfon Gonz\u00e1lez (F), Isaac Romero (F), F\u00e9lix Correia (F), Lucas Stassin (F)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs +0.079 (log) \u00b7 continuity -0.21 \u00b7 P(backup GK) 0%\nBetis: PROJECTED \u2014 FotMob projected XI (enetpulse), fetched 2026-11-19 05:00 EST (4-2-3-1)\n  \u00c1lvaro Vall\u00e9s (G), H\u00e9ctor Beller\u00edn (D), Marc Bartra (D), Natan (D), Fran Garc\u00eda (D), Pablo Fornals (M), Marc Roca (M), Antony (F), Isco (M), Abdessamad Ezzalzouli (F), Troy Parrott (F)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs +0.003 (log) \u00b7 continuity +0.43 \u00b7 P(backup GK) 0%\n\nKEY ABSENCES\n\n- Sevilla: Jos\u00e9 \u00c1ngel Carmona \u2014 injury, Out for season [FotMob, 2026-11-19 05:00 EST]\n- Sevilla: Miguel Sierra \u2014 injury, Early December 2026 [FotMob, 2026-11-19 05:00 EST]\n- Sevilla: Marc\u00e3o \u2014 injury, Doubtful [FotMob, 2026-11-19 05:00 EST]\n- Betis: Dani Ceballos \u2014 injury, Doubtful [FotMob, 2026-11-19 05:00 EST]\n- Betis: Jos\u00e9 Antonio Morante \u2014 injury, Early December 2026 [FotMob, 2026-11-19 05:00 EST]\n- Betis: Facundo Bernal \u2014 suspension, Late November 2026 [FotMob, 2026-11-19 05:00 EST]\n- Betis: Juan Hern\u00e1ndez \u2014 injury, Early December 2026 [FotMob, 2026-11-19 05:00 EST]\n\nWEATHER AT VENUE\n\nEstadio Ram\u00f3n S\u00e1nchez Pizju\u00e1n, Sevilla: 19.1 \u00b0C, wind 2.4 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-11-19 05:00 EST]\n\nREST & TRAVEL\n\nSevilla: 15 days' rest, 2 matches in previous 21 days \u00b7 Betis: 13 days' rest, 2 in 21 days \u00b7 away travel 4.8 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 32.3% / 27.5% / 40.2%, xG 1.27\u20131.44\n- Understat xG component (validated, in ensemble): home +2.16 pp, draw -0.05 pp, away -2.11 pp; xG +0.105 / +0.017\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.01 pp, draw -0.01 pp, away -0.01 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- lineup: NOT APPLIED (failed out-of-sample validation); would have moved home -0.09 pp, draw -0.22 pp, away +0.31 pp\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Sevilla: lineup is PROJECTED (FotMob projected XI (enetpulse)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Betis: lineup is PROJECTED (FotMob projected XI (enetpulse)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n\nFINAL VERDICT\n\nSevilla 1\u20131 Betis is the single most probable scoreline at 13.3%: expected goals 1.27\u20131.44 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.043). Exact scores are inherently uncertain; the 1X2 split is 32.3%/27.5%/40.2%.\n",
+ "refresh_id": "560ad8a00b8b47d3b5473660ab67e58d",
+ "frozen_at": "2026-11-19T10:00:05+00:00",
+ "sha256": "2e0f9e520a0e76158a8584bc032125a07c97b808080e4f687492390a3a75f35f"
+}
