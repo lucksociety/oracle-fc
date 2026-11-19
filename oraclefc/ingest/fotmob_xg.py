@@ -35,6 +35,35 @@ POS = {"G": "GK", "D": "DC", "M": "MC", "F": "FW"}
 CLUB_ALIASES = {"1. FC Köln": "FC Cologne", "RB Leipzig": "RasenBallsport Leipzig"}
 
 
+# Leagues outside the top five whose FotMob match pages carry team xG, and the first season (start year) that
+# does. Probed 2026-11-19 (research/xg_coverage.py). Blending this xG into team strength improved the
+# out-of-sample forecast on 13,387 matches (research/xg_extra_backtest.py; docs/XG_EXTRA_LEAGUES.md).
+EXTRA_LEAGUES = {"BRA": 2023, "ARG": 2023, "USA": 2021, "MEX": 2023, "JPN": 2022, "P1": 2021, "N1": 2021, "T1": 2023,
+                 "B1": 2021, "SC0": 2021, "D2": 2021, "E1": 2021, "G1": 2025, "SP2": 2025}
+EXTRA_M = config.CONTEXT_DIR / "fotmob_extra_matches.parquet"
+EXTRA_P = config.CONTEXT_DIR / "fotmob_extra_players.parquet"
+# FotMob club name -> name in our results data, where the shared matcher does not link them.
+EXTRA_CLUB_ALIASES = {
+    "ARG": {"Atletico Tucuman": "Atl. Tucuman", "Atlético Tucumán": "Atl. Tucuman", "Central Cordoba de Santiago": "Central Cordoba",
+            "Central Córdoba de Santiago": "Central Cordoba", "Club Atletico Platense": "Platense", "Club Atlético Platense": "Platense",
+            "Colon": "Colon Santa Fe", "Deportivo Riestra": "Dep. Riestra", "Independiente Rivadavia": "Ind. Rivadavia",
+            "San Martin San Juan": "San Martin S.J.", "Sarmiento": "Sarmiento Junin", "Talleres": "Talleres Cordoba",
+            "Union": "Union de Santa Fe", "Unión": "Union de Santa Fe"},
+    "B1": {"FCV Dender EH": "Dender", "OH Leuven": "Oud-Heverlee Leuven", "RFC Seraing": "Seraing", "RWDM Brussels": "RWD Molenbeek",
+           "Union St.Gilloise": "St. Gilloise", "Zulte Waregem": "Waregem"},
+    "BRA": {"Vasco da Gama": "Vasco"},
+    "D2": {"1.FC Magdeburg": "Magdeburg", "1.FC Nürnberg": "Nurnberg", "Arminia Bielefeld": "Bielefeld", "Dynamo Dresden": "Dresden",
+           "Jahn Regensburg": "Regensburg", "Wehen Wiesbaden": "Wehen"},
+    "G1": {"AE Larissa": "Larisa", "NFC Volos": "Volos NFC"},
+    "JPN": {"JEF United Chiba": "Chiba", "Jubilo Iwata": "Iwata", "Mito Hollyhock": "Mito"},
+    "MEX": {"Chivas": "Guadalajara Chivas", "Club Universidad Nacional": "UNAM Pumas", "Pumas": "UNAM Pumas", "Tigres": "Tigres UANL"},
+    "N1": {"RKC Waalwijk": "Waalwijk"},
+    "P1": {"AVS Futebol SAD": "AVS", "Estrela da Amadora": "Estrela"},
+    "T1": {"Bodrum FK": "Bodrumspor", "Fatih Karagumruk": "Karagumruk", "Fatih Karagümrük": "Karagumruk"},
+    "USA": {"LA Galaxy": "Los Angeles Galaxy", "Red Bull New York": "New York Red Bulls"},
+}
+
+
 def club_title(name: str, titles: list[str]):
     alias = CLUB_ALIASES.get(name)
     return alias if alias in titles else match_team(name, titles).canonical
@@ -209,3 +238,64 @@ def fill(matches: pd.DataFrame, players: pd.DataFrame, season: int, max_seconds:
     mapped = sum(1 for r in new_p if not str(r["player_id"]).startswith("fm"))
     print(f"fotmob xg fill: {len(new_m)} matches added, {len(new_p)} player rows ({mapped} mapped to existing players), {skipped} skipped or deferred")
     return matches, players
+
+
+def fill_extra(divs: dict | None = None, max_seconds: float | None = 120.0, backfill: bool = False, with_players: bool = False,
+               workers: int = 4):
+    """Add finished matches with team xG for the extra leagues to ``EXTRA_M`` (and player rows to ``EXTRA_P``
+    when asked). Routine runs look only at matches kicked off after (last stored match − 10 days) in the two
+    most recent seasons; ``backfill`` reads every season from the league's first covered one. Observed
+    statistics only."""
+    from concurrent.futures import ThreadPoolExecutor
+    divs = divs or EXTRA_LEAGUES
+    deadline = None if max_seconds is None else time.monotonic() + max_seconds
+    m = pd.read_parquet(EXTRA_M) if EXTRA_M.exists() else pd.DataFrame(columns=MATCH_COLS)
+    p = pd.read_parquet(EXTRA_P) if with_players and EXTRA_P.exists() else pd.DataFrame()
+    have, now, added, skipped = set(m["us_id"]), pd.Timestamp.now(tz="UTC").tz_localize(None), 0, 0
+
+    def one(job):
+        x, div, season = job
+        hours_since_end = (now - x["datetime"]).total_seconds() / 3600 - 3
+        if hours_since_end <= 0 or (deadline is not None and time.monotonic() > deadline):
+            return None                      # not safely finished yet, or out of time: picked up by a later run
+        try:                                 # a page cached before kick-off (for line-ups) is never accepted
+            return parse_match(fotmob.match_details_raw(x["fm_id"], max_age_h=hours_since_end) or {}, div, div, season)
+        except Exception:  # noqa: BLE001
+            return None
+
+    for div, first in divs.items():
+        lid = fotmob.LEAGUES[div]
+        stored = m.loc[m["div"] == div, "datetime"]
+        fresh = backfill or stored.empty
+        since = pd.Timestamp("2000-01-01") if fresh else stored.max() - pd.Timedelta(days=10)
+        try:
+            seasons = [s for s in fotmob._season_list(lid) if int(s[:4]) >= int(first)]
+        except Exception:  # noqa: BLE001
+            continue
+        for s in seasons if fresh else seasons[:2]:
+            if deadline is not None and time.monotonic() > deadline:
+                break
+            body = fotmob.league(lid, s, None if fresh else 6)
+            todo = [(x, div, int(s[:4])) for x in finished(body, since) if OFFSET + x["fm_id"] not in have]
+            if not todo:
+                continue
+            with ThreadPoolExecutor(workers) as ex:
+                got = [g for g in ex.map(one, todo) if g is not None]
+            skipped += len(todo) - len(got)
+            if not got:
+                continue
+            add_m = pd.DataFrame([g[0] for g in got])[MATCH_COLS]
+            assert_no_market_columns(add_m, "fotmob extra matches")
+            m = pd.concat([m, add_m], ignore_index=True)
+            have |= set(add_m["us_id"]); added += len(add_m)
+            if with_players:
+                add_p = pd.DataFrame([dict(r, player_id=f"fm{r['fm_player_id']}") for g in got for r in g[1]]).drop(columns=["fm_player_id"])
+                assert_no_market_columns(add_p, "fotmob extra players")
+                p = pd.concat([p, add_p], ignore_index=True)
+    if added:
+        for frame, path in ((m, EXTRA_M),) + (((p, EXTRA_P),) if with_players else ()):
+            tmp = path.with_suffix(".tmp.parquet")
+            frame.to_parquet(tmp, index=False)
+            tmp.replace(path)
+    print(f"fotmob extra xG: {added} matches added, {skipped} skipped or deferred, {len(m)} stored")
+    return m

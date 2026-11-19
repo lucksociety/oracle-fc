@@ -41,6 +41,11 @@ def cmd_ingest_context(a):
         understat.update(max_seconds=60)
     except Exception as e:  # noqa: BLE001
         print(f"understat update failed (non-fatal): {e}")
+    try:  # team xG for the leagues outside the top five (FotMob match pages)
+        from .ingest import fotmob_xg
+        fotmob_xg.fill_extra(max_seconds=120)
+    except Exception as e:  # noqa: BLE001
+        print(f"fotmob extra xG update failed (non-fatal): {e}")
 
 
 def cmd_backtest(a):
