@@ -31,7 +31,7 @@ def one(job):
         return None
 
 
-def main(args, budget_s=40 * 60):
+def main(args, budget_s=75 * 60):
     t0 = time.time()
     m = pd.read_parquet(M_PATH) if M_PATH.exists() else pd.DataFrame(columns=fotmob_xg.MATCH_COLS)
     p = pd.read_parquet(P_PATH) if P_PATH.exists() else pd.DataFrame()

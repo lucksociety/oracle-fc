@@ -33,6 +33,12 @@ def main(start="2024-04-01"):
         miss = g[g["match_id"].isna()]
         print(f"{d}: {len(g)} xG matches, {g['match_id'].notna().mean():.1%} linked to results; unlinked clubs: "
               f"{sorted(set(miss['home'][miss['home_key'].isna()]) | set(miss['away'][miss['away_key'].isna()]))[:12]}")
+    for d, g in mp.groupby("div"):  # help fix unlinked clubs: show the closest names in the results data
+        miss = g[g["match_id"].isna()]
+        names = sorted(set(df.loc[df["div"] == d, "home"]))
+        import difflib
+        for club in sorted(set(miss["home"][miss["home_key"].isna()]) | set(miss["away"][miss["away_key"].isna()])):
+            print(f"   {d} unlinked '{club}': closest in results {difflib.get_close_matches(club, names, 3, 0.3)}")
     df = H.attach_xg(df, mp)
     cov = df[df["date"] >= "2023-01-01"].groupby("div")["hxg"].agg(lambda s: s.notna().mean())
     print("share of results since 2023 with xG:", cov.round(3).to_dict())
