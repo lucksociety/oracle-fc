@@ -277,7 +277,7 @@
   }
 
   // ---------------------------------------------------------------- match picker and line-up note
-  const BADGE = { confirmed: "confirmed", projected: "projected (not confirmed yet)", inferred: "estimated from recent minutes", none: "not available" };
+  const BADGE = { confirmed: "confirmed", projected: "projected (not confirmed yet)", inferred: "estimated from recent minutes", none: "not published yet" };
   function note() {
     if (!CUR) { $("sim-lineup-note").textContent = ""; $("sim-xi").innerHTML = ""; return; }
     const lus = (CUR.context && CUR.context.lineups) || {}, ls = CUR.lineup_simulation, [hn, an] = names();
@@ -287,7 +287,9 @@
     else if (!ls.applied) eff = `<b class="off">Probabilities unchanged.</b> ${esc(ls.reason)}`;
     else if (!useLu()) eff = `<b class="off">Switched off.</b> Using the tested forecast.`;
     else { const m = (v) => (v == null ? "" : "×" + Number(v).toFixed(3)); eff = `<b class="on">Applied.</b> ${esc(hn)} goals ${m(ls.home_rate_mult)}, ${esc(an)} goals ${m(ls.away_rate_mult)}. ${esc(ls.note || "")}`; }
-    $("sim-lineup-note").innerHTML = `<b>Line-ups.</b> ${side("home", hn, 0)} · ${side("away", an, 1)}.<br>${eff}`;
+    const wait = !CUR.context ? " This league has no line-up source, so a default 4-3-3 is drawn."
+      : hasXi(CUR) ? "" : " The source has not published an eleven for this match yet; it is re-checked every 20 minutes close to kick-off.";
+    $("sim-lineup-note").innerHTML = `<b>Line-ups.</b> ${side("home", hn, 0)} · ${side("away", an, 1)}.${wait}<br>${eff}`;
     $("sim-xi").innerHTML = [0, 1].map((i) => `<div><b>${esc(names()[i])}</b> ${SQ[i].real ? esc(SQ[i].formation) : ""}<div class="muted small">${SQ[i].real ? SQ[i].players.map((p) => esc(p.num + " " + p.name)).join(", ") : "No starting eleven published yet. Shown in a default 4-3-3."}</div></div>`).join("");
   }
   function marketFor(fc) {
@@ -301,14 +303,15 @@
     resetView(); note();
     if (CUR) runSims(); else { $("sim-info").textContent = ""; ["sim-bar", "sim-odds", "sim-kv", "sim-heat", "sim-top"].forEach((i) => ($(i).innerHTML = "")); $("sim-heat-note").textContent = ""; }
   }
+  const hasXi = (f) => ["home", "away"].every((sd) => ((((f.context || {}).lineups || {})[sd] || {}).starters || []).length === 11);
   const tm = (iso) => (iso ? new Date(iso).toLocaleString("en-US", { timeZone: "America/New_York", hour: "numeric", minute: "2-digit" }) : "");
   window.Sim = {
     setForecasts(res) {
       FCS = (res.forecasts || []).filter((f) => f.status === "ok" && f.simulation && f.simulation.score_grid);
       const sel = $("sim-match"), keep = CUR && CUR.fixture.event_id;
-      sel.innerHTML = FCS.length ? FCS.map((f) => `<option value="${esc(f.fixture.event_id)}">${esc(tm(f.fixture.kickoff_utc) + " · " + f.fixture.home_name + " v " + f.fixture.away_name + " (" + f.fixture.competition + ")")}</option>`).join("") : '<option value="">No simulated matches on this date</option>';
+      sel.innerHTML = FCS.length ? FCS.map((f) => `<option value="${esc(f.fixture.event_id)}">${esc(tm(f.fixture.kickoff_utc) + " · " + f.fixture.home_name + " v " + f.fixture.away_name + " (" + f.fixture.competition + ")" + (hasXi(f) ? "" : " · no line-ups yet"))}</option>`).join("") : '<option value="">No simulated matches on this date</option>';
       const now = Date.now(), withLu = (f) => f.lineup_simulation && f.lineup_simulation.applied;
-      const first = FCS.find((f) => String(f.fixture.event_id) === String(keep)) || FCS.find((f) => withLu(f) && Date.parse(f.fixture.kickoff_utc) > now) || FCS.find((f) => Date.parse(f.fixture.kickoff_utc) > now) || FCS[0];
+      const first = FCS.find((f) => String(f.fixture.event_id) === String(keep)) || FCS.find((f) => withLu(f) && Date.parse(f.fixture.kickoff_utc) > now) || FCS.find((f) => hasXi(f) && Date.parse(f.fixture.kickoff_utc) > now) || FCS.find((f) => Date.parse(f.fixture.kickoff_utc) > now) || FCS.find(hasXi) || FCS[0];
       if (first) sel.value = first.fixture.event_id; pick(sel.value);
     },
     setMarket(events) { MARKET = Object.fromEntries((events || []).map((e) => [e.event_id, e])); if (CUR && !MK.h && !MK.d && !MK.a) { MK = marketFor(CUR); renderResults(); } },

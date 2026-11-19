@@ -84,3 +84,44 @@ def test_grading_compares_tested_and_lineup_forecasts():
     v = grade.summarise(games)["vs_lineup"]
     assert v["n"] == 1 and abs(v["log_loss_diff"] - (0.5 + np.log(0.5))) < 1e-9
     assert grade.summarise(games[1:])["vs_lineup"] is None
+
+
+def _raw_match(mid, tid, lt="standard"):
+    xi = [{"id": i, "name": f"Old{i}", "shirtNumber": str(i + 1), "positionId": 0 if i == 0 else 40} for i in range(11)]
+    return {"general": {"matchId": mid, "homeTeam": {"name": "A"}, "awayTeam": {"name": "B"}},
+            "content": {"matchFacts": {"infoBox": {}}, "lineup": {"lineupType": lt,
+                        "homeTeam": {"id": tid, "formation": "3-5-2", "starters": xi}, "awayTeam": {"id": 999, "starters": xi}}}}
+
+
+def test_last_official_xi_is_shown_when_nothing_is_published(monkeypatch):
+    from oraclefc.ingest import fotmob
+    fx = [{"id": 11, "status": {"utcTime": "2026-11-08T20:00:00Z", "finished": True}},
+          {"id": 12, "status": {"utcTime": "2026-11-15T20:00:00Z", "finished": True}},
+          {"id": 13, "status": {"utcTime": "2026-11-21T20:00:00Z", "finished": False}}]
+    monkeypatch.setattr(fotmob, "team", lambda tid, max_age_h=None: {"fixtures": {"allFixtures": {"fixtures": fx}}})
+    monkeypatch.setattr(fotmob, "match_details_raw", lambda mid, max_age_h=None: _raw_match(mid, 7))
+    last = fotmob.last_starting_xi(7, "2026-11-21T20:00:00+00:00")
+    assert last["formation"] == "3-5-2" and len(last["starters"]) == 11 and last["played_utc"].startswith("2026-11-15")
+    assert fotmob.last_starting_xi(7, "2026-11-01T00:00:00+00:00") is None  # nothing earlier than the cut-off
+    # a "previous XI" page is not an official team sheet and is never passed on as one
+    monkeypatch.setattr(fotmob, "match_details_raw", lambda mid, max_age_h=None: _raw_match(mid, 7, "lastStarting11"))
+    assert fotmob.last_starting_xi(7, "2026-11-21T20:00:00+00:00") is None
+
+    # live context: unpublished line-up outside the top five -> last official XI, probabilities untouched
+    monkeypatch.setattr(live, "find_fotmob_match", lambda *a, **k: {"fm_match_id": 13, "home_id": 7, "away_id": 8})
+    empty = {"source_url": "u", "fetched_at": "t", "lineup_status": "none", "lineup_source": "FotMob", "venue": {},
+             "teams": {s: {"formation": None, "starters": [], "unavailable": []} for s in ("home", "away")}}
+    monkeypatch.setattr(live.fotmob, "match_context", lambda _id: empty)
+    monkeypatch.setattr(live.fotmob, "last_starting_xi", lambda tid, ko: {"formation": "3-5-2", "played_utc": "2026-11-15T20:00:00+00:00",
+                        "starters": [{"name": f"Old{i}", "pos": "M", "shirt": "9"} for i in range(11)]} if tid == 7 else None)
+    monkeypatch.setattr(live.fpl, "availability", lambda: [])
+    monkeypatch.setattr(live.H, "venues", lambda: pd.DataFrame(columns=["lat", "lon", "venue", "city"]))
+    monkeypatch.setattr(live, "weather_forecast", lambda *a, **k: None)
+    r = Resolved("A", "B", home="A", away="B", home_key="Brazil:A", away_key="Brazil:B", div="BRA", country="Brazil")
+    base = np.asarray(score_matrix(1.4, 1.1), float)
+    base = base[0] if base.ndim == 3 else base
+    ctx, final = live.build(_Eng(), r, {"kickoff_utc": "2026-11-21T20:00:00+00:00"}, base, {}, {"lineup": [0.27, 0.02, -0.01, 0.03]}, extras={})
+    assert np.allclose(final, base)
+    h, a = ctx["lineups"]["home"], ctx["lineups"]["away"]
+    assert h["status"] == "projected" and h["formation"] == "3-5-2" and len(h["starters"]) == 11 and "last match" in h["source"]
+    assert a["status"] == "none" and a["starters"] == []

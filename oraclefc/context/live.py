@@ -206,7 +206,7 @@ def build(engine, r, fixture: dict, base_matrix: np.ndarray, kept: dict, shadow:
     date = pd.Timestamp(ko).tz_convert("UTC").tz_localize(None).normalize() if ko else engine.as_of
     now = date
     # ---------- FotMob match
-    fm = None
+    fm = row = None
     try:
         row = find_fotmob_match(r.home_key, r.away_key, r.home, r.away, ko)
         fm = fotmob.match_context(row["fm_match_id"]) if row else None
@@ -272,6 +272,18 @@ def build(engine, r, fixture: dict, base_matrix: np.ndarray, kept: dict, shadow:
         info = {"status": mode, "source": (fm or {}).get("lineup_source") if xi_named else None,
                 "formation": t.get("formation") if t else None, "starters": xi_named,
                 "fetched_at": (fm or {}).get("fetched_at")}
+        if not xi_named and row and ko and r.div not in TOP5:
+            # Nothing published for this match yet: show the side's last official XI. Display only;
+            # leagues outside the top five have no player ratings, so no probability depends on it.
+            try:
+                last = fotmob.last_starting_xi(int(row[f"{side}_id"]), ko)
+            except Exception:
+                last = None
+            if last:
+                info.update({"status": "projected", "formation": last["formation"], "fetched_at": now_utc_iso(),
+                             "source": f"FotMob — XI from the side's last match on {last['played_utc'][:10]} "
+                                       "(none published for this match yet)",
+                             "starters": [{"name": p["name"], "pos": p["pos"], "shirt": p.get("shirt")} for p in last["starters"]]})
         if lm is not None and r.div in TOP5 and key in lm.book.team_players:
             xi, unmatched = [], []
             for p in xi_named:
