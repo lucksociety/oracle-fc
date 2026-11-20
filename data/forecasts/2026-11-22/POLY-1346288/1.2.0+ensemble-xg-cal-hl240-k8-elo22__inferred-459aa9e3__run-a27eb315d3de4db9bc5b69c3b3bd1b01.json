@@ -1,0 +1,741 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-11-16",
+ "input_fingerprint": "1a5eec66babfc36f6823f38be831e87d5b4ff7b787f439bd8e754b510044e7e5",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-11-19T23:53:27+00:00",
+ "fixture": {
+  "event_id": "POLY-1346288",
+  "home_name": "Paris FC",
+  "away_name": "Angers SCO",
+  "competition": "Ligue 1",
+  "subcategory": "fl1",
+  "kickoff_utc": "2026-11-22T14:00:00+00:00",
+  "kickoff_local": "2026-11-22 09:00 EST",
+  "home_matched": "Paris FC",
+  "away_matched": "Angers",
+  "match_methods": {
+   "home": {
+    "source": "Paris FC",
+    "matched": "Paris FC",
+    "method": "exact",
+    "score": 1.0
+   },
+   "away": {
+    "source": "Angers SCO",
+    "matched": "Angers",
+    "method": "core-tokens",
+    "score": 0.97
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.6155889647682988,
+  "p_draw": 0.2267524161501648,
+  "p_away": 0.1576586190815365,
+  "xg_home": 1.965401093170726,
+  "xg_away": 0.9105743742126692,
+  "xg_total": 2.875975467383395,
+  "median_total": 3,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.10986899205809292
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.10986899205809292
+   },
+   {
+    "home": 2,
+    "away": 0,
+    "p": 0.1084372434963788
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.1061035391341195
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.10158059362493978
+   },
+   {
+    "home": 3,
+    "away": 0,
+    "p": 0.0706887932477917
+   }
+  ],
+  "btts": 0.527811288517738,
+  "totals_over": {
+   "over_0.5": 0.9417838729613426,
+   "over_1.5": 0.7893854820180704,
+   "over_2.5": 0.5493166527961889,
+   "over_3.5": 0.325229269418597,
+   "over_4.5": 0.16173543404970966,
+   "over_5.5": 0.0700111237807055,
+   "over_6.5": 0.026213785617022586
+  },
+  "total_buckets": {
+   "0-1": 0.21061451798192962,
+   "2": 0.24006882922188155,
+   "3": 0.22408738337759201,
+   "4": 0.16349383536888729,
+   "5+": 0.16173543404970966
+  },
+  "clean_sheet_home": 0.3961502332186067,
+  "clean_sheet_away": 0.13425460530231295,
+  "home_goal_dist": [
+   0.13425460530231295,
+   0.2781906993569937,
+   0.2751944132647925,
+   0.17877099417495457,
+   0.08632253586937011,
+   0.033088477274180336,
+   0.010500579063503494,
+   0.003677695693892535
+  ],
+  "away_goal_dist": [
+   0.3961502332186067,
+   0.37398952932439833,
+   0.16811132923639038,
+   0.049064561776834055,
+   0.010582805554093218,
+   0.0018104845974935093,
+   0.00025648394575463005,
+   3.457234642917493e-05
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    4
+   ],
+   "away_goals_80": [
+    0,
+    2
+   ],
+   "total_goals_80": [
+    1,
+    5
+   ],
+   "goal_diff_80": [
+    -1,
+    3
+   ]
+  },
+  "score_grid": [
+   [
+    0.058216,
+    0.046295,
+    0.021763,
+    0.006344,
+    0.001367,
+    0.000233,
+    3.3e-05
+   ],
+   [
+    0.106104,
+    0.109869,
+    0.045474,
+    0.013299,
+    0.002874,
+    0.000492,
+    7e-05
+   ],
+   [
+    0.108437,
+    0.101581,
+    0.048278,
+    0.013411,
+    0.002908,
+    0.000499,
+    7.1e-05
+   ],
+   [
+    0.070689,
+    0.066448,
+    0.030001,
+    0.009328,
+    0.001921,
+    0.000331,
+    4.7e-05
+   ],
+   [
+    0.034101,
+    0.032166,
+    0.014572,
+    0.004303,
+    0.000992,
+    0.000162,
+    2.3e-05
+   ],
+   [
+    0.013038,
+    0.01234,
+    0.005609,
+    0.001662,
+    0.000364,
+    6.6e-05,
+    9e-06
+   ],
+   [
+    0.004126,
+    0.003918,
+    0.001786,
+    0.000531,
+    0.000117,
+    2e-05,
+    3e-06
+   ]
+  ],
+  "mass_check": 1.0000000000000002
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.615695,
+  "p_draw": 0.226135,
+  "p_away": 0.15817,
+  "se": [
+   0.0010876917462567233,
+   0.0009354088992921759,
+   0.0008159419437067812
+  ],
+  "max_abs_dev_vs_exact": 0.0006174161501648068,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   1.509196734523454,
+   2.4636186639683864
+  ],
+  "xg_away_80": [
+   0.6514835063738088,
+   1.1934087775797362
+  ],
+  "p_home_80": [
+   0.4942338739407203,
+   0.7264243792675004
+  ],
+  "p_draw_80": [
+   0.17215960445072045,
+   0.267310877562615
+  ],
+  "p_away_80": [
+   0.0970541718376385,
+   0.2414443943307131
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.19429036024679885,
+   0.22464470872811626
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.5824385397300721,
+   "p_draw": 0.24861345515311883,
+   "p_away": 0.16894800511680924,
+   "xg_home": 1.6899197519810178,
+   "xg_away": 0.794076780234559,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.6303318787455046,
+   "p_draw": 0.2043757262431152,
+   "p_away": 0.16529239501138007,
+   "xg_home": 2.0625226309174987,
+   "xg_away": 0.9514138945896913,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.6341542101918859,
+   "p_draw": 0.2344069228119289,
+   "p_away": 0.131438866996185,
+   "xg_home": 1.8027734842748628,
+   "xg_away": 0.6912769149033052,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.44656628343789845,
+   "p_draw": 0.24508439946811447,
+   "p_away": 0.30834931709398716,
+   "xg_home": 1.5986635883742164,
+   "xg_away": 1.2885559786529155,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.59484990940548,
+   "p_draw": 0.23434048310372288,
+   "p_away": 0.17080960749079688,
+   "xg_home": 1.8264953458893214,
+   "xg_away": 0.8713661444345948,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Angers attack vs Paris FC defence: rate multiplier \u00d70.66 for the away side.",
+   "effect": 0.4171
+  },
+  {
+   "text": "Independent results-only Elo: Paris FC 1658 vs Angers 1462 (gap +196 before home advantage).",
+   "effect": 0.2947
+  },
+  {
+   "text": "Paris FC attack vs Angers defence: time-weighted strength gap multiplies Paris FC's scoring rate by \u00d71.19 relative to an average pairing (from 29/29 decay-weighted matches).",
+   "effect": 0.1748
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.6155889647682988,
+  "p_draw": 0.22675241615016475,
+  "p_away": 0.15765861908153647,
+  "xg_home": 1.9654010931707258,
+  "xg_away": 0.910574374212669
+ },
+ "context": {
+  "fetched_at": "2026-11-19T23:53:27+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5802997",
+    "fetched_at": "2026-11-19T23:53:27+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "inferred",
+    "source": null,
+    "formation": null,
+    "starters": [
+     {
+      "name": "Kevin Trapp",
+      "pos": "G"
+     },
+     {
+      "name": "Diego Coppola",
+      "pos": "D"
+     },
+     {
+      "name": "Pierre Lees-Melou",
+      "pos": "M"
+     },
+     {
+      "name": "Maxime Lopez",
+      "pos": "M"
+     },
+     {
+      "name": "Lassine Sinayoko",
+      "pos": "F"
+     },
+     {
+      "name": "Ilan Kebbal",
+      "pos": "M"
+     },
+     {
+      "name": "Pablo Pagis",
+      "pos": "M"
+     },
+     {
+      "name": "Hamari Traor\u00e9",
+      "pos": "D"
+     },
+     {
+      "name": "Adama Camara",
+      "pos": "D"
+     },
+     {
+      "name": "Ot\u00e1vio",
+      "pos": "D"
+     },
+     {
+      "name": "Luca Koleosho",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-11-19T23:53:27+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [],
+    "mean_xi_attack_index": -0.075,
+    "mean_continuity": -0.94,
+    "p_backup_gk": 0.3
+   },
+   "away": {
+    "status": "inferred",
+    "source": null,
+    "formation": null,
+    "starters": [
+     {
+      "name": "Anthony Lopes",
+      "pos": "G"
+     },
+     {
+      "name": "Branco van den Boomen",
+      "pos": "M"
+     },
+     {
+      "name": "Amine Sba\u00ef",
+      "pos": "F"
+     },
+     {
+      "name": "Yassin Belkhdim",
+      "pos": "M"
+     },
+     {
+      "name": "Ousmane Camara",
+      "pos": "D"
+     },
+     {
+      "name": "Joseph Kalulu",
+      "pos": "D"
+     },
+     {
+      "name": "Carlens Arcus",
+      "pos": "D"
+     },
+     {
+      "name": "Jim Allevinah",
+      "pos": "F"
+     },
+     {
+      "name": "Prosper Peter",
+      "pos": "F"
+     },
+     {
+      "name": "Lilian Rao-Lisoa",
+      "pos": "D"
+     },
+     {
+      "name": "Haris Belkebla",
+      "pos": "M"
+     }
+    ],
+    "fetched_at": "2026-11-19T23:53:27+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [],
+    "mean_xi_attack_index": 0.018,
+    "mean_continuity": -1.429,
+    "p_backup_gk": 0.325
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Jonathan Ikon\u00e9",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5802997",
+     "fetched_at": "2026-11-19T23:53:27+00:00"
+    },
+    {
+     "player": "Nhoa Sangui",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5802997",
+     "fetched_at": "2026-11-19T23:53:27+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "Jordan Lefort",
+     "type": "suspension",
+     "expected_return": null,
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5802997",
+     "fetched_at": "2026-11-19T23:53:27+00:00"
+    },
+    {
+     "player": "Ban\u00e9 Diatta",
+     "type": "injury",
+     "expected_return": "Early December 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5802997",
+     "fetched_at": "2026-11-19T23:53:27+00:00"
+    },
+    {
+     "player": "Amine El Ouazzani",
+     "type": "injury",
+     "expected_return": "A few weeks",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5802997",
+     "fetched_at": "2026-11-19T23:53:27+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 15,
+    "n21": 2,
+    "last_match": "2026-11-07"
+   },
+   "away": {
+    "rest_days": 14,
+    "n21": 2,
+    "last_match": "2026-11-08"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 257.4
+  },
+  "venue": {
+   "name": "Stade Jean Bouin",
+   "city": "Paris",
+   "lat": 48.843148388,
+   "lon": 2.252916098
+  },
+  "weather": {
+   "precip_mm_2h": 1.2999999999999998,
+   "wind_ms": 2.51,
+   "temp_c": 7.2,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=48.843&longitude=2.253",
+   "fetched_at": "2026-11-19T23:53:28+00:00",
+   "lat": 48.843148388,
+   "lon": 2.252916098
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": -1.65,
+    "d_p_draw_pp": 1.38,
+    "d_p_away_pp": 0.27,
+    "d_xg_home": -0.107,
+    "d_xg_away": -0.035
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0198,
+    "away_rate_mult": 1.0083,
+    "d_p_home_pp": 0.63,
+    "d_p_draw_pp": -0.38,
+    "d_p_away_pp": -0.25,
+    "d_xg_home": 0.038,
+    "d_xg_away": 0.008,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.029,
+    "away_rate_mult": 1.029,
+    "d_p_home_pp": 0.56,
+    "d_p_draw_pp": -0.5,
+    "d_p_away_pp": -0.07,
+    "d_xg_home": 0.056,
+    "d_xg_away": 0.026,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "home_rate_mult": 0.9912,
+    "away_rate_mult": 0.9952,
+    "d_p_home_pp": -0.28,
+    "d_p_draw_pp": 0.14,
+    "d_p_away_pp": 0.13,
+    "d_xg_home": -0.015,
+    "d_xg_away": -0.004,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 15.0,
+   "rest_a": 14.0,
+   "n21_h": 2.0,
+   "n21_a": 2.0,
+   "travel_km": 257.4314942027442,
+   "neutral": 0.0,
+   "precip_mm_2h": 1.2999999999999998,
+   "wind_ms": 2.51,
+   "temp_c": 7.2
+  }
+ },
+ "lineup_simulation": {
+  "applied": true,
+  "validated": false,
+  "scale": 0.5,
+  "basis": {
+   "home": "inferred",
+   "away": "inferred"
+  },
+  "home_rate_mult": 0.9956,
+  "away_rate_mult": 0.9976,
+  "note": "Starting-XI strength, continuity and backup-keeper adjustment at half the fitted size. It did not pass the out-of-sample test, so bets are not priced from it.",
+  "p_home": 0.6142461009096698,
+  "p_draw": 0.227522302816874,
+  "p_away": 0.15823159627345618,
+  "xg_home": 1.9574143886304218,
+  "xg_away": 0.9085532683960896,
+  "xg_total": 2.8659676570265114,
+  "btts": 0.52630687861538,
+  "totals_over": {
+   "over_0.5": 0.9411536652322554,
+   "over_1.5": 0.7877169281430653,
+   "over_2.5": 0.5469213473903033,
+   "over_3.5": 0.3229830236658615,
+   "over_4.5": 0.16017092653523676,
+   "over_5.5": 0.06913999598674651,
+   "over_6.5": 0.025814593596252072
+  },
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.11026949243330238
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.11026949243330238
+   },
+   {
+    "home": 2,
+    "away": 0,
+    "p": 0.1086066907013474
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.10673406317919215
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.1014775969387737
+   },
+   {
+    "home": 3,
+    "away": 0,
+    "p": 0.0705246084724525
+   }
+  ],
+  "score_grid": [
+   [
+    0.058846,
+    0.046703,
+    0.021919,
+    0.006382,
+    0.001374,
+    0.000234,
+    3.3e-05
+   ],
+   [
+    0.106734,
+    0.110269,
+    0.045554,
+    0.013303,
+    0.002872,
+    0.000491,
+    6.9e-05
+   ],
+   [
+    0.108607,
+    0.101478,
+    0.048125,
+    0.013345,
+    0.002889,
+    0.000495,
+    7e-05
+   ],
+   [
+    0.070525,
+    0.066104,
+    0.029773,
+    0.009238,
+    0.001899,
+    0.000326,
+    4.6e-05
+   ],
+   [
+    0.033906,
+    0.031882,
+    0.014403,
+    0.004243,
+    0.000976,
+    0.000159,
+    2.3e-05
+   ],
+   [
+    0.012925,
+    0.012191,
+    0.005524,
+    0.001632,
+    0.000356,
+    6.5e-05,
+    9e-06
+   ],
+   [
+    0.00408,
+    0.00386,
+    0.001754,
+    0.00052,
+    0.000114,
+    2e-05,
+    3e-06
+   ]
+  ]
+ },
+ "confidence": {
+  "tier": "MODERATE",
+  "p_max": 0.6155889647682988,
+  "entropy_nats": 0.9263924231178042,
+  "text": "Most likely result has P = 61.6%. In the out-of-sample backtest, favourites priced 0.60\u20130.70 won 66.4% \u00b1 0.7% (n=4069, mean forecast 64.2%). Backtest RPS for F1: 0.2071; exact-score top-5 hit rate 45.4% (n=990). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: MODERATE (entropy 0.926 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Paris FC: no lineup published yet \u2014 XI inferred from recent minutes share minus known absences; 200 configurations simulated (start P=0.7, UNVALIDATED prior).",
+  "Angers: no lineup published yet \u2014 XI inferred from recent minutes share minus known absences; 200 configurations simulated (start P=0.7, UNVALIDATED prior)."
+ ],
+ "verdict": "Paris FC 1\u20131 Angers is the single most probable scoreline at 11.0%: expected goals 1.97\u20130.91 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.043). Exact scores are inherently uncertain; the 1X2 split is 61.6%/22.7%/15.8%.",
+ "resolved": {
+  "home_key": "France:Paris FC",
+  "away_key": "France:Angers",
+  "div": "F1",
+  "home_div": "F1",
+  "away_div": "F1",
+  "country": "France"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: Angers SCO at Paris FC\nCompetition: Ligue 1\nDate: 2026-11-22 09:00 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-11-16\n\nPRIMARY FINAL SCORE PREDICTION\n\nParis FC 1 \u2013 1 Angers SCO\n(modal exact score, probability 11.0%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.97\nAway: 0.91\nExpected Total: 2.88\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 61.6%\nDraw: 22.7%\nAway Win: 15.8%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 11.0%\n2. 2\u20130: 10.8%\n3. 1\u20130: 10.6%\n4. 2\u20131: 10.2%\n5. 3\u20130: 7.1%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 21.1%\nTotal 2 goals: 24.0%\nTotal 3 goals: 22.4%\nTotal 4 goals: 16.3%\nTotal 5+ goals: 16.2%\n\nBoth Teams Score: 52.8%\nClean sheet Paris FC: 39.6% \u00b7 Clean sheet Angers SCO: 13.4%\n\nMATCH INTELLIGENCE\n\n1. Angers attack vs Paris FC defence: rate multiplier \u00d70.66 for the away side.\n2. Independent results-only Elo: Paris FC 1658 vs Angers 1462 (gap +196 before home advantage).\n3. Paris FC attack vs Angers defence: time-weighted strength gap multiplies Paris FC's scoring rate by \u00d71.19 relative to an average pairing (from 29/29 decay-weighted matches).\n\nMODEL CONFIDENCE\n\nMost likely result has P = 61.6%. In the out-of-sample backtest, favourites priced 0.60\u20130.70 won 66.4% \u00b1 0.7% (n=4069, mean forecast 64.2%). Backtest RPS for F1: 0.2071; exact-score top-5 hit rate 45.4% (n=990). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: MODERATE (entropy 0.926 nats of max 1.099).\nParameter-uncertainty 80% bands: xG Paris FC 1.51\u20132.46, xG Angers SCO 0.65\u20131.19; P(home win) 49.4%\u201372.6%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0006 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nParis FC: INFERRED, fetched 2026-11-19 18:53 EST\n  Kevin Trapp (G), Diego Coppola (D), Pierre Lees-Melou (M), Maxime Lopez (M), Lassine Sinayoko (F), Ilan Kebbal (M), Pablo Pagis (M), Hamari Traor\u00e9 (D), Adama Camara (D), Ot\u00e1vio (D), Luca Koleosho (F)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs -0.075 (log) \u00b7 continuity -0.94 \u00b7 P(backup GK) 30%\nAngers: INFERRED, fetched 2026-11-19 18:53 EST\n  Anthony Lopes (G), Branco van den Boomen (M), Amine Sba\u00ef (F), Yassin Belkhdim (M), Ousmane Camara (D), Joseph Kalulu (D), Carlens Arcus (D), Jim Allevinah (F), Prosper Peter (F), Lilian Rao-Lisoa (D), Haris Belkebla (M)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs +0.018 (log) \u00b7 continuity -1.43 \u00b7 P(backup GK) 32%\n\nKEY ABSENCES\n\n- Paris FC: Jonathan Ikon\u00e9 \u2014 injury, Late November 2026 [FotMob, 2026-11-19 18:53 EST]\n- Paris FC: Nhoa Sangui \u2014 injury, Late November 2026 [FotMob, 2026-11-19 18:53 EST]\n- Angers: Jordan Lefort \u2014 suspension, return unknown [FotMob, 2026-11-19 18:53 EST]\n- Angers: Ban\u00e9 Diatta \u2014 injury, Early December 2026 [FotMob, 2026-11-19 18:53 EST]\n- Angers: Amine El Ouazzani \u2014 injury, A few weeks [FotMob, 2026-11-19 18:53 EST]\n\nWEATHER AT VENUE\n\nStade Jean Bouin, Paris: 7.2 \u00b0C, wind 2.5 m/s, precipitation 1.3 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-11-19 18:53 EST]\n\nREST & TRAVEL\n\nParis FC: 15 days' rest, 2 matches in previous 21 days \u00b7 Angers: 14 days' rest, 2 in 21 days \u00b7 away travel 257.4 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 61.6% / 22.7% / 15.8%, xG 1.97\u20130.91\n- Understat xG component (validated, in ensemble): home -1.65 pp, draw +1.38 pp, away +0.27 pp; xG -0.107 / -0.035\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.63 pp, draw -0.38 pp, away -0.25 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.56 pp, draw -0.50 pp, away -0.07 pp\n- lineup: NOT APPLIED (failed out-of-sample validation); would have moved home -0.28 pp, draw +0.14 pp, away +0.13 pp\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Paris FC: no lineup published yet \u2014 XI inferred from recent minutes share minus known absences; 200 configurations simulated (start P=0.7, UNVALIDATED prior).\n- Angers: no lineup published yet \u2014 XI inferred from recent minutes share minus known absences; 200 configurations simulated (start P=0.7, UNVALIDATED prior).\n\nFINAL VERDICT\n\nParis FC 1\u20131 Angers is the single most probable scoreline at 11.0%: expected goals 1.97\u20130.91 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.043). Exact scores are inherently uncertain; the 1X2 split is 61.6%/22.7%/15.8%.\n",
+ "refresh_id": "a27eb315d3de4db9bc5b69c3b3bd1b01",
+ "frozen_at": "2026-11-19T23:53:28+00:00",
+ "sha256": "89163fab0e25673627b08bcf52c1cee02eb05fd260b5c922c6d35dd8b859baf4"
+}
