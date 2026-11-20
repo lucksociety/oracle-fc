@@ -1,0 +1,641 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-11-16",
+ "input_fingerprint": "1a5eec66babfc36f6823f38be831e87d5b4ff7b787f439bd8e754b510044e7e5",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-11-20T08:45:26+00:00",
+ "fixture": {
+  "event_id": "POLY-1396171",
+  "home_name": "RSC Anderlecht",
+  "away_name": "Oud-Heverlee Leuven",
+  "competition": "Belgium Pro League",
+  "subcategory": "bel1",
+  "kickoff_utc": "2026-11-22T17:30:00+00:00",
+  "kickoff_local": "2026-11-22 12:30 EST",
+  "home_matched": "Anderlecht",
+  "away_matched": "Oud-Heverlee Leuven",
+  "match_methods": {
+   "home": {
+    "source": "RSC Anderlecht",
+    "matched": "Anderlecht",
+    "method": "core-tokens",
+    "score": 0.97
+   },
+   "away": {
+    "source": "Oud-Heverlee Leuven",
+    "matched": "Oud-Heverlee Leuven",
+    "method": "exact",
+    "score": 1.0
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.5640474226473262,
+  "p_draw": 0.2419109247294169,
+  "p_away": 0.19404165262325707,
+  "xg_home": 1.843748242905956,
+  "xg_away": 1.0088521626930151,
+  "xg_total": 2.852600405598971,
+  "median_total": 3,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.11725776517744133
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.11725776517744133
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.1016888641633484
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.10113532878960683
+   },
+   {
+    "home": 2,
+    "away": 0,
+    "p": 0.0975268960687521
+   },
+   {
+    "home": 3,
+    "away": 1,
+    "p": 0.06220215615049101
+   }
+  ],
+  "btts": 0.550031195915478,
+  "totals_over": {
+   "over_0.5": 0.941005955771703,
+   "over_1.5": 0.7870758545490396,
+   "over_2.5": 0.5445706719787299,
+   "over_3.5": 0.3199067213539045,
+   "over_4.5": 0.15712502114629825,
+   "over_5.5": 0.06706584944675646,
+   "over_6.5": 0.02463003685977723
+  },
+  "total_buckets": {
+   "0-1": 0.21292414545096056,
+   "2": 0.24250518257030979,
+   "3": 0.22466395062482536,
+   "4": 0.1627817002076063,
+   "5+": 0.15712502114629825
+  },
+  "clean_sheet_home": 0.35773290819801834,
+  "clean_sheet_away": 0.15122994011480106,
+  "home_goal_dist": [
+   0.15122994011480106,
+   0.29550538248870456,
+   0.2744072012142995,
+   0.16666629976458058,
+   0.07504726594970011,
+   0.02676181527050844,
+   0.00788124330348565,
+   0.0025008518939203615
+  ],
+  "away_goal_dist": [
+   0.35773290819801834,
+   0.3759354897799099,
+   0.18771490661623486,
+   0.06080833707902733,
+   0.014551255420225352,
+   0.002759256771142985,
+   0.00043264774512687235,
+   6.519839031460866e-05
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    4
+   ],
+   "away_goals_80": [
+    0,
+    2
+   ],
+   "total_goals_80": [
+    1,
+    5
+   ],
+   "goal_diff_80": [
+    -1,
+    3
+   ]
+  },
+  "score_grid": [
+   [
+    0.058994,
+    0.052795,
+    0.027721,
+    0.009049,
+    0.002181,
+    0.000415,
+    6.5e-05
+   ],
+   [
+    0.101135,
+    0.117258,
+    0.054216,
+    0.017683,
+    0.004257,
+    0.00081,
+    0.000127
+   ],
+   [
+    0.097527,
+    0.101689,
+    0.053733,
+    0.016577,
+    0.003987,
+    0.000758,
+    0.000119
+   ],
+   [
+    0.05971,
+    0.062202,
+    0.031089,
+    0.010689,
+    0.002431,
+    0.000462,
+    7.2e-05
+   ],
+   [
+    0.026983,
+    0.028082,
+    0.014022,
+    0.004559,
+    0.001156,
+    0.000208,
+    3.3e-05
+   ],
+   [
+    0.009639,
+    0.010021,
+    0.004998,
+    0.001624,
+    0.000389,
+    7.8e-05,
+    1.2e-05
+   ],
+   [
+    0.002842,
+    0.002952,
+    0.001471,
+    0.000477,
+    0.000114,
+    2.2e-05,
+    4e-06
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.5638749999999999,
+  "p_draw": 0.24362,
+  "p_away": 0.19250500000000004,
+  "se": [
+   0.0011088732668231298,
+   0.0009598679482095442,
+   0.0008816088275845473
+  ],
+  "max_abs_dev_vs_exact": 0.0017090752705831158,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   1.4259117827394672,
+   2.2990547536650277
+  ],
+  "xg_away_80": [
+   0.7484393001194127,
+   1.2894056323354812
+  ],
+  "p_home_80": [
+   0.4485478964504235,
+   0.6761767959624412
+  ],
+  "p_draw_80": [
+   0.19210440324022296,
+   0.27786232274253214
+  ],
+  "p_away_80": [
+   0.12680034073745883,
+   0.28076946621379667
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.18938719908655557,
+   0.20186898058187666
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.5370363149144537,
+   "p_draw": 0.2585173033802116,
+   "p_away": 0.20444638170533477,
+   "xg_home": 1.6174143786814315,
+   "xg_away": 0.901648389939783,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.5902427634997132,
+   "p_draw": 0.22162316878028265,
+   "p_away": 0.18813406772000402,
+   "xg_home": 1.8856664171361794,
+   "xg_away": 0.961421640644333,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.4786084960209781,
+   "p_draw": 0.26967304189075886,
+   "p_away": 0.251718462088263,
+   "xg_home": 1.5369015682559637,
+   "xg_away": 1.0489094210209804,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.4413228984376775,
+   "p_draw": 0.2501484021594646,
+   "p_away": 0.3085286994028578,
+   "xg_home": 1.5426160142888836,
+   "xg_away": 1.249179414594243,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.5379210613305225,
+   "p_draw": 0.24411605795286356,
+   "p_away": 0.21796288071661396,
+   "xg_home": 1.7569699528706038,
+   "xg_away": 1.0371821936490766,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Oud-Heverlee Leuven attack vs Anderlecht defence: rate multiplier \u00d70.75 for the away side.",
+   "effect": 0.2901
+  },
+  {
+   "text": "Home advantage (Belgium, fitted from results): \u00d71.26 on Anderlecht's scoring rate.",
+   "effect": 0.2276
+  },
+  {
+   "text": "Independent results-only Elo: Anderlecht 1599 vs Oud-Heverlee Leuven 1461 (gap +139 before home advantage).",
+   "effect": 0.2081
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.5640474226473262,
+  "p_draw": 0.24191092472941683,
+  "p_away": 0.194041652623257,
+  "xg_home": 1.843748242905956,
+  "xg_away": 1.008852162693015
+ },
+ "context": {
+  "fetched_at": "2026-11-20T08:45:26+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5811809",
+    "fetched_at": "2026-11-20T08:45:26+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "projected",
+    "source": "FotMob \u2014 XI from the side's last match on 2026-11-08 (none published for this match yet)",
+    "formation": "4-3-3",
+    "starters": [
+     {
+      "name": "Colin Coosemans",
+      "pos": "G",
+      "shirt": "26"
+     },
+     {
+      "name": "Ali Maamar",
+      "pos": "D",
+      "shirt": "79"
+     },
+     {
+      "name": "Giulian Biancone",
+      "pos": "D",
+      "shirt": "4"
+     },
+     {
+      "name": "L\u00e9o P\u00e9trot",
+      "pos": "D",
+      "shirt": "27"
+     },
+     {
+      "name": "Ludwig Augustinsson",
+      "pos": "D",
+      "shirt": "6"
+     },
+     {
+      "name": "Enric Llansana",
+      "pos": "M",
+      "shirt": "24"
+     },
+     {
+      "name": "Mario Stroeykens",
+      "pos": "M",
+      "shirt": "29"
+     },
+     {
+      "name": "Luk\u00e1s Ambros",
+      "pos": "M",
+      "shirt": "18"
+     },
+     {
+      "name": "Danylo Sikan",
+      "pos": "F",
+      "shirt": "14"
+     },
+     {
+      "name": "Mihajlo Cvetkovi\u0107",
+      "pos": "F",
+      "shirt": "9"
+     },
+     {
+      "name": "Jayden Seke",
+      "pos": "F",
+      "shirt": "49"
+     }
+    ],
+    "fetched_at": "2026-11-20T08:45:26+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   },
+   "away": {
+    "status": "projected",
+    "source": "FotMob \u2014 XI from the side's last match on 2026-11-07 (none published for this match yet)",
+    "formation": "3-4-3",
+    "starters": [
+     {
+      "name": "Dani van den Heuvel",
+      "pos": "G",
+      "shirt": "1"
+     },
+     {
+      "name": "Ewoud Pletinckx",
+      "pos": "D",
+      "shirt": "28"
+     },
+     {
+      "name": "Jamie Lawrence",
+      "pos": "D",
+      "shirt": "5"
+     },
+     {
+      "name": "Roggerio Nyakossi",
+      "pos": "D",
+      "shirt": "34"
+     },
+     {
+      "name": "\u00d3scar Gil",
+      "pos": "M",
+      "shirt": "27"
+     },
+     {
+      "name": "Wouter George",
+      "pos": "M",
+      "shirt": "6"
+     },
+     {
+      "name": "Siebe Schrijvers",
+      "pos": "M",
+      "shirt": "8"
+     },
+     {
+      "name": "Davis Opoku",
+      "pos": "M",
+      "shirt": "99"
+     },
+     {
+      "name": "Emmanuel Addai",
+      "pos": "F",
+      "shirt": "7"
+     },
+     {
+      "name": "Robin Mirisola",
+      "pos": "F",
+      "shirt": "18"
+     },
+     {
+      "name": "William Balikwisha",
+      "pos": "F",
+      "shirt": "21"
+     }
+    ],
+    "fetched_at": "2026-11-20T08:45:27+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Giulian Biancone",
+     "type": "suspension",
+     "expected_return": "Late November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5811809",
+     "fetched_at": "2026-11-20T08:45:26+00:00"
+    },
+    {
+     "player": "Ilay Camara",
+     "type": "injury",
+     "expected_return": "Day to day",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5811809",
+     "fetched_at": "2026-11-20T08:45:26+00:00"
+    },
+    {
+     "player": "Lucas Hey",
+     "type": "injury",
+     "expected_return": "Early January 2027",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5811809",
+     "fetched_at": "2026-11-20T08:45:26+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "Birger Verstraete",
+     "type": "suspension",
+     "expected_return": "Late November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5811809",
+     "fetched_at": "2026-11-20T08:45:26+00:00"
+    },
+    {
+     "player": "Manuel Osifo",
+     "type": "injury",
+     "expected_return": "Day to day",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5811809",
+     "fetched_at": "2026-11-20T08:45:26+00:00"
+    },
+    {
+     "player": "Thibaud Verlinden",
+     "type": "injury",
+     "expected_return": "Day to day",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5811809",
+     "fetched_at": "2026-11-20T08:45:26+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 14,
+    "n21": 1,
+    "last_match": "2026-11-08"
+   },
+   "away": {
+    "rest_days": 15,
+    "n21": 2,
+    "last_match": "2026-11-07"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": null
+  },
+  "venue": {
+   "name": "Lotto Park",
+   "city": "Bruxelles (Brussel)",
+   "lat": 50.834182156,
+   "lon": 4.298352599
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 3.225,
+   "temp_c": 4.2,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=50.834&longitude=4.298",
+   "fetched_at": "2026-11-20T08:45:29+00:00",
+   "lat": 50.834182156,
+   "lon": 4.298352599
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": -2.49,
+    "d_p_draw_pp": 1.06,
+    "d_p_away_pp": 1.43,
+    "d_xg_home": -0.054,
+    "d_xg_away": 0.042
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "reason": "failed validation; no live features"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 14.0,
+   "rest_a": 15.0,
+   "n21_h": 1.0,
+   "n21_a": 2.0,
+   "travel_km": null,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 3.225,
+   "temp_c": 4.2
+  }
+ },
+ "lineup_simulation": {
+  "applied": false,
+  "basis": {
+   "home": "projected",
+   "away": "projected"
+  },
+  "reason": "No player ratings exist for this league, so the lineup and formation are shown but cannot change the probabilities."
+ },
+ "confidence": {
+  "tier": "MODERATE",
+  "p_max": 0.5640474226473262,
+  "entropy_nats": 0.9844663291471258,
+  "text": "Most likely result has P = 56.4%. In the out-of-sample backtest, favourites priced 0.50\u20130.60 won 53.9% \u00b1 0.5% (n=9522, mean forecast 54.4%). Backtest RPS for B1: 0.2037; exact-score top-5 hit rate 48.8% (n=1015). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: MODERATE (entropy 0.984 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Anderlecht: lineup is PROJECTED (FotMob \u2014 XI from the side's last match on 2026-11-08 (none published for this match yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Anderlecht: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.",
+  "Oud-Heverlee Leuven: lineup is PROJECTED (FotMob \u2014 XI from the side's last match on 2026-11-07 (none published for this match yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Oud-Heverlee Leuven: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+ ],
+ "verdict": "Anderlecht 1\u20131 Oud-Heverlee Leuven is the single most probable scoreline at 11.7%: expected goals 1.84\u20131.01 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.043). Exact scores are inherently uncertain; the 1X2 split is 56.4%/24.2%/19.4%.",
+ "resolved": {
+  "home_key": "Belgium:Anderlecht",
+  "away_key": "Belgium:Oud-Heverlee Leuven",
+  "div": "B1",
+  "home_div": "B1",
+  "away_div": "B1",
+  "country": "Belgium"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: Oud-Heverlee Leuven at RSC Anderlecht\nCompetition: Belgium Pro League\nDate: 2026-11-22 12:30 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-11-16\n\nPRIMARY FINAL SCORE PREDICTION\n\nRSC Anderlecht 1 \u2013 1 Oud-Heverlee Leuven\n(modal exact score, probability 11.7%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.84\nAway: 1.01\nExpected Total: 2.85\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 56.4%\nDraw: 24.2%\nAway Win: 19.4%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 11.7%\n2. 2\u20131: 10.2%\n3. 1\u20130: 10.1%\n4. 2\u20130: 9.8%\n5. 3\u20131: 6.2%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 21.3%\nTotal 2 goals: 24.3%\nTotal 3 goals: 22.5%\nTotal 4 goals: 16.3%\nTotal 5+ goals: 15.7%\n\nBoth Teams Score: 55.0%\nClean sheet RSC Anderlecht: 35.8% \u00b7 Clean sheet Oud-Heverlee Leuven: 15.1%\n\nMATCH INTELLIGENCE\n\n1. Oud-Heverlee Leuven attack vs Anderlecht defence: rate multiplier \u00d70.75 for the away side.\n2. Home advantage (Belgium, fitted from results): \u00d71.26 on Anderlecht's scoring rate.\n3. Independent results-only Elo: Anderlecht 1599 vs Oud-Heverlee Leuven 1461 (gap +139 before home advantage).\n\nMODEL CONFIDENCE\n\nMost likely result has P = 56.4%. In the out-of-sample backtest, favourites priced 0.50\u20130.60 won 53.9% \u00b1 0.5% (n=9522, mean forecast 54.4%). Backtest RPS for B1: 0.2037; exact-score top-5 hit rate 48.8% (n=1015). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: MODERATE (entropy 0.984 nats of max 1.099).\nParameter-uncertainty 80% bands: xG RSC Anderlecht 1.43\u20132.30, xG Oud-Heverlee Leuven 0.75\u20131.29; P(home win) 44.9%\u201367.6%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0017 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nAnderlecht: PROJECTED \u2014 FotMob \u2014 XI from the side's last match on 2026-11-08 (none published for this match yet), fetched 2026-11-20 03:45 EST (4-3-3)\n  Colin Coosemans (G), Ali Maamar (D), Giulian Biancone (D), L\u00e9o P\u00e9trot (D), Ludwig Augustinsson (D), Enric Llansana (M), Mario Stroeykens (M), Luk\u00e1s Ambros (M), Danylo Sikan (F), Mihajlo Cvetkovi\u0107 (F), Jayden Seke (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\nOud-Heverlee Leuven: PROJECTED \u2014 FotMob \u2014 XI from the side's last match on 2026-11-07 (none published for this match yet), fetched 2026-11-20 03:45 EST (3-4-3)\n  Dani van den Heuvel (G), Ewoud Pletinckx (D), Jamie Lawrence (D), Roggerio Nyakossi (D), \u00d3scar Gil (M), Wouter George (M), Siebe Schrijvers (M), Davis Opoku (M), Emmanuel Addai (F), Robin Mirisola (F), William Balikwisha (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nKEY ABSENCES\n\n- Anderlecht: Giulian Biancone \u2014 suspension, Late November 2026 [FotMob, 2026-11-20 03:45 EST]\n- Anderlecht: Ilay Camara \u2014 injury, Day to day [FotMob, 2026-11-20 03:45 EST]\n- Anderlecht: Lucas Hey \u2014 injury, Early January 2027 [FotMob, 2026-11-20 03:45 EST]\n- Oud-Heverlee Leuven: Birger Verstraete \u2014 suspension, Late November 2026 [FotMob, 2026-11-20 03:45 EST]\n- Oud-Heverlee Leuven: Manuel Osifo \u2014 injury, Day to day [FotMob, 2026-11-20 03:45 EST]\n- Oud-Heverlee Leuven: Thibaud Verlinden \u2014 injury, Day to day [FotMob, 2026-11-20 03:45 EST]\n\nWEATHER AT VENUE\n\nLotto Park, Bruxelles (Brussel): 4.2 \u00b0C, wind 3.2 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-11-20 03:45 EST]\n\nREST & TRAVEL\n\nAnderlecht: 14 days' rest, 1 matches in previous 21 days \u00b7 Oud-Heverlee Leuven: 15 days' rest, 2 in 21 days \u00b7 away travel None km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 56.4% / 24.2% / 19.4%, xG 1.84\u20131.01\n- Understat xG component (validated, in ensemble): home -2.49 pp, draw +1.06 pp, away +1.43 pp; xG -0.054 / +0.042\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- lineup: not applied (failed validation; no live features)\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Anderlecht: lineup is PROJECTED (FotMob \u2014 XI from the side's last match on 2026-11-08 (none published for this match yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Anderlecht: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n- Oud-Heverlee Leuven: lineup is PROJECTED (FotMob \u2014 XI from the side's last match on 2026-11-07 (none published for this match yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Oud-Heverlee Leuven: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nFINAL VERDICT\n\nAnderlecht 1\u20131 Oud-Heverlee Leuven is the single most probable scoreline at 11.7%: expected goals 1.84\u20131.01 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.043). Exact scores are inherently uncertain; the 1X2 split is 56.4%/24.2%/19.4%.\n",
+ "refresh_id": "66387849b16f465fb6b1b1181dc3b6c9",
+ "frozen_at": "2026-11-20T08:45:29+00:00",
+ "sha256": "0baa6c1a39dba2d4ead3b3d66b1f3b7c0daa22ecfd6b816d3942cdc2bc833d99"
+}
