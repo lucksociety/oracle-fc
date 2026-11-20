@@ -1,0 +1,640 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-11-20",
+ "input_fingerprint": "089f9cc4fd25f92ec445dbe63bd24c6d3710901e9f1c4bbab00c2c81fa97224f",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-11-20T13:33:54+00:00",
+ "fixture": {
+  "event_id": "POLY-1373187",
+  "home_name": "CSyD Defensa y Justicia",
+  "away_name": "CA Barracas Central",
+  "competition": "Liga Profesional de F\u00fatbol",
+  "subcategory": "arg",
+  "kickoff_utc": "2026-11-21T18:00:00+00:00",
+  "kickoff_local": "2026-11-21 13:00 EST",
+  "home_matched": "Defensa y Justicia",
+  "away_matched": "Barracas Central",
+  "match_methods": {
+   "home": {
+    "source": "CSyD Defensa y Justicia",
+    "matched": "Defensa y Justicia",
+    "method": "fuzzy",
+    "score": 0.878
+   },
+   "away": {
+    "source": "CA Barracas Central",
+    "matched": "Barracas Central",
+    "method": "core-tokens",
+    "score": 0.97
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.4133523585516381,
+  "p_draw": 0.3098762344620477,
+  "p_away": 0.2767714069863142,
+  "xg_home": 1.216114850835447,
+  "xg_away": 0.9491753448306739,
+  "xg_total": 2.165290195666121,
+  "median_total": 2,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.1456002574097086
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.1456002574097086
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.13361543668031037
+   },
+   {
+    "home": 0,
+    "away": 0,
+    "p": 0.1178202860186342
+   },
+   {
+    "home": 0,
+    "away": 1,
+    "p": 0.10260254933774667
+   },
+   {
+    "home": 2,
+    "away": 0,
+    "p": 0.08342422916112198
+   }
+  ],
+  "btts": 0.4476595272408966,
+  "totals_over": {
+   "over_0.5": 0.8821797139813659,
+   "over_1.5": 0.6459617279633089,
+   "over_2.5": 0.3671580093079985,
+   "over_3.5": 0.17301624960967282,
+   "over_4.5": 0.06653412042965628,
+   "over_5.5": 0.022147596335615326,
+   "over_6.5": 0.006264625240915677
+  },
+  "total_buckets": {
+   "0-1": 0.35403827203669125,
+   "2": 0.2788037186553103,
+   "3": 0.1941417596983257,
+   "4": 0.10648212918001654,
+   "5+": 0.06653412042965628
+  },
+  "clean_sheet_home": 0.3805262591816071,
+  "clean_sheet_away": 0.28963449959613036,
+  "home_goal_dist": [
+   0.28963449959613036,
+   0.3675459919603271,
+   0.22195310435826826,
+   0.08777161871029841,
+   0.02574538617055923,
+   0.005982696707991298,
+   0.0011486475378242984,
+   0.00021805495860115648
+  ],
+  "away_goal_dist": [
+   0.3805262591816071,
+   0.37555897967251206,
+   0.17570269702224892,
+   0.053581372899759734,
+   0.01210156982913835,
+   0.0021644702728406302,
+   0.00031966998026048207,
+   4.49811416325406e-05
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    3
+   ],
+   "away_goals_80": [
+    0,
+    2
+   ],
+   "total_goals_80": [
+    0,
+    4
+   ],
+   "goal_diff_80": [
+    -1,
+    2
+   ]
+  },
+  "score_grid": [
+   [
+    0.11782,
+    0.102603,
+    0.049779,
+    0.015261,
+    0.003451,
+    0.000617,
+    9.1e-05
+   ],
+   [
+    0.133615,
+    0.1456,
+    0.063489,
+    0.019499,
+    0.004418,
+    0.000791,
+    0.000117
+   ],
+   [
+    0.083424,
+    0.082233,
+    0.041054,
+    0.011959,
+    0.002714,
+    0.000487,
+    7.2e-05
+   ],
+   [
+    0.033159,
+    0.032745,
+    0.015505,
+    0.005048,
+    0.001087,
+    0.000195,
+    2.9e-05
+   ],
+   [
+    0.009733,
+    0.009628,
+    0.004567,
+    0.00141,
+    0.000339,
+    5.8e-05,
+    9e-06
+   ],
+   [
+    0.002259,
+    0.002239,
+    0.001064,
+    0.000329,
+    7.5e-05,
+    1.4e-05,
+    2e-06
+   ],
+   [
+    0.000433,
+    0.00043,
+    0.000205,
+    6.3e-05,
+    1.4e-05,
+    3e-06,
+    0.0
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.41418499999999997,
+  "p_draw": 0.30957999999999997,
+  "p_away": 0.276235,
+  "se": [
+   0.0011014440198552989,
+   0.001033780014316392,
+   0.0009998230462811906
+  ],
+  "max_abs_dev_vs_exact": 0.0008326414483618705,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   0.9013720634548253,
+   1.5635833585284609
+  ],
+  "xg_away_80": [
+   0.6881995210753628,
+   1.2327012049585853
+  ],
+  "p_home_80": [
+   0.30946284982032674,
+   0.5306584118776332
+  ],
+  "p_draw_80": [
+   0.26136345748165185,
+   0.34153342874055964
+  ],
+  "p_away_80": [
+   0.19211337328062197,
+   0.37575975199336625
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.21838117192581052,
+   0.21631954678745183
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.4023048699384199,
+   "p_draw": 0.3048868392352835,
+   "p_away": 0.29280829082629667,
+   "xg_home": 1.1804293511199941,
+   "xg_away": 0.9647368174972513,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.41032137422082493,
+   "p_draw": 0.3012243494324654,
+   "p_away": 0.2884542763467096,
+   "xg_home": 1.1417878678776545,
+   "xg_away": 0.9061995185783589,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.3962155220509971,
+   "p_draw": 0.316055273144254,
+   "p_away": 0.28772920480474884,
+   "xg_home": 1.1368148815122316,
+   "xg_away": 0.9265595432984094,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.41428713519237154,
+   "p_draw": 0.3004638406794162,
+   "p_away": 0.28524902412821235,
+   "xg_home": 1.151173298868993,
+   "xg_away": 0.9014084149853208,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.42271509158238807,
+   "p_draw": 0.29550641231031977,
+   "p_away": 0.2817784961072922,
+   "xg_home": 1.2594661936176672,
+   "xg_away": 0.9765285570599367,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Defensa y Justicia attack vs Barracas Central defence: time-weighted strength gap multiplies Defensa y Justicia's scoring rate by \u00d70.79 relative to an average pairing (from 32/33 decay-weighted matches).",
+   "effect": 0.2346
+  },
+  {
+   "text": "Barracas Central attack vs Defensa y Justicia defence: rate multiplier \u00d70.80 for the away side.",
+   "effect": 0.2222
+  },
+  {
+   "text": "Home advantage (Argentina, fitted from results): \u00d71.24 on Defensa y Justicia's scoring rate.",
+   "effect": 0.2142
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.4133523585516381,
+  "p_draw": 0.3098762344620477,
+  "p_away": 0.2767714069863142,
+  "xg_home": 1.216114850835447,
+  "xg_away": 0.9491753448306739
+ },
+ "context": {
+  "fetched_at": "2026-11-20T13:33:54+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/1000023196",
+    "fetched_at": "2026-11-20T13:33:54+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "projected",
+    "source": "FotMob \u2014 XI from the side's last match on 2026-11-07 (none published for this match yet)",
+    "formation": "4-2-3-1",
+    "starters": [
+     {
+      "name": "Mat\u00edas Borgogno",
+      "pos": "G",
+      "shirt": "1"
+     },
+     {
+      "name": "Valent\u00edn Loza",
+      "pos": "D",
+      "shirt": "28"
+     },
+     {
+      "name": "Dami\u00e1n Fern\u00e1ndez",
+      "pos": "D",
+      "shirt": "29"
+     },
+     {
+      "name": "David Mart\u00ednez",
+      "pos": "D",
+      "shirt": "21"
+     },
+     {
+      "name": "Demi\u00e1n Dom\u00ednguez",
+      "pos": "D",
+      "shirt": "30"
+     },
+     {
+      "name": "Santiago Sosa",
+      "pos": "M",
+      "shirt": "15"
+     },
+     {
+      "name": "C\u00e9sar P\u00e9rez",
+      "pos": "M",
+      "shirt": "8"
+     },
+     {
+      "name": "Jerem\u00edas Lucco",
+      "pos": "F",
+      "shirt": "26"
+     },
+     {
+      "name": "Maximiliano Porcel",
+      "pos": "M",
+      "shirt": "22"
+     },
+     {
+      "name": "Juan Guti\u00e9rrez",
+      "pos": "F",
+      "shirt": "24"
+     },
+     {
+      "name": "Leandro Fern\u00e1ndez",
+      "pos": "F",
+      "shirt": "9"
+     }
+    ],
+    "fetched_at": "2026-11-20T13:33:54+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   },
+   "away": {
+    "status": "projected",
+    "source": "FotMob \u2014 XI from the side's last match on 2026-11-06 (none published for this match yet)",
+    "formation": "4-2-3-1",
+    "starters": [
+     {
+      "name": "Juan Esp\u00ednola",
+      "pos": "G",
+      "shirt": "1"
+     },
+     {
+      "name": "Rafael Barrios",
+      "pos": "D",
+      "shirt": "13"
+     },
+     {
+      "name": "Nicol\u00e1s Capraro",
+      "pos": "D",
+      "shirt": "2"
+     },
+     {
+      "name": "Nicol\u00e1s Demartini",
+      "pos": "D",
+      "shirt": "31"
+     },
+     {
+      "name": "Rodrigo Ins\u00faa",
+      "pos": "D",
+      "shirt": "6"
+     },
+     {
+      "name": "Iv\u00e1n Tapia",
+      "pos": "M",
+      "shirt": "10"
+     },
+     {
+      "name": "Dardo Federico Miloc",
+      "pos": "M",
+      "shirt": "5"
+     },
+     {
+      "name": "Rodrigo Bogar\u00edn",
+      "pos": "F",
+      "shirt": "28"
+     },
+     {
+      "name": "Tom\u00e1s Porra",
+      "pos": "M",
+      "shirt": "8"
+     },
+     {
+      "name": "Enzo Taborda",
+      "pos": "F",
+      "shirt": "24"
+     },
+     {
+      "name": "Nicol\u00e1s Orsini",
+      "pos": "F",
+      "shirt": "34"
+     }
+    ],
+    "fetched_at": "2026-11-20T13:33:54+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   }
+  },
+  "absences": {
+   "home": [],
+   "away": [
+    {
+     "player": "Dardo Federico Miloc",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/1000023196",
+     "fetched_at": "2026-11-20T13:33:54+00:00"
+    },
+    {
+     "player": "Marcelo Mi\u00f1o",
+     "type": "injury",
+     "expected_return": "Early December 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/1000023196",
+     "fetched_at": "2026-11-20T13:33:54+00:00"
+    },
+    {
+     "player": "Kevin Jappert",
+     "type": "injury",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/1000023196",
+     "fetched_at": "2026-11-20T13:33:54+00:00"
+    },
+    {
+     "player": "Fernando Tobio",
+     "type": "injury",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/1000023196",
+     "fetched_at": "2026-11-20T13:33:54+00:00"
+    },
+    {
+     "player": "Lucas Emanuel Gamba",
+     "type": "injury",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/1000023196",
+     "fetched_at": "2026-11-20T13:33:54+00:00"
+    },
+    {
+     "player": "Manuel Duarte",
+     "type": "injury",
+     "expected_return": "Out for season",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/1000023196",
+     "fetched_at": "2026-11-20T13:33:54+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 14,
+    "n21": 2,
+    "last_match": "2026-11-07"
+   },
+   "away": {
+    "rest_days": 15,
+    "n21": 2,
+    "last_match": "2026-11-06"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 21.8
+  },
+  "venue": {
+   "name": "Estadio Norberto Tito Tomaghello",
+   "city": "Florencio Varela, Provincia de B",
+   "lat": -34.821765816,
+   "lon": -58.286536932
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 1.275,
+   "temp_c": 26.4,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=-34.822&longitude=-58.287",
+   "fetched_at": "2026-11-20T13:33:54+00:00",
+   "lat": -34.821765816,
+   "lon": -58.286536932
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": 0.69,
+    "d_p_draw_pp": -0.31,
+    "d_p_away_pp": -0.38,
+    "d_xg_home": 0.061,
+    "d_xg_away": 0.035
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.003,
+    "away_rate_mult": 1.0013,
+    "d_p_home_pp": 0.08,
+    "d_p_draw_pp": -0.05,
+    "d_p_away_pp": -0.03,
+    "d_xg_home": 0.004,
+    "d_xg_away": 0.001,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0149,
+    "away_rate_mult": 1.0149,
+    "d_p_home_pp": 0.19,
+    "d_p_draw_pp": -0.27,
+    "d_p_away_pp": 0.08,
+    "d_xg_home": 0.018,
+    "d_xg_away": 0.014,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "reason": "failed validation; no live features"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 14.0,
+   "rest_a": 15.0,
+   "n21_h": 2.0,
+   "n21_a": 2.0,
+   "travel_km": 21.841252116768832,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 1.275,
+   "temp_c": 26.4
+  }
+ },
+ "lineup_simulation": {
+  "applied": false,
+  "basis": {
+   "home": "projected",
+   "away": "projected"
+  },
+  "reason": "No player ratings exist for this league, so the lineup and formation are shown but cannot change the probabilities."
+ },
+ "confidence": {
+  "tier": "LOW",
+  "p_max": 0.4133523585516381,
+  "entropy_nats": 1.0837540801281302,
+  "text": "Most likely result has P = 41.3%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.3% \u00b1 0.4% (n=16754, mean forecast 44.6%). Backtest RPS for ARG: 0.2132; exact-score top-5 hit rate 61.6% (n=1841). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: LOW (entropy 1.084 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Defensa y Justicia: lineup is PROJECTED (FotMob \u2014 XI from the side's last match on 2026-11-07 (none published for this match yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Defensa y Justicia: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.",
+  "Barracas Central: lineup is PROJECTED (FotMob \u2014 XI from the side's last match on 2026-11-06 (none published for this match yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Barracas Central: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+ ],
+ "verdict": "Defensa y Justicia 1\u20131 Barracas Central is the single most probable scoreline at 14.6%: expected goals 1.22\u20130.95 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.043). Exact scores are inherently uncertain; the 1X2 split is 41.3%/31.0%/27.7%.",
+ "resolved": {
+  "home_key": "Argentina:Defensa y Justicia",
+  "away_key": "Argentina:Barracas Central",
+  "div": "ARG",
+  "home_div": "ARG",
+  "away_div": "ARG",
+  "country": "Argentina"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: CA Barracas Central at CSyD Defensa y Justicia\nCompetition: Liga Profesional de F\u00fatbol\nDate: 2026-11-21 13:00 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-11-20\n\nPRIMARY FINAL SCORE PREDICTION\n\nCSyD Defensa y Justicia 1 \u2013 1 CA Barracas Central\n(modal exact score, probability 14.6%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.22\nAway: 0.95\nExpected Total: 2.17\nMedian Total: 2\n\nRESULT PROBABILITIES\n\nHome Win: 41.3%\nDraw: 31.0%\nAway Win: 27.7%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 14.6%\n2. 1\u20130: 13.4%\n3. 0\u20130: 11.8%\n4. 0\u20131: 10.3%\n5. 2\u20130: 8.3%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 35.4%\nTotal 2 goals: 27.9%\nTotal 3 goals: 19.4%\nTotal 4 goals: 10.6%\nTotal 5+ goals: 6.7%\n\nBoth Teams Score: 44.8%\nClean sheet CSyD Defensa y Justicia: 38.1% \u00b7 Clean sheet CA Barracas Central: 29.0%\n\nMATCH INTELLIGENCE\n\n1. Defensa y Justicia attack vs Barracas Central defence: time-weighted strength gap multiplies Defensa y Justicia's scoring rate by \u00d70.79 relative to an average pairing (from 32/33 decay-weighted matches).\n2. Barracas Central attack vs Defensa y Justicia defence: rate multiplier \u00d70.80 for the away side.\n3. Home advantage (Argentina, fitted from results): \u00d71.24 on Defensa y Justicia's scoring rate.\n\nMODEL CONFIDENCE\n\nMost likely result has P = 41.3%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.3% \u00b1 0.4% (n=16754, mean forecast 44.6%). Backtest RPS for ARG: 0.2132; exact-score top-5 hit rate 61.6% (n=1841). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: LOW (entropy 1.084 nats of max 1.099).\nParameter-uncertainty 80% bands: xG CSyD Defensa y Justicia 0.90\u20131.56, xG CA Barracas Central 0.69\u20131.23; P(home win) 30.9%\u201353.1%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0008 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nDefensa y Justicia: PROJECTED \u2014 FotMob \u2014 XI from the side's last match on 2026-11-07 (none published for this match yet), fetched 2026-11-20 08:33 EST (4-2-3-1)\n  Mat\u00edas Borgogno (G), Valent\u00edn Loza (D), Dami\u00e1n Fern\u00e1ndez (D), David Mart\u00ednez (D), Demi\u00e1n Dom\u00ednguez (D), Santiago Sosa (M), C\u00e9sar P\u00e9rez (M), Jerem\u00edas Lucco (F), Maximiliano Porcel (M), Juan Guti\u00e9rrez (F), Leandro Fern\u00e1ndez (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\nBarracas Central: PROJECTED \u2014 FotMob \u2014 XI from the side's last match on 2026-11-06 (none published for this match yet), fetched 2026-11-20 08:33 EST (4-2-3-1)\n  Juan Esp\u00ednola (G), Rafael Barrios (D), Nicol\u00e1s Capraro (D), Nicol\u00e1s Demartini (D), Rodrigo Ins\u00faa (D), Iv\u00e1n Tapia (M), Dardo Federico Miloc (M), Rodrigo Bogar\u00edn (F), Tom\u00e1s Porra (M), Enzo Taborda (F), Nicol\u00e1s Orsini (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nKEY ABSENCES\n\n- Barracas Central: Dardo Federico Miloc \u2014 injury, Doubtful [FotMob, 2026-11-20 08:33 EST]\n- Barracas Central: Marcelo Mi\u00f1o \u2014 injury, Early December 2026 [FotMob, 2026-11-20 08:33 EST]\n- Barracas Central: Kevin Jappert \u2014 injury, Mid November 2026 [FotMob, 2026-11-20 08:33 EST]\n- Barracas Central: Fernando Tobio \u2014 injury, Mid November 2026 [FotMob, 2026-11-20 08:33 EST]\n- Barracas Central: Lucas Emanuel Gamba \u2014 injury, Mid November 2026 [FotMob, 2026-11-20 08:33 EST]\n- Barracas Central: Manuel Duarte \u2014 injury, Out for season [FotMob, 2026-11-20 08:33 EST]\n\nWEATHER AT VENUE\n\nEstadio Norberto Tito Tomaghello, Florencio Varela, Provincia de B: 26.4 \u00b0C, wind 1.3 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-11-20 08:33 EST]\n\nREST & TRAVEL\n\nDefensa y Justicia: 14 days' rest, 2 matches in previous 21 days \u00b7 Barracas Central: 15 days' rest, 2 in 21 days \u00b7 away travel 21.8 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 41.3% / 31.0% / 27.7%, xG 1.22\u20130.95\n- Understat xG component (validated, in ensemble): home +0.69 pp, draw -0.31 pp, away -0.38 pp; xG +0.061 / +0.035\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.08 pp, draw -0.05 pp, away -0.03 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.19 pp, draw -0.27 pp, away +0.08 pp\n- lineup: not applied (failed validation; no live features)\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Defensa y Justicia: lineup is PROJECTED (FotMob \u2014 XI from the side's last match on 2026-11-07 (none published for this match yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Defensa y Justicia: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n- Barracas Central: lineup is PROJECTED (FotMob \u2014 XI from the side's last match on 2026-11-06 (none published for this match yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Barracas Central: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nFINAL VERDICT\n\nDefensa y Justicia 1\u20131 Barracas Central is the single most probable scoreline at 14.6%: expected goals 1.22\u20130.95 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.043). Exact scores are inherently uncertain; the 1X2 split is 41.3%/31.0%/27.7%.\n",
+ "refresh_id": "fefc5076c0514f3bb41fa1d89d97dd1d",
+ "frozen_at": "2026-11-20T13:33:54+00:00",
+ "sha256": "292db1d0711035b3411580ac86f6d8f0dfcccf464e21e4de6779524648b2a00a"
+}

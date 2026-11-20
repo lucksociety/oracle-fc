@@ -1,0 +1,845 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-11-20",
+ "input_fingerprint": "089f9cc4fd25f92ec445dbe63bd24c6d3710901e9f1c4bbab00c2c81fa97224f",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-11-20T13:33:42+00:00",
+ "fixture": {
+  "event_id": "POLY-1337827",
+  "home_name": "Aston Villa FC",
+  "away_name": "Sunderland AFC",
+  "competition": "Premier League",
+  "subcategory": "epl",
+  "kickoff_utc": "2026-11-21T15:00:00+00:00",
+  "kickoff_local": "2026-11-21 10:00 EST",
+  "home_matched": "Aston Villa",
+  "away_matched": "Sunderland",
+  "match_methods": {
+   "home": {
+    "source": "Aston Villa FC",
+    "matched": "Aston Villa",
+    "method": "core-tokens",
+    "score": 0.97
+   },
+   "away": {
+    "source": "Sunderland AFC",
+    "matched": "Sunderland",
+    "method": "core-tokens",
+    "score": 0.97
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.5636958769894116,
+  "p_draw": 0.2386081421289031,
+  "p_away": 0.1976959808816854,
+  "xg_home": 1.8873785470925826,
+  "xg_away": 1.049514408704541,
+  "xg_total": 2.9368929557971235,
+  "median_total": 3,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.1147765160364044
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.1147765160364044
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.10167696297606642
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.09480248245974425
+   },
+   {
+    "home": 2,
+    "away": 0,
+    "p": 0.09354341044136029
+   },
+   {
+    "home": 3,
+    "away": 1,
+    "p": 0.0637296673917147
+   }
+  ],
+  "btts": 0.566515232718509,
+  "totals_over": {
+   "over_0.5": 0.9454770318135647,
+   "over_1.5": 0.8000809374422845,
+   "over_2.5": 0.5640551904310653,
+   "over_3.5": 0.3390579821416864,
+   "over_4.5": 0.17103185067687357,
+   "over_5.5": 0.07514244104051081,
+   "over_6.5": 0.02846938518443988
+  },
+  "total_buckets": {
+   "0-1": 0.19991906255771574,
+   "2": 0.2360257470112191,
+   "3": 0.2249972082893789,
+   "4": 0.1680261314648128,
+   "5+": 0.17103185067687357
+  },
+  "clean_sheet_home": 0.34286550265495797,
+  "clean_sheet_away": 0.14514223281296876,
+  "home_goal_dist": [
+   0.14514223281296876,
+   0.2893575887603414,
+   0.2746880128535324,
+   0.1709228812431934,
+   0.07906487389031654,
+   0.029048934280111044,
+   0.00883948489725492,
+   0.0029359912622816666
+  ],
+  "away_goal_dist": [
+   0.34286550265495797,
+   0.37561953829804234,
+   0.19540887200862606,
+   0.06588245237001228,
+   0.01638900324465376,
+   0.003227257283752585,
+   0.0005249976709717402,
+   8.237646898332719e-05
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    4
+   ],
+   "away_goals_80": [
+    0,
+    2
+   ],
+   "total_goals_80": [
+    1,
+    5
+   ],
+   "goal_diff_80": [
+    -1,
+    3
+   ]
+  },
+  "score_grid": [
+   [
+    0.054523,
+    0.050594,
+    0.027706,
+    0.009409,
+    0.002357,
+    0.000466,
+    7.6e-05
+   ],
+   [
+    0.094802,
+    0.114777,
+    0.05524,
+    0.018745,
+    0.004691,
+    0.000927,
+    0.000151
+   ],
+   [
+    0.093543,
+    0.101677,
+    0.055958,
+    0.017964,
+    0.004491,
+    0.000887,
+    0.000144
+   ],
+   [
+    0.058671,
+    0.06373,
+    0.033182,
+    0.011874,
+    0.002808,
+    0.000554,
+    9e-05
+   ],
+   [
+    0.027236,
+    0.029564,
+    0.015381,
+    0.005207,
+    0.001372,
+    0.000256,
+    4.2e-05
+   ],
+   [
+    0.010022,
+    0.010871,
+    0.005651,
+    0.001911,
+    0.000477,
+    9.9e-05,
+    1.5e-05
+   ],
+   [
+    0.003053,
+    0.003309,
+    0.001719,
+    0.000581,
+    0.000145,
+    2.8e-05,
+    5e-06
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.5646899999999999,
+  "p_draw": 0.238965,
+  "p_away": 0.19634500000000002,
+  "se": [
+   0.0011086370098007735,
+   0.0009535741417818544,
+   0.0008882388219814534
+  ],
+  "max_abs_dev_vs_exact": 0.001350980881685393,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   1.4533619456882783,
+   2.3609521079462965
+  ],
+  "xg_away_80": [
+   0.7766054849329259,
+   1.3438085633329138
+  ],
+  "p_home_80": [
+   0.4463633160068195,
+   0.6794479373264639
+  ],
+  "p_draw_80": [
+   0.18858812923425494,
+   0.27393802843601206
+  ],
+  "p_away_80": [
+   0.12784463182162864,
+   0.2872138757883459
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.19236027402752548,
+   0.20349598808880703
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.5504978527120024,
+   "p_draw": 0.2507362609340623,
+   "p_away": 0.19876588635393533,
+   "xg_home": 1.6884210776254394,
+   "xg_away": 0.9178492786147062,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.5972692303759373,
+   "p_draw": 0.2135953554022531,
+   "p_away": 0.1891354142218097,
+   "xg_home": 1.9857226191021928,
+   "xg_away": 1.0227269965899175,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.5629538329093589,
+   "p_draw": 0.24194378471962286,
+   "p_away": 0.19510238237101835,
+   "xg_home": 1.8105712051151348,
+   "xg_away": 0.9778788589556441,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.42222412904420675,
+   "p_draw": 0.2499474388561885,
+   "p_away": 0.3278284320996049,
+   "xg_home": 1.5173274019126641,
+   "xg_away": 1.3079985715500382,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.5296041015560591,
+   "p_draw": 0.24535065751216598,
+   "p_away": 0.22504524093177503,
+   "xg_home": 1.744578925295699,
+   "xg_away": 1.0597249973676892,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Sunderland attack vs Aston Villa defence: rate multiplier \u00d70.76 for the away side.",
+   "effect": 0.272
+  },
+  {
+   "text": "Independent results-only Elo: Aston Villa 1753 vs Sunderland 1588 (gap +165 before home advantage).",
+   "effect": 0.2474
+  },
+  {
+   "text": "Home advantage (England, fitted from results): \u00d71.23 on Aston Villa's scoring rate.",
+   "effect": 0.2069
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.5636958769894116,
+  "p_draw": 0.2386081421289031,
+  "p_away": 0.1976959808816854,
+  "xg_home": 1.8873785470925826,
+  "xg_away": 1.049514408704541
+ },
+ "context": {
+  "fetched_at": "2026-11-20T13:33:42+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5795516",
+    "fetched_at": "2026-11-20T13:33:42+00:00"
+   },
+   {
+    "name": "Fantasy Premier League availability",
+    "url": "https://fantasy.premierleague.com/api/bootstrap-static/",
+    "fetched_at": "2026-11-20T13:33:43+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "projected",
+    "source": "FotMob projected XI (enetpulse)",
+    "formation": "4-2-3-1",
+    "starters": [
+     {
+      "name": "Zion Suzuki",
+      "pos": "G",
+      "shirt": "1"
+     },
+     {
+      "name": "Taylor Harwood-Bellis",
+      "pos": "D",
+      "shirt": "4"
+     },
+     {
+      "name": "Victor Nilsson Lindel\u00f6f",
+      "pos": "D",
+      "shirt": "3"
+     },
+     {
+      "name": "Pau Torres",
+      "pos": "D",
+      "shirt": "14"
+     },
+     {
+      "name": "Ian Maatsen",
+      "pos": "D",
+      "shirt": "22"
+     },
+     {
+      "name": "Boubacar Kamara",
+      "pos": "M",
+      "shirt": "8"
+     },
+     {
+      "name": "Leon Goretzka",
+      "pos": "M",
+      "shirt": "27"
+     },
+     {
+      "name": "Alysson Edward",
+      "pos": "F",
+      "shirt": "47"
+     },
+     {
+      "name": "John McGinn",
+      "pos": "F",
+      "shirt": "7"
+     },
+     {
+      "name": "Emiliano Buend\u00eda",
+      "pos": "F",
+      "shirt": "10"
+     },
+     {
+      "name": "Nicolas Jackson",
+      "pos": "F",
+      "shirt": "11"
+     }
+    ],
+    "fetched_at": "2026-11-20T13:33:42+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [],
+    "mean_xi_attack_index": 0.045,
+    "mean_continuity": 0.152,
+    "p_backup_gk": 0.175
+   },
+   "away": {
+    "status": "projected",
+    "source": "FotMob projected XI (enetpulse)",
+    "formation": "4-2-3-1",
+    "starters": [
+     {
+      "name": "Robin Roefs",
+      "pos": "G",
+      "shirt": "22"
+     },
+     {
+      "name": "Thomas Meunier",
+      "pos": "D",
+      "shirt": "12"
+     },
+     {
+      "name": "Nordi Mukiele",
+      "pos": "D",
+      "shirt": "20"
+     },
+     {
+      "name": "Luke O'Nien",
+      "pos": "D",
+      "shirt": "13"
+     },
+     {
+      "name": "Reinildo",
+      "pos": "D",
+      "shirt": "17"
+     },
+     {
+      "name": "Alan Browne",
+      "pos": "M",
+      "shirt": "8"
+     },
+     {
+      "name": "Noah Sadiki",
+      "pos": "M",
+      "shirt": "27"
+     },
+     {
+      "name": "Trai Hume",
+      "pos": "D",
+      "shirt": "32"
+     },
+     {
+      "name": "Enzo Le F\u00e9e",
+      "pos": "M",
+      "shirt": "28"
+     },
+     {
+      "name": "Chemsdine Talbi",
+      "pos": "F",
+      "shirt": "7"
+     },
+     {
+      "name": "Wilson Isidor",
+      "pos": "F",
+      "shirt": "18"
+     }
+    ],
+    "fetched_at": "2026-11-20T13:33:42+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [
+     "Alan Browne"
+    ],
+    "mean_xi_attack_index": -0.066,
+    "mean_continuity": -1.265,
+    "p_backup_gk": 0.0
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Matteo Ruggeri",
+     "type": "injury",
+     "expected_return": "Mid December 2026",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795516",
+     "fetched_at": "2026-11-20T13:33:42+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Hamstring injury - Expected back 2 Jan",
+     "fpl_news_added": "2026-10-10T18:00:10.750593Z"
+    },
+    {
+     "player": "Matty Cash",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795516",
+     "fetched_at": "2026-11-20T13:33:42+00:00",
+     "chance_of_playing": 75,
+     "fpl_status": "doubtful",
+     "fpl_news": "Concussion - 75% chance of playing",
+     "fpl_news_added": "2026-11-15T10:30:05.648897Z"
+    },
+    {
+     "player": "Amadou Onana",
+     "type": "injury",
+     "expected_return": "Mid April 2027",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795516",
+     "fetched_at": "2026-11-20T13:33:42+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Knee injury - Unknown return date",
+     "fpl_news_added": "2026-07-23T12:01:23.352497Z"
+    },
+    {
+     "player": "Johan Manzambi",
+     "type": "doubtful",
+     "expected_return": "Calf injury - 75% chance of playing",
+     "chance_of_playing": 75,
+     "source": "FPL",
+     "source_url": "https://fantasy.premierleague.com/api/bootstrap-static/",
+     "fetched_at": "2026-11-12T13:00:05.872260Z"
+    },
+    {
+     "player": "Aaron Wan-Bissaka",
+     "type": "doubtful",
+     "expected_return": "Hamstring injury - 50% chance of playing",
+     "chance_of_playing": 50,
+     "source": "FPL",
+     "source_url": "https://fantasy.premierleague.com/api/bootstrap-static/",
+     "fetched_at": "2026-10-17T19:30:10.120990Z"
+    }
+   ],
+   "away": [
+    {
+     "player": "Daniel Ballard",
+     "type": "injury",
+     "expected_return": "Mid December 2026",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795516",
+     "fetched_at": "2026-11-20T13:33:42+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Hamstring injury - Unknown return date",
+     "fpl_news_added": "2026-09-25T21:30:10.370384Z"
+    },
+    {
+     "player": "Granit Xhaka",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795516",
+     "fetched_at": "2026-11-20T13:33:42+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Calf injury - Unknown return date",
+     "fpl_news_added": "2026-11-08T14:30:09.504002Z"
+    },
+    {
+     "player": "Habib Diarra",
+     "type": "injury",
+     "expected_return": "Early December 2026",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795516",
+     "fetched_at": "2026-11-20T13:33:42+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Muscular injury - Unknown return date",
+     "fpl_news_added": "2026-11-01T08:30:09.264068Z"
+    },
+    {
+     "player": "Brian Brobbey",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795516",
+     "fetched_at": "2026-11-20T13:33:42+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Muscular injury - Unknown return date",
+     "fpl_news_added": "2026-11-10T11:30:10.818854Z"
+    },
+    {
+     "player": "Romaine Mundle",
+     "type": "injury",
+     "expected_return": "Early January 2027",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795516",
+     "fetched_at": "2026-11-20T13:33:42+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Knee injury - Unknown return date",
+     "fpl_news_added": "2026-09-09T14:00:08.462705Z"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 13,
+    "n21": 2,
+    "last_match": "2026-11-08"
+   },
+   "away": {
+    "rest_days": 13,
+    "n21": 2,
+    "last_match": "2026-11-08"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 269.4
+  },
+  "venue": {
+   "name": "Villa Park",
+   "city": "Birmingham",
+   "lat": 52.509090736,
+   "lon": -1.884841919
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 2.2,
+   "temp_c": 8.0,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=52.509&longitude=-1.885",
+   "fetched_at": "2026-11-20T13:33:43+00:00",
+   "lat": 52.509090736,
+   "lon": -1.884841919
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": -3.37,
+    "d_p_draw_pp": 1.56,
+    "d_p_away_pp": 1.8,
+    "d_xg_home": -0.113,
+    "d_xg_away": 0.024
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0203,
+    "away_rate_mult": 1.0085,
+    "d_p_home_pp": 0.63,
+    "d_p_draw_pp": -0.35,
+    "d_p_away_pp": -0.28,
+    "d_xg_home": 0.037,
+    "d_xg_away": 0.009,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "home_rate_mult": 1.0385,
+    "away_rate_mult": 0.9546,
+    "d_p_home_pp": 2.67,
+    "d_p_draw_pp": -0.83,
+    "d_p_away_pp": -1.85,
+    "d_xg_home": 0.071,
+    "d_xg_away": -0.045,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 13.0,
+   "rest_a": 13.0,
+   "n21_h": 2.0,
+   "n21_a": 2.0,
+   "travel_km": 269.44848068462824,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 2.2,
+   "temp_c": 8.0
+  }
+ },
+ "lineup_simulation": {
+  "applied": true,
+  "validated": false,
+  "scale": 0.5,
+  "basis": {
+   "home": "projected",
+   "away": "projected"
+  },
+  "home_rate_mult": 1.0191,
+  "away_rate_mult": 0.977,
+  "note": "Starting-XI strength, continuity and backup-keeper adjustment at half the fitted size. It did not pass the out-of-sample test, so bets are not priced from it.",
+  "p_home": 0.5771359137292313,
+  "p_draw": 0.23461069106142696,
+  "p_away": 0.18825339520934148,
+  "xg_home": 1.92219708789873,
+  "xg_away": 1.026480713035089,
+  "xg_total": 2.948677800933819,
+  "btts": 0.5625543705081385,
+  "totals_over": {
+   "over_0.5": 0.9461234252134414,
+   "over_1.5": 0.8018198479436104,
+   "over_2.5": 0.5667804020835967,
+   "over_3.5": 0.3417093232065236,
+   "over_4.5": 0.1730091311056843,
+   "over_5.5": 0.07628613689806242,
+   "over_6.5": 0.02902752705829369
+  },
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.11290650170877098
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.11290650170877098
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.10192258036465299
+   },
+   {
+    "home": 2,
+    "away": 0,
+    "p": 0.09598933406605616
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.09545561450011165
+   },
+   {
+    "home": 3,
+    "away": 1,
+    "p": 0.06510853414810631
+   }
+  ],
+  "score_grid": [
+   [
+    0.053877,
+    0.048848,
+    0.026144,
+    0.008679,
+    0.002126,
+    0.000411,
+    6.6e-05
+   ],
+   [
+    0.095456,
+    0.112907,
+    0.053103,
+    0.017614,
+    0.00431,
+    0.000833,
+    0.000133
+   ],
+   [
+    0.095989,
+    0.101923,
+    0.054811,
+    0.017197,
+    0.004204,
+    0.000812,
+    0.000129
+   ],
+   [
+    0.061366,
+    0.065109,
+    0.033121,
+    0.011582,
+    0.002678,
+    0.000517,
+    8.2e-05
+   ],
+   [
+    0.029041,
+    0.030788,
+    0.015648,
+    0.005176,
+    0.001334,
+    0.000243,
+    3.9e-05
+   ],
+   [
+    0.010896,
+    0.011541,
+    0.005861,
+    0.001937,
+    0.000472,
+    9.6e-05,
+    1.4e-05
+   ],
+   [
+    0.003384,
+    0.003582,
+    0.001817,
+    0.0006,
+    0.000146,
+    2.8e-05,
+    5e-06
+   ]
+  ]
+ },
+ "confidence": {
+  "tier": "MODERATE",
+  "p_max": 0.5636958769894116,
+  "entropy_nats": 0.9855127485997536,
+  "text": "Most likely result has P = 56.4%. In the out-of-sample backtest, favourites priced 0.50\u20130.60 won 53.9% \u00b1 0.5% (n=9522, mean forecast 54.4%). Backtest RPS for E0: 0.2018; exact-score top-5 hit rate 46.6% (n=1220). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: MODERATE (entropy 0.986 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Aston Villa: lineup is PROJECTED (FotMob projected XI (enetpulse)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Sunderland: lineup is PROJECTED (FotMob projected XI (enetpulse)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Sunderland: no Understat history for Alan Browne \u2014 rated at the positional prior."
+ ],
+ "verdict": "Aston Villa 1\u20131 Sunderland is the single most probable scoreline at 11.5%: expected goals 1.89\u20131.05 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.043). Exact scores are inherently uncertain; the 1X2 split is 56.4%/23.9%/19.8%.",
+ "resolved": {
+  "home_key": "England:Aston Villa",
+  "away_key": "England:Sunderland",
+  "div": "E0",
+  "home_div": "E0",
+  "away_div": "E0",
+  "country": "England"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: Sunderland AFC at Aston Villa FC\nCompetition: Premier League\nDate: 2026-11-21 10:00 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-11-20\n\nPRIMARY FINAL SCORE PREDICTION\n\nAston Villa FC 1 \u2013 1 Sunderland AFC\n(modal exact score, probability 11.5%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.89\nAway: 1.05\nExpected Total: 2.94\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 56.4%\nDraw: 23.9%\nAway Win: 19.8%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 11.5%\n2. 2\u20131: 10.2%\n3. 1\u20130: 9.5%\n4. 2\u20130: 9.4%\n5. 3\u20131: 6.4%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 20.0%\nTotal 2 goals: 23.6%\nTotal 3 goals: 22.5%\nTotal 4 goals: 16.8%\nTotal 5+ goals: 17.1%\n\nBoth Teams Score: 56.7%\nClean sheet Aston Villa FC: 34.3% \u00b7 Clean sheet Sunderland AFC: 14.5%\n\nMATCH INTELLIGENCE\n\n1. Sunderland attack vs Aston Villa defence: rate multiplier \u00d70.76 for the away side.\n2. Independent results-only Elo: Aston Villa 1753 vs Sunderland 1588 (gap +165 before home advantage).\n3. Home advantage (England, fitted from results): \u00d71.23 on Aston Villa's scoring rate.\n\nMODEL CONFIDENCE\n\nMost likely result has P = 56.4%. In the out-of-sample backtest, favourites priced 0.50\u20130.60 won 53.9% \u00b1 0.5% (n=9522, mean forecast 54.4%). Backtest RPS for E0: 0.2018; exact-score top-5 hit rate 46.6% (n=1220). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: MODERATE (entropy 0.986 nats of max 1.099).\nParameter-uncertainty 80% bands: xG Aston Villa FC 1.45\u20132.36, xG Sunderland AFC 0.78\u20131.34; P(home win) 44.6%\u201367.9%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0014 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nAston Villa: PROJECTED \u2014 FotMob projected XI (enetpulse), fetched 2026-11-20 08:33 EST (4-2-3-1)\n  Zion Suzuki (G), Taylor Harwood-Bellis (D), Victor Nilsson Lindel\u00f6f (D), Pau Torres (D), Ian Maatsen (D), Boubacar Kamara (M), Leon Goretzka (M), Alysson Edward (F), John McGinn (F), Emiliano Buend\u00eda (F), Nicolas Jackson (F)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs +0.045 (log) \u00b7 continuity +0.15 \u00b7 P(backup GK) 18%\nSunderland: PROJECTED \u2014 FotMob projected XI (enetpulse), fetched 2026-11-20 08:33 EST (4-2-3-1)\n  Robin Roefs (G), Thomas Meunier (D), Nordi Mukiele (D), Luke O'Nien (D), Reinildo (D), Alan Browne (M), Noah Sadiki (M), Trai Hume (D), Enzo Le F\u00e9e (M), Chemsdine Talbi (F), Wilson Isidor (F)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs -0.066 (log) \u00b7 continuity -1.26 \u00b7 P(backup GK) 0%\n\nKEY ABSENCES\n\n- Aston Villa: Matteo Ruggeri \u2014 injury, Mid December 2026, 0% chance of playing [FotMob + FPL, 2026-11-20 08:33 EST] \u2014 FPL: Hamstring injury - Expected back 2 Jan (updated 2026-10-10 14:00 EDT)\n- Aston Villa: Matty Cash \u2014 injury, Late November 2026, 75% chance of playing [FotMob + FPL, 2026-11-20 08:33 EST] \u2014 FPL: Concussion - 75% chance of playing (updated 2026-11-15 05:30 EST)\n- Aston Villa: Amadou Onana \u2014 injury, Mid April 2027, 0% chance of playing [FotMob + FPL, 2026-11-20 08:33 EST] \u2014 FPL: Knee injury - Unknown return date (updated 2026-07-23 08:01 EDT)\n- Aston Villa: Johan Manzambi \u2014 doubtful, Calf injury - 75% chance of playing, 75% chance of playing [FPL, 2026-11-12 08:00 EST]\n- Aston Villa: Aaron Wan-Bissaka \u2014 doubtful, Hamstring injury - 50% chance of playing, 50% chance of playing [FPL, 2026-10-17 15:30 EDT]\n- Sunderland: Daniel Ballard \u2014 injury, Mid December 2026, 0% chance of playing [FotMob + FPL, 2026-11-20 08:33 EST] \u2014 FPL: Hamstring injury - Unknown return date (updated 2026-09-25 17:30 EDT)\n- Sunderland: Granit Xhaka \u2014 injury, Late November 2026, 0% chance of playing [FotMob + FPL, 2026-11-20 08:33 EST] \u2014 FPL: Calf injury - Unknown return date (updated 2026-11-08 09:30 EST)\n- Sunderland: Habib Diarra \u2014 injury, Early December 2026, 0% chance of playing [FotMob + FPL, 2026-11-20 08:33 EST] \u2014 FPL: Muscular injury - Unknown return date (updated 2026-11-01 03:30 EST)\n- Sunderland: Brian Brobbey \u2014 injury, Late November 2026, 0% chance of playing [FotMob + FPL, 2026-11-20 08:33 EST] \u2014 FPL: Muscular injury - Unknown return date (updated 2026-11-10 06:30 EST)\n- Sunderland: Romaine Mundle \u2014 injury, Early January 2027, 0% chance of playing [FotMob + FPL, 2026-11-20 08:33 EST] \u2014 FPL: Knee injury - Unknown return date (updated 2026-09-09 10:00 EDT)\n\nWEATHER AT VENUE\n\nVilla Park, Birmingham: 8.0 \u00b0C, wind 2.2 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-11-20 08:33 EST]\n\nREST & TRAVEL\n\nAston Villa: 13 days' rest, 2 matches in previous 21 days \u00b7 Sunderland: 13 days' rest, 2 in 21 days \u00b7 away travel 269.4 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 56.4% / 23.9% / 19.8%, xG 1.89\u20131.05\n- Understat xG component (validated, in ensemble): home -3.37 pp, draw +1.56 pp, away +1.80 pp; xG -0.113 / +0.024\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.63 pp, draw -0.35 pp, away -0.28 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- lineup: NOT APPLIED (failed out-of-sample validation); would have moved home +2.67 pp, draw -0.83 pp, away -1.85 pp\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Aston Villa: lineup is PROJECTED (FotMob projected XI (enetpulse)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Sunderland: lineup is PROJECTED (FotMob projected XI (enetpulse)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Sunderland: no Understat history for Alan Browne \u2014 rated at the positional prior.\n\nFINAL VERDICT\n\nAston Villa 1\u20131 Sunderland is the single most probable scoreline at 11.5%: expected goals 1.89\u20131.05 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.043). Exact scores are inherently uncertain; the 1X2 split is 56.4%/23.9%/19.8%.\n",
+ "refresh_id": "fefc5076c0514f3bb41fa1d89d97dd1d",
+ "frozen_at": "2026-11-20T13:33:43+00:00",
+ "sha256": "21537db72037ebd9ebcd284c92ec3e23add01c8ed82dd5be79be3e1b74c411a0"
+}
