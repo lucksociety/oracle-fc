@@ -1,0 +1,813 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-11-16",
+ "input_fingerprint": "1a5eec66babfc36f6823f38be831e87d5b4ff7b787f439bd8e754b510044e7e5",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-11-20T02:32:58+00:00",
+ "fixture": {
+  "event_id": "POLY-1346317",
+  "home_name": "SV Werder Bremen",
+  "away_name": "Hamburger SV",
+  "competition": "Bundesliga",
+  "subcategory": "bun",
+  "kickoff_utc": "2026-11-22T16:30:00+00:00",
+  "kickoff_local": "2026-11-22 11:30 EST",
+  "home_matched": "Werder Bremen",
+  "away_matched": "Hamburg",
+  "match_methods": {
+   "home": {
+    "source": "SV Werder Bremen",
+    "matched": "Werder Bremen",
+    "method": "core-tokens",
+    "score": 0.97
+   },
+   "away": {
+    "source": "Hamburger SV",
+    "matched": "Hamburg",
+    "method": "alias",
+    "score": 1.0
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.5011639450003159,
+  "p_draw": 0.24499143175021795,
+  "p_away": 0.25384462324946616,
+  "xg_home": 1.8364194696300806,
+  "xg_away": 1.2678301282572246,
+  "xg_total": 3.1042495978873053,
+  "median_total": 3,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.11408653715700073
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.11408653715700073
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.09858988809540667
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.07729694468777054
+   },
+   {
+    "home": 2,
+    "away": 0,
+    "p": 0.07461419856036287
+   },
+   {
+    "home": 1,
+    "away": 2,
+    "p": 0.06684515990485397
+   }
+  ],
+  "btts": 0.6207912668732656,
+  "totals_over": {
+   "over_0.5": 0.9540973072560263,
+   "over_1.5": 0.8251789826092633,
+   "over_2.5": 0.6022160507954185,
+   "over_3.5": 0.37721798084568736,
+   "over_4.5": 0.19896729057977627,
+   "over_5.5": 0.09164660134931019,
+   "over_6.5": 0.03637302423755665
+  },
+  "total_buckets": {
+   "0-1": 0.17482101739073672,
+   "2": 0.2229629318138447,
+   "3": 0.2249980699497312,
+   "4": 0.1782506902659111,
+   "5+": 0.19896729057977627
+  },
+  "clean_sheet_home": 0.27356984405046014,
+  "clean_sheet_away": 0.1515415818202479,
+  "home_goal_dist": [
+   0.1515415818202479,
+   0.29674447419495265,
+   0.2751780807331229,
+   0.16610245155120365,
+   0.07418264499804475,
+   0.026215875373572225,
+   0.007643870002549056,
+   0.0023910213263068315
+  ],
+  "away_goal_dist": [
+   0.27356984405046014,
+   0.36431271211056954,
+   0.23043711187723756,
+   0.0945321008992947,
+   0.028640612167467626,
+   0.006874464412968457,
+   0.0013640893735684285,
+   0.0002690651084334417
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    4
+   ],
+   "away_goals_80": [
+    0,
+    3
+   ],
+   "total_goals_80": [
+    1,
+    5
+   ],
+   "goal_diff_80": [
+    -2,
+    3
+   ]
+  },
+  "score_grid": [
+   [
+    0.045903,
+    0.051621,
+    0.034262,
+    0.014154,
+    0.004315,
+    0.00104,
+    0.000207
+   ],
+   [
+    0.077297,
+    0.114087,
+    0.066845,
+    0.0276,
+    0.008409,
+    0.002025,
+    0.000402
+   ],
+   [
+    0.074614,
+    0.09859,
+    0.065997,
+    0.025786,
+    0.007852,
+    0.00189,
+    0.000375
+   ],
+   [
+    0.045409,
+    0.05997,
+    0.037987,
+    0.016548,
+    0.004768,
+    0.001147,
+    0.000228
+   ],
+   [
+    0.02037,
+    0.026886,
+    0.017021,
+    0.007016,
+    0.002254,
+    0.000513,
+    0.000102
+   ],
+   [
+    0.007213,
+    0.009515,
+    0.00602,
+    0.00248,
+    0.000754,
+    0.000191,
+    3.6e-05
+   ],
+   [
+    0.002105,
+    0.002776,
+    0.001755,
+    0.000723,
+    0.00022,
+    5.3e-05,
+    1.1e-05
+   ]
+  ],
+  "mass_check": 0.9999999999999999
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.5024299999999999,
+  "p_draw": 0.244005,
+  "p_away": 0.253565,
+  "se": [
+   0.0011180207849141267,
+   0.0009603815907622344,
+   0.0009728046843405925
+  ],
+  "max_abs_dev_vs_exact": 0.0012660549996840187,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   1.4048668306188574,
+   2.308263280331689
+  ],
+  "xg_away_80": [
+   0.9488851636105775,
+   1.6103282452065057
+  ],
+  "p_home_80": [
+   0.3845944057917852,
+   0.6256941430819364
+  ],
+  "p_draw_80": [
+   0.20053109358655166,
+   0.2691585228664397
+  ],
+  "p_away_80": [
+   0.16889950208789486,
+   0.35810594291739445
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.19686707147878835,
+   0.19628697636979203
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.4882163138689599,
+   "p_draw": 0.24724438209917093,
+   "p_away": 0.2645393040318692,
+   "xg_home": 1.7190373466562554,
+   "xg_away": 1.2106865182759805,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.4838402363893187,
+   "p_draw": 0.23299458421912983,
+   "p_away": 0.2831651793915514,
+   "xg_home": 1.7677489503781778,
+   "xg_away": 1.3028852868365235,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.4459797248183356,
+   "p_draw": 0.27933722031506697,
+   "p_away": 0.27468305486659744,
+   "xg_home": 1.4312977803547027,
+   "xg_away": 1.0697922182703181,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.45274475786923307,
+   "p_draw": 0.23031086678497037,
+   "p_away": 0.31694437534579667,
+   "xg_home": 1.7711190534839896,
+   "xg_away": 1.451074065326448,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.5160829443245313,
+   "p_draw": 0.23766488461616833,
+   "p_away": 0.24625217105930045,
+   "xg_home": 1.8307064122196213,
+   "xg_away": 1.2046117579997593,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Home advantage (Germany, fitted from results): \u00d71.31 on Werder Bremen's scoring rate.",
+   "effect": 0.2679
+  },
+  {
+   "text": "Werder Bremen attack vs Hamburg defence: time-weighted strength gap multiplies Werder Bremen's scoring rate by \u00d71.09 relative to an average pairing (from 28/28 decay-weighted matches).",
+   "effect": 0.0874
+  },
+  {
+   "text": "Independent results-only Elo: Werder Bremen 1565 vs Hamburg 1526 (gap +39 before home advantage).",
+   "effect": 0.059
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.5011639450003159,
+  "p_draw": 0.244991431750218,
+  "p_away": 0.2538446232494662,
+  "xg_home": 1.836419469630081,
+  "xg_away": 1.2678301282572246
+ },
+ "context": {
+  "fetched_at": "2026-11-20T02:32:58+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5881232",
+    "fetched_at": "2026-11-20T02:32:58+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "inferred",
+    "source": null,
+    "formation": null,
+    "starters": [
+     {
+      "name": "Karl Hein",
+      "pos": "G"
+     },
+     {
+      "name": "Marco Friedl",
+      "pos": "D"
+     },
+     {
+      "name": "Marco Gr\u00fcll",
+      "pos": "F"
+     },
+     {
+      "name": "Olivier Deman",
+      "pos": "D"
+     },
+     {
+      "name": "Amos Pieper",
+      "pos": "D"
+     },
+     {
+      "name": "Ludovit Reis",
+      "pos": "M"
+     },
+     {
+      "name": "Niclas F\u00fcllkrug",
+      "pos": "F"
+     },
+     {
+      "name": "Youri Regeer",
+      "pos": "M"
+     },
+     {
+      "name": "Arthur",
+      "pos": "D"
+     },
+     {
+      "name": "Chuki",
+      "pos": "F"
+     },
+     {
+      "name": "Eren Dink\u00e7i",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-11-20T02:32:58+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [],
+    "mean_xi_attack_index": 0.066,
+    "mean_continuity": -1.16,
+    "p_backup_gk": 0.28
+   },
+   "away": {
+    "status": "inferred",
+    "source": null,
+    "formation": null,
+    "starters": [
+     {
+      "name": "Daniel Heuer Fernandes",
+      "pos": "G"
+     },
+     {
+      "name": "David M\u00f8ller Wolfe",
+      "pos": "M"
+     },
+     {
+      "name": "Warmed Omari",
+      "pos": "D"
+     },
+     {
+      "name": "Martin Adeline",
+      "pos": "M"
+     },
+     {
+      "name": "Miro Muheim",
+      "pos": "M"
+     },
+     {
+      "name": "Sebastiaan Bornauw",
+      "pos": "D"
+     },
+     {
+      "name": "Albert Gr\u00f8nb\u00e6k",
+      "pos": "F"
+     },
+     {
+      "name": "Nicol\u00e1s Capaldo",
+      "pos": "D"
+     },
+     {
+      "name": "Zakaria El Ouahdi",
+      "pos": "M"
+     },
+     {
+      "name": "Shafiq Nandja",
+      "pos": "D"
+     },
+     {
+      "name": "Jordan Torunarigha",
+      "pos": "D"
+     }
+    ],
+    "fetched_at": "2026-11-20T02:32:58+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [],
+    "mean_xi_attack_index": -0.216,
+    "mean_continuity": -0.456,
+    "p_backup_gk": 0.0
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Mitchell Weiser",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881232",
+     "fetched_at": "2026-11-20T02:32:58+00:00"
+    },
+    {
+     "player": "Paul Erevbenagie",
+     "type": "injury",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881232",
+     "fetched_at": "2026-11-20T02:32:58+00:00"
+    },
+    {
+     "player": "Skelly Alvero",
+     "type": "injury",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881232",
+     "fetched_at": "2026-11-20T02:32:58+00:00"
+    },
+    {
+     "player": "Salim Musah",
+     "type": "injury",
+     "expected_return": "Early January 2027",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881232",
+     "fetched_at": "2026-11-20T02:32:58+00:00"
+    },
+    {
+     "player": "Moussa N'Diaye",
+     "type": "injury",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881232",
+     "fetched_at": "2026-11-20T02:32:58+00:00"
+    },
+    {
+     "player": "Jens Stage",
+     "type": "injury",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881232",
+     "fetched_at": "2026-11-20T02:32:58+00:00"
+    },
+    {
+     "player": "Felix Agu",
+     "type": "injury",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881232",
+     "fetched_at": "2026-11-20T02:32:58+00:00"
+    },
+    {
+     "player": "Keke Topp",
+     "type": "injury",
+     "expected_return": "Early January 2027",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881232",
+     "fetched_at": "2026-11-20T02:32:58+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "Albert Sambi Lokonga",
+     "type": "injury",
+     "expected_return": "Early December 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881232",
+     "fetched_at": "2026-11-20T02:32:58+00:00"
+    },
+    {
+     "player": "Yussuf Poulsen",
+     "type": "injury",
+     "expected_return": "Early December 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881232",
+     "fetched_at": "2026-11-20T02:32:58+00:00"
+    },
+    {
+     "player": "Miro Muheim",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881232",
+     "fetched_at": "2026-11-20T02:32:58+00:00"
+    },
+    {
+     "player": "Bilal Nadir",
+     "type": "injury",
+     "expected_return": "Late December 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881232",
+     "fetched_at": "2026-11-20T02:32:58+00:00"
+    },
+    {
+     "player": "F\u00e1bio Vieira",
+     "type": "injury",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881232",
+     "fetched_at": "2026-11-20T02:32:58+00:00"
+    },
+    {
+     "player": "Nicolai Remberg",
+     "type": "injury",
+     "expected_return": "Late June 2027",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881232",
+     "fetched_at": "2026-11-20T02:32:58+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 15,
+    "n21": 1,
+    "last_match": "2026-11-07"
+   },
+   "away": {
+    "rest_days": 16,
+    "n21": 2,
+    "last_match": "2026-11-06"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 91.2
+  },
+  "venue": {
+   "name": "Weserstadion",
+   "city": "Bremen",
+   "lat": 53.066427548,
+   "lon": 8.83754611
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 1.58,
+   "temp_c": 2.9,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=53.066&longitude=8.838",
+   "fetched_at": "2026-11-20T02:32:58+00:00",
+   "lat": 53.066427548,
+   "lon": 8.83754611
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": 1.73,
+    "d_p_draw_pp": 0.12,
+    "d_p_away_pp": -1.85,
+    "d_xg_home": 0.037,
+    "d_xg_away": -0.047
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": -0.0,
+    "d_p_away_pp": -0.0,
+    "d_xg_home": -0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.01,
+    "away_rate_mult": 1.0042,
+    "d_p_home_pp": 0.3,
+    "d_p_draw_pp": -0.15,
+    "d_p_away_pp": -0.15,
+    "d_xg_home": 0.018,
+    "d_xg_away": 0.005,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": -0.0,
+    "d_p_away_pp": -0.0,
+    "d_xg_home": -0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "home_rate_mult": 0.9968,
+    "away_rate_mult": 0.9596,
+    "d_p_home_pp": 0.98,
+    "d_p_draw_pp": 0.02,
+    "d_p_away_pp": -1.01,
+    "d_xg_home": -0.005,
+    "d_xg_away": -0.049,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": -0.0,
+   "d_p_away_pp": -0.0,
+   "d_xg_home": -0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 15.0,
+   "rest_a": 16.0,
+   "n21_h": 1.0,
+   "n21_a": 2.0,
+   "travel_km": 91.19944460797005,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 1.58,
+   "temp_c": 2.9
+  }
+ },
+ "lineup_simulation": {
+  "applied": true,
+  "validated": false,
+  "scale": 0.5,
+  "basis": {
+   "home": "inferred",
+   "away": "inferred"
+  },
+  "home_rate_mult": 0.9984,
+  "away_rate_mult": 0.9796,
+  "note": "Starting-XI strength, continuity and backup-keeper adjustment at half the fitted size. It did not pass the out-of-sample test, so bets are not priced from it.",
+  "p_home": 0.5061199852119181,
+  "p_draw": 0.24521722927241454,
+  "p_away": 0.24866278551566715,
+  "xg_home": 1.8335967560600226,
+  "xg_away": 1.2430661678205752,
+  "xg_total": 3.0766629238805976,
+  "btts": 0.614327907136063,
+  "totals_over": {
+   "over_0.5": 0.9527670626186416,
+   "over_1.5": 0.8213223163985627,
+   "over_2.5": 0.5961333212711193,
+   "over_3.5": 0.3709449844312005,
+   "over_4.5": 0.19420437420810496,
+   "over_5.5": 0.08874715137398362,
+   "over_6.5": 0.03493571215288243
+  },
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.11479479865529905
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.11479479865529905
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.09903922953586418
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.079402345636158
+   },
+   {
+    "home": 2,
+    "away": 0,
+    "p": 0.0765391004431875
+   },
+   {
+    "home": 1,
+    "away": 2,
+    "p": 0.06590743159343296
+   }
+  ],
+  "score_grid": [
+   [
+    0.047233,
+    0.052042,
+    0.033855,
+    0.013713,
+    0.0041,
+    0.000969,
+    0.000189
+   ],
+   [
+    0.079402,
+    0.114795,
+    0.065907,
+    0.026675,
+    0.00797,
+    0.001883,
+    0.000367
+   ],
+   [
+    0.076539,
+    0.099039,
+    0.064949,
+    0.024869,
+    0.007424,
+    0.001752,
+    0.000341
+   ],
+   [
+    0.046529,
+    0.060162,
+    0.037325,
+    0.015931,
+    0.004499,
+    0.001061,
+    0.000207
+   ],
+   [
+    0.020855,
+    0.026944,
+    0.016703,
+    0.006744,
+    0.002123,
+    0.000474,
+    9.2e-05
+   ],
+   [
+    0.00738,
+    0.009528,
+    0.005902,
+    0.002381,
+    0.000709,
+    0.000176,
+    3.2e-05
+   ],
+   [
+    0.002154,
+    0.002778,
+    0.001719,
+    0.000693,
+    0.000206,
+    4.9e-05,
+    1e-05
+   ]
+  ]
+ },
+ "confidence": {
+  "tier": "MODERATE",
+  "p_max": 0.5011639450003159,
+  "entropy_nats": 1.038832710098336,
+  "text": "Most likely result has P = 50.1%. In the out-of-sample backtest, favourites priced 0.50\u20130.60 won 53.9% \u00b1 0.5% (n=9522, mean forecast 54.4%). Backtest RPS for D1: 0.2000; exact-score top-5 hit rate 42.2% (n=981). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: MODERATE (entropy 1.039 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Werder Bremen: no lineup published yet \u2014 XI inferred from recent minutes share minus known absences; 200 configurations simulated (start P=0.7, UNVALIDATED prior).",
+  "Hamburg: no lineup published yet \u2014 XI inferred from recent minutes share minus known absences; 200 configurations simulated (start P=0.7, UNVALIDATED prior)."
+ ],
+ "verdict": "Werder Bremen 1\u20131 Hamburg is the single most probable scoreline at 11.4%: expected goals 1.84\u20131.27 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.043). Exact scores are inherently uncertain; the 1X2 split is 50.1%/24.5%/25.4%.",
+ "resolved": {
+  "home_key": "Germany:Werder Bremen",
+  "away_key": "Germany:Hamburg",
+  "div": "D1",
+  "home_div": "D1",
+  "away_div": "D1",
+  "country": "Germany"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: Hamburger SV at SV Werder Bremen\nCompetition: Bundesliga\nDate: 2026-11-22 11:30 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-11-16\n\nPRIMARY FINAL SCORE PREDICTION\n\nSV Werder Bremen 1 \u2013 1 Hamburger SV\n(modal exact score, probability 11.4%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.84\nAway: 1.27\nExpected Total: 3.10\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 50.1%\nDraw: 24.5%\nAway Win: 25.4%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 11.4%\n2. 2\u20131: 9.9%\n3. 1\u20130: 7.7%\n4. 2\u20130: 7.5%\n5. 1\u20132: 6.7%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 17.5%\nTotal 2 goals: 22.3%\nTotal 3 goals: 22.5%\nTotal 4 goals: 17.8%\nTotal 5+ goals: 19.9%\n\nBoth Teams Score: 62.1%\nClean sheet SV Werder Bremen: 27.4% \u00b7 Clean sheet Hamburger SV: 15.2%\n\nMATCH INTELLIGENCE\n\n1. Home advantage (Germany, fitted from results): \u00d71.31 on Werder Bremen's scoring rate.\n2. Werder Bremen attack vs Hamburg defence: time-weighted strength gap multiplies Werder Bremen's scoring rate by \u00d71.09 relative to an average pairing (from 28/28 decay-weighted matches).\n3. Independent results-only Elo: Werder Bremen 1565 vs Hamburg 1526 (gap +39 before home advantage).\n\nMODEL CONFIDENCE\n\nMost likely result has P = 50.1%. In the out-of-sample backtest, favourites priced 0.50\u20130.60 won 53.9% \u00b1 0.5% (n=9522, mean forecast 54.4%). Backtest RPS for D1: 0.2000; exact-score top-5 hit rate 42.2% (n=981). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: MODERATE (entropy 1.039 nats of max 1.099).\nParameter-uncertainty 80% bands: xG SV Werder Bremen 1.40\u20132.31, xG Hamburger SV 0.95\u20131.61; P(home win) 38.5%\u201362.6%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0013 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nWerder Bremen: INFERRED, fetched 2026-11-19 21:32 EST\n  Karl Hein (G), Marco Friedl (D), Marco Gr\u00fcll (F), Olivier Deman (D), Amos Pieper (D), Ludovit Reis (M), Niclas F\u00fcllkrug (F), Youri Regeer (M), Arthur (D), Chuki (F), Eren Dink\u00e7i (F)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs +0.066 (log) \u00b7 continuity -1.16 \u00b7 P(backup GK) 28%\nHamburg: INFERRED, fetched 2026-11-19 21:32 EST\n  Daniel Heuer Fernandes (G), David M\u00f8ller Wolfe (M), Warmed Omari (D), Martin Adeline (M), Miro Muheim (M), Sebastiaan Bornauw (D), Albert Gr\u00f8nb\u00e6k (F), Nicol\u00e1s Capaldo (D), Zakaria El Ouahdi (M), Shafiq Nandja (D), Jordan Torunarigha (D)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs -0.216 (log) \u00b7 continuity -0.46 \u00b7 P(backup GK) 0%\n\nKEY ABSENCES\n\n- Werder Bremen: Mitchell Weiser \u2014 injury, Late November 2026 [FotMob, 2026-11-19 21:32 EST]\n- Werder Bremen: Paul Erevbenagie \u2014 injury, Mid November 2026 [FotMob, 2026-11-19 21:32 EST]\n- Werder Bremen: Skelly Alvero \u2014 injury, Mid November 2026 [FotMob, 2026-11-19 21:32 EST]\n- Werder Bremen: Salim Musah \u2014 injury, Early January 2027 [FotMob, 2026-11-19 21:32 EST]\n- Werder Bremen: Moussa N'Diaye \u2014 injury, Mid November 2026 [FotMob, 2026-11-19 21:32 EST]\n- Werder Bremen: Jens Stage \u2014 injury, Mid November 2026 [FotMob, 2026-11-19 21:32 EST]\n- Werder Bremen: Felix Agu \u2014 injury, Mid November 2026 [FotMob, 2026-11-19 21:32 EST]\n- Werder Bremen: Keke Topp \u2014 injury, Early January 2027 [FotMob, 2026-11-19 21:32 EST]\n- Hamburg: Albert Sambi Lokonga \u2014 injury, Early December 2026 [FotMob, 2026-11-19 21:32 EST]\n- Hamburg: Yussuf Poulsen \u2014 injury, Early December 2026 [FotMob, 2026-11-19 21:32 EST]\n- Hamburg: Miro Muheim \u2014 injury, Doubtful [FotMob, 2026-11-19 21:32 EST]\n- Hamburg: Bilal Nadir \u2014 injury, Late December 2026 [FotMob, 2026-11-19 21:32 EST]\n- Hamburg: F\u00e1bio Vieira \u2014 injury, Mid November 2026 [FotMob, 2026-11-19 21:32 EST]\n- Hamburg: Nicolai Remberg \u2014 injury, Late June 2027 [FotMob, 2026-11-19 21:32 EST]\n\nWEATHER AT VENUE\n\nWeserstadion, Bremen: 2.9 \u00b0C, wind 1.6 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-11-19 21:32 EST]\n\nREST & TRAVEL\n\nWerder Bremen: 15 days' rest, 1 matches in previous 21 days \u00b7 Hamburg: 16 days' rest, 2 in 21 days \u00b7 away travel 91.2 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 50.1% / 24.5% / 25.4%, xG 1.84\u20131.27\n- Understat xG component (validated, in ensemble): home +1.73 pp, draw +0.12 pp, away -1.85 pp; xG +0.037 / -0.047\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw -0.00 pp, away -0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.30 pp, draw -0.15 pp, away -0.15 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw -0.00 pp, away -0.00 pp\n- lineup: NOT APPLIED (failed out-of-sample validation); would have moved home +0.98 pp, draw +0.02 pp, away -1.01 pp\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Werder Bremen: no lineup published yet \u2014 XI inferred from recent minutes share minus known absences; 200 configurations simulated (start P=0.7, UNVALIDATED prior).\n- Hamburg: no lineup published yet \u2014 XI inferred from recent minutes share minus known absences; 200 configurations simulated (start P=0.7, UNVALIDATED prior).\n\nFINAL VERDICT\n\nWerder Bremen 1\u20131 Hamburg is the single most probable scoreline at 11.4%: expected goals 1.84\u20131.27 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.043). Exact scores are inherently uncertain; the 1X2 split is 50.1%/24.5%/25.4%.\n",
+ "refresh_id": "7f229116d02a47439b615dbfd49f6299",
+ "frozen_at": "2026-11-20T02:32:58+00:00",
+ "sha256": "108b1fa552ec8884bf088d25f9b1bed88030670114a4b87b23b24feda218e11d"
+}
