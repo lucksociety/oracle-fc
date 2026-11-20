@@ -1,0 +1,681 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-11-16",
+ "input_fingerprint": "1a5eec66babfc36f6823f38be831e87d5b4ff7b787f439bd8e754b510044e7e5",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-11-20T11:54:52+00:00",
+ "fixture": {
+  "event_id": "POLY-1373193",
+  "home_name": "CA Rosario Central",
+  "away_name": "CA Gimnasia y Esgrima de Mendoza",
+  "competition": "Liga Profesional de F\u00fatbol",
+  "subcategory": "arg",
+  "kickoff_utc": "2026-11-22T19:00:00+00:00",
+  "kickoff_local": "2026-11-22 14:00 EST",
+  "home_matched": "Rosario Central",
+  "away_matched": "Gimnasia Mendoza",
+  "match_methods": {
+   "home": {
+    "source": "CA Rosario Central",
+    "matched": "Rosario Central",
+    "method": "core-tokens",
+    "score": 0.97
+   },
+   "away": {
+    "source": "CA Gimnasia y Esgrima de Mendoza",
+    "matched": "Gimnasia Mendoza",
+    "method": "alias",
+    "score": 1.0
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.5793577642528595,
+  "p_draw": 0.25926141483382376,
+  "p_away": 0.16138082091331665,
+  "xg_home": 1.6435416039746928,
+  "xg_away": 0.7608541027357526,
+  "xg_total": 2.4043957067104453,
+  "median_total": 2,
+  "modal_score": {
+   "home": 1,
+   "away": 0,
+   "p": 0.14377067708291305
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.14377067708291305
+   },
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.12297173272483083
+   },
+   {
+    "home": 2,
+    "away": 0,
+    "p": 0.1215106107600664
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.09483502736089407
+   },
+   {
+    "home": 0,
+    "away": 0,
+    "p": 0.09318474623144014
+   }
+  ],
+  "btts": 0.44308873497575624,
+  "totals_over": {
+   "over_0.5": 0.9068152537685599,
+   "over_1.5": 0.6999243345594665,
+   "over_2.5": 0.4310375068216736,
+   "over_3.5": 0.22186514976574653,
+   "over_4.5": 0.09457392913287092,
+   "over_5.5": 0.034920834525601456,
+   "over_6.5": 0.011093667910302014
+  },
+  "total_buckets": {
+   "0-1": 0.30007566544053343,
+   "2": 0.26888682773779293,
+   "3": 0.20917235705592702,
+   "4": 0.1272912206328756,
+   "5+": 0.09457392913287092
+  },
+  "clean_sheet_home": 0.46222252065464625,
+  "clean_sheet_away": 0.18787349060103756,
+  "home_goal_dist": [
+   0.18787349060103756,
+   0.3217669779619684,
+   0.26455005328873454,
+   0.14329441850447078,
+   0.05774928683300335,
+   0.018487979941763145,
+   0.004904190246327768,
+   0.0013736026226944308
+  ],
+  "away_goal_dist": [
+   0.46222252065464625,
+   0.3625410485659638,
+   0.1353918159104221,
+   0.03293810907359009,
+   0.005942192375612649,
+   0.0008518582582160606,
+   0.00010121454150326195,
+   1.1240620045709178e-05
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    3
+   ],
+   "away_goals_80": [
+    0,
+    2
+   ],
+   "total_goals_80": [
+    1,
+    4
+   ],
+   "goal_diff_80": [
+    -1,
+    3
+   ]
+  },
+  "score_grid": [
+   [
+    0.093185,
+    0.06312,
+    0.024404,
+    0.005927,
+    0.001066,
+    0.000152,
+    1.8e-05
+   ],
+   [
+    0.143771,
+    0.122972,
+    0.042479,
+    0.010369,
+    0.001874,
+    0.000268,
+    3.2e-05
+   ],
+   [
+    0.121511,
+    0.094835,
+    0.037621,
+    0.008738,
+    0.001587,
+    0.000228,
+    2.7e-05
+   ],
+   [
+    0.065932,
+    0.051727,
+    0.019528,
+    0.005085,
+    0.000878,
+    0.000127,
+    1.5e-05
+   ],
+   [
+    0.026509,
+    0.020905,
+    0.007931,
+    0.001965,
+    0.00038,
+    5.2e-05,
+    6e-06
+   ],
+   [
+    0.008457,
+    0.006703,
+    0.002555,
+    0.000636,
+    0.000117,
+    1.8e-05,
+    2e-06
+   ],
+   [
+    0.002235,
+    0.00178,
+    0.000682,
+    0.00017,
+    3.1e-05,
+    5e-06,
+    1e-06
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.58238,
+  "p_draw": 0.25777,
+  "p_away": 0.15985,
+  "se": [
+   0.0011027545864787868,
+   0.000978071130082061,
+   0.0008194448654424531
+  ],
+  "max_abs_dev_vs_exact": 0.003022235747140556,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   1.2118587293046583,
+   2.1208563784184093
+  ],
+  "xg_away_80": [
+   0.526347374267632,
+   1.0199361016612676
+  ],
+  "p_home_80": [
+   0.4523920825754542,
+   0.6981023626091806
+  ],
+  "p_draw_80": [
+   0.1981180416770195,
+   0.31112393698802987
+  ],
+  "p_away_80": [
+   0.09798980688150713,
+   0.24835312306899177
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.22188882495745213,
+   0.2455078860730884
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.5547772903470927,
+   "p_draw": 0.2673016363708152,
+   "p_away": 0.17792107328209203,
+   "xg_home": 1.5358913193042014,
+   "xg_away": 0.7530440314049841,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.5614249219440353,
+   "p_draw": 0.2628283514975095,
+   "p_away": 0.1757467265584551,
+   "xg_home": 1.4903023555198966,
+   "xg_away": 0.7027232641061875,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.589250190092669,
+   "p_draw": 0.25434972163762415,
+   "p_away": 0.15640008826970705,
+   "xg_home": 1.6597927931057916,
+   "xg_away": 0.7339329173193646,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.4140461740828745,
+   "p_draw": 0.3002884062657176,
+   "p_away": 0.2856654196514077,
+   "xg_home": 1.1517686753786656,
+   "xg_away": 0.9031656991396574,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.5888942961774806,
+   "p_draw": 0.24348514792779133,
+   "p_away": 0.1676205558947279,
+   "xg_home": 1.7321725805785342,
+   "xg_away": 0.8088860979745245,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Gimnasia Mendoza attack vs Rosario Central defence: rate multiplier \u00d70.62 for the away side.",
+   "effect": 0.4702
+  },
+  {
+   "text": "Independent results-only Elo: Rosario Central 1665 vs Gimnasia Mendoza 1506 (gap +159 before home advantage).",
+   "effect": 0.238
+  },
+  {
+   "text": "Home advantage (Argentina, fitted from results): \u00d71.24 on Rosario Central's scoring rate.",
+   "effect": 0.2142
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.5793577642528595,
+  "p_draw": 0.25926141483382376,
+  "p_away": 0.16138082091331665,
+  "xg_home": 1.6435416039746928,
+  "xg_away": 0.7608541027357526
+ },
+ "context": {
+  "fetched_at": "2026-11-20T11:54:52+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/1000023195",
+    "fetched_at": "2026-11-20T11:54:52+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "projected",
+    "source": "FotMob \u2014 XI from the side's last match on 2026-11-07 (none published for this match yet)",
+    "formation": "4-2-3-1",
+    "starters": [
+     {
+      "name": "Jerem\u00edas Ledesma",
+      "pos": "G",
+      "shirt": "23"
+     },
+     {
+      "name": "Emanuel Coronel",
+      "pos": "D",
+      "shirt": "32"
+     },
+     {
+      "name": "Ignacio Ovando",
+      "pos": "D",
+      "shirt": "46"
+     },
+     {
+      "name": "Gast\u00f3n \u00c1vila",
+      "pos": "D",
+      "shirt": "13"
+     },
+     {
+      "name": "Agust\u00edn S\u00e1ndez",
+      "pos": "D",
+      "shirt": "3"
+     },
+     {
+      "name": "Franco Ibarra",
+      "pos": "M",
+      "shirt": "5"
+     },
+     {
+      "name": "Vicente Pizarro",
+      "pos": "M",
+      "shirt": "20"
+     },
+     {
+      "name": "Juli\u00e1n Fern\u00e1ndez",
+      "pos": "F",
+      "shirt": "18"
+     },
+     {
+      "name": "Alan Rodr\u00edguez",
+      "pos": "M",
+      "shirt": "88"
+     },
+     {
+      "name": "J\u00e1minton Campaz",
+      "pos": "F",
+      "shirt": "8"
+     },
+     {
+      "name": "Enzo Copetti",
+      "pos": "F",
+      "shirt": "22"
+     }
+    ],
+    "fetched_at": "2026-11-20T11:54:52+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   },
+   "away": {
+    "status": "projected",
+    "source": "FotMob \u2014 XI from the side's last match on 2026-11-07 (none published for this match yet)",
+    "formation": "5-3-2",
+    "starters": [
+     {
+      "name": "C\u00e9sar Rigamonti",
+      "pos": "G",
+      "shirt": "23"
+     },
+     {
+      "name": "Lautaro Carrera",
+      "pos": "D",
+      "shirt": "42"
+     },
+     {
+      "name": "Ezequiel Mu\u00f1oz",
+      "pos": "D",
+      "shirt": "4"
+     },
+     {
+      "name": "Germ\u00e1n Guiffrey",
+      "pos": "D",
+      "shirt": "16"
+     },
+     {
+      "name": "Luciano Paredes",
+      "pos": "D",
+      "shirt": "32"
+     },
+     {
+      "name": "Mat\u00edas Recalde",
+      "pos": "D",
+      "shirt": "3"
+     },
+     {
+      "name": "Esteban Fern\u00e1ndez",
+      "pos": "M",
+      "shirt": "30"
+     },
+     {
+      "name": "Ferm\u00edn Antonini",
+      "pos": "M",
+      "shirt": "21"
+     },
+     {
+      "name": "Facundo Lencioni",
+      "pos": "M",
+      "shirt": "26"
+     },
+     {
+      "name": "Ignacio Sabatini",
+      "pos": "F",
+      "shirt": "17"
+     },
+     {
+      "name": "Agust\u00edn M\u00f3dica",
+      "pos": "F",
+      "shirt": "9"
+     }
+    ],
+    "fetched_at": "2026-11-20T11:54:52+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Gast\u00f3n \u00c1vila",
+     "type": "suspension",
+     "expected_return": null,
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/1000023195",
+     "fetched_at": "2026-11-20T11:54:52+00:00"
+    },
+    {
+     "player": "\u00c1ngel Di Mar\u00eda",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/1000023195",
+     "fetched_at": "2026-11-20T11:54:52+00:00"
+    },
+    {
+     "player": "Giovanni Cantizano",
+     "type": "injury",
+     "expected_return": "Early December 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/1000023195",
+     "fetched_at": "2026-11-20T11:54:52+00:00"
+    },
+    {
+     "player": "Federico Navarro",
+     "type": "injury",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/1000023195",
+     "fetched_at": "2026-11-20T11:54:52+00:00"
+    },
+    {
+     "player": "Gaspar Duarte",
+     "type": "injury",
+     "expected_return": "Out for season",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/1000023195",
+     "fetched_at": "2026-11-20T11:54:52+00:00"
+    },
+    {
+     "player": "Pol Fern\u00e1ndez",
+     "type": "injury",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/1000023195",
+     "fetched_at": "2026-11-20T11:54:52+00:00"
+    },
+    {
+     "player": "Kevin Guti\u00e9rrez",
+     "type": "injury",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/1000023195",
+     "fetched_at": "2026-11-20T11:54:52+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "Lautaro Petruchi",
+     "type": "suspension",
+     "expected_return": null,
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/1000023195",
+     "fetched_at": "2026-11-20T11:54:52+00:00"
+    },
+    {
+     "player": "Luciano Cingolani",
+     "type": "suspension",
+     "expected_return": null,
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/1000023195",
+     "fetched_at": "2026-11-20T11:54:52+00:00"
+    },
+    {
+     "player": "Franco Saavedra",
+     "type": "injury",
+     "expected_return": "Out for season",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/1000023195",
+     "fetched_at": "2026-11-20T11:54:52+00:00"
+    },
+    {
+     "player": "Imanol Gonz\u00e1lez",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/1000023195",
+     "fetched_at": "2026-11-20T11:54:52+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 15,
+    "n21": 1,
+    "last_match": "2026-11-07"
+   },
+   "away": {
+    "rest_days": 15,
+    "n21": 2,
+    "last_match": "2026-11-07"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 764.4
+  },
+  "venue": {
+   "name": "Estadio Gigante de Arroyito",
+   "city": "Rosario, Provincia de Santa Fe",
+   "lat": -32.913990521,
+   "lon": -60.674561262
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 2.165,
+   "temp_c": 25.5,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=-32.914&longitude=-60.675",
+   "fetched_at": "2026-11-20T11:54:52+00:00",
+   "lat": -32.913990521,
+   "lon": -60.674561262
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": 1.51,
+    "d_p_draw_pp": -1.06,
+    "d_p_away_pp": -0.45,
+    "d_xg_home": 0.128,
+    "d_xg_away": 0.054
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0338,
+    "away_rate_mult": 1.0141,
+    "d_p_home_pp": 1.05,
+    "d_p_draw_pp": -0.68,
+    "d_p_away_pp": -0.37,
+    "d_xg_home": 0.054,
+    "d_xg_away": 0.011,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0093,
+    "away_rate_mult": 1.0093,
+    "d_p_home_pp": 0.19,
+    "d_p_draw_pp": -0.18,
+    "d_p_away_pp": -0.01,
+    "d_xg_home": 0.015,
+    "d_xg_away": 0.007,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "reason": "failed validation; no live features"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 15.0,
+   "rest_a": 15.0,
+   "n21_h": 1.0,
+   "n21_a": 2.0,
+   "travel_km": 764.3609343826171,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 2.165,
+   "temp_c": 25.5
+  }
+ },
+ "lineup_simulation": {
+  "applied": false,
+  "basis": {
+   "home": "projected",
+   "away": "projected"
+  },
+  "reason": "No player ratings exist for this league, so the lineup and formation are shown but cannot change the probabilities."
+ },
+ "confidence": {
+  "tier": "MODERATE",
+  "p_max": 0.5793577642528595,
+  "entropy_nats": 0.960572292338598,
+  "text": "Most likely result has P = 57.9%. In the out-of-sample backtest, favourites priced 0.50\u20130.60 won 53.9% \u00b1 0.5% (n=9522, mean forecast 54.4%). Backtest RPS for ARG: 0.2132; exact-score top-5 hit rate 61.6% (n=1841). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: MODERATE (entropy 0.961 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Rosario Central: lineup is PROJECTED (FotMob \u2014 XI from the side's last match on 2026-11-07 (none published for this match yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Rosario Central: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.",
+  "Gimnasia Mendoza: lineup is PROJECTED (FotMob \u2014 XI from the side's last match on 2026-11-07 (none published for this match yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Gimnasia Mendoza: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+ ],
+ "verdict": "Rosario Central 1\u20130 Gimnasia Mendoza is the single most probable scoreline at 14.4%: expected goals 1.64\u20130.76 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.043). Exact scores are inherently uncertain; the 1X2 split is 57.9%/25.9%/16.1%.",
+ "resolved": {
+  "home_key": "Argentina:Rosario Central",
+  "away_key": "Argentina:Gimnasia Mendoza",
+  "div": "ARG",
+  "home_div": "ARG",
+  "away_div": "ARG",
+  "country": "Argentina"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: CA Gimnasia y Esgrima de Mendoza at CA Rosario Central\nCompetition: Liga Profesional de F\u00fatbol\nDate: 2026-11-22 14:00 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-11-16\n\nPRIMARY FINAL SCORE PREDICTION\n\nCA Rosario Central 1 \u2013 0 CA Gimnasia y Esgrima de Mendoza\n(modal exact score, probability 14.4%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.64\nAway: 0.76\nExpected Total: 2.40\nMedian Total: 2\n\nRESULT PROBABILITIES\n\nHome Win: 57.9%\nDraw: 25.9%\nAway Win: 16.1%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20130: 14.4%\n2. 1\u20131: 12.3%\n3. 2\u20130: 12.2%\n4. 2\u20131: 9.5%\n5. 0\u20130: 9.3%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 30.0%\nTotal 2 goals: 26.9%\nTotal 3 goals: 20.9%\nTotal 4 goals: 12.7%\nTotal 5+ goals: 9.5%\n\nBoth Teams Score: 44.3%\nClean sheet CA Rosario Central: 46.2% \u00b7 Clean sheet CA Gimnasia y Esgrima de Mendoza: 18.8%\n\nMATCH INTELLIGENCE\n\n1. Gimnasia Mendoza attack vs Rosario Central defence: rate multiplier \u00d70.62 for the away side.\n2. Independent results-only Elo: Rosario Central 1665 vs Gimnasia Mendoza 1506 (gap +159 before home advantage).\n3. Home advantage (Argentina, fitted from results): \u00d71.24 on Rosario Central's scoring rate.\n\nMODEL CONFIDENCE\n\nMost likely result has P = 57.9%. In the out-of-sample backtest, favourites priced 0.50\u20130.60 won 53.9% \u00b1 0.5% (n=9522, mean forecast 54.4%). Backtest RPS for ARG: 0.2132; exact-score top-5 hit rate 61.6% (n=1841). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: MODERATE (entropy 0.961 nats of max 1.099).\nParameter-uncertainty 80% bands: xG CA Rosario Central 1.21\u20132.12, xG CA Gimnasia y Esgrima de Mendoza 0.53\u20131.02; P(home win) 45.2%\u201369.8%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0030 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nRosario Central: PROJECTED \u2014 FotMob \u2014 XI from the side's last match on 2026-11-07 (none published for this match yet), fetched 2026-11-20 06:54 EST (4-2-3-1)\n  Jerem\u00edas Ledesma (G), Emanuel Coronel (D), Ignacio Ovando (D), Gast\u00f3n \u00c1vila (D), Agust\u00edn S\u00e1ndez (D), Franco Ibarra (M), Vicente Pizarro (M), Juli\u00e1n Fern\u00e1ndez (F), Alan Rodr\u00edguez (M), J\u00e1minton Campaz (F), Enzo Copetti (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\nGimnasia Mendoza: PROJECTED \u2014 FotMob \u2014 XI from the side's last match on 2026-11-07 (none published for this match yet), fetched 2026-11-20 06:54 EST (5-3-2)\n  C\u00e9sar Rigamonti (G), Lautaro Carrera (D), Ezequiel Mu\u00f1oz (D), Germ\u00e1n Guiffrey (D), Luciano Paredes (D), Mat\u00edas Recalde (D), Esteban Fern\u00e1ndez (M), Ferm\u00edn Antonini (M), Facundo Lencioni (M), Ignacio Sabatini (F), Agust\u00edn M\u00f3dica (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nKEY ABSENCES\n\n- Rosario Central: Gast\u00f3n \u00c1vila \u2014 suspension, return unknown [FotMob, 2026-11-20 06:54 EST]\n- Rosario Central: \u00c1ngel Di Mar\u00eda \u2014 injury, Doubtful [FotMob, 2026-11-20 06:54 EST]\n- Rosario Central: Giovanni Cantizano \u2014 injury, Early December 2026 [FotMob, 2026-11-20 06:54 EST]\n- Rosario Central: Federico Navarro \u2014 injury, Mid November 2026 [FotMob, 2026-11-20 06:54 EST]\n- Rosario Central: Gaspar Duarte \u2014 injury, Out for season [FotMob, 2026-11-20 06:54 EST]\n- Rosario Central: Pol Fern\u00e1ndez \u2014 injury, Mid November 2026 [FotMob, 2026-11-20 06:54 EST]\n- Rosario Central: Kevin Guti\u00e9rrez \u2014 injury, Mid November 2026 [FotMob, 2026-11-20 06:54 EST]\n- Gimnasia Mendoza: Lautaro Petruchi \u2014 suspension, return unknown [FotMob, 2026-11-20 06:54 EST]\n- Gimnasia Mendoza: Luciano Cingolani \u2014 suspension, return unknown [FotMob, 2026-11-20 06:54 EST]\n- Gimnasia Mendoza: Franco Saavedra \u2014 injury, Out for season [FotMob, 2026-11-20 06:54 EST]\n- Gimnasia Mendoza: Imanol Gonz\u00e1lez \u2014 injury, Late November 2026 [FotMob, 2026-11-20 06:54 EST]\n\nWEATHER AT VENUE\n\nEstadio Gigante de Arroyito, Rosario, Provincia de Santa Fe: 25.5 \u00b0C, wind 2.2 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-11-20 06:54 EST]\n\nREST & TRAVEL\n\nRosario Central: 15 days' rest, 1 matches in previous 21 days \u00b7 Gimnasia Mendoza: 15 days' rest, 2 in 21 days \u00b7 away travel 764.4 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 57.9% / 25.9% / 16.1%, xG 1.64\u20130.76\n- Understat xG component (validated, in ensemble): home +1.51 pp, draw -1.06 pp, away -0.45 pp; xG +0.128 / +0.054\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +1.05 pp, draw -0.68 pp, away -0.37 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.19 pp, draw -0.18 pp, away -0.01 pp\n- lineup: not applied (failed validation; no live features)\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Rosario Central: lineup is PROJECTED (FotMob \u2014 XI from the side's last match on 2026-11-07 (none published for this match yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Rosario Central: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n- Gimnasia Mendoza: lineup is PROJECTED (FotMob \u2014 XI from the side's last match on 2026-11-07 (none published for this match yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Gimnasia Mendoza: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nFINAL VERDICT\n\nRosario Central 1\u20130 Gimnasia Mendoza is the single most probable scoreline at 14.4%: expected goals 1.64\u20130.76 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.043). Exact scores are inherently uncertain; the 1X2 split is 57.9%/25.9%/16.1%.\n",
+ "refresh_id": "3346902c41e044389023640377ae81f5",
+ "frozen_at": "2026-11-20T11:54:52+00:00",
+ "sha256": "d510e9e228c3af03a86a57d9c6def2224831719f6f561c1c48cef914526dd6ef"
+}
