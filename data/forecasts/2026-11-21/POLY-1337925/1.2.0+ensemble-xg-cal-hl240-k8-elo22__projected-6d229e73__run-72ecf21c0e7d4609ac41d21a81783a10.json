@@ -1,0 +1,833 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-11-20",
+ "input_fingerprint": "089f9cc4fd25f92ec445dbe63bd24c6d3710901e9f1c4bbab00c2c81fa97224f",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-11-20T15:01:51+00:00",
+ "fixture": {
+  "event_id": "POLY-1337925",
+  "home_name": "AFC Bournemouth",
+  "away_name": "Nottingham Forest FC",
+  "competition": "Premier League",
+  "subcategory": "epl",
+  "kickoff_utc": "2026-11-21T15:00:00+00:00",
+  "kickoff_local": "2026-11-21 10:00 EST",
+  "home_matched": "Bournemouth",
+  "away_matched": "Nott'm Forest",
+  "match_methods": {
+   "home": {
+    "source": "AFC Bournemouth",
+    "matched": "Bournemouth",
+    "method": "core-tokens",
+    "score": 0.97
+   },
+   "away": {
+    "source": "Nottingham Forest FC",
+    "matched": "Nott'm Forest",
+    "method": "alias",
+    "score": 1.0
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.5123232062966177,
+  "p_draw": 0.24990894121185472,
+  "p_away": 0.2377678524915276,
+  "xg_home": 1.7805691078362833,
+  "xg_away": 1.1621135100838786,
+  "xg_total": 2.9426826179201617,
+  "median_total": 3,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.11942118461575474
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.11942118461575474
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.09995182991548336
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.08862529665038074
+   },
+   {
+    "home": 2,
+    "away": 0,
+    "p": 0.08260647953860521
+   },
+   {
+    "home": 1,
+    "away": 2,
+    "p": 0.06392261702740892
+   }
+  ],
+  "btts": 0.588205758424556,
+  "totals_over": {
+   "over_0.5": 0.9460411223869497,
+   "over_1.5": 0.8015529115490526,
+   "over_2.5": 0.5657140503321663,
+   "over_3.5": 0.3404358570910622,
+   "over_4.5": 0.1716091906168456,
+   "over_5.5": 0.07535925342370035,
+   "over_6.5": 0.028457305221454
+  },
+  "total_buckets": {
+   "0-1": 0.1984470884509475,
+   "2": 0.23583886121688635,
+   "3": 0.22527819324110396,
+   "4": 0.16882666647421665,
+   "5+": 0.1716091906168456
+  },
+  "clean_sheet_home": 0.30491818880095467,
+  "clean_sheet_away": 0.16083493038753965,
+  "home_goal_dist": [
+   0.16083493038753965,
+   0.30449953929741413,
+   0.2732150412649235,
+   0.15981709189240106,
+   0.06920378633609728,
+   0.023710777971164665,
+   0.006702103524764043,
+   0.0020167293256956455
+  ],
+  "away_goal_dist": [
+   0.30491818880095467,
+   0.3717316083893569,
+   0.21483912556324491,
+   0.08042489891322645,
+   0.02220713550354437,
+   0.00485054672354065,
+   0.0008744404631258364,
+   0.0001540556430062037
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    4
+   ],
+   "away_goals_80": [
+    0,
+    3
+   ],
+   "total_goals_80": [
+    1,
+    5
+   ],
+   "goal_diff_80": [
+    -1,
+    3
+   ]
+  },
+  "score_grid": [
+   [
+    0.053959,
+    0.055863,
+    0.033811,
+    0.012732,
+    0.003532,
+    0.000773,
+    0.00014
+   ],
+   [
+    0.088625,
+    0.119421,
+    0.063923,
+    0.024076,
+    0.006681,
+    0.001463,
+    0.000264
+   ],
+   [
+    0.082606,
+    0.099952,
+    0.061175,
+    0.021819,
+    0.006056,
+    0.001326,
+    0.000239
+   ],
+   [
+    0.048672,
+    0.058903,
+    0.034138,
+    0.013586,
+    0.003571,
+    0.000782,
+    0.000141
+   ],
+   [
+    0.021141,
+    0.025589,
+    0.014833,
+    0.00559,
+    0.001639,
+    0.00034,
+    6.1e-05
+   ],
+   [
+    0.007249,
+    0.008776,
+    0.005088,
+    0.001917,
+    0.000532,
+    0.000123,
+    2.1e-05
+   ],
+   [
+    0.002049,
+    0.002481,
+    0.001439,
+    0.000542,
+    0.000151,
+    3.3e-05,
+    6e-06
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.513435,
+  "p_draw": 0.24920499999999998,
+  "p_away": 0.23736000000000002,
+  "se": [
+   0.0011176303073355696,
+   0.0009672173178117728,
+   0.0009513680423474399
+  ],
+  "max_abs_dev_vs_exact": 0.0011117937033823244,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   1.3633365524576144,
+   2.236632166988887
+  ],
+  "xg_away_80": [
+   0.8609076295241261,
+   1.4867856917888074
+  ],
+  "p_home_80": [
+   0.3968295401842229,
+   0.6346071299966369
+  ],
+  "p_draw_80": [
+   0.2035584423599987,
+   0.27600554721077414
+  ],
+  "p_away_80": [
+   0.1579845066410003,
+   0.3388402710169237
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.1962657475378577,
+   0.2027737924900681
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.4751549126222152,
+   "p_draw": 0.2627452054800023,
+   "p_away": 0.2620998818977823,
+   "xg_home": 1.5602744131205966,
+   "xg_away": 1.0970702293423786,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.5189921845072503,
+   "p_draw": 0.2344665010637786,
+   "p_away": 0.2465413144289712,
+   "xg_home": 1.764112367928701,
+   "xg_away": 1.1438438972896399,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.4289493144230564,
+   "p_draw": 0.2784426339396863,
+   "p_away": 0.2926080516372572,
+   "xg_home": 1.4174743362111892,
+   "xg_away": 1.1281287438294005,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.42222412904420675,
+   "p_draw": 0.2499474388561885,
+   "p_away": 0.3278284320996049,
+   "xg_home": 1.5173274019126641,
+   "xg_away": 1.3079985715500384,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.5081604157531359,
+   "p_draw": 0.24506510739116905,
+   "p_away": 0.2467744768556953,
+   "xg_home": 1.7456845467760775,
+   "xg_away": 1.1522662193890405,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Home advantage (England, fitted from results): \u00d71.23 on Bournemouth's scoring rate.",
+   "effect": 0.2069
+  },
+  {
+   "text": "Independent results-only Elo: Bournemouth 1766 vs Nott'm Forest 1675 (gap +90 before home advantage).",
+   "effect": 0.1352
+  },
+  {
+   "text": "Nott'm Forest attack vs Bournemouth defence: rate multiplier \u00d70.91 for the away side.",
+   "effect": 0.0937
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.5123232062966175,
+  "p_draw": 0.2499089412118547,
+  "p_away": 0.23776785249152754,
+  "xg_home": 1.780569107836283,
+  "xg_away": 1.1621135100838786
+ },
+ "context": {
+  "fetched_at": "2026-11-20T15:01:51+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5795515",
+    "fetched_at": "2026-11-20T15:01:51+00:00"
+   },
+   {
+    "name": "Fantasy Premier League availability",
+    "url": "https://fantasy.premierleague.com/api/bootstrap-static/",
+    "fetched_at": "2026-11-20T15:01:51+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "projected",
+    "source": "FotMob projected XI (enetpulse)",
+    "formation": "4-2-3-1",
+    "starters": [
+     {
+      "name": "Djordje Petrovi\u0107",
+      "pos": "G",
+      "shirt": "1"
+     },
+     {
+      "name": "Adam Smith",
+      "pos": "D",
+      "shirt": "15"
+     },
+     {
+      "name": "James Hill",
+      "pos": "D",
+      "shirt": "5"
+     },
+     {
+      "name": "Ant\u00f3nio Silva",
+      "pos": "D",
+      "shirt": "14"
+     },
+     {
+      "name": "Adrien Truffert",
+      "pos": "D",
+      "shirt": "3"
+     },
+     {
+      "name": "Tyler Adams",
+      "pos": "M",
+      "shirt": "12"
+     },
+     {
+      "name": "Ryan Christie",
+      "pos": "M",
+      "shirt": "10"
+     },
+     {
+      "name": "Rayan",
+      "pos": "F",
+      "shirt": "37"
+     },
+     {
+      "name": "Justin Kluivert",
+      "pos": "M",
+      "shirt": "19"
+     },
+     {
+      "name": "Marcus Tavernier",
+      "pos": "F",
+      "shirt": "16"
+     },
+     {
+      "name": "Evanilson",
+      "pos": "F",
+      "shirt": "9"
+     }
+    ],
+    "fetched_at": "2026-11-20T15:01:51+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [],
+    "mean_xi_attack_index": 0.034,
+    "mean_continuity": -0.411,
+    "p_backup_gk": 0.0
+   },
+   "away": {
+    "status": "projected",
+    "source": "FotMob projected XI (enetpulse)",
+    "formation": "3-4-2-1",
+    "starters": [
+     {
+      "name": "Matz Sels",
+      "pos": "G",
+      "shirt": "26"
+     },
+     {
+      "name": "Jair Cunha",
+      "pos": "D",
+      "shirt": "23"
+     },
+     {
+      "name": "Nikola Milenkovi\u0107",
+      "pos": "D",
+      "shirt": "31"
+     },
+     {
+      "name": "Murillo",
+      "pos": "D",
+      "shirt": "5"
+     },
+     {
+      "name": "Daniel Mu\u00f1oz",
+      "pos": "M",
+      "shirt": "27"
+     },
+     {
+      "name": "Ryan Yates",
+      "pos": "M",
+      "shirt": "22"
+     },
+     {
+      "name": "Ibrahim Sangar\u00e9",
+      "pos": "M",
+      "shirt": "6"
+     },
+     {
+      "name": "Luca Netz",
+      "pos": "M",
+      "shirt": "25"
+     },
+     {
+      "name": "James McAtee",
+      "pos": "M",
+      "shirt": "24"
+     },
+     {
+      "name": "Morgan Gibbs-White",
+      "pos": "M",
+      "shirt": "10"
+     },
+     {
+      "name": "Liam Delap",
+      "pos": "F",
+      "shirt": "19"
+     }
+    ],
+    "fetched_at": "2026-11-20T15:01:51+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [],
+    "mean_xi_attack_index": -0.107,
+    "mean_continuity": -1.083,
+    "p_backup_gk": 0.0
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Juanlu S\u00e1nchez",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795515",
+     "fetched_at": "2026-11-20T15:01:51+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Ankle injury - Unknown return date",
+     "fpl_news_added": "2026-11-05T21:30:08.441541Z"
+    },
+    {
+     "player": "Juli\u00e1n Araujo",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795515",
+     "fetched_at": "2026-11-20T15:01:51+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Thigh injury - Unknown return date",
+     "fpl_news_added": "2026-08-09T08:00:05.645826Z"
+    },
+    {
+     "player": "Alex T\u00f3th",
+     "type": "injury",
+     "expected_return": "Early February 2027",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795515",
+     "fetched_at": "2026-11-20T15:01:51+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Hamstring injury - Unknown return date",
+     "fpl_news_added": "2026-10-23T11:30:09.133819Z"
+    },
+    {
+     "player": "Veljko Milosavljevic",
+     "type": "injured",
+     "expected_return": "Thigh injury - Expected back 31 Oct",
+     "chance_of_playing": 0,
+     "source": "FPL",
+     "source_url": "https://fantasy.premierleague.com/api/bootstrap-static/",
+     "fetched_at": "2026-08-06T10:00:10.456051Z"
+    }
+   ],
+   "away": [
+    {
+     "player": "Xaver Schlager",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795515",
+     "fetched_at": "2026-11-20T15:01:51+00:00",
+     "chance_of_playing": 75,
+     "fpl_status": "doubtful",
+     "fpl_news": "Thigh injury - 75% chance of playing",
+     "fpl_news_added": "2026-11-15T17:00:06.045512Z"
+    },
+    {
+     "player": "Neco Williams",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795515",
+     "fetched_at": "2026-11-20T15:01:51+00:00",
+     "chance_of_playing": 75,
+     "fpl_status": "doubtful",
+     "fpl_news": "Ankle injury - 75% chance of playing",
+     "fpl_news_added": "2026-11-16T19:00:05.480350Z"
+    },
+    {
+     "player": "Nicol\u00f2 Savona",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795515",
+     "fetched_at": "2026-11-20T15:01:51+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Knee injury - Unknown return date",
+     "fpl_news_added": "2026-07-23T12:01:23.816304Z"
+    },
+    {
+     "player": "Nicol\u00e1s Dom\u00ednguez",
+     "type": "injury",
+     "expected_return": "Late December 2026",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795515",
+     "fetched_at": "2026-11-20T15:01:51+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Muscular injury - Expected back 30 Dec",
+     "fpl_news_added": "2026-10-24T13:00:08.751863Z"
+    },
+    {
+     "player": "Callum Hudson-Odoi",
+     "type": "injury",
+     "expected_return": "Mid December 2026",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795515",
+     "fetched_at": "2026-11-20T15:01:51+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Unspecified injury - Unknown return date",
+     "fpl_news_added": "2026-11-19T15:30:05.816247Z"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 13,
+    "n21": 2,
+    "last_match": "2026-11-08"
+   },
+   "away": {
+    "rest_days": 14,
+    "n21": 2,
+    "last_match": "2026-11-07"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 249.9
+  },
+  "venue": {
+   "name": "Vitality Stadium",
+   "city": "Bournemouth, Dorset",
+   "lat": 50.735240532,
+   "lon": -1.838309616
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 2.9000000000000004,
+   "temp_c": 11.0,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=50.735&longitude=-1.838",
+   "fetched_at": "2026-11-20T15:01:51+00:00",
+   "lat": 50.735240532,
+   "lon": -1.838309616
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": -0.32,
+    "d_p_draw_pp": 0.41,
+    "d_p_away_pp": -0.09,
+    "d_xg_home": 0.002,
+    "d_xg_away": 0.007
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0195,
+    "away_rate_mult": 1.0082,
+    "d_p_home_pp": 0.58,
+    "d_p_draw_pp": -0.3,
+    "d_p_away_pp": -0.28,
+    "d_xg_home": 0.033,
+    "d_xg_away": 0.009,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "home_rate_mult": 1.0177,
+    "away_rate_mult": 0.9515,
+    "d_p_home_pp": 1.98,
+    "d_p_draw_pp": -0.31,
+    "d_p_away_pp": -1.67,
+    "d_xg_home": 0.03,
+    "d_xg_away": -0.054,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 13.0,
+   "rest_a": 14.0,
+   "n21_h": 2.0,
+   "n21_a": 2.0,
+   "travel_km": 249.89007443876451,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 2.9000000000000004,
+   "temp_c": 11.0
+  }
+ },
+ "lineup_simulation": {
+  "applied": true,
+  "validated": false,
+  "scale": 0.5,
+  "basis": {
+   "home": "projected",
+   "away": "projected"
+  },
+  "home_rate_mult": 1.0088,
+  "away_rate_mult": 0.9755,
+  "note": "Starting-XI strength, continuity and backup-keeper adjustment at half the fitted size. It did not pass the out-of-sample test, so bets are not priced from it.",
+  "p_home": 0.5222957903927649,
+  "p_draw": 0.2484548157121861,
+  "p_away": 0.22924939389504911,
+  "xg_home": 1.7954407653079423,
+  "xg_away": 1.1348110042187756,
+  "xg_total": 2.930251769526718,
+  "btts": 0.5824494119693103,
+  "totals_over": {
+   "over_0.5": 0.9453476511207142,
+   "over_1.5": 0.7996023785134431,
+   "over_2.5": 0.5628418404186424,
+   "over_3.5": 0.3376031462003423,
+   "over_4.5": 0.169586499636656,
+   "over_5.5": 0.07418366656473656,
+   "over_6.5": 0.027908835312389874
+  },
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.11901523409675856
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.11901523409675856
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.10048679272107872
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.0905495556834254
+   },
+   {
+    "home": 2,
+    "away": 0,
+    "p": 0.08514964809123253
+   },
+   {
+    "home": 1,
+    "away": 2,
+    "p": 0.062151221564493236
+   }
+  ],
+  "score_grid": [
+   [
+    0.054652,
+    0.055196,
+    0.032596,
+    0.011978,
+    0.003244,
+    0.000693,
+    0.000122
+   ],
+   [
+    0.09055,
+    0.119015,
+    0.062151,
+    0.022842,
+    0.006186,
+    0.001322,
+    0.000233
+   ],
+   [
+    0.08515,
+    0.100487,
+    0.059996,
+    0.020878,
+    0.005655,
+    0.001209,
+    0.000213
+   ],
+   [
+    0.050622,
+    0.059746,
+    0.033776,
+    0.013113,
+    0.003363,
+    0.000719,
+    0.000127
+   ],
+   [
+    0.022189,
+    0.02619,
+    0.014807,
+    0.005443,
+    0.001557,
+    0.000315,
+    5.6e-05
+   ],
+   [
+    0.007679,
+    0.009064,
+    0.005125,
+    0.001884,
+    0.00051,
+    0.000115,
+    1.9e-05
+   ],
+   [
+    0.002191,
+    0.002587,
+    0.001462,
+    0.000538,
+    0.000146,
+    3.1e-05,
+    6e-06
+   ]
+  ]
+ },
+ "confidence": {
+  "tier": "MODERATE",
+  "p_max": 0.5123232062966177,
+  "entropy_nats": 1.0307240750716993,
+  "text": "Most likely result has P = 51.2%. In the out-of-sample backtest, favourites priced 0.50\u20130.60 won 53.9% \u00b1 0.5% (n=9522, mean forecast 54.4%). Backtest RPS for E0: 0.2018; exact-score top-5 hit rate 46.6% (n=1220). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: MODERATE (entropy 1.031 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Bournemouth: lineup is PROJECTED (FotMob projected XI (enetpulse)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Nott'm Forest: lineup is PROJECTED (FotMob projected XI (enetpulse)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior)."
+ ],
+ "verdict": "Bournemouth 1\u20131 Nott'm Forest is the single most probable scoreline at 11.9%: expected goals 1.78\u20131.16 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.043). Exact scores are inherently uncertain; the 1X2 split is 51.2%/25.0%/23.8%.",
+ "resolved": {
+  "home_key": "England:Bournemouth",
+  "away_key": "England:Nott'm Forest",
+  "div": "E0",
+  "home_div": "E0",
+  "away_div": "E0",
+  "country": "England"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: Nottingham Forest FC at AFC Bournemouth\nCompetition: Premier League\nDate: 2026-11-21 10:00 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-11-20\n\nPRIMARY FINAL SCORE PREDICTION\n\nAFC Bournemouth 1 \u2013 1 Nottingham Forest FC\n(modal exact score, probability 11.9%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.78\nAway: 1.16\nExpected Total: 2.94\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 51.2%\nDraw: 25.0%\nAway Win: 23.8%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 11.9%\n2. 2\u20131: 10.0%\n3. 1\u20130: 8.9%\n4. 2\u20130: 8.3%\n5. 1\u20132: 6.4%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 19.8%\nTotal 2 goals: 23.6%\nTotal 3 goals: 22.5%\nTotal 4 goals: 16.9%\nTotal 5+ goals: 17.2%\n\nBoth Teams Score: 58.8%\nClean sheet AFC Bournemouth: 30.5% \u00b7 Clean sheet Nottingham Forest FC: 16.1%\n\nMATCH INTELLIGENCE\n\n1. Home advantage (England, fitted from results): \u00d71.23 on Bournemouth's scoring rate.\n2. Independent results-only Elo: Bournemouth 1766 vs Nott'm Forest 1675 (gap +90 before home advantage).\n3. Nott'm Forest attack vs Bournemouth defence: rate multiplier \u00d70.91 for the away side.\n\nMODEL CONFIDENCE\n\nMost likely result has P = 51.2%. In the out-of-sample backtest, favourites priced 0.50\u20130.60 won 53.9% \u00b1 0.5% (n=9522, mean forecast 54.4%). Backtest RPS for E0: 0.2018; exact-score top-5 hit rate 46.6% (n=1220). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: MODERATE (entropy 1.031 nats of max 1.099).\nParameter-uncertainty 80% bands: xG AFC Bournemouth 1.36\u20132.24, xG Nottingham Forest FC 0.86\u20131.49; P(home win) 39.7%\u201363.5%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0011 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nBournemouth: PROJECTED \u2014 FotMob projected XI (enetpulse), fetched 2026-11-20 10:01 EST (4-2-3-1)\n  Djordje Petrovi\u0107 (G), Adam Smith (D), James Hill (D), Ant\u00f3nio Silva (D), Adrien Truffert (D), Tyler Adams (M), Ryan Christie (M), Rayan (F), Justin Kluivert (M), Marcus Tavernier (F), Evanilson (F)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs +0.034 (log) \u00b7 continuity -0.41 \u00b7 P(backup GK) 0%\nNott'm Forest: PROJECTED \u2014 FotMob projected XI (enetpulse), fetched 2026-11-20 10:01 EST (3-4-2-1)\n  Matz Sels (G), Jair Cunha (D), Nikola Milenkovi\u0107 (D), Murillo (D), Daniel Mu\u00f1oz (M), Ryan Yates (M), Ibrahim Sangar\u00e9 (M), Luca Netz (M), James McAtee (M), Morgan Gibbs-White (M), Liam Delap (F)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs -0.107 (log) \u00b7 continuity -1.08 \u00b7 P(backup GK) 0%\n\nKEY ABSENCES\n\n- Bournemouth: Juanlu S\u00e1nchez \u2014 injury, Late November 2026, 0% chance of playing [FotMob + FPL, 2026-11-20 10:01 EST] \u2014 FPL: Ankle injury - Unknown return date (updated 2026-11-05 16:30 EST)\n- Bournemouth: Juli\u00e1n Araujo \u2014 injury, Late November 2026, 0% chance of playing [FotMob + FPL, 2026-11-20 10:01 EST] \u2014 FPL: Thigh injury - Unknown return date (updated 2026-08-09 04:00 EDT)\n- Bournemouth: Alex T\u00f3th \u2014 injury, Early February 2027, 0% chance of playing [FotMob + FPL, 2026-11-20 10:01 EST] \u2014 FPL: Hamstring injury - Unknown return date (updated 2026-10-23 07:30 EDT)\n- Bournemouth: Veljko Milosavljevic \u2014 injured, Thigh injury - Expected back 31 Oct, 0% chance of playing [FPL, 2026-08-06 06:00 EDT]\n- Nott'm Forest: Xaver Schlager \u2014 injury, Doubtful, 75% chance of playing [FotMob + FPL, 2026-11-20 10:01 EST] \u2014 FPL: Thigh injury - 75% chance of playing (updated 2026-11-15 12:00 EST)\n- Nott'm Forest: Neco Williams \u2014 injury, Doubtful, 75% chance of playing [FotMob + FPL, 2026-11-20 10:01 EST] \u2014 FPL: Ankle injury - 75% chance of playing (updated 2026-11-16 14:00 EST)\n- Nott'm Forest: Nicol\u00f2 Savona \u2014 injury, Doubtful, 0% chance of playing [FotMob + FPL, 2026-11-20 10:01 EST] \u2014 FPL: Knee injury - Unknown return date (updated 2026-07-23 08:01 EDT)\n- Nott'm Forest: Nicol\u00e1s Dom\u00ednguez \u2014 injury, Late December 2026, 0% chance of playing [FotMob + FPL, 2026-11-20 10:01 EST] \u2014 FPL: Muscular injury - Expected back 30 Dec (updated 2026-10-24 09:00 EDT)\n- Nott'm Forest: Callum Hudson-Odoi \u2014 injury, Mid December 2026, 0% chance of playing [FotMob + FPL, 2026-11-20 10:01 EST] \u2014 FPL: Unspecified injury - Unknown return date (updated 2026-11-19 10:30 EST)\n\nWEATHER AT VENUE\n\nVitality Stadium, Bournemouth, Dorset: 11.0 \u00b0C, wind 2.9 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-11-20 10:01 EST]\n\nREST & TRAVEL\n\nBournemouth: 13 days' rest, 2 matches in previous 21 days \u00b7 Nott'm Forest: 14 days' rest, 2 in 21 days \u00b7 away travel 249.9 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 51.2% / 25.0% / 23.8%, xG 1.78\u20131.16\n- Understat xG component (validated, in ensemble): home -0.32 pp, draw +0.41 pp, away -0.09 pp; xG +0.002 / +0.007\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.58 pp, draw -0.30 pp, away -0.28 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- lineup: NOT APPLIED (failed out-of-sample validation); would have moved home +1.98 pp, draw -0.31 pp, away -1.67 pp\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Bournemouth: lineup is PROJECTED (FotMob projected XI (enetpulse)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Nott'm Forest: lineup is PROJECTED (FotMob projected XI (enetpulse)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n\nFINAL VERDICT\n\nBournemouth 1\u20131 Nott'm Forest is the single most probable scoreline at 11.9%: expected goals 1.78\u20131.16 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.043). Exact scores are inherently uncertain; the 1X2 split is 51.2%/25.0%/23.8%.\n",
+ "refresh_id": "72ecf21c0e7d4609ac41d21a81783a10",
+ "frozen_at": "2026-11-20T15:01:51+00:00",
+ "sha256": "3b093f29ef6bb1d646e859d13abfa05e75ef95454fa5a08d1e4602b7b742b9aa"
+}
