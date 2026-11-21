@@ -1,0 +1,797 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-11-20",
+ "input_fingerprint": "089f9cc4fd25f92ec445dbe63bd24c6d3710901e9f1c4bbab00c2c81fa97224f",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-11-21T15:56:38+00:00",
+ "fixture": {
+  "event_id": "POLY-1337936",
+  "home_name": "Newcastle United FC",
+  "away_name": "Arsenal FC",
+  "competition": "Premier League",
+  "subcategory": "epl",
+  "kickoff_utc": "2026-11-21T17:30:00+00:00",
+  "kickoff_local": "2026-11-21 12:30 EST",
+  "home_matched": "Newcastle",
+  "away_matched": "Arsenal",
+  "match_methods": {
+   "home": {
+    "source": "Newcastle United FC",
+    "matched": "Newcastle",
+    "method": "alias",
+    "score": 1.0
+   },
+   "away": {
+    "source": "Arsenal FC",
+    "matched": "Arsenal",
+    "method": "core-tokens",
+    "score": 0.97
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.19307023580366023,
+  "p_draw": 0.24189631458491387,
+  "p_away": 0.565033449611426,
+  "xg_home": 0.9961410295231594,
+  "xg_away": 1.8433846951758615,
+  "xg_total": 2.839525724699021,
+  "median_total": 3,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.11726814798017439
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.11726814798017439
+   },
+   {
+    "home": 0,
+    "away": 1,
+    "p": 0.10200425375688843
+   },
+   {
+    "home": 1,
+    "away": 2,
+    "p": 0.10054195881471063
+   },
+   {
+    "home": 0,
+    "away": 2,
+    "p": 0.0976880083248643
+   },
+   {
+    "home": 1,
+    "away": 3,
+    "p": 0.06161242792571517
+   }
+  ],
+  "btts": 0.5439819205138474,
+  "totals_over": {
+   "over_0.5": 0.9392187488149368,
+   "over_1.5": 0.7833942863615814,
+   "over_2.5": 0.5403844310280977,
+   "over_3.5": 0.3171460238065195,
+   "over_4.5": 0.15608766373553234,
+   "over_5.5": 0.06696203096759194,
+   "over_6.5": 0.024817205795328517
+  },
+  "total_buckets": {
+   "0-1": 0.21660571363841874,
+   "2": 0.2430098553334836,
+   "3": 0.2232384072215782,
+   "4": 0.16105836007098717,
+   "5+": 0.15608766373553234
+  },
+  "clean_sheet_home": 0.15438499221047558,
+  "clean_sheet_away": 0.3624143384607403,
+  "home_goal_dist": [
+   0.3624143384607403,
+   0.3760094288765809,
+   0.18528152690355573,
+   0.059226749471755456,
+   0.013985059710075768,
+   0.002617254740438487,
+   0.00040529647542789885,
+   6.0345361425582414e-05
+  ],
+  "away_goal_dist": [
+   0.15438499221047558,
+   0.29513103997410617,
+   0.2712174412799781,
+   0.16503309363597585,
+   0.0753647395058401,
+   0.02758351501698009,
+   0.008433125529284892,
+   0.0028520528473592404
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    2
+   ],
+   "away_goals_80": [
+    0,
+    4
+   ],
+   "total_goals_80": [
+    1,
+    5
+   ],
+   "goal_diff_80": [
+    -3,
+    1
+   ]
+  },
+  "score_grid": [
+   [
+    0.060781,
+    0.102004,
+    0.097688,
+    0.060058,
+    0.027586,
+    0.010134,
+    0.003108
+   ],
+   [
+    0.05382,
+    0.117268,
+    0.100542,
+    0.061612,
+    0.028208,
+    0.010331,
+    0.003159
+   ],
+   [
+    0.028054,
+    0.053561,
+    0.052418,
+    0.030311,
+    0.013831,
+    0.005049,
+    0.001539
+   ],
+   [
+    0.009078,
+    0.017273,
+    0.01595,
+    0.010253,
+    0.004414,
+    0.001606,
+    0.000488
+   ],
+   [
+    0.002169,
+    0.004112,
+    0.003783,
+    0.002294,
+    0.001098,
+    0.000377,
+    0.000114
+   ],
+   [
+    0.00041,
+    0.000774,
+    0.000709,
+    0.000429,
+    0.000193,
+    7.4e-05,
+    2.1e-05
+   ],
+   [
+    6.4e-05,
+    0.00012,
+    0.00011,
+    6.6e-05,
+    3e-05,
+    1.1e-05,
+    3e-06
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.19343500000000002,
+  "p_draw": 0.24180000000000001,
+  "p_away": 0.564765,
+  "se": [
+   0.0008832267567703099,
+   0.0009574256106873265,
+   0.0011086151153015188
+  ],
+  "max_abs_dev_vs_exact": 0.0003647641963397952,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   0.7553876472751497,
+   1.2600850707661346
+  ],
+  "xg_away_80": [
+   1.4355971677170187,
+   2.274814333406221
+  ],
+  "p_home_80": [
+   0.134300216980366,
+   0.2802375536567792
+  ],
+  "p_draw_80": [
+   0.19392966736921177,
+   0.2741772928169622
+  ],
+  "p_away_80": [
+   0.4496562150288253,
+   0.6656366069124677
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.20287377503319956,
+   0.1708326553432067
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.2165326563973468,
+   "p_draw": 0.26412176067868126,
+   "p_away": 0.5193455829239719,
+   "xg_home": 0.921291787108711,
+   "xg_away": 1.5669240374147952,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.16797495758577233,
+   "p_draw": 0.20620265344424082,
+   "p_away": 0.625822388969987,
+   "xg_home": 0.9546246617252228,
+   "xg_away": 2.044303742308923,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.16002455347487554,
+   "p_draw": 0.2443653071225948,
+   "p_away": 0.5956101394025296,
+   "xg_home": 0.7947407972920858,
+   "xg_away": 1.753148358787419,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.42222412904420675,
+   "p_draw": 0.2499474388561885,
+   "p_away": 0.3278284320996049,
+   "xg_home": 1.5173274019126641,
+   "xg_away": 1.3079985715500382,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.23123954273505526,
+   "p_draw": 0.25665154355006553,
+   "p_away": 0.5121089137148792,
+   "xg_home": 1.0159472702075736,
+   "xg_away": 1.6295652490678938,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Newcastle attack vs Arsenal defence: time-weighted strength gap multiplies Newcastle's scoring rate by \u00d70.62 relative to an average pairing (from 36/40 decay-weighted matches).",
+   "effect": 0.4752
+  },
+  {
+   "text": "Independent results-only Elo: Newcastle 1692 vs Arsenal 1990 (gap -298 before home advantage).",
+   "effect": 0.4467
+  },
+  {
+   "text": "Arsenal attack vs Newcastle defence: rate multiplier \u00d71.30 for the away side.",
+   "effect": 0.2628
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.19307023580366017,
+  "p_draw": 0.24189631458491384,
+  "p_away": 0.565033449611426,
+  "xg_home": 0.9961410295231592,
+  "xg_away": 1.843384695175861
+ },
+ "context": {
+  "fetched_at": "2026-11-21T15:56:38+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5795523",
+    "fetched_at": "2026-11-21T15:56:38+00:00"
+   },
+   {
+    "name": "Fantasy Premier League availability",
+    "url": "https://fantasy.premierleague.com/api/bootstrap-static/",
+    "fetched_at": "2026-11-21T15:56:39+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "projected",
+    "source": "FotMob projected XI (enetpulse)",
+    "formation": "4-2-3-1",
+    "starters": [
+     {
+      "name": "Luk\u00e1s Horn\u00edcek",
+      "pos": "G",
+      "shirt": "21"
+     },
+     {
+      "name": "Amar Dedi\u0107",
+      "pos": "D",
+      "shirt": "37"
+     },
+     {
+      "name": "Malick Thiaw",
+      "pos": "D",
+      "shirt": "12"
+     },
+     {
+      "name": "Daniel Burn",
+      "pos": "D",
+      "shirt": "33"
+     },
+     {
+      "name": "Lewis Hall",
+      "pos": "D",
+      "shirt": "3"
+     },
+     {
+      "name": "Sean Steur",
+      "pos": "M",
+      "shirt": "14"
+     },
+     {
+      "name": "Lewis Miley",
+      "pos": "M",
+      "shirt": "67"
+     },
+     {
+      "name": "Jacob Murphy",
+      "pos": "F",
+      "shirt": "23"
+     },
+     {
+      "name": "Yoane Wissa",
+      "pos": "F",
+      "shirt": "9"
+     },
+     {
+      "name": "Harvey Barnes",
+      "pos": "F",
+      "shirt": "11"
+     },
+     {
+      "name": "William Osula",
+      "pos": "F",
+      "shirt": "10"
+     }
+    ],
+    "fetched_at": "2026-11-21T15:56:38+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [],
+    "mean_xi_attack_index": -0.031,
+    "mean_continuity": -0.148,
+    "p_backup_gk": 0.175
+   },
+   "away": {
+    "status": "projected",
+    "source": "FotMob projected XI (enetpulse)",
+    "formation": "4-2-3-1",
+    "starters": [
+     {
+      "name": "David Raya",
+      "pos": "G",
+      "shirt": "1"
+     },
+     {
+      "name": "Jurri\u00ebn Timber",
+      "pos": "D",
+      "shirt": "12"
+     },
+     {
+      "name": "Ezri Konsa",
+      "pos": "D",
+      "shirt": "15"
+     },
+     {
+      "name": "Gabriel",
+      "pos": "D",
+      "shirt": "6"
+     },
+     {
+      "name": "Riccardo Calafiori",
+      "pos": "D",
+      "shirt": "33"
+     },
+     {
+      "name": "Declan Rice",
+      "pos": "M",
+      "shirt": "41"
+     },
+     {
+      "name": "Myles Lewis-Skelly",
+      "pos": "M",
+      "shirt": "49"
+     },
+     {
+      "name": "Noni Madueke",
+      "pos": "F",
+      "shirt": "20"
+     },
+     {
+      "name": "Martin \u00d8degaard",
+      "pos": "M",
+      "shirt": "8"
+     },
+     {
+      "name": "Christos Tzolis",
+      "pos": "F",
+      "shirt": "17"
+     },
+     {
+      "name": "Kai Havertz",
+      "pos": "F",
+      "shirt": "29"
+     }
+    ],
+    "fetched_at": "2026-11-21T15:56:38+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [],
+    "mean_xi_attack_index": -0.13,
+    "mean_continuity": 0.069,
+    "p_backup_gk": 0.0
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Ewen Jaouen",
+     "type": "injury",
+     "expected_return": "Early December 2026",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795523",
+     "fetched_at": "2026-11-21T15:56:38+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Hamstring injury - Unknown return date",
+     "fpl_news_added": "2026-09-10T16:00:09.127466Z"
+    },
+    {
+     "player": "Joelinton",
+     "type": "injury",
+     "expected_return": "Mid December 2026",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795523",
+     "fetched_at": "2026-11-21T15:56:38+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Unspecified injury - Unknown return date",
+     "fpl_news_added": "2026-11-05T16:57:40.468946Z"
+    }
+   ],
+   "away": [
+    {
+     "player": "Mart\u00edn Zubimendi",
+     "type": "injury",
+     "expected_return": "Early December 2026",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795523",
+     "fetched_at": "2026-11-21T15:56:38+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Hamstring injury - Unknown return date",
+     "fpl_news_added": "2026-11-16T19:00:05.154377Z"
+    },
+    {
+     "player": "Max Dowman",
+     "type": "suspension",
+     "expected_return": "Late November 2026",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795523",
+     "fetched_at": "2026-11-21T15:56:38+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "suspended",
+     "fpl_news": "Suspended until 29 Nov",
+     "fpl_news_added": "2026-10-27T22:30:09.534466Z"
+    },
+    {
+     "player": "Bukayo Saka",
+     "type": "injury",
+     "expected_return": "Late December 2026",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795523",
+     "fetched_at": "2026-11-21T15:56:38+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Thigh injury - Expected back 20 Dec",
+     "fpl_news_added": "2026-10-21T20:30:09.540957Z"
+    },
+    {
+     "player": "Reiss Nelson",
+     "type": "unavailable",
+     "expected_return": "has departed the club as a free agent.",
+     "chance_of_playing": 0,
+     "source": "FPL",
+     "source_url": "https://fantasy.premierleague.com/api/bootstrap-static/",
+     "fetched_at": "2026-08-29T00:33:08.556767Z"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 14,
+    "n21": 2,
+    "last_match": "2026-11-07"
+   },
+   "away": {
+    "rest_days": 14,
+    "n21": 2,
+    "last_match": "2026-11-07"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 393.4
+  },
+  "venue": {
+   "name": "St. James' Park",
+   "city": "Newcastle upon Tyne",
+   "lat": 54.975540166,
+   "lon": -1.621620655
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 1.35,
+   "temp_c": 1.9,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=54.976&longitude=-1.622",
+   "fetched_at": "2026-11-21T15:56:39+00:00",
+   "lat": 54.975540166,
+   "lon": -1.621620655
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": 3.02,
+    "d_p_draw_pp": 2.5,
+    "d_p_away_pp": -5.52,
+    "d_xg_home": 0.033,
+    "d_xg_away": -0.197
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0249,
+    "away_rate_mult": 1.0104,
+    "d_p_home_pp": 0.3,
+    "d_p_draw_pp": -0.15,
+    "d_p_away_pp": -0.14,
+    "d_xg_home": 0.024,
+    "d_xg_away": 0.019,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 0.9994,
+    "away_rate_mult": 0.9994,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.01,
+    "d_p_away_pp": -0.01,
+    "d_xg_home": -0.001,
+    "d_xg_away": -0.001,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "home_rate_mult": 0.9866,
+    "away_rate_mult": 0.975,
+    "d_p_home_pp": 0.3,
+    "d_p_draw_pp": 0.44,
+    "d_p_away_pp": -0.74,
+    "d_xg_home": -0.013,
+    "d_xg_away": -0.045,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 14.0,
+   "rest_a": 14.0,
+   "n21_h": 2.0,
+   "n21_a": 2.0,
+   "travel_km": 393.4021664753099,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 1.35,
+   "temp_c": 1.9
+  }
+ },
+ "lineup_simulation": {
+  "applied": true,
+  "validated": false,
+  "scale": 0.5,
+  "basis": {
+   "home": "projected",
+   "away": "projected"
+  },
+  "home_rate_mult": 0.9933,
+  "away_rate_mult": 0.9874,
+  "note": "Starting-XI strength, continuity and backup-keeper adjustment at half the fitted size. It did not pass the out-of-sample test, so bets are not priced from it.",
+  "p_home": 0.19453543179440133,
+  "p_draw": 0.24413346507163605,
+  "p_away": 0.5613311031339627,
+  "xg_home": 0.9896365825260137,
+  "xg_away": 1.8206992870516465,
+  "xg_total": 2.8103358695776604,
+  "btts": 0.5396694936064677,
+  "totals_over": {
+   "over_0.5": 0.9373782598732893,
+   "over_1.5": 0.7785396085851186,
+   "over_2.5": 0.5334122175561097,
+   "over_3.5": 0.3106019762101175,
+   "over_4.5": 0.15152164469006627,
+   "over_5.5": 0.06441153450757207,
+   "over_6.5": 0.023644246615939904
+  },
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.11848256365193521
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.11848256365193521
+   },
+   {
+    "home": 0,
+    "away": 1,
+    "p": 0.10375466274298256
+   },
+   {
+    "home": 1,
+    "away": 2,
+    "p": 0.10030078422268242
+   },
+   {
+    "home": 0,
+    "away": 2,
+    "p": 0.09811889054499238
+   },
+   {
+    "home": 0,
+    "away": 0,
+    "p": 0.0626217401267109
+   }
+  ],
+  "score_grid": [
+   [
+    0.062622,
+    0.103755,
+    0.098119,
+    0.059579,
+    0.027034,
+    0.009813,
+    0.002974
+   ],
+   [
+    0.055084,
+    0.118483,
+    0.100301,
+    0.060701,
+    0.027452,
+    0.009933,
+    0.003001
+   ],
+   [
+    0.028526,
+    0.053759,
+    0.051944,
+    0.02966,
+    0.013368,
+    0.004821,
+    0.001452
+   ],
+   [
+    0.009171,
+    0.017225,
+    0.015702,
+    0.009966,
+    0.004238,
+    0.001523,
+    0.000457
+   ],
+   [
+    0.002177,
+    0.004074,
+    0.0037,
+    0.002215,
+    0.001047,
+    0.000355,
+    0.000106
+   ],
+   [
+    0.000409,
+    0.000762,
+    0.000689,
+    0.000411,
+    0.000183,
+    6.9e-05,
+    1.9e-05
+   ],
+   [
+    6.4e-05,
+    0.000118,
+    0.000106,
+    6.3e-05,
+    2.8e-05,
+    1e-05,
+    3e-06
+   ]
+  ]
+ },
+ "confidence": {
+  "tier": "MODERATE",
+  "p_max": 0.565033449611426,
+  "entropy_nats": 0.9834140978652951,
+  "text": "Most likely result has P = 56.5%. In the out-of-sample backtest, favourites priced 0.50\u20130.60 won 53.9% \u00b1 0.5% (n=9522, mean forecast 54.4%). Backtest RPS for E0: 0.2018; exact-score top-5 hit rate 46.6% (n=1220). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: MODERATE (entropy 0.983 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Newcastle: lineup is PROJECTED (FotMob projected XI (enetpulse)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Arsenal: lineup is PROJECTED (FotMob projected XI (enetpulse)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior)."
+ ],
+ "verdict": "Newcastle 1\u20131 Arsenal is the single most probable scoreline at 11.7%: expected goals 1.00\u20131.84 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.043). Exact scores are inherently uncertain; the 1X2 split is 19.3%/24.2%/56.5%.",
+ "resolved": {
+  "home_key": "England:Newcastle",
+  "away_key": "England:Arsenal",
+  "div": "E0",
+  "home_div": "E0",
+  "away_div": "E0",
+  "country": "England"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: Arsenal FC at Newcastle United FC\nCompetition: Premier League\nDate: 2026-11-21 12:30 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-11-20\n\nPRIMARY FINAL SCORE PREDICTION\n\nNewcastle United FC 1 \u2013 1 Arsenal FC\n(modal exact score, probability 11.7%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.00\nAway: 1.84\nExpected Total: 2.84\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 19.3%\nDraw: 24.2%\nAway Win: 56.5%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 11.7%\n2. 0\u20131: 10.2%\n3. 1\u20132: 10.1%\n4. 0\u20132: 9.8%\n5. 1\u20133: 6.2%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 21.7%\nTotal 2 goals: 24.3%\nTotal 3 goals: 22.3%\nTotal 4 goals: 16.1%\nTotal 5+ goals: 15.6%\n\nBoth Teams Score: 54.4%\nClean sheet Newcastle United FC: 15.4% \u00b7 Clean sheet Arsenal FC: 36.2%\n\nMATCH INTELLIGENCE\n\n1. Newcastle attack vs Arsenal defence: time-weighted strength gap multiplies Newcastle's scoring rate by \u00d70.62 relative to an average pairing (from 36/40 decay-weighted matches).\n2. Independent results-only Elo: Newcastle 1692 vs Arsenal 1990 (gap -298 before home advantage).\n3. Arsenal attack vs Newcastle defence: rate multiplier \u00d71.30 for the away side.\n\nMODEL CONFIDENCE\n\nMost likely result has P = 56.5%. In the out-of-sample backtest, favourites priced 0.50\u20130.60 won 53.9% \u00b1 0.5% (n=9522, mean forecast 54.4%). Backtest RPS for E0: 0.2018; exact-score top-5 hit rate 46.6% (n=1220). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: MODERATE (entropy 0.983 nats of max 1.099).\nParameter-uncertainty 80% bands: xG Newcastle United FC 0.76\u20131.26, xG Arsenal FC 1.44\u20132.27; P(home win) 13.4%\u201328.0%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0004 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nNewcastle: PROJECTED \u2014 FotMob projected XI (enetpulse), fetched 2026-11-21 10:56 EST (4-2-3-1)\n  Luk\u00e1s Horn\u00edcek (G), Amar Dedi\u0107 (D), Malick Thiaw (D), Daniel Burn (D), Lewis Hall (D), Sean Steur (M), Lewis Miley (M), Jacob Murphy (F), Yoane Wissa (F), Harvey Barnes (F), William Osula (F)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs -0.031 (log) \u00b7 continuity -0.15 \u00b7 P(backup GK) 18%\nArsenal: PROJECTED \u2014 FotMob projected XI (enetpulse), fetched 2026-11-21 10:56 EST (4-2-3-1)\n  David Raya (G), Jurri\u00ebn Timber (D), Ezri Konsa (D), Gabriel (D), Riccardo Calafiori (D), Declan Rice (M), Myles Lewis-Skelly (M), Noni Madueke (F), Martin \u00d8degaard (M), Christos Tzolis (F), Kai Havertz (F)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs -0.130 (log) \u00b7 continuity +0.07 \u00b7 P(backup GK) 0%\n\nKEY ABSENCES\n\n- Newcastle: Ewen Jaouen \u2014 injury, Early December 2026, 0% chance of playing [FotMob + FPL, 2026-11-21 10:56 EST] \u2014 FPL: Hamstring injury - Unknown return date (updated 2026-09-10 12:00 EDT)\n- Newcastle: Joelinton \u2014 injury, Mid December 2026, 0% chance of playing [FotMob + FPL, 2026-11-21 10:56 EST] \u2014 FPL: Unspecified injury - Unknown return date (updated 2026-11-05 11:57 EST)\n- Arsenal: Mart\u00edn Zubimendi \u2014 injury, Early December 2026, 0% chance of playing [FotMob + FPL, 2026-11-21 10:56 EST] \u2014 FPL: Hamstring injury - Unknown return date (updated 2026-11-16 14:00 EST)\n- Arsenal: Max Dowman \u2014 suspension, Late November 2026, 0% chance of playing [FotMob + FPL, 2026-11-21 10:56 EST] \u2014 FPL: Suspended until 29 Nov (updated 2026-10-27 18:30 EDT)\n- Arsenal: Bukayo Saka \u2014 injury, Late December 2026, 0% chance of playing [FotMob + FPL, 2026-11-21 10:56 EST] \u2014 FPL: Thigh injury - Expected back 20 Dec (updated 2026-10-21 16:30 EDT)\n- Arsenal: Reiss Nelson \u2014 unavailable, has departed the club as a free agent., 0% chance of playing [FPL, 2026-08-28 20:33 EDT]\n\nWEATHER AT VENUE\n\nSt. James' Park, Newcastle upon Tyne: 1.9 \u00b0C, wind 1.4 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-11-21 10:56 EST]\n\nREST & TRAVEL\n\nNewcastle: 14 days' rest, 2 matches in previous 21 days \u00b7 Arsenal: 14 days' rest, 2 in 21 days \u00b7 away travel 393.4 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 19.3% / 24.2% / 56.5%, xG 1.00\u20131.84\n- Understat xG component (validated, in ensemble): home +3.02 pp, draw +2.50 pp, away -5.52 pp; xG +0.033 / -0.197\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.30 pp, draw -0.15 pp, away -0.14 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.01 pp, away -0.01 pp\n- lineup: NOT APPLIED (failed out-of-sample validation); would have moved home +0.30 pp, draw +0.44 pp, away -0.74 pp\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Newcastle: lineup is PROJECTED (FotMob projected XI (enetpulse)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Arsenal: lineup is PROJECTED (FotMob projected XI (enetpulse)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n\nFINAL VERDICT\n\nNewcastle 1\u20131 Arsenal is the single most probable scoreline at 11.7%: expected goals 1.00\u20131.84 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.043). Exact scores are inherently uncertain; the 1X2 split is 19.3%/24.2%/56.5%.\n",
+ "refresh_id": "63b8d00b5ed540ca867ba2e67f12dc41",
+ "frozen_at": "2026-11-21T15:56:39+00:00",
+ "sha256": "adfaaab92ab5c93ea1af0e705d929fe35717f73cdb49445aed9161dbef6e6b58"
+}
