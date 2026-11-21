@@ -1,0 +1,749 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-11-20",
+ "input_fingerprint": "089f9cc4fd25f92ec445dbe63bd24c6d3710901e9f1c4bbab00c2c81fa97224f",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-11-21T19:31:41+00:00",
+ "fixture": {
+  "event_id": "POLY-1346334",
+  "home_name": "Olympique de Marseille",
+  "away_name": "Le Mans FC",
+  "competition": "Ligue 1",
+  "subcategory": "fl1",
+  "kickoff_utc": "2026-11-22T19:45:00+00:00",
+  "kickoff_local": "2026-11-22 14:45 EST",
+  "home_matched": "Marseille",
+  "away_matched": "Le Mans",
+  "match_methods": {
+   "home": {
+    "source": "Olympique de Marseille",
+    "matched": "Marseille",
+    "method": "alias",
+    "score": 1.0
+   },
+   "away": {
+    "source": "Le Mans FC",
+    "matched": "Le Mans",
+    "method": "core-tokens",
+    "score": 0.97
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.6348924603323235,
+  "p_draw": 0.2047021511286441,
+  "p_away": 0.16040538853903258,
+  "xg_home": 2.2288039554630155,
+  "xg_away": 1.0598922984598496,
+  "xg_total": 3.288696253922865,
+  "median_total": 3,
+  "modal_score": {
+   "home": 2,
+   "away": 1,
+   "p": 0.09994813466357155
+  },
+  "top_scores": [
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.09994813466357155
+   },
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.09458797327366421
+   },
+   {
+    "home": 2,
+    "away": 0,
+    "p": 0.09312733188721416
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.07887481823159907
+   },
+   {
+    "home": 3,
+    "away": 1,
+    "p": 0.07443215137550577
+   }
+  ],
+  "btts": 0.5933754292707167,
+  "totals_over": {
+   "over_0.5": 0.9619933899848251,
+   "over_1.5": 0.8485275759211955,
+   "over_2.5": 0.6413719705493303,
+   "over_3.5": 0.41868793835933193,
+   "over_4.5": 0.23219848326445822,
+   "over_5.5": 0.11250791364652138,
+   "over_6.5": 0.04729294382511665
+  },
+  "total_buckets": {
+   "0-1": 0.15147242407880449,
+   "2": 0.2071556053718652,
+   "3": 0.22268403218999844,
+   "4": 0.18648945509487372,
+   "5+": 0.23219848326445822
+  },
+  "clean_sheet_home": 0.3434480505408163,
+  "clean_sheet_away": 0.10118313020364206,
+  "home_goal_dist": [
+   0.10118313020364206,
+   0.2412448147650671,
+   0.273086093618846,
+   0.20189652161849903,
+   0.11055916622264028,
+   0.047915797309983896,
+   0.017139173858551994,
+   0.006975302402769666
+  ],
+  "away_goal_dist": [
+   0.3434480505408163,
+   0.37110262471014144,
+   0.19523854709971356,
+   0.06794412266160199,
+   0.017758381310755297,
+   0.0037348716294095742,
+   0.0006584406160497522,
+   0.00011496143151215419
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    4
+   ],
+   "away_goals_80": [
+    0,
+    2
+   ],
+   "total_goals_80": [
+    1,
+    6
+   ],
+   "goal_diff_80": [
+    -1,
+    3
+   ]
+  },
+  "score_grid": [
+   [
+    0.038007,
+    0.034591,
+    0.01944,
+    0.00686,
+    0.001818,
+    0.000387,
+    6.9e-05
+   ],
+   [
+    0.078875,
+    0.094588,
+    0.046179,
+    0.016223,
+    0.004283,
+    0.000908,
+    0.000161
+   ],
+   [
+    0.093127,
+    0.099948,
+    0.055546,
+    0.018394,
+    0.004837,
+    0.001022,
+    0.000181
+   ],
+   [
+    0.069698,
+    0.074432,
+    0.038975,
+    0.014334,
+    0.003554,
+    0.000748,
+    0.000132
+   ],
+   [
+    0.03847,
+    0.040881,
+    0.021303,
+    0.007384,
+    0.002034,
+    0.000404,
+    7.1e-05
+   ],
+   [
+    0.016771,
+    0.017734,
+    0.009196,
+    0.003173,
+    0.000824,
+    0.000182,
+    3e-05
+   ],
+   [
+    0.00603,
+    0.006345,
+    0.003275,
+    0.001125,
+    0.000291,
+    6.1e-05,
+    1.1e-05
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.6347400000000001,
+  "p_draw": 0.204745,
+  "p_away": 0.160515,
+  "se": [
+   0.0010766734240242025,
+   0.0009022873294438973,
+   0.0008208225593116943
+  ],
+  "max_abs_dev_vs_exact": 0.00015246033232341194,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   1.675465149162007,
+   2.8370639038935512
+  ],
+  "xg_away_80": [
+   0.7763224212144155,
+   1.3668276343643841
+  ],
+  "p_home_80": [
+   0.5021908755698334,
+   0.7518255379565766
+  ],
+  "p_draw_80": [
+   0.150154269887051,
+   0.2486586183743525
+  ],
+  "p_away_80": [
+   0.09551130153237455,
+   0.24802246727472246
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.2088110330292072,
+   0.20993461584777776
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.6090732146944031,
+   "p_draw": 0.2116878973366477,
+   "p_away": 0.17923888796894927,
+   "xg_home": 2.110805461383066,
+   "xg_away": 1.0664385745820528,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.6850025722455022,
+   "p_draw": 0.18342098394820383,
+   "p_away": 0.13157644380629394,
+   "xg_home": 2.2517243531065922,
+   "xg_away": 0.8755847785823219,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.5389539800138162,
+   "p_draw": 0.2340604178793717,
+   "p_away": 0.2269856021068119,
+   "xg_home": 1.9149948564540928,
+   "xg_away": 1.1807499663310368,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.44656628343789845,
+   "p_draw": 0.24508439946811447,
+   "p_away": 0.30834931709398716,
+   "xg_home": 1.5986635883742164,
+   "xg_away": 1.2885559786529155,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.5826077070803293,
+   "p_draw": 0.21360944488808456,
+   "p_away": 0.20378284803158608,
+   "xg_home": 2.117422163055023,
+   "xg_away": 1.1889576758257407,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Marseille attack vs Le Mans defence: time-weighted strength gap multiplies Marseille's scoring rate by \u00d71.49 relative to an average pairing (from 31/22 decay-weighted matches).",
+   "effect": 0.3972
+  },
+  {
+   "text": "Independent results-only Elo: Marseille 1700 vs Le Mans 1449 (gap +252 before home advantage).",
+   "effect": 0.3779
+  },
+  {
+   "text": "Home advantage (France, fitted from results): \u00d71.18 on Marseille's scoring rate.",
+   "effect": 0.1635
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.6348924603323235,
+  "p_draw": 0.2047021511286441,
+  "p_away": 0.16040538853903258,
+  "xg_home": 2.2288039554630155,
+  "xg_away": 1.0598922984598496
+ },
+ "context": {
+  "fetched_at": "2026-11-21T19:31:41+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5802994",
+    "fetched_at": "2026-11-21T19:31:41+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "inferred",
+    "source": null,
+    "formation": null,
+    "starters": [
+     {
+      "name": "Jeffrey De Lange",
+      "pos": "G"
+     },
+     {
+      "name": "Amine Gouiri",
+      "pos": "F"
+     },
+     {
+      "name": "CJ Egan-Riley",
+      "pos": "D"
+     },
+     {
+      "name": "Timothy Weah",
+      "pos": "D"
+     },
+     {
+      "name": "Igor Paix\u00e3o",
+      "pos": "F"
+     },
+     {
+      "name": "Himad Abdelli",
+      "pos": "M"
+     },
+     {
+      "name": "Amine Harit",
+      "pos": "F"
+     },
+     {
+      "name": "Pierre-Emile H\u00f8jbjerg",
+      "pos": "M"
+     },
+     {
+      "name": "Nayef Aguerd",
+      "pos": "D"
+     },
+     {
+      "name": "Tochukwu Nnadi",
+      "pos": "M"
+     },
+     {
+      "name": "Angel Gomes",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-11-21T19:31:41+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [],
+    "mean_xi_attack_index": 0.128,
+    "mean_continuity": -1.085,
+    "p_backup_gk": 0.26
+   },
+   "away": {
+    "status": "inferred",
+    "source": null,
+    "formation": null,
+    "starters": [
+     {
+      "name": "Nicolas Kocik",
+      "pos": "G"
+     },
+     {
+      "name": "Louis Mafouta",
+      "pos": "F"
+     },
+     {
+      "name": "Lucas Bretelle",
+      "pos": "M"
+     },
+     {
+      "name": "Samuel Yohou",
+      "pos": "D"
+     },
+     {
+      "name": "Lucas Calodat",
+      "pos": "F"
+     },
+     {
+      "name": "Harold Voyer",
+      "pos": "D"
+     },
+     {
+      "name": "Lucas Buad\u00e9s",
+      "pos": "M"
+     },
+     {
+      "name": "Jean Vercruysse",
+      "pos": "M"
+     },
+     {
+      "name": "Dame Gueye",
+      "pos": "F"
+     },
+     {
+      "name": "Rayan Bamba",
+      "pos": "D"
+     },
+     {
+      "name": "Noa Boiss\u00e9",
+      "pos": "D"
+     }
+    ],
+    "fetched_at": "2026-11-21T19:31:41+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [],
+    "mean_xi_attack_index": -0.079,
+    "mean_continuity": 0.276,
+    "p_backup_gk": 0.275
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Emerson",
+     "type": "injury",
+     "expected_return": "Late December 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5802994",
+     "fetched_at": "2026-11-21T19:31:41+00:00"
+    },
+    {
+     "player": "Derek Cornelius",
+     "type": "injury",
+     "expected_return": "Early January 2027",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5802994",
+     "fetched_at": "2026-11-21T19:31:41+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "Djibril Sidib\u00e9",
+     "type": "injury",
+     "expected_return": "Late January 2027",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5802994",
+     "fetched_at": "2026-11-21T19:31:41+00:00"
+    },
+    {
+     "player": "Th\u00e9o Eyoum",
+     "type": "injury",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5802994",
+     "fetched_at": "2026-11-21T19:31:41+00:00"
+    },
+    {
+     "player": "Adil Bourabaa",
+     "type": "injury",
+     "expected_return": "Early January 2027",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5802994",
+     "fetched_at": "2026-11-21T19:31:41+00:00"
+    },
+    {
+     "player": "Martin Rossignol",
+     "type": "injury",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5802994",
+     "fetched_at": "2026-11-21T19:31:41+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 14,
+    "n21": 2,
+    "last_match": "2026-11-08"
+   },
+   "away": {
+    "rest_days": 14,
+    "n21": 1,
+    "last_match": "2026-11-08"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 658.3
+  },
+  "venue": {
+   "name": "CEPAC V\u00e9lodrome",
+   "city": "Marseille",
+   "lat": 43.269870275,
+   "lon": 5.395853519
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 7.12,
+   "temp_c": 14.3,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=43.27&longitude=5.396",
+   "fetched_at": "2026-11-21T19:31:41+00:00",
+   "lat": 43.269870275,
+   "lon": 5.395853519
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": -5.02,
+    "d_p_draw_pp": 1.61,
+    "d_p_away_pp": 3.41,
+    "d_xg_home": -0.062,
+    "d_xg_away": 0.156
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0317,
+    "away_rate_mult": 1.0133,
+    "d_p_home_pp": 1.0,
+    "d_p_draw_pp": -0.56,
+    "d_p_away_pp": -0.44,
+    "d_xg_home": 0.068,
+    "d_xg_away": 0.014,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "home_rate_mult": 1.0128,
+    "away_rate_mult": 1.0127,
+    "d_p_home_pp": 0.21,
+    "d_p_draw_pp": -0.22,
+    "d_p_away_pp": 0.01,
+    "d_xg_home": 0.029,
+    "d_xg_away": 0.014,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 14.0,
+   "rest_a": 14.0,
+   "n21_h": 2.0,
+   "n21_a": 1.0,
+   "travel_km": 658.2595024950634,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 7.12,
+   "temp_c": 14.3
+  }
+ },
+ "lineup_simulation": {
+  "applied": true,
+  "validated": false,
+  "scale": 0.5,
+  "basis": {
+   "home": "inferred",
+   "away": "inferred"
+  },
+  "home_rate_mult": 1.0064,
+  "away_rate_mult": 1.0063,
+  "note": "Starting-XI strength, continuity and backup-keeper adjustment at half the fitted size. It did not pass the out-of-sample test, so bets are not priced from it.",
+  "p_home": 0.6360050514306758,
+  "p_draw": 0.2036461791099514,
+  "p_away": 0.16034876945937282,
+  "xg_home": 2.242838370827328,
+  "xg_away": 1.0667166988039714,
+  "xg_total": 3.3095550696312994,
+  "btts": 0.596263036769665,
+  "totals_over": {
+   "over_0.5": 0.9627798632111392,
+   "over_1.5": 0.8509770213549308,
+   "over_2.5": 0.6455739902026955,
+   "over_3.5": 0.4233590979337698,
+   "over_4.5": 0.23605063313393296,
+   "over_5.5": 0.11503654055863781,
+   "over_6.5": 0.048656360120448355
+  },
+  "modal_score": {
+   "home": 2,
+   "away": 1,
+   "p": 0.09969673948958953
+  },
+  "top_scores": [
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.09969673948958953
+   },
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.09377762116361507
+   },
+   {
+    "home": 2,
+    "away": 0,
+    "p": 0.09232627666638717
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.07770334986119937
+   },
+   {
+    "home": 3,
+    "away": 1,
+    "p": 0.07472643884044394
+   }
+  ],
+  "score_grid": [
+   [
+    0.03722,
+    0.034099,
+    0.019299,
+    0.006861,
+    0.001833,
+    0.000393,
+    7e-05
+   ],
+   [
+    0.077703,
+    0.093778,
+    0.046095,
+    0.016311,
+    0.004339,
+    0.000927,
+    0.000166
+   ],
+   [
+    0.092326,
+    0.099697,
+    0.05577,
+    0.018597,
+    0.004927,
+    0.001049,
+    0.000187
+   ],
+   [
+    0.069563,
+    0.074726,
+    0.039377,
+    0.014579,
+    0.003641,
+    0.000772,
+    0.000137
+   ],
+   [
+    0.038668,
+    0.041324,
+    0.021665,
+    0.007558,
+    0.002097,
+    0.000419,
+    7.4e-05
+   ],
+   [
+    0.016984,
+    0.018056,
+    0.009418,
+    0.00327,
+    0.000855,
+    0.00019,
+    3.2e-05
+   ],
+   [
+    0.006155,
+    0.00651,
+    0.003378,
+    0.001167,
+    0.000304,
+    6.4e-05,
+    1.2e-05
+   ]
+  ]
+ },
+ "confidence": {
+  "tier": "MODERATE",
+  "p_max": 0.6348924603323235,
+  "entropy_nats": 0.9066798657124933,
+  "text": "Most likely result has P = 63.5%. In the out-of-sample backtest, favourites priced 0.60\u20130.70 won 66.4% \u00b1 0.7% (n=4069, mean forecast 64.2%). Backtest RPS for F1: 0.2071; exact-score top-5 hit rate 45.4% (n=990). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: MODERATE (entropy 0.907 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Marseille: no lineup published yet \u2014 XI inferred from recent minutes share minus known absences; 200 configurations simulated (start P=0.7, UNVALIDATED prior).",
+  "Le Mans: no lineup published yet \u2014 XI inferred from recent minutes share minus known absences; 200 configurations simulated (start P=0.7, UNVALIDATED prior)."
+ ],
+ "verdict": "Marseille 2\u20131 Le Mans is the single most probable scoreline at 10.0%: expected goals 2.23\u20131.06 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.043). Exact scores are inherently uncertain; the 1X2 split is 63.5%/20.5%/16.0%.",
+ "resolved": {
+  "home_key": "France:Marseille",
+  "away_key": "France:Le Mans",
+  "div": "F1",
+  "home_div": "F1",
+  "away_div": "F1",
+  "country": "France"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: Le Mans FC at Olympique de Marseille\nCompetition: Ligue 1\nDate: 2026-11-22 14:45 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-11-20\n\nPRIMARY FINAL SCORE PREDICTION\n\nOlympique de Marseille 2 \u2013 1 Le Mans FC\n(modal exact score, probability 10.0%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 2.23\nAway: 1.06\nExpected Total: 3.29\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 63.5%\nDraw: 20.5%\nAway Win: 16.0%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 2\u20131: 10.0%\n2. 1\u20131: 9.5%\n3. 2\u20130: 9.3%\n4. 1\u20130: 7.9%\n5. 3\u20131: 7.4%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 15.1%\nTotal 2 goals: 20.7%\nTotal 3 goals: 22.3%\nTotal 4 goals: 18.6%\nTotal 5+ goals: 23.2%\n\nBoth Teams Score: 59.3%\nClean sheet Olympique de Marseille: 34.3% \u00b7 Clean sheet Le Mans FC: 10.1%\n\nMATCH INTELLIGENCE\n\n1. Marseille attack vs Le Mans defence: time-weighted strength gap multiplies Marseille's scoring rate by \u00d71.49 relative to an average pairing (from 31/22 decay-weighted matches).\n2. Independent results-only Elo: Marseille 1700 vs Le Mans 1449 (gap +252 before home advantage).\n3. Home advantage (France, fitted from results): \u00d71.18 on Marseille's scoring rate.\n\nMODEL CONFIDENCE\n\nMost likely result has P = 63.5%. In the out-of-sample backtest, favourites priced 0.60\u20130.70 won 66.4% \u00b1 0.7% (n=4069, mean forecast 64.2%). Backtest RPS for F1: 0.2071; exact-score top-5 hit rate 45.4% (n=990). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: MODERATE (entropy 0.907 nats of max 1.099).\nParameter-uncertainty 80% bands: xG Olympique de Marseille 1.68\u20132.84, xG Le Mans FC 0.78\u20131.37; P(home win) 50.2%\u201375.2%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0002 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nMarseille: INFERRED, fetched 2026-11-21 14:31 EST\n  Jeffrey De Lange (G), Amine Gouiri (F), CJ Egan-Riley (D), Timothy Weah (D), Igor Paix\u00e3o (F), Himad Abdelli (M), Amine Harit (F), Pierre-Emile H\u00f8jbjerg (M), Nayef Aguerd (D), Tochukwu Nnadi (M), Angel Gomes (F)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs +0.128 (log) \u00b7 continuity -1.08 \u00b7 P(backup GK) 26%\nLe Mans: INFERRED, fetched 2026-11-21 14:31 EST\n  Nicolas Kocik (G), Louis Mafouta (F), Lucas Bretelle (M), Samuel Yohou (D), Lucas Calodat (F), Harold Voyer (D), Lucas Buad\u00e9s (M), Jean Vercruysse (M), Dame Gueye (F), Rayan Bamba (D), Noa Boiss\u00e9 (D)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs -0.079 (log) \u00b7 continuity +0.28 \u00b7 P(backup GK) 28%\n\nKEY ABSENCES\n\n- Marseille: Emerson \u2014 injury, Late December 2026 [FotMob, 2026-11-21 14:31 EST]\n- Marseille: Derek Cornelius \u2014 injury, Early January 2027 [FotMob, 2026-11-21 14:31 EST]\n- Le Mans: Djibril Sidib\u00e9 \u2014 injury, Late January 2027 [FotMob, 2026-11-21 14:31 EST]\n- Le Mans: Th\u00e9o Eyoum \u2014 injury, Mid November 2026 [FotMob, 2026-11-21 14:31 EST]\n- Le Mans: Adil Bourabaa \u2014 injury, Early January 2027 [FotMob, 2026-11-21 14:31 EST]\n- Le Mans: Martin Rossignol \u2014 injury, Mid November 2026 [FotMob, 2026-11-21 14:31 EST]\n\nWEATHER AT VENUE\n\nCEPAC V\u00e9lodrome, Marseille: 14.3 \u00b0C, wind 7.1 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-11-21 14:31 EST]\n\nREST & TRAVEL\n\nMarseille: 14 days' rest, 2 matches in previous 21 days \u00b7 Le Mans: 14 days' rest, 1 in 21 days \u00b7 away travel 658.3 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 63.5% / 20.5% / 16.0%, xG 2.23\u20131.06\n- Understat xG component (validated, in ensemble): home -5.02 pp, draw +1.61 pp, away +3.41 pp; xG -0.062 / +0.156\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +1.00 pp, draw -0.56 pp, away -0.44 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- lineup: NOT APPLIED (failed out-of-sample validation); would have moved home +0.21 pp, draw -0.22 pp, away +0.01 pp\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Marseille: no lineup published yet \u2014 XI inferred from recent minutes share minus known absences; 200 configurations simulated (start P=0.7, UNVALIDATED prior).\n- Le Mans: no lineup published yet \u2014 XI inferred from recent minutes share minus known absences; 200 configurations simulated (start P=0.7, UNVALIDATED prior).\n\nFINAL VERDICT\n\nMarseille 2\u20131 Le Mans is the single most probable scoreline at 10.0%: expected goals 2.23\u20131.06 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.043). Exact scores are inherently uncertain; the 1X2 split is 63.5%/20.5%/16.0%.\n",
+ "refresh_id": "10fb35bf190945b5a6a15429caff6d70",
+ "frozen_at": "2026-11-21T19:31:41+00:00",
+ "sha256": "a7bb3e9c35064297c7c5dc2e47a8486945ff8e958ba7224fa5972be7e10adc29"
+}
