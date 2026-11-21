@@ -1,0 +1,591 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-11-20",
+ "input_fingerprint": "089f9cc4fd25f92ec445dbe63bd24c6d3710901e9f1c4bbab00c2c81fa97224f",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-11-21T11:18:38+00:00",
+ "fixture": {
+  "event_id": "POLY-1339840",
+  "home_name": "York City FC",
+  "away_name": "Walsall FC",
+  "competition": "League Two",
+  "subcategory": "el2",
+  "kickoff_utc": "2026-11-21T15:00:00+00:00",
+  "kickoff_local": "2026-11-21 10:00 EST",
+  "home_matched": "York",
+  "away_matched": "Walsall",
+  "match_methods": {
+   "home": {
+    "source": "York City FC",
+    "matched": "York",
+    "method": "alias",
+    "score": 1.0
+   },
+   "away": {
+    "source": "Walsall FC",
+    "matched": "Walsall",
+    "method": "core-tokens",
+    "score": 0.97
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.4879118094419464,
+  "p_draw": 0.2608318184719611,
+  "p_away": 0.2512563720860924,
+  "xg_home": 1.6527120535206221,
+  "xg_away": 1.134541975952811,
+  "xg_total": 2.7872540294734334,
+  "median_total": 3,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.1262823508474157
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.1262823508474157
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.09787355735511731
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.09662635610663607
+   },
+   {
+    "home": 2,
+    "away": 0,
+    "p": 0.0834925968939343
+   },
+   {
+    "home": 1,
+    "away": 2,
+    "p": 0.06603206976403665
+   }
+  ],
+  "btts": 0.5643907542197915,
+  "totals_over": {
+   "over_0.5": 0.9369559775810635,
+   "over_1.5": 0.7763486666728591,
+   "over_2.5": 0.5287924810876035,
+   "over_3.5": 0.3052472693871893,
+   "over_4.5": 0.14678171500481932,
+   "over_5.5": 0.061382507579766626,
+   "over_6.5": 0.022013151869348345
+  },
+  "total_buckets": {
+   "0-1": 0.22365133332714082,
+   "2": 0.24755618558525566,
+   "3": 0.22354521170041425,
+   "4": 0.15846555438236995,
+   "5+": 0.14678171500481932
+  },
+  "clean_sheet_home": 0.31497224796299444,
+  "clean_sheet_away": 0.18368102023615043,
+  "home_goal_dist": [
+   0.18368102023615043,
+   0.32185633302694466,
+   0.26726543205212355,
+   0.14470153746745637,
+   0.05798828589654339,
+   0.018384391471962625,
+   0.004808174187440225,
+   0.001314825661378749
+  ],
+  "away_goal_dist": [
+   0.31497224796299444,
+   0.37208565139909805,
+   0.20951025861632008,
+   0.07693744486719323,
+   0.020979055397641062,
+   0.004551255587747035,
+   0.0008191395604778769,
+   0.00014494660852827117
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    3
+   ],
+   "away_goals_80": [
+    0,
+    3
+   ],
+   "total_goals_80": [
+    1,
+    5
+   ],
+   "goal_diff_80": [
+    -1,
+    3
+   ]
+  },
+  "score_grid": [
+   [
+    0.063044,
+    0.063981,
+    0.037781,
+    0.014009,
+    0.003849,
+    0.000839,
+    0.000151
+   ],
+   [
+    0.096626,
+    0.126282,
+    0.066032,
+    0.024442,
+    0.006705,
+    0.001459,
+    0.000263
+   ],
+   [
+    0.083493,
+    0.097874,
+    0.058399,
+    0.020431,
+    0.005595,
+    0.001216,
+    0.000219
+   ],
+   [
+    0.045631,
+    0.053394,
+    0.03011,
+    0.011731,
+    0.003037,
+    0.000659,
+    0.000118
+   ],
+   [
+    0.018381,
+    0.02147,
+    0.012085,
+    0.00445,
+    0.001283,
+    0.000263,
+    4.7e-05
+   ],
+   [
+    0.005845,
+    0.006814,
+    0.003829,
+    0.001408,
+    0.000384,
+    8.8e-05,
+    1.5e-05
+   ],
+   [
+    0.001532,
+    0.001783,
+    0.001,
+    0.000367,
+    0.0001,
+    2.2e-05,
+    4e-06
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.488175,
+  "p_draw": 0.26004,
+  "p_away": 0.251785,
+  "se": [
+   0.0011177212742338762,
+   0.0009808649203636554,
+   0.0009705393185621075
+  ],
+  "max_abs_dev_vs_exact": 0.000791818471961081,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   1.3054560889000062,
+   2.0286076610549824
+  ],
+  "xg_away_80": [
+   0.8536560494409943,
+   1.4355765908796028
+  ],
+  "p_home_80": [
+   0.3871001598704395,
+   0.5944678772535696
+  ],
+  "p_draw_80": [
+   0.2204937820920082,
+   0.28392577354290227
+  ],
+  "p_away_80": [
+   0.17659922133755704,
+   0.34432236362285995
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.17476175042328623,
+   0.19290532388629014
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.46098358341145207,
+   "p_draw": 0.2577937086932201,
+   "p_away": 0.281222707895328,
+   "xg_home": 1.593234660949732,
+   "xg_away": 1.1950614107950646,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.5230732453183864,
+   "p_draw": 0.24387532415337365,
+   "p_away": 0.23305143052824004,
+   "xg_home": 1.6621273099277702,
+   "xg_away": 1.0235725869860077,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.4720576399534171,
+   "p_draw": 0.2676720871894931,
+   "p_away": 0.2602702728570898,
+   "xg_home": 1.5486410416139995,
+   "xg_away": 1.0896969556947078,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.4294041037230971,
+   "p_draw": 0.2634770492256478,
+   "p_away": 0.30711884705125503,
+   "xg_home": 1.4111691911969735,
+   "xg_away": 1.1510984913100706,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.46014330847060136,
+   "p_draw": 0.2574972270877038,
+   "p_away": 0.2823594644416948,
+   "xg_home": 1.5907999327284488,
+   "xg_away": 1.197087751682019,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Home advantage (England, fitted from results): \u00d71.23 on York's scoring rate.",
+   "effect": 0.2069
+  },
+  {
+   "text": "Independent results-only Elo: York 1292 vs Walsall 1192 (gap +100 before home advantage).",
+   "effect": 0.1496
+  },
+  {
+   "text": "Context \u2014 Understat xG component (validated, in ensemble): home win -3.0 pp, draw +0.7 pp, away win +2.3 pp (xG -0.03 / +0.08).",
+   "effect": 0.0915
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.4879118094419464,
+  "p_draw": 0.2608318184719611,
+  "p_away": 0.2512563720860924,
+  "xg_home": 1.6527120535206221,
+  "xg_away": 1.134541975952811
+ },
+ "context": {
+  "fetched_at": "2026-11-21T11:18:38+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5838050",
+    "fetched_at": "2026-11-21T11:18:38+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "3-4-2-1",
+    "starters": [
+     {
+      "name": "Alfie McNally",
+      "pos": "G",
+      "shirt": "1"
+     },
+     {
+      "name": "Ryan Fallowfield",
+      "pos": "D",
+      "shirt": "2"
+     },
+     {
+      "name": "Zak Johnson",
+      "pos": "D",
+      "shirt": "5"
+     },
+     {
+      "name": "Mark Kitching",
+      "pos": "D",
+      "shirt": "3"
+     },
+     {
+      "name": "Joe Felix",
+      "pos": "M",
+      "shirt": "23"
+     },
+     {
+      "name": "Arthur Read",
+      "pos": "M",
+      "shirt": "16"
+     },
+     {
+      "name": "Hiram Boateng",
+      "pos": "M",
+      "shirt": "21"
+     },
+     {
+      "name": "Harry Boyes",
+      "pos": "M",
+      "shirt": "12"
+     },
+     {
+      "name": "Oliver Banks",
+      "pos": "M",
+      "shirt": "28"
+     },
+     {
+      "name": "Alex Hunt",
+      "pos": "M",
+      "shirt": "8"
+     },
+     {
+      "name": "Ollie Pearce",
+      "pos": "F",
+      "shirt": "10"
+     }
+    ],
+    "fetched_at": "2026-11-21T11:18:38+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   },
+   "away": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "5-3-2",
+    "starters": [
+     {
+      "name": "Tom Wooster",
+      "pos": "G",
+      "shirt": "31"
+     },
+     {
+      "name": "Harrison Burke",
+      "pos": "D",
+      "shirt": "5"
+     },
+     {
+      "name": "James Connolly",
+      "pos": "D",
+      "shirt": "4"
+     },
+     {
+      "name": "Ryan Leak",
+      "pos": "D",
+      "shirt": "26"
+     },
+     {
+      "name": "Roman Dixon",
+      "pos": "D",
+      "shirt": "20"
+     },
+     {
+      "name": "James Furlong",
+      "pos": "D",
+      "shirt": "29"
+     },
+     {
+      "name": "Isaac Moore",
+      "pos": "M",
+      "shirt": "15"
+     },
+     {
+      "name": "Sven Sprangler",
+      "pos": "M",
+      "shirt": "6"
+     },
+     {
+      "name": "Ryan Sjoerdsma",
+      "pos": "M",
+      "shirt": "57"
+     },
+     {
+      "name": "Andrew Dallas",
+      "pos": "F",
+      "shirt": "9"
+     },
+     {
+      "name": "Tai Sodje",
+      "pos": "F",
+      "shirt": "7"
+     }
+    ],
+    "fetched_at": "2026-11-21T11:18:38+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   }
+  },
+  "absences": {
+   "home": [],
+   "away": []
+  },
+  "rest": {
+   "home": {
+    "rest_days": 7,
+    "n21": 2,
+    "last_match": "2026-11-14"
+   },
+   "away": {
+    "rest_days": 21,
+    "n21": 1,
+    "last_match": "2026-10-31"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 169.6
+  },
+  "venue": {
+   "name": "LNER Community Stadium",
+   "city": "York, North Yorkshire",
+   "lat": 53.98433,
+   "lon": -1.052936
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 0.8500000000000001,
+   "temp_c": 1.9,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=53.984&longitude=-1.053",
+   "fetched_at": "2026-11-21T11:18:39+00:00",
+   "lat": 53.98433,
+   "lon": -1.052936
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": -3.05,
+    "d_p_draw_pp": 0.72,
+    "d_p_away_pp": 2.34,
+    "d_xg_home": -0.033,
+    "d_xg_away": 0.083
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0154,
+    "away_rate_mult": 1.0065,
+    "d_p_home_pp": 0.44,
+    "d_p_draw_pp": -0.23,
+    "d_p_away_pp": -0.21,
+    "d_xg_home": 0.025,
+    "d_xg_away": 0.007,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 0.9994,
+    "away_rate_mult": 0.9994,
+    "d_p_home_pp": -0.01,
+    "d_p_draw_pp": 0.01,
+    "d_p_away_pp": -0.0,
+    "d_xg_home": -0.001,
+    "d_xg_away": -0.001,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "reason": "failed validation; no live features"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 7.0,
+   "rest_a": 21.0,
+   "n21_h": 2.0,
+   "n21_a": 1.0,
+   "travel_km": 169.64280958955402,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 0.8500000000000001,
+   "temp_c": 1.9
+  }
+ },
+ "lineup_simulation": {
+  "applied": false,
+  "basis": {
+   "home": "projected",
+   "away": "projected"
+  },
+  "reason": "No player ratings exist for this league, so the lineup and formation are shown but cannot change the probabilities."
+ },
+ "confidence": {
+  "tier": "LOW",
+  "p_max": 0.4879118094419464,
+  "entropy_nats": 1.047717858859123,
+  "text": "Most likely result has P = 48.8%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.3% \u00b1 0.4% (n=16754, mean forecast 44.6%). Backtest RPS for E3: 0.2217; exact-score top-5 hit rate 48.4% (n=1807). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: LOW (entropy 1.048 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "York: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "York: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.",
+  "Walsall: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Walsall: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+ ],
+ "verdict": "York 1\u20131 Walsall is the single most probable scoreline at 12.6%: expected goals 1.65\u20131.13 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.043). Exact scores are inherently uncertain; the 1X2 split is 48.8%/26.1%/25.1%.",
+ "resolved": {
+  "home_key": "England:York",
+  "away_key": "England:Walsall",
+  "div": "E3",
+  "home_div": "E3",
+  "away_div": "E3",
+  "country": "England"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: Walsall FC at York City FC\nCompetition: League Two\nDate: 2026-11-21 10:00 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-11-20\n\nPRIMARY FINAL SCORE PREDICTION\n\nYork City FC 1 \u2013 1 Walsall FC\n(modal exact score, probability 12.6%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.65\nAway: 1.13\nExpected Total: 2.79\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 48.8%\nDraw: 26.1%\nAway Win: 25.1%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 12.6%\n2. 2\u20131: 9.8%\n3. 1\u20130: 9.7%\n4. 2\u20130: 8.3%\n5. 1\u20132: 6.6%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 22.4%\nTotal 2 goals: 24.8%\nTotal 3 goals: 22.4%\nTotal 4 goals: 15.8%\nTotal 5+ goals: 14.7%\n\nBoth Teams Score: 56.4%\nClean sheet York City FC: 31.5% \u00b7 Clean sheet Walsall FC: 18.4%\n\nMATCH INTELLIGENCE\n\n1. Home advantage (England, fitted from results): \u00d71.23 on York's scoring rate.\n2. Independent results-only Elo: York 1292 vs Walsall 1192 (gap +100 before home advantage).\n3. Context \u2014 Understat xG component (validated, in ensemble): home win -3.0 pp, draw +0.7 pp, away win +2.3 pp (xG -0.03 / +0.08).\n\nMODEL CONFIDENCE\n\nMost likely result has P = 48.8%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.3% \u00b1 0.4% (n=16754, mean forecast 44.6%). Backtest RPS for E3: 0.2217; exact-score top-5 hit rate 48.4% (n=1807). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: LOW (entropy 1.048 nats of max 1.099).\nParameter-uncertainty 80% bands: xG York City FC 1.31\u20132.03, xG Walsall FC 0.85\u20131.44; P(home win) 38.7%\u201359.4%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0008 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nYork: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-11-21 06:18 EST (3-4-2-1)\n  Alfie McNally (G), Ryan Fallowfield (D), Zak Johnson (D), Mark Kitching (D), Joe Felix (M), Arthur Read (M), Hiram Boateng (M), Harry Boyes (M), Oliver Banks (M), Alex Hunt (M), Ollie Pearce (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\nWalsall: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-11-21 06:18 EST (5-3-2)\n  Tom Wooster (G), Harrison Burke (D), James Connolly (D), Ryan Leak (D), Roman Dixon (D), James Furlong (D), Isaac Moore (M), Sven Sprangler (M), Ryan Sjoerdsma (M), Andrew Dallas (F), Tai Sodje (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nKEY ABSENCES\n\n- None listed by the sources.\n\nWEATHER AT VENUE\n\nLNER Community Stadium, York, North Yorkshire: 1.9 \u00b0C, wind 0.9 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-11-21 06:18 EST]\n\nREST & TRAVEL\n\nYork: 7 days' rest, 2 matches in previous 21 days \u00b7 Walsall: 21 days' rest, 1 in 21 days \u00b7 away travel 169.6 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 48.8% / 26.1% / 25.1%, xG 1.65\u20131.13\n- Understat xG component (validated, in ensemble): home -3.05 pp, draw +0.72 pp, away +2.34 pp; xG -0.033 / +0.083\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.44 pp, draw -0.23 pp, away -0.21 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home -0.01 pp, draw +0.01 pp, away -0.00 pp\n- lineup: not applied (failed validation; no live features)\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- York: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- York: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n- Walsall: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Walsall: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nFINAL VERDICT\n\nYork 1\u20131 Walsall is the single most probable scoreline at 12.6%: expected goals 1.65\u20131.13 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.043). Exact scores are inherently uncertain; the 1X2 split is 48.8%/26.1%/25.1%.\n",
+ "refresh_id": "d97e3c2004794b0599ef5066a3c035f1",
+ "frozen_at": "2026-11-21T11:18:39+00:00",
+ "sha256": "f15b8d2bdf3680b9e5bb5567c2dd28f79e37ee08ef73540b2ae3e0b367fcee80"
+}
