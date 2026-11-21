@@ -1,0 +1,751 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-11-20",
+ "input_fingerprint": "089f9cc4fd25f92ec445dbe63bd24c6d3710901e9f1c4bbab00c2c81fa97224f",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-11-20T23:57:56+00:00",
+ "fixture": {
+  "event_id": "POLY-1337892",
+  "home_name": "AS Monaco FC",
+  "away_name": "AJ Auxerre",
+  "competition": "Ligue 1",
+  "subcategory": "fl1",
+  "kickoff_utc": "2026-11-21T19:45:00+00:00",
+  "kickoff_local": "2026-11-21 14:45 EST",
+  "home_matched": "Monaco",
+  "away_matched": "Auxerre",
+  "match_methods": {
+   "home": {
+    "source": "AS Monaco FC",
+    "matched": "Monaco",
+    "method": "core-tokens",
+    "score": 0.97
+   },
+   "away": {
+    "source": "AJ Auxerre",
+    "matched": "Auxerre",
+    "method": "core-tokens",
+    "score": 0.97
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.5767899635779354,
+  "p_draw": 0.23192138681471747,
+  "p_away": 0.19128864960734723,
+  "xg_home": 1.9570288366896567,
+  "xg_away": 1.0640237894853588,
+  "xg_total": 3.0210526261750155,
+  "median_total": 3,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.11071373233428604
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.11071373233428604
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.10236220209363346
+   },
+   {
+    "home": 2,
+    "away": 0,
+    "p": 0.09284648042883416
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.0903993233725622
+   },
+   {
+    "home": 3,
+    "away": 1,
+    "p": 0.06657647013337716
+   }
+  ],
+  "btts": 0.5780408348661396,
+  "totals_over": {
+   "over_0.5": 0.9503543334596977,
+   "over_1.5": 0.8132862998333046,
+   "over_2.5": 0.5838502918670911,
+   "over_3.5": 0.35814331585347603,
+   "over_4.5": 0.18467036844625298,
+   "over_5.5": 0.08290950766200714,
+   "over_6.5": 0.03209662222042335
+  },
+  "total_buckets": {
+   "0-1": 0.18671370016669567,
+   "2": 0.22943600796621338,
+   "3": 0.225706976013615,
+   "4": 0.17347294740722308,
+   "5+": 0.18467036844625298
+  },
+  "clean_sheet_home": 0.33772681119185144,
+  "clean_sheet_away": 0.13387802048231168,
+  "home_goal_dist": [
+   0.13387802048231168,
+   0.27958420401322986,
+   0.2767513916961746,
+   0.1786997700602642,
+   0.0853799634422958,
+   0.032251562856612584,
+   0.0100440038992527,
+   0.003411083549858793
+  ],
+  "away_goal_dist": [
+   0.33772681119185144,
+   0.37531250210322264,
+   0.1981069397382601,
+   0.06772551560424699,
+   0.01707209620394576,
+   0.0034056063445878147,
+   0.0005611871267597552,
+   8.934168712572784e-05
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    4
+   ],
+   "away_goals_80": [
+    0,
+    2
+   ],
+   "total_goals_80": [
+    1,
+    5
+   ],
+   "goal_diff_80": [
+    -1,
+    3
+   ]
+  },
+  "score_grid": [
+   [
+    0.049646,
+    0.046669,
+    0.025876,
+    0.008896,
+    0.002255,
+    0.000451,
+    7.4e-05
+   ],
+   [
+    0.090399,
+    0.110714,
+    0.054058,
+    0.018582,
+    0.004709,
+    0.000942,
+    0.000155
+   ],
+   [
+    0.092846,
+    0.102362,
+    0.057122,
+    0.018588,
+    0.00471,
+    0.000942,
+    0.000155
+   ],
+   [
+    0.060392,
+    0.066576,
+    0.035172,
+    0.012767,
+    0.003063,
+    0.000613,
+    0.000101
+   ],
+   [
+    0.028938,
+    0.0319,
+    0.016852,
+    0.005791,
+    0.00155,
+    0.000293,
+    4.8e-05
+   ],
+   [
+    0.01094,
+    0.012059,
+    0.00637,
+    0.002189,
+    0.000555,
+    0.000117,
+    1.8e-05
+   ],
+   [
+    0.003408,
+    0.003756,
+    0.001984,
+    0.000682,
+    0.000173,
+    3.5e-05,
+    6e-06
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.5753550000000001,
+  "p_draw": 0.23367999999999997,
+  "p_away": 0.190965,
+  "se": [
+   0.001105263823652525,
+   0.0009462390226575946,
+   0.0008789123072724604
+  ],
+  "max_abs_dev_vs_exact": 0.0017586131852825038,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   1.5162538253518334,
+   2.4370608567478436
+  ],
+  "xg_away_80": [
+   0.7915966272160053,
+   1.3572163909722978
+  ],
+  "p_home_80": [
+   0.45938851288130433,
+   0.6897918603034889
+  ],
+  "p_draw_80": [
+   0.18274604417182008,
+   0.2671261317848541
+  ],
+  "p_away_80": [
+   0.12413654005139661,
+   0.2792072400058061
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.18814365380903064,
+   0.20008487021829788
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.5620709364582284,
+   "p_draw": 0.22976148805726462,
+   "p_away": 0.2081675754845071,
+   "xg_home": 1.9184119897083038,
+   "xg_away": 1.0910223504884244,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.5829497769365739,
+   "p_draw": 0.21989746862828416,
+   "p_away": 0.19715275443514196,
+   "xg_home": 1.9164874428680623,
+   "xg_away": 1.0198342529487447,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.5427005418138398,
+   "p_draw": 0.24093845904342717,
+   "p_away": 0.21636099914273313,
+   "xg_home": 1.832254428342819,
+   "xg_away": 1.083272298859684,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.44656628343789845,
+   "p_draw": 0.24508439946811447,
+   "p_away": 0.30834931709398716,
+   "xg_home": 1.5986635883742164,
+   "xg_away": 1.2885559786529155,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.5653495587006137,
+   "p_draw": 0.22958704629684637,
+   "p_away": 0.20506339500254006,
+   "xg_home": 1.9133325547397426,
+   "xg_away": 1.073099508735526,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Monaco attack vs Auxerre defence: time-weighted strength gap multiplies Monaco's scoring rate by \u00d71.35 relative to an average pairing (from 33/29 decay-weighted matches).",
+   "effect": 0.3016
+  },
+  {
+   "text": "Independent results-only Elo: Monaco 1689 vs Auxerre 1539 (gap +150 before home advantage).",
+   "effect": 0.225
+  },
+  {
+   "text": "Home advantage (France, fitted from results): \u00d71.18 on Monaco's scoring rate.",
+   "effect": 0.1635
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.5767899635779354,
+  "p_draw": 0.23192138681471747,
+  "p_away": 0.19128864960734723,
+  "xg_home": 1.9570288366896567,
+  "xg_away": 1.0640237894853588
+ },
+ "context": {
+  "fetched_at": "2026-11-20T23:57:56+00:00",
+  "families_applied": [],
+  "flags": [
+   "Weather: no forecast yet (Open-Meteo covers the next 16 days) or venue unknown."
+  ],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5802995",
+    "fetched_at": "2026-11-20T23:57:56+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "inferred",
+    "source": null,
+    "formation": null,
+    "starters": [
+     {
+      "name": "Luk\u00e1s Hr\u00e1decky",
+      "pos": "G"
+     },
+     {
+      "name": "Lamine Camara",
+      "pos": "M"
+     },
+     {
+      "name": "Sadibou San\u00e9",
+      "pos": "D"
+     },
+     {
+      "name": "Vanderson",
+      "pos": "D"
+     },
+     {
+      "name": "Fl\u00e1vio Nazinho",
+      "pos": "D"
+     },
+     {
+      "name": "Denis Zakaria",
+      "pos": "M"
+     },
+     {
+      "name": "Eric Dier",
+      "pos": "D"
+     },
+     {
+      "name": "Matthis Abline",
+      "pos": "F"
+     },
+     {
+      "name": "Paris Brunner",
+      "pos": "F"
+     },
+     {
+      "name": "Mathys Detourbet",
+      "pos": "F"
+     },
+     {
+      "name": "Mamadou Coulibaly",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-11-20T23:57:56+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [],
+    "mean_xi_attack_index": 0.019,
+    "mean_continuity": -1.273,
+    "p_backup_gk": 0.3
+   },
+   "away": {
+    "status": "inferred",
+    "source": null,
+    "formation": null,
+    "starters": [
+     {
+      "name": "Paul Nardi",
+      "pos": "G"
+     },
+     {
+      "name": "K\u00e9vin Danois",
+      "pos": "M"
+     },
+     {
+      "name": "Cl\u00e9ment Akpa",
+      "pos": "D"
+     },
+     {
+      "name": "Lamine Sy",
+      "pos": "M"
+     },
+     {
+      "name": "Cameron Archer",
+      "pos": "F"
+     },
+     {
+      "name": "Fredrik Oppeg\u00e5rd",
+      "pos": "D"
+     },
+     {
+      "name": "Romain Faivre",
+      "pos": "M"
+     },
+     {
+      "name": "Naouirou Ahamada",
+      "pos": "M"
+     },
+     {
+      "name": "Axel Tuanzebe",
+      "pos": "D"
+     },
+     {
+      "name": "Christ Makosso",
+      "pos": "D"
+     },
+     {
+      "name": "Arthur Piedfort",
+      "pos": "D"
+     }
+    ],
+    "fetched_at": "2026-11-20T23:57:56+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [],
+    "mean_xi_attack_index": -0.243,
+    "mean_continuity": -1.067,
+    "p_backup_gk": 0.325
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Aleksandr Golovin",
+     "type": "injury",
+     "expected_return": "A few weeks",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5802995",
+     "fetched_at": "2026-11-20T23:57:56+00:00"
+    },
+    {
+     "player": "Ansu Fati",
+     "type": "injury",
+     "expected_return": "Late December 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5802995",
+     "fetched_at": "2026-11-20T23:57:56+00:00"
+    },
+    {
+     "player": "Stanis Idumbo",
+     "type": "injury",
+     "expected_return": "About 1-2 weeks",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5802995",
+     "fetched_at": "2026-11-20T23:57:56+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "Danny Namaso",
+     "type": "injury",
+     "expected_return": "Early December 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5802995",
+     "fetched_at": "2026-11-20T23:57:56+00:00"
+    },
+    {
+     "player": "Assane Diouss\u00e9",
+     "type": "injury",
+     "expected_return": "Early May 2027",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5802995",
+     "fetched_at": "2026-11-20T23:57:56+00:00"
+    },
+    {
+     "player": "S\u00e9kou Fofana",
+     "type": "injury",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5802995",
+     "fetched_at": "2026-11-20T23:57:56+00:00"
+    },
+    {
+     "player": "Bryan Okoh",
+     "type": "injury",
+     "expected_return": "Late January 2027",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5802995",
+     "fetched_at": "2026-11-20T23:57:56+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 13,
+    "n21": 2,
+    "last_match": "2026-11-08"
+   },
+   "away": {
+    "rest_days": 14,
+    "n21": 2,
+    "last_match": "2026-11-07"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 540.1
+  },
+  "venue": {
+   "name": "Stade Louis-II",
+   "city": "Monaco",
+   "lat": 43.727563789,
+   "lon": 7.415542156
+  },
+  "weather": null,
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": -0.81,
+    "d_p_draw_pp": 0.47,
+    "d_p_away_pp": 0.34,
+    "d_xg_home": -0.001,
+    "d_xg_away": 0.024
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.029,
+    "away_rate_mult": 1.0122,
+    "d_p_home_pp": 0.9,
+    "d_p_draw_pp": -0.5,
+    "d_p_away_pp": -0.41,
+    "d_xg_home": 0.055,
+    "d_xg_away": 0.013,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "home_rate_mult": 1.0026,
+    "away_rate_mult": 0.9403,
+    "d_p_home_pp": 1.56,
+    "d_p_draw_pp": -0.23,
+    "d_p_away_pp": -1.33,
+    "d_xg_home": 0.005,
+    "d_xg_away": -0.061,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 13.0,
+   "rest_a": 14.0,
+   "n21_h": 2.0,
+   "n21_a": 2.0,
+   "travel_km": 540.1079246369342,
+   "neutral": 0.0,
+   "precip_mm_2h": null,
+   "wind_ms": null,
+   "temp_c": null
+  }
+ },
+ "lineup_simulation": {
+  "applied": true,
+  "validated": false,
+  "scale": 0.5,
+  "basis": {
+   "home": "inferred",
+   "away": "inferred"
+  },
+  "home_rate_mult": 1.0013,
+  "away_rate_mult": 0.9697,
+  "note": "Starting-XI strength, continuity and backup-keeper adjustment at half the fitted size. It did not pass the out-of-sample test, so bets are not priced from it.",
+  "p_home": 0.5847236272412661,
+  "p_draw": 0.23086334672852976,
+  "p_away": 0.18441302603020382,
+  "xg_home": 1.9594618805240755,
+  "xg_away": 1.0330375750488008,
+  "xg_total": 2.9924994555728763,
+  "btts": 0.5685811468324369,
+  "totals_over": {
+   "over_0.5": 0.9488609288736852,
+   "over_1.5": 0.8090218467230706,
+   "over_2.5": 0.5773711638594127,
+   "over_3.5": 0.3516376467944977,
+   "over_4.5": 0.17989306312140155,
+   "over_5.5": 0.08008372423464728,
+   "over_6.5": 0.030740813803973633
+  },
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.11069746608636262
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.11069746608636262
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.10246675488021266
+   },
+   {
+    "home": 2,
+    "away": 0,
+    "p": 0.09587175077267764
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.09321674639698106
+   },
+   {
+    "home": 3,
+    "away": 1,
+    "p": 0.06674378978413759
+   }
+  ],
+  "score_grid": [
+   [
+    0.051139,
+    0.046622,
+    0.025081,
+    0.00837,
+    0.00206,
+    0.000401,
+    6.4e-05
+   ],
+   [
+    0.093217,
+    0.110697,
+    0.052432,
+    0.017491,
+    0.004304,
+    0.000837,
+    0.000134
+   ],
+   [
+    0.095872,
+    0.102467,
+    0.055457,
+    0.01751,
+    0.004307,
+    0.000837,
+    0.000134
+   ],
+   [
+    0.062465,
+    0.066744,
+    0.034191,
+    0.01204,
+    0.002803,
+    0.000544,
+    8.7e-05
+   ],
+   [
+    0.029992,
+    0.032038,
+    0.016408,
+    0.005469,
+    0.00142,
+    0.000261,
+    4.2e-05
+   ],
+   [
+    0.011365,
+    0.012137,
+    0.006214,
+    0.002071,
+    0.000509,
+    0.000104,
+    1.6e-05
+   ],
+   [
+    0.00355,
+    0.00379,
+    0.00194,
+    0.000646,
+    0.000159,
+    3.1e-05,
+    5e-06
+   ]
+  ]
+ },
+ "confidence": {
+  "tier": "MODERATE",
+  "p_max": 0.5767899635779354,
+  "entropy_nats": 0.972700223821622,
+  "text": "Most likely result has P = 57.7%. In the out-of-sample backtest, favourites priced 0.50\u20130.60 won 53.9% \u00b1 0.5% (n=9522, mean forecast 54.4%). Backtest RPS for F1: 0.2071; exact-score top-5 hit rate 45.4% (n=990). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: MODERATE (entropy 0.973 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Monaco: no lineup published yet \u2014 XI inferred from recent minutes share minus known absences; 200 configurations simulated (start P=0.7, UNVALIDATED prior).",
+  "Auxerre: no lineup published yet \u2014 XI inferred from recent minutes share minus known absences; 200 configurations simulated (start P=0.7, UNVALIDATED prior).",
+  "Weather: no forecast yet (Open-Meteo covers the next 16 days) or venue unknown."
+ ],
+ "verdict": "Monaco 1\u20131 Auxerre is the single most probable scoreline at 11.1%: expected goals 1.96\u20131.06 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.043). Exact scores are inherently uncertain; the 1X2 split is 57.7%/23.2%/19.1%.",
+ "resolved": {
+  "home_key": "France:Monaco",
+  "away_key": "France:Auxerre",
+  "div": "F1",
+  "home_div": "F1",
+  "away_div": "F1",
+  "country": "France"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: AJ Auxerre at AS Monaco FC\nCompetition: Ligue 1\nDate: 2026-11-21 14:45 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-11-20\n\nPRIMARY FINAL SCORE PREDICTION\n\nAS Monaco FC 1 \u2013 1 AJ Auxerre\n(modal exact score, probability 11.1%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.96\nAway: 1.06\nExpected Total: 3.02\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 57.7%\nDraw: 23.2%\nAway Win: 19.1%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 11.1%\n2. 2\u20131: 10.2%\n3. 2\u20130: 9.3%\n4. 1\u20130: 9.0%\n5. 3\u20131: 6.7%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 18.7%\nTotal 2 goals: 22.9%\nTotal 3 goals: 22.6%\nTotal 4 goals: 17.3%\nTotal 5+ goals: 18.5%\n\nBoth Teams Score: 57.8%\nClean sheet AS Monaco FC: 33.8% \u00b7 Clean sheet AJ Auxerre: 13.4%\n\nMATCH INTELLIGENCE\n\n1. Monaco attack vs Auxerre defence: time-weighted strength gap multiplies Monaco's scoring rate by \u00d71.35 relative to an average pairing (from 33/29 decay-weighted matches).\n2. Independent results-only Elo: Monaco 1689 vs Auxerre 1539 (gap +150 before home advantage).\n3. Home advantage (France, fitted from results): \u00d71.18 on Monaco's scoring rate.\n\nMODEL CONFIDENCE\n\nMost likely result has P = 57.7%. In the out-of-sample backtest, favourites priced 0.50\u20130.60 won 53.9% \u00b1 0.5% (n=9522, mean forecast 54.4%). Backtest RPS for F1: 0.2071; exact-score top-5 hit rate 45.4% (n=990). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: MODERATE (entropy 0.973 nats of max 1.099).\nParameter-uncertainty 80% bands: xG AS Monaco FC 1.52\u20132.44, xG AJ Auxerre 0.79\u20131.36; P(home win) 45.9%\u201369.0%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0018 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nMonaco: INFERRED, fetched 2026-11-20 18:57 EST\n  Luk\u00e1s Hr\u00e1decky (G), Lamine Camara (M), Sadibou San\u00e9 (D), Vanderson (D), Fl\u00e1vio Nazinho (D), Denis Zakaria (M), Eric Dier (D), Matthis Abline (F), Paris Brunner (F), Mathys Detourbet (F), Mamadou Coulibaly (F)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs +0.019 (log) \u00b7 continuity -1.27 \u00b7 P(backup GK) 30%\nAuxerre: INFERRED, fetched 2026-11-20 18:57 EST\n  Paul Nardi (G), K\u00e9vin Danois (M), Cl\u00e9ment Akpa (D), Lamine Sy (M), Cameron Archer (F), Fredrik Oppeg\u00e5rd (D), Romain Faivre (M), Naouirou Ahamada (M), Axel Tuanzebe (D), Christ Makosso (D), Arthur Piedfort (D)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs -0.243 (log) \u00b7 continuity -1.07 \u00b7 P(backup GK) 32%\n\nKEY ABSENCES\n\n- Monaco: Aleksandr Golovin \u2014 injury, A few weeks [FotMob, 2026-11-20 18:57 EST]\n- Monaco: Ansu Fati \u2014 injury, Late December 2026 [FotMob, 2026-11-20 18:57 EST]\n- Monaco: Stanis Idumbo \u2014 injury, About 1-2 weeks [FotMob, 2026-11-20 18:57 EST]\n- Auxerre: Danny Namaso \u2014 injury, Early December 2026 [FotMob, 2026-11-20 18:57 EST]\n- Auxerre: Assane Diouss\u00e9 \u2014 injury, Early May 2027 [FotMob, 2026-11-20 18:57 EST]\n- Auxerre: S\u00e9kou Fofana \u2014 injury, Mid November 2026 [FotMob, 2026-11-20 18:57 EST]\n- Auxerre: Bryan Okoh \u2014 injury, Late January 2027 [FotMob, 2026-11-20 18:57 EST]\n\nWEATHER AT VENUE\n\nStade Louis-II, Monaco: no forecast available yet.\n\nREST & TRAVEL\n\nMonaco: 13 days' rest, 2 matches in previous 21 days \u00b7 Auxerre: 14 days' rest, 2 in 21 days \u00b7 away travel 540.1 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 57.7% / 23.2% / 19.1%, xG 1.96\u20131.06\n- Understat xG component (validated, in ensemble): home -0.81 pp, draw +0.47 pp, away +0.34 pp; xG -0.001 / +0.024\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.90 pp, draw -0.50 pp, away -0.41 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- lineup: NOT APPLIED (failed out-of-sample validation); would have moved home +1.56 pp, draw -0.23 pp, away -1.33 pp\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Monaco: no lineup published yet \u2014 XI inferred from recent minutes share minus known absences; 200 configurations simulated (start P=0.7, UNVALIDATED prior).\n- Auxerre: no lineup published yet \u2014 XI inferred from recent minutes share minus known absences; 200 configurations simulated (start P=0.7, UNVALIDATED prior).\n- Weather: no forecast yet (Open-Meteo covers the next 16 days) or venue unknown.\n\nFINAL VERDICT\n\nMonaco 1\u20131 Auxerre is the single most probable scoreline at 11.1%: expected goals 1.96\u20131.06 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.043). Exact scores are inherently uncertain; the 1X2 split is 57.7%/23.2%/19.1%.\n",
+ "refresh_id": "be2567478c8041ec9dab9e1ef939a26d",
+ "frozen_at": "2026-11-20T23:58:05+00:00",
+ "sha256": "b793ae779a04757622b4b62be62e4616344ad9127161c288169bbcdbe244215c"
+}
