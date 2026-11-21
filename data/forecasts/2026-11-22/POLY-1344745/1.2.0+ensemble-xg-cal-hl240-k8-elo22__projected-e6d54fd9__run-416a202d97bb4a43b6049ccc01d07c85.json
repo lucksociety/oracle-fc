@@ -1,0 +1,809 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-11-20",
+ "input_fingerprint": "089f9cc4fd25f92ec445dbe63bd24c6d3710901e9f1c4bbab00c2c81fa97224f",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-11-21T05:36:10+00:00",
+ "fixture": {
+  "event_id": "POLY-1344745",
+  "home_name": "AC Milan",
+  "away_name": "Frosinone Calcio",
+  "competition": "Serie A",
+  "subcategory": "sea",
+  "kickoff_utc": "2026-11-22T17:00:00+00:00",
+  "kickoff_local": "2026-11-22 12:00 EST",
+  "home_matched": "Milan",
+  "away_matched": "Frosinone",
+  "match_methods": {
+   "home": {
+    "source": "AC Milan",
+    "matched": "Milan",
+    "method": "core-tokens",
+    "score": 0.97
+   },
+   "away": {
+    "source": "Frosinone Calcio",
+    "matched": "Frosinone",
+    "method": "core-tokens",
+    "score": 0.97
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.5612566217247585,
+  "p_draw": 0.23795333744221597,
+  "p_away": 0.20079004083302546,
+  "xg_home": 1.9080472750564614,
+  "xg_away": 1.079083662481605,
+  "xg_total": 2.9871309375380664,
+  "median_total": 3,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.11251333560376157
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.11251333560376157
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.10043006693014075
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.09283878545895155
+   },
+   {
+    "home": 2,
+    "away": 0,
+    "p": 0.09062218833807786
+   },
+   {
+    "home": 3,
+    "away": 1,
+    "p": 0.06367514147977253
+   }
+  ],
+  "btts": 0.5753096864195638,
+  "totals_over": {
+   "over_0.5": 0.9463190001429223,
+   "over_1.5": 0.8032833341309238,
+   "over_2.5": 0.5726777677923891,
+   "over_3.5": 0.35067997149685404,
+   "over_4.5": 0.18181116124593794,
+   "over_5.5": 0.08276866235969091,
+   "over_6.5": 0.0327583390003544
+  },
+  "total_buckets": {
+   "0-1": 0.19671666586907632,
+   "2": 0.2306055663385346,
+   "3": 0.22199779629553507,
+   "4": 0.16886881025091613,
+   "5+": 0.18181116124593794
+  },
+  "clean_sheet_home": 0.3345122271896618,
+  "clean_sheet_away": 0.14385908624785235,
+  "home_goal_dist": [
+   0.14385908624785235,
+   0.2861775008756589,
+   0.27323975886710805,
+   0.17213404899891996,
+   0.08112764222946152,
+   0.03055235835581009,
+   0.009580499809466849,
+   0.0033291046157223115
+  ],
+  "away_goal_dist": [
+   0.3345122271896618,
+   0.37300658266037695,
+   0.19967554751876332,
+   0.06997225758642417,
+   0.018258141509241276,
+   0.0038032642178603094,
+   0.0006596461321170561,
+   0.00011233318555518936
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    4
+   ],
+   "away_goals_80": [
+    0,
+    2
+   ],
+   "total_goals_80": [
+    1,
+    5
+   ],
+   "goal_diff_80": [
+    -1,
+    3
+   ]
+  },
+  "score_grid": [
+   [
+    0.053681,
+    0.050197,
+    0.02747,
+    0.009477,
+    0.002436,
+    0.000499,
+    8.5e-05
+   ],
+   [
+    0.092839,
+    0.112513,
+    0.055282,
+    0.019286,
+    0.005011,
+    0.001038,
+    0.000179
+   ],
+   [
+    0.090622,
+    0.10043,
+    0.056931,
+    0.01901,
+    0.004991,
+    0.001044,
+    0.000181
+   ],
+   [
+    0.05681,
+    0.063675,
+    0.034551,
+    0.013005,
+    0.003264,
+    0.000689,
+    0.000121
+   ],
+   [
+    0.026541,
+    0.030078,
+    0.016491,
+    0.005934,
+    0.001676,
+    0.000337,
+    6e-05
+   ],
+   [
+    0.009894,
+    0.011329,
+    0.006272,
+    0.002277,
+    0.000614,
+    0.000139,
+    2.3e-05
+   ],
+   [
+    0.003071,
+    0.003551,
+    0.001984,
+    0.000726,
+    0.000197,
+    4.2e-05,
+    8e-06
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.561445,
+  "p_draw": 0.23817,
+  "p_away": 0.20038499999999998,
+  "se": [
+   0.0011095596242992082,
+   0.0009524837297822992,
+   0.0008950722087491042
+  ],
+  "max_abs_dev_vs_exact": 0.00040504083302547733,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   1.4568557905290676,
+   2.4016567781306843
+  ],
+  "xg_away_80": [
+   0.8139756981776606,
+   1.3629427680667285
+  ],
+  "p_home_80": [
+   0.4415822859949455,
+   0.6763776410396264
+  ],
+  "p_draw_80": [
+   0.18611055716922878,
+   0.2727474745873908
+  ],
+  "p_away_80": [
+   0.13241772559305753,
+   0.28936675240070864
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.19818547610084852,
+   0.19130113824762163
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.5516133767507403,
+   "p_draw": 0.23330372129251356,
+   "p_away": 0.21508290195674595,
+   "xg_home": 1.880736552159252,
+   "xg_away": 1.0995080372400856,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.5405926909523109,
+   "p_draw": 0.24469735391796485,
+   "p_away": 0.21470995512972424,
+   "xg_home": 1.6537000006910159,
+   "xg_away": 0.9434982261558335,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.5385440311979008,
+   "p_draw": 0.24720730678817146,
+   "p_away": 0.2142486620139275,
+   "xg_home": 1.7642006465575262,
+   "xg_away": 1.033772017817891,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.3920297358330217,
+   "p_draw": 0.2669524536061198,
+   "p_away": 0.34101781056085867,
+   "xg_home": 1.324898515616634,
+   "xg_away": 1.2170432333835435,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.5734110939050174,
+   "p_draw": 0.21895883284782747,
+   "p_away": 0.20763007324715488,
+   "xg_home": 2.049046132690533,
+   "xg_away": 1.1659931323690738,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Milan attack vs Frosinone defence: time-weighted strength gap multiplies Milan's scoring rate by \u00d71.34 relative to an average pairing (from 34/32 decay-weighted matches).",
+   "effect": 0.2893
+  },
+  {
+   "text": "Independent results-only Elo: Milan 1747 vs Frosinone 1602 (gap +145 before home advantage).",
+   "effect": 0.2174
+  },
+  {
+   "text": "Home advantage (Italy, fitted from results): \u00d71.17 on Milan's scoring rate.",
+   "effect": 0.156
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.5612566217247585,
+  "p_draw": 0.23795333744221597,
+  "p_away": 0.20079004083302546,
+  "xg_home": 1.9080472750564614,
+  "xg_away": 1.079083662481605
+ },
+ "context": {
+  "fetched_at": "2026-11-21T05:36:10+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5749750",
+    "fetched_at": "2026-11-21T05:36:10+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "projected",
+    "source": "FotMob projected XI (enetpulse)",
+    "formation": "3-4-3",
+    "starters": [
+     {
+      "name": "Leo Paul Bouyer",
+      "pos": "G",
+      "shirt": "41"
+     },
+     {
+      "name": "Mario Gila",
+      "pos": "D",
+      "shirt": "34"
+     },
+     {
+      "name": "Koni De Winter",
+      "pos": "D",
+      "shirt": "5"
+     },
+     {
+      "name": "Sankhoun Diawara",
+      "pos": "D",
+      "shirt": "13"
+     },
+     {
+      "name": "Diego Moreira",
+      "pos": "F",
+      "shirt": "22"
+     },
+     {
+      "name": "Luka Modri\u0107",
+      "pos": "M",
+      "shirt": "14"
+     },
+     {
+      "name": "Adrien Rabiot",
+      "pos": "M",
+      "shirt": "12"
+     },
+     {
+      "name": "Yunus Musah",
+      "pos": "M",
+      "shirt": "80"
+     },
+     {
+      "name": "Christian Pulisic",
+      "pos": "F",
+      "shirt": "11"
+     },
+     {
+      "name": "Gon\u00e7alo Ramos",
+      "pos": "F",
+      "shirt": "9"
+     },
+     {
+      "name": "Alphadjo Ciss\u00e8",
+      "pos": "M",
+      "shirt": "70"
+     }
+    ],
+    "fetched_at": "2026-11-21T05:36:10+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [
+     "Leo Paul Bouyer"
+    ],
+    "mean_xi_attack_index": -0.016,
+    "mean_continuity": -0.522,
+    "p_backup_gk": 0.825
+   },
+   "away": {
+    "status": "projected",
+    "source": "FotMob projected XI (enetpulse)",
+    "formation": "4-2-3-1",
+    "starters": [
+     {
+      "name": "Lorenzo Palmisani",
+      "pos": "G",
+      "shirt": "22"
+     },
+     {
+      "name": "Anthony Oyono",
+      "pos": "D",
+      "shirt": "20"
+     },
+     {
+      "name": "Gabriele Calvani",
+      "pos": "D",
+      "shirt": "3"
+     },
+     {
+      "name": "Ilario Monterisi",
+      "pos": "D",
+      "shirt": "30"
+     },
+     {
+      "name": "Kevin Akpoguma",
+      "pos": "D",
+      "shirt": "25"
+     },
+     {
+      "name": "Matteo Cichella",
+      "pos": "M",
+      "shirt": "16"
+     },
+     {
+      "name": "Giacomo Cal\u00f2",
+      "pos": "M",
+      "shirt": "14"
+     },
+     {
+      "name": "Far\u00e8s Ghedjemis",
+      "pos": "F",
+      "shirt": "7"
+     },
+     {
+      "name": "Romano Schmid",
+      "pos": "M",
+      "shirt": "10"
+     },
+     {
+      "name": "Giorgi Kvernadze",
+      "pos": "F",
+      "shirt": "17"
+     },
+     {
+      "name": "Daniel B\u00eerligea",
+      "pos": "F",
+      "shirt": "11"
+     }
+    ],
+    "fetched_at": "2026-11-21T05:36:10+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [
+     "Kevin Akpoguma"
+    ],
+    "mean_xi_attack_index": 0.0,
+    "mean_continuity": -1.675,
+    "p_backup_gk": 0.0
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Pietro Terracciano",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5749750",
+     "fetched_at": "2026-11-21T05:36:10+00:00"
+    },
+    {
+     "player": "Fikayo Tomori",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5749750",
+     "fetched_at": "2026-11-21T05:36:10+00:00"
+    },
+    {
+     "player": "Matteo Gabbia",
+     "type": "injury",
+     "expected_return": "Early January 2027",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5749750",
+     "fetched_at": "2026-11-21T05:36:10+00:00"
+    },
+    {
+     "player": "Alexis Saelemaekers",
+     "type": "injury",
+     "expected_return": "Mid January 2027",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5749750",
+     "fetched_at": "2026-11-21T05:36:10+00:00"
+    },
+    {
+     "player": "Ruben Loftus-Cheek",
+     "type": "injury",
+     "expected_return": "Early December 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5749750",
+     "fetched_at": "2026-11-21T05:36:10+00:00"
+    },
+    {
+     "player": "Samuel Chukwueze",
+     "type": "injury",
+     "expected_return": "Mid January 2027",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5749750",
+     "fetched_at": "2026-11-21T05:36:10+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "Aleksa Terzi\u0107",
+     "type": "injury",
+     "expected_return": "Early December 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5749750",
+     "fetched_at": "2026-11-21T05:36:10+00:00"
+    },
+    {
+     "player": "Gabriele Bracaglia",
+     "type": "suspension",
+     "expected_return": "Late November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5749750",
+     "fetched_at": "2026-11-21T05:36:10+00:00"
+    },
+    {
+     "player": "Florian Grillitsch",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5749750",
+     "fetched_at": "2026-11-21T05:36:10+00:00"
+    },
+    {
+     "player": "Antonio Raimondo",
+     "type": "injury",
+     "expected_return": "Late January 2027",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5749750",
+     "fetched_at": "2026-11-21T05:36:10+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 14,
+    "n21": 1,
+    "last_match": "2026-11-08"
+   },
+   "away": {
+    "rest_days": 15,
+    "n21": 2,
+    "last_match": "2026-11-07"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 544.9
+  },
+  "venue": {
+   "name": "Stadio Giuseppe Meazza",
+   "city": "Milano",
+   "lat": 45.478083998,
+   "lon": 9.123979211
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 1.9049999999999998,
+   "temp_c": 7.9,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=45.478&longitude=9.124",
+   "fetched_at": "2026-11-21T05:36:10+00:00",
+   "lat": 45.478083998,
+   "lon": 9.123979211
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": 1.73,
+    "d_p_draw_pp": -1.33,
+    "d_p_away_pp": -0.41,
+    "d_xg_home": 0.202,
+    "d_xg_away": 0.112
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0291,
+    "away_rate_mult": 1.0122,
+    "d_p_home_pp": 0.91,
+    "d_p_draw_pp": -0.5,
+    "d_p_away_pp": -0.41,
+    "d_xg_home": 0.055,
+    "d_xg_away": 0.014,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "home_rate_mult": 1.0111,
+    "away_rate_mult": 0.9953,
+    "d_p_home_pp": 0.57,
+    "d_p_draw_pp": -0.23,
+    "d_p_away_pp": -0.34,
+    "d_xg_home": 0.022,
+    "d_xg_away": -0.004,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 14.0,
+   "rest_a": 15.0,
+   "n21_h": 1.0,
+   "n21_a": 2.0,
+   "travel_km": 544.927502191524,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 1.9049999999999998,
+   "temp_c": 7.9
+  }
+ },
+ "lineup_simulation": {
+  "applied": true,
+  "validated": false,
+  "scale": 0.5,
+  "basis": {
+   "home": "projected",
+   "away": "projected"
+  },
+  "home_rate_mult": 1.0055,
+  "away_rate_mult": 0.9977,
+  "note": "Starting-XI strength, continuity and backup-keeper adjustment at half the fitted size. It did not pass the out-of-sample test, so bets are not priced from it.",
+  "p_home": 0.564127272512094,
+  "p_draw": 0.23685350701610455,
+  "p_away": 0.1990192204718013,
+  "xg_home": 1.9186032268525555,
+  "xg_away": 1.0769530898900135,
+  "xg_total": 2.9955563167425687,
+  "btts": 0.5755476059368997,
+  "totals_over": {
+   "over_0.5": 0.9467540391917543,
+   "over_1.5": 0.8044951175416092,
+   "over_2.5": 0.5745512720461264,
+   "over_3.5": 0.35256227087639014,
+   "over_4.5": 0.1832383807619234,
+   "over_5.5": 0.083633305553425,
+   "over_6.5": 0.033194797470444355
+  },
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.11193193418551395
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.11193193418551395
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.10045450403215676
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.09257753588972284
+   },
+   {
+    "home": 2,
+    "away": 0,
+    "p": 0.09087474890148145
+   },
+   {
+    "home": 3,
+    "away": 1,
+    "p": 0.06405487688283358
+   }
+  ],
+  "score_grid": [
+   [
+    0.053246,
+    0.049681,
+    0.027137,
+    0.009347,
+    0.002399,
+    0.000491,
+    8.4e-05
+   ],
+   [
+    0.092578,
+    0.111932,
+    0.054884,
+    0.019114,
+    0.004959,
+    0.001026,
+    0.000177
+   ],
+   [
+    0.090875,
+    0.100455,
+    0.056818,
+    0.018937,
+    0.004963,
+    0.001037,
+    0.00018
+   ],
+   [
+    0.057304,
+    0.064055,
+    0.034674,
+    0.013024,
+    0.003263,
+    0.000687,
+    0.00012
+   ],
+   [
+    0.026937,
+    0.030438,
+    0.016646,
+    0.005976,
+    0.001685,
+    0.000339,
+    6e-05
+   ],
+   [
+    0.010106,
+    0.011537,
+    0.00637,
+    0.002307,
+    0.000621,
+    0.00014,
+    2.4e-05
+   ],
+   [
+    0.003158,
+    0.00364,
+    0.002027,
+    0.00074,
+    0.0002,
+    4.3e-05,
+    8e-06
+   ]
+  ]
+ },
+ "confidence": {
+  "tier": "MODERATE",
+  "p_max": 0.5612566217247585,
+  "entropy_nats": 0.988161454904648,
+  "text": "Most likely result has P = 56.1%. In the out-of-sample backtest, favourites priced 0.50\u20130.60 won 53.9% \u00b1 0.5% (n=9522, mean forecast 54.4%). Backtest RPS for I1: 0.1939; exact-score top-5 hit rate 54.8% (n=1228). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: MODERATE (entropy 0.988 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Milan: lineup is PROJECTED (FotMob projected XI (enetpulse)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Milan: no Understat history for Leo Paul Bouyer \u2014 rated at the positional prior.",
+  "Frosinone: lineup is PROJECTED (FotMob projected XI (enetpulse)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Frosinone: no Understat history for Kevin Akpoguma \u2014 rated at the positional prior."
+ ],
+ "verdict": "Milan 1\u20131 Frosinone is the single most probable scoreline at 11.3%: expected goals 1.91\u20131.08 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.043). Exact scores are inherently uncertain; the 1X2 split is 56.1%/23.8%/20.1%.",
+ "resolved": {
+  "home_key": "Italy:Milan",
+  "away_key": "Italy:Frosinone",
+  "div": "I1",
+  "home_div": "I1",
+  "away_div": "I1",
+  "country": "Italy"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: Frosinone Calcio at AC Milan\nCompetition: Serie A\nDate: 2026-11-22 12:00 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-11-20\n\nPRIMARY FINAL SCORE PREDICTION\n\nAC Milan 1 \u2013 1 Frosinone Calcio\n(modal exact score, probability 11.3%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.91\nAway: 1.08\nExpected Total: 2.99\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 56.1%\nDraw: 23.8%\nAway Win: 20.1%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 11.3%\n2. 2\u20131: 10.0%\n3. 1\u20130: 9.3%\n4. 2\u20130: 9.1%\n5. 3\u20131: 6.4%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 19.7%\nTotal 2 goals: 23.1%\nTotal 3 goals: 22.2%\nTotal 4 goals: 16.9%\nTotal 5+ goals: 18.2%\n\nBoth Teams Score: 57.5%\nClean sheet AC Milan: 33.5% \u00b7 Clean sheet Frosinone Calcio: 14.4%\n\nMATCH INTELLIGENCE\n\n1. Milan attack vs Frosinone defence: time-weighted strength gap multiplies Milan's scoring rate by \u00d71.34 relative to an average pairing (from 34/32 decay-weighted matches).\n2. Independent results-only Elo: Milan 1747 vs Frosinone 1602 (gap +145 before home advantage).\n3. Home advantage (Italy, fitted from results): \u00d71.17 on Milan's scoring rate.\n\nMODEL CONFIDENCE\n\nMost likely result has P = 56.1%. In the out-of-sample backtest, favourites priced 0.50\u20130.60 won 53.9% \u00b1 0.5% (n=9522, mean forecast 54.4%). Backtest RPS for I1: 0.1939; exact-score top-5 hit rate 54.8% (n=1228). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: MODERATE (entropy 0.988 nats of max 1.099).\nParameter-uncertainty 80% bands: xG AC Milan 1.46\u20132.40, xG Frosinone Calcio 0.81\u20131.36; P(home win) 44.2%\u201367.6%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0004 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nMilan: PROJECTED \u2014 FotMob projected XI (enetpulse), fetched 2026-11-21 00:36 EST (3-4-3)\n  Leo Paul Bouyer (G), Mario Gila (D), Koni De Winter (D), Sankhoun Diawara (D), Diego Moreira (F), Luka Modri\u0107 (M), Adrien Rabiot (M), Yunus Musah (M), Christian Pulisic (F), Gon\u00e7alo Ramos (F), Alphadjo Ciss\u00e8 (M)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs -0.016 (log) \u00b7 continuity -0.52 \u00b7 P(backup GK) 82%\nFrosinone: PROJECTED \u2014 FotMob projected XI (enetpulse), fetched 2026-11-21 00:36 EST (4-2-3-1)\n  Lorenzo Palmisani (G), Anthony Oyono (D), Gabriele Calvani (D), Ilario Monterisi (D), Kevin Akpoguma (D), Matteo Cichella (M), Giacomo Cal\u00f2 (M), Far\u00e8s Ghedjemis (F), Romano Schmid (M), Giorgi Kvernadze (F), Daniel B\u00eerligea (F)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs +0.000 (log) \u00b7 continuity -1.68 \u00b7 P(backup GK) 0%\n\nKEY ABSENCES\n\n- Milan: Pietro Terracciano \u2014 injury, Doubtful [FotMob, 2026-11-21 00:36 EST]\n- Milan: Fikayo Tomori \u2014 injury, Doubtful [FotMob, 2026-11-21 00:36 EST]\n- Milan: Matteo Gabbia \u2014 injury, Early January 2027 [FotMob, 2026-11-21 00:36 EST]\n- Milan: Alexis Saelemaekers \u2014 injury, Mid January 2027 [FotMob, 2026-11-21 00:36 EST]\n- Milan: Ruben Loftus-Cheek \u2014 injury, Early December 2026 [FotMob, 2026-11-21 00:36 EST]\n- Milan: Samuel Chukwueze \u2014 injury, Mid January 2027 [FotMob, 2026-11-21 00:36 EST]\n- Frosinone: Aleksa Terzi\u0107 \u2014 injury, Early December 2026 [FotMob, 2026-11-21 00:36 EST]\n- Frosinone: Gabriele Bracaglia \u2014 suspension, Late November 2026 [FotMob, 2026-11-21 00:36 EST]\n- Frosinone: Florian Grillitsch \u2014 injury, Doubtful [FotMob, 2026-11-21 00:36 EST]\n- Frosinone: Antonio Raimondo \u2014 injury, Late January 2027 [FotMob, 2026-11-21 00:36 EST]\n\nWEATHER AT VENUE\n\nStadio Giuseppe Meazza, Milano: 7.9 \u00b0C, wind 1.9 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-11-21 00:36 EST]\n\nREST & TRAVEL\n\nMilan: 14 days' rest, 1 matches in previous 21 days \u00b7 Frosinone: 15 days' rest, 2 in 21 days \u00b7 away travel 544.9 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 56.1% / 23.8% / 20.1%, xG 1.91\u20131.08\n- Understat xG component (validated, in ensemble): home +1.73 pp, draw -1.33 pp, away -0.41 pp; xG +0.202 / +0.112\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.91 pp, draw -0.50 pp, away -0.41 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- lineup: NOT APPLIED (failed out-of-sample validation); would have moved home +0.57 pp, draw -0.23 pp, away -0.34 pp\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Milan: lineup is PROJECTED (FotMob projected XI (enetpulse)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Milan: no Understat history for Leo Paul Bouyer \u2014 rated at the positional prior.\n- Frosinone: lineup is PROJECTED (FotMob projected XI (enetpulse)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Frosinone: no Understat history for Kevin Akpoguma \u2014 rated at the positional prior.\n\nFINAL VERDICT\n\nMilan 1\u20131 Frosinone is the single most probable scoreline at 11.3%: expected goals 1.91\u20131.08 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.043). Exact scores are inherently uncertain; the 1X2 split is 56.1%/23.8%/20.1%.\n",
+ "refresh_id": "416a202d97bb4a43b6049ccc01d07c85",
+ "frozen_at": "2026-11-21T05:36:10+00:00",
+ "sha256": "6d58c95d33d2092c1b3c938f22fb2d68cb06a7a7d912163924e89c5c44ea8ad0"
+}
