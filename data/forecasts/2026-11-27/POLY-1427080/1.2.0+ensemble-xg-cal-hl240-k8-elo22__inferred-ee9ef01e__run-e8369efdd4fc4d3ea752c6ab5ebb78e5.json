@@ -1,0 +1,826 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-11-20",
+ "input_fingerprint": "089f9cc4fd25f92ec445dbe63bd24c6d3710901e9f1c4bbab00c2c81fa97224f",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-11-21T08:55:16+00:00",
+ "fixture": {
+  "event_id": "POLY-1427080",
+  "home_name": "Nottingham Forest FC",
+  "away_name": "Chelsea FC",
+  "competition": "Premier League",
+  "subcategory": "epl",
+  "kickoff_utc": "2026-11-27T20:00:00+00:00",
+  "kickoff_local": "2026-11-27 15:00 EST",
+  "home_matched": "Nott'm Forest",
+  "away_matched": "Chelsea",
+  "match_methods": {
+   "home": {
+    "source": "Nottingham Forest FC",
+    "matched": "Nott'm Forest",
+    "method": "alias",
+    "score": 1.0
+   },
+   "away": {
+    "source": "Chelsea FC",
+    "matched": "Chelsea",
+    "method": "core-tokens",
+    "score": 0.97
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.40230810535240635,
+  "p_draw": 0.2621610107332876,
+  "p_away": 0.33553088391430613,
+  "xg_home": 1.5586239898034808,
+  "xg_away": 1.4095708808040504,
+  "xg_total": 2.9681948706075314,
+  "median_total": 3,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.12373264328389444
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.12373264328389444
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.09003008522693486
+   },
+   {
+    "home": 1,
+    "away": 2,
+    "p": 0.08106753567593018
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.07476504482699492
+   },
+   {
+    "home": 2,
+    "away": 2,
+    "p": 0.06743470268007451
+   }
+  ],
+  "btts": 0.614466965631618,
+  "totals_over": {
+   "over_0.5": 0.9471983137902371,
+   "over_1.5": 0.8052578564109902,
+   "over_2.5": 0.571330297231496,
+   "over_3.5": 0.3463501002140015,
+   "over_4.5": 0.1759337946838901,
+   "over_5.5": 0.07803118936585585,
+   "over_6.5": 0.02973562838603427
+  },
+  "total_buckets": {
+   "0-1": 0.19474214358900974,
+   "2": 0.23392755917949434,
+   "3": 0.22498019701749442,
+   "4": 0.1704163055301114,
+   "5+": 0.1759337946838901
+  },
+  "clean_sheet_home": 0.2359015171728357,
+  "clean_sheet_away": 0.20243320340530926,
+  "home_goal_dist": [
+   0.20243320340530926,
+   0.33393316017695857,
+   0.2611456204532344,
+   0.13287461651593346,
+   0.05005095560352552,
+   0.014938675182931054,
+   0.0036840209567185374,
+   0.0009397477053892098
+  ],
+  "away_goal_dist": [
+   0.2359015171728357,
+   0.3513495424427467,
+   0.24786373487895982,
+   0.11346677438336081,
+   0.038373322662557746,
+   0.01027004574551174,
+   0.0022686122651884937,
+   0.0005064504488390423
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    3
+   ],
+   "away_goals_80": [
+    0,
+    3
+   ],
+   "total_goals_80": [
+    1,
+    5
+   ],
+   "goal_diff_80": [
+    -2,
+    2
+   ]
+  },
+  "score_grid": [
+   [
+    0.052802,
+    0.067175,
+    0.049376,
+    0.022738,
+    0.007717,
+    0.002067,
+    0.000456
+   ],
+   [
+    0.074765,
+    0.123733,
+    0.081068,
+    0.037359,
+    0.012688,
+    0.003401,
+    0.000752
+   ],
+   [
+    0.060819,
+    0.09003,
+    0.067435,
+    0.029444,
+    0.010007,
+    0.002685,
+    0.000594
+   ],
+   [
+    0.031145,
+    0.046136,
+    0.032741,
+    0.01596,
+    0.005139,
+    0.00138,
+    0.000305
+   ],
+   [
+    0.011769,
+    0.017447,
+    0.01239,
+    0.005722,
+    0.002057,
+    0.000523,
+    0.000116
+   ],
+   [
+    0.003515,
+    0.005214,
+    0.003706,
+    0.001713,
+    0.000583,
+    0.000166,
+    3.5e-05
+   ],
+   [
+    0.000866,
+    0.001286,
+    0.000915,
+    0.000423,
+    0.000144,
+    3.9e-05,
+    9e-06
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.40305,
+  "p_draw": 0.261405,
+  "p_away": 0.335545,
+  "se": [
+   0.0010968151564871814,
+   0.0009825284371838812,
+   0.0010558279996642447
+  ],
+  "max_abs_dev_vs_exact": 0.0007560107332876265,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   1.1962507080989806,
+   1.954429674632772
+  ],
+  "xg_away_80": [
+   1.065886443492516,
+   1.7772277364040365
+  ],
+  "p_home_80": [
+   0.3024063185444547,
+   0.5209500797383285
+  ],
+  "p_draw_80": [
+   0.22127217221512727,
+   0.27983012519460604
+  ],
+  "p_away_80": [
+   0.24042324178677266,
+   0.445024759313168
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.19462832631882135,
+   0.18973389248268127
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.40458190972805064,
+   "p_draw": 0.26170251730149197,
+   "p_away": 0.3337155729704575,
+   "xg_home": 1.4821030647821432,
+   "xg_away": 1.325510951604638,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.3965706976033081,
+   "p_draw": 0.2510051179842676,
+   "p_away": 0.35242418441242407,
+   "xg_home": 1.4630658294190702,
+   "xg_away": 1.3652575735195458,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.4609122327900532,
+   "p_draw": 0.2616114263397693,
+   "p_away": 0.2774763408701774,
+   "xg_home": 1.592936574129223,
+   "xg_away": 1.1870512686755912,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.42222412904420675,
+   "p_draw": 0.2499474388561885,
+   "p_away": 0.3278284320996049,
+   "xg_home": 1.5173274019126641,
+   "xg_away": 1.3079985715500384,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.4134636072151843,
+   "p_draw": 0.2511597452096734,
+   "p_away": 0.3353766475751423,
+   "xg_home": 1.5883741348558538,
+   "xg_away": 1.4106458246175058,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Home advantage (England, fitted from results): \u00d71.23 on Nott'm Forest's scoring rate.",
+   "effect": 0.2069
+  },
+  {
+   "text": "Chelsea attack vs Nott'm Forest defence: rate multiplier \u00d71.10 for the away side.",
+   "effect": 0.0954
+  },
+  {
+   "text": "Independent results-only Elo: Nott'm Forest 1675 vs Chelsea 1703 (gap -28 before home advantage).",
+   "effect": 0.0421
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.40230810535240635,
+  "p_draw": 0.2621610107332876,
+  "p_away": 0.33553088391430613,
+  "xg_home": 1.5586239898034808,
+  "xg_away": 1.4095708808040504
+ },
+ "context": {
+  "fetched_at": "2026-11-21T08:55:16+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5795533",
+    "fetched_at": "2026-11-21T08:55:17+00:00"
+   },
+   {
+    "name": "Fantasy Premier League availability",
+    "url": "https://fantasy.premierleague.com/api/bootstrap-static/",
+    "fetched_at": "2026-11-21T08:55:17+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "inferred",
+    "source": null,
+    "formation": "",
+    "starters": [
+     {
+      "name": "Matz Sels",
+      "pos": "G"
+     },
+     {
+      "name": "Neco Williams",
+      "pos": "D"
+     },
+     {
+      "name": "Murillo",
+      "pos": "D"
+     },
+     {
+      "name": "Morgan Gibbs-White",
+      "pos": "M"
+     },
+     {
+      "name": "James McAtee",
+      "pos": "M"
+     },
+     {
+      "name": "Xaver Schlager",
+      "pos": "M"
+     },
+     {
+      "name": "Liam Delap",
+      "pos": "F"
+     },
+     {
+      "name": "Nikola Milenkovi\u0107",
+      "pos": "D"
+     },
+     {
+      "name": "Daniel Mu\u00f1oz",
+      "pos": "M"
+     },
+     {
+      "name": "Dan Ndoye",
+      "pos": "F"
+     },
+     {
+      "name": "Jair",
+      "pos": "D"
+     }
+    ],
+    "fetched_at": "2026-11-21T08:55:17+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [],
+    "mean_xi_attack_index": -0.058,
+    "mean_continuity": -0.379,
+    "p_backup_gk": 0.0
+   },
+   "away": {
+    "status": "inferred",
+    "source": null,
+    "formation": "",
+    "starters": [
+     {
+      "name": "Emiliano Martinez",
+      "pos": "G"
+     },
+     {
+      "name": "Cole Palmer",
+      "pos": "M"
+     },
+     {
+      "name": "Morgan Rogers",
+      "pos": "M"
+     },
+     {
+      "name": "Pedro Neto",
+      "pos": "F"
+     },
+     {
+      "name": "Levi Colwill",
+      "pos": "D"
+     },
+     {
+      "name": "Mois\u00e9s Caicedo",
+      "pos": "M"
+     },
+     {
+      "name": "Josh Acheampong",
+      "pos": "D"
+     },
+     {
+      "name": "Wesley Fofana",
+      "pos": "D"
+     },
+     {
+      "name": "Jordan Henderson",
+      "pos": "M"
+     },
+     {
+      "name": "Rom\u00e9o Lavia",
+      "pos": "M"
+     },
+     {
+      "name": "Pep Chavarr\u00eda",
+      "pos": "D"
+     }
+    ],
+    "fetched_at": "2026-11-21T08:55:17+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [],
+    "mean_xi_attack_index": -0.147,
+    "mean_continuity": -0.392,
+    "p_backup_gk": 0.0
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Xaver Schlager",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795533",
+     "fetched_at": "2026-11-21T08:55:17+00:00",
+     "chance_of_playing": 75,
+     "fpl_status": "doubtful",
+     "fpl_news": "Thigh injury - 75% chance of playing",
+     "fpl_news_added": "2026-11-15T17:00:06.045512Z"
+    },
+    {
+     "player": "Callum Hudson-Odoi",
+     "type": "injury",
+     "expected_return": "Mid December 2026",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795533",
+     "fetched_at": "2026-11-21T08:55:17+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Unspecified injury - Unknown return date",
+     "fpl_news_added": "2026-11-19T15:30:05.816247Z"
+    },
+    {
+     "player": "Neco Williams",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795533",
+     "fetched_at": "2026-11-21T08:55:17+00:00",
+     "chance_of_playing": 75,
+     "fpl_status": "doubtful",
+     "fpl_news": "Ankle injury - 75% chance of playing",
+     "fpl_news_added": "2026-11-16T19:00:05.480350Z"
+    },
+    {
+     "player": "Nicol\u00e1s Dom\u00ednguez",
+     "type": "injury",
+     "expected_return": "Late December 2026",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795533",
+     "fetched_at": "2026-11-21T08:55:17+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Muscular injury - Expected back 30 Dec",
+     "fpl_news_added": "2026-10-24T13:00:08.751863Z"
+    },
+    {
+     "player": "Nicol\u00f2 Savona",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795533",
+     "fetched_at": "2026-11-21T08:55:17+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Knee injury - Unknown return date",
+     "fpl_news_added": "2026-07-23T12:01:23.816304Z"
+    }
+   ],
+   "away": [
+    {
+     "player": "Jorrel Hato",
+     "type": "injury",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795533",
+     "fetched_at": "2026-11-21T08:55:17+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Back injury - Unknown return date",
+     "fpl_news_added": "2026-10-29T22:00:09.909621Z"
+    },
+    {
+     "player": "Maxence Lacroix",
+     "type": "injury",
+     "expected_return": "Early January 2027",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795533",
+     "fetched_at": "2026-11-21T08:55:17+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Hamstring injury - Unknown return date",
+     "fpl_news_added": "2026-10-28T23:00:10.088612Z"
+    },
+    {
+     "player": "Jo\u00e3o Pedro",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795533",
+     "fetched_at": "2026-11-21T08:55:17+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Thigh injury - Unknown return date",
+     "fpl_news_added": "2026-10-24T16:30:09.687729Z"
+    },
+    {
+     "player": "Jamie Gittens",
+     "type": "injury",
+     "expected_return": "Back in training",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795533",
+     "fetched_at": "2026-11-21T08:55:17+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Ankle injury - Unknown return date",
+     "fpl_news_added": "2026-09-26T05:30:09.245832Z"
+    },
+    {
+     "player": "Reece James",
+     "type": "injury",
+     "expected_return": "Mid January 2027",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795533",
+     "fetched_at": "2026-11-21T08:55:17+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Knee injury - Unknown return date",
+     "fpl_news_added": "2026-10-10T13:30:08.699019Z"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 20,
+    "n21": 1,
+    "last_match": "2026-11-07"
+   },
+   "away": {
+    "rest_days": 19,
+    "n21": 1,
+    "last_match": "2026-11-08"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 174.4
+  },
+  "venue": {
+   "name": "The City Ground",
+   "city": "Nottingham, Nottinghamshire",
+   "lat": 52.939913226,
+   "lon": -1.132894009
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 4.42,
+   "temp_c": 1.4,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=52.94&longitude=-1.133",
+   "fetched_at": "2026-11-21T08:55:17+00:00",
+   "lat": 52.939913226,
+   "lon": -1.132894009
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": 0.84,
+    "d_p_draw_pp": -0.05,
+    "d_p_away_pp": -0.79,
+    "d_xg_home": 0.066,
+    "d_xg_away": 0.027
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0157,
+    "away_rate_mult": 1.0066,
+    "d_p_home_pp": 0.39,
+    "d_p_draw_pp": -0.18,
+    "d_p_away_pp": -0.21,
+    "d_xg_home": 0.024,
+    "d_xg_away": 0.009,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 0.9964,
+    "away_rate_mult": 0.9964,
+    "d_p_home_pp": -0.03,
+    "d_p_draw_pp": 0.05,
+    "d_p_away_pp": -0.02,
+    "d_xg_home": -0.005,
+    "d_xg_away": -0.005,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "home_rate_mult": 0.9815,
+    "away_rate_mult": 0.9572,
+    "d_p_home_pp": 0.53,
+    "d_p_draw_pp": 0.37,
+    "d_p_away_pp": -0.9,
+    "d_xg_home": -0.027,
+    "d_xg_away": -0.058,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 20.0,
+   "rest_a": 19.0,
+   "n21_h": 1.0,
+   "n21_a": 1.0,
+   "travel_km": 174.37981383954775,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 4.42,
+   "temp_c": 1.4
+  }
+ },
+ "lineup_simulation": {
+  "applied": true,
+  "validated": false,
+  "scale": 0.5,
+  "basis": {
+   "home": "inferred",
+   "away": "inferred"
+  },
+  "home_rate_mult": 0.9907,
+  "away_rate_mult": 0.9784,
+  "note": "Starting-XI strength, continuity and backup-keeper adjustment at half the fitted size. It did not pass the out-of-sample test, so bets are not priced from it.",
+  "p_home": 0.4049595116979029,
+  "p_draw": 0.2641148038555846,
+  "p_away": 0.3309256844465124,
+  "xg_home": 1.5445796084256045,
+  "xg_away": 1.3802802871617215,
+  "xg_total": 2.9248598955873257,
+  "btts": 0.6063612474987132,
+  "totals_over": {
+   "over_0.5": 0.944776158943671,
+   "over_1.5": 0.798580543631251,
+   "over_2.5": 0.5613001867256945,
+   "over_3.5": 0.3365250604640073,
+   "over_4.5": 0.16882173964615885,
+   "over_5.5": 0.07390950974489764,
+   "over_6.5": 0.027785063609702274
+  },
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.12539315768510487
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.12539315768510487
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.09039532290281697
+   },
+   {
+    "home": 1,
+    "away": 2,
+    "p": 0.08038979676635652
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.07745813582913408
+   },
+   {
+    "home": 0,
+    "away": 1,
+    "p": 0.06873747948328585
+   }
+  ],
+  "score_grid": [
+   [
+    0.055224,
+    0.068737,
+    0.049448,
+    0.022293,
+    0.00741,
+    0.001944,
+    0.000421
+   ],
+   [
+    0.077458,
+    0.125393,
+    0.08039,
+    0.036263,
+    0.012059,
+    0.003166,
+    0.000685
+   ],
+   [
+    0.062439,
+    0.090395,
+    0.06624,
+    0.028305,
+    0.009418,
+    0.002474,
+    0.000536
+   ],
+   [
+    0.031697,
+    0.045912,
+    0.03187,
+    0.0152,
+    0.004791,
+    0.001259,
+    0.000273
+   ],
+   [
+    0.011878,
+    0.017215,
+    0.011956,
+    0.005402,
+    0.0019,
+    0.000473,
+    0.000103
+   ],
+   [
+    0.003519,
+    0.005103,
+    0.003546,
+    0.001603,
+    0.000534,
+    0.000148,
+    3e-05
+   ],
+   [
+    0.000861,
+    0.001249,
+    0.000868,
+    0.000393,
+    0.000131,
+    3.4e-05,
+    8e-06
+   ]
+  ]
+ },
+ "confidence": {
+  "tier": "LOW",
+  "p_max": 0.40230810535240635,
+  "entropy_nats": 1.0837102326838162,
+  "text": "Most likely result has P = 40.2%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.3% \u00b1 0.4% (n=16754, mean forecast 44.6%). Backtest RPS for E0: 0.2018; exact-score top-5 hit rate 46.6% (n=1220). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: LOW (entropy 1.084 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Nott'm Forest: no lineup published yet \u2014 XI inferred from recent minutes share minus known absences; 200 configurations simulated (start P=0.7, UNVALIDATED prior).",
+  "Chelsea: no lineup published yet \u2014 XI inferred from recent minutes share minus known absences; 200 configurations simulated (start P=0.7, UNVALIDATED prior)."
+ ],
+ "verdict": "Nott'm Forest 1\u20131 Chelsea is the single most probable scoreline at 12.4%: expected goals 1.56\u20131.41 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.043). Exact scores are inherently uncertain; the 1X2 split is 40.2%/26.2%/33.6%.",
+ "resolved": {
+  "home_key": "England:Nott'm Forest",
+  "away_key": "England:Chelsea",
+  "div": "E0",
+  "home_div": "E0",
+  "away_div": "E0",
+  "country": "England"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: Chelsea FC at Nottingham Forest FC\nCompetition: Premier League\nDate: 2026-11-27 15:00 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-11-20\n\nPRIMARY FINAL SCORE PREDICTION\n\nNottingham Forest FC 1 \u2013 1 Chelsea FC\n(modal exact score, probability 12.4%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.56\nAway: 1.41\nExpected Total: 2.97\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 40.2%\nDraw: 26.2%\nAway Win: 33.6%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 12.4%\n2. 2\u20131: 9.0%\n3. 1\u20132: 8.1%\n4. 1\u20130: 7.5%\n5. 2\u20132: 6.7%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 19.5%\nTotal 2 goals: 23.4%\nTotal 3 goals: 22.5%\nTotal 4 goals: 17.0%\nTotal 5+ goals: 17.6%\n\nBoth Teams Score: 61.4%\nClean sheet Nottingham Forest FC: 23.6% \u00b7 Clean sheet Chelsea FC: 20.2%\n\nMATCH INTELLIGENCE\n\n1. Home advantage (England, fitted from results): \u00d71.23 on Nott'm Forest's scoring rate.\n2. Chelsea attack vs Nott'm Forest defence: rate multiplier \u00d71.10 for the away side.\n3. Independent results-only Elo: Nott'm Forest 1675 vs Chelsea 1703 (gap -28 before home advantage).\n\nMODEL CONFIDENCE\n\nMost likely result has P = 40.2%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.3% \u00b1 0.4% (n=16754, mean forecast 44.6%). Backtest RPS for E0: 0.2018; exact-score top-5 hit rate 46.6% (n=1220). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: LOW (entropy 1.084 nats of max 1.099).\nParameter-uncertainty 80% bands: xG Nottingham Forest FC 1.20\u20131.95, xG Chelsea FC 1.07\u20131.78; P(home win) 30.2%\u201352.1%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0008 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nNott'm Forest: INFERRED, fetched 2026-11-21 03:55 EST\n  Matz Sels (G), Neco Williams (D), Murillo (D), Morgan Gibbs-White (M), James McAtee (M), Xaver Schlager (M), Liam Delap (F), Nikola Milenkovi\u0107 (D), Daniel Mu\u00f1oz (M), Dan Ndoye (F), Jair (D)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs -0.058 (log) \u00b7 continuity -0.38 \u00b7 P(backup GK) 0%\nChelsea: INFERRED, fetched 2026-11-21 03:55 EST\n  Emiliano Martinez (G), Cole Palmer (M), Morgan Rogers (M), Pedro Neto (F), Levi Colwill (D), Mois\u00e9s Caicedo (M), Josh Acheampong (D), Wesley Fofana (D), Jordan Henderson (M), Rom\u00e9o Lavia (M), Pep Chavarr\u00eda (D)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs -0.147 (log) \u00b7 continuity -0.39 \u00b7 P(backup GK) 0%\n\nKEY ABSENCES\n\n- Nott'm Forest: Xaver Schlager \u2014 injury, Doubtful, 75% chance of playing [FotMob + FPL, 2026-11-21 03:55 EST] \u2014 FPL: Thigh injury - 75% chance of playing (updated 2026-11-15 12:00 EST)\n- Nott'm Forest: Callum Hudson-Odoi \u2014 injury, Mid December 2026, 0% chance of playing [FotMob + FPL, 2026-11-21 03:55 EST] \u2014 FPL: Unspecified injury - Unknown return date (updated 2026-11-19 10:30 EST)\n- Nott'm Forest: Neco Williams \u2014 injury, Doubtful, 75% chance of playing [FotMob + FPL, 2026-11-21 03:55 EST] \u2014 FPL: Ankle injury - 75% chance of playing (updated 2026-11-16 14:00 EST)\n- Nott'm Forest: Nicol\u00e1s Dom\u00ednguez \u2014 injury, Late December 2026, 0% chance of playing [FotMob + FPL, 2026-11-21 03:55 EST] \u2014 FPL: Muscular injury - Expected back 30 Dec (updated 2026-10-24 09:00 EDT)\n- Nott'm Forest: Nicol\u00f2 Savona \u2014 injury, Doubtful, 0% chance of playing [FotMob + FPL, 2026-11-21 03:55 EST] \u2014 FPL: Knee injury - Unknown return date (updated 2026-07-23 08:01 EDT)\n- Chelsea: Jorrel Hato \u2014 injury, Mid November 2026, 0% chance of playing [FotMob + FPL, 2026-11-21 03:55 EST] \u2014 FPL: Back injury - Unknown return date (updated 2026-10-29 18:00 EDT)\n- Chelsea: Maxence Lacroix \u2014 injury, Early January 2027, 0% chance of playing [FotMob + FPL, 2026-11-21 03:55 EST] \u2014 FPL: Hamstring injury - Unknown return date (updated 2026-10-28 19:00 EDT)\n- Chelsea: Jo\u00e3o Pedro \u2014 injury, Late November 2026, 0% chance of playing [FotMob + FPL, 2026-11-21 03:55 EST] \u2014 FPL: Thigh injury - Unknown return date (updated 2026-10-24 12:30 EDT)\n- Chelsea: Jamie Gittens \u2014 injury, Back in training, 0% chance of playing [FotMob + FPL, 2026-11-21 03:55 EST] \u2014 FPL: Ankle injury - Unknown return date (updated 2026-09-26 01:30 EDT)\n- Chelsea: Reece James \u2014 injury, Mid January 2027, 0% chance of playing [FotMob + FPL, 2026-11-21 03:55 EST] \u2014 FPL: Knee injury - Unknown return date (updated 2026-10-10 09:30 EDT)\n\nWEATHER AT VENUE\n\nThe City Ground, Nottingham, Nottinghamshire: 1.4 \u00b0C, wind 4.4 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-11-21 03:55 EST]\n\nREST & TRAVEL\n\nNott'm Forest: 20 days' rest, 1 matches in previous 21 days \u00b7 Chelsea: 19 days' rest, 1 in 21 days \u00b7 away travel 174.4 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 40.2% / 26.2% / 33.6%, xG 1.56\u20131.41\n- Understat xG component (validated, in ensemble): home +0.84 pp, draw -0.05 pp, away -0.79 pp; xG +0.066 / +0.027\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.39 pp, draw -0.18 pp, away -0.21 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home -0.03 pp, draw +0.05 pp, away -0.02 pp\n- lineup: NOT APPLIED (failed out-of-sample validation); would have moved home +0.53 pp, draw +0.37 pp, away -0.90 pp\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Nott'm Forest: no lineup published yet \u2014 XI inferred from recent minutes share minus known absences; 200 configurations simulated (start P=0.7, UNVALIDATED prior).\n- Chelsea: no lineup published yet \u2014 XI inferred from recent minutes share minus known absences; 200 configurations simulated (start P=0.7, UNVALIDATED prior).\n\nFINAL VERDICT\n\nNott'm Forest 1\u20131 Chelsea is the single most probable scoreline at 12.4%: expected goals 1.56\u20131.41 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.043). Exact scores are inherently uncertain; the 1X2 split is 40.2%/26.2%/33.6%.\n",
+ "refresh_id": "e8369efdd4fc4d3ea752c6ab5ebb78e5",
+ "frozen_at": "2026-11-21T08:55:17+00:00",
+ "sha256": "1a85cc1c95754636e90241381d63ba0d46936854a699419c8b81e009c79314b9"
+}
