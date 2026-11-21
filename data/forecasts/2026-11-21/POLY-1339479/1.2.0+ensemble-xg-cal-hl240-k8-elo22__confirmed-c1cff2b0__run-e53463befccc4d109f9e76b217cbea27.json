@@ -1,0 +1,591 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-11-20",
+ "input_fingerprint": "089f9cc4fd25f92ec445dbe63bd24c6d3710901e9f1c4bbab00c2c81fa97224f",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-11-21T14:36:53+00:00",
+ "fixture": {
+  "event_id": "POLY-1339479",
+  "home_name": "Bradford City AFC",
+  "away_name": "Doncaster Rovers FC",
+  "competition": "League One",
+  "subcategory": "el1",
+  "kickoff_utc": "2026-11-21T15:00:00+00:00",
+  "kickoff_local": "2026-11-21 10:00 EST",
+  "home_matched": "Bradford",
+  "away_matched": "Doncaster",
+  "match_methods": {
+   "home": {
+    "source": "Bradford City AFC",
+    "matched": "Bradford",
+    "method": "alias",
+    "score": 1.0
+   },
+   "away": {
+    "source": "Doncaster Rovers FC",
+    "matched": "Doncaster",
+    "method": "core-tokens",
+    "score": 0.97
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.5089875126528305,
+  "p_draw": 0.27725621005869133,
+  "p_away": 0.21375627728847832,
+  "xg_home": 1.5237039460415571,
+  "xg_away": 0.9089708119392687,
+  "xg_total": 2.4326747579808257,
+  "median_total": 2,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.13239530128990676
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.13239530128990676
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.12903898553525842
+   },
+   {
+    "home": 2,
+    "away": 0,
+    "p": 0.10045839914780849
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.09397663270831991
+   },
+   {
+    "home": 0,
+    "away": 0,
+    "p": 0.09237660055906036
+   }
+  ],
+  "btts": 0.48133252255726316,
+  "totals_over": {
+   "over_0.5": 0.90762339944094,
+   "over_1.5": 0.7045609259945765,
+   "over_2.5": 0.43759935159856694,
+   "over_3.5": 0.22871778350581526,
+   "over_4.5": 0.09934658816907088,
+   "over_5.5": 0.03766128021060999,
+   "over_6.5": 0.012310004623397607
+  },
+  "total_buckets": {
+   "0-1": 0.2954390740054236,
+   "2": 0.26696157439600954,
+   "3": 0.20888156809275163,
+   "4": 0.12937119533674438,
+   "5+": 0.09934658816907088
+  },
+  "clean_sheet_home": 0.3980083834464531,
+  "clean_sheet_away": 0.2130356945553443,
+  "home_goal_dist": [
+   0.2130356945553443,
+   0.3365879486418775,
+   0.2554367288807759,
+   0.1280539967533971,
+   0.04800091287318239,
+   0.014368269754340302,
+   0.0035809884958691684,
+   0.0009354600452133439
+  ],
+  "away_goal_dist": [
+   0.3980083834464531,
+   0.3727373824508997,
+   0.16710142028166297,
+   0.04915056662732611,
+   0.010792024875675503,
+   0.0018941784113866286,
+   0.00027707008851365965,
+   3.8973818082408695e-05
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    3
+   ],
+   "away_goals_80": [
+    0,
+    2
+   ],
+   "total_goals_80": [
+    1,
+    4
+   ],
+   "goal_diff_80": [
+    -1,
+    3
+   ]
+  },
+  "score_grid": [
+   [
+    0.092377,
+    0.074023,
+    0.034108,
+    0.009937,
+    0.002156,
+    0.000373,
+    5.4e-05
+   ],
+   [
+    0.129039,
+    0.132395,
+    0.054769,
+    0.016127,
+    0.003537,
+    0.000619,
+    9e-05
+   ],
+   [
+    0.100458,
+    0.093977,
+    0.044951,
+    0.012665,
+    0.002807,
+    0.000496,
+    7.3e-05
+   ],
+   [
+    0.050199,
+    0.047463,
+    0.021724,
+    0.0069,
+    0.001462,
+    0.000261,
+    3.9e-05
+   ],
+   [
+    0.018675,
+    0.017846,
+    0.008255,
+    0.002508,
+    0.000598,
+    0.000102,
+    1.5e-05
+   ],
+   [
+    0.005539,
+    0.005349,
+    0.002499,
+    0.000767,
+    0.000175,
+    3.3e-05,
+    5e-06
+   ],
+   [
+    0.001368,
+    0.001334,
+    0.000629,
+    0.000195,
+    4.5e-05,
+    8e-06,
+    1e-06
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.508305,
+  "p_draw": 0.27806,
+  "p_away": 0.21363500000000002,
+  "se": [
+   0.001117879749738316,
+   0.0010018548707272925,
+   0.0009165017369732586
+  ],
+  "max_abs_dev_vs_exact": 0.0008037899413086413,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   1.179695066994441,
+   1.898433693001945
+  ],
+  "xg_away_80": [
+   0.6751429159006039,
+   1.1607729014813764
+  ],
+  "p_home_80": [
+   0.4036417351423582,
+   0.6176887534627494
+  ],
+  "p_draw_80": [
+   0.22855200764597566,
+   0.3074108926725506
+  ],
+  "p_away_80": [
+   0.1486604923375993,
+   0.29985949586776495
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.18862859090753423,
+   0.20111576646031312
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.4920183989499485,
+   "p_draw": 0.2882724770124117,
+   "p_away": 0.2197091240376396,
+   "xg_home": 1.371096570273277,
+   "xg_away": 0.8231269457902781,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.5291265660952411,
+   "p_draw": 0.2431352897401001,
+   "p_away": 0.22773814416465862,
+   "xg_home": 1.6701026222604416,
+   "xg_away": 1.0065811121216677,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.4913906836350767,
+   "p_draw": 0.30777944053809536,
+   "p_away": 0.20082987582682793,
+   "xg_home": 1.2721715885674747,
+   "xg_away": 0.7107403855449107,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.4347520086549741,
+   "p_draw": 0.258716772972445,
+   "p_away": 0.3065312183725808,
+   "xg_home": 1.457452497512889,
+   "xg_away": 1.1811522624827004,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.49130532614695127,
+   "p_draw": 0.2881927607928018,
+   "p_away": 0.220501913060247,
+   "xg_home": 1.367883452153668,
+   "xg_away": 0.8233469348206569,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Doncaster attack vs Bradford defence: rate multiplier \u00d70.68 for the away side.",
+   "effect": 0.381
+  },
+  {
+   "text": "Home advantage (England, fitted from results): \u00d71.23 on Bradford's scoring rate.",
+   "effect": 0.2069
+  },
+  {
+   "text": "Independent results-only Elo: Bradford 1331 vs Doncaster 1232 (gap +99 before home advantage).",
+   "effect": 0.1484
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.5089875126528304,
+  "p_draw": 0.2772562100586913,
+  "p_away": 0.2137562772884783,
+  "xg_home": 1.5237039460415571,
+  "xg_away": 0.9089708119392683
+ },
+ "context": {
+  "fetched_at": "2026-11-21T14:36:53+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5837269",
+    "fetched_at": "2026-11-21T14:36:53+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "confirmed",
+    "source": "FotMob official team sheet",
+    "formation": "3-4-2-1",
+    "starters": [
+     {
+      "name": "Jon McCracken",
+      "pos": "G",
+      "shirt": "21"
+     },
+     {
+      "name": "Matthew Pennington",
+      "pos": "D",
+      "shirt": "28"
+     },
+     {
+      "name": "Aden Baldwin",
+      "pos": "D",
+      "shirt": "15"
+     },
+     {
+      "name": "George Pratt",
+      "pos": "D",
+      "shirt": "16"
+     },
+     {
+      "name": "Josh Neufville",
+      "pos": "M",
+      "shirt": "7"
+     },
+     {
+      "name": "Kieran Morgan",
+      "pos": "M",
+      "shirt": "22"
+     },
+     {
+      "name": "Callum Connolly",
+      "pos": "M",
+      "shirt": "6"
+     },
+     {
+      "name": "Ibou Touray",
+      "pos": "M",
+      "shirt": "3"
+     },
+     {
+      "name": "Antoni Sarcevic",
+      "pos": "M",
+      "shirt": "10"
+     },
+     {
+      "name": "Nick Powell",
+      "pos": "M",
+      "shirt": "25"
+     },
+     {
+      "name": "Kayden Jackson",
+      "pos": "F",
+      "shirt": "19"
+     }
+    ],
+    "fetched_at": "2026-11-21T14:36:53+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   },
+   "away": {
+    "status": "confirmed",
+    "source": "FotMob official team sheet",
+    "formation": "4-2-3-1",
+    "starters": [
+     {
+      "name": "Tommy Simkin",
+      "pos": "G",
+      "shirt": "1"
+     },
+     {
+      "name": "Tom Nixon",
+      "pos": "D",
+      "shirt": "16"
+     },
+     {
+      "name": "Se\u00e1n Grehan",
+      "pos": "D",
+      "shirt": "27"
+     },
+     {
+      "name": "Matthew Pearson",
+      "pos": "D",
+      "shirt": "5"
+     },
+     {
+      "name": "Jack Senior",
+      "pos": "D",
+      "shirt": "23"
+     },
+     {
+      "name": "George Broadbent",
+      "pos": "M",
+      "shirt": "8"
+     },
+     {
+      "name": "Robbie Gotts",
+      "pos": "M",
+      "shirt": "22"
+     },
+     {
+      "name": "Jordan Thomas",
+      "pos": "F",
+      "shirt": "19"
+     },
+     {
+      "name": "Isaac Hutchinson",
+      "pos": "M",
+      "shirt": "21"
+     },
+     {
+      "name": "Owen Bailey",
+      "pos": "F",
+      "shirt": "4"
+     },
+     {
+      "name": "Brandon Hanlan",
+      "pos": "F",
+      "shirt": "9"
+     }
+    ],
+    "fetched_at": "2026-11-21T14:36:53+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   }
+  },
+  "absences": {
+   "home": [],
+   "away": []
+  },
+  "rest": {
+   "home": {
+    "rest_days": 21,
+    "n21": 1,
+    "last_match": "2026-10-31"
+   },
+   "away": {
+    "rest_days": 21,
+    "n21": 1,
+    "last_match": "2026-10-31"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 53.7
+  },
+  "venue": {
+   "name": "Mbanq Valley Parade",
+   "city": "Bradford, West Yorkshire",
+   "lat": 53.804226787,
+   "lon": -1.759035587
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 1.5,
+   "temp_c": 3.4,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=53.804&longitude=-1.759",
+   "fetched_at": "2026-11-21T14:36:53+00:00",
+   "lat": 53.804226787,
+   "lon": -1.759035587
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": -1.83,
+    "d_p_draw_pp": 2.15,
+    "d_p_away_pp": -0.32,
+    "d_xg_home": -0.147,
+    "d_xg_away": -0.089
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0066,
+    "away_rate_mult": 1.0028,
+    "d_p_home_pp": 0.2,
+    "d_p_draw_pp": -0.12,
+    "d_p_away_pp": -0.08,
+    "d_xg_home": 0.01,
+    "d_xg_away": 0.003,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "reason": "failed validation; no live features"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 21.0,
+   "rest_a": 21.0,
+   "n21_h": 1.0,
+   "n21_a": 1.0,
+   "travel_km": 53.662800020978494,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 1.5,
+   "temp_c": 3.4
+  }
+ },
+ "lineup_simulation": {
+  "applied": false,
+  "basis": {
+   "home": "confirmed",
+   "away": "confirmed"
+  },
+  "reason": "No player ratings exist for this league, so the lineup and formation are shown but cannot change the probabilities."
+ },
+ "confidence": {
+  "tier": "MODERATE",
+  "p_max": 0.5089875126528305,
+  "entropy_nats": 1.0292119717940065,
+  "text": "Most likely result has P = 50.9%. In the out-of-sample backtest, favourites priced 0.50\u20130.60 won 53.9% \u00b1 0.5% (n=9522, mean forecast 54.4%). Backtest RPS for E2: 0.2163; exact-score top-5 hit rate 51.4% (n=1799). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: MODERATE (entropy 1.029 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Bradford: lineup CONFIRMED (FotMob official team sheet).",
+  "Bradford: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.",
+  "Doncaster: lineup CONFIRMED (FotMob official team sheet).",
+  "Doncaster: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+ ],
+ "verdict": "Bradford 1\u20131 Doncaster is the single most probable scoreline at 13.2%: expected goals 1.52\u20130.91 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.043). Exact scores are inherently uncertain; the 1X2 split is 50.9%/27.7%/21.4%.",
+ "resolved": {
+  "home_key": "England:Bradford",
+  "away_key": "England:Doncaster",
+  "div": "E2",
+  "home_div": "E2",
+  "away_div": "E2",
+  "country": "England"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: Doncaster Rovers FC at Bradford City AFC\nCompetition: League One\nDate: 2026-11-21 10:00 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-11-20\n\nPRIMARY FINAL SCORE PREDICTION\n\nBradford City AFC 1 \u2013 1 Doncaster Rovers FC\n(modal exact score, probability 13.2%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.52\nAway: 0.91\nExpected Total: 2.43\nMedian Total: 2\n\nRESULT PROBABILITIES\n\nHome Win: 50.9%\nDraw: 27.7%\nAway Win: 21.4%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 13.2%\n2. 1\u20130: 12.9%\n3. 2\u20130: 10.0%\n4. 2\u20131: 9.4%\n5. 0\u20130: 9.2%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 29.5%\nTotal 2 goals: 26.7%\nTotal 3 goals: 20.9%\nTotal 4 goals: 12.9%\nTotal 5+ goals: 9.9%\n\nBoth Teams Score: 48.1%\nClean sheet Bradford City AFC: 39.8% \u00b7 Clean sheet Doncaster Rovers FC: 21.3%\n\nMATCH INTELLIGENCE\n\n1. Doncaster attack vs Bradford defence: rate multiplier \u00d70.68 for the away side.\n2. Home advantage (England, fitted from results): \u00d71.23 on Bradford's scoring rate.\n3. Independent results-only Elo: Bradford 1331 vs Doncaster 1232 (gap +99 before home advantage).\n\nMODEL CONFIDENCE\n\nMost likely result has P = 50.9%. In the out-of-sample backtest, favourites priced 0.50\u20130.60 won 53.9% \u00b1 0.5% (n=9522, mean forecast 54.4%). Backtest RPS for E2: 0.2163; exact-score top-5 hit rate 51.4% (n=1799). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: MODERATE (entropy 1.029 nats of max 1.099).\nParameter-uncertainty 80% bands: xG Bradford City AFC 1.18\u20131.90, xG Doncaster Rovers FC 0.68\u20131.16; P(home win) 40.4%\u201361.8%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0008 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nBradford: CONFIRMED \u2014 FotMob official team sheet, fetched 2026-11-21 09:36 EST (3-4-2-1)\n  Jon McCracken (G), Matthew Pennington (D), Aden Baldwin (D), George Pratt (D), Josh Neufville (M), Kieran Morgan (M), Callum Connolly (M), Ibou Touray (M), Antoni Sarcevic (M), Nick Powell (M), Kayden Jackson (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\nDoncaster: CONFIRMED \u2014 FotMob official team sheet, fetched 2026-11-21 09:36 EST (4-2-3-1)\n  Tommy Simkin (G), Tom Nixon (D), Se\u00e1n Grehan (D), Matthew Pearson (D), Jack Senior (D), George Broadbent (M), Robbie Gotts (M), Jordan Thomas (F), Isaac Hutchinson (M), Owen Bailey (F), Brandon Hanlan (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nKEY ABSENCES\n\n- None listed by the sources.\n\nWEATHER AT VENUE\n\nMbanq Valley Parade, Bradford, West Yorkshire: 3.4 \u00b0C, wind 1.5 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-11-21 09:36 EST]\n\nREST & TRAVEL\n\nBradford: 21 days' rest, 1 matches in previous 21 days \u00b7 Doncaster: 21 days' rest, 1 in 21 days \u00b7 away travel 53.7 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 50.9% / 27.7% / 21.4%, xG 1.52\u20130.91\n- Understat xG component (validated, in ensemble): home -1.83 pp, draw +2.15 pp, away -0.32 pp; xG -0.147 / -0.089\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.20 pp, draw -0.12 pp, away -0.08 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- lineup: not applied (failed validation; no live features)\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Bradford: lineup CONFIRMED (FotMob official team sheet).\n- Bradford: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n- Doncaster: lineup CONFIRMED (FotMob official team sheet).\n- Doncaster: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nFINAL VERDICT\n\nBradford 1\u20131 Doncaster is the single most probable scoreline at 13.2%: expected goals 1.52\u20130.91 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.043). Exact scores are inherently uncertain; the 1X2 split is 50.9%/27.7%/21.4%.\n",
+ "refresh_id": "e53463befccc4d109f9e76b217cbea27",
+ "frozen_at": "2026-11-21T14:36:53+00:00",
+ "sha256": "97aef3cdfd1d330ee676f6c72e156c0b11ec1b460864d94edd9aa2b197151da8"
+}
