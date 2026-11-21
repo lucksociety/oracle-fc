@@ -1,0 +1,591 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-11-20",
+ "input_fingerprint": "089f9cc4fd25f92ec445dbe63bd24c6d3710901e9f1c4bbab00c2c81fa97224f",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-11-21T12:14:33+00:00",
+ "fixture": {
+  "event_id": "POLY-1340477",
+  "home_name": "Gateshead FC",
+  "away_name": "Hartlepool United FC",
+  "competition": "National League",
+  "subcategory": "enl",
+  "kickoff_utc": "2026-11-21T15:00:00+00:00",
+  "kickoff_local": "2026-11-21 10:00 EST",
+  "home_matched": "Gateshead",
+  "away_matched": "Hartlepool",
+  "match_methods": {
+   "home": {
+    "source": "Gateshead FC",
+    "matched": "Gateshead",
+    "method": "core-tokens",
+    "score": 0.97
+   },
+   "away": {
+    "source": "Hartlepool United FC",
+    "matched": "Hartlepool",
+    "method": "alias",
+    "score": 1.0
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.31524831270222353,
+  "p_draw": 0.2719201638521741,
+  "p_away": 0.4128315234456023,
+  "xg_home": 1.277236861483128,
+  "xg_away": 1.4883337372380183,
+  "xg_total": 2.7655705987211463,
+  "median_total": 3,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.13145122744077434
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.13145122744077434
+   },
+   {
+    "home": 1,
+    "away": 2,
+    "p": 0.09118267266426489
+   },
+   {
+    "home": 0,
+    "away": 1,
+    "p": 0.08803993155901907
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.07769899900287881
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.07468670851142148
+   }
+  ],
+  "btts": 0.5761794473173673,
+  "totals_over": {
+   "over_0.5": 0.935282718212623,
+   "over_1.5": 0.7725560781421824,
+   "over_2.5": 0.5233141303623299,
+   "over_3.5": 0.3004887128819515,
+   "over_4.5": 0.14356481411002073,
+   "over_5.5": 0.0597284774362187,
+   "over_6.5": 0.02128317677992708
+  },
+  "total_buckets": {
+   "0-1": 0.2274439218578176,
+   "2": 0.2492419477798526,
+   "3": 0.2228254174803783,
+   "4": 0.15692389877193078,
+   "5+": 0.14356481411002073
+  },
+  "clean_sheet_home": 0.2178169766514999,
+  "clean_sheet_away": 0.27072085781850985,
+  "home_goal_dist": [
+   0.27072085781850985,
+   0.36388860183894206,
+   0.23162701910040193,
+   0.09574446868950126,
+   0.02925270413001953,
+   0.0070741822207864265,
+   0.0014121640129912047,
+   0.00028000218884783343
+  ],
+  "away_goal_dist": [
+   0.2178169766514999,
+   0.3424295857857057,
+   0.2551073371343294,
+   0.12380131006892311,
+   0.044489219492947055,
+   0.012662722062431454,
+   0.002976496354736444,
+   0.0007163524494268981
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    3
+   ],
+   "away_goals_80": [
+    0,
+    3
+   ],
+   "total_goals_80": [
+    1,
+    5
+   ],
+   "goal_diff_80": [
+    -2,
+    2
+   ]
+  },
+  "score_grid": [
+   [
+    0.064717,
+    0.08804,
+    0.068216,
+    0.033324,
+    0.012009,
+    0.003419,
+    0.000803
+   ],
+   [
+    0.074687,
+    0.131451,
+    0.091183,
+    0.044576,
+    0.016076,
+    0.00458,
+    0.001077
+   ],
+   [
+    0.049575,
+    0.077699,
+    0.061677,
+    0.028568,
+    0.01031,
+    0.00294,
+    0.000692
+   ],
+   [
+    0.02062,
+    0.03234,
+    0.024322,
+    0.012576,
+    0.0043,
+    0.001227,
+    0.000289
+   ],
+   [
+    0.006322,
+    0.009922,
+    0.007467,
+    0.003658,
+    0.001396,
+    0.000377,
+    8.9e-05
+   ],
+   [
+    0.00153,
+    0.002403,
+    0.00181,
+    0.000887,
+    0.000321,
+    9.7e-05,
+    2.2e-05
+   ],
+   [
+    0.000305,
+    0.00048,
+    0.000362,
+    0.000177,
+    6.4e-05,
+    1.8e-05,
+    5e-06
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.315815,
+  "p_draw": 0.272515,
+  "p_away": 0.41167,
+  "se": [
+   0.001039413021312991,
+   0.0009956168308516084,
+   0.001100449478849438
+  ],
+  "max_abs_dev_vs_exact": 0.0011615234456023305,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   0.9932631131047237,
+   1.5861426067297404
+  ],
+  "xg_away_80": [
+   1.1564319409283654,
+   1.8397835673333136
+  ],
+  "p_home_80": [
+   0.23777011677570362,
+   0.41922993784783436
+  ],
+  "p_draw_80": [
+   0.23387417968908167,
+   0.2886066125226617
+  ],
+  "p_away_80": [
+   0.3127318540988793,
+   0.5148488187179959
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.18557243331246936,
+   0.17231381282663885
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.3236359218825664,
+   "p_draw": 0.27009907035468683,
+   "p_away": 0.40626500776274677,
+   "xg_home": 1.2381980186894237,
+   "xg_away": 1.4163892730015157,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.32053966735393846,
+   "p_draw": 0.25027511650612816,
+   "p_away": 0.4291852161399332,
+   "xg_home": 1.2843185979690217,
+   "xg_away": 1.5247712968198803,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.28375158433613323,
+   "p_draw": 0.28619714909527605,
+   "p_away": 0.4300512665685906,
+   "xg_home": 1.0583975665136907,
+   "xg_away": 1.3623412227145517,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.43997327969838,
+   "p_draw": 0.24537214363907273,
+   "p_away": 0.31465457666254715,
+   "xg_home": 1.5873070946569159,
+   "xg_away": 1.3060647683601943,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.3230946420018501,
+   "p_draw": 0.26956644575798766,
+   "p_away": 0.4073389122401623,
+   "xg_home": 1.2365441266494246,
+   "xg_away": 1.418233879946588,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Home advantage (England, fitted from results): \u00d71.23 on Gateshead's scoring rate.",
+   "effect": 0.2069
+  },
+  {
+   "text": "Gateshead attack vs Hartlepool defence: time-weighted strength gap multiplies Gateshead's scoring rate by \u00d70.84 relative to an average pairing (from 39/40 decay-weighted matches).",
+   "effect": 0.1796
+  },
+  {
+   "text": "Independent results-only Elo: Gateshead 883 vs Hartlepool 1001 (gap -117 before home advantage).",
+   "effect": 0.1761
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.31524831270222353,
+  "p_draw": 0.2719201638521741,
+  "p_away": 0.4128315234456023,
+  "xg_home": 1.277236861483128,
+  "xg_away": 1.4883337372380183
+ },
+ "context": {
+  "fetched_at": "2026-11-21T12:14:33+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5906565",
+    "fetched_at": "2026-11-21T12:14:34+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "4-4-1-1",
+    "starters": [
+     {
+      "name": "Max Thompson",
+      "pos": "G",
+      "shirt": "1"
+     },
+     {
+      "name": "Thomas Lavery",
+      "pos": "D",
+      "shirt": "2"
+     },
+     {
+      "name": "Ben Williams",
+      "pos": "D",
+      "shirt": "18"
+     },
+     {
+      "name": "Kyle Ferguson",
+      "pos": "D",
+      "shirt": "24"
+     },
+     {
+      "name": "David Ferguson",
+      "pos": "D",
+      "shirt": "3"
+     },
+     {
+      "name": "Fenton John",
+      "pos": "M",
+      "shirt": "20"
+     },
+     {
+      "name": "Sam Bowen",
+      "pos": "M",
+      "shirt": "8"
+     },
+     {
+      "name": "Michael Spellman",
+      "pos": "M",
+      "shirt": "21"
+     },
+     {
+      "name": "Harry Chapman",
+      "pos": "M",
+      "shirt": "32"
+     },
+     {
+      "name": "Billy Chadwick",
+      "pos": "M",
+      "shirt": "23"
+     },
+     {
+      "name": "Jordy Hiwula-Mayifuila",
+      "pos": "F",
+      "shirt": "7"
+     }
+    ],
+    "fetched_at": "2026-11-21T12:14:34+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   },
+   "away": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "3-1-4-2",
+    "starters": [
+     {
+      "name": "Max Merrick",
+      "pos": "G",
+      "shirt": "1"
+     },
+     {
+      "name": "Reiss McNally",
+      "pos": "D",
+      "shirt": "6"
+     },
+     {
+      "name": "Maxim Kouogun",
+      "pos": "D",
+      "shirt": "5"
+     },
+     {
+      "name": "Liam Gibson",
+      "pos": "D",
+      "shirt": "27"
+     },
+     {
+      "name": "Nathan Sheron",
+      "pos": "M",
+      "shirt": "14"
+     },
+     {
+      "name": "Jack Nolan",
+      "pos": "M",
+      "shirt": "17"
+     },
+     {
+      "name": "Jamie Miley",
+      "pos": "M",
+      "shirt": "8"
+     },
+     {
+      "name": "Cole Deeming",
+      "pos": "M",
+      "shirt": "42"
+     },
+     {
+      "name": "Max Clark",
+      "pos": "M",
+      "shirt": "52"
+     },
+     {
+      "name": "Will Harris",
+      "pos": "F",
+      "shirt": "10"
+     },
+     {
+      "name": "Jordan Hugill",
+      "pos": "F",
+      "shirt": "9"
+     }
+    ],
+    "fetched_at": "2026-11-21T12:14:34+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   }
+  },
+  "absences": {
+   "home": [],
+   "away": []
+  },
+  "rest": {
+   "home": {
+    "rest_days": 7,
+    "n21": 2,
+    "last_match": "2026-11-14"
+   },
+   "away": {
+    "rest_days": 7,
+    "n21": 2,
+    "last_match": "2026-11-14"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 38.3
+  },
+  "venue": {
+   "name": "Gateshead International Stadium",
+   "city": "Gateshead, Tyne and Wear",
+   "lat": 54.961010318,
+   "lon": -1.57967627
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 0.5,
+   "temp_c": 3.2,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=54.961&longitude=-1.58",
+   "fetched_at": "2026-11-21T12:14:34+00:00",
+   "lat": 54.961010318,
+   "lon": -1.57967627
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": 0.12,
+    "d_p_draw_pp": 0.92,
+    "d_p_away_pp": -1.04,
+    "d_xg_home": -0.023,
+    "d_xg_away": -0.051
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.005,
+    "away_rate_mult": 1.0021,
+    "d_p_home_pp": 0.1,
+    "d_p_draw_pp": -0.05,
+    "d_p_away_pp": -0.05,
+    "d_xg_home": 0.006,
+    "d_xg_away": 0.003,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "reason": "failed validation; no live features"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 7.0,
+   "rest_a": 7.0,
+   "n21_h": 2.0,
+   "n21_a": 2.0,
+   "travel_km": 38.29891174335447,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 0.5,
+   "temp_c": 3.2
+  }
+ },
+ "lineup_simulation": {
+  "applied": false,
+  "basis": {
+   "home": "projected",
+   "away": "projected"
+  },
+  "reason": "No player ratings exist for this league, so the lineup and formation are shown but cannot change the probabilities."
+ },
+ "confidence": {
+  "tier": "LOW",
+  "p_max": 0.4128315234456023,
+  "entropy_nats": 1.0832666543764267,
+  "text": "Most likely result has P = 41.3%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.3% \u00b1 0.4% (n=16754, mean forecast 44.6%). Backtest RPS for EC: 0.2166; exact-score top-5 hit rate 47.6% (n=1833). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: LOW (entropy 1.083 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Gateshead: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Gateshead: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.",
+  "Hartlepool: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Hartlepool: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+ ],
+ "verdict": "Gateshead 1\u20131 Hartlepool is the single most probable scoreline at 13.1%: expected goals 1.28\u20131.49 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.043). Exact scores are inherently uncertain; the 1X2 split is 31.5%/27.2%/41.3%.",
+ "resolved": {
+  "home_key": "England:Gateshead",
+  "away_key": "England:Hartlepool",
+  "div": "EC",
+  "home_div": "EC",
+  "away_div": "EC",
+  "country": "England"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: Hartlepool United FC at Gateshead FC\nCompetition: National League\nDate: 2026-11-21 10:00 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-11-20\n\nPRIMARY FINAL SCORE PREDICTION\n\nGateshead FC 1 \u2013 1 Hartlepool United FC\n(modal exact score, probability 13.1%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.28\nAway: 1.49\nExpected Total: 2.77\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 31.5%\nDraw: 27.2%\nAway Win: 41.3%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 13.1%\n2. 1\u20132: 9.1%\n3. 0\u20131: 8.8%\n4. 2\u20131: 7.8%\n5. 1\u20130: 7.5%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 22.7%\nTotal 2 goals: 24.9%\nTotal 3 goals: 22.3%\nTotal 4 goals: 15.7%\nTotal 5+ goals: 14.4%\n\nBoth Teams Score: 57.6%\nClean sheet Gateshead FC: 21.8% \u00b7 Clean sheet Hartlepool United FC: 27.1%\n\nMATCH INTELLIGENCE\n\n1. Home advantage (England, fitted from results): \u00d71.23 on Gateshead's scoring rate.\n2. Gateshead attack vs Hartlepool defence: time-weighted strength gap multiplies Gateshead's scoring rate by \u00d70.84 relative to an average pairing (from 39/40 decay-weighted matches).\n3. Independent results-only Elo: Gateshead 883 vs Hartlepool 1001 (gap -117 before home advantage).\n\nMODEL CONFIDENCE\n\nMost likely result has P = 41.3%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.3% \u00b1 0.4% (n=16754, mean forecast 44.6%). Backtest RPS for EC: 0.2166; exact-score top-5 hit rate 47.6% (n=1833). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: LOW (entropy 1.083 nats of max 1.099).\nParameter-uncertainty 80% bands: xG Gateshead FC 0.99\u20131.59, xG Hartlepool United FC 1.16\u20131.84; P(home win) 23.8%\u201341.9%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0012 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nGateshead: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-11-21 07:14 EST (4-4-1-1)\n  Max Thompson (G), Thomas Lavery (D), Ben Williams (D), Kyle Ferguson (D), David Ferguson (D), Fenton John (M), Sam Bowen (M), Michael Spellman (M), Harry Chapman (M), Billy Chadwick (M), Jordy Hiwula-Mayifuila (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\nHartlepool: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-11-21 07:14 EST (3-1-4-2)\n  Max Merrick (G), Reiss McNally (D), Maxim Kouogun (D), Liam Gibson (D), Nathan Sheron (M), Jack Nolan (M), Jamie Miley (M), Cole Deeming (M), Max Clark (M), Will Harris (F), Jordan Hugill (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nKEY ABSENCES\n\n- None listed by the sources.\n\nWEATHER AT VENUE\n\nGateshead International Stadium, Gateshead, Tyne and Wear: 3.2 \u00b0C, wind 0.5 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-11-21 07:14 EST]\n\nREST & TRAVEL\n\nGateshead: 7 days' rest, 2 matches in previous 21 days \u00b7 Hartlepool: 7 days' rest, 2 in 21 days \u00b7 away travel 38.3 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 31.5% / 27.2% / 41.3%, xG 1.28\u20131.49\n- Understat xG component (validated, in ensemble): home +0.12 pp, draw +0.92 pp, away -1.04 pp; xG -0.023 / -0.051\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.10 pp, draw -0.05 pp, away -0.05 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- lineup: not applied (failed validation; no live features)\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Gateshead: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Gateshead: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n- Hartlepool: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Hartlepool: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nFINAL VERDICT\n\nGateshead 1\u20131 Hartlepool is the single most probable scoreline at 13.1%: expected goals 1.28\u20131.49 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.043). Exact scores are inherently uncertain; the 1X2 split is 31.5%/27.2%/41.3%.\n",
+ "refresh_id": "118c44018d4a4c96a0ddd5c036c76603",
+ "frozen_at": "2026-11-21T12:14:34+00:00",
+ "sha256": "c961f9c9eb3c7db2d4223f9200c7735f29c03354e760c95703ce15512234e331"
+}

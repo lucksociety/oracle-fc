@@ -1,0 +1,776 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-11-20",
+ "input_fingerprint": "089f9cc4fd25f92ec445dbe63bd24c6d3710901e9f1c4bbab00c2c81fa97224f",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-11-21T12:14:22+00:00",
+ "fixture": {
+  "event_id": "POLY-1337800",
+  "home_name": "Manchester City FC",
+  "away_name": "Fulham FC",
+  "competition": "Premier League",
+  "subcategory": "epl",
+  "kickoff_utc": "2026-11-21T12:30:00+00:00",
+  "kickoff_local": "2026-11-21 07:30 EST",
+  "home_matched": "Man City",
+  "away_matched": "Fulham",
+  "match_methods": {
+   "home": {
+    "source": "Manchester City FC",
+    "matched": "Man City",
+    "method": "alias",
+    "score": 1.0
+   },
+   "away": {
+    "source": "Fulham FC",
+    "matched": "Fulham",
+    "method": "core-tokens",
+    "score": 0.97
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.62996833489422,
+  "p_draw": 0.21322559796988755,
+  "p_away": 0.15680606713589246,
+  "xg_home": 2.1227268494803244,
+  "xg_away": 0.989591685721441,
+  "xg_total": 3.1123185352017653,
+  "median_total": 3,
+  "modal_score": {
+   "home": 2,
+   "away": 1,
+   "p": 0.10207749532524905
+  },
+  "top_scores": [
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.10207749532524905
+   },
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.10162697399562956
+   },
+   {
+    "home": 2,
+    "away": 0,
+    "p": 0.09990605690985248
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.08952897269407474
+   },
+   {
+    "home": 3,
+    "away": 1,
+    "p": 0.07227027072532538
+   }
+  ],
+  "btts": 0.5672295600547747,
+  "totals_over": {
+   "over_0.5": 0.9547055136293708,
+   "over_1.5": 0.825965589868281,
+   "over_2.5": 0.6041394337338712,
+   "over_3.5": 0.37880616563010433,
+   "over_4.5": 0.200530696914099,
+   "over_5.5": 0.09245657346759417,
+   "over_6.5": 0.03687825682247267
+  },
+  "total_buckets": {
+   "0-1": 0.1740344101317191,
+   "2": 0.2218261561344097,
+   "3": 0.22533326810376694,
+   "4": 0.1782754687160053,
+   "5+": 0.200530696914099
+  },
+  "clean_sheet_home": 0.36492470759523443,
+  "clean_sheet_away": 0.11314021872062009,
+  "home_goal_dist": [
+   0.11314021872062009,
+   0.2560501554560387,
+   0.2753193425023317,
+   0.19356394727510864,
+   0.10082802799789822,
+   0.041565809041828175,
+   0.01414190184963814,
+   0.0053905971565364075
+  ],
+  "away_goal_dist": [
+   0.36492470759523443,
+   0.3758120288304413,
+   0.18415272198761382,
+   0.058454707164706236,
+   0.013677768077458961,
+   0.0025333065136046357,
+   0.00038786244900834634,
+   5.689738193224989e-05
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    4
+   ],
+   "away_goals_80": [
+    0,
+    2
+   ],
+   "total_goals_80": [
+    1,
+    5
+   ],
+   "goal_diff_80": [
+    -1,
+    3
+   ]
+  },
+  "score_grid": [
+   [
+    0.045294,
+    0.039211,
+    0.020293,
+    0.00648,
+    0.001527,
+    0.000284,
+    4.4e-05
+   ],
+   [
+    0.089529,
+    0.101627,
+    0.046003,
+    0.014679,
+    0.003456,
+    0.000643,
+    9.9e-05
+   ],
+   [
+    0.099906,
+    0.102077,
+    0.052819,
+    0.015946,
+    0.003751,
+    0.000697,
+    0.000107
+   ],
+   [
+    0.070772,
+    0.07227,
+    0.035383,
+    0.011909,
+    0.00265,
+    0.000492,
+    7.5e-05
+   ],
+   [
+    0.03698,
+    0.037741,
+    0.018467,
+    0.005881,
+    0.001459,
+    0.000256,
+    3.9e-05
+   ],
+   [
+    0.015263,
+    0.015568,
+    0.007613,
+    0.002423,
+    0.000569,
+    0.000111,
+    1.6e-05
+   ],
+   [
+    0.005197,
+    0.005298,
+    0.002589,
+    0.000823,
+    0.000193,
+    3.6e-05,
+    6e-06
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.63073,
+  "p_draw": 0.212325,
+  "p_away": 0.156945,
+  "se": [
+   0.0010791424074235985,
+   0.0009144481788898703,
+   0.0008133672816600137
+  ],
+  "max_abs_dev_vs_exact": 0.0009005979698875344,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   1.6571100252002675,
+   2.6286157441326377
+  ],
+  "xg_away_80": [
+   0.7329636105846711,
+   1.266232215607181
+  ],
+  "p_home_80": [
+   0.5118206956297949,
+   0.7350787860330954
+  ],
+  "p_draw_80": [
+   0.16269312912522552,
+   0.25108030984369945
+  ],
+  "p_away_80": [
+   0.09925031008653892,
+   0.23501349668400354
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.18292304753880553,
+   0.20289268250537182
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.6013205056920259,
+   "p_draw": 0.22824961661507495,
+   "p_away": 0.17042987769289908,
+   "xg_home": 1.8954806586032351,
+   "xg_away": 0.9067976382630643,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.6471989585659257,
+   "p_draw": 0.19660771806080707,
+   "p_away": 0.15619332337326744,
+   "xg_home": 2.1455489007828565,
+   "xg_away": 0.9505070675486581,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.6033044243648691,
+   "p_draw": 0.23227739869154906,
+   "p_away": 0.16441817694358193,
+   "xg_home": 1.8803056601540906,
+   "xg_away": 0.8787499681154396,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.42222412904420675,
+   "p_draw": 0.2499474388561885,
+   "p_away": 0.3278284320996049,
+   "xg_home": 1.5173274019126641,
+   "xg_away": 1.3079985715500384,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.605980323084137,
+   "p_draw": 0.2172138358478615,
+   "p_away": 0.17680584106800162,
+   "xg_home": 2.0300708089311525,
+   "xg_away": 1.0086101416053697,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Independent results-only Elo: Man City 1873 vs Fulham 1659 (gap +214 before home advantage).",
+   "effect": 0.3208
+  },
+  {
+   "text": "Fulham attack vs Man City defence: rate multiplier \u00d70.75 for the away side.",
+   "effect": 0.2842
+  },
+  {
+   "text": "Man City attack vs Fulham defence: time-weighted strength gap multiplies Man City's scoring rate by \u00d71.28 relative to an average pairing (from 36/31 decay-weighted matches).",
+   "effect": 0.2462
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.62996833489422,
+  "p_draw": 0.21322559796988755,
+  "p_away": 0.15680606713589246,
+  "xg_home": 2.1227268494803244,
+  "xg_away": 0.989591685721441
+ },
+ "context": {
+  "fetched_at": "2026-11-21T12:14:22+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5795522",
+    "fetched_at": "2026-11-21T12:14:22+00:00"
+   },
+   {
+    "name": "Fantasy Premier League availability",
+    "url": "https://fantasy.premierleague.com/api/bootstrap-static/",
+    "fetched_at": "2026-11-21T12:14:23+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "confirmed",
+    "source": "FotMob official team sheet",
+    "formation": "4-2-3-1",
+    "starters": [
+     {
+      "name": "Gianluigi Donnarumma",
+      "pos": "G",
+      "shirt": "1"
+     },
+     {
+      "name": "Abdukodir Khusanov",
+      "pos": "D",
+      "shirt": "45"
+     },
+     {
+      "name": "R\u00faben Dias",
+      "pos": "D",
+      "shirt": "3"
+     },
+     {
+      "name": "Marc Gu\u00e9hi",
+      "pos": "D",
+      "shirt": "6"
+     },
+     {
+      "name": "Nico O'Reilly",
+      "pos": "D",
+      "shirt": "33"
+     },
+     {
+      "name": "Ayyoub Bouaddi",
+      "pos": "M",
+      "shirt": "32"
+     },
+     {
+      "name": "Elliot Anderson",
+      "pos": "M",
+      "shirt": "5"
+     },
+     {
+      "name": "Iliman Ndiaye",
+      "pos": "F",
+      "shirt": "7"
+     },
+     {
+      "name": "Phil Foden",
+      "pos": "F",
+      "shirt": "47"
+     },
+     {
+      "name": "J\u00e9r\u00e9my Doku",
+      "pos": "F",
+      "shirt": "11"
+     },
+     {
+      "name": "Erling Haaland",
+      "pos": "F",
+      "shirt": "9"
+     }
+    ],
+    "fetched_at": "2026-11-21T12:14:22+00:00",
+    "n_configurations": 1,
+    "unmatched_players": [],
+    "mean_xi_attack_index": -0.01,
+    "mean_continuity": 0.098,
+    "p_backup_gk": 0.0
+   },
+   "away": {
+    "status": "confirmed",
+    "source": "FotMob official team sheet",
+    "formation": "4-2-3-1",
+    "starters": [
+     {
+      "name": "Bernd Leno",
+      "pos": "G",
+      "shirt": "1"
+     },
+     {
+      "name": "Kenny Tete",
+      "pos": "D",
+      "shirt": "2"
+     },
+     {
+      "name": "David Affengruber",
+      "pos": "D",
+      "shirt": "22"
+     },
+     {
+      "name": "Calvin Bassey",
+      "pos": "D",
+      "shirt": "3"
+     },
+     {
+      "name": "Ryan Sessegnon",
+      "pos": "D",
+      "shirt": "30"
+     },
+     {
+      "name": "Sander Berge",
+      "pos": "M",
+      "shirt": "16"
+     },
+     {
+      "name": "Shea Charles",
+      "pos": "M",
+      "shirt": "19"
+     },
+     {
+      "name": "Oscar Bobb",
+      "pos": "F",
+      "shirt": "14"
+     },
+     {
+      "name": "Joshua King",
+      "pos": "M",
+      "shirt": "24"
+     },
+     {
+      "name": "Alex Iwobi",
+      "pos": "M",
+      "shirt": "17"
+     },
+     {
+      "name": "Rodrigo Muniz",
+      "pos": "F",
+      "shirt": "9"
+     }
+    ],
+    "fetched_at": "2026-11-21T12:14:22+00:00",
+    "n_configurations": 1,
+    "unmatched_players": [],
+    "mean_xi_attack_index": -0.028,
+    "mean_continuity": -0.822,
+    "p_backup_gk": 0.0
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Matheus Nunes",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795522",
+     "fetched_at": "2026-11-21T12:14:22+00:00",
+     "chance_of_playing": 50,
+     "fpl_status": "doubtful",
+     "fpl_news": "Unspecified injury - 50% chance of playing",
+     "fpl_news_added": "2026-11-20T15:30:06.460505Z"
+    },
+    {
+     "player": "Antoine Semenyo",
+     "type": "injury",
+     "expected_return": "Mid December 2026",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795522",
+     "fetched_at": "2026-11-21T12:14:22+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Knee injury - Unknown return date",
+     "fpl_news_added": "2026-10-17T17:30:09.977110Z"
+    }
+   ],
+   "away": [
+    {
+     "player": "Benjamin Lecomte",
+     "type": "injury",
+     "expected_return": "Early July 2027",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795522",
+     "fetched_at": "2026-11-21T12:14:22+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Achilles injury - Unknown return date",
+     "fpl_news_added": "2026-11-20T11:30:05.525769Z"
+    },
+    {
+     "player": "Emile Smith Rowe",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795522",
+     "fetched_at": "2026-11-21T12:14:22+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Hip injury - Expected back 29 Nov",
+     "fpl_news_added": "2026-11-20T11:30:05.541395Z"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 14,
+    "n21": 2,
+    "last_match": "2026-11-07"
+   },
+   "away": {
+    "rest_days": 14,
+    "n21": 2,
+    "last_match": "2026-11-07"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 260.4
+  },
+  "venue": {
+   "name": "Etihad Stadium",
+   "city": "Manchester",
+   "lat": 53.483152259,
+   "lon": -2.200409174
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 0.7999999999999999,
+   "temp_c": 5.0,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=53.483&longitude=-2.2",
+   "fetched_at": "2026-11-21T12:14:23+00:00",
+   "lat": 53.483152259,
+   "lon": -2.200409174
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": -1.94,
+    "d_p_draw_pp": 0.97,
+    "d_p_away_pp": 0.97,
+    "d_xg_home": -0.048,
+    "d_xg_away": 0.033
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0199,
+    "away_rate_mult": 1.0084,
+    "d_p_home_pp": 0.64,
+    "d_p_draw_pp": -0.37,
+    "d_p_away_pp": -0.27,
+    "d_xg_home": 0.041,
+    "d_xg_away": 0.008,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "home_rate_mult": 1.0138,
+    "away_rate_mult": 0.9704,
+    "d_p_home_pp": 1.24,
+    "d_p_draw_pp": -0.4,
+    "d_p_away_pp": -0.84,
+    "d_xg_home": 0.028,
+    "d_xg_away": -0.028,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 14.0,
+   "rest_a": 14.0,
+   "n21_h": 2.0,
+   "n21_a": 2.0,
+   "travel_km": 260.4079978613805,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 0.7999999999999999,
+   "temp_c": 5.0
+  }
+ },
+ "lineup_simulation": {
+  "applied": true,
+  "validated": false,
+  "scale": 0.5,
+  "basis": {
+   "home": "confirmed",
+   "away": "confirmed"
+  },
+  "home_rate_mult": 1.0069,
+  "away_rate_mult": 0.9851,
+  "note": "Starting-XI strength, continuity and backup-keeper adjustment at half the fitted size. It did not pass the out-of-sample test, so bets are not priced from it.",
+  "p_home": 0.6362076528811976,
+  "p_draw": 0.21124054208515497,
+  "p_away": 0.1525518050336473,
+  "xg_home": 2.136643376683792,
+  "xg_away": 0.9753634205017727,
+  "xg_total": 3.1120067971855647,
+  "btts": 0.5634015495302316,
+  "totals_over": {
+   "over_0.5": 0.9546975262024904,
+   "over_1.5": 0.8259044395804557,
+   "over_2.5": 0.6040896376469035,
+   "over_3.5": 0.3787237369560497,
+   "over_4.5": 0.2004860787923356,
+   "over_5.5": 0.09241858843979549,
+   "over_6.5": 0.03686422173648049
+  },
+  "modal_score": {
+   "home": 2,
+   "away": 1,
+   "p": 0.10196014170794118
+  },
+  "top_scores": [
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.10196014170794118
+   },
+   {
+    "home": 2,
+    "away": 0,
+    "p": 0.10130016840373396
+   },
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.10081810602461859
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.09015941079608619
+   },
+   {
+    "home": 3,
+    "away": 1,
+    "p": 0.07268268992866098
+   }
+  ],
+  "score_grid": [
+   [
+    0.045302,
+    0.038634,
+    0.019697,
+    0.006196,
+    0.001438,
+    0.000264,
+    4e-05
+   ],
+   [
+    0.090159,
+    0.100818,
+    0.044957,
+    0.014132,
+    0.003277,
+    0.000601,
+    9.1e-05
+   ],
+   [
+    0.1013,
+    0.10196,
+    0.051972,
+    0.015457,
+    0.003582,
+    0.000656,
+    9.9e-05
+   ],
+   [
+    0.072253,
+    0.072683,
+    0.035055,
+    0.011623,
+    0.002548,
+    0.000466,
+    7e-05
+   ],
+   [
+    0.038012,
+    0.038217,
+    0.018421,
+    0.005779,
+    0.001412,
+    0.000244,
+    3.7e-05
+   ],
+   [
+    0.015797,
+    0.015873,
+    0.007646,
+    0.002397,
+    0.000554,
+    0.000107,
+    1.5e-05
+   ],
+   [
+    0.005416,
+    0.005438,
+    0.002618,
+    0.00082,
+    0.000189,
+    3.5e-05,
+    5e-06
+   ]
+  ]
+ },
+ "confidence": {
+  "tier": "MODERATE",
+  "p_max": 0.62996833489422,
+  "entropy_nats": 0.9111409099850076,
+  "text": "Most likely result has P = 63.0%. In the out-of-sample backtest, favourites priced 0.60\u20130.70 won 66.4% \u00b1 0.7% (n=4069, mean forecast 64.2%). Backtest RPS for E0: 0.2018; exact-score top-5 hit rate 46.6% (n=1220). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: MODERATE (entropy 0.911 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Man City: lineup CONFIRMED (FotMob official team sheet).",
+  "Fulham: lineup CONFIRMED (FotMob official team sheet)."
+ ],
+ "verdict": "Man City 2\u20131 Fulham is the single most probable scoreline at 10.2%: expected goals 2.12\u20130.99 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.043). Exact scores are inherently uncertain; the 1X2 split is 63.0%/21.3%/15.7%.",
+ "resolved": {
+  "home_key": "England:Man City",
+  "away_key": "England:Fulham",
+  "div": "E0",
+  "home_div": "E0",
+  "away_div": "E0",
+  "country": "England"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: Fulham FC at Manchester City FC\nCompetition: Premier League\nDate: 2026-11-21 07:30 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-11-20\n\nPRIMARY FINAL SCORE PREDICTION\n\nManchester City FC 2 \u2013 1 Fulham FC\n(modal exact score, probability 10.2%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 2.12\nAway: 0.99\nExpected Total: 3.11\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 63.0%\nDraw: 21.3%\nAway Win: 15.7%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 2\u20131: 10.2%\n2. 1\u20131: 10.2%\n3. 2\u20130: 10.0%\n4. 1\u20130: 9.0%\n5. 3\u20131: 7.2%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 17.4%\nTotal 2 goals: 22.2%\nTotal 3 goals: 22.5%\nTotal 4 goals: 17.8%\nTotal 5+ goals: 20.1%\n\nBoth Teams Score: 56.7%\nClean sheet Manchester City FC: 36.5% \u00b7 Clean sheet Fulham FC: 11.3%\n\nMATCH INTELLIGENCE\n\n1. Independent results-only Elo: Man City 1873 vs Fulham 1659 (gap +214 before home advantage).\n2. Fulham attack vs Man City defence: rate multiplier \u00d70.75 for the away side.\n3. Man City attack vs Fulham defence: time-weighted strength gap multiplies Man City's scoring rate by \u00d71.28 relative to an average pairing (from 36/31 decay-weighted matches).\n\nMODEL CONFIDENCE\n\nMost likely result has P = 63.0%. In the out-of-sample backtest, favourites priced 0.60\u20130.70 won 66.4% \u00b1 0.7% (n=4069, mean forecast 64.2%). Backtest RPS for E0: 0.2018; exact-score top-5 hit rate 46.6% (n=1220). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: MODERATE (entropy 0.911 nats of max 1.099).\nParameter-uncertainty 80% bands: xG Manchester City FC 1.66\u20132.63, xG Fulham FC 0.73\u20131.27; P(home win) 51.2%\u201373.5%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0009 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nMan City: CONFIRMED \u2014 FotMob official team sheet, fetched 2026-11-21 07:14 EST (4-2-3-1)\n  Gianluigi Donnarumma (G), Abdukodir Khusanov (D), R\u00faben Dias (D), Marc Gu\u00e9hi (D), Nico O'Reilly (D), Ayyoub Bouaddi (M), Elliot Anderson (M), Iliman Ndiaye (F), Phil Foden (F), J\u00e9r\u00e9my Doku (F), Erling Haaland (F)\n  1 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs -0.010 (log) \u00b7 continuity +0.10 \u00b7 P(backup GK) 0%\nFulham: CONFIRMED \u2014 FotMob official team sheet, fetched 2026-11-21 07:14 EST (4-2-3-1)\n  Bernd Leno (G), Kenny Tete (D), David Affengruber (D), Calvin Bassey (D), Ryan Sessegnon (D), Sander Berge (M), Shea Charles (M), Oscar Bobb (F), Joshua King (M), Alex Iwobi (M), Rodrigo Muniz (F)\n  1 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs -0.028 (log) \u00b7 continuity -0.82 \u00b7 P(backup GK) 0%\n\nKEY ABSENCES\n\n- Man City: Matheus Nunes \u2014 injury, Doubtful, 50% chance of playing [FotMob + FPL, 2026-11-21 07:14 EST] \u2014 FPL: Unspecified injury - 50% chance of playing (updated 2026-11-20 10:30 EST)\n- Man City: Antoine Semenyo \u2014 injury, Mid December 2026, 0% chance of playing [FotMob + FPL, 2026-11-21 07:14 EST] \u2014 FPL: Knee injury - Unknown return date (updated 2026-10-17 13:30 EDT)\n- Fulham: Benjamin Lecomte \u2014 injury, Early July 2027, 0% chance of playing [FotMob + FPL, 2026-11-21 07:14 EST] \u2014 FPL: Achilles injury - Unknown return date (updated 2026-11-20 06:30 EST)\n- Fulham: Emile Smith Rowe \u2014 injury, Late November 2026, 0% chance of playing [FotMob + FPL, 2026-11-21 07:14 EST] \u2014 FPL: Hip injury - Expected back 29 Nov (updated 2026-11-20 06:30 EST)\n\nWEATHER AT VENUE\n\nEtihad Stadium, Manchester: 5.0 \u00b0C, wind 0.8 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-11-21 07:14 EST]\n\nREST & TRAVEL\n\nMan City: 14 days' rest, 2 matches in previous 21 days \u00b7 Fulham: 14 days' rest, 2 in 21 days \u00b7 away travel 260.4 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 63.0% / 21.3% / 15.7%, xG 2.12\u20130.99\n- Understat xG component (validated, in ensemble): home -1.94 pp, draw +0.97 pp, away +0.97 pp; xG -0.048 / +0.033\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.64 pp, draw -0.37 pp, away -0.27 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- lineup: NOT APPLIED (failed out-of-sample validation); would have moved home +1.24 pp, draw -0.40 pp, away -0.84 pp\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Man City: lineup CONFIRMED (FotMob official team sheet).\n- Fulham: lineup CONFIRMED (FotMob official team sheet).\n\nFINAL VERDICT\n\nMan City 2\u20131 Fulham is the single most probable scoreline at 10.2%: expected goals 2.12\u20130.99 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.043). Exact scores are inherently uncertain; the 1X2 split is 63.0%/21.3%/15.7%.\n",
+ "refresh_id": "118c44018d4a4c96a0ddd5c036c76603",
+ "frozen_at": "2026-11-21T12:14:23+00:00",
+ "sha256": "7b61067fe2b10309bb5157b6bcf48adf6033b6e3a6530ee99a844a7ea0803a28"
+}

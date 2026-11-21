@@ -1,0 +1,779 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-11-20",
+ "input_fingerprint": "089f9cc4fd25f92ec445dbe63bd24c6d3710901e9f1c4bbab00c2c81fa97224f",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-11-21T12:14:26+00:00",
+ "fixture": {
+  "event_id": "POLY-1337909",
+  "home_name": "SV 07 Elversberg",
+  "away_name": "SC Freiburg",
+  "competition": "Bundesliga",
+  "subcategory": "bun",
+  "kickoff_utc": "2026-11-21T14:30:00+00:00",
+  "kickoff_local": "2026-11-21 09:30 EST",
+  "home_matched": "Elversberg",
+  "away_matched": "Freiburg",
+  "match_methods": {
+   "home": {
+    "source": "SV 07 Elversberg",
+    "matched": "Elversberg",
+    "method": "alias",
+    "score": 1.0
+   },
+   "away": {
+    "source": "SC Freiburg",
+    "matched": "Freiburg",
+    "method": "core-tokens",
+    "score": 0.97
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.34856162298135906,
+  "p_draw": 0.2520885869641853,
+  "p_away": 0.39934979005445587,
+  "xg_home": 1.5174344299741909,
+  "xg_away": 1.6325712555997522,
+  "xg_total": 3.150005685573943,
+  "median_total": 3,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.11545741729438747
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.11545741729438747
+   },
+   {
+    "home": 1,
+    "away": 2,
+    "p": 0.08825780934963752
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.08158359009545794
+   },
+   {
+    "home": 2,
+    "away": 2,
+    "p": 0.07084976024718079
+   },
+   {
+    "home": 0,
+    "away": 1,
+    "p": 0.06509485134335274
+   }
+  ],
+  "btts": 0.6429769664684064,
+  "totals_over": {
+   "over_0.5": 0.9560613503477742,
+   "over_1.5": 0.8313704144787737,
+   "over_2.5": 0.6120628771574738,
+   "over_3.5": 0.3876700898136633,
+   "over_4.5": 0.20699083269542892,
+   "over_5.5": 0.0966747123288366,
+   "over_6.5": 0.038895764848538204
+  },
+  "total_buckets": {
+   "0-1": 0.16862958552122648,
+   "2": 0.21930753732129984,
+   "3": 0.2243927873438105,
+   "4": 0.18067925711823438,
+   "5+": 0.20699083269542892
+  },
+  "clean_sheet_home": 0.187843194259281,
+  "clean_sheet_away": 0.21311848892453866,
+  "home_goal_dist": [
+   0.21311848892453866,
+   0.3379253517525089,
+   0.2563167529916781,
+   0.12728775720696073,
+   0.04711844977813806,
+   0.013926833361559785,
+   0.003426423535891128,
+   0.0008799424487248472
+  ],
+  "away_goal_dist": [
+   0.187843194259281,
+   0.32431733887945446,
+   0.2659886657312275,
+   0.1420626114681446,
+   0.05624810251849305,
+   0.01768134512956226,
+   0.004601791059139373,
+   0.001256950954697925
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    3
+   ],
+   "away_goals_80": [
+    0,
+    3
+   ],
+   "total_goals_80": [
+    1,
+    5
+   ],
+   "goal_diff_80": [
+    -2,
+    2
+   ]
+  },
+  "score_grid": [
+   [
+    0.043939,
+    0.065095,
+    0.056171,
+    0.030489,
+    0.012235,
+    0.003887,
+    0.001021
+   ],
+   [
+    0.059596,
+    0.115457,
+    0.088258,
+    0.04762,
+    0.018997,
+    0.006,
+    0.001567
+   ],
+   [
+    0.047679,
+    0.081584,
+    0.07085,
+    0.035978,
+    0.014267,
+    0.00448,
+    0.001163
+   ],
+   [
+    0.024062,
+    0.040946,
+    0.033474,
+    0.018853,
+    0.007036,
+    0.002196,
+    0.000567
+   ],
+   [
+    0.009029,
+    0.015284,
+    0.012427,
+    0.006589,
+    0.002728,
+    0.000801,
+    0.000206
+   ],
+   [
+    0.002696,
+    0.004542,
+    0.003674,
+    0.001938,
+    0.000755,
+    0.000246,
+    5.9e-05
+   ],
+   [
+    0.000669,
+    0.001122,
+    0.000903,
+    0.000474,
+    0.000184,
+    5.6e-05,
+    1.5e-05
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.34877,
+  "p_draw": 0.25389999999999996,
+  "p_away": 0.39733,
+  "se": [
+   0.0010656676008493455,
+   0.0009732286216506376,
+   0.001094209466007309
+  ],
+  "max_abs_dev_vs_exact": 0.00201979005445585,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   1.1704533172449623,
+   1.8958424186117238
+  ],
+  "xg_away_80": [
+   1.2172263501872973,
+   2.0792161012699917
+  ],
+  "p_home_80": [
+   0.25510282541137624,
+   0.4698601926006885
+  ],
+  "p_draw_80": [
+   0.21304466767119004,
+   0.27072512843571583
+  ],
+  "p_away_80": [
+   0.2824898245878224,
+   0.5186658041762828
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.1912052238916151,
+   0.19870319527697694
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.4309549847167632,
+   "p_draw": 0.2393470753519872,
+   "p_away": 0.3296979399312495,
+   "xg_home": 1.7437680688579769,
+   "xg_away": 1.5046611443658575,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.2991893002081907,
+   "p_draw": 0.2367716378856857,
+   "p_away": 0.4640390619061236,
+   "xg_home": 1.3283064979972499,
+   "xg_away": 1.7071759878627204,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.407783921835675,
+   "p_draw": 0.23755560379063337,
+   "p_away": 0.3546604743736916,
+   "xg_home": 1.7596004674966224,
+   "xg_away": 1.631875588942493,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.45274475786923307,
+   "p_draw": 0.23031086678497037,
+   "p_away": 0.31694437534579667,
+   "xg_home": 1.7711190534839896,
+   "xg_away": 1.451074065326448,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.3938678776596467,
+   "p_draw": 0.24630942110587503,
+   "p_away": 0.35982270123447824,
+   "xg_home": 1.598757587913182,
+   "xg_away": 1.5199756901150925,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Home advantage (Germany, fitted from results): \u00d71.31 on Elversberg's scoring rate.",
+   "effect": 0.2679
+  },
+  {
+   "text": "Freiburg attack vs Elversberg defence: rate multiplier \u00d71.25 for the away side.",
+   "effect": 0.2222
+  },
+  {
+   "text": "Independent results-only Elo: Elversberg 1514 vs Freiburg 1655 (gap -141 before home advantage).",
+   "effect": 0.2118
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.34856162298135895,
+  "p_draw": 0.25208858696418524,
+  "p_away": 0.39934979005445576,
+  "xg_home": 1.5174344299741909,
+  "xg_away": 1.632571255599752
+ },
+ "context": {
+  "fetched_at": "2026-11-21T12:14:26+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5881229",
+    "fetched_at": "2026-11-21T12:14:26+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "4-2-3-1",
+    "starters": [
+     {
+      "name": "Nicolas Kristof",
+      "pos": "G",
+      "shirt": "20"
+     },
+     {
+      "name": "Luca Sirch",
+      "pos": "D",
+      "shirt": "26"
+     },
+     {
+      "name": "Lukas Pinckert",
+      "pos": "D",
+      "shirt": "19"
+     },
+     {
+      "name": "Maximilian Rohr",
+      "pos": "D",
+      "shirt": "31"
+     },
+     {
+      "name": "Lasse G\u00fcnther",
+      "pos": "D",
+      "shirt": "21"
+     },
+     {
+      "name": "Felix Keidel",
+      "pos": "M",
+      "shirt": "43"
+     },
+     {
+      "name": "\u0141ukasz Por\u0119ba",
+      "pos": "M",
+      "shirt": "8"
+     },
+     {
+      "name": "Lukas Petkov",
+      "pos": "F",
+      "shirt": "25"
+     },
+     {
+      "name": "Francis Onyeka",
+      "pos": "M",
+      "shirt": "40"
+     },
+     {
+      "name": "Maurice Krattenmacher",
+      "pos": "F",
+      "shirt": "7"
+     },
+     {
+      "name": "David Mokwa",
+      "pos": "F",
+      "shirt": "42"
+     }
+    ],
+    "fetched_at": "2026-11-21T12:14:26+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [],
+    "mean_xi_attack_index": -0.076,
+    "mean_continuity": -0.214,
+    "p_backup_gk": 0.0
+   },
+   "away": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "4-2-3-1",
+    "starters": [
+     {
+      "name": "Mio Backhaus",
+      "pos": "G",
+      "shirt": "1"
+     },
+     {
+      "name": "Philipp Treu",
+      "pos": "D",
+      "shirt": "29"
+     },
+     {
+      "name": "Matthias Ginter",
+      "pos": "D",
+      "shirt": "28"
+     },
+     {
+      "name": "Philipp Lienhart",
+      "pos": "D",
+      "shirt": "3"
+     },
+     {
+      "name": "Jordy Makengo",
+      "pos": "D",
+      "shirt": "33"
+     },
+     {
+      "name": "Maximilian Eggestein",
+      "pos": "M",
+      "shirt": "8"
+     },
+     {
+      "name": "Yannik Engelhardt",
+      "pos": "M",
+      "shirt": "16"
+     },
+     {
+      "name": "Jan-Niklas Beste",
+      "pos": "F",
+      "shirt": "19"
+     },
+     {
+      "name": "Yuito Suzuki",
+      "pos": "M",
+      "shirt": "14"
+     },
+     {
+      "name": "Derry Scherhant",
+      "pos": "F",
+      "shirt": "7"
+     },
+     {
+      "name": "Igor Matanovi\u0107",
+      "pos": "F",
+      "shirt": "31"
+     }
+    ],
+    "fetched_at": "2026-11-21T12:14:26+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [],
+    "mean_xi_attack_index": -0.007,
+    "mean_continuity": -0.319,
+    "p_backup_gk": 0.11
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Nicholas Mickelson",
+     "type": "injury",
+     "expected_return": "Late December 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881229",
+     "fetched_at": "2026-11-21T12:14:26+00:00"
+    },
+    {
+     "player": "Lukas Pinckert",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881229",
+     "fetched_at": "2026-11-21T12:14:26+00:00"
+    },
+    {
+     "player": "Jan Gyamerah",
+     "type": "injury",
+     "expected_return": "A few weeks",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881229",
+     "fetched_at": "2026-11-21T12:14:26+00:00"
+    },
+    {
+     "player": "Tom Zimmerschied",
+     "type": "injury",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881229",
+     "fetched_at": "2026-11-21T12:14:26+00:00"
+    },
+    {
+     "player": "Noah Darvich",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881229",
+     "fetched_at": "2026-11-21T12:14:26+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "Berkay Y\u0131lmaz",
+     "type": "suspension",
+     "expected_return": "Late November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881229",
+     "fetched_at": "2026-11-21T12:14:26+00:00"
+    },
+    {
+     "player": "Florent Muslija",
+     "type": "injury",
+     "expected_return": "Late December 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881229",
+     "fetched_at": "2026-11-21T12:14:26+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 14,
+    "n21": 1,
+    "last_match": "2026-11-07"
+   },
+   "away": {
+    "rest_days": 13,
+    "n21": 2,
+    "last_match": "2026-11-08"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 153.3
+  },
+  "venue": {
+   "name": "URSAPHARM-Arena an der Kaiserlinde",
+   "city": "Spiesen-Elversberg",
+   "lat": 49.318814181,
+   "lon": 7.121704817
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 0.635,
+   "temp_c": 6.3,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=49.319&longitude=7.122",
+   "fetched_at": "2026-11-21T12:14:27+00:00",
+   "lat": 49.318814181,
+   "lon": 7.121704817
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": 4.35,
+    "d_p_draw_pp": 0.52,
+    "d_p_away_pp": -4.87,
+    "d_xg_home": 0.121,
+    "d_xg_away": -0.089
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0144,
+    "away_rate_mult": 1.0061,
+    "d_p_home_pp": 0.33,
+    "d_p_draw_pp": -0.13,
+    "d_p_away_pp": -0.2,
+    "d_xg_home": 0.021,
+    "d_xg_away": 0.01,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "home_rate_mult": 0.9832,
+    "away_rate_mult": 0.9936,
+    "d_p_home_pp": -0.39,
+    "d_p_draw_pp": 0.13,
+    "d_p_away_pp": 0.27,
+    "d_xg_home": -0.024,
+    "d_xg_away": -0.01,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 14.0,
+   "rest_a": 13.0,
+   "n21_h": 1.0,
+   "n21_a": 2.0,
+   "travel_km": 153.32308434152455,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 0.635,
+   "temp_c": 6.3
+  }
+ },
+ "lineup_simulation": {
+  "applied": true,
+  "validated": false,
+  "scale": 0.5,
+  "basis": {
+   "home": "projected",
+   "away": "projected"
+  },
+  "home_rate_mult": 0.9915,
+  "away_rate_mult": 0.9968,
+  "note": "Starting-XI strength, continuity and backup-keeper adjustment at half the fitted size. It did not pass the out-of-sample test, so bets are not priced from it.",
+  "p_home": 0.3465485676431478,
+  "p_draw": 0.25277913201248675,
+  "p_away": 0.4006723003443654,
+  "xg_home": 1.505082900214635,
+  "xg_away": 1.6276624986739605,
+  "xg_total": 3.132745398888596,
+  "btts": 0.6399625231367451,
+  "totals_over": {
+   "over_0.5": 0.9552686744295076,
+   "over_1.5": 0.8290507546560255,
+   "over_2.5": 0.6083238775077269,
+   "over_3.5": 0.383755642451761,
+   "over_4.5": 0.20395958944968687,
+   "over_5.5": 0.09479928525972033,
+   "over_6.5": 0.03794765692415717
+  },
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.11616170527604963
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.11616170527604963
+   },
+   {
+    "home": 1,
+    "away": 2,
+    "p": 0.08851629296548408
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.08139483150583175
+   },
+   {
+    "home": 2,
+    "away": 2,
+    "p": 0.0704528722551895
+   },
+   {
+    "home": 0,
+    "away": 1,
+    "p": 0.06605715720887259
+   }
+  ],
+  "score_grid": [
+   [
+    0.044731,
+    0.066057,
+    0.05683,
+    0.03076,
+    0.012311,
+    0.003902,
+    0.001023
+   ],
+   [
+    0.060161,
+    0.116162,
+    0.088516,
+    0.047618,
+    0.018943,
+    0.005968,
+    0.001555
+   ],
+   [
+    0.047735,
+    0.081395,
+    0.070453,
+    0.035666,
+    0.014102,
+    0.004416,
+    0.001144
+   ],
+   [
+    0.023898,
+    0.040517,
+    0.03301,
+    0.018531,
+    0.006895,
+    0.002146,
+    0.000552
+   ],
+   [
+    0.008897,
+    0.015003,
+    0.012155,
+    0.006423,
+    0.002651,
+    0.000776,
+    0.000199
+   ],
+   [
+    0.002637,
+    0.004424,
+    0.003565,
+    0.001874,
+    0.000728,
+    0.000236,
+    5.7e-05
+   ],
+   [
+    0.000649,
+    0.001084,
+    0.00087,
+    0.000455,
+    0.000176,
+    5.4e-05,
+    1.4e-05
+   ]
+  ]
+ },
+ "confidence": {
+  "tier": "LOW",
+  "p_max": 0.39934979005445587,
+  "entropy_nats": 1.0813050129524084,
+  "text": "Most likely result has P = 39.9%. In the out-of-sample backtest, favourites priced 0.33\u20130.40 won 37.6% \u00b1 0.5% (n=8383, mean forecast 37.8%). Backtest RPS for D1: 0.2000; exact-score top-5 hit rate 42.2% (n=981). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: LOW (entropy 1.081 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Elversberg: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Freiburg: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior)."
+ ],
+ "verdict": "Elversberg 1\u20131 Freiburg is the single most probable scoreline at 11.5%: expected goals 1.52\u20131.63 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.043). Exact scores are inherently uncertain; the 1X2 split is 34.9%/25.2%/39.9%.",
+ "resolved": {
+  "home_key": "Germany:Elversberg",
+  "away_key": "Germany:Freiburg",
+  "div": "D1",
+  "home_div": "D1",
+  "away_div": "D1",
+  "country": "Germany"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: SC Freiburg at SV 07 Elversberg\nCompetition: Bundesliga\nDate: 2026-11-21 09:30 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-11-20\n\nPRIMARY FINAL SCORE PREDICTION\n\nSV 07 Elversberg 1 \u2013 1 SC Freiburg\n(modal exact score, probability 11.5%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.52\nAway: 1.63\nExpected Total: 3.15\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 34.9%\nDraw: 25.2%\nAway Win: 39.9%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 11.5%\n2. 1\u20132: 8.8%\n3. 2\u20131: 8.2%\n4. 2\u20132: 7.1%\n5. 0\u20131: 6.5%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 16.9%\nTotal 2 goals: 21.9%\nTotal 3 goals: 22.4%\nTotal 4 goals: 18.1%\nTotal 5+ goals: 20.7%\n\nBoth Teams Score: 64.3%\nClean sheet SV 07 Elversberg: 18.8% \u00b7 Clean sheet SC Freiburg: 21.3%\n\nMATCH INTELLIGENCE\n\n1. Home advantage (Germany, fitted from results): \u00d71.31 on Elversberg's scoring rate.\n2. Freiburg attack vs Elversberg defence: rate multiplier \u00d71.25 for the away side.\n3. Independent results-only Elo: Elversberg 1514 vs Freiburg 1655 (gap -141 before home advantage).\n\nMODEL CONFIDENCE\n\nMost likely result has P = 39.9%. In the out-of-sample backtest, favourites priced 0.33\u20130.40 won 37.6% \u00b1 0.5% (n=8383, mean forecast 37.8%). Backtest RPS for D1: 0.2000; exact-score top-5 hit rate 42.2% (n=981). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: LOW (entropy 1.081 nats of max 1.099).\nParameter-uncertainty 80% bands: xG SV 07 Elversberg 1.17\u20131.90, xG SC Freiburg 1.22\u20132.08; P(home win) 25.5%\u201347.0%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0020 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nElversberg: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-11-21 07:14 EST (4-2-3-1)\n  Nicolas Kristof (G), Luca Sirch (D), Lukas Pinckert (D), Maximilian Rohr (D), Lasse G\u00fcnther (D), Felix Keidel (M), \u0141ukasz Por\u0119ba (M), Lukas Petkov (F), Francis Onyeka (M), Maurice Krattenmacher (F), David Mokwa (F)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs -0.076 (log) \u00b7 continuity -0.21 \u00b7 P(backup GK) 0%\nFreiburg: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-11-21 07:14 EST (4-2-3-1)\n  Mio Backhaus (G), Philipp Treu (D), Matthias Ginter (D), Philipp Lienhart (D), Jordy Makengo (D), Maximilian Eggestein (M), Yannik Engelhardt (M), Jan-Niklas Beste (F), Yuito Suzuki (M), Derry Scherhant (F), Igor Matanovi\u0107 (F)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs -0.007 (log) \u00b7 continuity -0.32 \u00b7 P(backup GK) 11%\n\nKEY ABSENCES\n\n- Elversberg: Nicholas Mickelson \u2014 injury, Late December 2026 [FotMob, 2026-11-21 07:14 EST]\n- Elversberg: Lukas Pinckert \u2014 injury, Doubtful [FotMob, 2026-11-21 07:14 EST]\n- Elversberg: Jan Gyamerah \u2014 injury, A few weeks [FotMob, 2026-11-21 07:14 EST]\n- Elversberg: Tom Zimmerschied \u2014 injury, Mid November 2026 [FotMob, 2026-11-21 07:14 EST]\n- Elversberg: Noah Darvich \u2014 injury, Doubtful [FotMob, 2026-11-21 07:14 EST]\n- Freiburg: Berkay Y\u0131lmaz \u2014 suspension, Late November 2026 [FotMob, 2026-11-21 07:14 EST]\n- Freiburg: Florent Muslija \u2014 injury, Late December 2026 [FotMob, 2026-11-21 07:14 EST]\n\nWEATHER AT VENUE\n\nURSAPHARM-Arena an der Kaiserlinde, Spiesen-Elversberg: 6.3 \u00b0C, wind 0.6 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-11-21 07:14 EST]\n\nREST & TRAVEL\n\nElversberg: 14 days' rest, 1 matches in previous 21 days \u00b7 Freiburg: 13 days' rest, 2 in 21 days \u00b7 away travel 153.3 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 34.9% / 25.2% / 39.9%, xG 1.52\u20131.63\n- Understat xG component (validated, in ensemble): home +4.35 pp, draw +0.52 pp, away -4.87 pp; xG +0.121 / -0.089\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.33 pp, draw -0.13 pp, away -0.20 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- lineup: NOT APPLIED (failed out-of-sample validation); would have moved home -0.39 pp, draw +0.13 pp, away +0.27 pp\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Elversberg: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Freiburg: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n\nFINAL VERDICT\n\nElversberg 1\u20131 Freiburg is the single most probable scoreline at 11.5%: expected goals 1.52\u20131.63 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.043). Exact scores are inherently uncertain; the 1X2 split is 34.9%/25.2%/39.9%.\n",
+ "refresh_id": "118c44018d4a4c96a0ddd5c036c76603",
+ "frozen_at": "2026-11-21T12:14:27+00:00",
+ "sha256": "d13d8ea3e3fb445c3fb21bd4127482a90f7adbda86f16469882808ffc46ef30b"
+}
