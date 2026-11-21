@@ -1,0 +1,657 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-11-20",
+ "input_fingerprint": "089f9cc4fd25f92ec445dbe63bd24c6d3710901e9f1c4bbab00c2c81fa97224f",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-11-21T11:10:26+00:00",
+ "fixture": {
+  "event_id": "POLY-1337866",
+  "home_name": "VfL Wolfsburg",
+  "away_name": "Holstein Kiel",
+  "competition": "2. Bundesliga",
+  "subcategory": "bl2",
+  "kickoff_utc": "2026-11-21T12:00:00+00:00",
+  "kickoff_local": "2026-11-21 07:00 EST",
+  "home_matched": "Wolfsburg",
+  "away_matched": "Holstein Kiel",
+  "match_methods": {
+   "home": {
+    "source": "VfL Wolfsburg",
+    "matched": "Wolfsburg",
+    "method": "core-tokens",
+    "score": 0.97
+   },
+   "away": {
+    "source": "Holstein Kiel",
+    "matched": "Holstein Kiel",
+    "method": "exact",
+    "score": 1.0
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.6261731014356934,
+  "p_draw": 0.2084400053640351,
+  "p_away": 0.16538689320027167,
+  "xg_home": 2.210790217185583,
+  "xg_away": 1.0823295701979978,
+  "xg_total": 3.293119787383581,
+  "median_total": 3,
+  "modal_score": {
+   "home": 2,
+   "away": 1,
+   "p": 0.10100201415983491
+  },
+  "top_scores": [
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.10100201415983491
+   },
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.09630383006466879
+   },
+   {
+    "home": 2,
+    "away": 0,
+    "p": 0.09033508590329588
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.07737561617342276
+   },
+   {
+    "home": 3,
+    "away": 1,
+    "p": 0.07458360397619095
+   }
+  ],
+  "btts": 0.6028303301720092,
+  "totals_over": {
+   "over_0.5": 0.9622571583479316,
+   "over_1.5": 0.8493498554351006,
+   "over_2.5": 0.6424970539942895,
+   "over_3.5": 0.4197746884441034,
+   "over_4.5": 0.232864670444644,
+   "over_5.5": 0.11284278499297004,
+   "over_6.5": 0.047401093979881306
+  },
+  "total_buckets": {
+   "0-1": 0.1506501445648995,
+   "2": 0.20685280144081125,
+   "3": 0.22272236555018593,
+   "4": 0.18691001799945942,
+   "5+": 0.232864670444644
+  },
+  "clean_sheet_home": 0.3320285450724954,
+  "clean_sheet_away": 0.10288396640756423,
+  "home_goal_dist": [
+   0.10288396640756423,
+   0.24373484639753665,
+   0.2738097200938581,
+   0.20071095009820336,
+   0.10891612021047903,
+   0.04675184122692381,
+   0.01655289662767888,
+   0.006639658937756032
+  ],
+  "away_goal_dist": [
+   0.3320285450724954,
+   0.3741097095914427,
+   0.20114813675769225,
+   0.07020028693642323,
+   0.018089231781409195,
+   0.0036958716979605204,
+   0.000625310250623727,
+   0.00010290791195329556
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    4
+   ],
+   "away_goals_80": [
+    0,
+    2
+   ],
+   "total_goals_80": [
+    1,
+    6
+   ],
+   "goal_diff_80": [
+    -1,
+    3
+   ]
+  },
+  "score_grid": [
+   [
+    0.037743,
+    0.035532,
+    0.020214,
+    0.007099,
+    0.001843,
+    0.000379,
+    6.4e-05
+   ],
+   [
+    0.077376,
+    0.096304,
+    0.047847,
+    0.016786,
+    0.004353,
+    0.000894,
+    0.000152
+   ],
+   [
+    0.090335,
+    0.101002,
+    0.057317,
+    0.019019,
+    0.004927,
+    0.00101,
+    0.000171
+   ],
+   [
+    0.066775,
+    0.074584,
+    0.040032,
+    0.014804,
+    0.003627,
+    0.000743,
+    0.000126
+   ],
+   [
+    0.036381,
+    0.040594,
+    0.021767,
+    0.007613,
+    0.002079,
+    0.000403,
+    6.8e-05
+   ],
+   [
+    0.015646,
+    0.01744,
+    0.009342,
+    0.003264,
+    0.000843,
+    0.000182,
+    2.9e-05
+   ],
+   [
+    0.005546,
+    0.006176,
+    0.003305,
+    0.001154,
+    0.000298,
+    6.1e-05,
+    1.1e-05
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.625885,
+  "p_draw": 0.20912999999999998,
+  "p_away": 0.164985,
+  "se": [
+   0.0010820188694634673,
+   0.0009093806768894971,
+   0.0008299546667589742
+  ],
+  "max_abs_dev_vs_exact": 0.0006899946359648912,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   1.6997855115781806,
+   2.7686350136203957
+  ],
+  "xg_away_80": [
+   0.8095543038433604,
+   1.3753148962260795
+  ],
+  "p_home_80": [
+   0.5017995336862123,
+   0.736491144652597
+  ],
+  "p_draw_80": [
+   0.1566219094965723,
+   0.2465658419325781
+  ],
+  "p_away_80": [
+   0.10417289377678905,
+   0.249532518957775
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.19341758666480346,
+   0.19667613656303448
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.5819938181118305,
+   "p_draw": 0.22156182003403985,
+   "p_away": 0.19644436185412967,
+   "xg_home": 2.0081584161947994,
+   "xg_away": 1.0899391965510168,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.646306512329561,
+   "p_draw": 0.1936544852471745,
+   "p_away": 0.16003900242326452,
+   "xg_home": 2.199205356112163,
+   "xg_away": 0.9990958380617513,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.6183795429190204,
+   "p_draw": 0.2056243194276994,
+   "p_away": 0.1759961376532802,
+   "xg_home": 2.2292435685158454,
+   "xg_away": 1.12428295676823,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.45496657471658464,
+   "p_draw": 0.24155543145891942,
+   "p_away": 0.30347799382449614,
+   "xg_home": 1.645095091128342,
+   "xg_away": 1.3018228478844283,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.6011811092166093,
+   "p_draw": 0.21067418842852093,
+   "p_away": 0.18814470235486971,
+   "xg_home": 2.1350903122977543,
+   "xg_away": 1.1232051370724743,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Independent results-only Elo: Wolfsburg 1516 vs Holstein Kiel 1328 (gap +188 before home advantage).",
+   "effect": 0.2819
+  },
+  {
+   "text": "Home advantage (Germany, fitted from results): \u00d71.31 on Wolfsburg's scoring rate.",
+   "effect": 0.2679
+  },
+  {
+   "text": "Wolfsburg attack vs Holstein Kiel defence: time-weighted strength gap multiplies Wolfsburg's scoring rate by \u00d71.28 relative to an average pairing (from 30/29 decay-weighted matches).",
+   "effect": 0.243
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.6261731014356934,
+  "p_draw": 0.2084400053640351,
+  "p_away": 0.16538689320027167,
+  "xg_home": 2.210790217185583,
+  "xg_away": 1.0823295701979978
+ },
+ "context": {
+  "fetched_at": "2026-11-21T11:10:26+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5881734",
+    "fetched_at": "2026-11-21T11:10:26+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "projected",
+    "source": "FotMob \u2014 XI from the side's last match on 2026-11-07 (none published for this match yet)",
+    "formation": "4-3-3",
+    "starters": [
+     {
+      "name": "Timon Wellenreuther",
+      "pos": "G",
+      "shirt": "1"
+     },
+     {
+      "name": "Sa\u00ebl Kumbedi",
+      "pos": "D",
+      "shirt": "26"
+     },
+     {
+      "name": "Hauke Wahl",
+      "pos": "D",
+      "shirt": "6"
+     },
+     {
+      "name": "Cleiton Santos",
+      "pos": "D",
+      "shirt": "33"
+     },
+     {
+      "name": "Joakim M\u00e6hle",
+      "pos": "D",
+      "shirt": "21"
+     },
+     {
+      "name": "Maximilian Arnold",
+      "pos": "M",
+      "shirt": "27"
+     },
+     {
+      "name": "Muhammed Mehmet Damar",
+      "pos": "M",
+      "shirt": "20"
+     },
+     {
+      "name": "Vini Souza",
+      "pos": "M",
+      "shirt": "5"
+     },
+     {
+      "name": "Alexander Bernhardsson",
+      "pos": "F",
+      "shirt": "17"
+     },
+     {
+      "name": "Robert Glatzel",
+      "pos": "F",
+      "shirt": "19"
+     },
+     {
+      "name": "Fabian Reese",
+      "pos": "F",
+      "shirt": "11"
+     }
+    ],
+    "fetched_at": "2026-11-21T11:10:26+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   },
+   "away": {
+    "status": "projected",
+    "source": "FotMob \u2014 XI from the side's last match on 2026-11-07 (none published for this match yet)",
+    "formation": "4-3-3",
+    "starters": [
+     {
+      "name": "Timon Weiner",
+      "pos": "G",
+      "shirt": "1"
+     },
+     {
+      "name": "Hiroki Sekine",
+      "pos": "D",
+      "shirt": "32"
+     },
+     {
+      "name": "Noah Madsen",
+      "pos": "D",
+      "shirt": "5"
+     },
+     {
+      "name": "Sebastian Schonlau",
+      "pos": "D",
+      "shirt": "4"
+     },
+     {
+      "name": "Leon Parduzi",
+      "pos": "D",
+      "shirt": "40"
+     },
+     {
+      "name": "Kasper Davidsen",
+      "pos": "M",
+      "shirt": "15"
+     },
+     {
+      "name": "Jonas Meffert",
+      "pos": "M",
+      "shirt": "28"
+     },
+     {
+      "name": "Guillermo Balzi",
+      "pos": "M",
+      "shirt": "8"
+     },
+     {
+      "name": "Gyan de Regt",
+      "pos": "F",
+      "shirt": "11"
+     },
+     {
+      "name": "Phil Harres",
+      "pos": "F",
+      "shirt": "19"
+     },
+     {
+      "name": "Jonas Torrissen Therkelsen",
+      "pos": "M",
+      "shirt": "10"
+     }
+    ],
+    "fetched_at": "2026-11-21T11:10:26+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Cleiton",
+     "type": "suspension",
+     "expected_return": "Late November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881734",
+     "fetched_at": "2026-11-21T11:10:26+00:00"
+    },
+    {
+     "player": "Rog\u00e9rio",
+     "type": "injury",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881734",
+     "fetched_at": "2026-11-21T11:10:26+00:00"
+    },
+    {
+     "player": "Mattias Svanberg",
+     "type": "injury",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881734",
+     "fetched_at": "2026-11-21T11:10:26+00:00"
+    },
+    {
+     "player": "Aster Vranckx",
+     "type": "injury",
+     "expected_return": "Mid November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881734",
+     "fetched_at": "2026-11-21T11:10:26+00:00"
+    },
+    {
+     "player": "Christian Eriksen",
+     "type": "injury",
+     "expected_return": "Unknown",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881734",
+     "fetched_at": "2026-11-21T11:10:26+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "Hamza Muqaj",
+     "type": "injury",
+     "expected_return": "Unknown",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881734",
+     "fetched_at": "2026-11-21T11:10:26+00:00"
+    },
+    {
+     "player": "Frederik Roslyng",
+     "type": "injury",
+     "expected_return": "Unknown",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881734",
+     "fetched_at": "2026-11-21T11:10:26+00:00"
+    },
+    {
+     "player": "Lasse Rosenboom",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881734",
+     "fetched_at": "2026-11-21T11:10:26+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 14,
+    "n21": 2,
+    "last_match": "2026-11-07"
+   },
+   "away": {
+    "rest_days": 14,
+    "n21": 2,
+    "last_match": "2026-11-07"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 217.8
+  },
+  "venue": {
+   "name": "Volkswagen Arena",
+   "city": "Wolfsburg",
+   "lat": 52.432820127,
+   "lon": 10.803530216
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 4.74,
+   "temp_c": 5.8,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=52.433&longitude=10.804",
+   "fetched_at": "2026-11-21T11:10:26+00:00",
+   "lat": 52.432820127,
+   "lon": 10.803530216
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": -2.07,
+    "d_p_draw_pp": 0.82,
+    "d_p_away_pp": 1.25,
+    "d_xg_home": -0.024,
+    "d_xg_away": 0.061
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.018,
+    "away_rate_mult": 1.0076,
+    "d_p_home_pp": 0.58,
+    "d_p_draw_pp": -0.32,
+    "d_p_away_pp": -0.26,
+    "d_xg_home": 0.038,
+    "d_xg_away": 0.008,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "reason": "failed validation; no live features"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 14.0,
+   "rest_a": 14.0,
+   "n21_h": 2.0,
+   "n21_a": 2.0,
+   "travel_km": 217.79843081890002,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 4.74,
+   "temp_c": 5.8
+  }
+ },
+ "lineup_simulation": {
+  "applied": false,
+  "basis": {
+   "home": "projected",
+   "away": "projected"
+  },
+  "reason": "No player ratings exist for this league, so the lineup and formation are shown but cannot change the probabilities."
+ },
+ "confidence": {
+  "tier": "MODERATE",
+  "p_max": 0.6261731014356934,
+  "entropy_nats": 0.9175934188974082,
+  "text": "Most likely result has P = 62.6%. In the out-of-sample backtest, favourites priced 0.60\u20130.70 won 66.4% \u00b1 0.7% (n=4069, mean forecast 64.2%). Backtest RPS for D2: 0.2218; exact-score top-5 hit rate 43.8% (n=999). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: MODERATE (entropy 0.918 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Wolfsburg: lineup is PROJECTED (FotMob \u2014 XI from the side's last match on 2026-11-07 (none published for this match yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Wolfsburg: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.",
+  "Holstein Kiel: lineup is PROJECTED (FotMob \u2014 XI from the side's last match on 2026-11-07 (none published for this match yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Holstein Kiel: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+ ],
+ "verdict": "Wolfsburg 2\u20131 Holstein Kiel is the single most probable scoreline at 10.1%: expected goals 2.21\u20131.08 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.043). Exact scores are inherently uncertain; the 1X2 split is 62.6%/20.8%/16.5%.",
+ "resolved": {
+  "home_key": "Germany:Wolfsburg",
+  "away_key": "Germany:Holstein Kiel",
+  "div": "D2",
+  "home_div": "D2",
+  "away_div": "D2",
+  "country": "Germany"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: Holstein Kiel at VfL Wolfsburg\nCompetition: 2. Bundesliga\nDate: 2026-11-21 07:00 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-11-20\n\nPRIMARY FINAL SCORE PREDICTION\n\nVfL Wolfsburg 2 \u2013 1 Holstein Kiel\n(modal exact score, probability 10.1%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 2.21\nAway: 1.08\nExpected Total: 3.29\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 62.6%\nDraw: 20.8%\nAway Win: 16.5%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 2\u20131: 10.1%\n2. 1\u20131: 9.6%\n3. 2\u20130: 9.0%\n4. 1\u20130: 7.7%\n5. 3\u20131: 7.5%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 15.1%\nTotal 2 goals: 20.7%\nTotal 3 goals: 22.3%\nTotal 4 goals: 18.7%\nTotal 5+ goals: 23.3%\n\nBoth Teams Score: 60.3%\nClean sheet VfL Wolfsburg: 33.2% \u00b7 Clean sheet Holstein Kiel: 10.3%\n\nMATCH INTELLIGENCE\n\n1. Independent results-only Elo: Wolfsburg 1516 vs Holstein Kiel 1328 (gap +188 before home advantage).\n2. Home advantage (Germany, fitted from results): \u00d71.31 on Wolfsburg's scoring rate.\n3. Wolfsburg attack vs Holstein Kiel defence: time-weighted strength gap multiplies Wolfsburg's scoring rate by \u00d71.28 relative to an average pairing (from 30/29 decay-weighted matches).\n\nMODEL CONFIDENCE\n\nMost likely result has P = 62.6%. In the out-of-sample backtest, favourites priced 0.60\u20130.70 won 66.4% \u00b1 0.7% (n=4069, mean forecast 64.2%). Backtest RPS for D2: 0.2218; exact-score top-5 hit rate 43.8% (n=999). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: MODERATE (entropy 0.918 nats of max 1.099).\nParameter-uncertainty 80% bands: xG VfL Wolfsburg 1.70\u20132.77, xG Holstein Kiel 0.81\u20131.38; P(home win) 50.2%\u201373.6%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0007 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nWolfsburg: PROJECTED \u2014 FotMob \u2014 XI from the side's last match on 2026-11-07 (none published for this match yet), fetched 2026-11-21 06:10 EST (4-3-3)\n  Timon Wellenreuther (G), Sa\u00ebl Kumbedi (D), Hauke Wahl (D), Cleiton Santos (D), Joakim M\u00e6hle (D), Maximilian Arnold (M), Muhammed Mehmet Damar (M), Vini Souza (M), Alexander Bernhardsson (F), Robert Glatzel (F), Fabian Reese (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\nHolstein Kiel: PROJECTED \u2014 FotMob \u2014 XI from the side's last match on 2026-11-07 (none published for this match yet), fetched 2026-11-21 06:10 EST (4-3-3)\n  Timon Weiner (G), Hiroki Sekine (D), Noah Madsen (D), Sebastian Schonlau (D), Leon Parduzi (D), Kasper Davidsen (M), Jonas Meffert (M), Guillermo Balzi (M), Gyan de Regt (F), Phil Harres (F), Jonas Torrissen Therkelsen (M)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nKEY ABSENCES\n\n- Wolfsburg: Cleiton \u2014 suspension, Late November 2026 [FotMob, 2026-11-21 06:10 EST]\n- Wolfsburg: Rog\u00e9rio \u2014 injury, Mid November 2026 [FotMob, 2026-11-21 06:10 EST]\n- Wolfsburg: Mattias Svanberg \u2014 injury, Mid November 2026 [FotMob, 2026-11-21 06:10 EST]\n- Wolfsburg: Aster Vranckx \u2014 injury, Mid November 2026 [FotMob, 2026-11-21 06:10 EST]\n- Wolfsburg: Christian Eriksen \u2014 injury, Unknown [FotMob, 2026-11-21 06:10 EST]\n- Holstein Kiel: Hamza Muqaj \u2014 injury, Unknown [FotMob, 2026-11-21 06:10 EST]\n- Holstein Kiel: Frederik Roslyng \u2014 injury, Unknown [FotMob, 2026-11-21 06:10 EST]\n- Holstein Kiel: Lasse Rosenboom \u2014 injury, Late November 2026 [FotMob, 2026-11-21 06:10 EST]\n\nWEATHER AT VENUE\n\nVolkswagen Arena, Wolfsburg: 5.8 \u00b0C, wind 4.7 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-11-21 06:10 EST]\n\nREST & TRAVEL\n\nWolfsburg: 14 days' rest, 2 matches in previous 21 days \u00b7 Holstein Kiel: 14 days' rest, 2 in 21 days \u00b7 away travel 217.8 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 62.6% / 20.8% / 16.5%, xG 2.21\u20131.08\n- Understat xG component (validated, in ensemble): home -2.07 pp, draw +0.82 pp, away +1.25 pp; xG -0.024 / +0.061\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.58 pp, draw -0.32 pp, away -0.26 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- lineup: not applied (failed validation; no live features)\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Wolfsburg: lineup is PROJECTED (FotMob \u2014 XI from the side's last match on 2026-11-07 (none published for this match yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Wolfsburg: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n- Holstein Kiel: lineup is PROJECTED (FotMob \u2014 XI from the side's last match on 2026-11-07 (none published for this match yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Holstein Kiel: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nFINAL VERDICT\n\nWolfsburg 2\u20131 Holstein Kiel is the single most probable scoreline at 10.1%: expected goals 2.21\u20131.08 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.043). Exact scores are inherently uncertain; the 1X2 split is 62.6%/20.8%/16.5%.\n",
+ "refresh_id": "efca2272afdf47f1a22ba5acd0fff6ac",
+ "frozen_at": "2026-11-21T11:10:26+00:00",
+ "sha256": "1fd0ef199c56f2c7b778f968ade4c3349b4fdb0cc7644693515f2bc004eeeb73"
+}
