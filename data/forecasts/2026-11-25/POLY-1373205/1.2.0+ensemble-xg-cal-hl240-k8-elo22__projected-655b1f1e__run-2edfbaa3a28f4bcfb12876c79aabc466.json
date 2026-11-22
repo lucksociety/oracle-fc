@@ -1,0 +1,633 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-11-20",
+ "input_fingerprint": "089f9cc4fd25f92ec445dbe63bd24c6d3710901e9f1c4bbab00c2c81fa97224f",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-11-22T07:45:05+00:00",
+ "fixture": {
+  "event_id": "POLY-1373205",
+  "home_name": "CA Boca Juniors",
+  "away_name": "CS Independiente Rivadavia",
+  "competition": "Liga Profesional de F\u00fatbol",
+  "subcategory": "arg",
+  "kickoff_utc": "2026-11-26T00:00:00+00:00",
+  "kickoff_local": "2026-11-25 19:00 EST",
+  "home_matched": "Boca Juniors",
+  "away_matched": "Ind. Rivadavia",
+  "match_methods": {
+   "home": {
+    "source": "CA Boca Juniors",
+    "matched": "Boca Juniors",
+    "method": "core-tokens",
+    "score": 0.97
+   },
+   "away": {
+    "source": "CS Independiente Rivadavia",
+    "matched": "Ind. Rivadavia",
+    "method": "alias",
+    "score": 1.0
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.5694108876205872,
+  "p_draw": 0.2607512531912382,
+  "p_away": 0.1698378591881745,
+  "xg_home": 1.6413912159722943,
+  "xg_away": 0.7953158792969138,
+  "xg_total": 2.4367070952692083,
+  "median_total": 2,
+  "modal_score": {
+   "home": 1,
+   "away": 0,
+   "p": 0.1390096317831028
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.1390096317831028
+   },
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.1240680536208932
+   },
+   {
+    "home": 2,
+    "away": 0,
+    "p": 0.11697904193447517
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.09546974553096488
+   },
+   {
+    "home": 0,
+    "away": 0,
+    "p": 0.0908616302381146
+   }
+  ],
+  "btts": 0.45564973764957317,
+  "totals_over": {
+   "over_0.5": 0.9091383697618854,
+   "over_1.5": 0.7060863228324097,
+   "over_2.5": 0.4392267195192418,
+   "over_3.5": 0.2290670212304953,
+   "over_4.5": 0.0991696239786754,
+   "over_5.5": 0.03728085752870221,
+   "over_6.5": 0.012074407266723444
+  },
+  "total_buckets": {
+   "0-1": 0.29391367716759037,
+   "2": 0.26685960331316794,
+   "3": 0.21015969828874653,
+   "4": 0.1298973972518199,
+   "5+": 0.0991696239786754
+  },
+  "clean_sheet_home": 0.4464955650901781,
+  "clean_sheet_away": 0.1887163274983634,
+  "home_goal_dist": [
+   0.1887163274983634,
+   0.32192018738576994,
+   0.26399552163402135,
+   0.1428744844718505,
+   0.05765159793900656,
+   0.018514690355121325,
+   0.004934493721247829,
+   0.0013926969946192983
+  ],
+  "away_goal_dist": [
+   0.4464955650901781,
+   0.36581308855997463,
+   0.14304865766375868,
+   0.03652173592334748,
+   0.006928133279046607,
+   0.0010462055161330858,
+   0.0001311438079287596,
+   1.5470159632679402e-05
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    3
+   ],
+   "away_goals_80": [
+    0,
+    2
+   ],
+   "total_goals_80": [
+    1,
+    4
+   ],
+   "goal_diff_80": [
+    -1,
+    3
+   ]
+  },
+  "score_grid": [
+   [
+    0.090862,
+    0.064042,
+    0.025813,
+    0.006554,
+    0.001235,
+    0.000185,
+    2.3e-05
+   ],
+   [
+    0.13901,
+    0.124068,
+    0.044825,
+    0.011467,
+    0.002176,
+    0.000328,
+    4.1e-05
+   ],
+   [
+    0.116979,
+    0.09547,
+    0.039693,
+    0.009683,
+    0.00185,
+    0.000281,
+    3.5e-05
+   ],
+   [
+    0.06331,
+    0.052058,
+    0.020641,
+    0.005656,
+    0.00103,
+    0.000157,
+    2e-05
+   ],
+   [
+    0.025444,
+    0.021074,
+    0.008413,
+    0.002197,
+    0.000449,
+    6.5e-05,
+    8e-06
+   ],
+   [
+    0.00813,
+    0.00678,
+    0.002724,
+    0.000716,
+    0.000139,
+    2.3e-05,
+    3e-06
+   ],
+   [
+    0.002156,
+    0.001809,
+    0.000731,
+    0.000193,
+    3.8e-05,
+    6e-06,
+    1e-06
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.56926,
+  "p_draw": 0.260815,
+  "p_away": 0.169925,
+  "se": [
+   0.0011072557346882427,
+   0.0009818109180870828,
+   0.0008397931125432025
+  ],
+  "max_abs_dev_vs_exact": 0.0001508876205872367,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   1.2525174287545897,
+   2.0669016374554823
+  ],
+  "xg_away_80": [
+   0.5723049446370949,
+   1.0382594901002131
+  ],
+  "p_home_80": [
+   0.45502077469980357,
+   0.6786551456500678
+  ],
+  "p_draw_80": [
+   0.2059793918342269,
+   0.30429668239306773
+  ],
+  "p_away_80": [
+   0.10978793484762307,
+   0.25091462155886385
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.1985886618697211,
+   0.22104935225992686
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.5828444853898838,
+   "p_draw": 0.2434510283020026,
+   "p_away": 0.17370448630811372,
+   "xg_home": 1.7423743886960388,
+   "xg_away": 0.8410491133841157,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.5482649802929731,
+   "p_draw": 0.26732431016681024,
+   "p_away": 0.1844107095402164,
+   "xg_home": 1.4575585959432806,
+   "xg_away": 0.7193628283687988,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.5632886503859997,
+   "p_draw": 0.24834990869907764,
+   "p_away": 0.18836144091492263,
+   "xg_home": 1.7409598897656005,
+   "xg_away": 0.9102817931420697,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.41428713519237154,
+   "p_draw": 0.3004638406794162,
+   "p_away": 0.28524902412821235,
+   "xg_home": 1.151173298868993,
+   "xg_away": 0.9014084149853208,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.579276980082515,
+   "p_draw": 0.24385111635317908,
+   "p_away": 0.176871903564306,
+   "xg_home": 1.7370291894299668,
+   "xg_away": 0.8509146542767535,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Ind. Rivadavia attack vs Boca Juniors defence: rate multiplier \u00d70.70 for the away side.",
+   "effect": 0.3594
+  },
+  {
+   "text": "Independent results-only Elo: Boca Juniors 1710 vs Ind. Rivadavia 1566 (gap +144 before home advantage).",
+   "effect": 0.2158
+  },
+  {
+   "text": "Home advantage (Argentina, fitted from results): \u00d71.24 on Boca Juniors's scoring rate.",
+   "effect": 0.2142
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.5694108876205872,
+  "p_draw": 0.2607512531912382,
+  "p_away": 0.1698378591881745,
+  "xg_home": 1.6413912159722939,
+  "xg_away": 0.7953158792969137
+ },
+ "context": {
+  "fetched_at": "2026-11-22T07:45:05+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/1000023197",
+    "fetched_at": "2026-11-22T07:45:05+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "4-3-3",
+    "starters": [
+     {
+      "name": "\u00c1lvaro Montero",
+      "pos": "G",
+      "shirt": "1"
+     },
+     {
+      "name": "Leandro Lozano",
+      "pos": "D",
+      "shirt": "17"
+     },
+     {
+      "name": "Lautaro Di Lollo",
+      "pos": "D",
+      "shirt": "2"
+     },
+     {
+      "name": "Facundo Herrera",
+      "pos": "D",
+      "shirt": "42"
+     },
+     {
+      "name": "Lautaro Blanco",
+      "pos": "D",
+      "shirt": "3"
+     },
+     {
+      "name": "Santiago Ascac\u00edbar",
+      "pos": "M",
+      "shirt": "25"
+     },
+     {
+      "name": "Leandro Paredes",
+      "pos": "M",
+      "shirt": "5"
+     },
+     {
+      "name": "Milton Delgado",
+      "pos": "M",
+      "shirt": "18"
+     },
+     {
+      "name": "Tom\u00e1s Aranda",
+      "pos": "F",
+      "shirt": "10"
+     },
+     {
+      "name": "Miguel Merentiel",
+      "pos": "F",
+      "shirt": "16"
+     },
+     {
+      "name": "Sebasti\u00e1n Villa",
+      "pos": "F",
+      "shirt": "22"
+     }
+    ],
+    "fetched_at": "2026-11-22T07:45:05+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   },
+   "away": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "4-2-3-1",
+    "starters": [
+     {
+      "name": "Emmanuel G\u00f3mez",
+      "pos": "G",
+      "shirt": "21"
+     },
+     {
+      "name": "Ezequiel Bonifacio",
+      "pos": "D",
+      "shirt": "36"
+     },
+     {
+      "name": "Iv\u00e1n Villalba",
+      "pos": "D",
+      "shirt": "40"
+     },
+     {
+      "name": "Alejo Osella",
+      "pos": "D",
+      "shirt": "13"
+     },
+     {
+      "name": "Juan Elordi",
+      "pos": "D",
+      "shirt": "3"
+     },
+     {
+      "name": "Leonard Costa",
+      "pos": "M",
+      "shirt": "2"
+     },
+     {
+      "name": "Jos\u00e9 Florent\u00edn",
+      "pos": "M",
+      "shirt": "25"
+     },
+     {
+      "name": "Mat\u00edas Fern\u00e1ndez",
+      "pos": "F",
+      "shirt": "10"
+     },
+     {
+      "name": "Luis Sequeira",
+      "pos": "M",
+      "shirt": "77"
+     },
+     {
+      "name": "Leonel Bucca",
+      "pos": "F",
+      "shirt": "8"
+     },
+     {
+      "name": "\u00c1lex Arce",
+      "pos": "F",
+      "shirt": "9"
+     }
+    ],
+    "fetched_at": "2026-11-22T07:45:05+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Mat\u00edas Satas",
+     "type": "injury",
+     "expected_return": "Out for season",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/1000023197",
+     "fetched_at": "2026-11-22T07:45:05+00:00"
+    },
+    {
+     "player": "Agust\u00edn Marches\u00edn",
+     "type": "injury",
+     "expected_return": "Late December 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/1000023197",
+     "fetched_at": "2026-11-22T07:45:05+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "Jos\u00e9 Florent\u00edn",
+     "type": "suspension",
+     "expected_return": "Late November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/1000023197",
+     "fetched_at": "2026-11-22T07:45:05+00:00"
+    },
+    {
+     "player": "Luciano G\u00f3mez",
+     "type": "injury",
+     "expected_return": "Out for season",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/1000023197",
+     "fetched_at": "2026-11-22T07:45:05+00:00"
+    },
+    {
+     "player": "Maximiliano Salas",
+     "type": "injury",
+     "expected_return": "Out for season",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/1000023197",
+     "fetched_at": "2026-11-22T07:45:05+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 19,
+    "n21": 1,
+    "last_match": "2026-11-07"
+   },
+   "away": {
+    "rest_days": 19,
+    "n21": 1,
+    "last_match": "2026-11-07"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": null
+  },
+  "venue": {
+   "name": "Estadio Alberto Jos\u00e9 Armando",
+   "city": "Ciudad de Buenos Aires",
+   "lat": -34.635582546,
+   "lon": -58.364637494
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 2.0549999999999997,
+   "temp_c": 25.7,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=-34.636&longitude=-58.365",
+   "fetched_at": "2026-11-22T07:45:05+00:00",
+   "lat": -34.635582546,
+   "lon": -58.364637494
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": 1.51,
+    "d_p_draw_pp": -1.13,
+    "d_p_away_pp": -0.37,
+    "d_xg_home": 0.136,
+    "d_xg_away": 0.064
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0105,
+    "away_rate_mult": 1.0105,
+    "d_p_home_pp": 0.21,
+    "d_p_draw_pp": -0.2,
+    "d_p_away_pp": -0.01,
+    "d_xg_home": 0.017,
+    "d_xg_away": 0.008,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "reason": "failed validation; no live features"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 19.0,
+   "rest_a": 19.0,
+   "n21_h": 1.0,
+   "n21_a": 1.0,
+   "travel_km": null,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 2.0549999999999997,
+   "temp_c": 25.7
+  }
+ },
+ "lineup_simulation": {
+  "applied": false,
+  "basis": {
+   "home": "projected",
+   "away": "projected"
+  },
+  "reason": "No player ratings exist for this league, so the lineup and formation are shown but cannot change the probabilities."
+ },
+ "confidence": {
+  "tier": "MODERATE",
+  "p_max": 0.5694108876205872,
+  "entropy_nats": 0.9722716644001324,
+  "text": "Most likely result has P = 56.9%. In the out-of-sample backtest, favourites priced 0.50\u20130.60 won 53.9% \u00b1 0.5% (n=9522, mean forecast 54.4%). Backtest RPS for ARG: 0.2132; exact-score top-5 hit rate 61.6% (n=1841). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: MODERATE (entropy 0.972 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Boca Juniors: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Boca Juniors: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.",
+  "Ind. Rivadavia: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Ind. Rivadavia: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+ ],
+ "verdict": "Boca Juniors 1\u20130 Ind. Rivadavia is the single most probable scoreline at 13.9%: expected goals 1.64\u20130.80 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.043). Exact scores are inherently uncertain; the 1X2 split is 56.9%/26.1%/17.0%.",
+ "resolved": {
+  "home_key": "Argentina:Boca Juniors",
+  "away_key": "Argentina:Ind. Rivadavia",
+  "div": "ARG",
+  "home_div": "ARG",
+  "away_div": "ARG",
+  "country": "Argentina"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: CS Independiente Rivadavia at CA Boca Juniors\nCompetition: Liga Profesional de F\u00fatbol\nDate: 2026-11-25 19:00 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-11-20\n\nPRIMARY FINAL SCORE PREDICTION\n\nCA Boca Juniors 1 \u2013 0 CS Independiente Rivadavia\n(modal exact score, probability 13.9%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.64\nAway: 0.80\nExpected Total: 2.44\nMedian Total: 2\n\nRESULT PROBABILITIES\n\nHome Win: 56.9%\nDraw: 26.1%\nAway Win: 17.0%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20130: 13.9%\n2. 1\u20131: 12.4%\n3. 2\u20130: 11.7%\n4. 2\u20131: 9.5%\n5. 0\u20130: 9.1%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 29.4%\nTotal 2 goals: 26.7%\nTotal 3 goals: 21.0%\nTotal 4 goals: 13.0%\nTotal 5+ goals: 9.9%\n\nBoth Teams Score: 45.6%\nClean sheet CA Boca Juniors: 44.6% \u00b7 Clean sheet CS Independiente Rivadavia: 18.9%\n\nMATCH INTELLIGENCE\n\n1. Ind. Rivadavia attack vs Boca Juniors defence: rate multiplier \u00d70.70 for the away side.\n2. Independent results-only Elo: Boca Juniors 1710 vs Ind. Rivadavia 1566 (gap +144 before home advantage).\n3. Home advantage (Argentina, fitted from results): \u00d71.24 on Boca Juniors's scoring rate.\n\nMODEL CONFIDENCE\n\nMost likely result has P = 56.9%. In the out-of-sample backtest, favourites priced 0.50\u20130.60 won 53.9% \u00b1 0.5% (n=9522, mean forecast 54.4%). Backtest RPS for ARG: 0.2132; exact-score top-5 hit rate 61.6% (n=1841). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: MODERATE (entropy 0.972 nats of max 1.099).\nParameter-uncertainty 80% bands: xG CA Boca Juniors 1.25\u20132.07, xG CS Independiente Rivadavia 0.57\u20131.04; P(home win) 45.5%\u201367.9%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0002 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nBoca Juniors: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-11-22 02:45 EST (4-3-3)\n  \u00c1lvaro Montero (G), Leandro Lozano (D), Lautaro Di Lollo (D), Facundo Herrera (D), Lautaro Blanco (D), Santiago Ascac\u00edbar (M), Leandro Paredes (M), Milton Delgado (M), Tom\u00e1s Aranda (F), Miguel Merentiel (F), Sebasti\u00e1n Villa (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\nInd. Rivadavia: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-11-22 02:45 EST (4-2-3-1)\n  Emmanuel G\u00f3mez (G), Ezequiel Bonifacio (D), Iv\u00e1n Villalba (D), Alejo Osella (D), Juan Elordi (D), Leonard Costa (M), Jos\u00e9 Florent\u00edn (M), Mat\u00edas Fern\u00e1ndez (F), Luis Sequeira (M), Leonel Bucca (F), \u00c1lex Arce (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nKEY ABSENCES\n\n- Boca Juniors: Mat\u00edas Satas \u2014 injury, Out for season [FotMob, 2026-11-22 02:45 EST]\n- Boca Juniors: Agust\u00edn Marches\u00edn \u2014 injury, Late December 2026 [FotMob, 2026-11-22 02:45 EST]\n- Ind. Rivadavia: Jos\u00e9 Florent\u00edn \u2014 suspension, Late November 2026 [FotMob, 2026-11-22 02:45 EST]\n- Ind. Rivadavia: Luciano G\u00f3mez \u2014 injury, Out for season [FotMob, 2026-11-22 02:45 EST]\n- Ind. Rivadavia: Maximiliano Salas \u2014 injury, Out for season [FotMob, 2026-11-22 02:45 EST]\n\nWEATHER AT VENUE\n\nEstadio Alberto Jos\u00e9 Armando, Ciudad de Buenos Aires: 25.7 \u00b0C, wind 2.1 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-11-22 02:45 EST]\n\nREST & TRAVEL\n\nBoca Juniors: 19 days' rest, 1 matches in previous 21 days \u00b7 Ind. Rivadavia: 19 days' rest, 1 in 21 days \u00b7 away travel None km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 56.9% / 26.1% / 17.0%, xG 1.64\u20130.80\n- Understat xG component (validated, in ensemble): home +1.51 pp, draw -1.13 pp, away -0.37 pp; xG +0.136 / +0.064\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.21 pp, draw -0.20 pp, away -0.01 pp\n- lineup: not applied (failed validation; no live features)\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Boca Juniors: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Boca Juniors: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n- Ind. Rivadavia: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Ind. Rivadavia: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nFINAL VERDICT\n\nBoca Juniors 1\u20130 Ind. Rivadavia is the single most probable scoreline at 13.9%: expected goals 1.64\u20130.80 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.043). Exact scores are inherently uncertain; the 1X2 split is 56.9%/26.1%/17.0%.\n",
+ "refresh_id": "2edfbaa3a28f4bcfb12876c79aabc466",
+ "frozen_at": "2026-11-22T07:45:05+00:00",
+ "sha256": "0c918fa9a2f7e0df1cb45087cfcfe484ffdaaba719489e8e5d71c187f6d359db"
+}

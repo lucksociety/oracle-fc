@@ -1,0 +1,591 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-11-20",
+ "input_fingerprint": "089f9cc4fd25f92ec445dbe63bd24c6d3710901e9f1c4bbab00c2c81fa97224f",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-11-22T07:46:31+00:00",
+ "fixture": {
+  "event_id": "POLY-1437461",
+  "home_name": "Salford City FC",
+  "away_name": "Gillingham FC",
+  "competition": "League Two",
+  "subcategory": "el2",
+  "kickoff_utc": "2026-11-28T15:00:00+00:00",
+  "kickoff_local": "2026-11-28 10:00 EST",
+  "home_matched": "Salford",
+  "away_matched": "Gillingham",
+  "match_methods": {
+   "home": {
+    "source": "Salford City FC",
+    "matched": "Salford",
+    "method": "alias",
+    "score": 1.0
+   },
+   "away": {
+    "source": "Gillingham FC",
+    "matched": "Gillingham",
+    "method": "core-tokens",
+    "score": 0.97
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.5899325508646497,
+  "p_draw": 0.23851973016642533,
+  "p_away": 0.17154771896892498,
+  "xg_home": 1.8531294111773629,
+  "xg_away": 0.9133535177861575,
+  "xg_total": 2.76648292896352,
+  "median_total": 3,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.11632369280460016
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.11632369280460016
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.11129084057502855
+   },
+   {
+    "home": 2,
+    "away": 0,
+    "p": 0.10760389679039316
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.10141701284893959
+   },
+   {
+    "home": 3,
+    "away": 0,
+    "p": 0.06622605357204236
+   }
+  ],
+  "btts": 0.5196259582810828,
+  "totals_over": {
+   "over_0.5": 0.935784827492604,
+   "over_1.5": 0.7723988559083856,
+   "over_2.5": 0.5238030986510448,
+   "over_3.5": 0.3004068888815683,
+   "over_4.5": 0.1437601225168215,
+   "over_5.5": 0.059675298810415854,
+   "over_6.5": 0.021318533413540654
+  },
+  "total_buckets": {
+   "0-1": 0.22760114409161433,
+   "2": 0.2485957572573409,
+   "3": 0.22339620976947652,
+   "4": 0.15664676636474678,
+   "5+": 0.1437601225168215
+  },
+  "clean_sheet_home": 0.39448429079436764,
+  "clean_sheet_away": 0.15010492343194548,
+  "home_goal_dist": [
+   0.15010492343194548,
+   0.29405404752996955,
+   0.2742856623251955,
+   0.16762068270439587,
+   0.0759748910977135,
+   0.027276699782474264,
+   0.008090525978943343,
+   0.002592567149362527
+  ],
+  "away_goal_dist": [
+   0.39448429079436764,
+   0.37472971291844587,
+   0.16883746535709687,
+   0.049260383213079045,
+   0.010597572230717774,
+   0.0018034995202012355,
+   0.0002533753160077358,
+   3.370065008394849e-05
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    4
+   ],
+   "away_goals_80": [
+    0,
+    2
+   ],
+   "total_goals_80": [
+    1,
+    5
+   ],
+   "goal_diff_80": [
+    -1,
+    3
+   ]
+  },
+  "score_grid": [
+   [
+    0.064215,
+    0.052095,
+    0.024668,
+    0.007247,
+    0.001569,
+    0.000268,
+    3.8e-05
+   ],
+   [
+    0.111291,
+    0.116324,
+    0.048506,
+    0.014242,
+    0.003081,
+    0.000526,
+    7.4e-05
+   ],
+   [
+    0.107604,
+    0.101417,
+    0.048351,
+    0.013434,
+    0.002905,
+    0.000496,
+    7e-05
+   ],
+   [
+    0.066226,
+    0.062389,
+    0.028148,
+    0.00872,
+    0.001784,
+    0.000304,
+    4.3e-05
+   ],
+   [
+    0.030095,
+    0.028339,
+    0.01278,
+    0.003747,
+    0.000855,
+    0.000138,
+    1.9e-05
+   ],
+   [
+    0.010815,
+    0.010179,
+    0.004588,
+    0.001344,
+    0.00029,
+    5.2e-05,
+    7e-06
+   ],
+   [
+    0.003209,
+    0.003019,
+    0.00136,
+    0.000398,
+    8.6e-05,
+    1.5e-05,
+    2e-06
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.5903050000000001,
+  "p_draw": 0.24015,
+  "p_away": 0.169545,
+  "se": [
+   0.001099647686704701,
+   0.0009551910214716217,
+   0.000839045567817982
+  ],
+  "max_abs_dev_vs_exact": 0.0020027189689249825,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   1.461510642326112,
+   2.277253066236812
+  ],
+  "xg_away_80": [
+   0.6854948434320075,
+   1.1577860121548322
+  ],
+  "p_home_80": [
+   0.4818020645242099,
+   0.691112201092867
+  ],
+  "p_draw_80": [
+   0.1905303958177091,
+   0.27392775469608627
+  ],
+  "p_away_80": [
+   0.11419068081257566,
+   0.2467229721755475
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.17583305729673276,
+   0.1945124111106124
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.5657668609272715,
+   "p_draw": 0.244527786347105,
+   "p_away": 0.1897053527256236,
+   "xg_home": 1.7445261688349074,
+   "xg_away": 0.9106310995687537,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.6105765211186387,
+   "p_draw": 0.2178095465426741,
+   "p_away": 0.1716139323386871,
+   "xg_home": 1.9079051887721685,
+   "xg_away": 0.8984117843822149,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.6599925819727372,
+   "p_draw": 0.20613547158653764,
+   "p_away": 0.13387194644072498,
+   "xg_home": 2.1127831542316855,
+   "xg_away": 0.847351532022976,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.4294041037230971,
+   "p_draw": 0.26347704922564785,
+   "p_away": 0.30711884705125503,
+   "xg_home": 1.4111691911969735,
+   "xg_away": 1.1510984913100706,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.565216180927302,
+   "p_draw": 0.24429539202835607,
+   "p_away": 0.19048842704434205,
+   "xg_home": 1.7429302085388265,
+   "xg_away": 0.9121800836337003,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Independent results-only Elo: Salford 1292 vs Gillingham 1105 (gap +187 before home advantage).",
+   "effect": 0.2803
+  },
+  {
+   "text": "Gillingham attack vs Salford defence: rate multiplier \u00d70.76 for the away side.",
+   "effect": 0.2799
+  },
+  {
+   "text": "Home advantage (England, fitted from results): \u00d71.23 on Salford's scoring rate.",
+   "effect": 0.2069
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.5899325508646497,
+  "p_draw": 0.23851973016642528,
+  "p_away": 0.17154771896892496,
+  "xg_home": 1.8531294111773629,
+  "xg_away": 0.9133535177861573
+ },
+ "context": {
+  "fetched_at": "2026-11-22T07:46:31+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5838059",
+    "fetched_at": "2026-11-22T07:46:31+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "projected",
+    "source": "FotMob \u2014 XI from the side's last match on 2026-11-21 (none published for this match yet)",
+    "formation": "3-4-2-1",
+    "starters": [
+     {
+      "name": "Will Norris",
+      "pos": "G",
+      "shirt": "1"
+     },
+     {
+      "name": "Adebola Oluwo",
+      "pos": "D",
+      "shirt": "22"
+     },
+     {
+      "name": "Dan Scarr",
+      "pos": "D",
+      "shirt": "17"
+     },
+     {
+      "name": "Will Aimson",
+      "pos": "D",
+      "shirt": "4"
+     },
+     {
+      "name": "Taylor Allen",
+      "pos": "M",
+      "shirt": "24"
+     },
+     {
+      "name": "Brendan Sarpong-Wiredu",
+      "pos": "M",
+      "shirt": "44"
+     },
+     {
+      "name": "Joe Powell",
+      "pos": "M",
+      "shirt": "6"
+     },
+     {
+      "name": "Luke Garbutt",
+      "pos": "M",
+      "shirt": "29"
+     },
+     {
+      "name": "Elliot Bonds",
+      "pos": "M",
+      "shirt": "16"
+     },
+     {
+      "name": "Macaulay Langstaff",
+      "pos": "M",
+      "shirt": "9"
+     },
+     {
+      "name": "Daniel Udoh",
+      "pos": "F",
+      "shirt": "23"
+     }
+    ],
+    "fetched_at": "2026-11-22T07:46:32+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   },
+   "away": {
+    "status": "projected",
+    "source": "FotMob \u2014 XI from the side's last match on 2026-11-21 (none published for this match yet)",
+    "formation": "4-2-3-1",
+    "starters": [
+     {
+      "name": "Oliver Wright",
+      "pos": "G",
+      "shirt": "1"
+     },
+     {
+      "name": "Nick Freeman",
+      "pos": "D",
+      "shirt": "22"
+     },
+     {
+      "name": "Andrew Smith",
+      "pos": "D",
+      "shirt": "5"
+     },
+     {
+      "name": "Omar Beckles",
+      "pos": "D",
+      "shirt": "19"
+     },
+     {
+      "name": "Conor McManus",
+      "pos": "D",
+      "shirt": "3"
+     },
+     {
+      "name": "Armani Little",
+      "pos": "M",
+      "shirt": "8"
+     },
+     {
+      "name": "Zane Albarus",
+      "pos": "M",
+      "shirt": "15"
+     },
+     {
+      "name": "Harry Waldock",
+      "pos": "F",
+      "shirt": "24"
+     },
+     {
+      "name": "James Brophy",
+      "pos": "M",
+      "shirt": "16"
+     },
+     {
+      "name": "Ronan Hale",
+      "pos": "F",
+      "shirt": "10"
+     },
+     {
+      "name": "Lamin Sillah",
+      "pos": "F",
+      "shirt": "11"
+     }
+    ],
+    "fetched_at": "2026-11-22T07:46:33+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   }
+  },
+  "absences": {
+   "home": [],
+   "away": []
+  },
+  "rest": {
+   "home": {
+    "rest_days": 14,
+    "n21": 1,
+    "last_match": "2026-11-14"
+   },
+   "away": {
+    "rest_days": 14,
+    "n21": 1,
+    "last_match": "2026-11-14"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 305.0
+  },
+  "venue": {
+   "name": "AIG Stadium",
+   "city": "Salford, Greater Manchester",
+   "lat": 53.513610351,
+   "lon": -2.276771665
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 4.1899999999999995,
+   "temp_c": 3.2,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=53.514&longitude=-2.277",
+   "fetched_at": "2026-11-22T07:46:33+00:00",
+   "lat": 53.513610351,
+   "lon": -2.276771665
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": -2.21,
+    "d_p_draw_pp": 1.32,
+    "d_p_away_pp": 0.89,
+    "d_xg_home": -0.081,
+    "d_xg_away": 0.006
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0218,
+    "away_rate_mult": 1.0091,
+    "d_p_home_pp": 0.68,
+    "d_p_draw_pp": -0.41,
+    "d_p_away_pp": -0.28,
+    "d_xg_home": 0.039,
+    "d_xg_away": 0.008,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "reason": "failed validation; no live features"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 14.0,
+   "rest_a": 14.0,
+   "n21_h": 1.0,
+   "n21_a": 1.0,
+   "travel_km": 304.97571143930674,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 4.1899999999999995,
+   "temp_c": 3.2
+  }
+ },
+ "lineup_simulation": {
+  "applied": false,
+  "basis": {
+   "home": "projected",
+   "away": "projected"
+  },
+  "reason": "No player ratings exist for this league, so the lineup and formation are shown but cannot change the probabilities."
+ },
+ "confidence": {
+  "tier": "MODERATE",
+  "p_max": 0.5899325508646497,
+  "entropy_nats": 0.955626689487175,
+  "text": "Most likely result has P = 59.0%. In the out-of-sample backtest, favourites priced 0.50\u20130.60 won 53.9% \u00b1 0.5% (n=9522, mean forecast 54.4%). Backtest RPS for E3: 0.2217; exact-score top-5 hit rate 48.4% (n=1807). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: MODERATE (entropy 0.956 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Salford: lineup is PROJECTED (FotMob \u2014 XI from the side's last match on 2026-11-21 (none published for this match yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Salford: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.",
+  "Gillingham: lineup is PROJECTED (FotMob \u2014 XI from the side's last match on 2026-11-21 (none published for this match yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Gillingham: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+ ],
+ "verdict": "Salford 1\u20131 Gillingham is the single most probable scoreline at 11.6%: expected goals 1.85\u20130.91 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.043). Exact scores are inherently uncertain; the 1X2 split is 59.0%/23.9%/17.2%.",
+ "resolved": {
+  "home_key": "England:Salford",
+  "away_key": "England:Gillingham",
+  "div": "E3",
+  "home_div": "E3",
+  "away_div": "E3",
+  "country": "England"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: Gillingham FC at Salford City FC\nCompetition: League Two\nDate: 2026-11-28 10:00 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-11-20\n\nPRIMARY FINAL SCORE PREDICTION\n\nSalford City FC 1 \u2013 1 Gillingham FC\n(modal exact score, probability 11.6%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.85\nAway: 0.91\nExpected Total: 2.77\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 59.0%\nDraw: 23.9%\nAway Win: 17.2%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 11.6%\n2. 1\u20130: 11.1%\n3. 2\u20130: 10.8%\n4. 2\u20131: 10.1%\n5. 3\u20130: 6.6%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 22.8%\nTotal 2 goals: 24.9%\nTotal 3 goals: 22.3%\nTotal 4 goals: 15.7%\nTotal 5+ goals: 14.4%\n\nBoth Teams Score: 52.0%\nClean sheet Salford City FC: 39.4% \u00b7 Clean sheet Gillingham FC: 15.0%\n\nMATCH INTELLIGENCE\n\n1. Independent results-only Elo: Salford 1292 vs Gillingham 1105 (gap +187 before home advantage).\n2. Gillingham attack vs Salford defence: rate multiplier \u00d70.76 for the away side.\n3. Home advantage (England, fitted from results): \u00d71.23 on Salford's scoring rate.\n\nMODEL CONFIDENCE\n\nMost likely result has P = 59.0%. In the out-of-sample backtest, favourites priced 0.50\u20130.60 won 53.9% \u00b1 0.5% (n=9522, mean forecast 54.4%). Backtest RPS for E3: 0.2217; exact-score top-5 hit rate 48.4% (n=1807). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: MODERATE (entropy 0.956 nats of max 1.099).\nParameter-uncertainty 80% bands: xG Salford City FC 1.46\u20132.28, xG Gillingham FC 0.69\u20131.16; P(home win) 48.2%\u201369.1%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0020 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nSalford: PROJECTED \u2014 FotMob \u2014 XI from the side's last match on 2026-11-21 (none published for this match yet), fetched 2026-11-22 02:46 EST (3-4-2-1)\n  Will Norris (G), Adebola Oluwo (D), Dan Scarr (D), Will Aimson (D), Taylor Allen (M), Brendan Sarpong-Wiredu (M), Joe Powell (M), Luke Garbutt (M), Elliot Bonds (M), Macaulay Langstaff (M), Daniel Udoh (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\nGillingham: PROJECTED \u2014 FotMob \u2014 XI from the side's last match on 2026-11-21 (none published for this match yet), fetched 2026-11-22 02:46 EST (4-2-3-1)\n  Oliver Wright (G), Nick Freeman (D), Andrew Smith (D), Omar Beckles (D), Conor McManus (D), Armani Little (M), Zane Albarus (M), Harry Waldock (F), James Brophy (M), Ronan Hale (F), Lamin Sillah (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nKEY ABSENCES\n\n- None listed by the sources.\n\nWEATHER AT VENUE\n\nAIG Stadium, Salford, Greater Manchester: 3.2 \u00b0C, wind 4.2 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-11-22 02:46 EST]\n\nREST & TRAVEL\n\nSalford: 14 days' rest, 1 matches in previous 21 days \u00b7 Gillingham: 14 days' rest, 1 in 21 days \u00b7 away travel 305.0 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 59.0% / 23.9% / 17.2%, xG 1.85\u20130.91\n- Understat xG component (validated, in ensemble): home -2.21 pp, draw +1.32 pp, away +0.89 pp; xG -0.081 / +0.006\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.68 pp, draw -0.41 pp, away -0.28 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- lineup: not applied (failed validation; no live features)\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Salford: lineup is PROJECTED (FotMob \u2014 XI from the side's last match on 2026-11-21 (none published for this match yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Salford: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n- Gillingham: lineup is PROJECTED (FotMob \u2014 XI from the side's last match on 2026-11-21 (none published for this match yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Gillingham: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nFINAL VERDICT\n\nSalford 1\u20131 Gillingham is the single most probable scoreline at 11.6%: expected goals 1.85\u20130.91 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.043). Exact scores are inherently uncertain; the 1X2 split is 59.0%/23.9%/17.2%.\n",
+ "refresh_id": "81e441e7ee9e464bbd844038c875a8b1",
+ "frozen_at": "2026-11-22T07:46:33+00:00",
+ "sha256": "d3bf4c0e7fb1a180aaac357065aea34553efcf85b721c5bffa403d74372560ca"
+}
