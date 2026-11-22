@@ -1,0 +1,787 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-11-20",
+ "input_fingerprint": "089f9cc4fd25f92ec445dbe63bd24c6d3710901e9f1c4bbab00c2c81fa97224f",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-11-22T19:10:03+00:00",
+ "fixture": {
+  "event_id": "POLY-1347027",
+  "home_name": "Getafe CF",
+  "away_name": "Club Atl\u00e9tico de Madrid",
+  "competition": "LaLiga",
+  "subcategory": "lal",
+  "kickoff_utc": "2026-11-22T20:00:00+00:00",
+  "kickoff_local": "2026-11-22 15:00 EST",
+  "home_matched": "Getafe",
+  "away_matched": "Ath Madrid",
+  "match_methods": {
+   "home": {
+    "source": "Getafe CF",
+    "matched": "Getafe",
+    "method": "core-tokens",
+    "score": 0.97
+   },
+   "away": {
+    "source": "Club Atl\u00e9tico de Madrid",
+    "matched": "Ath Madrid",
+    "method": "alias",
+    "score": 1.0
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.22315932992130966,
+  "p_draw": 0.27574679992461343,
+  "p_away": 0.5010938701540769,
+  "xg_home": 0.9452892208845525,
+  "xg_away": 1.5262195941555468,
+  "xg_total": 2.4715088150400994,
+  "median_total": 2,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.1335162347090084
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.1335162347090084
+   },
+   {
+    "home": 0,
+    "away": 1,
+    "p": 0.12356619306290514
+   },
+   {
+    "home": 0,
+    "away": 2,
+    "p": 0.09744050858155402
+   },
+   {
+    "home": 1,
+    "away": 2,
+    "p": 0.09523107628181127
+   },
+   {
+    "home": 0,
+    "away": 0,
+    "p": 0.08705560193445006
+   }
+  ],
+  "btts": 0.4942894191993791,
+  "totals_over": {
+   "over_0.5": 0.91294439806555,
+   "over_1.5": 0.7155310901004064,
+   "over_2.5": 0.44874602963618604,
+   "over_3.5": 0.23592350732250308,
+   "over_4.5": 0.1024887515215738,
+   "over_5.5": 0.03862618259212423,
+   "over_6.5": 0.01246403694094704
+  },
+  "total_buckets": {
+   "0-1": 0.2844689098995937,
+   "2": 0.2667850604642203,
+   "3": 0.21282252231368293,
+   "4": 0.13343475580092928,
+   "5+": 0.1024887515215738
+  },
+  "clean_sheet_home": 0.21061448034782487,
+  "clean_sheet_away": 0.38215170238724616,
+  "home_goal_dist": [
+   0.38215170238724616,
+   0.37528937008799573,
+   0.17501220527954203,
+   0.05311307636777585,
+   0.011942074941038537,
+   0.0021316020054051813,
+   0.00031526662748521345,
+   4.470230351120387e-05
+  ],
+  "away_goal_dist": [
+   0.21061448034782487,
+   0.33724388984432546,
+   0.2572950425493282,
+   0.12869313697953602,
+   0.047791030435863274,
+   0.014073002809670608,
+   0.0034269484156885487,
+   0.0008624686177630029
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    2
+   ],
+   "away_goals_80": [
+    0,
+    3
+   ],
+   "total_goals_80": [
+    1,
+    5
+   ],
+   "goal_diff_80": [
+    -3,
+    1
+   ]
+  },
+  "score_grid": [
+   [
+    0.087056,
+    0.123566,
+    0.097441,
+    0.048948,
+    0.018175,
+    0.005342,
+    0.001298
+   ],
+   [
+    0.073847,
+    0.133516,
+    0.095231,
+    0.047968,
+    0.017859,
+    0.005263,
+    0.001282
+   ],
+   [
+    0.035828,
+    0.057731,
+    0.04721,
+    0.02257,
+    0.008424,
+    0.002488,
+    0.000608
+   ],
+   [
+    0.010913,
+    0.017624,
+    0.013676,
+    0.00731,
+    0.002589,
+    0.000766,
+    0.000188
+   ],
+   [
+    0.002458,
+    0.003976,
+    0.003092,
+    0.001568,
+    0.000621,
+    0.000174,
+    4.3e-05
+   ],
+   [
+    0.000439,
+    0.000711,
+    0.000553,
+    0.000281,
+    0.000105,
+    3.3e-05,
+    8e-06
+   ],
+   [
+    6.5e-05,
+    0.000105,
+    8.2e-05,
+    4.2e-05,
+    1.6e-05,
+    5e-06,
+    1e-06
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.22303,
+  "p_draw": 0.276865,
+  "p_away": 0.500105,
+  "se": [
+   0.0009308265657468098,
+   0.001000526790683288,
+   0.001118033964097245
+  ],
+  "max_abs_dev_vs_exact": 0.0011182000753865995,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   0.7102576748836436,
+   1.2036871363700847
+  ],
+  "xg_away_80": [
+   1.1670013523505163,
+   1.9089001859194392
+  ],
+  "p_home_80": [
+   0.15963481808460472,
+   0.31576447365410815
+  ],
+  "p_draw_80": [
+   0.2271977285052856,
+   0.304537094105741
+  ],
+  "p_away_80": [
+   0.3869390744090785,
+   0.6021173913454809
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.20914329618692332,
+   0.1826239327623977
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.22121743738114372,
+   "p_draw": 0.2925309984494327,
+   "p_away": 0.4862515641694235,
+   "xg_home": 0.8111439037783107,
+   "xg_away": 1.339559391441563,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.2318528199997715,
+   "p_draw": 0.250512560301593,
+   "p_away": 0.5176346196986356,
+   "xg_home": 0.9788804466892285,
+   "xg_away": 1.5961871873296167,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.18746470908869406,
+   "p_draw": 0.32167419158975663,
+   "p_away": 0.4908610993215493,
+   "xg_home": 0.6276921686729309,
+   "xg_away": 1.194777582360346,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.4552115934330994,
+   "p_draw": 0.25248472105328607,
+   "p_away": 0.2923036855136146,
+   "xg_home": 1.5372273318978065,
+   "xg_away": 1.1808505371504674,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.23333609204860048,
+   "p_draw": 0.2776127447908568,
+   "p_away": 0.4890511631605428,
+   "xg_home": 0.9132688288538243,
+   "xg_away": 1.4428866518548678,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Getafe attack vs Ath Madrid defence: time-weighted strength gap multiplies Getafe's scoring rate by \u00d70.51 relative to an average pairing (from 33/41 decay-weighted matches).",
+   "effect": 0.6656
+  },
+  {
+   "text": "Independent results-only Elo: Getafe 1536 vs Ath Madrid 1783 (gap -247 before home advantage).",
+   "effect": 0.3704
+  },
+  {
+   "text": "Home advantage (Spain, fitted from results): \u00d71.31 on Getafe's scoring rate.",
+   "effect": 0.27
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.22315932992130966,
+  "p_draw": 0.27574679992461343,
+  "p_away": 0.5010938701540769,
+  "xg_home": 0.9452892208845525,
+  "xg_away": 1.5262195941555468
+ },
+ "context": {
+  "fetched_at": "2026-11-22T19:10:03+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5868134",
+    "fetched_at": "2026-11-22T19:10:03+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "confirmed",
+    "source": "FotMob official team sheet",
+    "formation": "4-4-2",
+    "starters": [
+     {
+      "name": "David Soria",
+      "pos": "G",
+      "shirt": "13"
+     },
+     {
+      "name": "Djen\u00e9",
+      "pos": "D",
+      "shirt": "2"
+     },
+     {
+      "name": "Jean Ives Valou",
+      "pos": "D",
+      "shirt": "26"
+     },
+     {
+      "name": "Zaid Abner Romero",
+      "pos": "D",
+      "shirt": "24"
+     },
+     {
+      "name": "Johan Mojica",
+      "pos": "D",
+      "shirt": "22"
+     },
+     {
+      "name": "Andr\u00e9s Garc\u00eda",
+      "pos": "F",
+      "shirt": "21"
+     },
+     {
+      "name": "Francho Serrano",
+      "pos": "M",
+      "shirt": "16"
+     },
+     {
+      "name": "Orel Mangala",
+      "pos": "M",
+      "shirt": "23"
+     },
+     {
+      "name": "Ram\u00f3n Terrats",
+      "pos": "M",
+      "shirt": "11"
+     },
+     {
+      "name": "Iv\u00e1n Az\u00f3n",
+      "pos": "F",
+      "shirt": "20"
+     },
+     {
+      "name": "Enes \u00dcnal",
+      "pos": "F",
+      "shirt": "19"
+     }
+    ],
+    "fetched_at": "2026-11-22T19:10:03+00:00",
+    "n_configurations": 1,
+    "unmatched_players": [],
+    "mean_xi_attack_index": -0.0,
+    "mean_continuity": -0.057,
+    "p_backup_gk": 0.0
+   },
+   "away": {
+    "status": "confirmed",
+    "source": "FotMob official team sheet",
+    "formation": "4-3-3",
+    "starters": [
+     {
+      "name": "Jan Oblak",
+      "pos": "G",
+      "shirt": "13"
+     },
+     {
+      "name": "Marcos Llorente",
+      "pos": "D",
+      "shirt": "14"
+     },
+     {
+      "name": "Robin Le Normand",
+      "pos": "D",
+      "shirt": "24"
+     },
+     {
+      "name": "D\u00e1vid Hancko",
+      "pos": "D",
+      "shirt": "17"
+     },
+     {
+      "name": "Alejandro Grimaldo",
+      "pos": "M",
+      "shirt": "22"
+     },
+     {
+      "name": "Johnny Cardoso",
+      "pos": "M",
+      "shirt": "5"
+     },
+     {
+      "name": "Koke",
+      "pos": "M",
+      "shirt": "6"
+     },
+     {
+      "name": "Pablo Barrios",
+      "pos": "M",
+      "shirt": "8"
+     },
+     {
+      "name": "Giuliano Simeone",
+      "pos": "M",
+      "shirt": "20"
+     },
+     {
+      "name": "Juli\u00e1n \u00c1lvarez",
+      "pos": "F",
+      "shirt": "19"
+     },
+     {
+      "name": "\u00c1lex Baena",
+      "pos": "M",
+      "shirt": "10"
+     }
+    ],
+    "fetched_at": "2026-11-22T19:10:03+00:00",
+    "n_configurations": 1,
+    "unmatched_players": [],
+    "mean_xi_attack_index": -0.126,
+    "mean_continuity": 0.479,
+    "p_backup_gk": 0.0
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Sebasti\u00e1n Boselli",
+     "type": "injury",
+     "expected_return": "Early December 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868134",
+     "fetched_at": "2026-11-22T19:10:03+00:00"
+    },
+    {
+     "player": "Nemanja Gudelj",
+     "type": "suspension",
+     "expected_return": "Late November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868134",
+     "fetched_at": "2026-11-22T19:10:03+00:00"
+    },
+    {
+     "player": "Christantus Uche",
+     "type": "injury",
+     "expected_return": "Out for season",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868134",
+     "fetched_at": "2026-11-22T19:10:03+00:00"
+    },
+    {
+     "player": "Juanmi",
+     "type": "injury",
+     "expected_return": "Unknown",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868134",
+     "fetched_at": "2026-11-22T19:10:03+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "Jorge Dom\u00ednguez",
+     "type": "internationalDuty",
+     "expected_return": "Mid December 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868134",
+     "fetched_at": "2026-11-22T19:10:03+00:00"
+    },
+    {
+     "player": "Cristian Romero",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868134",
+     "fetched_at": "2026-11-22T19:10:03+00:00"
+    },
+    {
+     "player": "Marc Pubill",
+     "type": "injury",
+     "expected_return": "About 1-2 weeks",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868134",
+     "fetched_at": "2026-11-22T19:10:03+00:00"
+    },
+    {
+     "player": "Ademola Lookman",
+     "type": "injury",
+     "expected_return": "Early January 2027",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868134",
+     "fetched_at": "2026-11-22T19:10:03+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 14,
+    "n21": 2,
+    "last_match": "2026-11-08"
+   },
+   "away": {
+    "rest_days": 14,
+    "n21": 1,
+    "last_match": "2026-11-08"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 15.7
+  },
+  "venue": {
+   "name": "Estadio Coliseum",
+   "city": "Getafe",
+   "lat": 40.325728646,
+   "lon": -3.714964092
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 1.105,
+   "temp_c": 9.1,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=40.326&longitude=-3.715",
+   "fetched_at": "2026-11-22T19:10:03+00:00",
+   "lat": 40.325728646,
+   "lon": -3.714964092
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": 0.11,
+    "d_p_draw_pp": 1.23,
+    "d_p_away_pp": -1.34,
+    "d_xg_home": -0.027,
+    "d_xg_away": -0.068
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0022,
+    "away_rate_mult": 1.001,
+    "d_p_home_pp": 0.03,
+    "d_p_draw_pp": -0.02,
+    "d_p_away_pp": -0.01,
+    "d_xg_home": 0.002,
+    "d_xg_away": 0.001,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "home_rate_mult": 0.9904,
+    "away_rate_mult": 0.9788,
+    "d_p_home_pp": 0.24,
+    "d_p_draw_pp": 0.37,
+    "d_p_away_pp": -0.61,
+    "d_xg_home": -0.009,
+    "d_xg_away": -0.032,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 14.0,
+   "rest_a": 14.0,
+   "n21_h": 2.0,
+   "n21_a": 1.0,
+   "travel_km": 15.70610006594313,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 1.105,
+   "temp_c": 9.1
+  }
+ },
+ "lineup_simulation": {
+  "applied": true,
+  "validated": false,
+  "scale": 0.5,
+  "basis": {
+   "home": "confirmed",
+   "away": "confirmed"
+  },
+  "home_rate_mult": 0.9952,
+  "away_rate_mult": 0.9893,
+  "note": "Starting-XI strength, continuity and backup-keeper adjustment at half the fitted size. It did not pass the out-of-sample test, so bets are not priced from it.",
+  "p_home": 0.22438143488158596,
+  "p_draw": 0.2775890240900061,
+  "p_away": 0.4980295410284079,
+  "xg_home": 0.940715152137845,
+  "xg_away": 1.510364978214393,
+  "xg_total": 2.451080130352238,
+  "btts": 0.49079784611628163,
+  "totals_over": {
+   "over_0.5": 0.9111149910059534,
+   "over_1.5": 0.7112589892155233,
+   "over_2.5": 0.4434255891090652,
+   "over_3.5": 0.23157405794918823,
+   "over_4.5": 0.0998573702166989,
+   "over_5.5": 0.0373501201642592,
+   "over_6.5": 0.01195686339394811
+  },
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.13422287801140753
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.13422287801140753
+   },
+   {
+    "home": 0,
+    "away": 1,
+    "p": 0.1248184384871183
+   },
+   {
+    "home": 0,
+    "away": 2,
+    "p": 0.09737913239585609
+   },
+   {
+    "home": 1,
+    "away": 2,
+    "p": 0.09471493019290819
+   },
+   {
+    "home": 0,
+    "away": 0,
+    "p": 0.08888500899404653
+   }
+  ],
+  "score_grid": [
+   [
+    0.088885,
+    0.124818,
+    0.097379,
+    0.048396,
+    0.017779,
+    0.00517,
+    0.001243
+   ],
+   [
+    0.075038,
+    0.134223,
+    0.094715,
+    0.0472,
+    0.017386,
+    0.005069,
+    0.001222
+   ],
+   [
+    0.036231,
+    0.057758,
+    0.046729,
+    0.022102,
+    0.008161,
+    0.002385,
+    0.000576
+   ],
+   [
+    0.010983,
+    0.017547,
+    0.013471,
+    0.007125,
+    0.002496,
+    0.000731,
+    0.000177
+   ],
+   [
+    0.002462,
+    0.00394,
+    0.003031,
+    0.001521,
+    0.000596,
+    0.000165,
+    4e-05
+   ],
+   [
+    0.000437,
+    0.000701,
+    0.00054,
+    0.000271,
+    0.000101,
+    3.1e-05,
+    7e-06
+   ],
+   [
+    6.4e-05,
+    0.000103,
+    8e-05,
+    4e-05,
+    1.5e-05,
+    4e-06,
+    1e-06
+   ]
+  ]
+ },
+ "confidence": {
+  "tier": "MODERATE",
+  "p_max": 0.5010938701540769,
+  "entropy_nats": 1.0361835043859895,
+  "text": "Most likely result has P = 50.1%. In the out-of-sample backtest, favourites priced 0.50\u20130.60 won 53.9% \u00b1 0.5% (n=9522, mean forecast 54.4%). Backtest RPS for SP1: 0.1930; exact-score top-5 hit rate 55.1% (n=1239). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: MODERATE (entropy 1.036 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Getafe: lineup CONFIRMED (FotMob official team sheet).",
+  "Ath Madrid: lineup CONFIRMED (FotMob official team sheet)."
+ ],
+ "verdict": "Getafe 1\u20131 Ath Madrid is the single most probable scoreline at 13.4%: expected goals 0.95\u20131.53 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.043). Exact scores are inherently uncertain; the 1X2 split is 22.3%/27.6%/50.1%.",
+ "resolved": {
+  "home_key": "Spain:Getafe",
+  "away_key": "Spain:Ath Madrid",
+  "div": "SP1",
+  "home_div": "SP1",
+  "away_div": "SP1",
+  "country": "Spain"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: Club Atl\u00e9tico de Madrid at Getafe CF\nCompetition: LaLiga\nDate: 2026-11-22 15:00 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-11-20\n\nPRIMARY FINAL SCORE PREDICTION\n\nGetafe CF 1 \u2013 1 Club Atl\u00e9tico de Madrid\n(modal exact score, probability 13.4%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 0.95\nAway: 1.53\nExpected Total: 2.47\nMedian Total: 2\n\nRESULT PROBABILITIES\n\nHome Win: 22.3%\nDraw: 27.6%\nAway Win: 50.1%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 13.4%\n2. 0\u20131: 12.4%\n3. 0\u20132: 9.7%\n4. 1\u20132: 9.5%\n5. 0\u20130: 8.7%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 28.4%\nTotal 2 goals: 26.7%\nTotal 3 goals: 21.3%\nTotal 4 goals: 13.3%\nTotal 5+ goals: 10.2%\n\nBoth Teams Score: 49.4%\nClean sheet Getafe CF: 21.1% \u00b7 Clean sheet Club Atl\u00e9tico de Madrid: 38.2%\n\nMATCH INTELLIGENCE\n\n1. Getafe attack vs Ath Madrid defence: time-weighted strength gap multiplies Getafe's scoring rate by \u00d70.51 relative to an average pairing (from 33/41 decay-weighted matches).\n2. Independent results-only Elo: Getafe 1536 vs Ath Madrid 1783 (gap -247 before home advantage).\n3. Home advantage (Spain, fitted from results): \u00d71.31 on Getafe's scoring rate.\n\nMODEL CONFIDENCE\n\nMost likely result has P = 50.1%. In the out-of-sample backtest, favourites priced 0.50\u20130.60 won 53.9% \u00b1 0.5% (n=9522, mean forecast 54.4%). Backtest RPS for SP1: 0.1930; exact-score top-5 hit rate 55.1% (n=1239). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: MODERATE (entropy 1.036 nats of max 1.099).\nParameter-uncertainty 80% bands: xG Getafe CF 0.71\u20131.20, xG Club Atl\u00e9tico de Madrid 1.17\u20131.91; P(home win) 16.0%\u201331.6%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0011 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nGetafe: CONFIRMED \u2014 FotMob official team sheet, fetched 2026-11-22 14:10 EST (4-4-2)\n  David Soria (G), Djen\u00e9 (D), Jean Ives Valou (D), Zaid Abner Romero (D), Johan Mojica (D), Andr\u00e9s Garc\u00eda (F), Francho Serrano (M), Orel Mangala (M), Ram\u00f3n Terrats (M), Iv\u00e1n Az\u00f3n (F), Enes \u00dcnal (F)\n  1 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs -0.000 (log) \u00b7 continuity -0.06 \u00b7 P(backup GK) 0%\nAth Madrid: CONFIRMED \u2014 FotMob official team sheet, fetched 2026-11-22 14:10 EST (4-3-3)\n  Jan Oblak (G), Marcos Llorente (D), Robin Le Normand (D), D\u00e1vid Hancko (D), Alejandro Grimaldo (M), Johnny Cardoso (M), Koke (M), Pablo Barrios (M), Giuliano Simeone (M), Juli\u00e1n \u00c1lvarez (F), \u00c1lex Baena (M)\n  1 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs -0.126 (log) \u00b7 continuity +0.48 \u00b7 P(backup GK) 0%\n\nKEY ABSENCES\n\n- Getafe: Sebasti\u00e1n Boselli \u2014 injury, Early December 2026 [FotMob, 2026-11-22 14:10 EST]\n- Getafe: Nemanja Gudelj \u2014 suspension, Late November 2026 [FotMob, 2026-11-22 14:10 EST]\n- Getafe: Christantus Uche \u2014 injury, Out for season [FotMob, 2026-11-22 14:10 EST]\n- Getafe: Juanmi \u2014 injury, Unknown [FotMob, 2026-11-22 14:10 EST]\n- Ath Madrid: Jorge Dom\u00ednguez \u2014 internationalDuty, Mid December 2026 [FotMob, 2026-11-22 14:10 EST]\n- Ath Madrid: Cristian Romero \u2014 injury, Doubtful [FotMob, 2026-11-22 14:10 EST]\n- Ath Madrid: Marc Pubill \u2014 injury, About 1-2 weeks [FotMob, 2026-11-22 14:10 EST]\n- Ath Madrid: Ademola Lookman \u2014 injury, Early January 2027 [FotMob, 2026-11-22 14:10 EST]\n\nWEATHER AT VENUE\n\nEstadio Coliseum, Getafe: 9.1 \u00b0C, wind 1.1 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-11-22 14:10 EST]\n\nREST & TRAVEL\n\nGetafe: 14 days' rest, 2 matches in previous 21 days \u00b7 Ath Madrid: 14 days' rest, 1 in 21 days \u00b7 away travel 15.7 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 22.3% / 27.6% / 50.1%, xG 0.95\u20131.53\n- Understat xG component (validated, in ensemble): home +0.11 pp, draw +1.23 pp, away -1.34 pp; xG -0.027 / -0.068\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.03 pp, draw -0.02 pp, away -0.01 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- lineup: NOT APPLIED (failed out-of-sample validation); would have moved home +0.24 pp, draw +0.37 pp, away -0.61 pp\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Getafe: lineup CONFIRMED (FotMob official team sheet).\n- Ath Madrid: lineup CONFIRMED (FotMob official team sheet).\n\nFINAL VERDICT\n\nGetafe 1\u20131 Ath Madrid is the single most probable scoreline at 13.4%: expected goals 0.95\u20131.53 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.043). Exact scores are inherently uncertain; the 1X2 split is 22.3%/27.6%/50.1%.\n",
+ "refresh_id": "7389ea3165184159b0db2c574699b3e5",
+ "frozen_at": "2026-11-22T19:10:03+00:00",
+ "sha256": "9d6984e5640e016cfc5d231aeee2ed3107975e60d3e12397ef4abc9648347e7b"
+}
