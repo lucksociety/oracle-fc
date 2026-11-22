@@ -1,0 +1,591 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-11-20",
+ "input_fingerprint": "089f9cc4fd25f92ec445dbe63bd24c6d3710901e9f1c4bbab00c2c81fa97224f",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-11-22T12:57:58+00:00",
+ "fixture": {
+  "event_id": "POLY-1437405",
+  "home_name": "Leicester City FC",
+  "away_name": "Mansfield Town FC",
+  "competition": "League One",
+  "subcategory": "el1",
+  "kickoff_utc": "2026-11-28T15:00:00+00:00",
+  "kickoff_local": "2026-11-28 10:00 EST",
+  "home_matched": "Leicester",
+  "away_matched": "Mansfield",
+  "match_methods": {
+   "home": {
+    "source": "Leicester City FC",
+    "matched": "Leicester",
+    "method": "alias",
+    "score": 1.0
+   },
+   "away": {
+    "source": "Mansfield Town FC",
+    "matched": "Mansfield",
+    "method": "core-tokens",
+    "score": 0.97
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.4851559605603083,
+  "p_draw": 0.26043502328143114,
+  "p_away": 0.25440901615826084,
+  "xg_home": 1.6539817271987238,
+  "xg_away": 1.1428056453535036,
+  "xg_total": 2.7967873725522274,
+  "median_total": 3,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.12592104881021096
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.12592104881021096
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.0972248616263006
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.09522231188045303
+   },
+   {
+    "home": 2,
+    "away": 0,
+    "p": 0.08179573082247336
+   },
+   {
+    "home": 1,
+    "away": 2,
+    "p": 0.06648403366450975
+   }
+  ],
+  "btts": 0.5658193803848726,
+  "totals_over": {
+   "over_0.5": 0.9371773261146178,
+   "over_1.5": 0.7769202025086153,
+   "over_2.5": 0.5305681069977998,
+   "over_3.5": 0.3075635080138506,
+   "over_4.5": 0.14883311741383937,
+   "over_5.5": 0.06275293327957734,
+   "over_6.5": 0.022741239618204626
+  },
+  "total_buckets": {
+   "0-1": 0.2230797974913848,
+   "2": 0.24635209551081555,
+   "3": 0.22300459898394928,
+   "4": 0.15873039060001118,
+   "5+": 0.14883311741383937
+  },
+  "clean_sheet_home": 0.3111697845492263,
+  "clean_sheet_away": 0.1858335089512837,
+  "home_goal_dist": [
+   0.1858335089512837,
+   0.3208119436123808,
+   0.2650490196939239,
+   0.14414643433325278,
+   0.05857125494923995,
+   0.01899457359316962,
+   0.00512283292230448,
+   0.0014704319444447719
+  ],
+  "away_goal_dist": [
+   0.3111697845492263,
+   0.3727001484185496,
+   0.2115709070901139,
+   0.07788505070736298,
+   0.021171138249448503,
+   0.004554185694901857,
+   0.0008087128847192628,
+   0.00014007240567784717
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    3
+   ],
+   "away_goals_80": [
+    0,
+    3
+   ],
+   "total_goals_80": [
+    1,
+    5
+   ],
+   "goal_diff_80": [
+    -1,
+    3
+   ]
+  },
+  "score_grid": [
+   [
+    0.062823,
+    0.065035,
+    0.038635,
+    0.01437,
+    0.003939,
+    0.000852,
+    0.000152
+   ],
+   [
+    0.095222,
+    0.125921,
+    0.066484,
+    0.024674,
+    0.006749,
+    0.001457,
+    0.000259
+   ],
+   [
+    0.081796,
+    0.097225,
+    0.058475,
+    0.020502,
+    0.005595,
+    0.001205,
+    0.000214
+   ],
+   [
+    0.044925,
+    0.053287,
+    0.030279,
+    0.011818,
+    0.003047,
+    0.000655,
+    0.000116
+   ],
+   [
+    0.018355,
+    0.021728,
+    0.012321,
+    0.004544,
+    0.001304,
+    0.000265,
+    4.7e-05
+   ],
+   [
+    0.005971,
+    0.007055,
+    0.003993,
+    0.00147,
+    0.000399,
+    9e-05,
+    1.5e-05
+   ],
+   [
+    0.001614,
+    0.001904,
+    0.001076,
+    0.000395,
+    0.000107,
+    2.3e-05,
+    4e-06
+   ]
+  ],
+  "mass_check": 1.0000000000000002
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.48636999999999997,
+  "p_draw": 0.25954,
+  "p_away": 0.25409,
+  "se": [
+   0.0011176185017706176,
+   0.0009802524889027317,
+   0.0009734687254863405
+  ],
+  "max_abs_dev_vs_exact": 0.001214039439691672,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   1.2781920346487956,
+   2.063566504377256
+  ],
+  "xg_away_80": [
+   0.8805474778840711,
+   1.421390277597102
+  ],
+  "p_home_80": [
+   0.37793444335456106,
+   0.5983634754713917
+  ],
+  "p_draw_80": [
+   0.21760240250401422,
+   0.28558004070586596
+  ],
+  "p_away_80": [
+   0.17709167489927669,
+   0.34368690069573465
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.1899036324679766,
+   0.17770925651844027
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.5269330525152209,
+   "p_draw": 0.24345074546539786,
+   "p_away": 0.22961620201938127,
+   "xg_home": 1.7699150521977105,
+   "xg_away": 1.0954794191496147,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.43710961674711996,
+   "p_draw": 0.2606990366791953,
+   "p_away": 0.30219134657368485,
+   "xg_home": 1.4439657870331364,
+   "xg_away": 1.1550527868536298,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.48391995095859086,
+   "p_draw": 0.2583180534356478,
+   "p_away": 0.25776199560576163,
+   "xg_home": 1.641438142214428,
+   "xg_away": 1.139184138104072,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.4347520086549741,
+   "p_draw": 0.258716772972445,
+   "p_away": 0.3065312183725808,
+   "xg_home": 1.457452497512889,
+   "xg_away": 1.1811522624827004,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.5223209533213866,
+   "p_draw": 0.2436880542576806,
+   "p_away": 0.23399099242093263,
+   "xg_home": 1.7627235032646837,
+   "xg_away": 1.1087800567592578,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Home advantage (England, fitted from results): \u00d71.23 on Leicester's scoring rate.",
+   "effect": 0.2069
+  },
+  {
+   "text": "Leicester attack vs Mansfield defence: time-weighted strength gap multiplies Leicester's scoring rate by \u00d71.19 relative to an average pairing (from 36/38 decay-weighted matches).",
+   "effect": 0.1777
+  },
+  {
+   "text": "Context \u2014 Understat xG component (validated, in ensemble): home win +4.1 pp, draw -0.9 pp, away win -3.2 pp (xG +0.15 / -0.02).",
+   "effect": 0.1236
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.4851559605603082,
+  "p_draw": 0.2604350232814311,
+  "p_away": 0.25440901615826084,
+  "xg_home": 1.6539817271987236,
+  "xg_away": 1.1428056453535036
+ },
+ "context": {
+  "fetched_at": "2026-11-22T12:57:58+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5837282",
+    "fetched_at": "2026-11-22T12:57:58+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "projected",
+    "source": "FotMob \u2014 XI from the side's last match on 2026-11-21 (none published for this match yet)",
+    "formation": "3-4-2-1",
+    "starters": [
+     {
+      "name": "Alex McCarthy",
+      "pos": "G",
+      "shirt": "29"
+     },
+     {
+      "name": "Warren O'Hora",
+      "pos": "D",
+      "shirt": "16"
+     },
+     {
+      "name": "Harry Souttar",
+      "pos": "D",
+      "shirt": "15"
+     },
+     {
+      "name": "Memeh Caleb Okoli",
+      "pos": "D",
+      "shirt": "5"
+     },
+     {
+      "name": "Will Alves",
+      "pos": "M",
+      "shirt": "37"
+     },
+     {
+      "name": "William Smallbone",
+      "pos": "M",
+      "shirt": "12"
+     },
+     {
+      "name": "John Lundstram",
+      "pos": "M",
+      "shirt": "6"
+     },
+     {
+      "name": "Luke Thomas",
+      "pos": "M",
+      "shirt": "33"
+     },
+     {
+      "name": "Sammy Braybrooke",
+      "pos": "M",
+      "shirt": "36"
+     },
+     {
+      "name": "Kamari Doyle",
+      "pos": "M",
+      "shirt": "27"
+     },
+     {
+      "name": "Emil Riis Jakobsen",
+      "pos": "F",
+      "shirt": "17"
+     }
+    ],
+    "fetched_at": "2026-11-22T12:57:58+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   },
+   "away": {
+    "status": "projected",
+    "source": "FotMob \u2014 XI from the side's last match on 2026-11-21 (none published for this match yet)",
+    "formation": "3-1-4-2",
+    "starters": [
+     {
+      "name": "Liam Roberts",
+      "pos": "G",
+      "shirt": "1"
+     },
+     {
+      "name": "Elliott Hewitt",
+      "pos": "D",
+      "shirt": "4"
+     },
+     {
+      "name": "Adedeji Oshilaja",
+      "pos": "D",
+      "shirt": "23"
+     },
+     {
+      "name": "Ryan Sweeney",
+      "pos": "D",
+      "shirt": "5"
+     },
+     {
+      "name": "Louis Reed",
+      "pos": "M",
+      "shirt": "25"
+     },
+     {
+      "name": "Nathan Moriah-Welsh",
+      "pos": "M",
+      "shirt": "22"
+     },
+     {
+      "name": "Jonathan Russell",
+      "pos": "M",
+      "shirt": "13"
+     },
+     {
+      "name": "George Abbott",
+      "pos": "M",
+      "shirt": "33"
+     },
+     {
+      "name": "Stephen McLaughlin",
+      "pos": "M",
+      "shirt": "3"
+     },
+     {
+      "name": "Michael Smith",
+      "pos": "F",
+      "shirt": "14"
+     },
+     {
+      "name": "Regan Hendry",
+      "pos": "F",
+      "shirt": "24"
+     }
+    ],
+    "fetched_at": "2026-11-22T12:57:58+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   }
+  },
+  "absences": {
+   "home": [],
+   "away": []
+  },
+  "rest": {
+   "home": {
+    "rest_days": 28,
+    "n21": 0,
+    "last_match": "2026-10-31"
+   },
+   "away": {
+    "rest_days": 25,
+    "n21": 0,
+    "last_match": "2026-11-03"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 57.7
+  },
+  "venue": {
+   "name": "King Power Stadium",
+   "city": "Leicester, Leicestershire",
+   "lat": 52.620376618,
+   "lon": -1.142309904
+  },
+  "weather": {
+   "precip_mm_2h": 1.2,
+   "wind_ms": 2.65,
+   "temp_c": 4.2,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=52.62&longitude=-1.142",
+   "fetched_at": "2026-11-22T12:57:58+00:00",
+   "lat": 52.620376618,
+   "lon": -1.142309904
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": 4.12,
+    "d_p_draw_pp": -0.88,
+    "d_p_away_pp": -3.24,
+    "d_xg_home": 0.154,
+    "d_xg_away": -0.021
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.007,
+    "away_rate_mult": 1.003,
+    "d_p_home_pp": 0.21,
+    "d_p_draw_pp": -0.11,
+    "d_p_away_pp": -0.1,
+    "d_xg_home": 0.011,
+    "d_xg_away": 0.003,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0267,
+    "away_rate_mult": 1.0267,
+    "d_p_home_pp": 0.38,
+    "d_p_draw_pp": -0.42,
+    "d_p_away_pp": 0.04,
+    "d_xg_home": 0.043,
+    "d_xg_away": 0.03,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "reason": "failed validation; no live features"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 28.0,
+   "rest_a": 25.0,
+   "n21_h": 0.0,
+   "n21_a": 0.0,
+   "travel_km": 57.69695020571977,
+   "neutral": 0.0,
+   "precip_mm_2h": 1.2,
+   "wind_ms": 2.65,
+   "temp_c": 4.2
+  }
+ },
+ "lineup_simulation": {
+  "applied": false,
+  "basis": {
+   "home": "projected",
+   "away": "projected"
+  },
+  "reason": "No player ratings exist for this league, so the lineup and formation are shown but cannot change the probabilities."
+ },
+ "confidence": {
+  "tier": "LOW",
+  "p_max": 0.4851559605603083,
+  "entropy_nats": 1.0495338525592646,
+  "text": "Most likely result has P = 48.5%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.3% \u00b1 0.4% (n=16754, mean forecast 44.6%). Backtest RPS for E2: 0.2163; exact-score top-5 hit rate 51.4% (n=1799). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: LOW (entropy 1.050 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Leicester: lineup is PROJECTED (FotMob \u2014 XI from the side's last match on 2026-11-21 (none published for this match yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Leicester: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.",
+  "Mansfield: lineup is PROJECTED (FotMob \u2014 XI from the side's last match on 2026-11-21 (none published for this match yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Mansfield: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+ ],
+ "verdict": "Leicester 1\u20131 Mansfield is the single most probable scoreline at 12.6%: expected goals 1.65\u20131.14 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.043). Exact scores are inherently uncertain; the 1X2 split is 48.5%/26.0%/25.4%.",
+ "resolved": {
+  "home_key": "England:Leicester",
+  "away_key": "England:Mansfield",
+  "div": "E2",
+  "home_div": "E2",
+  "away_div": "E2",
+  "country": "England"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: Mansfield Town FC at Leicester City FC\nCompetition: League One\nDate: 2026-11-28 10:00 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-11-20\n\nPRIMARY FINAL SCORE PREDICTION\n\nLeicester City FC 1 \u2013 1 Mansfield Town FC\n(modal exact score, probability 12.6%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.65\nAway: 1.14\nExpected Total: 2.80\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 48.5%\nDraw: 26.0%\nAway Win: 25.4%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 12.6%\n2. 2\u20131: 9.7%\n3. 1\u20130: 9.5%\n4. 2\u20130: 8.2%\n5. 1\u20132: 6.6%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 22.3%\nTotal 2 goals: 24.6%\nTotal 3 goals: 22.3%\nTotal 4 goals: 15.9%\nTotal 5+ goals: 14.9%\n\nBoth Teams Score: 56.6%\nClean sheet Leicester City FC: 31.1% \u00b7 Clean sheet Mansfield Town FC: 18.6%\n\nMATCH INTELLIGENCE\n\n1. Home advantage (England, fitted from results): \u00d71.23 on Leicester's scoring rate.\n2. Leicester attack vs Mansfield defence: time-weighted strength gap multiplies Leicester's scoring rate by \u00d71.19 relative to an average pairing (from 36/38 decay-weighted matches).\n3. Context \u2014 Understat xG component (validated, in ensemble): home win +4.1 pp, draw -0.9 pp, away win -3.2 pp (xG +0.15 / -0.02).\n\nMODEL CONFIDENCE\n\nMost likely result has P = 48.5%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.3% \u00b1 0.4% (n=16754, mean forecast 44.6%). Backtest RPS for E2: 0.2163; exact-score top-5 hit rate 51.4% (n=1799). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: LOW (entropy 1.050 nats of max 1.099).\nParameter-uncertainty 80% bands: xG Leicester City FC 1.28\u20132.06, xG Mansfield Town FC 0.88\u20131.42; P(home win) 37.8%\u201359.8%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0012 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nLeicester: PROJECTED \u2014 FotMob \u2014 XI from the side's last match on 2026-11-21 (none published for this match yet), fetched 2026-11-22 07:57 EST (3-4-2-1)\n  Alex McCarthy (G), Warren O'Hora (D), Harry Souttar (D), Memeh Caleb Okoli (D), Will Alves (M), William Smallbone (M), John Lundstram (M), Luke Thomas (M), Sammy Braybrooke (M), Kamari Doyle (M), Emil Riis Jakobsen (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\nMansfield: PROJECTED \u2014 FotMob \u2014 XI from the side's last match on 2026-11-21 (none published for this match yet), fetched 2026-11-22 07:57 EST (3-1-4-2)\n  Liam Roberts (G), Elliott Hewitt (D), Adedeji Oshilaja (D), Ryan Sweeney (D), Louis Reed (M), Nathan Moriah-Welsh (M), Jonathan Russell (M), George Abbott (M), Stephen McLaughlin (M), Michael Smith (F), Regan Hendry (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nKEY ABSENCES\n\n- None listed by the sources.\n\nWEATHER AT VENUE\n\nKing Power Stadium, Leicester, Leicestershire: 4.2 \u00b0C, wind 2.6 m/s, precipitation 1.2 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-11-22 07:57 EST]\n\nREST & TRAVEL\n\nLeicester: 28 days' rest, 0 matches in previous 21 days \u00b7 Mansfield: 25 days' rest, 0 in 21 days \u00b7 away travel 57.7 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 48.5% / 26.0% / 25.4%, xG 1.65\u20131.14\n- Understat xG component (validated, in ensemble): home +4.12 pp, draw -0.88 pp, away -3.24 pp; xG +0.154 / -0.021\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.21 pp, draw -0.11 pp, away -0.10 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.38 pp, draw -0.42 pp, away +0.04 pp\n- lineup: not applied (failed validation; no live features)\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Leicester: lineup is PROJECTED (FotMob \u2014 XI from the side's last match on 2026-11-21 (none published for this match yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Leicester: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n- Mansfield: lineup is PROJECTED (FotMob \u2014 XI from the side's last match on 2026-11-21 (none published for this match yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Mansfield: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nFINAL VERDICT\n\nLeicester 1\u20131 Mansfield is the single most probable scoreline at 12.6%: expected goals 1.65\u20131.14 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.043). Exact scores are inherently uncertain; the 1X2 split is 48.5%/26.0%/25.4%.\n",
+ "refresh_id": "62954572040343df881c38bde0676ffb",
+ "frozen_at": "2026-11-22T12:57:58+00:00",
+ "sha256": "e27741603335c371b84fbd66ae70dd6dd1927231673e38e450d8ceea7c4ecf67"
+}
