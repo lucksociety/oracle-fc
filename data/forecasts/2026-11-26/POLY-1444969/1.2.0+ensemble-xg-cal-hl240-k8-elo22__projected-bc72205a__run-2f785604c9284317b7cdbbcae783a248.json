@@ -1,0 +1,649 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-11-20",
+ "input_fingerprint": "089f9cc4fd25f92ec445dbe63bd24c6d3710901e9f1c4bbab00c2c81fa97224f",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-11-23T08:17:02+00:00",
+ "fixture": {
+  "event_id": "POLY-1444969",
+  "home_name": "S\u00e3o Paulo FC",
+  "away_name": "Clube do Remo",
+  "competition": "Brasileir\u00e3o S\u00e9rie A",
+  "subcategory": "bra",
+  "kickoff_utc": "2026-11-26T23:00:00+00:00",
+  "kickoff_local": "2026-11-26 18:00 EST",
+  "home_matched": "Sao Paulo",
+  "away_matched": "Remo",
+  "match_methods": {
+   "home": {
+    "source": "S\u00e3o Paulo FC",
+    "matched": "Sao Paulo",
+    "method": "core-tokens",
+    "score": 0.97
+   },
+   "away": {
+    "source": "Clube do Remo",
+    "matched": "Remo",
+    "method": "alias",
+    "score": 1.0
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.5554681084832087,
+  "p_draw": 0.2543428412964768,
+  "p_away": 0.19018905022031446,
+  "xg_home": 1.7058417495633347,
+  "xg_away": 0.9121611831964146,
+  "xg_total": 2.618002932759749,
+  "median_total": 2,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.12406919165276382
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.12406919165276382
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.11917539473936016
+   },
+   {
+    "home": 2,
+    "away": 0,
+    "p": 0.10574503633717727
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.09941868434449797
+   },
+   {
+    "home": 0,
+    "away": 0,
+    "p": 0.0743419662270169
+   }
+  ],
+  "btts": 0.5043190350302504,
+  "totals_over": {
+   "over_0.5": 0.9256580337729833,
+   "over_1.5": 0.7454680300498084,
+   "over_2.5": 0.4868905852449974,
+   "over_3.5": 0.2673411182987368,
+   "over_4.5": 0.12176150069701341,
+   "over_5.5": 0.04802939967517387,
+   "over_6.5": 0.01624716043115934
+  },
+  "total_buckets": {
+   "0-1": 0.25453196995019167,
+   "2": 0.25857744480481093,
+   "3": 0.21954946694626054,
+   "4": 0.14557961760172342,
+   "5+": 0.12176150069701341
+  },
+  "clean_sheet_home": 0.3952105221198636,
+  "clean_sheet_away": 0.17481240907690274,
+  "home_goal_dist": [
+   0.17481240907690274,
+   0.314309177404418,
+   0.26912011868760133,
+   0.15097256674672066,
+   0.06281910165822283,
+   0.02070490911195261,
+   0.005637822409103156,
+   0.0016238949050785786
+  ],
+  "away_goal_dist": [
+   0.3952105221198636,
+   0.3744672806929365,
+   0.16842838938765148,
+   0.049174144578788805,
+   0.01061315509185183,
+   0.0018153397206319187,
+   0.00025671412476604684,
+   3.4454283509632294e-05
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    3
+   ],
+   "away_goals_80": [
+    0,
+    2
+   ],
+   "total_goals_80": [
+    1,
+    5
+   ],
+   "goal_diff_80": [
+    -1,
+    3
+   ]
+  },
+  "score_grid": [
+   [
+    0.074342,
+    0.061015,
+    0.028763,
+    0.008479,
+    0.001845,
+    0.000317,
+    4.5e-05
+   ],
+   [
+    0.119175,
+    0.124069,
+    0.051837,
+    0.015254,
+    0.003313,
+    0.000569,
+    8.1e-05
+   ],
+   [
+    0.105745,
+    0.099419,
+    0.047362,
+    0.013171,
+    0.002855,
+    0.000489,
+    6.9e-05
+   ],
+   [
+    0.059814,
+    0.056136,
+    0.025274,
+    0.007827,
+    0.001604,
+    0.000274,
+    3.9e-05
+   ],
+   [
+    0.024983,
+    0.023405,
+    0.010519,
+    0.003078,
+    0.000702,
+    0.000114,
+    1.6e-05
+   ],
+   [
+    0.008251,
+    0.007717,
+    0.003462,
+    0.001011,
+    0.000218,
+    3.9e-05,
+    5e-06
+   ],
+   [
+    0.002251,
+    0.002101,
+    0.000941,
+    0.000274,
+    5.9e-05,
+    1e-05,
+    1e-06
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.5556450000000001,
+  "p_draw": 0.25339,
+  "p_away": 0.190965,
+  "se": [
+   0.0011110887317739297,
+   0.0009725829216575829,
+   0.0008789123072724604
+  ],
+  "max_abs_dev_vs_exact": 0.0009528412964767696,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   1.288076903209514,
+   2.1644451727422216
+  ],
+  "xg_away_80": [
+   0.6592461618407315,
+   1.1872490164999505
+  ],
+  "p_home_80": [
+   0.4333282918139126,
+   0.6708973525074886
+  ],
+  "p_draw_80": [
+   0.20109737601917665,
+   0.2955672653126805
+  ],
+  "p_away_80": [
+   0.12118211989103185,
+   0.2793174385845576
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.20577205848538188,
+   0.21832834464746986
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.5338599488195905,
+   "p_draw": 0.2639966848521097,
+   "p_away": 0.20214336632830013,
+   "xg_home": 1.5682511418814573,
+   "xg_away": 0.8652058847290449,
+   "weight": 0.0443
+  },
+  "elo": {
+   "p_home": 0.5253021051336776,
+   "p_draw": 0.25060114031723557,
+   "p_away": 0.22409675454908667,
+   "xg_home": 1.596677734169337,
+   "xg_away": 0.9482167114794672,
+   "weight": 0.4375
+  },
+  "standard_dc": {
+   "p_home": 0.5357506569321935,
+   "p_draw": 0.26762224860813727,
+   "p_away": 0.19662709445966925,
+   "xg_home": 1.5680975172774267,
+   "xg_away": 0.8505361408013923,
+   "weight": 0.0032
+  },
+  "home_away_rate": {
+   "p_home": 0.4777269764293109,
+   "p_draw": 0.25639837008491223,
+   "p_away": 0.2658746534857769,
+   "xg_home": 1.5226329375804042,
+   "xg_away": 1.0672701811864478,
+   "weight": 0.0015
+  },
+  "xg_dc": {
+   "p_home": 0.5770709981545787,
+   "p_draw": 0.24266162326673038,
+   "p_away": 0.18026737857869082,
+   "xg_home": 1.7515629228806724,
+   "xg_away": 0.8731276968533387,
+   "weight": 0.5134
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Home advantage (Brazil, fitted from results): \u00d71.41 on Sao Paulo's scoring rate.",
+   "effect": 0.3451
+  },
+  {
+   "text": "Remo attack vs Sao Paulo defence: rate multiplier \u00d70.72 for the away side.",
+   "effect": 0.3312
+  },
+  {
+   "text": "Independent results-only Elo: Sao Paulo 1526 vs Remo 1468 (gap +58 before home advantage).",
+   "effect": 0.0864
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.5554681084832087,
+  "p_draw": 0.2543428412964768,
+  "p_away": 0.19018905022031446,
+  "xg_home": 1.7058417495633347,
+  "xg_away": 0.9121611831964146
+ },
+ "context": {
+  "fetched_at": "2026-11-23T08:17:02+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5103726",
+    "fetched_at": "2026-11-23T08:17:03+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "3-4-2-1",
+    "starters": [
+     {
+      "name": "Rafael",
+      "pos": "G",
+      "shirt": "23"
+     },
+     {
+      "name": "Rafael Tol\u00f3i",
+      "pos": "D",
+      "shirt": "2"
+     },
+     {
+      "name": "Robert Arboleda",
+      "pos": "D",
+      "shirt": "5"
+     },
+     {
+      "name": "Luis Osorio",
+      "pos": "D",
+      "shirt": "54"
+     },
+     {
+      "name": "Pedro Lima",
+      "pos": "M",
+      "shirt": "32"
+     },
+     {
+      "name": "Pablo Maia",
+      "pos": "M",
+      "shirt": "29"
+     },
+     {
+      "name": "Danielzinho",
+      "pos": "M",
+      "shirt": "94"
+     },
+     {
+      "name": "Iago",
+      "pos": "M",
+      "shirt": "12"
+     },
+     {
+      "name": "Artur",
+      "pos": "M",
+      "shirt": "37"
+     },
+     {
+      "name": "Lucas Moura",
+      "pos": "M",
+      "shirt": "7"
+     },
+     {
+      "name": "Jonathan Calleri",
+      "pos": "F",
+      "shirt": "9"
+     }
+    ],
+    "fetched_at": "2026-11-23T08:17:03+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   },
+   "away": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "5-4-1",
+    "starters": [
+     {
+      "name": "Marcelo",
+      "pos": "G",
+      "shirt": "88"
+     },
+     {
+      "name": "Z\u00e9 Ivaldo",
+      "pos": "D",
+      "shirt": "27"
+     },
+     {
+      "name": "Z\u00e9 Welison",
+      "pos": "D",
+      "shirt": "28"
+     },
+     {
+      "name": "Duplexe Tchamba",
+      "pos": "D",
+      "shirt": "18"
+     },
+     {
+      "name": "Marcelinho",
+      "pos": "D",
+      "shirt": "79"
+     },
+     {
+      "name": "Mayk",
+      "pos": "D",
+      "shirt": "77"
+     },
+     {
+      "name": "David Braga",
+      "pos": "M",
+      "shirt": "26"
+     },
+     {
+      "name": "Edson Fernando",
+      "pos": "M",
+      "shirt": "35"
+     },
+     {
+      "name": "Patrick",
+      "pos": "M",
+      "shirt": "8"
+     },
+     {
+      "name": "J\u00e1ja",
+      "pos": "M",
+      "shirt": "7"
+     },
+     {
+      "name": "Gabriel Taliari",
+      "pos": "F",
+      "shirt": "19"
+     }
+    ],
+    "fetched_at": "2026-11-23T08:17:03+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Rafael Tol\u00f3i",
+     "type": "injury",
+     "expected_return": "About 1-2 weeks",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5103726",
+     "fetched_at": "2026-11-23T08:17:03+00:00"
+    },
+    {
+     "player": "Sabino",
+     "type": "injury",
+     "expected_return": "Out for season",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5103726",
+     "fetched_at": "2026-11-23T08:17:03+00:00"
+    },
+    {
+     "player": "Marcos Ant\u00f4nio",
+     "type": "injury",
+     "expected_return": "About 1-2 weeks",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5103726",
+     "fetched_at": "2026-11-23T08:17:03+00:00"
+    },
+    {
+     "player": "Domingos Duarte",
+     "type": "injury",
+     "expected_return": "Out for season",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5103726",
+     "fetched_at": "2026-11-23T08:17:03+00:00"
+    },
+    {
+     "player": "Nicolas",
+     "type": "injury",
+     "expected_return": "Early December 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5103726",
+     "fetched_at": "2026-11-23T08:17:03+00:00"
+    },
+    {
+     "player": "Aur\u00e9lio Buta",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5103726",
+     "fetched_at": "2026-11-23T08:17:03+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "Matheus Felipe",
+     "type": "injury",
+     "expected_return": "Early December 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5103726",
+     "fetched_at": "2026-11-23T08:17:03+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 6,
+    "n21": 2,
+    "last_match": "2026-11-20"
+   },
+   "away": {
+    "rest_days": 8,
+    "n21": 2,
+    "last_match": "2026-11-18"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 2470.7
+  },
+  "venue": {
+   "name": "MorumBIS",
+   "city": "S\u00e3o Paulo, S\u00e3o Paulo",
+   "lat": -23.600113021,
+   "lon": -46.720092595
+  },
+  "weather": {
+   "precip_mm_2h": 0.4,
+   "wind_ms": 3.79,
+   "temp_c": 17.7,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=-23.6&longitude=-46.72",
+   "fetched_at": "2026-11-23T08:17:03+00:00",
+   "lat": -23.600113021,
+   "lon": -46.720092595
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": 2.74,
+    "d_p_draw_pp": -0.56,
+    "d_p_away_pp": -2.18,
+    "d_xg_home": 0.084,
+    "d_xg_away": -0.035
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0512,
+    "away_rate_mult": 1.0214,
+    "d_p_home_pp": 1.55,
+    "d_p_draw_pp": -0.92,
+    "d_p_away_pp": -0.64,
+    "d_xg_home": 0.085,
+    "d_xg_away": 0.019,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0088,
+    "away_rate_mult": 1.0088,
+    "d_p_home_pp": 0.16,
+    "d_p_draw_pp": -0.15,
+    "d_p_away_pp": -0.01,
+    "d_xg_home": 0.015,
+    "d_xg_away": 0.008,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "reason": "failed validation; no live features"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 6.0,
+   "rest_a": 8.0,
+   "n21_h": 2.0,
+   "n21_a": 2.0,
+   "travel_km": 2470.695335881691,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.4,
+   "wind_ms": 3.79,
+   "temp_c": 17.7
+  }
+ },
+ "lineup_simulation": {
+  "applied": false,
+  "basis": {
+   "home": "projected",
+   "away": "projected"
+  },
+  "reason": "No player ratings exist for this league, so the lineup and formation are shown but cannot change the probabilities."
+ },
+ "confidence": {
+  "tier": "MODERATE",
+  "p_max": 0.5554681084832087,
+  "entropy_nats": 0.9904616351739579,
+  "text": "Most likely result has P = 55.5%. In the out-of-sample backtest, favourites priced 0.50\u20130.60 won 53.9% \u00b1 0.5% (n=9522, mean forecast 54.4%). Backtest RPS for BRA: 0.2078; exact-score top-5 hit rate 54.4% (n=1339). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: MODERATE (entropy 0.990 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Sao Paulo: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Sao Paulo: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.",
+  "Remo: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Remo: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+ ],
+ "verdict": "Sao Paulo 1\u20131 Remo is the single most probable scoreline at 12.4%: expected goals 1.71\u20130.91 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.043). Exact scores are inherently uncertain; the 1X2 split is 55.5%/25.4%/19.0%.",
+ "resolved": {
+  "home_key": "Brazil:Sao Paulo",
+  "away_key": "Brazil:Remo",
+  "div": "BRA",
+  "home_div": "BRA",
+  "away_div": "BRA",
+  "country": "Brazil"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: Clube do Remo at S\u00e3o Paulo FC\nCompetition: Brasileir\u00e3o S\u00e9rie A\nDate: 2026-11-26 18:00 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-11-20\n\nPRIMARY FINAL SCORE PREDICTION\n\nS\u00e3o Paulo FC 1 \u2013 1 Clube do Remo\n(modal exact score, probability 12.4%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.71\nAway: 0.91\nExpected Total: 2.62\nMedian Total: 2\n\nRESULT PROBABILITIES\n\nHome Win: 55.5%\nDraw: 25.4%\nAway Win: 19.0%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 12.4%\n2. 1\u20130: 11.9%\n3. 2\u20130: 10.6%\n4. 2\u20131: 9.9%\n5. 0\u20130: 7.4%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 25.5%\nTotal 2 goals: 25.9%\nTotal 3 goals: 22.0%\nTotal 4 goals: 14.6%\nTotal 5+ goals: 12.2%\n\nBoth Teams Score: 50.4%\nClean sheet S\u00e3o Paulo FC: 39.5% \u00b7 Clean sheet Clube do Remo: 17.5%\n\nMATCH INTELLIGENCE\n\n1. Home advantage (Brazil, fitted from results): \u00d71.41 on Sao Paulo's scoring rate.\n2. Remo attack vs Sao Paulo defence: rate multiplier \u00d70.72 for the away side.\n3. Independent results-only Elo: Sao Paulo 1526 vs Remo 1468 (gap +58 before home advantage).\n\nMODEL CONFIDENCE\n\nMost likely result has P = 55.5%. In the out-of-sample backtest, favourites priced 0.50\u20130.60 won 53.9% \u00b1 0.5% (n=9522, mean forecast 54.4%). Backtest RPS for BRA: 0.2078; exact-score top-5 hit rate 54.4% (n=1339). Overall champion RPS 0.2097 vs home/away baseline 0.2283 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-10-28, n=40,603). Outcome-certainty tier: MODERATE (entropy 0.990 nats of max 1.099).\nParameter-uncertainty 80% bands: xG S\u00e3o Paulo FC 1.29\u20132.16, xG Clube do Remo 0.66\u20131.19; P(home win) 43.3%\u201367.1%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0010 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nSao Paulo: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-11-23 03:17 EST (3-4-2-1)\n  Rafael (G), Rafael Tol\u00f3i (D), Robert Arboleda (D), Luis Osorio (D), Pedro Lima (M), Pablo Maia (M), Danielzinho (M), Iago (M), Artur (M), Lucas Moura (M), Jonathan Calleri (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\nRemo: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-11-23 03:17 EST (5-4-1)\n  Marcelo (G), Z\u00e9 Ivaldo (D), Z\u00e9 Welison (D), Duplexe Tchamba (D), Marcelinho (D), Mayk (D), David Braga (M), Edson Fernando (M), Patrick (M), J\u00e1ja (M), Gabriel Taliari (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nKEY ABSENCES\n\n- Sao Paulo: Rafael Tol\u00f3i \u2014 injury, About 1-2 weeks [FotMob, 2026-11-23 03:17 EST]\n- Sao Paulo: Sabino \u2014 injury, Out for season [FotMob, 2026-11-23 03:17 EST]\n- Sao Paulo: Marcos Ant\u00f4nio \u2014 injury, About 1-2 weeks [FotMob, 2026-11-23 03:17 EST]\n- Sao Paulo: Domingos Duarte \u2014 injury, Out for season [FotMob, 2026-11-23 03:17 EST]\n- Sao Paulo: Nicolas \u2014 injury, Early December 2026 [FotMob, 2026-11-23 03:17 EST]\n- Sao Paulo: Aur\u00e9lio Buta \u2014 injury, Late November 2026 [FotMob, 2026-11-23 03:17 EST]\n- Remo: Matheus Felipe \u2014 injury, Early December 2026 [FotMob, 2026-11-23 03:17 EST]\n\nWEATHER AT VENUE\n\nMorumBIS, S\u00e3o Paulo, S\u00e3o Paulo: 17.7 \u00b0C, wind 3.8 m/s, precipitation 0.4 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-11-23 03:17 EST]\n\nREST & TRAVEL\n\nSao Paulo: 6 days' rest, 2 matches in previous 21 days \u00b7 Remo: 8 days' rest, 2 in 21 days \u00b7 away travel 2470.7 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 55.5% / 25.4% / 19.0%, xG 1.71\u20130.91\n- Understat xG component (validated, in ensemble): home +2.74 pp, draw -0.56 pp, away -2.18 pp; xG +0.084 / -0.035\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +1.55 pp, draw -0.92 pp, away -0.64 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.16 pp, draw -0.15 pp, away -0.01 pp\n- lineup: not applied (failed validation; no live features)\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Sao Paulo: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Sao Paulo: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n- Remo: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Remo: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nFINAL VERDICT\n\nSao Paulo 1\u20131 Remo is the single most probable scoreline at 12.4%: expected goals 1.71\u20130.91 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.043). Exact scores are inherently uncertain; the 1X2 split is 55.5%/25.4%/19.0%.\n",
+ "refresh_id": "2f785604c9284317b7cdbbcae783a248",
+ "frozen_at": "2026-11-23T08:17:03+00:00",
+ "sha256": "b573acaf80ad56c40c20d6cf52e9c013ee0aeb83a571e8c6cb17b23a02a960c4"
+}
