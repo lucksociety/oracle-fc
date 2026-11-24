@@ -1,0 +1,805 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-11-24",
+ "input_fingerprint": "92e68fb68f0de5c0953fefc54ebfe38af0ab2023506e7ae25712a99c91b28a35",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-11-24T23:21:54+00:00",
+ "fixture": {
+  "event_id": "POLY-1437196",
+  "home_name": "US Sassuolo Calcio",
+  "away_name": "SSC Napoli",
+  "competition": "Serie A",
+  "subcategory": "sea",
+  "kickoff_utc": "2026-11-29T14:00:00+00:00",
+  "kickoff_local": "2026-11-29 09:00 EST",
+  "home_matched": "Sassuolo",
+  "away_matched": "Napoli",
+  "match_methods": {
+   "home": {
+    "source": "US Sassuolo Calcio",
+    "matched": "Sassuolo",
+    "method": "core-tokens",
+    "score": 0.97
+   },
+   "away": {
+    "source": "SSC Napoli",
+    "matched": "Napoli",
+    "method": "core-tokens",
+    "score": 0.97
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.22336676910236275,
+  "p_draw": 0.2509539018840388,
+  "p_away": 0.5256793290135985,
+  "xg_home": 1.080925642531611,
+  "xg_away": 1.7487034081773876,
+  "xg_total": 2.8296290507089985,
+  "median_total": 3,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.12063815994896288
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.12063815994896288
+   },
+   {
+    "home": 1,
+    "away": 2,
+    "p": 0.10070910030843971
+   },
+   {
+    "home": 0,
+    "away": 1,
+    "p": 0.09898467397895908
+   },
+   {
+    "home": 0,
+    "away": 2,
+    "p": 0.09004616489332937
+   },
+   {
+    "home": 0,
+    "away": 0,
+    "p": 0.060875596326189094
+   }
+  ],
+  "btts": 0.561316889192533,
+  "totals_over": {
+   "over_0.5": 0.9391244036738109,
+   "over_1.5": 0.7821365159010728,
+   "over_2.5": 0.5391690980742634,
+   "over_3.5": 0.3147744525874567,
+   "over_4.5": 0.1540614718880045,
+   "over_5.5": 0.06544537544182248,
+   "over_6.5": 0.02399798140273009
+  },
+  "total_buckets": {
+   "0-1": 0.2178634840989272,
+   "2": 0.24296741782680942,
+   "3": 0.22439464548680677,
+   "4": 0.16071298069945214,
+   "5+": 0.1540614718880045
+  },
+  "clean_sheet_home": 0.16611463197452592,
+  "clean_sheet_away": 0.33344407515913027,
+  "home_goal_dist": [
+   0.33344407515913027,
+   0.3733528404185808,
+   0.20025847879297393,
+   0.07014851357453748,
+   0.01825468196899,
+   0.003781664423930004,
+   0.0006504143748774681,
+   0.00010933128698013693
+  ],
+  "away_goal_dist": [
+   0.16611463197452592,
+   0.30845230662001766,
+   0.27255862702674644,
+   0.15650770548134996,
+   0.0663059501355869,
+   0.02217407718154835,
+   0.006108642602297212,
+   0.0017780589779275806
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    2
+   ],
+   "away_goals_80": [
+    0,
+    3
+   ],
+   "total_goals_80": [
+    1,
+    5
+   ],
+   "goal_diff_80": [
+    -3,
+    1
+   ]
+  },
+  "score_grid": [
+   [
+    0.060876,
+    0.098985,
+    0.090046,
+    0.05177,
+    0.02189,
+    0.007295,
+    0.002002
+   ],
+   [
+    0.058003,
+    0.120638,
+    0.100709,
+    0.058132,
+    0.024678,
+    0.008256,
+    0.002274
+   ],
+   [
+    0.032283,
+    0.060623,
+    0.056476,
+    0.0314,
+    0.013379,
+    0.004492,
+    0.001242
+   ],
+   [
+    0.011292,
+    0.021281,
+    0.019091,
+    0.011567,
+    0.004745,
+    0.001598,
+    0.000443
+   ],
+   [
+    0.002933,
+    0.005546,
+    0.004991,
+    0.002911,
+    0.001301,
+    0.000422,
+    0.000117
+   ],
+   [
+    0.000606,
+    0.001149,
+    0.001037,
+    0.000606,
+    0.000261,
+    9.2e-05,
+    2.5e-05
+   ],
+   [
+    0.000104,
+    0.000197,
+    0.000179,
+    0.000105,
+    4.5e-05,
+    1.5e-05,
+    4e-06
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.22391,
+  "p_draw": 0.25172,
+  "p_away": 0.52437,
+  "se": [
+   0.0009321328014290667,
+   0.0009704561855127722,
+   0.0011167052052802476
+  ],
+  "max_abs_dev_vs_exact": 0.0013093290135984814,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   0.8233467569906208,
+   1.362928622356825
+  ],
+  "xg_away_80": [
+   1.3419874014773732,
+   2.1813936156290357
+  ],
+  "p_home_80": [
+   0.15920900265113788,
+   0.32230733375993975
+  ],
+  "p_draw_80": [
+   0.20484979674307768,
+   0.2788608678238902
+  ],
+  "p_away_80": [
+   0.4047939454198743,
+   0.6292157167450284
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.19982500374287557,
+   0.1802942508568322
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.23997444974999532,
+   "p_draw": 0.24608011880661845,
+   "p_away": 0.5139454314433862,
+   "xg_home": 1.110961162441977,
+   "xg_away": 1.728131124897373,
+   "weight": 0.0077
+  },
+  "elo": {
+   "p_home": 0.21275788415740657,
+   "p_draw": 0.245934337031321,
+   "p_away": 0.5413077788112725,
+   "xg_home": 0.9284558516082956,
+   "xg_away": 1.6413842075007652,
+   "weight": 0.3721
+  },
+  "standard_dc": {
+   "p_home": 0.2239158149692299,
+   "p_draw": 0.2534622970920272,
+   "p_away": 0.5226218879387429,
+   "xg_home": 1.0254196837750817,
+   "xg_away": 1.6866664887268812,
+   "weight": 0.0028
+  },
+  "home_away_rate": {
+   "p_home": 0.3974476293031239,
+   "p_draw": 0.2658674118372666,
+   "p_away": 0.3366849588596097,
+   "xg_home": 1.3426276427468273,
+   "xg_away": 1.2138107311420416,
+   "weight": 0.001
+  },
+  "xg_dc": {
+   "p_home": 0.2456535795794641,
+   "p_draw": 0.2422389481769966,
+   "p_away": 0.5121074722435393,
+   "xg_home": 1.1575148669231448,
+   "xg_away": 1.765086167607758,
+   "weight": 0.6164
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Napoli attack vs Sassuolo defence: rate multiplier \u00d71.43 for the away side.",
+   "effect": 0.3583
+  },
+  {
+   "text": "Independent results-only Elo: Sassuolo 1503 vs Napoli 1727 (gap -224 before home advantage).",
+   "effect": 0.3356
+  },
+  {
+   "text": "Sassuolo attack vs Napoli defence: time-weighted strength gap multiplies Sassuolo's scoring rate by \u00d70.78 relative to an average pairing (from 33/36 decay-weighted matches).",
+   "effect": 0.2548
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.22336676910236272,
+  "p_draw": 0.25095390188403877,
+  "p_away": 0.5256793290135984,
+  "xg_home": 1.0809256425316107,
+  "xg_away": 1.748703408177387
+ },
+ "context": {
+  "fetched_at": "2026-11-24T23:21:54+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5749766",
+    "fetched_at": "2026-11-24T23:21:54+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "inferred",
+    "source": null,
+    "formation": "",
+    "starters": [
+     {
+      "name": "Arijanet Muri\u0107",
+      "pos": "G"
+     },
+     {
+      "name": "Armand Laurient\u00e9",
+      "pos": "F"
+     },
+     {
+      "name": "Nemanja Mati\u0107",
+      "pos": "M"
+     },
+     {
+      "name": "Domenico Berardi",
+      "pos": "F"
+     },
+     {
+      "name": "Josh Doig",
+      "pos": "D"
+     },
+     {
+      "name": "Jay Idzes",
+      "pos": "D"
+     },
+     {
+      "name": "Sebastiano Esposito",
+      "pos": "F"
+     },
+     {
+      "name": "Kristian Thorstvedt",
+      "pos": "M"
+     },
+     {
+      "name": "Duje \u0106aleta-Car",
+      "pos": "D"
+     },
+     {
+      "name": "Darryl Bakola",
+      "pos": "M"
+     },
+     {
+      "name": "Kieron Bowie",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-11-24T23:21:54+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [],
+    "mean_xi_attack_index": 0.075,
+    "mean_continuity": 0.162,
+    "p_backup_gk": 0.28
+   },
+   "away": {
+    "status": "inferred",
+    "source": null,
+    "formation": "",
+    "starters": [
+     {
+      "name": "Vanja Milinkovi\u0107-Savi\u0107",
+      "pos": "G"
+     },
+     {
+      "name": "Rasmus H\u00f8jlund",
+      "pos": "F"
+     },
+     {
+      "name": "Amir Rrahmani",
+      "pos": "D"
+     },
+     {
+      "name": "Rafa Mar\u00edn",
+      "pos": "D"
+     },
+     {
+      "name": "Scott McTominay",
+      "pos": "M"
+     },
+     {
+      "name": "Kevin De Bruyne",
+      "pos": "M"
+     },
+     {
+      "name": "Matteo Politano",
+      "pos": "M"
+     },
+     {
+      "name": "Noa Lang",
+      "pos": "F"
+     },
+     {
+      "name": "Billy Gilmour",
+      "pos": "M"
+     },
+     {
+      "name": "Math\u00edas Olivera",
+      "pos": "D"
+     },
+     {
+      "name": "Leonardo Spinazzola",
+      "pos": "M"
+     }
+    ],
+    "fetched_at": "2026-11-24T23:21:54+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [],
+    "mean_xi_attack_index": 0.124,
+    "mean_continuity": -0.099,
+    "p_backup_gk": 0.0
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Darryl Bakola",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5749766",
+     "fetched_at": "2026-11-24T23:21:54+00:00"
+    },
+    {
+     "player": "Vasilije Ad\u017ei\u0107",
+     "type": "injury",
+     "expected_return": "Unknown",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5749766",
+     "fetched_at": "2026-11-24T23:21:54+00:00"
+    },
+    {
+     "player": "Cristian Volpato",
+     "type": "injury",
+     "expected_return": "Early December 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5749766",
+     "fetched_at": "2026-11-24T23:21:54+00:00"
+    },
+    {
+     "player": "Fedde Leysen",
+     "type": "injury",
+     "expected_return": "Out for season",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5749766",
+     "fetched_at": "2026-11-24T23:21:54+00:00"
+    },
+    {
+     "player": "Daniel Boloca",
+     "type": "injury",
+     "expected_return": "Back in training",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5749766",
+     "fetched_at": "2026-11-24T23:21:54+00:00"
+    },
+    {
+     "player": "Isma\u00ebl Kon\u00e9",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5749766",
+     "fetched_at": "2026-11-24T23:21:54+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "Antonio Vergara",
+     "type": "injury",
+     "expected_return": "Early December 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5749766",
+     "fetched_at": "2026-11-24T23:21:54+00:00"
+    },
+    {
+     "player": "Alex Meret",
+     "type": "injury",
+     "expected_return": "Early January 2027",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5749766",
+     "fetched_at": "2026-11-24T23:21:54+00:00"
+    },
+    {
+     "player": "Giovanni Di Lorenzo",
+     "type": "injury",
+     "expected_return": "About 1-2 weeks",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5749766",
+     "fetched_at": "2026-11-24T23:21:54+00:00"
+    },
+    {
+     "player": "Stanislav Lobotka",
+     "type": "injury",
+     "expected_return": "Late December 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5749766",
+     "fetched_at": "2026-11-24T23:21:54+00:00"
+    },
+    {
+     "player": "Beno\u00eet Badiashile",
+     "type": "injury",
+     "expected_return": "Early December 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5749766",
+     "fetched_at": "2026-11-24T23:21:54+00:00"
+    },
+    {
+     "player": "Alisson Santos",
+     "type": "injury",
+     "expected_return": "Early December 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5749766",
+     "fetched_at": "2026-11-24T23:21:54+00:00"
+    },
+    {
+     "player": "Alessandro Buongiorno",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5749766",
+     "fetched_at": "2026-11-24T23:21:54+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 7,
+    "n21": 1,
+    "last_match": "2026-11-22"
+   },
+   "away": {
+    "rest_days": 8,
+    "n21": 2,
+    "last_match": "2026-11-21"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 519.9
+  },
+  "venue": {
+   "name": "MAPEI Stadium - Citt\u00e0 del Tricolore",
+   "city": "Reggio Emilia",
+   "lat": 44.714636965,
+   "lon": 10.649710894
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 1.39,
+   "temp_c": 9.2,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=44.715&longitude=10.65",
+   "fetched_at": "2026-11-24T23:21:54+00:00",
+   "lat": 44.714636965,
+   "lon": 10.649710894
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": 2.0,
+    "d_p_draw_pp": -0.17,
+    "d_p_away_pp": -1.83,
+    "d_xg_home": 0.144,
+    "d_xg_away": 0.08
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0262,
+    "away_rate_mult": 1.0084,
+    "d_p_home_pp": 0.44,
+    "d_p_draw_pp": -0.13,
+    "d_p_away_pp": -0.31,
+    "d_xg_home": 0.028,
+    "d_xg_away": 0.015,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "home_rate_mult": 1.0264,
+    "away_rate_mult": 1.0397,
+    "d_p_home_pp": -0.28,
+    "d_p_draw_pp": -0.65,
+    "d_p_away_pp": 0.93,
+    "d_xg_home": 0.029,
+    "d_xg_away": 0.068,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 7.0,
+   "rest_a": 8.0,
+   "n21_h": 1.0,
+   "n21_a": 2.0,
+   "travel_km": 519.8995983257375,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 1.39,
+   "temp_c": 9.2
+  }
+ },
+ "lineup_simulation": {
+  "applied": true,
+  "validated": false,
+  "scale": 0.5,
+  "basis": {
+   "home": "inferred",
+   "away": "inferred"
+  },
+  "home_rate_mult": 1.0131,
+  "away_rate_mult": 1.0197,
+  "note": "Starting-XI strength, continuity and backup-keeper adjustment at half the fitted size. It did not pass the out-of-sample test, so bets are not priced from it.",
+  "p_home": 0.221945410747943,
+  "p_draw": 0.24773552863636839,
+  "p_away": 0.5303190606156889,
+  "xg_home": 1.0951847253368863,
+  "xg_away": 1.7822000390064825,
+  "xg_total": 2.8773847643433688,
+  "btts": 0.5689434754267829,
+  "totals_over": {
+   "over_0.5": 0.9420037730911539,
+   "over_1.5": 0.7898926531982425,
+   "over_2.5": 0.5504693042858774,
+   "over_3.5": 0.325538146743131,
+   "over_4.5": 0.16166601628546118,
+   "over_5.5": 0.06973334528850511,
+   "over_6.5": 0.025985625446864523
+  },
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.11868070252142415
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.11868070252142415
+   },
+   {
+    "home": 1,
+    "away": 2,
+    "p": 0.10101301270872895
+   },
+   {
+    "home": 0,
+    "away": 1,
+    "p": 0.09612334095371321
+   },
+   {
+    "home": 0,
+    "away": 2,
+    "p": 0.08916393555728248
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.06043151508478047
+   }
+  ],
+  "score_grid": [
+   [
+    0.057996,
+    0.096123,
+    0.089164,
+    0.05229,
+    0.022562,
+    0.007676,
+    0.002151
+   ],
+   [
+    0.055988,
+    0.118681,
+    0.101013,
+    0.05947,
+    0.025758,
+    0.008796,
+    0.002474
+   ],
+   [
+    0.031579,
+    0.060432,
+    0.057392,
+    0.032542,
+    0.014145,
+    0.004847,
+    0.001368
+   ],
+   [
+    0.011196,
+    0.0215,
+    0.01966,
+    0.012146,
+    0.005083,
+    0.001747,
+    0.000495
+   ],
+   [
+    0.002949,
+    0.00568,
+    0.00521,
+    0.003098,
+    0.001412,
+    0.000467,
+    0.000133
+   ],
+   [
+    0.000618,
+    0.001193,
+    0.001097,
+    0.000654,
+    0.000287,
+    0.000103,
+    2.8e-05
+   ],
+   [
+    0.000107,
+    0.000208,
+    0.000192,
+    0.000114,
+    5e-05,
+    1.7e-05,
+    5e-06
+   ]
+  ]
+ },
+ "confidence": {
+  "tier": "MODERATE",
+  "p_max": 0.5256793290135985,
+  "entropy_nats": 1.0197990746293146,
+  "text": "Most likely result has P = 52.6%. In the out-of-sample backtest, favourites priced 0.50\u20130.60 won 54.6% \u00b1 0.5% (n=9745, mean forecast 54.4%). Backtest RPS for I1: 0.1934; exact-score top-5 hit rate 54.0% (n=1259). Overall champion RPS 0.2093 vs home/away baseline 0.2284 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-11-22, n=41,487). Outcome-certainty tier: MODERATE (entropy 1.020 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Sassuolo: no lineup published yet \u2014 XI inferred from recent minutes share minus known absences; 200 configurations simulated (start P=0.7, UNVALIDATED prior).",
+  "Napoli: no lineup published yet \u2014 XI inferred from recent minutes share minus known absences; 200 configurations simulated (start P=0.7, UNVALIDATED prior)."
+ ],
+ "verdict": "Sassuolo 1\u20131 Napoli is the single most probable scoreline at 12.1%: expected goals 1.08\u20131.75 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.038). Exact scores are inherently uncertain; the 1X2 split is 22.3%/25.1%/52.6%.",
+ "resolved": {
+  "home_key": "Italy:Sassuolo",
+  "away_key": "Italy:Napoli",
+  "div": "I1",
+  "home_div": "I1",
+  "away_div": "I1",
+  "country": "Italy"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: SSC Napoli at US Sassuolo Calcio\nCompetition: Serie A\nDate: 2026-11-29 09:00 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-11-24\n\nPRIMARY FINAL SCORE PREDICTION\n\nUS Sassuolo Calcio 1 \u2013 1 SSC Napoli\n(modal exact score, probability 12.1%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.08\nAway: 1.75\nExpected Total: 2.83\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 22.3%\nDraw: 25.1%\nAway Win: 52.6%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 12.1%\n2. 1\u20132: 10.1%\n3. 0\u20131: 9.9%\n4. 0\u20132: 9.0%\n5. 0\u20130: 6.1%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 21.8%\nTotal 2 goals: 24.3%\nTotal 3 goals: 22.4%\nTotal 4 goals: 16.1%\nTotal 5+ goals: 15.4%\n\nBoth Teams Score: 56.1%\nClean sheet US Sassuolo Calcio: 16.6% \u00b7 Clean sheet SSC Napoli: 33.3%\n\nMATCH INTELLIGENCE\n\n1. Napoli attack vs Sassuolo defence: rate multiplier \u00d71.43 for the away side.\n2. Independent results-only Elo: Sassuolo 1503 vs Napoli 1727 (gap -224 before home advantage).\n3. Sassuolo attack vs Napoli defence: time-weighted strength gap multiplies Sassuolo's scoring rate by \u00d70.78 relative to an average pairing (from 33/36 decay-weighted matches).\n\nMODEL CONFIDENCE\n\nMost likely result has P = 52.6%. In the out-of-sample backtest, favourites priced 0.50\u20130.60 won 54.6% \u00b1 0.5% (n=9745, mean forecast 54.4%). Backtest RPS for I1: 0.1934; exact-score top-5 hit rate 54.0% (n=1259). Overall champion RPS 0.2093 vs home/away baseline 0.2284 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-11-22, n=41,487). Outcome-certainty tier: MODERATE (entropy 1.020 nats of max 1.099).\nParameter-uncertainty 80% bands: xG US Sassuolo Calcio 0.82\u20131.36, xG SSC Napoli 1.34\u20132.18; P(home win) 15.9%\u201332.2%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0013 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nSassuolo: INFERRED, fetched 2026-11-24 18:21 EST\n  Arijanet Muri\u0107 (G), Armand Laurient\u00e9 (F), Nemanja Mati\u0107 (M), Domenico Berardi (F), Josh Doig (D), Jay Idzes (D), Sebastiano Esposito (F), Kristian Thorstvedt (M), Duje \u0106aleta-Car (D), Darryl Bakola (M), Kieron Bowie (F)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs +0.075 (log) \u00b7 continuity +0.16 \u00b7 P(backup GK) 28%\nNapoli: INFERRED, fetched 2026-11-24 18:21 EST\n  Vanja Milinkovi\u0107-Savi\u0107 (G), Rasmus H\u00f8jlund (F), Amir Rrahmani (D), Rafa Mar\u00edn (D), Scott McTominay (M), Kevin De Bruyne (M), Matteo Politano (M), Noa Lang (F), Billy Gilmour (M), Math\u00edas Olivera (D), Leonardo Spinazzola (M)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs +0.124 (log) \u00b7 continuity -0.10 \u00b7 P(backup GK) 0%\n\nKEY ABSENCES\n\n- Sassuolo: Darryl Bakola \u2014 injury, Doubtful [FotMob, 2026-11-24 18:21 EST]\n- Sassuolo: Vasilije Ad\u017ei\u0107 \u2014 injury, Unknown [FotMob, 2026-11-24 18:21 EST]\n- Sassuolo: Cristian Volpato \u2014 injury, Early December 2026 [FotMob, 2026-11-24 18:21 EST]\n- Sassuolo: Fedde Leysen \u2014 injury, Out for season [FotMob, 2026-11-24 18:21 EST]\n- Sassuolo: Daniel Boloca \u2014 injury, Back in training [FotMob, 2026-11-24 18:21 EST]\n- Sassuolo: Isma\u00ebl Kon\u00e9 \u2014 injury, Doubtful [FotMob, 2026-11-24 18:21 EST]\n- Napoli: Antonio Vergara \u2014 injury, Early December 2026 [FotMob, 2026-11-24 18:21 EST]\n- Napoli: Alex Meret \u2014 injury, Early January 2027 [FotMob, 2026-11-24 18:21 EST]\n- Napoli: Giovanni Di Lorenzo \u2014 injury, About 1-2 weeks [FotMob, 2026-11-24 18:21 EST]\n- Napoli: Stanislav Lobotka \u2014 injury, Late December 2026 [FotMob, 2026-11-24 18:21 EST]\n- Napoli: Beno\u00eet Badiashile \u2014 injury, Early December 2026 [FotMob, 2026-11-24 18:21 EST]\n- Napoli: Alisson Santos \u2014 injury, Early December 2026 [FotMob, 2026-11-24 18:21 EST]\n- Napoli: Alessandro Buongiorno \u2014 injury, Doubtful [FotMob, 2026-11-24 18:21 EST]\n\nWEATHER AT VENUE\n\nMAPEI Stadium - Citt\u00e0 del Tricolore, Reggio Emilia: 9.2 \u00b0C, wind 1.4 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-11-24 18:21 EST]\n\nREST & TRAVEL\n\nSassuolo: 7 days' rest, 1 matches in previous 21 days \u00b7 Napoli: 8 days' rest, 2 in 21 days \u00b7 away travel 519.9 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 22.3% / 25.1% / 52.6%, xG 1.08\u20131.75\n- Understat xG component (validated, in ensemble): home +2.00 pp, draw -0.17 pp, away -1.83 pp; xG +0.144 / +0.080\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.44 pp, draw -0.13 pp, away -0.31 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- lineup: NOT APPLIED (failed out-of-sample validation); would have moved home -0.28 pp, draw -0.65 pp, away +0.93 pp\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Sassuolo: no lineup published yet \u2014 XI inferred from recent minutes share minus known absences; 200 configurations simulated (start P=0.7, UNVALIDATED prior).\n- Napoli: no lineup published yet \u2014 XI inferred from recent minutes share minus known absences; 200 configurations simulated (start P=0.7, UNVALIDATED prior).\n\nFINAL VERDICT\n\nSassuolo 1\u20131 Napoli is the single most probable scoreline at 12.1%: expected goals 1.08\u20131.75 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.038). Exact scores are inherently uncertain; the 1X2 split is 22.3%/25.1%/52.6%.\n",
+ "refresh_id": "e25437e3f6a64acc8c68935145daf219",
+ "frozen_at": "2026-11-24T23:21:54+00:00",
+ "sha256": "27c842160fd258328e85accf3fb0a5ed3e72f82af58d05b84fb092208966431a"
+}
