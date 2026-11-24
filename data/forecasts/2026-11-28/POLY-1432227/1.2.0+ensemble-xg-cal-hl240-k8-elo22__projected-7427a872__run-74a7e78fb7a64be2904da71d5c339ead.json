@@ -1,0 +1,833 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-11-23",
+ "input_fingerprint": "e99d27501d3b3e8328960c19328cd209f4c5c337efcfd5dd7ac1b05843b9dac7",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-11-24T11:47:06+00:00",
+ "fixture": {
+  "event_id": "POLY-1432227",
+  "home_name": "Leeds United FC",
+  "away_name": "Coventry City FC",
+  "competition": "Premier League",
+  "subcategory": "epl",
+  "kickoff_utc": "2026-11-28T15:00:00+00:00",
+  "kickoff_local": "2026-11-28 10:00 EST",
+  "home_matched": "Leeds",
+  "away_matched": "Coventry",
+  "match_methods": {
+   "home": {
+    "source": "Leeds United FC",
+    "matched": "Leeds",
+    "method": "alias",
+    "score": 1.0
+   },
+   "away": {
+    "source": "Coventry City FC",
+    "matched": "Coventry",
+    "method": "alias",
+    "score": 1.0
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.5671440237452294,
+  "p_draw": 0.23681312185077646,
+  "p_away": 0.1960428544039941,
+  "xg_home": 1.8930158673894255,
+  "xg_away": 1.0475768325438488,
+  "xg_total": 2.9405926999332745,
+  "median_total": 3,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.11385106717028255
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.11385106717028255
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.10303874312629209
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.09470651554874333
+   },
+   {
+    "home": 2,
+    "away": 0,
+    "p": 0.0941776313897754
+   },
+   {
+    "home": 3,
+    "away": 1,
+    "p": 0.06462204226402105
+   }
+  ],
+  "btts": 0.5680798073669222,
+  "totals_over": {
+   "over_0.5": 0.946128826354066,
+   "over_1.5": 0.8015621003745065,
+   "over_2.5": 0.5662965966435854,
+   "over_3.5": 0.33965528460031036,
+   "over_4.5": 0.17103949585397507,
+   "over_5.5": 0.07462486952879792,
+   "over_6.5": 0.028095508482626586
+  },
+  "total_buckets": {
+   "0-1": 0.1984378996254934,
+   "2": 0.2352655037309211,
+   "3": 0.22664131204327514,
+   "4": 0.1686157887463353,
+   "5+": 0.17103949585397507
+  },
+  "clean_sheet_home": 0.34286499630977085,
+  "clean_sheet_away": 0.14292636996924066,
+  "home_goal_dist": [
+   0.14292636996924066,
+   0.28824999801763207,
+   0.2766004734773553,
+   0.17253515151924903,
+   0.07941264643477453,
+   0.028852007688206106,
+   0.008635488688685099,
+   0.002787864204857183
+  ],
+  "away_goal_dist": [
+   0.34286499630977085,
+   0.37630252627548044,
+   0.19545585403321988,
+   0.0655229269172512,
+   0.016140009296559565,
+   0.0031351987631049487,
+   0.0005015272981209567,
+   7.696110649208362e-05
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    4
+   ],
+   "away_goals_80": [
+    0,
+    2
+   ],
+   "total_goals_80": [
+    1,
+    5
+   ],
+   "goal_diff_80": [
+    -1,
+    3
+   ]
+  },
+  "score_grid": [
+   [
+    0.053871,
+    0.04986,
+    0.027237,
+    0.009168,
+    0.002267,
+    0.000441,
+    7.1e-05
+   ],
+   [
+    0.094707,
+    0.113851,
+    0.055377,
+    0.018643,
+    0.00461,
+    0.000897,
+    0.000144
+   ],
+   [
+    0.094178,
+    0.103039,
+    0.055849,
+    0.018044,
+    0.004462,
+    0.000869,
+    0.000139
+   ],
+   [
+    0.059057,
+    0.064622,
+    0.033616,
+    0.011795,
+    0.002799,
+    0.000545,
+    8.7e-05
+   ],
+   [
+    0.027235,
+    0.029805,
+    0.015506,
+    0.005222,
+    0.001346,
+    0.000251,
+    4e-05
+   ],
+   [
+    0.009899,
+    0.010835,
+    0.005638,
+    0.001899,
+    0.00047,
+    9.5e-05,
+    1.5e-05
+   ],
+   [
+    0.002963,
+    0.003243,
+    0.001688,
+    0.000569,
+    0.000141,
+    2.7e-05,
+    5e-06
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.56681,
+  "p_draw": 0.237955,
+  "p_away": 0.195235,
+  "se": [
+   0.0011080081766395046,
+   0.0009521880538396814,
+   0.0008863359825004285
+  ],
+  "max_abs_dev_vs_exact": 0.0011418781492235353,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   1.4579285670433542,
+   2.3677348925613786
+  ],
+  "xg_away_80": [
+   0.7885136126529554,
+   1.3251851419198621
+  ],
+  "p_home_80": [
+   0.44910562203591614,
+   0.6777707152173328
+  ],
+  "p_draw_80": [
+   0.18709549625683747,
+   0.2727183883776232
+  ],
+  "p_away_80": [
+   0.12973104100489846,
+   0.2822571223376113
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.19225386241331685,
+   0.19266940175280892
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.5376338084743322,
+   "p_draw": 0.24537817841461113,
+   "p_away": 0.21698801311105673,
+   "xg_home": 1.7397562146738368,
+   "xg_away": 1.0220989053594915,
+   "weight": 0.0077
+  },
+  "elo": {
+   "p_home": 0.5815631287556715,
+   "p_draw": 0.2184082391324121,
+   "p_away": 0.2000286321119164,
+   "xg_home": 1.9381453286632022,
+   "xg_away": 1.0455769499428764,
+   "weight": 0.3721
+  },
+  "standard_dc": {
+   "p_home": 0.4968642905268834,
+   "p_draw": 0.25972553030204054,
+   "p_away": 0.2434101791710761,
+   "xg_home": 1.6249806582046777,
+   "xg_away": 1.0685132883389485,
+   "weight": 0.0028
+  },
+  "home_away_rate": {
+   "p_home": 0.4275731062737788,
+   "p_draw": 0.24961988385359055,
+   "p_away": 0.3228070098726308,
+   "xg_home": 1.5285460965161983,
+   "xg_away": 1.2961474306138319,
+   "weight": 0.001
+  },
+  "xg_dc": {
+   "p_home": 0.5505372465147418,
+   "p_draw": 0.23843804562345494,
+   "p_away": 0.21102470786180336,
+   "xg_home": 1.807725971470644,
+   "xg_away": 1.0357769791441285,
+   "weight": 0.6164
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Independent results-only Elo: Leeds 1727 vs Coventry 1579 (gap +148 before home advantage).",
+   "effect": 0.2217
+  },
+  {
+   "text": "Home advantage (England, fitted from results): \u00d71.23 on Leeds's scoring rate.",
+   "effect": 0.2092
+  },
+  {
+   "text": "Coventry attack vs Leeds defence: rate multiplier \u00d70.85 for the away side.",
+   "effect": 0.1655
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.5671440237452292,
+  "p_draw": 0.23681312185077646,
+  "p_away": 0.19604285440399408,
+  "xg_home": 1.893015867389425,
+  "xg_away": 1.0475768325438486
+ },
+ "context": {
+  "fetched_at": "2026-11-24T11:47:06+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5795531",
+    "fetched_at": "2026-11-24T11:47:06+00:00"
+   },
+   {
+    "name": "Fantasy Premier League availability",
+    "url": "https://fantasy.premierleague.com/api/bootstrap-static/",
+    "fetched_at": "2026-11-24T11:47:06+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "3-4-2-1",
+    "starters": [
+     {
+      "name": "James Trafford",
+      "pos": "G",
+      "shirt": "1"
+     },
+     {
+      "name": "James Justin",
+      "pos": "D",
+      "shirt": "24"
+     },
+     {
+      "name": "Nico Elvedi",
+      "pos": "D",
+      "shirt": "30"
+     },
+     {
+      "name": "Tarik Muharemovi\u0107",
+      "pos": "D",
+      "shirt": "5"
+     },
+     {
+      "name": "Jayden Bogle",
+      "pos": "M",
+      "shirt": "2"
+     },
+     {
+      "name": "Ethan Ampadu",
+      "pos": "M",
+      "shirt": "4"
+     },
+     {
+      "name": "Ao Tanaka",
+      "pos": "M",
+      "shirt": "22"
+     },
+     {
+      "name": "Gabriel Gudmundsson",
+      "pos": "M",
+      "shirt": "3"
+     },
+     {
+      "name": "Sean Longstaff",
+      "pos": "M",
+      "shirt": "8"
+     },
+     {
+      "name": "Noah Okafor",
+      "pos": "M",
+      "shirt": "19"
+     },
+     {
+      "name": "Dominic Calvert-Lewin",
+      "pos": "F",
+      "shirt": "9"
+     }
+    ],
+    "fetched_at": "2026-11-24T11:47:06+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [],
+    "mean_xi_attack_index": -0.077,
+    "mean_continuity": -0.505,
+    "p_backup_gk": 0.18
+   },
+   "away": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "4-2-3-1",
+    "starters": [
+     {
+      "name": "Carl Rushworth",
+      "pos": "G",
+      "shirt": "19"
+     },
+     {
+      "name": "Milan van Ewijk",
+      "pos": "D",
+      "shirt": "27"
+     },
+     {
+      "name": "Bobby Thomas",
+      "pos": "D",
+      "shirt": "4"
+     },
+     {
+      "name": "Ethan Pinnock",
+      "pos": "D",
+      "shirt": "2"
+     },
+     {
+      "name": "Stephen Mfuni",
+      "pos": "D",
+      "shirt": "12"
+     },
+     {
+      "name": "Victor Torp",
+      "pos": "M",
+      "shirt": "29"
+     },
+     {
+      "name": "Matt Grimes",
+      "pos": "M",
+      "shirt": "6"
+     },
+     {
+      "name": "Tatsuhiro Sakamoto",
+      "pos": "F",
+      "shirt": "7"
+     },
+     {
+      "name": "Jack Rudoni",
+      "pos": "M",
+      "shirt": "5"
+     },
+     {
+      "name": "Yann Gboho",
+      "pos": "M",
+      "shirt": "34"
+     },
+     {
+      "name": "Taiwo Awoniyi",
+      "pos": "F",
+      "shirt": "14"
+     }
+    ],
+    "fetched_at": "2026-11-24T11:47:06+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [],
+    "mean_xi_attack_index": -0.029,
+    "mean_continuity": -0.4,
+    "p_backup_gk": 0.0
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Mateo Joseph",
+     "type": "injury",
+     "expected_return": "Early January 2027",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795531",
+     "fetched_at": "2026-11-24T11:47:06+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Knee injury - Unknown return date",
+     "fpl_news_added": "2026-07-29T18:00:10.338170Z"
+    }
+   ],
+   "away": [
+    {
+     "player": "Taiwo Awoniyi",
+     "type": "injury",
+     "expected_return": "Late December 2026",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795531",
+     "fetched_at": "2026-11-24T11:47:06+00:00",
+     "chance_of_playing": 75,
+     "fpl_status": "doubtful",
+     "fpl_news": "Ankle injury - 75% chance of playing",
+     "fpl_news_added": "2026-11-21T16:30:05.778377Z"
+    },
+    {
+     "player": "Caleb Yirenkyi",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795531",
+     "fetched_at": "2026-11-24T11:47:06+00:00",
+     "chance_of_playing": 75,
+     "fpl_status": "doubtful",
+     "fpl_news": "Unspecified injury - 75% chance of playing",
+     "fpl_news_added": "2026-11-19T19:00:05.972580Z"
+    },
+    {
+     "player": "Aur\u00e8le Amenda",
+     "type": "injury",
+     "expected_return": "Early January 2027",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795531",
+     "fetched_at": "2026-11-24T11:47:06+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Calf injury - Unknown return date",
+     "fpl_news_added": "2026-09-17T07:30:09.329041Z"
+    },
+    {
+     "player": "Luke Woolfenden",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795531",
+     "fetched_at": "2026-11-24T11:47:06+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Knee injury - Unknown return date",
+     "fpl_news_added": "2026-08-27T14:56:28.718566Z"
+    },
+    {
+     "player": "Josh Eccles",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795531",
+     "fetched_at": "2026-11-24T11:47:06+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Ankle injury - Unknown return date",
+     "fpl_news_added": "2026-09-10T18:30:08.877110Z"
+    },
+    {
+     "player": "Ephron Mason-Clark",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795531",
+     "fetched_at": "2026-11-24T11:47:06+00:00",
+     "chance_of_playing": 75,
+     "fpl_status": "doubtful",
+     "fpl_news": "Knee injury - 75% chance of playing",
+     "fpl_news_added": "2026-11-19T19:00:05.701445Z"
+    },
+    {
+     "player": "Haji Wright",
+     "type": "injury",
+     "expected_return": "Back in training",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795531",
+     "fetched_at": "2026-11-24T11:47:06+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Lack of match fitness - Unknown return date",
+     "fpl_news_added": "2026-08-14T22:00:07.214508Z"
+    },
+    {
+     "player": "Oliver Dovin",
+     "type": "unavailable",
+     "expected_return": "not included in squad.",
+     "chance_of_playing": 0,
+     "source": "FPL",
+     "source_url": "https://fantasy.premierleague.com/api/bootstrap-static/",
+     "fetched_at": "2026-09-02T15:44:14.839336Z"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 7,
+    "n21": 2,
+    "last_match": "2026-11-21"
+   },
+   "away": {
+    "rest_days": 7,
+    "n21": 1,
+    "last_match": "2026-11-21"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 147.9
+  },
+  "venue": {
+   "name": "Elland Road",
+   "city": "Leeds, West Yorkshire",
+   "lat": 53.777833534,
+   "lon": -1.572278738
+  },
+  "weather": {
+   "precip_mm_2h": 0.2,
+   "wind_ms": 2.8,
+   "temp_c": 4.9,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=53.778&longitude=-1.572",
+   "fetched_at": "2026-11-24T11:47:06+00:00",
+   "lat": 53.777833534,
+   "lon": -1.572278738
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": -1.9,
+    "d_p_draw_pp": 1.26,
+    "d_p_away_pp": 0.64,
+    "d_xg_home": -0.08,
+    "d_xg_away": -0.007
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0129,
+    "away_rate_mult": 1.0042,
+    "d_p_home_pp": 0.43,
+    "d_p_draw_pp": -0.23,
+    "d_p_away_pp": -0.21,
+    "d_xg_home": 0.024,
+    "d_xg_away": 0.004,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0044,
+    "away_rate_mult": 1.0044,
+    "d_p_home_pp": 0.08,
+    "d_p_draw_pp": -0.07,
+    "d_p_away_pp": -0.0,
+    "d_xg_home": 0.008,
+    "d_xg_away": 0.005,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "home_rate_mult": 0.9734,
+    "away_rate_mult": 0.9969,
+    "d_p_home_pp": -1.04,
+    "d_p_draw_pp": 0.46,
+    "d_p_away_pp": 0.59,
+    "d_xg_home": -0.047,
+    "d_xg_away": -0.003,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 7.0,
+   "rest_a": 7.0,
+   "n21_h": 2.0,
+   "n21_a": 1.0,
+   "travel_km": 147.94680842988765,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.2,
+   "wind_ms": 2.8,
+   "temp_c": 4.9
+  }
+ },
+ "lineup_simulation": {
+  "applied": true,
+  "validated": false,
+  "scale": 0.5,
+  "basis": {
+   "home": "projected",
+   "away": "projected"
+  },
+  "home_rate_mult": 0.9866,
+  "away_rate_mult": 0.9985,
+  "note": "Starting-XI strength, continuity and backup-keeper adjustment at half the fitted size. It did not pass the out-of-sample test, so bets are not priced from it.",
+  "p_home": 0.5619331075468146,
+  "p_draw": 0.23916201255029407,
+  "p_away": 0.19890487990289119,
+  "xg_home": 1.8689774519427242,
+  "xg_away": 1.0460136812360477,
+  "xg_total": 2.9149911331787717,
+  "btts": 0.5651958636395872,
+  "totals_over": {
+   "over_0.5": 0.9446616835386511,
+   "over_1.5": 0.7975520051268655,
+   "over_2.5": 0.5603040844297917,
+   "over_3.5": 0.3338482533870474,
+   "over_4.5": 0.16686860273890403,
+   "over_5.5": 0.07224738325833094,
+   "over_6.5": 0.026981909842381586
+  },
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.11518037241746618
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.11518037241746618
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.10283732941219746
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.09596299892518464
+   },
+   {
+    "home": 2,
+    "away": 0,
+    "p": 0.09415790546414281
+   },
+   {
+    "home": 3,
+    "away": 1,
+    "p": 0.06364575865929611
+   }
+  ],
+  "score_grid": [
+   [
+    0.055338,
+    0.051147,
+    0.02791,
+    0.009388,
+    0.00232,
+    0.000452,
+    7.2e-05
+   ],
+   [
+    0.095963,
+    0.11518,
+    0.055954,
+    0.018819,
+    0.004651,
+    0.000905,
+    0.000145
+   ],
+   [
+    0.094158,
+    0.102837,
+    0.055661,
+    0.017963,
+    0.004439,
+    0.000864,
+    0.000138
+   ],
+   [
+    0.058277,
+    0.063646,
+    0.033055,
+    0.011584,
+    0.002747,
+    0.000534,
+    8.6e-05
+   ],
+   [
+    0.026533,
+    0.028977,
+    0.015049,
+    0.00506,
+    0.001303,
+    0.000243,
+    3.9e-05
+   ],
+   [
+    0.009524,
+    0.010401,
+    0.005401,
+    0.001816,
+    0.000449,
+    9.1e-05,
+    1.4e-05
+   ],
+   [
+    0.002816,
+    0.003075,
+    0.001597,
+    0.000537,
+    0.000133,
+    2.6e-05,
+    4e-06
+   ]
+  ]
+ },
+ "confidence": {
+  "tier": "MODERATE",
+  "p_max": 0.5671440237452294,
+  "entropy_nats": 0.9822132386460292,
+  "text": "Most likely result has P = 56.7%. In the out-of-sample backtest, favourites priced 0.50\u20130.60 won 54.6% \u00b1 0.5% (n=9745, mean forecast 54.4%). Backtest RPS for E0: 0.2018; exact-score top-5 hit rate 46.3% (n=1249). Overall champion RPS 0.2093 vs home/away baseline 0.2284 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-11-22, n=41,487). Outcome-certainty tier: MODERATE (entropy 0.982 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Leeds: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Coventry: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior)."
+ ],
+ "verdict": "Leeds 1\u20131 Coventry is the single most probable scoreline at 11.4%: expected goals 1.89\u20131.05 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.040). Exact scores are inherently uncertain; the 1X2 split is 56.7%/23.7%/19.6%.",
+ "resolved": {
+  "home_key": "England:Leeds",
+  "away_key": "England:Coventry",
+  "div": "E0",
+  "home_div": "E0",
+  "away_div": "E0",
+  "country": "England"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: Coventry City FC at Leeds United FC\nCompetition: Premier League\nDate: 2026-11-28 10:00 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-11-23\n\nPRIMARY FINAL SCORE PREDICTION\n\nLeeds United FC 1 \u2013 1 Coventry City FC\n(modal exact score, probability 11.4%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.89\nAway: 1.05\nExpected Total: 2.94\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 56.7%\nDraw: 23.7%\nAway Win: 19.6%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 11.4%\n2. 2\u20131: 10.3%\n3. 1\u20130: 9.5%\n4. 2\u20130: 9.4%\n5. 3\u20131: 6.5%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 19.8%\nTotal 2 goals: 23.5%\nTotal 3 goals: 22.7%\nTotal 4 goals: 16.9%\nTotal 5+ goals: 17.1%\n\nBoth Teams Score: 56.8%\nClean sheet Leeds United FC: 34.3% \u00b7 Clean sheet Coventry City FC: 14.3%\n\nMATCH INTELLIGENCE\n\n1. Independent results-only Elo: Leeds 1727 vs Coventry 1579 (gap +148 before home advantage).\n2. Home advantage (England, fitted from results): \u00d71.23 on Leeds's scoring rate.\n3. Coventry attack vs Leeds defence: rate multiplier \u00d70.85 for the away side.\n\nMODEL CONFIDENCE\n\nMost likely result has P = 56.7%. In the out-of-sample backtest, favourites priced 0.50\u20130.60 won 54.6% \u00b1 0.5% (n=9745, mean forecast 54.4%). Backtest RPS for E0: 0.2018; exact-score top-5 hit rate 46.3% (n=1249). Overall champion RPS 0.2093 vs home/away baseline 0.2284 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-11-22, n=41,487). Outcome-certainty tier: MODERATE (entropy 0.982 nats of max 1.099).\nParameter-uncertainty 80% bands: xG Leeds United FC 1.46\u20132.37, xG Coventry City FC 0.79\u20131.33; P(home win) 44.9%\u201367.8%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0011 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nLeeds: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-11-24 06:47 EST (3-4-2-1)\n  James Trafford (G), James Justin (D), Nico Elvedi (D), Tarik Muharemovi\u0107 (D), Jayden Bogle (M), Ethan Ampadu (M), Ao Tanaka (M), Gabriel Gudmundsson (M), Sean Longstaff (M), Noah Okafor (M), Dominic Calvert-Lewin (F)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs -0.077 (log) \u00b7 continuity -0.51 \u00b7 P(backup GK) 18%\nCoventry: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-11-24 06:47 EST (4-2-3-1)\n  Carl Rushworth (G), Milan van Ewijk (D), Bobby Thomas (D), Ethan Pinnock (D), Stephen Mfuni (D), Victor Torp (M), Matt Grimes (M), Tatsuhiro Sakamoto (F), Jack Rudoni (M), Yann Gboho (M), Taiwo Awoniyi (F)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs -0.029 (log) \u00b7 continuity -0.40 \u00b7 P(backup GK) 0%\n\nKEY ABSENCES\n\n- Leeds: Mateo Joseph \u2014 injury, Early January 2027, 0% chance of playing [FotMob + FPL, 2026-11-24 06:47 EST] \u2014 FPL: Knee injury - Unknown return date (updated 2026-07-29 14:00 EDT)\n- Coventry: Taiwo Awoniyi \u2014 injury, Late December 2026, 75% chance of playing [FotMob + FPL, 2026-11-24 06:47 EST] \u2014 FPL: Ankle injury - 75% chance of playing (updated 2026-11-21 11:30 EST)\n- Coventry: Caleb Yirenkyi \u2014 injury, Doubtful, 75% chance of playing [FotMob + FPL, 2026-11-24 06:47 EST] \u2014 FPL: Unspecified injury - 75% chance of playing (updated 2026-11-19 14:00 EST)\n- Coventry: Aur\u00e8le Amenda \u2014 injury, Early January 2027, 0% chance of playing [FotMob + FPL, 2026-11-24 06:47 EST] \u2014 FPL: Calf injury - Unknown return date (updated 2026-09-17 03:30 EDT)\n- Coventry: Luke Woolfenden \u2014 injury, Late November 2026, 0% chance of playing [FotMob + FPL, 2026-11-24 06:47 EST] \u2014 FPL: Knee injury - Unknown return date (updated 2026-08-27 10:56 EDT)\n- Coventry: Josh Eccles \u2014 injury, Late November 2026, 0% chance of playing [FotMob + FPL, 2026-11-24 06:47 EST] \u2014 FPL: Ankle injury - Unknown return date (updated 2026-09-10 14:30 EDT)\n- Coventry: Ephron Mason-Clark \u2014 injury, Doubtful, 75% chance of playing [FotMob + FPL, 2026-11-24 06:47 EST] \u2014 FPL: Knee injury - 75% chance of playing (updated 2026-11-19 14:00 EST)\n- Coventry: Haji Wright \u2014 injury, Back in training, 0% chance of playing [FotMob + FPL, 2026-11-24 06:47 EST] \u2014 FPL: Lack of match fitness - Unknown return date (updated 2026-08-14 18:00 EDT)\n- Coventry: Oliver Dovin \u2014 unavailable, not included in squad., 0% chance of playing [FPL, 2026-09-02 11:44 EDT]\n\nWEATHER AT VENUE\n\nElland Road, Leeds, West Yorkshire: 4.9 \u00b0C, wind 2.8 m/s, precipitation 0.2 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-11-24 06:47 EST]\n\nREST & TRAVEL\n\nLeeds: 7 days' rest, 2 matches in previous 21 days \u00b7 Coventry: 7 days' rest, 1 in 21 days \u00b7 away travel 147.9 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 56.7% / 23.7% / 19.6%, xG 1.89\u20131.05\n- Understat xG component (validated, in ensemble): home -1.90 pp, draw +1.26 pp, away +0.64 pp; xG -0.080 / -0.007\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.43 pp, draw -0.23 pp, away -0.21 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.08 pp, draw -0.07 pp, away -0.00 pp\n- lineup: NOT APPLIED (failed out-of-sample validation); would have moved home -1.04 pp, draw +0.46 pp, away +0.59 pp\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Leeds: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Coventry: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n\nFINAL VERDICT\n\nLeeds 1\u20131 Coventry is the single most probable scoreline at 11.4%: expected goals 1.89\u20131.05 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.040). Exact scores are inherently uncertain; the 1X2 split is 56.7%/23.7%/19.6%.\n",
+ "refresh_id": "74a7e78fb7a64be2904da71d5c339ead",
+ "frozen_at": "2026-11-24T11:47:06+00:00",
+ "sha256": "b7092520b53c3fe13ae5b0b4e389da31b6b9f419b80a4b2aa4455092a0c94648"
+}
