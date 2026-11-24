@@ -1,0 +1,665 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-11-24",
+ "input_fingerprint": "92e68fb68f0de5c0953fefc54ebfe38af0ab2023506e7ae25712a99c91b28a35",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-11-24T18:05:00+00:00",
+ "fixture": {
+  "event_id": "POLY-1326276",
+  "home_name": "Real Madrid CF",
+  "away_name": "PSV",
+  "competition": "UEFA Champions League",
+  "subcategory": "ucl",
+  "kickoff_utc": "2026-11-24T20:00:00+00:00",
+  "kickoff_local": "2026-11-24 15:00 EST",
+  "home_matched": "Real Madrid",
+  "away_matched": "PSV Eindhoven",
+  "match_methods": {
+   "home": {
+    "source": "Real Madrid CF",
+    "matched": "Real Madrid",
+    "method": "core-tokens",
+    "score": 0.97
+   },
+   "away": {
+    "source": "PSV",
+    "matched": "PSV Eindhoven",
+    "method": "alias",
+    "score": 1.0
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.6550847034923234,
+  "p_draw": 0.1815094706611551,
+  "p_away": 0.1634058258465214,
+  "xg_home": 2.628514433026562,
+  "xg_away": 1.2783078699375112,
+  "xg_total": 3.9068223029640734,
+  "median_total": 4,
+  "modal_score": {
+   "home": 2,
+   "away": 1,
+   "p": 0.08881662382844857
+  },
+  "top_scores": [
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.08881662382844857
+   },
+   {
+    "home": 3,
+    "away": 1,
+    "p": 0.07709233414482701
+   },
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.07348780405748503
+   },
+   {
+    "home": 2,
+    "away": 0,
+    "p": 0.06625597508080945
+   },
+   {
+    "home": 2,
+    "away": 2,
+    "p": 0.05899976436930825
+   }
+  ],
+  "btts": 0.6777360321304602,
+  "totals_over": {
+   "over_0.5": 0.977219410311123,
+   "over_1.5": 0.9009059828302561,
+   "over_2.5": 0.7441790471143195,
+   "over_3.5": 0.5471369979682007,
+   "over_4.5": 0.3529799426819682,
+   "over_5.5": 0.2028071687672734,
+   "over_6.5": 0.10336584651396452
+  },
+  "total_buckets": {
+   "0-1": 0.09909401716974395,
+   "2": 0.15672693571593654,
+   "3": 0.19704204914611878,
+   "4": 0.1941570552862325,
+   "5+": 0.3529799426819682
+  },
+  "clean_sheet_home": 0.2699310234016656,
+  "clean_sheet_away": 0.07511353415675079,
+  "home_goal_dist": [
+   0.07511353415675079,
+   0.19321638831103835,
+   0.24661446388640815,
+   0.21305276615581784,
+   0.14103618444105326,
+   0.07608627093871762,
+   0.034660298228465294,
+   0.020220093881748617
+  ],
+  "away_goal_dist": [
+   0.2699310234016656,
+   0.3637066291806673,
+   0.23264469026070436,
+   0.09605945653070899,
+   0.029092065485802142,
+   0.0069388064382749975,
+   0.0013627298853696533,
+   0.0002645988168068053
+  ],
+  "intervals": {
+   "home_goals_80": [
+    1,
+    5
+   ],
+   "away_goals_80": [
+    0,
+    3
+   ],
+   "total_goals_80": [
+    2,
+    7
+   ],
+   "goal_diff_80": [
+    -1,
+    4
+   ]
+  },
+  "score_grid": [
+   [
+    0.022781,
+    0.025687,
+    0.016983,
+    0.006957,
+    0.002094,
+    0.000496,
+    9.7e-05
+   ],
+   [
+    0.050627,
+    0.073488,
+    0.043962,
+    0.018077,
+    0.005461,
+    0.001299,
+    0.000254
+   ],
+   [
+    0.066256,
+    0.088817,
+    0.059,
+    0.023368,
+    0.007086,
+    0.001692,
+    0.000332
+   ],
+   [
+    0.057306,
+    0.077092,
+    0.049315,
+    0.021285,
+    0.006215,
+    0.001489,
+    0.000293
+   ],
+   [
+    0.037894,
+    0.051135,
+    0.032809,
+    0.013629,
+    0.004334,
+    0.000999,
+    0.000197
+   ],
+   [
+    0.020398,
+    0.027594,
+    0.017748,
+    0.00739,
+    0.00226,
+    0.000567,
+    0.000108
+   ],
+   [
+    0.009272,
+    0.012567,
+    0.008098,
+    0.003378,
+    0.001035,
+    0.00025,
+    5.2e-05
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.654385,
+  "p_draw": 0.18176,
+  "p_away": 0.16385499999999997,
+  "se": [
+   0.001063403196757937,
+   0.0008623320195841042,
+   0.0008276670193229883
+  ],
+  "max_abs_dev_vs_exact": 0.0006997034923234002,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   2.0997268251226266,
+   3.1988710420776667
+  ],
+  "xg_away_80": [
+   1.0000477008374655,
+   1.572194371287851
+  ],
+  "p_home_80": [
+   0.5477346925503846,
+   0.7606564690589439
+  ],
+  "p_draw_80": [
+   0.1366301654549449,
+   0.2123548437590661
+  ],
+  "p_away_80": [
+   0.10288461721252125,
+   0.23588117258573832
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.1669091138539703,
+   0.16790344995720666
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.7301592776880121,
+   "p_draw": 0.14520594064504938,
+   "p_away": 0.12463478166693834,
+   "xg_home": 3.065931515426753,
+   "xg_away": 1.2750800255631847,
+   "weight": 0.0077
+  },
+  "elo": {
+   "p_home": 0.5371610544757324,
+   "p_draw": 0.22113547782444656,
+   "p_away": 0.241703467699821,
+   "xg_home": 1.9315589674847415,
+   "xg_away": 1.230932158777052,
+   "weight": 0.3721
+  },
+  "standard_dc": {
+   "p_home": 0.7127110082488377,
+   "p_draw": 0.1505751670772096,
+   "p_away": 0.13671382467395254,
+   "xg_home": 3.0665786903630083,
+   "xg_away": 1.3643199826370331,
+   "weight": 0.0028
+  },
+  "home_away_rate": {
+   "p_home": 0.4869740260967273,
+   "p_draw": 0.21947155313292951,
+   "p_away": 0.2935544207703431,
+   "xg_home": 1.9476522826237446,
+   "xg_away": 1.4771195876693495,
+   "weight": 0.001
+  },
+  "xg_dc": {
+   "p_home": 0.7083533184946953,
+   "p_draw": 0.15497229608279642,
+   "p_away": 0.1366743854225083,
+   "xg_home": 2.916783933327096,
+   "xg_away": 1.27405108852317,
+   "weight": 0.6164
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Real Madrid attack vs PSV Eindhoven defence: time-weighted strength gap multiplies Real Madrid's scoring rate by \u00d71.94 relative to an average pairing (from 42/35 decay-weighted matches).",
+   "effect": 0.6604
+  },
+  {
+   "text": "Context \u2014 Understat xG component (validated, in ensemble): home win +10.8 pp, draw -4.4 pp, away win -6.5 pp (xG +0.62 / +0.03).",
+   "effect": 0.3255
+  },
+  {
+   "text": "Home advantage (Europe, fitted from results): \u00d71.31 on Real Madrid's scoring rate.",
+   "effect": 0.2722
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.6550847034923235,
+  "p_draw": 0.1815094706611551,
+  "p_away": 0.1634058258465214,
+  "xg_home": 2.628514433026563,
+  "xg_away": 1.2783078699375114
+ },
+ "context": {
+  "fetched_at": "2026-11-24T18:05:00+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/6106243",
+    "fetched_at": "2026-11-24T18:05:00+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "projected",
+    "source": "FotMob projected XI (enetpulse)",
+    "formation": "4-2-3-1",
+    "starters": [
+     {
+      "name": "Thibaut Courtois",
+      "pos": "G",
+      "shirt": "1"
+     },
+     {
+      "name": "Federico Valverde",
+      "pos": "M",
+      "shirt": "8"
+     },
+     {
+      "name": "Antonio R\u00fcdiger",
+      "pos": "D",
+      "shirt": "22"
+     },
+     {
+      "name": "Dean Huijsen",
+      "pos": "D",
+      "shirt": "4"
+     },
+     {
+      "name": "Marc Cucurella",
+      "pos": "D",
+      "shirt": "17"
+     },
+     {
+      "name": "Bernardo Silva",
+      "pos": "M",
+      "shirt": "20"
+     },
+     {
+      "name": "Aur\u00e9lien Tchouam\u00e9ni",
+      "pos": "M",
+      "shirt": "14"
+     },
+     {
+      "name": "Arda G\u00fcler",
+      "pos": "M",
+      "shirt": "15"
+     },
+     {
+      "name": "Jude Bellingham",
+      "pos": "M",
+      "shirt": "5"
+     },
+     {
+      "name": "Vin\u00edcius J\u00fanior",
+      "pos": "F",
+      "shirt": "7"
+     },
+     {
+      "name": "Kylian Mbapp\u00e9",
+      "pos": "F",
+      "shirt": "10"
+     }
+    ],
+    "fetched_at": "2026-11-24T18:05:00+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   },
+   "away": {
+    "status": "projected",
+    "source": "FotMob projected XI (enetpulse)",
+    "formation": "4-2-3-1",
+    "starters": [
+     {
+      "name": "Mat\u011bj Kov\u00e1r",
+      "pos": "G",
+      "shirt": "32"
+     },
+     {
+      "name": "Sergi\u00f1o Dest",
+      "pos": "D",
+      "shirt": "8"
+     },
+     {
+      "name": "Lutsharel Geertruida",
+      "pos": "D",
+      "shirt": "2"
+     },
+     {
+      "name": "Armando Obispo",
+      "pos": "D",
+      "shirt": "4"
+     },
+     {
+      "name": "Filip Kosti\u0107",
+      "pos": "D",
+      "shirt": "18"
+     },
+     {
+      "name": "Kodai Sano",
+      "pos": "M",
+      "shirt": "24"
+     },
+     {
+      "name": "Paul Wanner",
+      "pos": "M",
+      "shirt": "10"
+     },
+     {
+      "name": "Ivan Peri\u0161i\u0107",
+      "pos": "F",
+      "shirt": "5"
+     },
+     {
+      "name": "Sven Mijnans",
+      "pos": "M",
+      "shirt": "21"
+     },
+     {
+      "name": "Ruben van Bommel",
+      "pos": "F",
+      "shirt": "7"
+     },
+     {
+      "name": "Guus Til",
+      "pos": "M",
+      "shirt": "20"
+     }
+    ],
+    "fetched_at": "2026-11-24T18:05:00+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Ferland Mendy",
+     "type": "injury",
+     "expected_return": "Back in training",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6106243",
+     "fetched_at": "2026-11-24T18:05:00+00:00"
+    },
+    {
+     "player": "Ra\u00fal Asencio",
+     "type": "injury",
+     "expected_return": "Back in training",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6106243",
+     "fetched_at": "2026-11-24T18:05:00+00:00"
+    },
+    {
+     "player": "Rodrygo",
+     "type": "injury",
+     "expected_return": "Early January 2027",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6106243",
+     "fetched_at": "2026-11-24T18:05:00+00:00"
+    },
+    {
+     "player": "Endrick",
+     "type": "injury",
+     "expected_return": "About 1-2 weeks",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6106243",
+     "fetched_at": "2026-11-24T18:05:00+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "Adamo Nagalo",
+     "type": "injury",
+     "expected_return": "Out for season",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6106243",
+     "fetched_at": "2026-11-24T18:05:00+00:00"
+    },
+    {
+     "player": "Jerdy Schouten",
+     "type": "injury",
+     "expected_return": "Day to day",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6106243",
+     "fetched_at": "2026-11-24T18:05:00+00:00"
+    },
+    {
+     "player": "Mauro J\u00fanior",
+     "type": "injury",
+     "expected_return": "Early January 2027",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6106243",
+     "fetched_at": "2026-11-24T18:05:00+00:00"
+    },
+    {
+     "player": "Sami Ouaissa",
+     "type": "injury",
+     "expected_return": "Day to day",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6106243",
+     "fetched_at": "2026-11-24T18:05:00+00:00"
+    },
+    {
+     "player": "Alassane Pl\u00e9a",
+     "type": "injury",
+     "expected_return": "Early January 2027",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6106243",
+     "fetched_at": "2026-11-24T18:05:00+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 3,
+    "n21": 2,
+    "last_match": "2026-11-21"
+   },
+   "away": {
+    "rest_days": 3,
+    "n21": 2,
+    "last_match": "2026-11-21"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 1409.6
+  },
+  "venue": {
+   "name": "Estadio Bernab\u00e9u",
+   "city": "Madrid",
+   "lat": 40.453068279,
+   "lon": -3.688353896
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 2.5549999999999997,
+   "temp_c": 8.0,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=40.453&longitude=-3.688",
+   "fetched_at": "2026-11-24T18:05:00+00:00",
+   "lat": 40.453068279,
+   "lon": -3.688353896
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": 10.85,
+    "d_p_draw_pp": -4.38,
+    "d_p_away_pp": -6.46,
+    "d_xg_home": 0.621,
+    "d_xg_away": 0.028
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0201,
+    "away_rate_mult": 1.0201,
+    "d_p_home_pp": 0.43,
+    "d_p_draw_pp": -0.31,
+    "d_p_away_pp": -0.12,
+    "d_xg_home": 0.055,
+    "d_xg_away": 0.025,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0392,
+    "away_rate_mult": 1.0125,
+    "d_p_home_pp": 1.48,
+    "d_p_draw_pp": -0.72,
+    "d_p_away_pp": -0.76,
+    "d_xg_home": 0.107,
+    "d_xg_away": 0.016,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": -0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": -0.0,
+    "d_xg_away": -0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "reason": "failed validation; no live features"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": -0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": -0.0,
+   "d_xg_away": -0.0
+  },
+  "features": {
+   "rest_h": 3.0,
+   "rest_a": 3.0,
+   "n21_h": 2.0,
+   "n21_a": 2.0,
+   "travel_km": 1409.6295787038384,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 2.5549999999999997,
+   "temp_c": 8.0
+  }
+ },
+ "lineup_simulation": {
+  "applied": false,
+  "basis": {
+   "home": "projected",
+   "away": "projected"
+  },
+  "reason": "No player ratings exist for this league, so the lineup and formation are shown but cannot change the probabilities."
+ },
+ "confidence": {
+  "tier": "HIGH",
+  "p_max": 0.6550847034923234,
+  "entropy_nats": 0.8828437991909428,
+  "text": "Most likely result has P = 65.5%. In the out-of-sample backtest, favourites priced 0.60\u20130.70 won 67.2% \u00b1 0.7% (n=4035, mean forecast 64.2%). Backtest RPS for UCL: 0.1957; exact-score top-5 hit rate 40.8% (n=503). Overall champion RPS 0.2093 vs home/away baseline 0.2284 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-11-22, n=41,487). Outcome-certainty tier: HIGH (entropy 0.883 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Real Madrid: lineup is PROJECTED (FotMob projected XI (enetpulse)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Real Madrid: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.",
+  "PSV Eindhoven: lineup is PROJECTED (FotMob projected XI (enetpulse)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "PSV Eindhoven: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+ ],
+ "verdict": "Real Madrid 2\u20131 PSV Eindhoven is the single most probable scoreline at 8.9%: expected goals 2.63\u20131.28 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.038). Exact scores are inherently uncertain; the 1X2 split is 65.5%/18.2%/16.3%.",
+ "resolved": {
+  "home_key": "Spain:Real Madrid",
+  "away_key": "Netherlands:PSV Eindhoven",
+  "div": "UCL",
+  "home_div": "SP1",
+  "away_div": "N1",
+  "country": "Europe"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: PSV at Real Madrid CF\nCompetition: UEFA Champions League\nDate: 2026-11-24 15:00 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-11-24\n\nPRIMARY FINAL SCORE PREDICTION\n\nReal Madrid CF 2 \u2013 1 PSV\n(modal exact score, probability 8.9%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 2.63\nAway: 1.28\nExpected Total: 3.91\nMedian Total: 4\n\nRESULT PROBABILITIES\n\nHome Win: 65.5%\nDraw: 18.2%\nAway Win: 16.3%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 2\u20131: 8.9%\n2. 3\u20131: 7.7%\n3. 1\u20131: 7.3%\n4. 2\u20130: 6.6%\n5. 2\u20132: 5.9%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 9.9%\nTotal 2 goals: 15.7%\nTotal 3 goals: 19.7%\nTotal 4 goals: 19.4%\nTotal 5+ goals: 35.3%\n\nBoth Teams Score: 67.8%\nClean sheet Real Madrid CF: 27.0% \u00b7 Clean sheet PSV: 7.5%\n\nMATCH INTELLIGENCE\n\n1. Real Madrid attack vs PSV Eindhoven defence: time-weighted strength gap multiplies Real Madrid's scoring rate by \u00d71.94 relative to an average pairing (from 42/35 decay-weighted matches).\n2. Context \u2014 Understat xG component (validated, in ensemble): home win +10.8 pp, draw -4.4 pp, away win -6.5 pp (xG +0.62 / +0.03).\n3. Home advantage (Europe, fitted from results): \u00d71.31 on Real Madrid's scoring rate.\n\nMODEL CONFIDENCE\n\nMost likely result has P = 65.5%. In the out-of-sample backtest, favourites priced 0.60\u20130.70 won 67.2% \u00b1 0.7% (n=4035, mean forecast 64.2%). Backtest RPS for UCL: 0.1957; exact-score top-5 hit rate 40.8% (n=503). Overall champion RPS 0.2093 vs home/away baseline 0.2284 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-11-22, n=41,487). Outcome-certainty tier: HIGH (entropy 0.883 nats of max 1.099).\nParameter-uncertainty 80% bands: xG Real Madrid CF 2.10\u20133.20, xG PSV 1.00\u20131.57; P(home win) 54.8%\u201376.1%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0007 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nReal Madrid: PROJECTED \u2014 FotMob projected XI (enetpulse), fetched 2026-11-24 13:05 EST (4-2-3-1)\n  Thibaut Courtois (G), Federico Valverde (M), Antonio R\u00fcdiger (D), Dean Huijsen (D), Marc Cucurella (D), Bernardo Silva (M), Aur\u00e9lien Tchouam\u00e9ni (M), Arda G\u00fcler (M), Jude Bellingham (M), Vin\u00edcius J\u00fanior (F), Kylian Mbapp\u00e9 (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\nPSV Eindhoven: PROJECTED \u2014 FotMob projected XI (enetpulse), fetched 2026-11-24 13:05 EST (4-2-3-1)\n  Mat\u011bj Kov\u00e1r (G), Sergi\u00f1o Dest (D), Lutsharel Geertruida (D), Armando Obispo (D), Filip Kosti\u0107 (D), Kodai Sano (M), Paul Wanner (M), Ivan Peri\u0161i\u0107 (F), Sven Mijnans (M), Ruben van Bommel (F), Guus Til (M)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nKEY ABSENCES\n\n- Real Madrid: Ferland Mendy \u2014 injury, Back in training [FotMob, 2026-11-24 13:05 EST]\n- Real Madrid: Ra\u00fal Asencio \u2014 injury, Back in training [FotMob, 2026-11-24 13:05 EST]\n- Real Madrid: Rodrygo \u2014 injury, Early January 2027 [FotMob, 2026-11-24 13:05 EST]\n- Real Madrid: Endrick \u2014 injury, About 1-2 weeks [FotMob, 2026-11-24 13:05 EST]\n- PSV Eindhoven: Adamo Nagalo \u2014 injury, Out for season [FotMob, 2026-11-24 13:05 EST]\n- PSV Eindhoven: Jerdy Schouten \u2014 injury, Day to day [FotMob, 2026-11-24 13:05 EST]\n- PSV Eindhoven: Mauro J\u00fanior \u2014 injury, Early January 2027 [FotMob, 2026-11-24 13:05 EST]\n- PSV Eindhoven: Sami Ouaissa \u2014 injury, Day to day [FotMob, 2026-11-24 13:05 EST]\n- PSV Eindhoven: Alassane Pl\u00e9a \u2014 injury, Early January 2027 [FotMob, 2026-11-24 13:05 EST]\n\nWEATHER AT VENUE\n\nEstadio Bernab\u00e9u, Madrid: 8.0 \u00b0C, wind 2.6 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-11-24 13:05 EST]\n\nREST & TRAVEL\n\nReal Madrid: 3 days' rest, 2 matches in previous 21 days \u00b7 PSV Eindhoven: 3 days' rest, 2 in 21 days \u00b7 away travel 1409.6 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 65.5% / 18.2% / 16.3%, xG 2.63\u20131.28\n- Understat xG component (validated, in ensemble): home +10.85 pp, draw -4.38 pp, away -6.46 pp; xG +0.621 / +0.028\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.43 pp, draw -0.31 pp, away -0.12 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +1.48 pp, draw -0.72 pp, away -0.76 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home -0.00 pp, draw +0.00 pp, away +0.00 pp\n- lineup: not applied (failed validation; no live features)\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Real Madrid: lineup is PROJECTED (FotMob projected XI (enetpulse)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Real Madrid: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n- PSV Eindhoven: lineup is PROJECTED (FotMob projected XI (enetpulse)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- PSV Eindhoven: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nFINAL VERDICT\n\nReal Madrid 2\u20131 PSV Eindhoven is the single most probable scoreline at 8.9%: expected goals 2.63\u20131.28 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.038). Exact scores are inherently uncertain; the 1X2 split is 65.5%/18.2%/16.3%.\n",
+ "refresh_id": "89abc9314ca346c4b8c1de25566a8a03",
+ "frozen_at": "2026-11-24T18:05:00+00:00",
+ "sha256": "4a0743744528d75ce971be6d8efcd1d49a902776ff4ed7e00e9c703513998b64"
+}
