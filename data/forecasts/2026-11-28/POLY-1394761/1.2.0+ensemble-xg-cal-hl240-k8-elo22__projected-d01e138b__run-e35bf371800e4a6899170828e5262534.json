@@ -1,0 +1,592 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-11-23",
+ "input_fingerprint": "e99d27501d3b3e8328960c19328cd209f4c5c337efcfd5dd7ac1b05843b9dac7",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-11-24T03:06:33+00:00",
+ "fixture": {
+  "event_id": "POLY-1394761",
+  "home_name": "Queen of the South FC",
+  "away_name": "Dunfermline Athletic FC",
+  "competition": "Scottish Cup",
+  "subcategory": "scoc",
+  "kickoff_utc": "2026-11-28T15:00:00+00:00",
+  "kickoff_local": "2026-11-28 10:00 EST",
+  "home_matched": "Queen of Sth",
+  "away_matched": "Dunfermline",
+  "match_methods": {
+   "home": {
+    "source": "Queen of the South FC",
+    "matched": "Queen of Sth",
+    "method": "fuzzy",
+    "score": 0.923
+   },
+   "away": {
+    "source": "Dunfermline Athletic FC",
+    "matched": "Dunfermline",
+    "method": "alias",
+    "score": 1.0
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.14008026305981985,
+  "p_draw": 0.21449477893482688,
+  "p_away": 0.6454249580053533,
+  "xg_home": 0.8616755297076615,
+  "xg_away": 2.0384265631260834,
+  "xg_total": 2.9001020928337446,
+  "median_total": 3,
+  "modal_score": {
+   "home": 0,
+   "away": 2,
+   "p": 0.11491651549792936
+  },
+  "top_scores": [
+   {
+    "home": 0,
+    "away": 2,
+    "p": 0.11491651549792936
+   },
+   {
+    "home": 0,
+    "away": 1,
+    "p": 0.10733569921841746
+   },
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.1042133327916494
+   },
+   {
+    "home": 1,
+    "away": 2,
+    "p": 0.10216313778792967
+   },
+   {
+    "home": 0,
+    "away": 3,
+    "p": 0.07792578871260615
+   }
+  ],
+  "btts": 0.5161339015973879,
+  "totals_over": {
+   "over_0.5": 0.9443440058768452,
+   "over_1.5": 0.7949564885283246,
+   "over_2.5": 0.5570049684086216,
+   "over_3.5": 0.3302613577066823,
+   "over_4.5": 0.1644092885302312,
+   "over_5.5": 0.0707346022947827,
+   "over_6.5": 0.026302570613214775
+  },
+  "total_buckets": {
+   "0-1": 0.20504351147167554,
+   "2": 0.23795152011970286,
+   "3": 0.2267436107019393,
+   "4": 0.1658520691764511,
+   "5+": 0.1644092885302312
+  },
+  "clean_sheet_home": 0.1230052466161944,
+  "clean_sheet_away": 0.4165168459095723,
+  "home_goal_dist": [
+   0.4165168459095723,
+   0.37165787657264376,
+   0.15784222877665413,
+   0.043487177570557464,
+   0.008850592405179407,
+   0.0014293983907191139,
+   0.00019150981953794865,
+   2.4370555135845416e-05
+  ],
+  "away_goal_dist": [
+   0.1230052466161944,
+   0.26723912036043534,
+   0.2772173525012508,
+   0.18707903610399207,
+   0.09305031471449318,
+   0.03647690564317597,
+   0.011764231412338025,
+   0.004167792648120184
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    2
+   ],
+   "away_goals_80": [
+    0,
+    4
+   ],
+   "total_goals_80": [
+    1,
+    5
+   ],
+   "goal_diff_80": [
+    -3,
+    1
+   ]
+  },
+  "score_grid": [
+   [
+    0.055656,
+    0.107336,
+    0.114917,
+    0.077926,
+    0.038815,
+    0.01522,
+    0.004909
+   ],
+   [
+    0.042052,
+    0.104213,
+    0.102163,
+    0.069277,
+    0.034509,
+    0.013532,
+    0.004365
+   ],
+   [
+    0.018822,
+    0.041445,
+    0.045229,
+    0.029428,
+    0.014659,
+    0.005749,
+    0.001854
+   ],
+   [
+    0.00521,
+    0.011464,
+    0.012001,
+    0.008478,
+    0.004052,
+    0.001589,
+    0.000513
+   ],
+   [
+    0.001066,
+    0.002344,
+    0.002452,
+    0.001661,
+    0.000862,
+    0.000324,
+    0.000105
+   ],
+   [
+    0.000173,
+    0.00038,
+    0.000397,
+    0.000269,
+    0.000134,
+    5.5e-05,
+    1.7e-05
+   ],
+   [
+    2.3e-05,
+    5.1e-05,
+    5.3e-05,
+    3.6e-05,
+    1.8e-05,
+    7e-06,
+    2e-06
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.14176,
+  "p_draw": 0.21506499999999998,
+  "p_away": 0.643175,
+  "se": [
+   0.0007799490444894461,
+   0.000918727505234822,
+   0.0010712164099167824
+  ],
+  "max_abs_dev_vs_exact": 0.0022499580053532142,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   0.6456902788175461,
+   1.0993287083814358
+  ],
+  "xg_away_80": [
+   1.5400444185036017,
+   2.5717478330140184
+  ],
+  "p_home_80": [
+   0.09126981885127776,
+   0.2219864882904083
+  ],
+  "p_draw_80": [
+   0.15935956919264627,
+   0.2647994607506538
+  ],
+  "p_away_80": [
+   0.5191849924007484,
+   0.7468096014497757
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.21097424301896264,
+   0.19030044101484325
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.1395506349982895,
+   "p_draw": 0.2129175976082572,
+   "p_away": 0.6475317673934533,
+   "xg_home": 0.8123809151360172,
+   "xg_away": 2.0001033940393462,
+   "weight": 0.0077
+  },
+  "elo": {
+   "p_home": 0.1691903287461215,
+   "p_draw": 0.20986863936807953,
+   "p_away": 0.620941031885799,
+   "xg_home": 0.9363243019538905,
+   "xg_away": 1.999682284363635,
+   "weight": 0.3721
+  },
+  "standard_dc": {
+   "p_home": 0.11854033663683819,
+   "p_draw": 0.18145388080892647,
+   "p_away": 0.7000057825542354,
+   "xg_home": 0.8888440970774748,
+   "xg_away": 2.377453846062494,
+   "weight": 0.0028
+  },
+  "home_away_rate": {
+   "p_home": 0.40698224762169205,
+   "p_draw": 0.25265531820863346,
+   "p_away": 0.3403624341696746,
+   "xg_home": 1.4673869895289768,
+   "xg_away": 1.3206506058697787,
+   "weight": 0.001
+  },
+  "xg_dc": {
+   "p_home": 0.140501741203112,
+   "p_draw": 0.21324306877786234,
+   "p_away": 0.6462551900190258,
+   "xg_home": 0.8132587408108232,
+   "xg_away": 1.9941364490141456,
+   "weight": 0.6164
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Queen of Sth attack vs Dunfermline defence: time-weighted strength gap multiplies Queen of Sth's scoring rate by \u00d70.56 relative to an average pairing (from 34/32 decay-weighted matches).",
+   "effect": 0.5845
+  },
+  {
+   "text": "Dunfermline attack vs Queen of Sth defence: rate multiplier \u00d71.66 for the away side.",
+   "effect": 0.5058
+  },
+  {
+   "text": "Independent results-only Elo: Queen of Sth 1192 vs Dunfermline 1471 (gap -279 before home advantage).",
+   "effect": 0.4184
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.14008026305981985,
+  "p_draw": 0.21449477893482688,
+  "p_away": 0.6454249580053533,
+  "xg_home": 0.8616755297076615,
+  "xg_away": 2.0384265631260834
+ },
+ "context": {
+  "fetched_at": "2026-11-24T03:06:33+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/6528863",
+    "fetched_at": "2026-11-24T03:06:34+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "projected",
+    "source": "FotMob \u2014 XI from the side's last match on 2026-11-21 (none published for this match yet)",
+    "formation": "4-2-3-1",
+    "starters": [
+     {
+      "name": "Deniz Mehmet",
+      "pos": "G",
+      "shirt": "1"
+     },
+     {
+      "name": "Alexander Hutton",
+      "pos": "D",
+      "shirt": "20"
+     },
+     {
+      "name": "Shaun Want",
+      "pos": "D",
+      "shirt": "12"
+     },
+     {
+      "name": "Jack Hannah",
+      "pos": "D",
+      "shirt": "6"
+     },
+     {
+      "name": "Taylor Charters",
+      "pos": "D",
+      "shirt": "3"
+     },
+     {
+      "name": "Niall Rogerson",
+      "pos": "D",
+      "shirt": "15"
+     },
+     {
+      "name": "Benjamin Luissint",
+      "pos": "M",
+      "shirt": "19"
+     },
+     {
+      "name": "Liam Smith",
+      "pos": "F",
+      "shirt": "7"
+     },
+     {
+      "name": "Jack Stott",
+      "pos": "M",
+      "shirt": "4"
+     },
+     {
+      "name": "Connor Young",
+      "pos": "F",
+      "shirt": "9"
+     },
+     {
+      "name": "Nicky Clark",
+      "pos": "M",
+      "shirt": "10"
+     }
+    ],
+    "fetched_at": "2026-11-24T03:06:34+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   },
+   "away": {
+    "status": "projected",
+    "source": "FotMob \u2014 XI from the side's last match on 2026-11-06 (none published for this match yet)",
+    "formation": "4-3-3",
+    "starters": [
+     {
+      "name": "Aston Oxborough",
+      "pos": "G",
+      "shirt": "1"
+     },
+     {
+      "name": "Dylan Lobban",
+      "pos": "D",
+      "shirt": "24"
+     },
+     {
+      "name": "Nurudeen Abdulai",
+      "pos": "D",
+      "shirt": "6"
+     },
+     {
+      "name": "Aaron Donnelly",
+      "pos": "D",
+      "shirt": "25"
+     },
+     {
+      "name": "Robbie Fraser",
+      "pos": "M",
+      "shirt": "47"
+     },
+     {
+      "name": "Keith Bray",
+      "pos": "M",
+      "shirt": "22"
+     },
+     {
+      "name": "Alfons Amade",
+      "pos": "M",
+      "shirt": "14"
+     },
+     {
+      "name": "Allan Oyirwoth",
+      "pos": "M",
+      "shirt": "19"
+     },
+     {
+      "name": "Olamilekan Adams",
+      "pos": "F",
+      "shirt": "99"
+     },
+     {
+      "name": "Oliver Shaw",
+      "pos": "F",
+      "shirt": "10"
+     },
+     {
+      "name": "Andy Tod",
+      "pos": "F",
+      "shirt": "26"
+     }
+    ],
+    "fetched_at": "2026-11-24T03:06:34+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   }
+  },
+  "absences": {
+   "home": [],
+   "away": []
+  },
+  "rest": {
+   "home": {
+    "rest_days": 7,
+    "n21": 3,
+    "last_match": "2026-11-21"
+   },
+   "away": {
+    "rest_days": 22,
+    "n21": 0,
+    "last_match": "2026-11-06"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 112.4
+  },
+  "venue": {
+   "name": "Palmerston Park",
+   "city": "Dumfries",
+   "lat": 55.070332976,
+   "lon": -3.624587059
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 1.95,
+   "temp_c": 1.6,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=55.07&longitude=-3.625",
+   "fetched_at": "2026-11-24T03:06:34+00:00",
+   "lat": 55.070332976,
+   "lon": -3.624587059
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": -1.74,
+    "d_p_draw_pp": 0.14,
+    "d_p_away_pp": 1.6,
+    "d_xg_home": -0.078,
+    "d_xg_away": -0.005
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0107,
+    "away_rate_mult": 1.0035,
+    "d_p_home_pp": 0.11,
+    "d_p_draw_pp": -0.03,
+    "d_p_away_pp": -0.08,
+    "d_xg_home": 0.009,
+    "d_xg_away": 0.007,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 0.9976,
+    "away_rate_mult": 0.9976,
+    "d_p_home_pp": 0.01,
+    "d_p_draw_pp": 0.04,
+    "d_p_away_pp": -0.05,
+    "d_xg_home": -0.002,
+    "d_xg_away": -0.005,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "reason": "failed validation; no live features"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 7.0,
+   "rest_a": 22.0,
+   "n21_h": 3.0,
+   "n21_a": 0.0,
+   "travel_km": 112.37082419220528,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 1.95,
+   "temp_c": 1.6
+  }
+ },
+ "lineup_simulation": {
+  "applied": false,
+  "basis": {
+   "home": "projected",
+   "away": "projected"
+  },
+  "reason": "No player ratings exist for this league, so the lineup and formation are shown but cannot change the probabilities."
+ },
+ "confidence": {
+  "tier": "MODERATE",
+  "p_max": 0.6454249580053533,
+  "entropy_nats": 0.8881385208186598,
+  "text": "Most likely result has P = 64.5%. In the out-of-sample backtest, favourites priced 0.60\u20130.70 won 67.2% \u00b1 0.7% (n=4035, mean forecast 64.2%). Backtest RPS for SC2: 0.2142; exact-score top-5 hit rate 46.4% (n=619). Overall champion RPS 0.2093 vs home/away baseline 0.2284 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-11-22, n=41,487). Outcome-certainty tier: MODERATE (entropy 0.888 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Cross-division tie (SC2 vs SC1); strengths are linked through promotion/relegation and European results.",
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Queen of Sth: lineup is PROJECTED (FotMob \u2014 XI from the side's last match on 2026-11-21 (none published for this match yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Queen of Sth: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.",
+  "Dunfermline: lineup is PROJECTED (FotMob \u2014 XI from the side's last match on 2026-11-06 (none published for this match yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Dunfermline: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+ ],
+ "verdict": "Queen of Sth 0\u20132 Dunfermline is the single most probable scoreline at 11.5%: expected goals 0.86\u20132.04 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.040). Exact scores are inherently uncertain; the 1X2 split is 14.0%/21.4%/64.5%.",
+ "resolved": {
+  "home_key": "Scotland:Queen of Sth",
+  "away_key": "Scotland:Dunfermline",
+  "div": "SC2",
+  "home_div": "SC2",
+  "away_div": "SC1",
+  "country": "Scotland"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: Dunfermline Athletic FC at Queen of the South FC\nCompetition: Scottish Cup\nDate: 2026-11-28 10:00 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-11-23\n\nPRIMARY FINAL SCORE PREDICTION\n\nQueen of the South FC 0 \u2013 2 Dunfermline Athletic FC\n(modal exact score, probability 11.5%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 0.86\nAway: 2.04\nExpected Total: 2.90\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 14.0%\nDraw: 21.4%\nAway Win: 64.5%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 0\u20132: 11.5%\n2. 0\u20131: 10.7%\n3. 1\u20131: 10.4%\n4. 1\u20132: 10.2%\n5. 0\u20133: 7.8%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 20.5%\nTotal 2 goals: 23.8%\nTotal 3 goals: 22.7%\nTotal 4 goals: 16.6%\nTotal 5+ goals: 16.4%\n\nBoth Teams Score: 51.6%\nClean sheet Queen of the South FC: 12.3% \u00b7 Clean sheet Dunfermline Athletic FC: 41.7%\n\nMATCH INTELLIGENCE\n\n1. Queen of Sth attack vs Dunfermline defence: time-weighted strength gap multiplies Queen of Sth's scoring rate by \u00d70.56 relative to an average pairing (from 34/32 decay-weighted matches).\n2. Dunfermline attack vs Queen of Sth defence: rate multiplier \u00d71.66 for the away side.\n3. Independent results-only Elo: Queen of Sth 1192 vs Dunfermline 1471 (gap -279 before home advantage).\n\nMODEL CONFIDENCE\n\nMost likely result has P = 64.5%. In the out-of-sample backtest, favourites priced 0.60\u20130.70 won 67.2% \u00b1 0.7% (n=4035, mean forecast 64.2%). Backtest RPS for SC2: 0.2142; exact-score top-5 hit rate 46.4% (n=619). Overall champion RPS 0.2093 vs home/away baseline 0.2284 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-11-22, n=41,487). Outcome-certainty tier: MODERATE (entropy 0.888 nats of max 1.099).\nParameter-uncertainty 80% bands: xG Queen of the South FC 0.65\u20131.10, xG Dunfermline Athletic FC 1.54\u20132.57; P(home win) 9.1%\u201322.2%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0022 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nQueen of Sth: PROJECTED \u2014 FotMob \u2014 XI from the side's last match on 2026-11-21 (none published for this match yet), fetched 2026-11-23 22:06 EST (4-2-3-1)\n  Deniz Mehmet (G), Alexander Hutton (D), Shaun Want (D), Jack Hannah (D), Taylor Charters (D), Niall Rogerson (D), Benjamin Luissint (M), Liam Smith (F), Jack Stott (M), Connor Young (F), Nicky Clark (M)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\nDunfermline: PROJECTED \u2014 FotMob \u2014 XI from the side's last match on 2026-11-06 (none published for this match yet), fetched 2026-11-23 22:06 EST (4-3-3)\n  Aston Oxborough (G), Dylan Lobban (D), Nurudeen Abdulai (D), Aaron Donnelly (D), Robbie Fraser (M), Keith Bray (M), Alfons Amade (M), Allan Oyirwoth (M), Olamilekan Adams (F), Oliver Shaw (F), Andy Tod (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nKEY ABSENCES\n\n- None listed by the sources.\n\nWEATHER AT VENUE\n\nPalmerston Park, Dumfries: 1.6 \u00b0C, wind 1.9 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-11-23 22:06 EST]\n\nREST & TRAVEL\n\nQueen of Sth: 7 days' rest, 3 matches in previous 21 days \u00b7 Dunfermline: 22 days' rest, 0 in 21 days \u00b7 away travel 112.4 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 14.0% / 21.4% / 64.5%, xG 0.86\u20132.04\n- Understat xG component (validated, in ensemble): home -1.74 pp, draw +0.14 pp, away +1.60 pp; xG -0.078 / -0.005\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.11 pp, draw -0.03 pp, away -0.08 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.01 pp, draw +0.04 pp, away -0.05 pp\n- lineup: not applied (failed validation; no live features)\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Cross-division tie (SC2 vs SC1); strengths are linked through promotion/relegation and European results.\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Queen of Sth: lineup is PROJECTED (FotMob \u2014 XI from the side's last match on 2026-11-21 (none published for this match yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Queen of Sth: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n- Dunfermline: lineup is PROJECTED (FotMob \u2014 XI from the side's last match on 2026-11-06 (none published for this match yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Dunfermline: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nFINAL VERDICT\n\nQueen of Sth 0\u20132 Dunfermline is the single most probable scoreline at 11.5%: expected goals 0.86\u20132.04 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.040). Exact scores are inherently uncertain; the 1X2 split is 14.0%/21.4%/64.5%.\n",
+ "refresh_id": "e35bf371800e4a6899170828e5262534",
+ "frozen_at": "2026-11-24T03:06:34+00:00",
+ "sha256": "59da37a193518be5ff12545aac38b6a7cf3b37f4bc9fd457ede84e4409c25495"
+}
