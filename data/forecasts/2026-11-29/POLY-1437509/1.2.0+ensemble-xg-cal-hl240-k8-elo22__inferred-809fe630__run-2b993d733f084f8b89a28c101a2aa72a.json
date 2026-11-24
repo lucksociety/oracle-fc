@@ -1,0 +1,773 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-11-23",
+ "input_fingerprint": "e99d27501d3b3e8328960c19328cd209f4c5c337efcfd5dd7ac1b05843b9dac7",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-11-24T05:31:56+00:00",
+ "fixture": {
+  "event_id": "POLY-1437509",
+  "home_name": "RC Deportivo A Coru\u00f1a",
+  "away_name": "FC Barcelona",
+  "competition": "LaLiga",
+  "subcategory": "lal",
+  "kickoff_utc": "2026-11-29T15:15:00+00:00",
+  "kickoff_local": "2026-11-29 10:15 EST",
+  "home_matched": "La Coruna",
+  "away_matched": "Barcelona",
+  "match_methods": {
+   "home": {
+    "source": "RC Deportivo A Coru\u00f1a",
+    "matched": "La Coruna",
+    "method": "alias",
+    "score": 1.0
+   },
+   "away": {
+    "source": "FC Barcelona",
+    "matched": "Barcelona",
+    "method": "core-tokens",
+    "score": 0.97
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.1258506421069081,
+  "p_draw": 0.18058489845861586,
+  "p_away": 0.6935644594344761,
+  "xg_home": 1.004232666836102,
+  "xg_away": 2.4569804047657127,
+  "xg_total": 3.4612130716018146,
+  "median_total": 3,
+  "modal_score": {
+   "home": 0,
+   "away": 2,
+   "p": 0.0974102092825117
+  },
+  "top_scores": [
+   {
+    "home": 0,
+    "away": 2,
+    "p": 0.0974102092825117
+   },
+   {
+    "home": 1,
+    "away": 2,
+    "p": 0.09540622510485075
+   },
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.0804353183337526
+   },
+   {
+    "home": 0,
+    "away": 3,
+    "p": 0.07875688571298575
+   },
+   {
+    "home": 1,
+    "away": 3,
+    "p": 0.07860716420051872
+   }
+  ],
+  "btts": 0.5846214717524643,
+  "totals_over": {
+   "over_0.5": 0.9659658908013756,
+   "over_1.5": 0.8623588950744785,
+   "over_2.5": 0.6708494926101443,
+   "over_3.5": 0.45540415085423175,
+   "over_4.5": 0.2669834489629293,
+   "over_5.5": 0.13784193663828886,
+   "over_6.5": 0.06260568794631644
+  },
+  "total_buckets": {
+   "0-1": 0.13764110492552142,
+   "2": 0.19150940246433432,
+   "3": 0.21544534175591248,
+   "4": 0.1884207018913025,
+   "5+": 0.2669834489629293
+  },
+  "clean_sheet_home": 0.08052023785139982,
+  "clean_sheet_away": 0.36889239959476017,
+  "home_goal_dist": [
+   0.36889239959476017,
+   0.365617584865372,
+   0.18300168282351814,
+   0.06225131765645074,
+   0.016146623659845896,
+   0.0033898978259136775,
+   0.0005968192331188943,
+   0.00010367434102040419
+  ],
+  "away_goal_dist": [
+   0.08052023785139982,
+   0.2101801667189612,
+   0.263401976028856,
+   0.21565349747556814,
+   0.1307710199768887,
+   0.06281941548366253,
+   0.02494420348239659,
+   0.011709482982267054
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    2
+   ],
+   "away_goals_80": [
+    1,
+    4
+   ],
+   "total_goals_80": [
+    1,
+    6
+   ],
+   "goal_diff_80": [
+    -4,
+    1
+   ]
+  },
+  "score_grid": [
+   [
+    0.034034,
+    0.076723,
+    0.09741,
+    0.078757,
+    0.047038,
+    0.022238,
+    0.008693
+   ],
+   [
+    0.026884,
+    0.080435,
+    0.095406,
+    0.078607,
+    0.047821,
+    0.023013,
+    0.009149
+   ],
+   [
+    0.013664,
+    0.036777,
+    0.049335,
+    0.039648,
+    0.024496,
+    0.01196,
+    0.004819
+   ],
+   [
+    0.004506,
+    0.012295,
+    0.01604,
+    0.014177,
+    0.008504,
+    0.004197,
+    0.001708
+   ],
+   [
+    0.001146,
+    0.003156,
+    0.004157,
+    0.003557,
+    0.002336,
+    0.001115,
+    0.000457
+   ],
+   [
+    0.000238,
+    0.000659,
+    0.000873,
+    0.000751,
+    0.000476,
+    0.000248,
+    9.8e-05
+   ],
+   [
+    4.2e-05,
+    0.000116,
+    0.000154,
+    0.000133,
+    8.4e-05,
+    4.2e-05,
+    1.8e-05
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.12518999999999997,
+  "p_draw": 0.18083999999999997,
+  "p_away": 0.69397,
+  "se": [
+   0.0007399914320449933,
+   0.0008606302760186861,
+   0.0010304747427763575
+  ],
+  "max_abs_dev_vs_exact": 0.0006606421069081381,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   0.7782589485312742,
+   1.250312072333928
+  ],
+  "xg_away_80": [
+   1.9135910104950475,
+   3.0318581716512516
+  ],
+  "p_home_80": [
+   0.08290757845114391,
+   0.20113420538911017
+  ],
+  "p_draw_80": [
+   0.13268146889490842,
+   0.22850772856129867
+  ],
+  "p_away_80": [
+   0.5737239467364972,
+   0.782996011471808
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.18796092484530103,
+   0.1707868490236978
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.14077929226764802,
+   "p_draw": 0.17491341654493167,
+   "p_away": 0.6843072911874202,
+   "xg_home": 1.0993535262008118,
+   "xg_away": 2.5483879797891937,
+   "weight": 0.0077
+  },
+  "elo": {
+   "p_home": 0.10649852359763058,
+   "p_draw": 0.18079362207474114,
+   "p_away": 0.7127078543276284,
+   "xg_home": 0.7048890525789787,
+   "xg_away": 2.1807344368456865,
+   "weight": 0.3721
+  },
+  "standard_dc": {
+   "p_home": 0.09633288768462667,
+   "p_draw": 0.15966262176769896,
+   "p_away": 0.7440044905476745,
+   "xg_home": 0.8532292367501848,
+   "xg_away": 2.596320953968933,
+   "weight": 0.0028
+  },
+  "home_away_rate": {
+   "p_home": 0.4527015464821652,
+   "p_draw": 0.25336029871002586,
+   "p_away": 0.293938154807809,
+   "xg_home": 1.52644874832361,
+   "xg_away": 1.1798936573907977,
+   "weight": 0.001
+  },
+  "xg_dc": {
+   "p_home": 0.15538561406937543,
+   "p_draw": 0.17964236223166652,
+   "p_away": 0.664972023698958,
+   "xg_home": 1.1692545241927323,
+   "xg_away": 2.522430069005979,
+   "weight": 0.6164
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Barcelona attack vs La Coruna defence: rate multiplier \u00d72.11 for the away side.",
+   "effect": 0.7483
+  },
+  {
+   "text": "Independent results-only Elo: La Coruna 1492 vs Barcelona 1945 (gap -453 before home advantage).",
+   "effect": 0.6801
+  },
+  {
+   "text": "La Coruna attack vs Barcelona defence: time-weighted strength gap multiplies La Coruna's scoring rate by \u00d70.70 relative to an average pairing (from 34/41 decay-weighted matches).",
+   "effect": 0.3554
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.1258506421069081,
+  "p_draw": 0.18058489845861586,
+  "p_away": 0.6935644594344761,
+  "xg_home": 1.004232666836102,
+  "xg_away": 2.4569804047657127
+ },
+ "context": {
+  "fetched_at": "2026-11-24T05:31:56+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5868143",
+    "fetched_at": "2026-11-24T05:31:56+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "inferred",
+    "source": null,
+    "formation": "",
+    "starters": [
+     {
+      "name": "Leo Rom\u00e1n",
+      "pos": "G"
+     },
+     {
+      "name": "Giacomo Quagliata",
+      "pos": "D"
+     },
+     {
+      "name": "Mario Soriano",
+      "pos": "M"
+     },
+     {
+      "name": "Bil Nsongo",
+      "pos": "F"
+     },
+     {
+      "name": "Lorenzo Amatucci",
+      "pos": "M"
+     },
+     {
+      "name": "Luismi Cruz",
+      "pos": "M"
+     },
+     {
+      "name": "Yeremay Hern\u00e1ndez",
+      "pos": "F"
+     },
+     {
+      "name": "Miguel Loureiro",
+      "pos": "D"
+     },
+     {
+      "name": "Pierre-Emerick Aubameyang",
+      "pos": "F"
+     },
+     {
+      "name": "Ximo Navarro",
+      "pos": "D"
+     },
+     {
+      "name": "Gim\u00e9nez",
+      "pos": "D"
+     }
+    ],
+    "fetched_at": "2026-11-24T05:31:56+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [],
+    "mean_xi_attack_index": 0.093,
+    "mean_continuity": -0.277,
+    "p_backup_gk": 0.0
+   },
+   "away": {
+    "status": "inferred",
+    "source": null,
+    "formation": "",
+    "starters": [
+     {
+      "name": "Joan Garc\u00eda",
+      "pos": "G"
+     },
+     {
+      "name": "Pedri",
+      "pos": "M"
+     },
+     {
+      "name": "Gerard Mart\u00edn",
+      "pos": "D"
+     },
+     {
+      "name": "Raphinha",
+      "pos": "F"
+     },
+     {
+      "name": "Pau Cubars\u00ed",
+      "pos": "D"
+     },
+     {
+      "name": "Eric Garc\u00eda",
+      "pos": "D"
+     },
+     {
+      "name": "Jo\u00e3o Cancelo",
+      "pos": "D"
+     },
+     {
+      "name": "Anthony Gordon",
+      "pos": "F"
+     },
+     {
+      "name": "Marc Bernal",
+      "pos": "M"
+     },
+     {
+      "name": "Karim Adeyemi",
+      "pos": "F"
+     },
+     {
+      "name": "Frenkie de Jong",
+      "pos": "M"
+     }
+    ],
+    "fetched_at": "2026-11-24T05:31:56+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [],
+    "mean_xi_attack_index": -0.114,
+    "mean_continuity": -1.078,
+    "p_backup_gk": 0.31
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Bright Ede",
+     "type": "injury",
+     "expected_return": "Back in training",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868143",
+     "fetched_at": "2026-11-24T05:31:56+00:00"
+    },
+    {
+     "player": "Zakaria Eddahchouri",
+     "type": "injury",
+     "expected_return": "Back in training",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868143",
+     "fetched_at": "2026-11-24T05:31:56+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "Jordi Pesquer",
+     "type": "internationalDuty",
+     "expected_return": "Mid December 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868143",
+     "fetched_at": "2026-11-24T05:31:56+00:00"
+    },
+    {
+     "player": "Ferm\u00edn L\u00f3pez",
+     "type": "suspension",
+     "expected_return": "Late November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868143",
+     "fetched_at": "2026-11-24T05:31:56+00:00"
+    },
+    {
+     "player": "Lamine Yamal",
+     "type": "injury",
+     "expected_return": "A few days",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868143",
+     "fetched_at": "2026-11-24T05:31:56+00:00"
+    },
+    {
+     "player": "Andreas Christensen",
+     "type": "injury",
+     "expected_return": "About 1-2 weeks",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868143",
+     "fetched_at": "2026-11-24T05:31:56+00:00"
+    },
+    {
+     "player": "Rodri",
+     "type": "injury",
+     "expected_return": "Early December 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868143",
+     "fetched_at": "2026-11-24T05:31:56+00:00"
+    },
+    {
+     "player": "Xavi Espart",
+     "type": "injury",
+     "expected_return": "Early January 2027",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868143",
+     "fetched_at": "2026-11-24T05:31:56+00:00"
+    },
+    {
+     "player": "Roony Bardghji",
+     "type": "injury",
+     "expected_return": "Late February 2027",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868143",
+     "fetched_at": "2026-11-24T05:31:56+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 8,
+    "n21": 1,
+    "last_match": "2026-11-21"
+   },
+   "away": {
+    "rest_days": 7,
+    "n21": 2,
+    "last_match": "2026-11-22"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 892.9
+  },
+  "venue": {
+   "name": "Estadio Abanca-Riazor",
+   "city": "A Coru\u00f1a (La Coru\u00f1a)",
+   "lat": 43.368720349,
+   "lon": -8.417529613
+  },
+  "weather": {
+   "precip_mm_2h": 0.1,
+   "wind_ms": 1.56,
+   "temp_c": 16.1,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=43.369&longitude=-8.418",
+   "fetched_at": "2026-11-24T05:31:57+00:00",
+   "lat": 43.368720349,
+   "lon": -8.417529613
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": 2.87,
+    "d_p_draw_pp": 0.11,
+    "d_p_away_pp": -2.98,
+    "d_xg_home": 0.292,
+    "d_xg_away": 0.218
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.033,
+    "away_rate_mult": 1.0106,
+    "d_p_home_pp": 0.34,
+    "d_p_draw_pp": -0.05,
+    "d_p_away_pp": -0.29,
+    "d_xg_home": 0.034,
+    "d_xg_away": 0.026,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0022,
+    "away_rate_mult": 1.0022,
+    "d_p_home_pp": -0.01,
+    "d_p_draw_pp": -0.04,
+    "d_p_away_pp": 0.04,
+    "d_xg_home": 0.002,
+    "d_xg_away": 0.005,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "home_rate_mult": 1.0484,
+    "away_rate_mult": 0.9485,
+    "d_p_home_pp": 1.95,
+    "d_p_draw_pp": 1.32,
+    "d_p_away_pp": -3.27,
+    "d_xg_home": 0.048,
+    "d_xg_away": -0.119,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 8.0,
+   "rest_a": 7.0,
+   "n21_h": 1.0,
+   "n21_a": 2.0,
+   "travel_km": 892.9241278313663,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.1,
+   "wind_ms": 1.56,
+   "temp_c": 16.1
+  }
+ },
+ "lineup_simulation": {
+  "applied": true,
+  "validated": false,
+  "scale": 0.5,
+  "basis": {
+   "home": "inferred",
+   "away": "inferred"
+  },
+  "home_rate_mult": 1.0239,
+  "away_rate_mult": 0.9739,
+  "note": "Starting-XI strength, continuity and backup-keeper adjustment at half the fitted size. It did not pass the out-of-sample test, so bets are not priced from it.",
+  "p_home": 0.13532290354902954,
+  "p_draw": 0.1872858755321003,
+  "p_away": 0.6773912209188703,
+  "xg_home": 1.027606279641192,
+  "xg_away": 2.396389273444455,
+  "xg_total": 3.423995553085647,
+  "btts": 0.5891192871692179,
+  "totals_over": {
+   "over_0.5": 0.9645709407973765,
+   "over_1.5": 0.8581458171551406,
+   "over_2.5": 0.6635905504240345,
+   "over_3.5": 0.44731296729255043,
+   "over_4.5": 0.2601172050944751,
+   "over_5.5": 0.1332006190536505,
+   "over_6.5": 0.059968214228222794
+  },
+  "modal_score": {
+   "home": 1,
+   "away": 2,
+   "p": 0.09641626968718685
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 2,
+    "p": 0.09641626968718685
+   },
+   {
+    "home": 0,
+    "away": 2,
+    "p": 0.09615288236620578
+   },
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.0834800587014652
+   },
+   {
+    "home": 0,
+    "away": 1,
+    "p": 0.07776481238361325
+   },
+   {
+    "home": 1,
+    "away": 3,
+    "p": 0.07736761893256747
+   }
+  ],
+  "score_grid": [
+   [
+    0.035429,
+    0.077765,
+    0.096153,
+    0.075724,
+    0.044062,
+    0.020298,
+    0.007733
+   ],
+   [
+    0.02866,
+    0.08348,
+    0.096416,
+    0.077368,
+    0.045849,
+    0.021497,
+    0.008329
+   ],
+   [
+    0.014922,
+    0.039095,
+    0.051061,
+    0.039959,
+    0.024046,
+    0.011437,
+    0.00449
+   ],
+   [
+    0.005042,
+    0.013391,
+    0.017007,
+    0.014635,
+    0.00855,
+    0.00411,
+    0.001629
+   ],
+   [
+    0.001314,
+    0.003524,
+    0.004517,
+    0.003763,
+    0.002406,
+    0.001118,
+    0.000446
+   ],
+   [
+    0.00028,
+    0.000754,
+    0.000972,
+    0.000814,
+    0.000502,
+    0.000255,
+    9.8e-05
+   ],
+   [
+    5e-05,
+    0.000136,
+    0.000175,
+    0.000147,
+    9.1e-05,
+    4.5e-05,
+    1.9e-05
+   ]
+  ]
+ },
+ "confidence": {
+  "tier": "HIGH",
+  "p_max": 0.6935644594344761,
+  "entropy_nats": 0.8237093067879668,
+  "text": "Most likely result has P = 69.4%. In the out-of-sample backtest, favourites priced 0.60\u20130.70 won 67.2% \u00b1 0.7% (n=4035, mean forecast 64.2%). Backtest RPS for SP1: 0.1930; exact-score top-5 hit rate 55.0% (n=1268). Overall champion RPS 0.2093 vs home/away baseline 0.2284 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-11-22, n=41,487). Outcome-certainty tier: HIGH (entropy 0.824 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "La Coruna: no lineup published yet \u2014 XI inferred from recent minutes share minus known absences; 200 configurations simulated (start P=0.7, UNVALIDATED prior).",
+  "Barcelona: no lineup published yet \u2014 XI inferred from recent minutes share minus known absences; 200 configurations simulated (start P=0.7, UNVALIDATED prior)."
+ ],
+ "verdict": "La Coruna 0\u20132 Barcelona is the single most probable scoreline at 9.7%: expected goals 1.00\u20132.46 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.040). Exact scores are inherently uncertain; the 1X2 split is 12.6%/18.1%/69.4%.",
+ "resolved": {
+  "home_key": "Spain:La Coruna",
+  "away_key": "Spain:Barcelona",
+  "div": "SP1",
+  "home_div": "SP1",
+  "away_div": "SP1",
+  "country": "Spain"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: FC Barcelona at RC Deportivo A Coru\u00f1a\nCompetition: LaLiga\nDate: 2026-11-29 10:15 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-11-23\n\nPRIMARY FINAL SCORE PREDICTION\n\nRC Deportivo A Coru\u00f1a 0 \u2013 2 FC Barcelona\n(modal exact score, probability 9.7%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.00\nAway: 2.46\nExpected Total: 3.46\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 12.6%\nDraw: 18.1%\nAway Win: 69.4%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 0\u20132: 9.7%\n2. 1\u20132: 9.5%\n3. 1\u20131: 8.0%\n4. 0\u20133: 7.9%\n5. 1\u20133: 7.9%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 13.8%\nTotal 2 goals: 19.2%\nTotal 3 goals: 21.5%\nTotal 4 goals: 18.8%\nTotal 5+ goals: 26.7%\n\nBoth Teams Score: 58.5%\nClean sheet RC Deportivo A Coru\u00f1a: 8.1% \u00b7 Clean sheet FC Barcelona: 36.9%\n\nMATCH INTELLIGENCE\n\n1. Barcelona attack vs La Coruna defence: rate multiplier \u00d72.11 for the away side.\n2. Independent results-only Elo: La Coruna 1492 vs Barcelona 1945 (gap -453 before home advantage).\n3. La Coruna attack vs Barcelona defence: time-weighted strength gap multiplies La Coruna's scoring rate by \u00d70.70 relative to an average pairing (from 34/41 decay-weighted matches).\n\nMODEL CONFIDENCE\n\nMost likely result has P = 69.4%. In the out-of-sample backtest, favourites priced 0.60\u20130.70 won 67.2% \u00b1 0.7% (n=4035, mean forecast 64.2%). Backtest RPS for SP1: 0.1930; exact-score top-5 hit rate 55.0% (n=1268). Overall champion RPS 0.2093 vs home/away baseline 0.2284 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-11-22, n=41,487). Outcome-certainty tier: HIGH (entropy 0.824 nats of max 1.099).\nParameter-uncertainty 80% bands: xG RC Deportivo A Coru\u00f1a 0.78\u20131.25, xG FC Barcelona 1.91\u20133.03; P(home win) 8.3%\u201320.1%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0007 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nLa Coruna: INFERRED, fetched 2026-11-24 00:31 EST\n  Leo Rom\u00e1n (G), Giacomo Quagliata (D), Mario Soriano (M), Bil Nsongo (F), Lorenzo Amatucci (M), Luismi Cruz (M), Yeremay Hern\u00e1ndez (F), Miguel Loureiro (D), Pierre-Emerick Aubameyang (F), Ximo Navarro (D), Gim\u00e9nez (D)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs +0.093 (log) \u00b7 continuity -0.28 \u00b7 P(backup GK) 0%\nBarcelona: INFERRED, fetched 2026-11-24 00:31 EST\n  Joan Garc\u00eda (G), Pedri (M), Gerard Mart\u00edn (D), Raphinha (F), Pau Cubars\u00ed (D), Eric Garc\u00eda (D), Jo\u00e3o Cancelo (D), Anthony Gordon (F), Marc Bernal (M), Karim Adeyemi (F), Frenkie de Jong (M)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs -0.114 (log) \u00b7 continuity -1.08 \u00b7 P(backup GK) 31%\n\nKEY ABSENCES\n\n- La Coruna: Bright Ede \u2014 injury, Back in training [FotMob, 2026-11-24 00:31 EST]\n- La Coruna: Zakaria Eddahchouri \u2014 injury, Back in training [FotMob, 2026-11-24 00:31 EST]\n- Barcelona: Jordi Pesquer \u2014 internationalDuty, Mid December 2026 [FotMob, 2026-11-24 00:31 EST]\n- Barcelona: Ferm\u00edn L\u00f3pez \u2014 suspension, Late November 2026 [FotMob, 2026-11-24 00:31 EST]\n- Barcelona: Lamine Yamal \u2014 injury, A few days [FotMob, 2026-11-24 00:31 EST]\n- Barcelona: Andreas Christensen \u2014 injury, About 1-2 weeks [FotMob, 2026-11-24 00:31 EST]\n- Barcelona: Rodri \u2014 injury, Early December 2026 [FotMob, 2026-11-24 00:31 EST]\n- Barcelona: Xavi Espart \u2014 injury, Early January 2027 [FotMob, 2026-11-24 00:31 EST]\n- Barcelona: Roony Bardghji \u2014 injury, Late February 2027 [FotMob, 2026-11-24 00:31 EST]\n\nWEATHER AT VENUE\n\nEstadio Abanca-Riazor, A Coru\u00f1a (La Coru\u00f1a): 16.1 \u00b0C, wind 1.6 m/s, precipitation 0.1 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-11-24 00:31 EST]\n\nREST & TRAVEL\n\nLa Coruna: 8 days' rest, 1 matches in previous 21 days \u00b7 Barcelona: 7 days' rest, 2 in 21 days \u00b7 away travel 892.9 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 12.6% / 18.1% / 69.4%, xG 1.00\u20132.46\n- Understat xG component (validated, in ensemble): home +2.87 pp, draw +0.11 pp, away -2.98 pp; xG +0.292 / +0.218\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.34 pp, draw -0.05 pp, away -0.29 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home -0.01 pp, draw -0.04 pp, away +0.04 pp\n- lineup: NOT APPLIED (failed out-of-sample validation); would have moved home +1.95 pp, draw +1.32 pp, away -3.27 pp\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- La Coruna: no lineup published yet \u2014 XI inferred from recent minutes share minus known absences; 200 configurations simulated (start P=0.7, UNVALIDATED prior).\n- Barcelona: no lineup published yet \u2014 XI inferred from recent minutes share minus known absences; 200 configurations simulated (start P=0.7, UNVALIDATED prior).\n\nFINAL VERDICT\n\nLa Coruna 0\u20132 Barcelona is the single most probable scoreline at 9.7%: expected goals 1.00\u20132.46 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.040). Exact scores are inherently uncertain; the 1X2 split is 12.6%/18.1%/69.4%.\n",
+ "refresh_id": "2b993d733f084f8b89a28c101a2aa72a",
+ "frozen_at": "2026-11-24T05:31:57+00:00",
+ "sha256": "1bbe6868006cfd2d8ad835d6c7dc0300c6c7ca831a20a2f550c80029606c60eb"
+}
