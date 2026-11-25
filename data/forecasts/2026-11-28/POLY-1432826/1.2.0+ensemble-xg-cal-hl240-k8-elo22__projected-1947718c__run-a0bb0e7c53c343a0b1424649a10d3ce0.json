@@ -1,0 +1,763 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-11-24",
+ "input_fingerprint": "92e68fb68f0de5c0953fefc54ebfe38af0ab2023506e7ae25712a99c91b28a35",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-11-25T03:10:34+00:00",
+ "fixture": {
+  "event_id": "POLY-1432826",
+  "home_name": "VfB Stuttgart",
+  "away_name": "Eintracht Frankfurt",
+  "competition": "Bundesliga",
+  "subcategory": "bun",
+  "kickoff_utc": "2026-11-28T17:30:00+00:00",
+  "kickoff_local": "2026-11-28 12:30 EST",
+  "home_matched": "Stuttgart",
+  "away_matched": "Ein Frankfurt",
+  "match_methods": {
+   "home": {
+    "source": "VfB Stuttgart",
+    "matched": "Stuttgart",
+    "method": "core-tokens",
+    "score": 0.97
+   },
+   "away": {
+    "source": "Eintracht Frankfurt",
+    "matched": "Ein Frankfurt",
+    "method": "alias",
+    "score": 1.0
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.5957627184809182,
+  "p_draw": 0.20585867667953384,
+  "p_away": 0.19837860483954792,
+  "xg_home": 2.3285224879523785,
+  "xg_away": 1.3239514618639172,
+  "xg_total": 3.6524739498162955,
+  "median_total": 3,
+  "modal_score": {
+   "home": 2,
+   "away": 1,
+   "p": 0.09537697802169039
+  },
+  "top_scores": [
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.09537697802169039
+   },
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.08578056164439327
+   },
+   {
+    "home": 3,
+    "away": 1,
+    "p": 0.0738700684886175
+   },
+   {
+    "home": 2,
+    "away": 0,
+    "p": 0.06927750192349401
+   },
+   {
+    "home": 2,
+    "away": 2,
+    "p": 0.06557801761061881
+   }
+  ],
+  "btts": 0.6760690597882308,
+  "totals_over": {
+   "over_0.5": 0.9724742147045372,
+   "over_1.5": 0.8838165820073899,
+   "over_2.5": 0.7075601634542016,
+   "over_3.5": 0.4973714342651936,
+   "over_4.5": 0.3023458204259798,
+   "over_5.5": 0.16211362577670518,
+   "over_6.5": 0.07628458667187114
+  },
+  "total_buckets": {
+   "0-1": 0.11618341799261014,
+   "2": 0.1762564185531882,
+   "3": 0.21018872918900808,
+   "4": 0.1950256138392138,
+   "5+": 0.3023458204259798
+  },
+  "clean_sheet_home": 0.2589147785528812,
+  "clean_sheet_away": 0.09254194695435058,
+  "home_goal_dist": [
+   0.09254194695435058,
+   0.22772848917180571,
+   0.26866524745159376,
+   0.20746673971190485,
+   0.11919104868203083,
+   0.05451303183777023,
+   0.020696239012938704,
+   0.009197257177605334
+  ],
+  "away_goal_dist": [
+   0.2589147785528812,
+   0.35867767092042613,
+   0.2374617186732104,
+   0.10218997784573962,
+   0.03249204265695458,
+   0.008192912091480048,
+   0.0017113479308098292,
+   0.00035955132849810003
+  ],
+  "intervals": {
+   "home_goals_80": [
+    1,
+    4
+   ],
+   "away_goals_80": [
+    0,
+    3
+   ],
+   "total_goals_80": [
+    1,
+    6
+   ],
+   "goal_diff_80": [
+    -1,
+    3
+   ]
+  },
+  "score_grid": [
+   [
+    0.027526,
+    0.031185,
+    0.021198,
+    0.00896,
+    0.002804,
+    0.000696,
+    0.000143
+   ],
+   [
+    0.057473,
+    0.085781,
+    0.052682,
+    0.022474,
+    0.007097,
+    0.001777,
+    0.000368
+   ],
+   [
+    0.069278,
+    0.095377,
+    0.065578,
+    0.027083,
+    0.008624,
+    0.002176,
+    0.000454
+   ],
+   [
+    0.05317,
+    0.07387,
+    0.049166,
+    0.022233,
+    0.006846,
+    0.00174,
+    0.000366
+   ],
+   [
+    0.030299,
+    0.042459,
+    0.02849,
+    0.012456,
+    0.004194,
+    0.001029,
+    0.000218
+   ],
+   [
+    0.013731,
+    0.019396,
+    0.013111,
+    0.005772,
+    0.001876,
+    0.000503,
+    0.000102
+   ],
+   [
+    0.005167,
+    0.007351,
+    0.005002,
+    0.002215,
+    0.000724,
+    0.000187,
+    4.2e-05
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.5968450000000001,
+  "p_draw": 0.2055,
+  "p_away": 0.197655,
+  "se": [
+   0.001096861536327626,
+   0.0009035201989994468,
+   0.0008904703840527207
+  ],
+  "max_abs_dev_vs_exact": 0.0010822815190818513,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   1.8352924719990737,
+   2.862796722149996
+  ],
+  "xg_away_80": [
+   1.0018686813227493,
+   1.6684069411640605
+  ],
+  "p_home_80": [
+   0.47787306912461663,
+   0.7093462897786752
+  ],
+  "p_draw_80": [
+   0.16044200691344107,
+   0.2336688611048882
+  ],
+  "p_away_80": [
+   0.1279193781719054,
+   0.2912188613776764
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.17626751986536673,
+   0.18927162710637227
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.6064132735343859,
+   "p_draw": 0.19664323255776572,
+   "p_away": 0.19694349390784824,
+   "xg_home": 2.354533389162199,
+   "xg_away": 1.2975848865512756,
+   "weight": 0.0077
+  },
+  "elo": {
+   "p_home": 0.5641624434033619,
+   "p_draw": 0.21639102734382687,
+   "p_away": 0.219446529252811,
+   "xg_home": 1.9833581633219364,
+   "xg_away": 1.1622169143792465,
+   "weight": 0.3721
+  },
+  "standard_dc": {
+   "p_home": 0.7181953926824745,
+   "p_draw": 0.16198982543698917,
+   "p_away": 0.11981478188053633,
+   "xg_home": 2.7079414520003637,
+   "xg_away": 1.058940351192685,
+   "weight": 0.0028
+  },
+  "home_away_rate": {
+   "p_home": 0.44933698870615596,
+   "p_draw": 0.23104908631343088,
+   "p_away": 0.3196139249804132,
+   "xg_home": 1.757853747349858,
+   "xg_away": 1.4527323975915198,
+   "weight": 0.001
+  },
+  "xg_dc": {
+   "p_home": 0.6031229414398448,
+   "p_draw": 0.19243409869677158,
+   "p_away": 0.20444295986338362,
+   "xg_home": 2.437390928498797,
+   "xg_away": 1.388005325571181,
+   "weight": 0.6164
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Stuttgart attack vs Ein Frankfurt defence: time-weighted strength gap multiplies Stuttgart's scoring rate by \u00d71.49 relative to an average pairing (from 30/31 decay-weighted matches).",
+   "effect": 0.4005
+  },
+  {
+   "text": "Home advantage (Germany, fitted from results): \u00d71.31 on Stuttgart's scoring rate.",
+   "effect": 0.2672
+  },
+  {
+   "text": "Independent results-only Elo: Stuttgart 1702 vs Ein Frankfurt 1589 (gap +113 before home advantage).",
+   "effect": 0.1693
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.5957627184809182,
+  "p_draw": 0.20585867667953384,
+  "p_away": 0.19837860483954792,
+  "xg_home": 2.3285224879523785,
+  "xg_away": 1.3239514618639172
+ },
+ "context": {
+  "fetched_at": "2026-11-25T03:10:34+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5881240",
+    "fetched_at": "2026-11-25T03:10:34+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "4-2-3-1",
+    "starters": [
+     {
+      "name": "Dennis Seimen",
+      "pos": "G",
+      "shirt": "41"
+     },
+     {
+      "name": "Finn Jeltsch",
+      "pos": "D",
+      "shirt": "29"
+     },
+     {
+      "name": "Ramon Hendriks",
+      "pos": "D",
+      "shirt": "3"
+     },
+     {
+      "name": "Jeff Chabot",
+      "pos": "D",
+      "shirt": "24"
+     },
+     {
+      "name": "Maximilian Mittelst\u00e4dt",
+      "pos": "D",
+      "shirt": "7"
+     },
+     {
+      "name": "Grischa Pr\u00f6mel",
+      "pos": "M",
+      "shirt": "21"
+     },
+     {
+      "name": "Yanik Spalt",
+      "pos": "M",
+      "shirt": "47"
+     },
+     {
+      "name": "Jamie Leweling",
+      "pos": "F",
+      "shirt": "18"
+     },
+     {
+      "name": "Deniz Undav",
+      "pos": "M",
+      "shirt": "26"
+     },
+     {
+      "name": "Chris F\u00fchrich",
+      "pos": "F",
+      "shirt": "10"
+     },
+     {
+      "name": "Ermedin Demirovi\u0107",
+      "pos": "F",
+      "shirt": "9"
+     }
+    ],
+    "fetched_at": "2026-11-25T03:10:34+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [],
+    "mean_xi_attack_index": 0.011,
+    "mean_continuity": 0.628,
+    "p_backup_gk": 0.18
+   },
+   "away": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "4-4-2",
+    "starters": [
+     {
+      "name": "Noah Atubolu",
+      "pos": "G",
+      "shirt": "1"
+     },
+     {
+      "name": "Ansgar Knauff",
+      "pos": "D",
+      "shirt": "7"
+     },
+     {
+      "name": "Robin Koch",
+      "pos": "D",
+      "shirt": "4"
+     },
+     {
+      "name": "Lilian Brassier",
+      "pos": "D",
+      "shirt": "3"
+     },
+     {
+      "name": "Keita Kosugi",
+      "pos": "D",
+      "shirt": "26"
+     },
+     {
+      "name": "Ritsu Doan",
+      "pos": "M",
+      "shirt": "20"
+     },
+     {
+      "name": "Raphael Onyedika",
+      "pos": "M",
+      "shirt": "25"
+     },
+     {
+      "name": "No\u00ebl As\u00e9ko",
+      "pos": "M",
+      "shirt": "15"
+     },
+     {
+      "name": "Far\u00e8s Cha\u00efbi",
+      "pos": "M",
+      "shirt": "8"
+     },
+     {
+      "name": "Younes Ebnoutalib",
+      "pos": "F",
+      "shirt": "11"
+     },
+     {
+      "name": "Jonathan Burkardt",
+      "pos": "F",
+      "shirt": "9"
+     }
+    ],
+    "fetched_at": "2026-11-25T03:10:34+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [],
+    "mean_xi_attack_index": 0.057,
+    "mean_continuity": 0.241,
+    "p_backup_gk": 0.14
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Luca Jaquez",
+     "type": "injury",
+     "expected_return": "About 1-2 weeks",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881240",
+     "fetched_at": "2026-11-25T03:10:34+00:00"
+    },
+    {
+     "player": "Leo Sauer",
+     "type": "injury",
+     "expected_return": "About 1-2 weeks",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881240",
+     "fetched_at": "2026-11-25T03:10:34+00:00"
+    },
+    {
+     "player": "Angelo Stiller",
+     "type": "injury",
+     "expected_return": "About a week",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881240",
+     "fetched_at": "2026-11-25T03:10:34+00:00"
+    },
+    {
+     "player": "Justin Diehl",
+     "type": "injury",
+     "expected_return": "Early December 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881240",
+     "fetched_at": "2026-11-25T03:10:34+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "Jessic Ngankam",
+     "type": "injury",
+     "expected_return": "Early December 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881240",
+     "fetched_at": "2026-11-25T03:10:34+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 7,
+    "n21": 2,
+    "last_match": "2026-11-21"
+   },
+   "away": {
+    "rest_days": 7,
+    "n21": 2,
+    "last_match": "2026-11-21"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 148.1
+  },
+  "venue": {
+   "name": "MHPArena",
+   "city": "Stuttgart",
+   "lat": 48.792284176,
+   "lon": 9.232023954
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 1.805,
+   "temp_c": 0.9,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=48.792&longitude=9.232",
+   "fetched_at": "2026-11-25T03:10:34+00:00",
+   "lat": 48.792284176,
+   "lon": 9.232023954
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": 2.42,
+    "d_p_draw_pp": -1.52,
+    "d_p_away_pp": -0.9,
+    "d_xg_home": 0.287,
+    "d_xg_away": 0.145
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0129,
+    "away_rate_mult": 1.0042,
+    "d_p_home_pp": 0.46,
+    "d_p_draw_pp": -0.21,
+    "d_p_away_pp": -0.24,
+    "d_xg_home": 0.029,
+    "d_xg_away": 0.006,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 0.9933,
+    "away_rate_mult": 0.9933,
+    "d_p_home_pp": -0.11,
+    "d_p_draw_pp": 0.1,
+    "d_p_away_pp": 0.02,
+    "d_xg_home": -0.015,
+    "d_xg_away": -0.009,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "home_rate_mult": 1.0198,
+    "away_rate_mult": 1.0179,
+    "d_p_home_pp": 0.37,
+    "d_p_draw_pp": -0.31,
+    "d_p_away_pp": -0.06,
+    "d_xg_home": 0.047,
+    "d_xg_away": 0.024,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 7.0,
+   "rest_a": 7.0,
+   "n21_h": 2.0,
+   "n21_a": 2.0,
+   "travel_km": 148.12019175269987,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 1.805,
+   "temp_c": 0.9
+  }
+ },
+ "lineup_simulation": {
+  "applied": true,
+  "validated": false,
+  "scale": 0.5,
+  "basis": {
+   "home": "projected",
+   "away": "projected"
+  },
+  "home_rate_mult": 1.0098,
+  "away_rate_mult": 1.0089,
+  "note": "Starting-XI strength, continuity and backup-keeper adjustment at half the fitted size. It did not pass the out-of-sample test, so bets are not priced from it.",
+  "p_home": 0.5976501320052483,
+  "p_draw": 0.2043600621030814,
+  "p_away": 0.19798980589167026,
+  "xg_home": 2.35138741969159,
+  "xg_away": 1.335848167015597,
+  "xg_total": 3.687235586707187,
+  "btts": 0.6803550204908806,
+  "totals_over": {
+   "over_0.5": 0.9734101651761428,
+   "over_1.5": 0.8869691056346893,
+   "over_2.5": 0.7135061924457176,
+   "over_3.5": 0.5046843624488778,
+   "over_4.5": 0.3090741229600637,
+   "over_5.5": 0.16706113678666074,
+   "over_6.5": 0.07929592372199941
+  },
+  "modal_score": {
+   "home": 2,
+   "away": 1,
+   "p": 0.09473639583058854
+  },
+  "top_scores": [
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.09473639583058854
+   },
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.0843923973364027
+   },
+   {
+    "home": 3,
+    "away": 1,
+    "p": 0.07410210757142403
+   },
+   {
+    "home": 2,
+    "away": 0,
+    "p": 0.06821548693128544
+   },
+   {
+    "home": 2,
+    "away": 2,
+    "p": 0.06572452376372896
+   }
+  ],
+  "score_grid": [
+   [
+    0.02659,
+    0.030397,
+    0.020855,
+    0.008899,
+    0.002812,
+    0.000705,
+    0.000147
+   ],
+   [
+    0.056044,
+    0.084392,
+    0.052305,
+    0.022523,
+    0.007181,
+    0.001816,
+    0.00038
+   ],
+   [
+    0.068215,
+    0.094736,
+    0.065725,
+    0.027395,
+    0.008806,
+    0.002244,
+    0.000473
+   ],
+   [
+    0.052882,
+    0.074102,
+    0.049757,
+    0.022706,
+    0.007057,
+    0.001811,
+    0.000384
+   ],
+   [
+    0.030448,
+    0.043028,
+    0.029123,
+    0.012848,
+    0.004366,
+    0.001082,
+    0.000231
+   ],
+   [
+    0.013946,
+    0.019863,
+    0.013541,
+    0.006014,
+    0.001973,
+    0.000534,
+    0.00011
+   ],
+   [
+    0.005305,
+    0.007609,
+    0.005221,
+    0.002332,
+    0.000769,
+    0.000201,
+    4.5e-05
+   ]
+  ]
+ },
+ "confidence": {
+  "tier": "MODERATE",
+  "p_max": 0.5957627184809182,
+  "entropy_nats": 0.9548190967656294,
+  "text": "Most likely result has P = 59.6%. In the out-of-sample backtest, favourites priced 0.50\u20130.60 won 54.6% \u00b1 0.5% (n=9745, mean forecast 54.4%). Backtest RPS for D1: 0.1991; exact-score top-5 hit rate 42.5% (n=1008). Overall champion RPS 0.2093 vs home/away baseline 0.2284 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-11-22, n=41,487). Outcome-certainty tier: MODERATE (entropy 0.955 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Stuttgart: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Ein Frankfurt: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior)."
+ ],
+ "verdict": "Stuttgart 2\u20131 Ein Frankfurt is the single most probable scoreline at 9.5%: expected goals 2.33\u20131.32 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.038). Exact scores are inherently uncertain; the 1X2 split is 59.6%/20.6%/19.8%.",
+ "resolved": {
+  "home_key": "Germany:Stuttgart",
+  "away_key": "Germany:Ein Frankfurt",
+  "div": "D1",
+  "home_div": "D1",
+  "away_div": "D1",
+  "country": "Germany"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: Eintracht Frankfurt at VfB Stuttgart\nCompetition: Bundesliga\nDate: 2026-11-28 12:30 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-11-24\n\nPRIMARY FINAL SCORE PREDICTION\n\nVfB Stuttgart 2 \u2013 1 Eintracht Frankfurt\n(modal exact score, probability 9.5%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 2.33\nAway: 1.32\nExpected Total: 3.65\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 59.6%\nDraw: 20.6%\nAway Win: 19.8%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 2\u20131: 9.5%\n2. 1\u20131: 8.6%\n3. 3\u20131: 7.4%\n4. 2\u20130: 6.9%\n5. 2\u20132: 6.6%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 11.6%\nTotal 2 goals: 17.6%\nTotal 3 goals: 21.0%\nTotal 4 goals: 19.5%\nTotal 5+ goals: 30.2%\n\nBoth Teams Score: 67.6%\nClean sheet VfB Stuttgart: 25.9% \u00b7 Clean sheet Eintracht Frankfurt: 9.3%\n\nMATCH INTELLIGENCE\n\n1. Stuttgart attack vs Ein Frankfurt defence: time-weighted strength gap multiplies Stuttgart's scoring rate by \u00d71.49 relative to an average pairing (from 30/31 decay-weighted matches).\n2. Home advantage (Germany, fitted from results): \u00d71.31 on Stuttgart's scoring rate.\n3. Independent results-only Elo: Stuttgart 1702 vs Ein Frankfurt 1589 (gap +113 before home advantage).\n\nMODEL CONFIDENCE\n\nMost likely result has P = 59.6%. In the out-of-sample backtest, favourites priced 0.50\u20130.60 won 54.6% \u00b1 0.5% (n=9745, mean forecast 54.4%). Backtest RPS for D1: 0.1991; exact-score top-5 hit rate 42.5% (n=1008). Overall champion RPS 0.2093 vs home/away baseline 0.2284 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-11-22, n=41,487). Outcome-certainty tier: MODERATE (entropy 0.955 nats of max 1.099).\nParameter-uncertainty 80% bands: xG VfB Stuttgart 1.84\u20132.86, xG Eintracht Frankfurt 1.00\u20131.67; P(home win) 47.8%\u201370.9%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0011 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nStuttgart: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-11-24 22:10 EST (4-2-3-1)\n  Dennis Seimen (G), Finn Jeltsch (D), Ramon Hendriks (D), Jeff Chabot (D), Maximilian Mittelst\u00e4dt (D), Grischa Pr\u00f6mel (M), Yanik Spalt (M), Jamie Leweling (F), Deniz Undav (M), Chris F\u00fchrich (F), Ermedin Demirovi\u0107 (F)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs +0.011 (log) \u00b7 continuity +0.63 \u00b7 P(backup GK) 18%\nEin Frankfurt: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-11-24 22:10 EST (4-4-2)\n  Noah Atubolu (G), Ansgar Knauff (D), Robin Koch (D), Lilian Brassier (D), Keita Kosugi (D), Ritsu Doan (M), Raphael Onyedika (M), No\u00ebl As\u00e9ko (M), Far\u00e8s Cha\u00efbi (M), Younes Ebnoutalib (F), Jonathan Burkardt (F)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs +0.057 (log) \u00b7 continuity +0.24 \u00b7 P(backup GK) 14%\n\nKEY ABSENCES\n\n- Stuttgart: Luca Jaquez \u2014 injury, About 1-2 weeks [FotMob, 2026-11-24 22:10 EST]\n- Stuttgart: Leo Sauer \u2014 injury, About 1-2 weeks [FotMob, 2026-11-24 22:10 EST]\n- Stuttgart: Angelo Stiller \u2014 injury, About a week [FotMob, 2026-11-24 22:10 EST]\n- Stuttgart: Justin Diehl \u2014 injury, Early December 2026 [FotMob, 2026-11-24 22:10 EST]\n- Ein Frankfurt: Jessic Ngankam \u2014 injury, Early December 2026 [FotMob, 2026-11-24 22:10 EST]\n\nWEATHER AT VENUE\n\nMHPArena, Stuttgart: 0.9 \u00b0C, wind 1.8 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-11-24 22:10 EST]\n\nREST & TRAVEL\n\nStuttgart: 7 days' rest, 2 matches in previous 21 days \u00b7 Ein Frankfurt: 7 days' rest, 2 in 21 days \u00b7 away travel 148.1 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 59.6% / 20.6% / 19.8%, xG 2.33\u20131.32\n- Understat xG component (validated, in ensemble): home +2.42 pp, draw -1.52 pp, away -0.90 pp; xG +0.287 / +0.145\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.46 pp, draw -0.21 pp, away -0.24 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home -0.11 pp, draw +0.10 pp, away +0.02 pp\n- lineup: NOT APPLIED (failed out-of-sample validation); would have moved home +0.37 pp, draw -0.31 pp, away -0.06 pp\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Stuttgart: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Ein Frankfurt: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n\nFINAL VERDICT\n\nStuttgart 2\u20131 Ein Frankfurt is the single most probable scoreline at 9.5%: expected goals 2.33\u20131.32 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.038). Exact scores are inherently uncertain; the 1X2 split is 59.6%/20.6%/19.8%.\n",
+ "refresh_id": "a0bb0e7c53c343a0b1424649a10d3ce0",
+ "frozen_at": "2026-11-25T03:10:34+00:00",
+ "sha256": "9e372534d842a90460f17e3f209a7107a0a6922c3483263a0ce97647f83c0a13"
+}
