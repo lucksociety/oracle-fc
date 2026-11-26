@@ -1,0 +1,591 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-11-25",
+ "input_fingerprint": "e976ca17acace7441d10f71d9526eec90d3fafdfcadae3ab7f589b27b613cade",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-11-26T16:11:54+00:00",
+ "fixture": {
+  "event_id": "POLY-1436801",
+  "home_name": "Exeter City FC",
+  "away_name": "Crawley Town FC",
+  "competition": "League Two",
+  "subcategory": "el2",
+  "kickoff_utc": "2026-11-28T12:30:00+00:00",
+  "kickoff_local": "2026-11-28 07:30 EST",
+  "home_matched": "Exeter",
+  "away_matched": "Crawley Town",
+  "match_methods": {
+   "home": {
+    "source": "Exeter City FC",
+    "matched": "Exeter",
+    "method": "alias",
+    "score": 1.0
+   },
+   "away": {
+    "source": "Crawley Town FC",
+    "matched": "Crawley Town",
+    "method": "core-tokens",
+    "score": 0.97
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.5460053239004159,
+  "p_draw": 0.2675067633603237,
+  "p_away": 0.18648791273926066,
+  "xg_home": 1.5932146478553217,
+  "xg_away": 0.837812043004908,
+  "xg_total": 2.4310266908602296,
+  "median_total": 2,
+  "modal_score": {
+   "home": 1,
+   "away": 0,
+   "p": 0.13548027662913392
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.13548027662913392
+   },
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.12682837313533915
+   },
+   {
+    "home": 2,
+    "away": 0,
+    "p": 0.11014848421637961
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.09546697492286152
+   },
+   {
+    "home": 0,
+    "away": 0,
+    "p": 0.09267606650929895
+   }
+  ],
+  "btts": 0.4658155017036624,
+  "totals_over": {
+   "over_0.5": 0.9073239334907012,
+   "over_1.5": 0.7035672093147807,
+   "over_2.5": 0.4376823276238389,
+   "over_3.5": 0.22822025243154864,
+   "over_4.5": 0.09936381744758768,
+   "over_5.5": 0.037620499737801065,
+   "over_6.5": 0.012356934309599056
+  },
+  "total_buckets": {
+   "0-1": 0.2964327906852194,
+   "2": 0.265884881690942,
+   "3": 0.20946207519229015,
+   "4": 0.128856434983961,
+   "5+": 0.09936381744758768
+  },
+  "clean_sheet_home": 0.42754185417338797,
+  "clean_sheet_away": 0.19931871063224868,
+  "home_goal_dist": [
+   0.19931871063224868,
+   0.3272737389895412,
+   0.26036126458182807,
+   0.13674273844204762,
+   0.053731433065484016,
+   0.016894938806523905,
+   0.004436185476255261,
+   0.001240990006071432
+  ],
+  "away_goal_dist": [
+   0.42754185417338797,
+   0.3692973693481269,
+   0.1524032252674006,
+   0.041044010279913216,
+   0.008210576288544517,
+   0.0013079946377361324,
+   0.00017320601671686015,
+   2.1763988173857447e-05
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    3
+   ],
+   "away_goals_80": [
+    0,
+    2
+   ],
+   "total_goals_80": [
+    1,
+    4
+   ],
+   "goal_diff_80": [
+    -1,
+    3
+   ]
+  },
+  "score_grid": [
+   [
+    0.092676,
+    0.068276,
+    0.028908,
+    0.007676,
+    0.001511,
+    0.000236,
+    3.1e-05
+   ],
+   [
+    0.13548,
+    0.126828,
+    0.048779,
+    0.013102,
+    0.00261,
+    0.000413,
+    5.4e-05
+   ],
+   [
+    0.110148,
+    0.095467,
+    0.041377,
+    0.010792,
+    0.002176,
+    0.000349,
+    4.6e-05
+   ],
+   [
+    0.05754,
+    0.050459,
+    0.02124,
+    0.00609,
+    0.001192,
+    0.000193,
+    2.6e-05
+   ],
+   [
+    0.022408,
+    0.01989,
+    0.008474,
+    0.00236,
+    0.000507,
+    8e-05,
+    1.1e-05
+   ],
+   [
+    0.006975,
+    0.006267,
+    0.002702,
+    0.000761,
+    0.000159,
+    2.7e-05,
+    4e-06
+   ],
+   [
+    0.001813,
+    0.001648,
+    0.000719,
+    0.000205,
+    4.3e-05,
+    7e-06,
+    1e-06
+   ]
+  ],
+  "mass_check": 1.0000000000000002
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.546975,
+  "p_draw": 0.267065,
+  "p_away": 0.18596000000000001,
+  "se": [
+   0.0011130888315291822,
+   0.000989295925835642,
+   0.0008699967770055243
+  ],
+  "max_abs_dev_vs_exact": 0.0009696760995840936,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   1.2321315133519517,
+   1.9866807338456212
+  ],
+  "xg_away_80": [
+   0.627140546985334,
+   1.064028351337489
+  ],
+  "p_home_80": [
+   0.4410769953273189,
+   0.6509375967445004
+  ],
+  "p_draw_80": [
+   0.21607678466598587,
+   0.3049449222573494
+  ],
+  "p_away_80": [
+   0.12695595455815775,
+   0.2642720865437636
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.189400306604189,
+   0.19619089712992974
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.5196866041502519,
+   "p_draw": 0.2803541454761808,
+   "p_away": 0.19995925037356738,
+   "xg_home": 1.428001075593205,
+   "xg_away": 0.7793967002323428,
+   "weight": 0.0077
+  },
+  "elo": {
+   "p_home": 0.5790751313466027,
+   "p_draw": 0.2283211812307244,
+   "p_away": 0.19260368742267292,
+   "xg_home": 1.8139510222555106,
+   "xg_away": 0.9411372226528667,
+   "weight": 0.3721
+  },
+  "standard_dc": {
+   "p_home": 0.5541139914970162,
+   "p_draw": 0.2817605332254187,
+   "p_away": 0.16412547527756483,
+   "xg_home": 1.439941035197679,
+   "xg_away": 0.6579999129307201,
+   "weight": 0.0028
+  },
+  "home_away_rate": {
+   "p_home": 0.4310548492661329,
+   "p_draw": 0.2628528023169741,
+   "p_away": 0.30609234841689303,
+   "xg_home": 1.4184107366473675,
+   "xg_away": 1.152232949935606,
+   "weight": 0.001
+  },
+  "xg_dc": {
+   "p_home": 0.5196189205836048,
+   "p_draw": 0.28009140046983994,
+   "p_away": 0.20028967894655508,
+   "xg_home": 1.4266765693291805,
+   "xg_away": 0.7791143683844185,
+   "weight": 0.6164
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Crawley Town attack vs Exeter defence: rate multiplier \u00d70.65 for the away side.",
+   "effect": 0.4381
+  },
+  {
+   "text": "Independent results-only Elo: Exeter 1221 vs Crawley Town 1065 (gap +156 before home advantage).",
+   "effect": 0.2338
+  },
+  {
+   "text": "Home advantage (England, fitted from results): \u00d71.23 on Exeter's scoring rate.",
+   "effect": 0.2092
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.5460053239004159,
+  "p_draw": 0.26750676336032364,
+  "p_away": 0.18648791273926063,
+  "xg_home": 1.5932146478553213,
+  "xg_away": 0.8378120430049079
+ },
+ "context": {
+  "fetched_at": "2026-11-26T16:11:54+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5838054",
+    "fetched_at": "2026-11-26T16:11:55+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "4-2-3-1",
+    "starters": [
+     {
+      "name": "Jack Bycroft",
+      "pos": "G",
+      "shirt": "1"
+     },
+     {
+      "name": "Lakyle Samuel",
+      "pos": "D",
+      "shirt": "2"
+     },
+     {
+      "name": "Jack Taylor",
+      "pos": "D",
+      "shirt": "6"
+     },
+     {
+      "name": "Jack Fitzwater",
+      "pos": "D",
+      "shirt": "5"
+     },
+     {
+      "name": "Luca Woodhouse",
+      "pos": "D",
+      "shirt": "3"
+     },
+     {
+      "name": "Jake Doyle-Hayes",
+      "pos": "M",
+      "shirt": "31"
+     },
+     {
+      "name": "Charlie Cummins",
+      "pos": "M",
+      "shirt": "16"
+     },
+     {
+      "name": "George Birch",
+      "pos": "F",
+      "shirt": "20"
+     },
+     {
+      "name": "Reece Cole",
+      "pos": "M",
+      "shirt": "12"
+     },
+     {
+      "name": "Anthony Scully",
+      "pos": "F",
+      "shirt": "25"
+     },
+     {
+      "name": "Sonny Cox",
+      "pos": "F",
+      "shirt": "19"
+     }
+    ],
+    "fetched_at": "2026-11-26T16:11:55+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   },
+   "away": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "4-4-2",
+    "starters": [
+     {
+      "name": "Vito Mannone",
+      "pos": "G",
+      "shirt": "1"
+     },
+     {
+      "name": "Kellan Gordon",
+      "pos": "D",
+      "shirt": "2"
+     },
+     {
+      "name": "Josh Flint",
+      "pos": "D",
+      "shirt": "3"
+     },
+     {
+      "name": "Ben Heneghan",
+      "pos": "D",
+      "shirt": "44"
+     },
+     {
+      "name": "Jonny Russell",
+      "pos": "D",
+      "shirt": "16"
+     },
+     {
+      "name": "Dylan Morgan",
+      "pos": "M",
+      "shirt": "27"
+     },
+     {
+      "name": "Charlie Barker",
+      "pos": "M",
+      "shirt": "5"
+     },
+     {
+      "name": "Kai Jennings",
+      "pos": "M",
+      "shirt": "30"
+     },
+     {
+      "name": "Lewis Richards",
+      "pos": "M",
+      "shirt": "12"
+     },
+     {
+      "name": "Pemi Aderoju",
+      "pos": "F",
+      "shirt": "11"
+     },
+     {
+      "name": "Danilo Orsi",
+      "pos": "F",
+      "shirt": "9"
+     }
+    ],
+    "fetched_at": "2026-11-26T16:11:55+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   }
+  },
+  "absences": {
+   "home": [],
+   "away": []
+  },
+  "rest": {
+   "home": {
+    "rest_days": 7,
+    "n21": 2,
+    "last_match": "2026-11-21"
+   },
+   "away": {
+    "rest_days": 4,
+    "n21": 2,
+    "last_match": "2026-11-24"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 236.8
+  },
+  "venue": {
+   "name": "St James Park",
+   "city": "Exeter, Devon",
+   "lat": 50.730716255,
+   "lon": -3.521153033
+  },
+  "weather": {
+   "precip_mm_2h": 9.48,
+   "wind_ms": 6.24,
+   "temp_c": 12.9,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=50.731&longitude=-3.521",
+   "fetched_at": "2026-11-26T16:11:55+00:00",
+   "lat": 50.730716255,
+   "lon": -3.521153033
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": -3.77,
+    "d_p_draw_pp": 3.27,
+    "d_p_away_pp": 0.49,
+    "d_xg_home": -0.244,
+    "d_xg_away": -0.102
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 0.993,
+    "away_rate_mult": 1.0171,
+    "d_p_home_pp": -0.63,
+    "d_p_draw_pp": 0.14,
+    "d_p_away_pp": 0.48,
+    "d_xg_home": -0.011,
+    "d_xg_away": 0.014,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0173,
+    "away_rate_mult": 1.0056,
+    "d_p_home_pp": 0.57,
+    "d_p_draw_pp": -0.33,
+    "d_p_away_pp": -0.23,
+    "d_xg_home": 0.027,
+    "d_xg_away": 0.005,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.2337,
+    "away_rate_mult": 1.2337,
+    "d_p_home_pp": 3.96,
+    "d_p_draw_pp": -3.75,
+    "d_p_away_pp": -0.21,
+    "d_xg_home": 0.372,
+    "d_xg_away": 0.197,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "reason": "failed validation; no live features"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 7.0,
+   "rest_a": 4.0,
+   "n21_h": 2.0,
+   "n21_a": 2.0,
+   "travel_km": 236.75664833952024,
+   "neutral": 0.0,
+   "precip_mm_2h": 9.48,
+   "wind_ms": 6.24,
+   "temp_c": 12.9
+  }
+ },
+ "lineup_simulation": {
+  "applied": false,
+  "basis": {
+   "home": "projected",
+   "away": "projected"
+  },
+  "reason": "No player ratings exist for this league, so the lineup and formation are shown but cannot change the probabilities."
+ },
+ "confidence": {
+  "tier": "MODERATE",
+  "p_max": 0.5460053239004159,
+  "entropy_nats": 0.9963252493045625,
+  "text": "Most likely result has P = 54.6%. In the out-of-sample backtest, favourites priced 0.50\u20130.60 won 54.6% \u00b1 0.5% (n=9745, mean forecast 54.4%). Backtest RPS for E3: 0.2217; exact-score top-5 hit rate 48.2% (n=1842). Overall champion RPS 0.2093 vs home/away baseline 0.2284 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-11-22, n=41,487). Outcome-certainty tier: MODERATE (entropy 0.996 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Exeter: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Exeter: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.",
+  "Crawley Town: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Crawley Town: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+ ],
+ "verdict": "Exeter 1\u20130 Crawley Town is the single most probable scoreline at 13.5%: expected goals 1.59\u20130.84 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.038). Exact scores are inherently uncertain; the 1X2 split is 54.6%/26.8%/18.6%.",
+ "resolved": {
+  "home_key": "England:Exeter",
+  "away_key": "England:Crawley Town",
+  "div": "E3",
+  "home_div": "E3",
+  "away_div": "E3",
+  "country": "England"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: Crawley Town FC at Exeter City FC\nCompetition: League Two\nDate: 2026-11-28 07:30 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-11-25\n\nPRIMARY FINAL SCORE PREDICTION\n\nExeter City FC 1 \u2013 0 Crawley Town FC\n(modal exact score, probability 13.5%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.59\nAway: 0.84\nExpected Total: 2.43\nMedian Total: 2\n\nRESULT PROBABILITIES\n\nHome Win: 54.6%\nDraw: 26.8%\nAway Win: 18.6%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20130: 13.5%\n2. 1\u20131: 12.7%\n3. 2\u20130: 11.0%\n4. 2\u20131: 9.5%\n5. 0\u20130: 9.3%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 29.6%\nTotal 2 goals: 26.6%\nTotal 3 goals: 20.9%\nTotal 4 goals: 12.9%\nTotal 5+ goals: 9.9%\n\nBoth Teams Score: 46.6%\nClean sheet Exeter City FC: 42.8% \u00b7 Clean sheet Crawley Town FC: 19.9%\n\nMATCH INTELLIGENCE\n\n1. Crawley Town attack vs Exeter defence: rate multiplier \u00d70.65 for the away side.\n2. Independent results-only Elo: Exeter 1221 vs Crawley Town 1065 (gap +156 before home advantage).\n3. Home advantage (England, fitted from results): \u00d71.23 on Exeter's scoring rate.\n\nMODEL CONFIDENCE\n\nMost likely result has P = 54.6%. In the out-of-sample backtest, favourites priced 0.50\u20130.60 won 54.6% \u00b1 0.5% (n=9745, mean forecast 54.4%). Backtest RPS for E3: 0.2217; exact-score top-5 hit rate 48.2% (n=1842). Overall champion RPS 0.2093 vs home/away baseline 0.2284 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-11-22, n=41,487). Outcome-certainty tier: MODERATE (entropy 0.996 nats of max 1.099).\nParameter-uncertainty 80% bands: xG Exeter City FC 1.23\u20131.99, xG Crawley Town FC 0.63\u20131.06; P(home win) 44.1%\u201365.1%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0010 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nExeter: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-11-26 11:11 EST (4-2-3-1)\n  Jack Bycroft (G), Lakyle Samuel (D), Jack Taylor (D), Jack Fitzwater (D), Luca Woodhouse (D), Jake Doyle-Hayes (M), Charlie Cummins (M), George Birch (F), Reece Cole (M), Anthony Scully (F), Sonny Cox (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\nCrawley Town: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-11-26 11:11 EST (4-4-2)\n  Vito Mannone (G), Kellan Gordon (D), Josh Flint (D), Ben Heneghan (D), Jonny Russell (D), Dylan Morgan (M), Charlie Barker (M), Kai Jennings (M), Lewis Richards (M), Pemi Aderoju (F), Danilo Orsi (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nKEY ABSENCES\n\n- None listed by the sources.\n\nWEATHER AT VENUE\n\nSt James Park, Exeter, Devon: 12.9 \u00b0C, wind 6.2 m/s, precipitation 9.5 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-11-26 11:11 EST]\n\nREST & TRAVEL\n\nExeter: 7 days' rest, 2 matches in previous 21 days \u00b7 Crawley Town: 4 days' rest, 2 in 21 days \u00b7 away travel 236.8 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 54.6% / 26.8% / 18.6%, xG 1.59\u20130.84\n- Understat xG component (validated, in ensemble): home -3.77 pp, draw +3.27 pp, away +0.49 pp; xG -0.244 / -0.102\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home -0.63 pp, draw +0.14 pp, away +0.48 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.57 pp, draw -0.33 pp, away -0.23 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +3.96 pp, draw -3.75 pp, away -0.21 pp\n- lineup: not applied (failed validation; no live features)\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Exeter: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Exeter: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n- Crawley Town: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Crawley Town: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nFINAL VERDICT\n\nExeter 1\u20130 Crawley Town is the single most probable scoreline at 13.5%: expected goals 1.59\u20130.84 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.038). Exact scores are inherently uncertain; the 1X2 split is 54.6%/26.8%/18.6%.\n",
+ "refresh_id": "305153efe7114910ac61d76bf1a552cc",
+ "frozen_at": "2026-11-26T16:11:55+00:00",
+ "sha256": "ad4cd5c574921f5edc6cec8012a69290dd52b05a6496d2154cdff526e649eb02"
+}
