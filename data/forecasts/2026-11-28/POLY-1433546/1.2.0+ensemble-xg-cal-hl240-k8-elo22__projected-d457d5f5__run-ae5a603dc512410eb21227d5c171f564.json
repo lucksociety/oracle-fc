@@ -1,0 +1,771 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-11-24",
+ "input_fingerprint": "92e68fb68f0de5c0953fefc54ebfe38af0ab2023506e7ae25712a99c91b28a35",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-11-26T03:57:07+00:00",
+ "fixture": {
+  "event_id": "POLY-1433546",
+  "home_name": "Paris Saint-Germain FC",
+  "away_name": "FC Lorient",
+  "competition": "Ligue 1",
+  "subcategory": "fl1",
+  "kickoff_utc": "2026-11-28T19:45:00+00:00",
+  "kickoff_local": "2026-11-28 14:45 EST",
+  "home_matched": "Paris SG",
+  "away_matched": "Lorient",
+  "match_methods": {
+   "home": {
+    "source": "Paris Saint-Germain FC",
+    "matched": "Paris SG",
+    "method": "alias",
+    "score": 1.0
+   },
+   "away": {
+    "source": "FC Lorient",
+    "matched": "Lorient",
+    "method": "core-tokens",
+    "score": 0.97
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.7305973628368094,
+  "p_draw": 0.16913623132299616,
+  "p_away": 0.10026640584019436,
+  "xg_home": 2.47957802699209,
+  "xg_away": 0.8416421076775908,
+  "xg_total": 3.321220134669681,
+  "median_total": 3,
+  "modal_score": {
+   "home": 2,
+   "away": 0,
+   "p": 0.11082489663953048
+  },
+  "top_scores": [
+   {
+    "home": 2,
+    "away": 0,
+    "p": 0.11082489663953048
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.09621852135399057
+   },
+   {
+    "home": 3,
+    "away": 0,
+    "p": 0.09250237959241488
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.08448596563704237
+   },
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.08068825031790068
+   }
+  ],
+  "btts": 0.5320673627441675,
+  "totals_over": {
+   "over_0.5": 0.9636869658139232,
+   "over_1.5": 0.85270310112899,
+   "over_2.5": 0.6493120077135582,
+   "over_3.5": 0.4258038363498907,
+   "over_4.5": 0.2380414465661683,
+   "over_5.5": 0.11568417347505712,
+   "over_6.5": 0.048970071247938486
+  },
+  "total_buckets": {
+   "0-1": 0.1472968988710101,
+   "2": 0.20339109341543163,
+   "3": 0.22350817136366757,
+   "4": 0.18776238978372245,
+   "5+": 0.2380414465661683
+  },
+  "clean_sheet_home": 0.42552607972191,
+  "clean_sheet_away": 0.07871959171999914,
+  "home_goal_dist": [
+   0.07871959171999914,
+   0.2073431185896169,
+   0.2621176278454501,
+   0.21667428604259614,
+   0.13267516287867037,
+   0.06435367056572462,
+   0.02581171313429508,
+   0.012304829223647616
+  ],
+  "away_goal_dist": [
+   0.42552607972191,
+   0.3698476686187701,
+   0.15351443334301923,
+   0.041385856991370554,
+   0.00823580767035007,
+   0.0012993250010227522,
+   0.0001698563673564969,
+   2.097228620073931e-05
+  ],
+  "intervals": {
+   "home_goals_80": [
+    1,
+    5
+   ],
+   "away_goals_80": [
+    0,
+    2
+   ],
+   "total_goals_80": [
+    1,
+    6
+   ],
+   "goal_diff_80": [
+    -1,
+    4
+   ]
+  },
+  "score_grid": [
+   [
+    0.036313,
+    0.026498,
+    0.011878,
+    0.003252,
+    0.000658,
+    0.000105,
+    1.4e-05
+   ],
+   [
+    0.084486,
+    0.080688,
+    0.031536,
+    0.008588,
+    0.001729,
+    0.000276,
+    3.6e-05
+   ],
+   [
+    0.110825,
+    0.096219,
+    0.041677,
+    0.010833,
+    0.002169,
+    0.000344,
+    4.5e-05
+   ],
+   [
+    0.092502,
+    0.079831,
+    0.03299,
+    0.009261,
+    0.00177,
+    0.000279,
+    3.6e-05
+   ],
+   [
+    0.057008,
+    0.048898,
+    0.020087,
+    0.00538,
+    0.00111,
+    0.000167,
+    2.2e-05
+   ],
+   [
+    0.027802,
+    0.023699,
+    0.009676,
+    0.002576,
+    0.000507,
+    8.3e-05,
+    1e-05
+   ],
+   [
+    0.011209,
+    0.009495,
+    0.003853,
+    0.001019,
+    0.0002,
+    3.1e-05,
+    4e-06
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.731105,
+  "p_draw": 0.16945000000000002,
+  "p_away": 0.099445,
+  "se": [
+   0.0009914395568439865,
+   0.0008388584430641441,
+   0.0006691625063278725
+  ],
+  "max_abs_dev_vs_exact": 0.0008214058401943558,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   1.9337051402665506,
+   3.0728549474422966
+  ],
+  "xg_away_80": [
+   0.6263168377719976,
+   1.073357862330285
+  ],
+  "p_home_80": [
+   0.6194150277482758,
+   0.8206252608374857
+  ],
+  "p_draw_80": [
+   0.11936940668813996,
+   0.22065545796001806
+  ],
+  "p_away_80": [
+   0.0596030708266053,
+   0.1601365468579346
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.18363150217327295,
+   0.19991848716708133
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.6802974169282454,
+   "p_draw": 0.1935256197476284,
+   "p_away": 0.12617696332412626,
+   "xg_home": 2.1942222188270035,
+   "xg_away": 0.8362224529175996,
+   "weight": 0.0077
+  },
+  "elo": {
+   "p_home": 0.7741451587467175,
+   "p_draw": 0.1426641994177169,
+   "p_away": 0.08319064183556574,
+   "xg_home": 2.6313166721603922,
+   "xg_away": 0.7539611800103548,
+   "weight": 0.3721
+  },
+  "standard_dc": {
+   "p_home": 0.6183272344508439,
+   "p_draw": 0.2312702977573372,
+   "p_away": 0.1504024677918188,
+   "xg_home": 1.8535492133010623,
+   "xg_away": 0.7983053938261909,
+   "weight": 0.0028
+  },
+  "home_away_rate": {
+   "p_home": 0.4458870067103181,
+   "p_draw": 0.24483702415909522,
+   "p_away": 0.3092759691305866,
+   "xg_home": 1.6003218680480662,
+   "xg_away": 1.2935310559387128,
+   "weight": 0.001
+  },
+  "xg_dc": {
+   "p_home": 0.6852288490187752,
+   "p_draw": 0.18673867781654876,
+   "p_away": 0.12803247316467598,
+   "xg_home": 2.29121926162638,
+   "xg_away": 0.8924720687761422,
+   "weight": 0.6164
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Independent results-only Elo: Paris SG 1948 vs Lorient 1597 (gap +351 before home advantage).",
+   "effect": 0.5268
+  },
+  {
+   "text": "Paris SG attack vs Lorient defence: time-weighted strength gap multiplies Paris SG's scoring rate by \u00d71.54 relative to an average pairing (from 40/29 decay-weighted matches).",
+   "effect": 0.4334
+  },
+  {
+   "text": "Lorient attack vs Paris SG defence: rate multiplier \u00d70.69 for the away side.",
+   "effect": 0.3675
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.7305973628368094,
+  "p_draw": 0.16913623132299616,
+  "p_away": 0.10026640584019436,
+  "xg_home": 2.47957802699209,
+  "xg_away": 0.8416421076775908
+ },
+ "context": {
+  "fetched_at": "2026-11-26T03:57:07+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5803007",
+    "fetched_at": "2026-11-26T03:57:07+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "4-3-3",
+    "starters": [
+     {
+      "name": "Matvey Safonov",
+      "pos": "G",
+      "shirt": "39"
+     },
+     {
+      "name": "Achraf Hakimi",
+      "pos": "D",
+      "shirt": "2"
+     },
+     {
+      "name": "Ilya Zabarnyi",
+      "pos": "D",
+      "shirt": "6"
+     },
+     {
+      "name": "Lucas Hern\u00e1ndez",
+      "pos": "D",
+      "shirt": "21"
+     },
+     {
+      "name": "Nuno Mendes",
+      "pos": "D",
+      "shirt": "25"
+     },
+     {
+      "name": "Warren Za\u00efre-Emery",
+      "pos": "M",
+      "shirt": "33"
+     },
+     {
+      "name": "Jo\u00e3o Neves",
+      "pos": "M",
+      "shirt": "87"
+     },
+     {
+      "name": "Fabi\u00e1n Ruiz",
+      "pos": "M",
+      "shirt": "8"
+     },
+     {
+      "name": "Maghnes Akliouche",
+      "pos": "F",
+      "shirt": "11"
+     },
+     {
+      "name": "Senny Mayulu",
+      "pos": "F",
+      "shirt": "24"
+     },
+     {
+      "name": "D\u00e9sir\u00e9 Dou\u00e9",
+      "pos": "F",
+      "shirt": "14"
+     }
+    ],
+    "fetched_at": "2026-11-26T03:57:07+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [],
+    "mean_xi_attack_index": 0.112,
+    "mean_continuity": 0.533,
+    "p_backup_gk": 0.175
+   },
+   "away": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "3-4-2-1",
+    "starters": [
+     {
+      "name": "Yvon Mvogo",
+      "pos": "G",
+      "shirt": "38"
+     },
+     {
+      "name": "Nathaniel Adjei",
+      "pos": "D",
+      "shirt": "32"
+     },
+     {
+      "name": "Montassar Talbi",
+      "pos": "D",
+      "shirt": "3"
+     },
+     {
+      "name": "Nosa Edward Obaretin",
+      "pos": "D",
+      "shirt": "55"
+     },
+     {
+      "name": "Dembo Sylla",
+      "pos": "M",
+      "shirt": "20"
+     },
+     {
+      "name": "Noah Cadiou",
+      "pos": "M",
+      "shirt": "8"
+     },
+     {
+      "name": "Arthur Avom",
+      "pos": "M",
+      "shirt": "62"
+     },
+     {
+      "name": "Ars\u00e8ne Kouassi",
+      "pos": "M",
+      "shirt": "43"
+     },
+     {
+      "name": "Jean-Victor Makengo",
+      "pos": "M",
+      "shirt": "17"
+     },
+     {
+      "name": "Gabin Bernardeau",
+      "pos": "M",
+      "shirt": "33"
+     },
+     {
+      "name": "Aiyegun Tosin",
+      "pos": "F",
+      "shirt": "15"
+     }
+    ],
+    "fetched_at": "2026-11-26T03:57:07+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [],
+    "mean_xi_attack_index": -0.012,
+    "mean_continuity": -0.432,
+    "p_backup_gk": 0.0
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "D\u00e9sir\u00e9 Dou\u00e9",
+     "type": "injury",
+     "expected_return": "Out for season",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5803007",
+     "fetched_at": "2026-11-26T03:57:07+00:00"
+    },
+    {
+     "player": "Khvicha Kvaratskhelia",
+     "type": "injury",
+     "expected_return": "Out for season",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5803007",
+     "fetched_at": "2026-11-26T03:57:07+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "Souleymane Tour\u00e9",
+     "type": "injury",
+     "expected_return": "A few weeks",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5803007",
+     "fetched_at": "2026-11-26T03:57:07+00:00"
+    },
+    {
+     "player": "Panos Katseris",
+     "type": "injury",
+     "expected_return": "Early December 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5803007",
+     "fetched_at": "2026-11-26T03:57:07+00:00"
+    },
+    {
+     "player": "Bandiougou Fadiga",
+     "type": "injury",
+     "expected_return": "Early December 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5803007",
+     "fetched_at": "2026-11-26T03:57:07+00:00"
+    },
+    {
+     "player": "Mohamed Bamba",
+     "type": "injury",
+     "expected_return": "About 1-2 weeks",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5803007",
+     "fetched_at": "2026-11-26T03:57:07+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 7,
+    "n21": 2,
+    "last_match": "2026-11-21"
+   },
+   "away": {
+    "rest_days": 6,
+    "n21": 2,
+    "last_match": "2026-11-22"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 433.2
+  },
+  "venue": {
+   "name": "Parc des Princes",
+   "city": "Paris",
+   "lat": 48.841433445,
+   "lon": 2.253048867
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 2.7,
+   "temp_c": 2.9,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=48.841&longitude=2.253",
+   "fetched_at": "2026-11-26T03:57:07+00:00",
+   "lat": 48.841433445,
+   "lon": 2.253048867
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": -5.4,
+    "d_p_draw_pp": 2.83,
+    "d_p_away_pp": 2.56,
+    "d_xg_home": -0.209,
+    "d_xg_away": 0.086
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.024,
+    "away_rate_mult": 1.0077,
+    "d_p_home_pp": 0.79,
+    "d_p_draw_pp": -0.48,
+    "d_p_away_pp": -0.31,
+    "d_xg_home": 0.057,
+    "d_xg_away": 0.006,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "home_rate_mult": 1.052,
+    "away_rate_mult": 0.9837,
+    "d_p_home_pp": 2.26,
+    "d_p_draw_pp": -1.22,
+    "d_p_away_pp": -1.04,
+    "d_xg_home": 0.125,
+    "d_xg_away": -0.013,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 7.0,
+   "rest_a": 6.0,
+   "n21_h": 2.0,
+   "n21_a": 2.0,
+   "travel_km": 433.16916938679526,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 2.7,
+   "temp_c": 2.9
+  }
+ },
+ "lineup_simulation": {
+  "applied": true,
+  "validated": false,
+  "scale": 0.5,
+  "basis": {
+   "home": "projected",
+   "away": "projected"
+  },
+  "home_rate_mult": 1.0257,
+  "away_rate_mult": 0.9918,
+  "note": "Starting-XI strength, continuity and backup-keeper adjustment at half the fitted size. It did not pass the out-of-sample test, so bets are not priced from it.",
+  "p_home": 0.7420091067950575,
+  "p_draw": 0.16303444964646172,
+  "p_away": 0.09495644355848072,
+  "xg_home": 2.5411968168542836,
+  "xg_away": 0.8348789545314758,
+  "xg_total": 3.3760757713857594,
+  "btts": 0.5318726961105423,
+  "totals_over": {
+   "over_0.5": 0.9656892680500712,
+   "over_1.5": 0.8589928533772244,
+   "over_2.5": 0.6602683111278885,
+   "over_3.5": 0.43807356894093213,
+   "over_4.5": 0.2482772932209634,
+   "over_5.5": 0.12242797577961831,
+   "over_6.5": 0.052639565507867914
+  },
+  "modal_score": {
+   "home": 2,
+   "away": 0,
+   "p": 0.11013083362211758
+  },
+  "top_scores": [
+   {
+    "home": 2,
+    "away": 0,
+    "p": 0.11013083362211758
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.09483107672542265
+   },
+   {
+    "home": 3,
+    "away": 0,
+    "p": 0.09429209264578957
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.08185988215545016
+   },
+   {
+    "home": 3,
+    "away": 1,
+    "p": 0.08069908004277268
+   }
+  ],
+  "score_grid": [
+   [
+    0.034311,
+    0.024837,
+    0.011047,
+    0.003002,
+    0.000603,
+    9.6e-05,
+    1.3e-05
+   ],
+   [
+    0.08186,
+    0.077547,
+    0.03007,
+    0.008127,
+    0.001624,
+    0.000257,
+    3.4e-05
+   ],
+   [
+    0.110131,
+    0.094831,
+    0.04075,
+    0.010511,
+    0.002089,
+    0.000329,
+    4.3e-05
+   ],
+   [
+    0.094292,
+    0.080699,
+    0.03308,
+    0.009213,
+    0.001748,
+    0.000274,
+    3.5e-05
+   ],
+   [
+    0.059618,
+    0.050706,
+    0.02066,
+    0.005489,
+    0.001124,
+    0.000168,
+    2.2e-05
+   ],
+   [
+    0.029833,
+    0.025213,
+    0.010209,
+    0.002696,
+    0.000527,
+    8.5e-05,
+    1e-05
+   ],
+   [
+    0.012343,
+    0.010366,
+    0.004171,
+    0.001095,
+    0.000213,
+    3.3e-05,
+    4e-06
+   ]
+  ]
+ },
+ "confidence": {
+  "tier": "HIGH",
+  "p_max": 0.7305973628368094,
+  "entropy_nats": 0.760498076944771,
+  "text": "Most likely result has P = 73.1%. In the out-of-sample backtest, favourites priced 0.70\u20130.80 won 76.3% \u00b1 1.1% (n=1417, mean forecast 74.2%). Backtest RPS for F1: 0.2074; exact-score top-5 hit rate 45.4% (n=1017). Overall champion RPS 0.2093 vs home/away baseline 0.2284 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-11-22, n=41,487). Outcome-certainty tier: HIGH (entropy 0.760 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Paris SG: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Lorient: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior)."
+ ],
+ "verdict": "Paris SG 2\u20130 Lorient is the single most probable scoreline at 11.1%: expected goals 2.48\u20130.84 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.038). Exact scores are inherently uncertain; the 1X2 split is 73.1%/16.9%/10.0%.",
+ "resolved": {
+  "home_key": "France:Paris SG",
+  "away_key": "France:Lorient",
+  "div": "F1",
+  "home_div": "F1",
+  "away_div": "F1",
+  "country": "France"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: FC Lorient at Paris Saint-Germain FC\nCompetition: Ligue 1\nDate: 2026-11-28 14:45 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-11-24\n\nPRIMARY FINAL SCORE PREDICTION\n\nParis Saint-Germain FC 2 \u2013 0 FC Lorient\n(modal exact score, probability 11.1%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 2.48\nAway: 0.84\nExpected Total: 3.32\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 73.1%\nDraw: 16.9%\nAway Win: 10.0%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 2\u20130: 11.1%\n2. 2\u20131: 9.6%\n3. 3\u20130: 9.3%\n4. 1\u20130: 8.4%\n5. 1\u20131: 8.1%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 14.7%\nTotal 2 goals: 20.3%\nTotal 3 goals: 22.4%\nTotal 4 goals: 18.8%\nTotal 5+ goals: 23.8%\n\nBoth Teams Score: 53.2%\nClean sheet Paris Saint-Germain FC: 42.6% \u00b7 Clean sheet FC Lorient: 7.9%\n\nMATCH INTELLIGENCE\n\n1. Independent results-only Elo: Paris SG 1948 vs Lorient 1597 (gap +351 before home advantage).\n2. Paris SG attack vs Lorient defence: time-weighted strength gap multiplies Paris SG's scoring rate by \u00d71.54 relative to an average pairing (from 40/29 decay-weighted matches).\n3. Lorient attack vs Paris SG defence: rate multiplier \u00d70.69 for the away side.\n\nMODEL CONFIDENCE\n\nMost likely result has P = 73.1%. In the out-of-sample backtest, favourites priced 0.70\u20130.80 won 76.3% \u00b1 1.1% (n=1417, mean forecast 74.2%). Backtest RPS for F1: 0.2074; exact-score top-5 hit rate 45.4% (n=1017). Overall champion RPS 0.2093 vs home/away baseline 0.2284 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-11-22, n=41,487). Outcome-certainty tier: HIGH (entropy 0.760 nats of max 1.099).\nParameter-uncertainty 80% bands: xG Paris Saint-Germain FC 1.93\u20133.07, xG FC Lorient 0.63\u20131.07; P(home win) 61.9%\u201382.1%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0008 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nParis SG: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-11-25 22:57 EST (4-3-3)\n  Matvey Safonov (G), Achraf Hakimi (D), Ilya Zabarnyi (D), Lucas Hern\u00e1ndez (D), Nuno Mendes (D), Warren Za\u00efre-Emery (M), Jo\u00e3o Neves (M), Fabi\u00e1n Ruiz (M), Maghnes Akliouche (F), Senny Mayulu (F), D\u00e9sir\u00e9 Dou\u00e9 (F)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs +0.112 (log) \u00b7 continuity +0.53 \u00b7 P(backup GK) 18%\nLorient: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-11-25 22:57 EST (3-4-2-1)\n  Yvon Mvogo (G), Nathaniel Adjei (D), Montassar Talbi (D), Nosa Edward Obaretin (D), Dembo Sylla (M), Noah Cadiou (M), Arthur Avom (M), Ars\u00e8ne Kouassi (M), Jean-Victor Makengo (M), Gabin Bernardeau (M), Aiyegun Tosin (F)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs -0.012 (log) \u00b7 continuity -0.43 \u00b7 P(backup GK) 0%\n\nKEY ABSENCES\n\n- Paris SG: D\u00e9sir\u00e9 Dou\u00e9 \u2014 injury, Out for season [FotMob, 2026-11-25 22:57 EST]\n- Paris SG: Khvicha Kvaratskhelia \u2014 injury, Out for season [FotMob, 2026-11-25 22:57 EST]\n- Lorient: Souleymane Tour\u00e9 \u2014 injury, A few weeks [FotMob, 2026-11-25 22:57 EST]\n- Lorient: Panos Katseris \u2014 injury, Early December 2026 [FotMob, 2026-11-25 22:57 EST]\n- Lorient: Bandiougou Fadiga \u2014 injury, Early December 2026 [FotMob, 2026-11-25 22:57 EST]\n- Lorient: Mohamed Bamba \u2014 injury, About 1-2 weeks [FotMob, 2026-11-25 22:57 EST]\n\nWEATHER AT VENUE\n\nParc des Princes, Paris: 2.9 \u00b0C, wind 2.7 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-11-25 22:57 EST]\n\nREST & TRAVEL\n\nParis SG: 7 days' rest, 2 matches in previous 21 days \u00b7 Lorient: 6 days' rest, 2 in 21 days \u00b7 away travel 433.2 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 73.1% / 16.9% / 10.0%, xG 2.48\u20130.84\n- Understat xG component (validated, in ensemble): home -5.40 pp, draw +2.83 pp, away +2.56 pp; xG -0.209 / +0.086\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.79 pp, draw -0.48 pp, away -0.31 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- lineup: NOT APPLIED (failed out-of-sample validation); would have moved home +2.26 pp, draw -1.22 pp, away -1.04 pp\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Paris SG: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Lorient: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n\nFINAL VERDICT\n\nParis SG 2\u20130 Lorient is the single most probable scoreline at 11.1%: expected goals 2.48\u20130.84 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.038). Exact scores are inherently uncertain; the 1X2 split is 73.1%/16.9%/10.0%.\n",
+ "refresh_id": "ae5a603dc512410eb21227d5c171f564",
+ "frozen_at": "2026-11-26T03:57:07+00:00",
+ "sha256": "06e42a3ae3e9d89f99bf0937f4382993e3be5a60d6b03c12fa5b45bc1ce2ef14"
+}

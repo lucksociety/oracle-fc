@@ -1,0 +1,765 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-11-24",
+ "input_fingerprint": "92e68fb68f0de5c0953fefc54ebfe38af0ab2023506e7ae25712a99c91b28a35",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-11-26T03:57:59+00:00",
+ "fixture": {
+  "event_id": "POLY-1454125",
+  "home_name": "Real Sociedad de F\u00fatbol",
+  "away_name": "Real Madrid CF",
+  "competition": "LaLiga",
+  "subcategory": "lal",
+  "kickoff_utc": "2026-12-02T18:00:00+00:00",
+  "kickoff_local": "2026-12-02 13:00 EST",
+  "home_matched": "Sociedad",
+  "away_matched": "Real Madrid",
+  "match_methods": {
+   "home": {
+    "source": "Real Sociedad de F\u00fatbol",
+    "matched": "Sociedad",
+    "method": "core-tokens",
+    "score": 0.97
+   },
+   "away": {
+    "source": "Real Madrid CF",
+    "matched": "Real Madrid",
+    "method": "core-tokens",
+    "score": 0.97
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.20154461111134153,
+  "p_draw": 0.2261691653262114,
+  "p_away": 0.5722862235624473,
+  "xg_home": 1.167750240616786,
+  "xg_away": 2.041391200046982,
+  "xg_total": 3.209141440663768,
+  "median_total": 3,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.1024557282980568
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.1024557282980568
+   },
+   {
+    "home": 1,
+    "away": 2,
+    "p": 0.09945732648527093
+   },
+   {
+    "home": 0,
+    "away": 2,
+    "p": 0.08428532732171436
+   },
+   {
+    "home": 0,
+    "away": 1,
+    "p": 0.08126298155801244
+   },
+   {
+    "home": 1,
+    "away": 3,
+    "p": 0.06736952119852573
+   }
+  ],
+  "btts": 0.610223901012825,
+  "totals_over": {
+   "over_0.5": 0.9556118996645677,
+   "over_1.5": 0.8314691118602676,
+   "over_2.5": 0.6197389765282415,
+   "over_3.5": 0.4002331085059574,
+   "over_4.5": 0.22156897201588013,
+   "over_5.5": 0.10798661690802551,
+   "over_6.5": 0.04610023999820245
+  },
+  "total_buckets": {
+   "0-1": 0.16853088813973266,
+   "2": 0.2117301353320261,
+   "3": 0.2195058680222842,
+   "4": 0.17866413649007723,
+   "5+": 0.22156897201588013
+  },
+  "clean_sheet_home": 0.12499728994676657,
+  "clean_sheet_away": 0.3091669093758411,
+  "home_goal_dist": [
+   0.3091669093758411,
+   0.365816745142748,
+   0.21229784942362429,
+   0.08198156877973338,
+   0.023848469523020905,
+   0.005581279840483628,
+   0.0010926712788787948,
+   0.00021450663567002296
+  ],
+  "away_goal_dist": [
+   0.12499728994676657,
+   0.2670761826129369,
+   0.2747262212277691,
+   0.1854796430604166,
+   0.0932781717310829,
+   0.0373665598577093,
+   0.012431802246112391,
+   0.004644129317206483
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    3
+   ],
+   "away_goals_80": [
+    0,
+    4
+   ],
+   "total_goals_80": [
+    1,
+    6
+   ],
+   "goal_diff_80": [
+    -3,
+    1
+   ]
+  },
+  "score_grid": [
+   [
+    0.044388,
+    0.081263,
+    0.084285,
+    0.055934,
+    0.027603,
+    0.01085,
+    0.003546
+   ],
+   [
+    0.04288,
+    0.102456,
+    0.099457,
+    0.06737,
+    0.033899,
+    0.013567,
+    0.004507
+   ],
+   [
+    0.024989,
+    0.05477,
+    0.06018,
+    0.039842,
+    0.020388,
+    0.008284,
+    0.002789
+   ],
+   [
+    0.009345,
+    0.020863,
+    0.022378,
+    0.016341,
+    0.008136,
+    0.003346,
+    0.001138
+   ],
+   [
+    0.002649,
+    0.006007,
+    0.006534,
+    0.004636,
+    0.002534,
+    0.001009,
+    0.000346
+   ],
+   [
+    0.000607,
+    0.001394,
+    0.001533,
+    0.001098,
+    0.000581,
+    0.000253,
+    8.4e-05
+   ],
+   [
+    0.000117,
+    0.000271,
+    0.0003,
+    0.000217,
+    0.000115,
+    4.8e-05,
+    1.7e-05
+   ]
+  ],
+  "mass_check": 1.0000000000000002
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.201435,
+  "p_draw": 0.22565500000000002,
+  "p_away": 0.57291,
+  "se": [
+   0.0008968247899534222,
+   0.000934705357251685,
+   0.0011060834776362948
+  ],
+  "max_abs_dev_vs_exact": 0.0006237764375527366,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   0.9031007640282044,
+   1.4561335092195593
+  ],
+  "xg_away_80": [
+   1.6065040176407828,
+   2.4996662309982125
+  ],
+  "p_home_80": [
+   0.14459687767227591,
+   0.29722857351166776
+  ],
+  "p_draw_80": [
+   0.18073589242916566,
+   0.2531600191800317
+  ],
+  "p_away_80": [
+   0.4533093575617712,
+   0.6722404973111319
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.18939480334541958,
+   0.1640705990797262
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.20844554238114762,
+   "p_draw": 0.21040659209397697,
+   "p_away": 0.5811478655248754,
+   "xg_home": 1.2361780046638362,
+   "xg_away": 2.1600114558721404,
+   "weight": 0.0077
+  },
+  "elo": {
+   "p_home": 0.19332365823593956,
+   "p_draw": 0.23597978250083118,
+   "p_away": 0.570696559263229,
+   "xg_home": 0.899399889835088,
+   "xg_away": 1.733200049790126,
+   "weight": 0.3721
+  },
+  "standard_dc": {
+   "p_home": 0.18202553606352267,
+   "p_draw": 0.18602632462924287,
+   "p_away": 0.6319481393072345,
+   "xg_home": 1.3356903390247894,
+   "xg_away": 2.5401507821009717,
+   "weight": 0.0028
+  },
+  "home_away_rate": {
+   "p_home": 0.4534949581524228,
+   "p_draw": 0.2531497119392524,
+   "p_away": 0.2933553299083248,
+   "xg_home": 1.5292489310724624,
+   "xg_away": 1.1795207557117895,
+   "weight": 0.001
+  },
+  "xg_dc": {
+   "p_home": 0.22345761939862505,
+   "p_draw": 0.2117413285649228,
+   "p_away": 0.564801052036452,
+   "xg_home": 1.3036722096726732,
+   "xg_away": 2.1522207475194346,
+   "weight": 0.6164
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Real Madrid attack vs Sociedad defence: rate multiplier \u00d71.79 for the away side.",
+   "effect": 0.5815
+  },
+  {
+   "text": "Independent results-only Elo: Sociedad 1596 vs Real Madrid 1896 (gap -300 before home advantage).",
+   "effect": 0.4503
+  },
+  {
+   "text": "Home advantage (Spain, fitted from results): \u00d71.30 on Sociedad's scoring rate.",
+   "effect": 0.2628
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.2015446111113415,
+  "p_draw": 0.2261691653262114,
+  "p_away": 0.5722862235624473,
+  "xg_home": 1.1677502406167857,
+  "xg_away": 2.041391200046982
+ },
+ "context": {
+  "fetched_at": "2026-11-26T03:57:59+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5868239",
+    "fetched_at": "2026-11-26T03:57:59+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "inferred",
+    "source": null,
+    "formation": "",
+    "starters": [
+     {
+      "name": "Remiro",
+      "pos": "G"
+     },
+     {
+      "name": "Luka Su\u010di\u0107",
+      "pos": "M"
+     },
+     {
+      "name": "Sergio G\u00f3mez",
+      "pos": "D"
+     },
+     {
+      "name": "Carlos Soler",
+      "pos": "M"
+     },
+     {
+      "name": "Jon Mart\u00edn",
+      "pos": "D"
+     },
+     {
+      "name": "Mikel Oyarzabal",
+      "pos": "F"
+     },
+     {
+      "name": "Orri \u00d3skarsson",
+      "pos": "F"
+     },
+     {
+      "name": "Gon\u00e7alo Guedes",
+      "pos": "M"
+     },
+     {
+      "name": "Igor Zubeldia",
+      "pos": "D"
+     },
+     {
+      "name": "Mamadou Sarr",
+      "pos": "D"
+     },
+     {
+      "name": "Jon Gorrotxategi",
+      "pos": "M"
+     }
+    ],
+    "fetched_at": "2026-11-26T03:57:59+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [],
+    "mean_xi_attack_index": 0.031,
+    "mean_continuity": 0.162,
+    "p_backup_gk": 0.305
+   },
+   "away": {
+    "status": "inferred",
+    "source": null,
+    "formation": "",
+    "starters": [
+     {
+      "name": "Thibaut Courtois",
+      "pos": "G"
+     },
+     {
+      "name": "Kylian Mbapp\u00e9",
+      "pos": "F"
+     },
+     {
+      "name": "Jude Bellingham",
+      "pos": "M"
+     },
+     {
+      "name": "Ibrahima Konat\u00e9",
+      "pos": "D"
+     },
+     {
+      "name": "Dean Huijsen",
+      "pos": "D"
+     },
+     {
+      "name": "Arda G\u00fcler",
+      "pos": "M"
+     },
+     {
+      "name": "Federico Valverde",
+      "pos": "M"
+     },
+     {
+      "name": "Yan Diomande",
+      "pos": "F"
+     },
+     {
+      "name": "Marc Cucurella",
+      "pos": "D"
+     },
+     {
+      "name": "Aur\u00e9lien Tchouam\u00e9ni",
+      "pos": "M"
+     },
+     {
+      "name": "Bernardo Silva",
+      "pos": "M"
+     }
+    ],
+    "fetched_at": "2026-11-26T03:57:59+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [],
+    "mean_xi_attack_index": -0.101,
+    "mean_continuity": -0.351,
+    "p_backup_gk": 0.28
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Jon Aramburu",
+     "type": "injury",
+     "expected_return": "About 1-2 weeks",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868239",
+     "fetched_at": "2026-11-26T03:57:59+00:00"
+    },
+    {
+     "player": "Yangel Herrera",
+     "type": "injury",
+     "expected_return": "Early December 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868239",
+     "fetched_at": "2026-11-26T03:57:59+00:00"
+    },
+    {
+     "player": "Ander Barrenetxea",
+     "type": "injury",
+     "expected_return": "Out for season",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868239",
+     "fetched_at": "2026-11-26T03:57:59+00:00"
+    },
+    {
+     "player": "\u00c1lvaro Odriozola",
+     "type": "injury",
+     "expected_return": "Early December 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868239",
+     "fetched_at": "2026-11-26T03:57:59+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "Endrick",
+     "type": "injury",
+     "expected_return": "About 1-2 weeks",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868239",
+     "fetched_at": "2026-11-26T03:57:59+00:00"
+    },
+    {
+     "player": "Ra\u00fal Asencio",
+     "type": "injury",
+     "expected_return": "Back in training",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868239",
+     "fetched_at": "2026-11-26T03:57:59+00:00"
+    },
+    {
+     "player": "Ferland Mendy",
+     "type": "injury",
+     "expected_return": "Back in training",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868239",
+     "fetched_at": "2026-11-26T03:57:59+00:00"
+    },
+    {
+     "player": "Rodrygo",
+     "type": "injury",
+     "expected_return": "Early January 2027",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868239",
+     "fetched_at": "2026-11-26T03:57:59+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 10,
+    "n21": 1,
+    "last_match": "2026-11-22"
+   },
+   "away": {
+    "rest_days": 11,
+    "n21": 1,
+    "last_match": "2026-11-21"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 347.1
+  },
+  "venue": {
+   "name": "Estadio Municipal de Anoeta",
+   "city": "Donostia-San Sebasti\u00e1n",
+   "lat": 43.301375816,
+   "lon": -1.97360158
+  },
+  "weather": {
+   "precip_mm_2h": 0.8999999999999999,
+   "wind_ms": 1.9899999999999998,
+   "temp_c": 11.4,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=43.301&longitude=-1.974",
+   "fetched_at": "2026-11-26T03:57:59+00:00",
+   "lat": 43.301375816,
+   "lon": -1.97360158
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": 1.82,
+    "d_p_draw_pp": -1.43,
+    "d_p_away_pp": -0.39,
+    "d_xg_home": 0.254,
+    "d_xg_away": 0.265
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0214,
+    "away_rate_mult": 1.0069,
+    "d_p_home_pp": 0.34,
+    "d_p_draw_pp": -0.08,
+    "d_p_away_pp": -0.26,
+    "d_xg_home": 0.025,
+    "d_xg_away": 0.015,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0201,
+    "away_rate_mult": 1.0201,
+    "d_p_home_pp": -0.02,
+    "d_p_draw_pp": -0.32,
+    "d_p_away_pp": 0.33,
+    "d_xg_home": 0.024,
+    "d_xg_away": 0.041,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "home_rate_mult": 1.0287,
+    "away_rate_mult": 0.9723,
+    "d_p_home_pp": 1.43,
+    "d_p_draw_pp": 0.5,
+    "d_p_away_pp": -1.93,
+    "d_xg_home": 0.033,
+    "d_xg_away": -0.052,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 10.0,
+   "rest_a": 11.0,
+   "n21_h": 1.0,
+   "n21_a": 1.0,
+   "travel_km": 347.0597508229923,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.8999999999999999,
+   "wind_ms": 1.9899999999999998,
+   "temp_c": 11.4
+  }
+ },
+ "lineup_simulation": {
+  "applied": true,
+  "validated": false,
+  "scale": 0.5,
+  "basis": {
+   "home": "inferred",
+   "away": "inferred"
+  },
+  "home_rate_mult": 1.0142,
+  "away_rate_mult": 0.986,
+  "note": "Starting-XI strength, continuity and backup-keeper adjustment at half the fitted size. It did not pass the out-of-sample test, so bets are not priced from it.",
+  "p_home": 0.20852250998520935,
+  "p_draw": 0.22881038427044956,
+  "p_away": 0.5626671057443411,
+  "xg_home": 1.1837700556035986,
+  "xg_away": 2.014837479881442,
+  "xg_total": 3.1986075354850407,
+  "btts": 0.6120564702010337,
+  "totals_over": {
+   "over_0.5": 0.9550741435282619,
+   "over_1.5": 0.8299996527891947,
+   "over_2.5": 0.6174397596271305,
+   "over_3.5": 0.39790640785971365,
+   "over_4.5": 0.21976454388273214,
+   "over_5.5": 0.10687463402659356,
+   "over_6.5": 0.045521057036589874
+  },
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.10363594142427184
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.10363594142427184
+   },
+   {
+    "home": 1,
+    "away": 2,
+    "p": 0.09917475063255175
+   },
+   {
+    "home": 0,
+    "away": 2,
+    "p": 0.08288973215426253
+   },
+   {
+    "home": 0,
+    "away": 1,
+    "p": 0.08105173796575016
+   },
+   {
+    "home": 1,
+    "away": 3,
+    "p": 0.06626063476216376
+   }
+  ],
+  "score_grid": [
+   [
+    0.044926,
+    0.081052,
+    0.08289,
+    0.054267,
+    0.026434,
+    0.010261,
+    0.003314
+   ],
+   [
+    0.044023,
+    0.103636,
+    0.099175,
+    0.066261,
+    0.032903,
+    0.013003,
+    0.004268
+   ],
+   [
+    0.026034,
+    0.056208,
+    0.06087,
+    0.039741,
+    0.020065,
+    0.008049,
+    0.002677
+   ],
+   [
+    0.009884,
+    0.021732,
+    0.022968,
+    0.016536,
+    0.008122,
+    0.003297,
+    0.001108
+   ],
+   [
+    0.002845,
+    0.006353,
+    0.006808,
+    0.004762,
+    0.002567,
+    0.001009,
+    0.000342
+   ],
+   [
+    0.000662,
+    0.001497,
+    0.001622,
+    0.001145,
+    0.000597,
+    0.000257,
+    8.4e-05
+   ],
+   [
+    0.00013,
+    0.000296,
+    0.000323,
+    0.00023,
+    0.00012,
+    5e-05,
+    1.8e-05
+   ]
+  ]
+ },
+ "confidence": {
+  "tier": "MODERATE",
+  "p_max": 0.5722862235624473,
+  "entropy_nats": 0.978419228981293,
+  "text": "Most likely result has P = 57.2%. In the out-of-sample backtest, favourites priced 0.50\u20130.60 won 54.6% \u00b1 0.5% (n=9745, mean forecast 54.4%). Backtest RPS for SP1: 0.1930; exact-score top-5 hit rate 55.0% (n=1268). Overall champion RPS 0.2093 vs home/away baseline 0.2284 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-11-22, n=41,487). Outcome-certainty tier: MODERATE (entropy 0.978 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Sociedad: no lineup published yet \u2014 XI inferred from recent minutes share minus known absences; 200 configurations simulated (start P=0.7, UNVALIDATED prior).",
+  "Real Madrid: no lineup published yet \u2014 XI inferred from recent minutes share minus known absences; 200 configurations simulated (start P=0.7, UNVALIDATED prior)."
+ ],
+ "verdict": "Sociedad 1\u20131 Real Madrid is the single most probable scoreline at 10.2%: expected goals 1.17\u20132.04 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.038). Exact scores are inherently uncertain; the 1X2 split is 20.2%/22.6%/57.2%.",
+ "resolved": {
+  "home_key": "Spain:Sociedad",
+  "away_key": "Spain:Real Madrid",
+  "div": "SP1",
+  "home_div": "SP1",
+  "away_div": "SP1",
+  "country": "Spain"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: Real Madrid CF at Real Sociedad de F\u00fatbol\nCompetition: LaLiga\nDate: 2026-12-02 13:00 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-11-24\n\nPRIMARY FINAL SCORE PREDICTION\n\nReal Sociedad de F\u00fatbol 1 \u2013 1 Real Madrid CF\n(modal exact score, probability 10.2%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.17\nAway: 2.04\nExpected Total: 3.21\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 20.2%\nDraw: 22.6%\nAway Win: 57.2%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 10.2%\n2. 1\u20132: 9.9%\n3. 0\u20132: 8.4%\n4. 0\u20131: 8.1%\n5. 1\u20133: 6.7%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 16.9%\nTotal 2 goals: 21.2%\nTotal 3 goals: 22.0%\nTotal 4 goals: 17.9%\nTotal 5+ goals: 22.2%\n\nBoth Teams Score: 61.0%\nClean sheet Real Sociedad de F\u00fatbol: 12.5% \u00b7 Clean sheet Real Madrid CF: 30.9%\n\nMATCH INTELLIGENCE\n\n1. Real Madrid attack vs Sociedad defence: rate multiplier \u00d71.79 for the away side.\n2. Independent results-only Elo: Sociedad 1596 vs Real Madrid 1896 (gap -300 before home advantage).\n3. Home advantage (Spain, fitted from results): \u00d71.30 on Sociedad's scoring rate.\n\nMODEL CONFIDENCE\n\nMost likely result has P = 57.2%. In the out-of-sample backtest, favourites priced 0.50\u20130.60 won 54.6% \u00b1 0.5% (n=9745, mean forecast 54.4%). Backtest RPS for SP1: 0.1930; exact-score top-5 hit rate 55.0% (n=1268). Overall champion RPS 0.2093 vs home/away baseline 0.2284 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-11-22, n=41,487). Outcome-certainty tier: MODERATE (entropy 0.978 nats of max 1.099).\nParameter-uncertainty 80% bands: xG Real Sociedad de F\u00fatbol 0.90\u20131.46, xG Real Madrid CF 1.61\u20132.50; P(home win) 14.5%\u201329.7%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0006 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nSociedad: INFERRED, fetched 2026-11-25 22:57 EST\n  Remiro (G), Luka Su\u010di\u0107 (M), Sergio G\u00f3mez (D), Carlos Soler (M), Jon Mart\u00edn (D), Mikel Oyarzabal (F), Orri \u00d3skarsson (F), Gon\u00e7alo Guedes (M), Igor Zubeldia (D), Mamadou Sarr (D), Jon Gorrotxategi (M)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs +0.031 (log) \u00b7 continuity +0.16 \u00b7 P(backup GK) 30%\nReal Madrid: INFERRED, fetched 2026-11-25 22:57 EST\n  Thibaut Courtois (G), Kylian Mbapp\u00e9 (F), Jude Bellingham (M), Ibrahima Konat\u00e9 (D), Dean Huijsen (D), Arda G\u00fcler (M), Federico Valverde (M), Yan Diomande (F), Marc Cucurella (D), Aur\u00e9lien Tchouam\u00e9ni (M), Bernardo Silva (M)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs -0.101 (log) \u00b7 continuity -0.35 \u00b7 P(backup GK) 28%\n\nKEY ABSENCES\n\n- Sociedad: Jon Aramburu \u2014 injury, About 1-2 weeks [FotMob, 2026-11-25 22:57 EST]\n- Sociedad: Yangel Herrera \u2014 injury, Early December 2026 [FotMob, 2026-11-25 22:57 EST]\n- Sociedad: Ander Barrenetxea \u2014 injury, Out for season [FotMob, 2026-11-25 22:57 EST]\n- Sociedad: \u00c1lvaro Odriozola \u2014 injury, Early December 2026 [FotMob, 2026-11-25 22:57 EST]\n- Real Madrid: Endrick \u2014 injury, About 1-2 weeks [FotMob, 2026-11-25 22:57 EST]\n- Real Madrid: Ra\u00fal Asencio \u2014 injury, Back in training [FotMob, 2026-11-25 22:57 EST]\n- Real Madrid: Ferland Mendy \u2014 injury, Back in training [FotMob, 2026-11-25 22:57 EST]\n- Real Madrid: Rodrygo \u2014 injury, Early January 2027 [FotMob, 2026-11-25 22:57 EST]\n\nWEATHER AT VENUE\n\nEstadio Municipal de Anoeta, Donostia-San Sebasti\u00e1n: 11.4 \u00b0C, wind 2.0 m/s, precipitation 0.9 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-11-25 22:57 EST]\n\nREST & TRAVEL\n\nSociedad: 10 days' rest, 1 matches in previous 21 days \u00b7 Real Madrid: 11 days' rest, 1 in 21 days \u00b7 away travel 347.1 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 20.2% / 22.6% / 57.2%, xG 1.17\u20132.04\n- Understat xG component (validated, in ensemble): home +1.82 pp, draw -1.43 pp, away -0.39 pp; xG +0.254 / +0.265\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.34 pp, draw -0.08 pp, away -0.26 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home -0.02 pp, draw -0.32 pp, away +0.33 pp\n- lineup: NOT APPLIED (failed out-of-sample validation); would have moved home +1.43 pp, draw +0.50 pp, away -1.93 pp\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Sociedad: no lineup published yet \u2014 XI inferred from recent minutes share minus known absences; 200 configurations simulated (start P=0.7, UNVALIDATED prior).\n- Real Madrid: no lineup published yet \u2014 XI inferred from recent minutes share minus known absences; 200 configurations simulated (start P=0.7, UNVALIDATED prior).\n\nFINAL VERDICT\n\nSociedad 1\u20131 Real Madrid is the single most probable scoreline at 10.2%: expected goals 1.17\u20132.04 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.038). Exact scores are inherently uncertain; the 1X2 split is 20.2%/22.6%/57.2%.\n",
+ "refresh_id": "f3789e97860d4c328c95959d583f2b57",
+ "frozen_at": "2026-11-26T03:57:59+00:00",
+ "sha256": "ed0a72417e5878e4d2b5cd3ff81ce0655d9b5df8fcd73ad3683323e57dc297f9"
+}

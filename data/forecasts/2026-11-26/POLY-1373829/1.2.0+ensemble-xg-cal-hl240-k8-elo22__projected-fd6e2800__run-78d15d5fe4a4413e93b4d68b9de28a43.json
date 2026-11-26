@@ -1,0 +1,634 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-11-24",
+ "input_fingerprint": "92e68fb68f0de5c0953fefc54ebfe38af0ab2023506e7ae25712a99c91b28a35",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-11-26T03:56:11+00:00",
+ "fixture": {
+  "event_id": "POLY-1373829",
+  "home_name": "FC Nordsj\u00e6lland",
+  "away_name": "Panathinaik\u00f3s AO",
+  "competition": "UEFA Conference League",
+  "subcategory": "col",
+  "kickoff_utc": "2026-11-26T20:00:00+00:00",
+  "kickoff_local": "2026-11-26 15:00 EST",
+  "home_matched": "Nordsjaelland",
+  "away_matched": "Panathinaikos",
+  "match_methods": {
+   "home": {
+    "source": "FC Nordsj\u00e6lland",
+    "matched": "Nordsjaelland",
+    "method": "core-tokens",
+    "score": 0.97
+   },
+   "away": {
+    "source": "Panathinaik\u00f3s AO",
+    "matched": "Panathinaikos",
+    "method": "fuzzy",
+    "score": 0.897
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.3838766365043169,
+  "p_draw": 0.25868776395157406,
+  "p_away": 0.3574355995441091,
+  "xg_home": 1.5285050127129245,
+  "xg_away": 1.4719952844782604,
+  "xg_total": 3.000500297191185,
+  "median_total": 3,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.12145576664440726
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.12145576664440726
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.08799524430039402
+   },
+   {
+    "home": 1,
+    "away": 2,
+    "p": 0.08423711327554695
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.07109901803953776
+   },
+   {
+    "home": 2,
+    "away": 2,
+    "p": 0.06767116197001186
+   }
+  ],
+  "btts": 0.6199515808019058,
+  "totals_over": {
+   "over_0.5": 0.948988995236942,
+   "over_1.5": 0.810509679411113,
+   "over_2.5": 0.5798048394701133,
+   "over_3.5": 0.35348405207790623,
+   "over_4.5": 0.18110180438748347,
+   "over_5.5": 0.0806509749038879,
+   "over_6.5": 0.030954603587654464
+  },
+  "total_buckets": {
+   "0-1": 0.18949032058888718,
+   "2": 0.23070483994099983,
+   "3": 0.22632078739220696,
+   "4": 0.1723822476904227,
+   "5+": 0.18110180438748347
+  },
+  "clean_sheet_home": 0.22282442357687585,
+  "clean_sheet_away": 0.20823500038427667,
+  "home_goal_dist": [
+   0.20823500038427667,
+   0.33768788526319127,
+   0.2595755710226288,
+   0.12923407282736088,
+   0.04742934837938824,
+   0.01374841872256041,
+   0.0032850865361477824,
+   0.0008046168644461366
+  ],
+  "away_goal_dist": [
+   0.22282442357687585,
+   0.34338406990406317,
+   0.2527929345132519,
+   0.12152323044428508,
+   0.043442405000395284,
+   0.012378500225345122,
+   0.002933907918903741,
+   0.000720528416879878
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    3
+   ],
+   "away_goals_80": [
+    0,
+    3
+   ],
+   "total_goals_80": [
+    1,
+    5
+   ],
+   "goal_diff_80": [
+    -2,
+    2
+   ]
+  },
+  "score_grid": [
+   [
+    0.051011,
+    0.06738,
+    0.052024,
+    0.025293,
+    0.009127,
+    0.00262,
+    0.000625
+   ],
+   [
+    0.071099,
+    0.121456,
+    0.084237,
+    0.040797,
+    0.014664,
+    0.004193,
+    0.000996
+   ],
+   [
+    0.057225,
+    0.087995,
+    0.067671,
+    0.03133,
+    0.011218,
+    0.003195,
+    0.000756
+   ],
+   [
+    0.028795,
+    0.044131,
+    0.03245,
+    0.016254,
+    0.005563,
+    0.001578,
+    0.000372
+   ],
+   [
+    0.010656,
+    0.016278,
+    0.011928,
+    0.005712,
+    0.002115,
+    0.000573,
+    0.000135
+   ],
+   [
+    0.003108,
+    0.004733,
+    0.003456,
+    0.001649,
+    0.000584,
+    0.000171,
+    3.8e-05
+   ],
+   [
+    0.000746,
+    0.001133,
+    0.000825,
+    0.000392,
+    0.000138,
+    3.9e-05,
+    9e-06
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.384745,
+  "p_draw": 0.2586,
+  "p_away": 0.35665500000000006,
+  "se": [
+   0.0010879252846013828,
+   0.0009790966244452076,
+   0.0010711027284415814
+  ],
+  "max_abs_dev_vs_exact": 0.0008683634956830888,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   1.1460269058885297,
+   1.949280838459599
+  ],
+  "xg_away_80": [
+   1.10176505466307,
+   1.8695557769654259
+  ],
+  "p_home_80": [
+   0.27859076117695963,
+   0.507395546960956
+  ],
+  "p_draw_80": [
+   0.2178743058846924,
+   0.27920553343166077
+  ],
+  "p_away_80": [
+   0.2530020991200398,
+   0.4748140929040717
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.21058742732991648,
+   0.19624312068212504
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.4056657074161425,
+   "p_draw": 0.2623856506468263,
+   "p_away": 0.33194864193703133,
+   "xg_home": 1.4665782606129303,
+   "xg_away": 1.3046121480504502,
+   "weight": 0.0077
+  },
+  "elo": {
+   "p_home": 0.33694365102715557,
+   "p_draw": 0.23866693686687449,
+   "p_away": 0.42438941210596987,
+   "xg_home": 1.4330742809118202,
+   "xg_away": 1.6341846258027959,
+   "weight": 0.3721
+  },
+  "standard_dc": {
+   "p_home": 0.4015265476542564,
+   "p_draw": 0.2735978896819918,
+   "p_away": 0.3248755626637519,
+   "xg_home": 1.4006402636549624,
+   "xg_away": 1.2358661999908513,
+   "weight": 0.0028
+  },
+  "home_away_rate": {
+   "p_home": 0.4869740260967273,
+   "p_draw": 0.21947155313292951,
+   "p_away": 0.2935544207703431,
+   "xg_home": 1.9476522826237446,
+   "xg_away": 1.4771195876693495,
+   "weight": 0.001
+  },
+  "xg_dc": {
+   "p_home": 0.41802970476531676,
+   "p_draw": 0.25531243412218124,
+   "p_away": 0.32665786111250217,
+   "xg_home": 1.5451844447129208,
+   "xg_away": 1.3406667533805665,
+   "weight": 0.6164
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Home advantage (Europe, fitted from results): \u00d71.31 on Nordsjaelland's scoring rate.",
+   "effect": 0.2726
+  },
+  {
+   "text": "Independent results-only Elo: Nordsjaelland 1669 vs Panathinaikos 1803 (gap -134 before home advantage).",
+   "effect": 0.2017
+  },
+  {
+   "text": "Context \u2014 Understat xG component (validated, in ensemble): home win +5.1 pp, draw +1.0 pp, away win -6.1 pp (xG +0.07 / -0.18).",
+   "effect": 0.1839
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.3838766365043169,
+  "p_draw": 0.25868776395157406,
+  "p_away": 0.3574355995441091,
+  "xg_home": 1.5285050127129245,
+  "xg_away": 1.4719952844782604
+ },
+ "context": {
+  "fetched_at": "2026-11-26T03:56:11+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/6112529",
+    "fetched_at": "2026-11-26T03:56:11+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "projected",
+    "source": "FotMob projected XI (enetpulse)",
+    "formation": "3-4-3",
+    "starters": [
+     {
+      "name": "Andreas Hansen",
+      "pos": "G",
+      "shirt": "13"
+     },
+     {
+      "name": "Markus Walker",
+      "pos": "M",
+      "shirt": "28"
+     },
+     {
+      "name": "Victor Nelsson",
+      "pos": "D",
+      "shirt": "25"
+     },
+     {
+      "name": "Noah Markmann",
+      "pos": "D",
+      "shirt": "4"
+     },
+     {
+      "name": "Peter Ankersen",
+      "pos": "D",
+      "shirt": "2"
+     },
+     {
+      "name": "Justin Janssen",
+      "pos": "M",
+      "shirt": "18"
+     },
+     {
+      "name": "Nicklas R\u00f8jkj\u00e6r",
+      "pos": "M",
+      "shirt": "8"
+     },
+     {
+      "name": "Juho L\u00e4hteenm\u00e4ki",
+      "pos": "M",
+      "shirt": "5"
+     },
+     {
+      "name": "Hjalte Boe Rasmussen",
+      "pos": "F",
+      "shirt": "40"
+     },
+     {
+      "name": "Alexander Lind",
+      "pos": "F",
+      "shirt": "11"
+     },
+     {
+      "name": "Prince Junior",
+      "pos": "F",
+      "shirt": "10"
+     }
+    ],
+    "fetched_at": "2026-11-26T03:56:11+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   },
+   "away": {
+    "status": "projected",
+    "source": "FotMob projected XI (enetpulse)",
+    "formation": "4-4-2",
+    "starters": [
+     {
+      "name": "I\u00f1aki Pe\u00f1a",
+      "pos": "G",
+      "shirt": "1"
+     },
+     {
+      "name": "Davide Calabria",
+      "pos": "D",
+      "shirt": "2"
+     },
+     {
+      "name": "Stefan de Vrij",
+      "pos": "D",
+      "shirt": "6"
+     },
+     {
+      "name": "Rick van Drongelen",
+      "pos": "D",
+      "shirt": "55"
+     },
+     {
+      "name": "Giorgos Kyriakopoulos",
+      "pos": "D",
+      "shirt": "77"
+     },
+     {
+      "name": "Facundo Pellistri",
+      "pos": "F",
+      "shirt": "28"
+     },
+     {
+      "name": "Imr\u00e2n Louza",
+      "pos": "M",
+      "shirt": "26"
+     },
+     {
+      "name": "Pedro Chirivella",
+      "pos": "M",
+      "shirt": "4"
+     },
+     {
+      "name": "Vicente Taborda",
+      "pos": "M",
+      "shirt": "20"
+     },
+     {
+      "name": "Levi Garc\u00eda",
+      "pos": "F",
+      "shirt": "99"
+     },
+     {
+      "name": "Cyriel Dessers",
+      "pos": "F",
+      "shirt": "9"
+     }
+    ],
+    "fetched_at": "2026-11-26T03:56:11+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Araphat Mohammed",
+     "type": "injury",
+     "expected_return": "Day to day",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6112529",
+     "fetched_at": "2026-11-26T03:56:11+00:00"
+    },
+    {
+     "player": "Souleymane Alio",
+     "type": "injury",
+     "expected_return": "Day to day",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6112529",
+     "fetched_at": "2026-11-26T03:56:11+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "Sverrir Ingi Ingason",
+     "type": "injury",
+     "expected_return": "Unknown",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6112529",
+     "fetched_at": "2026-11-26T03:56:11+00:00"
+    },
+    {
+     "player": "Azzedine Ounahi",
+     "type": "injury",
+     "expected_return": "Early January 2027",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6112529",
+     "fetched_at": "2026-11-26T03:56:11+00:00"
+    },
+    {
+     "player": "Santino Andino Valencia",
+     "type": "injury",
+     "expected_return": "Unknown",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/6112529",
+     "fetched_at": "2026-11-26T03:56:11+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 4,
+    "n21": 2,
+    "last_match": "2026-11-22"
+   },
+   "away": {
+    "rest_days": 4,
+    "n21": 2,
+    "last_match": "2026-11-22"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 2152.8
+  },
+  "venue": {
+   "name": "Right to Dream Park",
+   "city": "Farum",
+   "lat": 55.816075767,
+   "lon": 12.353043705
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 1.5,
+   "temp_c": 0.0,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=55.816&longitude=12.353",
+   "fetched_at": "2026-11-26T03:56:11+00:00",
+   "lat": 55.816075767,
+   "lon": 12.353043705
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": 5.1,
+    "d_p_draw_pp": 1.03,
+    "d_p_away_pp": -6.13,
+    "d_xg_home": 0.069,
+    "d_xg_away": -0.182
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.01,
+    "away_rate_mult": 1.01,
+    "d_p_home_pp": 0.08,
+    "d_p_draw_pp": -0.15,
+    "d_p_away_pp": 0.07,
+    "d_xg_home": 0.015,
+    "d_xg_away": 0.014,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0451,
+    "away_rate_mult": 1.0144,
+    "d_p_home_pp": 1.21,
+    "d_p_draw_pp": -0.45,
+    "d_p_away_pp": -0.75,
+    "d_xg_home": 0.066,
+    "d_xg_away": 0.021,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 0.9878,
+    "away_rate_mult": 0.9878,
+    "d_p_home_pp": -0.09,
+    "d_p_draw_pp": 0.18,
+    "d_p_away_pp": -0.09,
+    "d_xg_home": -0.018,
+    "d_xg_away": -0.017,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "reason": "failed validation; no live features"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 4.0,
+   "rest_a": 4.0,
+   "n21_h": 2.0,
+   "n21_a": 2.0,
+   "travel_km": 2152.758784846969,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 1.5,
+   "temp_c": 0.0
+  }
+ },
+ "lineup_simulation": {
+  "applied": false,
+  "basis": {
+   "home": "projected",
+   "away": "projected"
+  },
+  "reason": "No player ratings exist for this league, so the lineup and formation are shown but cannot change the probabilities."
+ },
+ "confidence": {
+  "tier": "LOW",
+  "p_max": 0.3838766365043169,
+  "entropy_nats": 1.0850467180437287,
+  "text": "Most likely result has P = 38.4%. In the out-of-sample backtest, favourites priced 0.33\u20130.40 won 38.2% \u00b1 0.5% (n=8558, mean forecast 37.8%). Backtest RPS for UCL: 0.1957; exact-score top-5 hit rate 40.8% (n=503). Overall champion RPS 0.2093 vs home/away baseline 0.2284 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-11-22, n=41,487). Outcome-certainty tier: LOW (entropy 1.085 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Europa/Conference League: modelled with the Champions League home-advantage and scoring environment (no UEL/UECL results ingested yet).",
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Nordsjaelland: lineup is PROJECTED (FotMob projected XI (enetpulse)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Nordsjaelland: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.",
+  "Panathinaikos: lineup is PROJECTED (FotMob projected XI (enetpulse)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Panathinaikos: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+ ],
+ "verdict": "Nordsjaelland 1\u20131 Panathinaikos is the single most probable scoreline at 12.1%: expected goals 1.53\u20131.47 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.038). Exact scores are inherently uncertain; the 1X2 split is 38.4%/25.9%/35.7%.",
+ "resolved": {
+  "home_key": "Denmark:Nordsjaelland",
+  "away_key": "Greece:Panathinaikos",
+  "div": "UCL",
+  "home_div": "DNK",
+  "away_div": "G1",
+  "country": "Europe"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: Panathinaik\u00f3s AO at FC Nordsj\u00e6lland\nCompetition: UEFA Conference League\nDate: 2026-11-26 15:00 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-11-24\n\nPRIMARY FINAL SCORE PREDICTION\n\nFC Nordsj\u00e6lland 1 \u2013 1 Panathinaik\u00f3s AO\n(modal exact score, probability 12.1%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.53\nAway: 1.47\nExpected Total: 3.00\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 38.4%\nDraw: 25.9%\nAway Win: 35.7%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 12.1%\n2. 2\u20131: 8.8%\n3. 1\u20132: 8.4%\n4. 1\u20130: 7.1%\n5. 2\u20132: 6.8%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 18.9%\nTotal 2 goals: 23.1%\nTotal 3 goals: 22.6%\nTotal 4 goals: 17.2%\nTotal 5+ goals: 18.1%\n\nBoth Teams Score: 62.0%\nClean sheet FC Nordsj\u00e6lland: 22.3% \u00b7 Clean sheet Panathinaik\u00f3s AO: 20.8%\n\nMATCH INTELLIGENCE\n\n1. Home advantage (Europe, fitted from results): \u00d71.31 on Nordsjaelland's scoring rate.\n2. Independent results-only Elo: Nordsjaelland 1669 vs Panathinaikos 1803 (gap -134 before home advantage).\n3. Context \u2014 Understat xG component (validated, in ensemble): home win +5.1 pp, draw +1.0 pp, away win -6.1 pp (xG +0.07 / -0.18).\n\nMODEL CONFIDENCE\n\nMost likely result has P = 38.4%. In the out-of-sample backtest, favourites priced 0.33\u20130.40 won 38.2% \u00b1 0.5% (n=8558, mean forecast 37.8%). Backtest RPS for UCL: 0.1957; exact-score top-5 hit rate 40.8% (n=503). Overall champion RPS 0.2093 vs home/away baseline 0.2284 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-11-22, n=41,487). Outcome-certainty tier: LOW (entropy 1.085 nats of max 1.099).\nParameter-uncertainty 80% bands: xG FC Nordsj\u00e6lland 1.15\u20131.95, xG Panathinaik\u00f3s AO 1.10\u20131.87; P(home win) 27.9%\u201350.7%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0009 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nNordsjaelland: PROJECTED \u2014 FotMob projected XI (enetpulse), fetched 2026-11-25 22:56 EST (3-4-3)\n  Andreas Hansen (G), Markus Walker (M), Victor Nelsson (D), Noah Markmann (D), Peter Ankersen (D), Justin Janssen (M), Nicklas R\u00f8jkj\u00e6r (M), Juho L\u00e4hteenm\u00e4ki (M), Hjalte Boe Rasmussen (F), Alexander Lind (F), Prince Junior (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\nPanathinaikos: PROJECTED \u2014 FotMob projected XI (enetpulse), fetched 2026-11-25 22:56 EST (4-4-2)\n  I\u00f1aki Pe\u00f1a (G), Davide Calabria (D), Stefan de Vrij (D), Rick van Drongelen (D), Giorgos Kyriakopoulos (D), Facundo Pellistri (F), Imr\u00e2n Louza (M), Pedro Chirivella (M), Vicente Taborda (M), Levi Garc\u00eda (F), Cyriel Dessers (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nKEY ABSENCES\n\n- Nordsjaelland: Araphat Mohammed \u2014 injury, Day to day [FotMob, 2026-11-25 22:56 EST]\n- Nordsjaelland: Souleymane Alio \u2014 injury, Day to day [FotMob, 2026-11-25 22:56 EST]\n- Panathinaikos: Sverrir Ingi Ingason \u2014 injury, Unknown [FotMob, 2026-11-25 22:56 EST]\n- Panathinaikos: Azzedine Ounahi \u2014 injury, Early January 2027 [FotMob, 2026-11-25 22:56 EST]\n- Panathinaikos: Santino Andino Valencia \u2014 injury, Unknown [FotMob, 2026-11-25 22:56 EST]\n\nWEATHER AT VENUE\n\nRight to Dream Park, Farum: 0.0 \u00b0C, wind 1.5 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-11-25 22:56 EST]\n\nREST & TRAVEL\n\nNordsjaelland: 4 days' rest, 2 matches in previous 21 days \u00b7 Panathinaikos: 4 days' rest, 2 in 21 days \u00b7 away travel 2152.8 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 38.4% / 25.9% / 35.7%, xG 1.53\u20131.47\n- Understat xG component (validated, in ensemble): home +5.10 pp, draw +1.03 pp, away -6.13 pp; xG +0.069 / -0.182\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.08 pp, draw -0.15 pp, away +0.07 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +1.21 pp, draw -0.45 pp, away -0.75 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home -0.09 pp, draw +0.18 pp, away -0.09 pp\n- lineup: not applied (failed validation; no live features)\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Europa/Conference League: modelled with the Champions League home-advantage and scoring environment (no UEL/UECL results ingested yet).\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Nordsjaelland: lineup is PROJECTED (FotMob projected XI (enetpulse)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Nordsjaelland: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n- Panathinaikos: lineup is PROJECTED (FotMob projected XI (enetpulse)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Panathinaikos: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nFINAL VERDICT\n\nNordsjaelland 1\u20131 Panathinaikos is the single most probable scoreline at 12.1%: expected goals 1.53\u20131.47 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.038). Exact scores are inherently uncertain; the 1X2 split is 38.4%/25.9%/35.7%.\n",
+ "refresh_id": "78d15d5fe4a4413e93b4d68b9de28a43",
+ "frozen_at": "2026-11-26T03:56:11+00:00",
+ "sha256": "751ec905bf5945d099d144da0cc3f96833b17a85424a5d1f779f960fe59caf8b"
+}
