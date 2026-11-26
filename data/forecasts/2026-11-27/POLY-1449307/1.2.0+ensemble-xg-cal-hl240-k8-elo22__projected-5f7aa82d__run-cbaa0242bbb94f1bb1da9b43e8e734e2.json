@@ -1,0 +1,641 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-11-24",
+ "input_fingerprint": "92e68fb68f0de5c0953fefc54ebfe38af0ab2023506e7ae25712a99c91b28a35",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-11-26T06:55:13+00:00",
+ "fixture": {
+  "event_id": "POLY-1449307",
+  "home_name": "FC Groningen",
+  "away_name": "Willem II Tilburg",
+  "competition": "Eredivisie",
+  "subcategory": "ere",
+  "kickoff_utc": "2026-11-27T19:00:00+00:00",
+  "kickoff_local": "2026-11-27 14:00 EST",
+  "home_matched": "Groningen",
+  "away_matched": "Willem II",
+  "match_methods": {
+   "home": {
+    "source": "FC Groningen",
+    "matched": "Groningen",
+    "method": "core-tokens",
+    "score": 0.97
+   },
+   "away": {
+    "source": "Willem II Tilburg",
+    "matched": "Willem II",
+    "method": "alias",
+    "score": 1.0
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.6890943739527536,
+  "p_draw": 0.17714598017921787,
+  "p_away": 0.13375964586802863,
+  "xg_home": 2.564793223328118,
+  "xg_away": 1.1043392186898258,
+  "xg_total": 3.669132442017944,
+  "median_total": 4,
+  "modal_score": {
+   "home": 2,
+   "away": 1,
+   "p": 0.09565084191157788
+  },
+  "top_scores": [
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.09565084191157788
+   },
+   {
+    "home": 2,
+    "away": 0,
+    "p": 0.08354065472931137
+   },
+   {
+    "home": 3,
+    "away": 1,
+    "p": 0.08236346553079511
+   },
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.07680118714494756
+   },
+   {
+    "home": 3,
+    "away": 0,
+    "p": 0.0717376148774758
+   }
+  ],
+  "btts": 0.630536099927701,
+  "totals_over": {
+   "over_0.5": 0.974177894769294,
+   "over_1.5": 0.8882757865427412,
+   "over_2.5": 0.7138651496934453,
+   "over_3.5": 0.5021682381859909,
+   "over_4.5": 0.30463689761734397,
+   "over_5.5": 0.16206430911620592,
+   "over_6.5": 0.0754513227959241
+  },
+  "total_buckets": {
+   "0-1": 0.11172421345725882,
+   "2": 0.17441063684929584,
+   "3": 0.21169691150745445,
+   "4": 0.19753134056864696,
+   "5+": 0.30463689761734397
+  },
+  "clean_sheet_home": 0.3244085062789724,
+  "clean_sheet_away": 0.07087749902403269,
+  "home_goal_dist": [
+   0.07087749902403269,
+   0.19620193900345426,
+   0.25851972899349396,
+   0.2214351275575838,
+   0.1400317673571781,
+   0.0699545926283919,
+   0.028812683573546164,
+   0.014166661862319251
+  ],
+  "away_goal_dist": [
+   0.3244085062789724,
+   0.3734877712436297,
+   0.20511077791387192,
+   0.07304762751887699,
+   0.019167758894266498,
+   0.0039797611992555436,
+   0.0006834609002506002,
+   0.00011433605087633208
+  ],
+  "intervals": {
+   "home_goals_80": [
+    1,
+    5
+   ],
+   "away_goals_80": [
+    0,
+    2
+   ],
+   "total_goals_80": [
+    1,
+    6
+   ],
+   "goal_diff_80": [
+    -1,
+    4
+   ]
+  },
+  "score_grid": [
+   [
+    0.025822,
+    0.024372,
+    0.014069,
+    0.004985,
+    0.001305,
+    0.00027,
+    4.6e-05
+   ],
+   [
+    0.06153,
+    0.076801,
+    0.039323,
+    0.01397,
+    0.003665,
+    0.000761,
+    0.00013
+   ],
+   [
+    0.083541,
+    0.095651,
+    0.054555,
+    0.018646,
+    0.004903,
+    0.00102,
+    0.000175
+   ],
+   [
+    0.071738,
+    0.082363,
+    0.045198,
+    0.016818,
+    0.004253,
+    0.000887,
+    0.000153
+   ],
+   [
+    0.045338,
+    0.052192,
+    0.028714,
+    0.010278,
+    0.002829,
+    0.000567,
+    9.8e-05
+   ],
+   [
+    0.022602,
+    0.026084,
+    0.014386,
+    0.005161,
+    0.001366,
+    0.000298,
+    4.9e-05
+   ],
+   [
+    0.009287,
+    0.010743,
+    0.005938,
+    0.002135,
+    0.000566,
+    0.000119,
+    2.1e-05
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.68847,
+  "p_draw": 0.177875,
+  "p_away": 0.133655,
+  "se": [
+   0.0010355652058175765,
+   0.00085508913095361,
+   0.0007608920454801719
+  ],
+  "max_abs_dev_vs_exact": 0.0007290198207821341,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   1.9700924874180799,
+   3.2141970149442796
+  ],
+  "xg_away_80": [
+   0.7747023790444251,
+   1.4667274741895846
+  ],
+  "p_home_80": [
+   0.5578127480463149,
+   0.8006451970958648
+  ],
+  "p_draw_80": [
+   0.1250641234512518,
+   0.2193321688669654
+  ],
+  "p_away_80": [
+   0.07493573705141679,
+   0.22279582076427015
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.19406966643451642,
+   0.2368890911885999
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.701679317255618,
+   "p_draw": 0.16542099404918792,
+   "p_away": 0.1328996886951938,
+   "xg_home": 2.67831181590291,
+   "xg_away": 1.1202920165727568,
+   "weight": 0.0077
+  },
+  "elo": {
+   "p_home": 0.6790738242630858,
+   "p_draw": 0.17877217127428488,
+   "p_away": 0.14215400446262938,
+   "xg_home": 2.3689079547001186,
+   "xg_away": 0.994059056991425,
+   "weight": 0.3721
+  },
+  "standard_dc": {
+   "p_home": 0.8329140417564137,
+   "p_draw": 0.10628917683750091,
+   "p_away": 0.060796781406085396,
+   "xg_home": 3.369722038551861,
+   "xg_away": 0.9070857701650511,
+   "weight": 0.0028
+  },
+  "home_away_rate": {
+   "p_home": 0.4449077237916981,
+   "p_draw": 0.22932985090338867,
+   "p_away": 0.3257624253049133,
+   "xg_home": 1.7732208267885619,
+   "xg_away": 1.491022708632427,
+   "weight": 0.001
+  },
+  "xg_dc": {
+   "p_home": 0.676701526586291,
+   "p_draw": 0.17519094698278587,
+   "p_away": 0.14810752643092318,
+   "xg_home": 2.566465460170436,
+   "xg_away": 1.1507760155674072,
+   "weight": 0.6164
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Groningen attack vs Willem II defence: time-weighted strength gap multiplies Groningen's scoring rate by \u00d72.00 relative to an average pairing (from 29/16 decay-weighted matches).",
+   "effect": 0.6924
+  },
+  {
+   "text": "Independent results-only Elo: Groningen 1512 vs Willem II 1288 (gap +224 before home advantage).",
+   "effect": 0.3358
+  },
+  {
+   "text": "Home advantage (Netherlands, fitted from results): \u00d71.11 on Groningen's scoring rate.",
+   "effect": 0.1045
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.6890943739527536,
+  "p_draw": 0.17714598017921787,
+  "p_away": 0.13375964586802863,
+  "xg_home": 2.564793223328118,
+  "xg_away": 1.1043392186898258
+ },
+ "context": {
+  "fetched_at": "2026-11-26T06:55:13+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5781815",
+    "fetched_at": "2026-11-26T06:55:13+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "4-2-3-1",
+    "starters": [
+     {
+      "name": "Lovro \u0160tubljar",
+      "pos": "G",
+      "shirt": "13"
+     },
+     {
+      "name": "Jorg Schreuders",
+      "pos": "F",
+      "shirt": "14"
+     },
+     {
+      "name": "Thijmen Blokzijl",
+      "pos": "D",
+      "shirt": "3"
+     },
+     {
+      "name": "M\u00e1rk Csinger",
+      "pos": "D",
+      "shirt": "4"
+     },
+     {
+      "name": "Wouter Prins",
+      "pos": "D",
+      "shirt": "2"
+     },
+     {
+      "name": "Tika de Jonge",
+      "pos": "M",
+      "shirt": "8"
+     },
+     {
+      "name": "Pelle Clement",
+      "pos": "M",
+      "shirt": "24"
+     },
+     {
+      "name": "David van der Werff",
+      "pos": "F",
+      "shirt": "17"
+     },
+     {
+      "name": "Thom van Bergen",
+      "pos": "M",
+      "shirt": "26"
+     },
+     {
+      "name": "Jacob Ondrejka",
+      "pos": "F",
+      "shirt": "11"
+     },
+     {
+      "name": "Brynj\u00f3lfur Willumsson",
+      "pos": "F",
+      "shirt": "9"
+     }
+    ],
+    "fetched_at": "2026-11-26T06:55:13+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   },
+   "away": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "4-2-3-1",
+    "starters": [
+     {
+      "name": "Maxime Delanghe",
+      "pos": "G",
+      "shirt": "26"
+     },
+     {
+      "name": "Hidde ter Avest",
+      "pos": "D",
+      "shirt": "5"
+     },
+     {
+      "name": "Mats Lemmens",
+      "pos": "D",
+      "shirt": "83"
+     },
+     {
+      "name": "Maxim Dekker",
+      "pos": "D",
+      "shirt": "23"
+     },
+     {
+      "name": "Nathan Tjoe-A-On",
+      "pos": "D",
+      "shirt": "24"
+     },
+     {
+      "name": "Calvin Twigt",
+      "pos": "M",
+      "shirt": "6"
+     },
+     {
+      "name": "Kasper Boogaard",
+      "pos": "M",
+      "shirt": "8"
+     },
+     {
+      "name": "Tonny Vilhena",
+      "pos": "M",
+      "shirt": "52"
+     },
+     {
+      "name": "Uri\u00ebl van Aalst",
+      "pos": "M",
+      "shirt": "19"
+     },
+     {
+      "name": "Vito van Crooij",
+      "pos": "M",
+      "shirt": "32"
+     },
+     {
+      "name": "Devin Haen",
+      "pos": "F",
+      "shirt": "9"
+     }
+    ],
+    "fetched_at": "2026-11-26T06:55:13+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Rijk Janse",
+     "type": "injury",
+     "expected_return": "Day to day",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5781815",
+     "fetched_at": "2026-11-26T06:55:13+00:00"
+    },
+    {
+     "player": "Malcolm Jeng",
+     "type": "injury",
+     "expected_return": "Day to day",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5781815",
+     "fetched_at": "2026-11-26T06:55:13+00:00"
+    },
+    {
+     "player": "Travis Hernes",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5781815",
+     "fetched_at": "2026-11-26T06:55:13+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "Nathan Tjoe-A-On",
+     "type": "suspension",
+     "expected_return": "Late November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5781815",
+     "fetched_at": "2026-11-26T06:55:13+00:00"
+    },
+    {
+     "player": "Justin Hoogma",
+     "type": "injury",
+     "expected_return": "Day to day",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5781815",
+     "fetched_at": "2026-11-26T06:55:13+00:00"
+    },
+    {
+     "player": "Amine Lachkar",
+     "type": "injury",
+     "expected_return": "Day to day",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5781815",
+     "fetched_at": "2026-11-26T06:55:13+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 6,
+    "n21": 2,
+    "last_match": "2026-11-21"
+   },
+   "away": {
+    "rest_days": 5,
+    "n21": 2,
+    "last_match": "2026-11-22"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 211.9
+  },
+  "venue": {
+   "name": "Euroborg",
+   "city": "Groningen",
+   "lat": 53.206200365,
+   "lon": 6.591485409
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 3.55,
+   "temp_c": -1.1,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=53.206&longitude=6.591",
+   "fetched_at": "2026-11-26T06:55:13+00:00",
+   "lat": 53.206200365,
+   "lon": 6.591485409
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": -0.22,
+    "d_p_draw_pp": -0.16,
+    "d_p_away_pp": 0.38,
+    "d_xg_home": 0.12,
+    "d_xg_away": 0.099
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0162,
+    "away_rate_mult": 1.0052,
+    "d_p_home_pp": 0.56,
+    "d_p_draw_pp": -0.3,
+    "d_p_away_pp": -0.26,
+    "d_xg_home": 0.04,
+    "d_xg_away": 0.006,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 0.9812,
+    "away_rate_mult": 0.9812,
+    "d_p_home_pp": -0.37,
+    "d_p_draw_pp": 0.29,
+    "d_p_away_pp": 0.08,
+    "d_xg_home": -0.046,
+    "d_xg_away": -0.02,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "reason": "failed validation; no live features"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 6.0,
+   "rest_a": 5.0,
+   "n21_h": 2.0,
+   "n21_a": 2.0,
+   "travel_km": 211.94084244195696,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 3.55,
+   "temp_c": -1.1
+  }
+ },
+ "lineup_simulation": {
+  "applied": false,
+  "basis": {
+   "home": "projected",
+   "away": "projected"
+  },
+  "reason": "No player ratings exist for this league, so the lineup and formation are shown but cannot change the probabilities."
+ },
+ "confidence": {
+  "tier": "HIGH",
+  "p_max": 0.6890943739527536,
+  "entropy_nats": 0.8322895692779052,
+  "text": "Most likely result has P = 68.9%. In the out-of-sample backtest, favourites priced 0.60\u20130.70 won 67.2% \u00b1 0.7% (n=4035, mean forecast 64.2%). Backtest RPS for N1: 0.1919; exact-score top-5 hit rate 44.9% (n=1035). Overall champion RPS 0.2093 vs home/away baseline 0.2284 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-11-22, n=41,487). Outcome-certainty tier: HIGH (entropy 0.832 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Groningen: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Groningen: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.",
+  "Willem II: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Willem II: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+ ],
+ "verdict": "Groningen 2\u20131 Willem II is the single most probable scoreline at 9.6%: expected goals 2.56\u20131.10 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.038). Exact scores are inherently uncertain; the 1X2 split is 68.9%/17.7%/13.4%.",
+ "resolved": {
+  "home_key": "Netherlands:Groningen",
+  "away_key": "Netherlands:Willem II",
+  "div": "N1",
+  "home_div": "N1",
+  "away_div": "N1",
+  "country": "Netherlands"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: Willem II Tilburg at FC Groningen\nCompetition: Eredivisie\nDate: 2026-11-27 14:00 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-11-24\n\nPRIMARY FINAL SCORE PREDICTION\n\nFC Groningen 2 \u2013 1 Willem II Tilburg\n(modal exact score, probability 9.6%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 2.56\nAway: 1.10\nExpected Total: 3.67\nMedian Total: 4\n\nRESULT PROBABILITIES\n\nHome Win: 68.9%\nDraw: 17.7%\nAway Win: 13.4%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 2\u20131: 9.6%\n2. 2\u20130: 8.4%\n3. 3\u20131: 8.2%\n4. 1\u20131: 7.7%\n5. 3\u20130: 7.2%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 11.2%\nTotal 2 goals: 17.4%\nTotal 3 goals: 21.2%\nTotal 4 goals: 19.8%\nTotal 5+ goals: 30.5%\n\nBoth Teams Score: 63.1%\nClean sheet FC Groningen: 32.4% \u00b7 Clean sheet Willem II Tilburg: 7.1%\n\nMATCH INTELLIGENCE\n\n1. Groningen attack vs Willem II defence: time-weighted strength gap multiplies Groningen's scoring rate by \u00d72.00 relative to an average pairing (from 29/16 decay-weighted matches).\n2. Independent results-only Elo: Groningen 1512 vs Willem II 1288 (gap +224 before home advantage).\n3. Home advantage (Netherlands, fitted from results): \u00d71.11 on Groningen's scoring rate.\n\nMODEL CONFIDENCE\n\nMost likely result has P = 68.9%. In the out-of-sample backtest, favourites priced 0.60\u20130.70 won 67.2% \u00b1 0.7% (n=4035, mean forecast 64.2%). Backtest RPS for N1: 0.1919; exact-score top-5 hit rate 44.9% (n=1035). Overall champion RPS 0.2093 vs home/away baseline 0.2284 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-11-22, n=41,487). Outcome-certainty tier: HIGH (entropy 0.832 nats of max 1.099).\nParameter-uncertainty 80% bands: xG FC Groningen 1.97\u20133.21, xG Willem II Tilburg 0.77\u20131.47; P(home win) 55.8%\u201380.1%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0007 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nGroningen: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-11-26 01:55 EST (4-2-3-1)\n  Lovro \u0160tubljar (G), Jorg Schreuders (F), Thijmen Blokzijl (D), M\u00e1rk Csinger (D), Wouter Prins (D), Tika de Jonge (M), Pelle Clement (M), David van der Werff (F), Thom van Bergen (M), Jacob Ondrejka (F), Brynj\u00f3lfur Willumsson (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\nWillem II: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-11-26 01:55 EST (4-2-3-1)\n  Maxime Delanghe (G), Hidde ter Avest (D), Mats Lemmens (D), Maxim Dekker (D), Nathan Tjoe-A-On (D), Calvin Twigt (M), Kasper Boogaard (M), Tonny Vilhena (M), Uri\u00ebl van Aalst (M), Vito van Crooij (M), Devin Haen (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nKEY ABSENCES\n\n- Groningen: Rijk Janse \u2014 injury, Day to day [FotMob, 2026-11-26 01:55 EST]\n- Groningen: Malcolm Jeng \u2014 injury, Day to day [FotMob, 2026-11-26 01:55 EST]\n- Groningen: Travis Hernes \u2014 injury, Late November 2026 [FotMob, 2026-11-26 01:55 EST]\n- Willem II: Nathan Tjoe-A-On \u2014 suspension, Late November 2026 [FotMob, 2026-11-26 01:55 EST]\n- Willem II: Justin Hoogma \u2014 injury, Day to day [FotMob, 2026-11-26 01:55 EST]\n- Willem II: Amine Lachkar \u2014 injury, Day to day [FotMob, 2026-11-26 01:55 EST]\n\nWEATHER AT VENUE\n\nEuroborg, Groningen: -1.1 \u00b0C, wind 3.5 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-11-26 01:55 EST]\n\nREST & TRAVEL\n\nGroningen: 6 days' rest, 2 matches in previous 21 days \u00b7 Willem II: 5 days' rest, 2 in 21 days \u00b7 away travel 211.9 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 68.9% / 17.7% / 13.4%, xG 2.56\u20131.10\n- Understat xG component (validated, in ensemble): home -0.22 pp, draw -0.16 pp, away +0.38 pp; xG +0.120 / +0.099\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.56 pp, draw -0.30 pp, away -0.26 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home -0.37 pp, draw +0.29 pp, away +0.08 pp\n- lineup: not applied (failed validation; no live features)\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Groningen: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Groningen: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n- Willem II: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Willem II: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nFINAL VERDICT\n\nGroningen 2\u20131 Willem II is the single most probable scoreline at 9.6%: expected goals 2.56\u20131.10 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.038). Exact scores are inherently uncertain; the 1X2 split is 68.9%/17.7%/13.4%.\n",
+ "refresh_id": "cbaa0242bbb94f1bb1da9b43e8e734e2",
+ "frozen_at": "2026-11-26T06:55:13+00:00",
+ "sha256": "c9d21d96dfb719c68910d99cbbb01e7e62017ca6c641fb07d7aff505a5f6e7b1"
+}
