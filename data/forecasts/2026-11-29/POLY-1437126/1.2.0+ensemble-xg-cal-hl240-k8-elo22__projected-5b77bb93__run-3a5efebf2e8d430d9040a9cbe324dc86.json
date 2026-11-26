@@ -1,0 +1,771 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-11-24",
+ "input_fingerprint": "92e68fb68f0de5c0953fefc54ebfe38af0ab2023506e7ae25712a99c91b28a35",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-11-26T10:03:09+00:00",
+ "fixture": {
+  "event_id": "POLY-1437126",
+  "home_name": "AJ Auxerre",
+  "away_name": "Olympique de Marseille",
+  "competition": "Ligue 1",
+  "subcategory": "fl1",
+  "kickoff_utc": "2026-11-29T14:00:00+00:00",
+  "kickoff_local": "2026-11-29 09:00 EST",
+  "home_matched": "Auxerre",
+  "away_matched": "Marseille",
+  "match_methods": {
+   "home": {
+    "source": "AJ Auxerre",
+    "matched": "Auxerre",
+    "method": "core-tokens",
+    "score": 0.97
+   },
+   "away": {
+    "source": "Olympique de Marseille",
+    "matched": "Marseille",
+    "method": "alias",
+    "score": 1.0
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.29527677369972544,
+  "p_draw": 0.24928827897455608,
+  "p_away": 0.4554349473257185,
+  "xg_home": 1.3855248087115581,
+  "xg_away": 1.7506936069610988,
+  "xg_total": 3.1362184156726567,
+  "median_total": 3,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.11405756429966991
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.11405756429966991
+   },
+   {
+    "home": 1,
+    "away": 2,
+    "p": 0.09483036997790578
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.07401244353074245
+   },
+   {
+    "home": 0,
+    "away": 1,
+    "p": 0.07186961070739294
+   },
+   {
+    "home": 2,
+    "away": 2,
+    "p": 0.06877113168050313
+   }
+  ],
+  "btts": 0.6363066485917619,
+  "totals_over": {
+   "over_0.5": 0.954651454563343,
+   "over_1.5": 0.8273096043662145,
+   "over_2.5": 0.6083093826172584,
+   "over_3.5": 0.38427889135378174,
+   "over_4.5": 0.20572481670261433,
+   "over_5.5": 0.09625610306440924,
+   "over_6.5": 0.03905700728261246
+  },
+  "total_buckets": {
+   "0-1": 0.1726903956337857,
+   "2": 0.219000221748956,
+   "3": 0.22403049126347666,
+   "4": 0.1785540746511674,
+   "5+": 0.20572481670261433
+  },
+  "clean_sheet_home": 0.166132158998349,
+  "clean_sheet_away": 0.24290973784654626,
+  "home_goal_dist": [
+   0.24290973784654626,
+   0.35293776236778074,
+   0.24463608274405935,
+   0.11031193349386821,
+   0.03682685919290344,
+   0.009758810866457211,
+   0.0021419602409790545,
+   0.0004768532474057453
+  ],
+  "away_goal_dist": [
+   0.166132158998349,
+   0.30821051042542985,
+   0.2722697069969145,
+   0.15643311843294272,
+   0.06649044786923906,
+   0.02238850330361186,
+   0.006230938944970595,
+   0.0018446150285423087
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    3
+   ],
+   "away_goals_80": [
+    0,
+    3
+   ],
+   "total_goals_80": [
+    1,
+    5
+   ],
+   "goal_diff_80": [
+    -3,
+    2
+   ]
+  },
+  "score_grid": [
+   [
+    0.045349,
+    0.07187,
+    0.065283,
+    0.037404,
+    0.01582,
+    0.005292,
+    0.001463
+   ],
+   [
+    0.055472,
+    0.114058,
+    0.09483,
+    0.054671,
+    0.023262,
+    0.007827,
+    0.002175
+   ],
+   [
+    0.03966,
+    0.074012,
+    0.068771,
+    0.038271,
+    0.016376,
+    0.005539,
+    0.001547
+   ],
+   [
+    0.017784,
+    0.03339,
+    0.029946,
+    0.018198,
+    0.007511,
+    0.002553,
+    0.000716
+   ],
+   [
+    0.005902,
+    0.011145,
+    0.010049,
+    0.00589,
+    0.002653,
+    0.000869,
+    0.000245
+   ],
+   [
+    0.001553,
+    0.002948,
+    0.002672,
+    0.001573,
+    0.000683,
+    0.000244,
+    6.6e-05
+   ],
+   [
+    0.000338,
+    0.000645,
+    0.000588,
+    0.000347,
+    0.000151,
+    5.2e-05,
+    1.5e-05
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.29547,
+  "p_draw": 0.25142,
+  "p_away": 0.45311,
+  "se": [
+   0.0010202143870285305,
+   0.0009700721199993328,
+   0.0011131067511698958
+  ],
+  "max_abs_dev_vs_exact": 0.002324947325718474,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   1.053309949555851,
+   1.7494588219410976
+  ],
+  "xg_away_80": [
+   1.3375073593161921,
+   2.191007061224907
+  ],
+  "p_home_80": [
+   0.21171886224927075,
+   0.4102263943925707
+  ],
+  "p_draw_80": [
+   0.20909093925764513,
+   0.2660298659889135
+  ],
+  "p_away_80": [
+   0.3382021299496642,
+   0.570197376771185
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.20115528667647198,
+   0.18316719039774804
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.28383098315154787,
+   "p_draw": 0.23631970464352392,
+   "p_away": 0.4798493122049283,
+   "xg_home": 1.3607993183751004,
+   "xg_away": 1.8221275043143181,
+   "weight": 0.0077
+  },
+  "elo": {
+   "p_home": 0.29600090057820344,
+   "p_draw": 0.24916321399510155,
+   "p_away": 0.45483588542669506,
+   "xg_home": 1.216962548247462,
+   "xg_away": 1.568101160710892,
+   "weight": 0.3721
+  },
+  "standard_dc": {
+   "p_home": 0.33566900842201997,
+   "p_draw": 0.24198667202454854,
+   "p_away": 0.42234431955343144,
+   "xg_home": 1.5182943350835054,
+   "xg_away": 1.7226385304082705,
+   "weight": 0.0028
+  },
+  "home_away_rate": {
+   "p_home": 0.4458870067103181,
+   "p_draw": 0.24483702415909522,
+   "p_away": 0.3092759691305866,
+   "xg_home": 1.6003218680480662,
+   "xg_away": 1.2935310559387128,
+   "weight": 0.001
+  },
+  "xg_dc": {
+   "p_home": 0.30728214059080994,
+   "p_draw": 0.23547189721757397,
+   "p_away": 0.45724596219161606,
+   "xg_home": 1.4510092370968677,
+   "xg_away": 1.8064821555574524,
+   "weight": 0.6164
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Marseille attack vs Auxerre defence: rate multiplier \u00d71.51 for the away side.",
+   "effect": 0.4113
+  },
+  {
+   "text": "Independent results-only Elo: Auxerre 1545 vs Marseille 1682 (gap -137 before home advantage).",
+   "effect": 0.205
+  },
+  {
+   "text": "Home advantage (France, fitted from results): \u00d71.18 on Auxerre's scoring rate.",
+   "effect": 0.1638
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.29527677369972544,
+  "p_draw": 0.24928827897455608,
+  "p_away": 0.4554349473257185,
+  "xg_home": 1.3855248087115581,
+  "xg_away": 1.7506936069610988
+ },
+ "context": {
+  "fetched_at": "2026-11-26T10:03:09+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5803001",
+    "fetched_at": "2026-11-26T10:03:10+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "3-4-2-1",
+    "starters": [
+     {
+      "name": "Paul Nardi",
+      "pos": "G",
+      "shirt": "1"
+     },
+     {
+      "name": "Axel Tuanzebe",
+      "pos": "D",
+      "shirt": "4"
+     },
+     {
+      "name": "Sinaly Diomand\u00e9",
+      "pos": "D",
+      "shirt": "20"
+     },
+     {
+      "name": "Telli Siwe",
+      "pos": "D",
+      "shirt": "13"
+     },
+     {
+      "name": "Marvin Senaya",
+      "pos": "M",
+      "shirt": "29"
+     },
+     {
+      "name": "Pierre Ekwah",
+      "pos": "M",
+      "shirt": "17"
+     },
+     {
+      "name": "Naouirou Ahamada",
+      "pos": "M",
+      "shirt": "8"
+     },
+     {
+      "name": "Fredrik Oppeg\u00e5rd",
+      "pos": "M",
+      "shirt": "22"
+     },
+     {
+      "name": "Romain Faivre",
+      "pos": "M",
+      "shirt": "21"
+     },
+     {
+      "name": "R\u00e9my Lascary",
+      "pos": "M",
+      "shirt": "3"
+     },
+     {
+      "name": "Cameron Archer",
+      "pos": "F",
+      "shirt": "9"
+     }
+    ],
+    "fetched_at": "2026-11-26T10:03:10+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [],
+    "mean_xi_attack_index": -0.095,
+    "mean_continuity": -0.823,
+    "p_backup_gk": 0.175
+   },
+   "away": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "4-2-3-1",
+    "starters": [
+     {
+      "name": "Jeffrey De Lange",
+      "pos": "G",
+      "shirt": "1"
+     },
+     {
+      "name": "Timothy Weah",
+      "pos": "D",
+      "shirt": "22"
+     },
+     {
+      "name": "CJ Egan-Riley",
+      "pos": "D",
+      "shirt": "4"
+     },
+     {
+      "name": "Nayef Aguerd",
+      "pos": "D",
+      "shirt": "21"
+     },
+     {
+      "name": "Ulisses Garcia",
+      "pos": "D",
+      "shirt": "25"
+     },
+     {
+      "name": "Geoffrey Kondogbia",
+      "pos": "M",
+      "shirt": "19"
+     },
+     {
+      "name": "Tochukwu Nnadi",
+      "pos": "M",
+      "shirt": "6"
+     },
+     {
+      "name": "Amine Harit",
+      "pos": "F",
+      "shirt": "77"
+     },
+     {
+      "name": "Himad Abdelli",
+      "pos": "M",
+      "shirt": "8"
+     },
+     {
+      "name": "Igor Paix\u00e3o",
+      "pos": "F",
+      "shirt": "14"
+     },
+     {
+      "name": "Amine Gouiri",
+      "pos": "F",
+      "shirt": "9"
+     }
+    ],
+    "fetched_at": "2026-11-26T10:03:10+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [],
+    "mean_xi_attack_index": -0.051,
+    "mean_continuity": -0.27,
+    "p_backup_gk": 0.165
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Danny Namaso",
+     "type": "injury",
+     "expected_return": "Early December 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5803001",
+     "fetched_at": "2026-11-26T10:03:10+00:00"
+    },
+    {
+     "player": "Assane Diouss\u00e9",
+     "type": "injury",
+     "expected_return": "Early May 2027",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5803001",
+     "fetched_at": "2026-11-26T10:03:10+00:00"
+    },
+    {
+     "player": "S\u00e9kou Fofana",
+     "type": "injury",
+     "expected_return": "Early December 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5803001",
+     "fetched_at": "2026-11-26T10:03:10+00:00"
+    },
+    {
+     "player": "Bryan Okoh",
+     "type": "injury",
+     "expected_return": "Late January 2027",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5803001",
+     "fetched_at": "2026-11-26T10:03:10+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "Emerson",
+     "type": "injury",
+     "expected_return": "Late December 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5803001",
+     "fetched_at": "2026-11-26T10:03:10+00:00"
+    },
+    {
+     "player": "Derek Cornelius",
+     "type": "injury",
+     "expected_return": "Early January 2027",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5803001",
+     "fetched_at": "2026-11-26T10:03:10+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 8,
+    "n21": 1,
+    "last_match": "2026-11-21"
+   },
+   "away": {
+    "rest_days": 7,
+    "n21": 2,
+    "last_match": "2026-11-22"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 521.6
+  },
+  "venue": {
+   "name": "Stade de l'Abb\u00e9 Deschamps",
+   "city": "Auxerre",
+   "lat": 47.786835355,
+   "lon": 3.588516712
+  },
+  "weather": {
+   "precip_mm_2h": 3.2,
+   "wind_ms": 0.815,
+   "temp_c": 7.3,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=47.787&longitude=3.589",
+   "fetched_at": "2026-11-26T10:03:10+00:00",
+   "lat": 47.786835355,
+   "lon": 3.588516712
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": 0.69,
+    "d_p_draw_pp": -0.84,
+    "d_p_away_pp": 0.15,
+    "d_xg_home": 0.148,
+    "d_xg_away": 0.151
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0262,
+    "away_rate_mult": 1.0084,
+    "d_p_home_pp": 0.58,
+    "d_p_draw_pp": -0.17,
+    "d_p_away_pp": -0.41,
+    "d_xg_home": 0.035,
+    "d_xg_away": 0.015,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0735,
+    "away_rate_mult": 1.0735,
+    "d_p_home_pp": 0.21,
+    "d_p_draw_pp": -1.01,
+    "d_p_away_pp": 0.8,
+    "d_xg_home": 0.1,
+    "d_xg_away": 0.125,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "home_rate_mult": 0.9648,
+    "away_rate_mult": 0.9992,
+    "d_p_home_pp": -1.06,
+    "d_p_draw_pp": 0.08,
+    "d_p_away_pp": 0.98,
+    "d_xg_home": -0.047,
+    "d_xg_away": -0.002,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 8.0,
+   "rest_a": 7.0,
+   "n21_h": 1.0,
+   "n21_a": 2.0,
+   "travel_km": 521.5812880716246,
+   "neutral": 0.0,
+   "precip_mm_2h": 3.2,
+   "wind_ms": 0.815,
+   "temp_c": 7.3
+  }
+ },
+ "lineup_simulation": {
+  "applied": true,
+  "validated": false,
+  "scale": 0.5,
+  "basis": {
+   "home": "projected",
+   "away": "projected"
+  },
+  "home_rate_mult": 0.9823,
+  "away_rate_mult": 0.9996,
+  "note": "Starting-XI strength, continuity and backup-keeper adjustment at half the fitted size. It did not pass the out-of-sample test, so bets are not priced from it.",
+  "p_home": 0.28988795860112837,
+  "p_draw": 0.24975125248407742,
+  "p_away": 0.4603607889147943,
+  "xg_home": 1.3618677219100723,
+  "xg_away": 1.7497109885354443,
+  "xg_total": 3.1115787104455164,
+  "btts": 0.6311066359776752,
+  "totals_over": {
+   "over_0.5": 0.9534887613095971,
+   "over_1.5": 0.8239352594921924,
+   "over_2.5": 0.6029610873878302,
+   "over_3.5": 0.3787174448358516,
+   "over_4.5": 0.20143793509702368,
+   "over_5.5": 0.09360758320167731,
+   "over_6.5": 0.03771417247971697
+  },
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.11482595839916172
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.11482595839916172
+   },
+   {
+    "home": 1,
+    "away": 2,
+    "p": 0.09542677338901698
+   },
+   {
+    "home": 0,
+    "away": 1,
+    "p": 0.07366905007765971
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.07319665185531248
+   },
+   {
+    "home": 2,
+    "away": 2,
+    "p": 0.06797585544003042
+   }
+  ],
+  "score_grid": [
+   [
+    0.046511,
+    0.073669,
+    0.066895,
+    0.038323,
+    0.016211,
+    0.005425,
+    0.001501
+   ],
+   [
+    0.055884,
+    0.114826,
+    0.095427,
+    0.055004,
+    0.023405,
+    0.007877,
+    0.00219
+   ],
+   [
+    0.039254,
+    0.073197,
+    0.067976,
+    0.037817,
+    0.016181,
+    0.005474,
+    0.001529
+   ],
+   [
+    0.017297,
+    0.032446,
+    0.02908,
+    0.017665,
+    0.00729,
+    0.002478,
+    0.000695
+   ],
+   [
+    0.005642,
+    0.010643,
+    0.00959,
+    0.005618,
+    0.00253,
+    0.000829,
+    0.000234
+   ],
+   [
+    0.001459,
+    0.002768,
+    0.002506,
+    0.001475,
+    0.00064,
+    0.000229,
+    6.2e-05
+   ],
+   [
+    0.000313,
+    0.000596,
+    0.000542,
+    0.00032,
+    0.000139,
+    4.8e-05,
+    1.4e-05
+   ]
+  ]
+ },
+ "confidence": {
+  "tier": "LOW",
+  "p_max": 0.4554349473257185,
+  "entropy_nats": 1.064689369719911,
+  "text": "Most likely result has P = 45.5%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.5% \u00b1 0.4% (n=17312, mean forecast 44.7%). Backtest RPS for F1: 0.2074; exact-score top-5 hit rate 45.4% (n=1017). Overall champion RPS 0.2093 vs home/away baseline 0.2284 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-11-22, n=41,487). Outcome-certainty tier: LOW (entropy 1.065 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Auxerre: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Marseille: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior)."
+ ],
+ "verdict": "Auxerre 1\u20131 Marseille is the single most probable scoreline at 11.4%: expected goals 1.39\u20131.75 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.038). Exact scores are inherently uncertain; the 1X2 split is 29.5%/24.9%/45.5%.",
+ "resolved": {
+  "home_key": "France:Auxerre",
+  "away_key": "France:Marseille",
+  "div": "F1",
+  "home_div": "F1",
+  "away_div": "F1",
+  "country": "France"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: Olympique de Marseille at AJ Auxerre\nCompetition: Ligue 1\nDate: 2026-11-29 09:00 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-11-24\n\nPRIMARY FINAL SCORE PREDICTION\n\nAJ Auxerre 1 \u2013 1 Olympique de Marseille\n(modal exact score, probability 11.4%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.39\nAway: 1.75\nExpected Total: 3.14\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 29.5%\nDraw: 24.9%\nAway Win: 45.5%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 11.4%\n2. 1\u20132: 9.5%\n3. 2\u20131: 7.4%\n4. 0\u20131: 7.2%\n5. 2\u20132: 6.9%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 17.3%\nTotal 2 goals: 21.9%\nTotal 3 goals: 22.4%\nTotal 4 goals: 17.9%\nTotal 5+ goals: 20.6%\n\nBoth Teams Score: 63.6%\nClean sheet AJ Auxerre: 16.6% \u00b7 Clean sheet Olympique de Marseille: 24.3%\n\nMATCH INTELLIGENCE\n\n1. Marseille attack vs Auxerre defence: rate multiplier \u00d71.51 for the away side.\n2. Independent results-only Elo: Auxerre 1545 vs Marseille 1682 (gap -137 before home advantage).\n3. Home advantage (France, fitted from results): \u00d71.18 on Auxerre's scoring rate.\n\nMODEL CONFIDENCE\n\nMost likely result has P = 45.5%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.5% \u00b1 0.4% (n=17312, mean forecast 44.7%). Backtest RPS for F1: 0.2074; exact-score top-5 hit rate 45.4% (n=1017). Overall champion RPS 0.2093 vs home/away baseline 0.2284 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-11-22, n=41,487). Outcome-certainty tier: LOW (entropy 1.065 nats of max 1.099).\nParameter-uncertainty 80% bands: xG AJ Auxerre 1.05\u20131.75, xG Olympique de Marseille 1.34\u20132.19; P(home win) 21.2%\u201341.0%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0023 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nAuxerre: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-11-26 05:03 EST (3-4-2-1)\n  Paul Nardi (G), Axel Tuanzebe (D), Sinaly Diomand\u00e9 (D), Telli Siwe (D), Marvin Senaya (M), Pierre Ekwah (M), Naouirou Ahamada (M), Fredrik Oppeg\u00e5rd (M), Romain Faivre (M), R\u00e9my Lascary (M), Cameron Archer (F)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs -0.095 (log) \u00b7 continuity -0.82 \u00b7 P(backup GK) 18%\nMarseille: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-11-26 05:03 EST (4-2-3-1)\n  Jeffrey De Lange (G), Timothy Weah (D), CJ Egan-Riley (D), Nayef Aguerd (D), Ulisses Garcia (D), Geoffrey Kondogbia (M), Tochukwu Nnadi (M), Amine Harit (F), Himad Abdelli (M), Igor Paix\u00e3o (F), Amine Gouiri (F)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs -0.051 (log) \u00b7 continuity -0.27 \u00b7 P(backup GK) 16%\n\nKEY ABSENCES\n\n- Auxerre: Danny Namaso \u2014 injury, Early December 2026 [FotMob, 2026-11-26 05:03 EST]\n- Auxerre: Assane Diouss\u00e9 \u2014 injury, Early May 2027 [FotMob, 2026-11-26 05:03 EST]\n- Auxerre: S\u00e9kou Fofana \u2014 injury, Early December 2026 [FotMob, 2026-11-26 05:03 EST]\n- Auxerre: Bryan Okoh \u2014 injury, Late January 2027 [FotMob, 2026-11-26 05:03 EST]\n- Marseille: Emerson \u2014 injury, Late December 2026 [FotMob, 2026-11-26 05:03 EST]\n- Marseille: Derek Cornelius \u2014 injury, Early January 2027 [FotMob, 2026-11-26 05:03 EST]\n\nWEATHER AT VENUE\n\nStade de l'Abb\u00e9 Deschamps, Auxerre: 7.3 \u00b0C, wind 0.8 m/s, precipitation 3.2 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-11-26 05:03 EST]\n\nREST & TRAVEL\n\nAuxerre: 8 days' rest, 1 matches in previous 21 days \u00b7 Marseille: 7 days' rest, 2 in 21 days \u00b7 away travel 521.6 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 29.5% / 24.9% / 45.5%, xG 1.39\u20131.75\n- Understat xG component (validated, in ensemble): home +0.69 pp, draw -0.84 pp, away +0.15 pp; xG +0.148 / +0.151\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.58 pp, draw -0.17 pp, away -0.41 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.21 pp, draw -1.01 pp, away +0.80 pp\n- lineup: NOT APPLIED (failed out-of-sample validation); would have moved home -1.06 pp, draw +0.08 pp, away +0.98 pp\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Auxerre: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Marseille: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n\nFINAL VERDICT\n\nAuxerre 1\u20131 Marseille is the single most probable scoreline at 11.4%: expected goals 1.39\u20131.75 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.038). Exact scores are inherently uncertain; the 1X2 split is 29.5%/24.9%/45.5%.\n",
+ "refresh_id": "3a5efebf2e8d430d9040a9cbe324dc86",
+ "frozen_at": "2026-11-26T10:03:10+00:00",
+ "sha256": "f483575e7f2a5537d96118bec33cd9b028398d54515d0a049142dcc3a15c9b45"
+}
