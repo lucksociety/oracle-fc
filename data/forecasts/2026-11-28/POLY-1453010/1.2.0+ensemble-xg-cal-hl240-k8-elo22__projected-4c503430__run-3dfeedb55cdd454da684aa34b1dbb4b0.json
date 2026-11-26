@@ -1,0 +1,657 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-11-25",
+ "input_fingerprint": "e976ca17acace7441d10f71d9526eec90d3fafdfcadae3ab7f589b27b613cade",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-11-26T16:21:22+00:00",
+ "fixture": {
+  "event_id": "POLY-1453010",
+  "home_name": "Blackburn Rovers FC",
+  "away_name": "Charlton Athletic FC",
+  "competition": "EFL Championship",
+  "subcategory": "elc",
+  "kickoff_utc": "2026-11-28T12:30:00+00:00",
+  "kickoff_local": "2026-11-28 07:30 EST",
+  "home_matched": "Blackburn",
+  "away_matched": "Charlton",
+  "match_methods": {
+   "home": {
+    "source": "Blackburn Rovers FC",
+    "matched": "Blackburn",
+    "method": "core-tokens",
+    "score": 0.97
+   },
+   "away": {
+    "source": "Charlton Athletic FC",
+    "matched": "Charlton",
+    "method": "alias",
+    "score": 1.0
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.48184800569476194,
+  "p_draw": 0.2770581915273007,
+  "p_away": 0.24109380277793735,
+  "xg_home": 1.4976018456886384,
+  "xg_away": 0.9939797690235772,
+  "xg_total": 2.4915816147122154,
+  "median_total": 2,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.13442557255722318
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.13442557255722318
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.11817325591380795
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.0951830879880052
+   },
+   {
+    "home": 2,
+    "away": 0,
+    "p": 0.09161760153377499
+   },
+   {
+    "home": 0,
+    "away": 0,
+    "p": 0.08519324319110566
+   }
+  ],
+  "btts": 0.5054579359234888,
+  "totals_over": {
+   "over_0.5": 0.9148067568088943,
+   "over_1.5": 0.7200504678742052,
+   "over_2.5": 0.4547930858468331,
+   "over_3.5": 0.2398937183653598,
+   "over_4.5": 0.10479135945151974,
+   "over_5.5": 0.039534887645152235,
+   "over_6.5": 0.012799722369863412
+  },
+  "total_buckets": {
+   "0-1": 0.27994953212579476,
+   "2": 0.2652573820273722,
+   "3": 0.2148993674814733,
+   "4": 0.13510235891384004,
+   "5+": 0.10479135945151974
+  },
+  "clean_sheet_home": 0.3626537604587628,
+  "clean_sheet_away": 0.2170815468088543,
+  "home_goal_dist": [
+   0.2170815468088543,
+   0.34019483072166296,
+   0.2551394121828531,
+   0.12507557827612348,
+   0.04547959653091763,
+   0.013121183748584658,
+   0.003134822226363973,
+   0.0007730295046399585
+  ],
+  "away_goal_dist": [
+   0.3626537604587628,
+   0.3765926896690626,
+   0.18512863227088308,
+   0.058861724203879986,
+   0.013776831682887793,
+   0.002543679494651429,
+   0.0003866694218861471,
+   5.601279798628231e-05
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    3
+   ],
+   "away_goals_80": [
+    0,
+    2
+   ],
+   "total_goals_80": [
+    1,
+    5
+   ],
+   "goal_diff_80": [
+    -1,
+    2
+   ]
+  },
+  "score_grid": [
+   [
+    0.085193,
+    0.076583,
+    0.039214,
+    0.012519,
+    0.002936,
+    0.000542,
+    8.2e-05
+   ],
+   [
+    0.118173,
+    0.134426,
+    0.062089,
+    0.019839,
+    0.004657,
+    0.000861,
+    0.000131
+   ],
+   [
+    0.091618,
+    0.095183,
+    0.049,
+    0.015038,
+    0.003533,
+    0.000654,
+    9.9e-05
+   ],
+   [
+    0.045108,
+    0.046909,
+    0.023195,
+    0.007738,
+    0.001746,
+    0.000323,
+    4.9e-05
+   ],
+   [
+    0.016418,
+    0.01709,
+    0.008458,
+    0.00271,
+    0.000665,
+    0.000118,
+    1.8e-05
+   ],
+   [
+    0.004735,
+    0.004933,
+    0.002444,
+    0.000784,
+    0.000185,
+    3.6e-05,
+    5e-06
+   ],
+   [
+    0.00113,
+    0.001179,
+    0.000584,
+    0.000188,
+    4.4e-05,
+    8e-06,
+    1e-06
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.47948,
+  "p_draw": 0.27839,
+  "p_away": 0.24213,
+  "se": [
+   0.0011170920499224762,
+   0.0010022200554269506,
+   0.0009578701976259624
+  ],
+  "max_abs_dev_vs_exact": 0.002368005694761921,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   1.1649032584031125,
+   1.859484086215626
+  ],
+  "xg_away_80": [
+   0.7551833234602872,
+   1.248983140811258
+  ],
+  "p_home_80": [
+   0.380433338876346,
+   0.5892911060416679
+  ],
+  "p_draw_80": [
+   0.23246914144955252,
+   0.3035027369061555
+  ],
+  "p_away_80": [
+   0.17156168325911453,
+   0.3282889239873993
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.1854123854823953,
+   0.18671913396846326
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.4636149200810822,
+   "p_draw": 0.28910221017382826,
+   "p_away": 0.24728286974508967,
+   "xg_home": 1.338564975403933,
+   "xg_away": 0.9016873402767894,
+   "weight": 0.0077
+  },
+  "elo": {
+   "p_home": 0.5189871766913019,
+   "p_draw": 0.24746192886583648,
+   "p_away": 0.23355089444286173,
+   "xg_home": 1.6256984868880529,
+   "xg_away": 1.003477402271948,
+   "weight": 0.3721
+  },
+  "standard_dc": {
+   "p_home": 0.4310512414934322,
+   "p_draw": 0.3176001049168105,
+   "p_away": 0.25134865358975716,
+   "xg_home": 1.1626161757737046,
+   "xg_away": 0.8188399728579562,
+   "weight": 0.0028
+  },
+  "home_away_rate": {
+   "p_home": 0.4407746443384184,
+   "p_draw": 0.2599562606350431,
+   "p_away": 0.2992690950265384,
+   "xg_home": 1.4547856410009876,
+   "xg_away": 1.1512977094763324,
+   "weight": 0.001
+  },
+  "xg_dc": {
+   "p_home": 0.4582594767528979,
+   "p_draw": 0.2803739657332373,
+   "p_away": 0.26136655751386484,
+   "xg_home": 1.3913025265764694,
+   "xg_away": 0.9841992614186793,
+   "weight": 0.6164
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Charlton attack vs Blackburn defence: rate multiplier \u00d70.75 for the away side.",
+   "effect": 0.2922
+  },
+  {
+   "text": "Home advantage (England, fitted from results): \u00d71.23 on Blackburn's scoring rate.",
+   "effect": 0.2092
+  },
+  {
+   "text": "Independent results-only Elo: Blackburn 1414 vs Charlton 1336 (gap +78 before home advantage).",
+   "effect": 0.1167
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.48184800569476205,
+  "p_draw": 0.27705819152730077,
+  "p_away": 0.24109380277793738,
+  "xg_home": 1.4976018456886389,
+  "xg_away": 0.9939797690235774
+ },
+ "context": {
+  "fetched_at": "2026-11-26T16:21:22+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5836959",
+    "fetched_at": "2026-11-26T16:21:22+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "4-2-3-1",
+    "starters": [
+     {
+      "name": "Aynsley Pears",
+      "pos": "G",
+      "shirt": "1"
+     },
+     {
+      "name": "Gady Beyuku",
+      "pos": "D",
+      "shirt": "27"
+     },
+     {
+      "name": "Hayden Carter",
+      "pos": "D",
+      "shirt": "17"
+     },
+     {
+      "name": "Sean McLoughlin",
+      "pos": "D",
+      "shirt": "15"
+     },
+     {
+      "name": "Harry Pickering",
+      "pos": "D",
+      "shirt": "3"
+     },
+     {
+      "name": "Kristi Montgomery",
+      "pos": "M",
+      "shirt": "31"
+     },
+     {
+      "name": "Moussa Baradji",
+      "pos": "M",
+      "shirt": "24"
+     },
+     {
+      "name": "Jayden Fevrier",
+      "pos": "F",
+      "shirt": "11"
+     },
+     {
+      "name": "Todd Cantwell",
+      "pos": "M",
+      "shirt": "10"
+     },
+     {
+      "name": "Oladapo Afolayan",
+      "pos": "F",
+      "shirt": "21"
+     },
+     {
+      "name": "Andri Gu\u00f0johnsen",
+      "pos": "F",
+      "shirt": "9"
+     }
+    ],
+    "fetched_at": "2026-11-26T16:21:22+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   },
+   "away": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "4-1-4-1",
+    "starters": [
+     {
+      "name": "Arthur Okonkwo",
+      "pos": "G",
+      "shirt": "13"
+     },
+     {
+      "name": "Dan McNamara",
+      "pos": "D",
+      "shirt": "20"
+     },
+     {
+      "name": "Tyler Bindon",
+      "pos": "D",
+      "shirt": "44"
+     },
+     {
+      "name": "Billy Koumetio",
+      "pos": "D",
+      "shirt": "12"
+     },
+     {
+      "name": "Ivan Mes\u00edk",
+      "pos": "D",
+      "shirt": "18"
+     },
+     {
+      "name": "Conor Coventry",
+      "pos": "M",
+      "shirt": "6"
+     },
+     {
+      "name": "Tyreece Campbell",
+      "pos": "F",
+      "shirt": "7"
+     },
+     {
+      "name": "Joe Rankin-Costello",
+      "pos": "M",
+      "shirt": "26"
+     },
+     {
+      "name": "Sonny Carey",
+      "pos": "M",
+      "shirt": "14"
+     },
+     {
+      "name": "Karlan Grant",
+      "pos": "F",
+      "shirt": "9"
+     },
+     {
+      "name": "Matt Godden",
+      "pos": "F",
+      "shirt": "24"
+     }
+    ],
+    "fetched_at": "2026-11-26T16:21:22+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Tom Atcheson",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836959",
+     "fetched_at": "2026-11-26T16:21:22+00:00"
+    },
+    {
+     "player": "Bal\u00e1zs T\u00f3th",
+     "type": "injury",
+     "expected_return": "Early January 2027",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836959",
+     "fetched_at": "2026-11-26T16:21:22+00:00"
+    },
+    {
+     "player": "Ryan Alebiosu",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836959",
+     "fetched_at": "2026-11-26T16:21:22+00:00"
+    },
+    {
+     "player": "Adam Forshaw",
+     "type": "injury",
+     "expected_return": "Early December 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836959",
+     "fetched_at": "2026-11-26T16:21:22+00:00"
+    },
+    {
+     "player": "Lewis Miller",
+     "type": "injury",
+     "expected_return": "Unknown",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836959",
+     "fetched_at": "2026-11-26T16:21:22+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "Joe Rankin-Costello",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836959",
+     "fetched_at": "2026-11-26T16:21:22+00:00"
+    },
+    {
+     "player": "Rob Apter",
+     "type": "injury",
+     "expected_return": "Unknown",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836959",
+     "fetched_at": "2026-11-26T16:21:22+00:00"
+    },
+    {
+     "player": "Collins Sichenje",
+     "type": "injury",
+     "expected_return": "Out for season",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836959",
+     "fetched_at": "2026-11-26T16:21:22+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 3,
+    "n21": 3,
+    "last_match": "2026-11-25"
+   },
+   "away": {
+    "rest_days": 4,
+    "n21": 3,
+    "last_match": "2026-11-24"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 302.0
+  },
+  "venue": {
+   "name": "Ewood Park",
+   "city": "Blackburn, Lancashire",
+   "lat": 53.728578814,
+   "lon": -2.489207983
+  },
+  "weather": {
+   "precip_mm_2h": 4.18,
+   "wind_ms": 3.44,
+   "temp_c": 5.5,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=53.729&longitude=-2.489",
+   "fetched_at": "2026-11-26T16:21:22+00:00",
+   "lat": 53.728578814,
+   "lon": -2.489207983
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": -3.83,
+    "d_p_draw_pp": 2.1,
+    "d_p_away_pp": 1.73,
+    "d_xg_home": -0.145,
+    "d_xg_away": -0.011
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0273,
+    "away_rate_mult": 1.0029,
+    "d_p_home_pp": 0.97,
+    "d_p_draw_pp": -0.43,
+    "d_p_away_pp": -0.54,
+    "d_xg_home": 0.04,
+    "d_xg_away": 0.003,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0199,
+    "away_rate_mult": 1.0064,
+    "d_p_home_pp": 0.61,
+    "d_p_draw_pp": -0.32,
+    "d_p_away_pp": -0.29,
+    "d_xg_home": 0.029,
+    "d_xg_away": 0.006,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.097,
+    "away_rate_mult": 1.097,
+    "d_p_home_pp": 1.4,
+    "d_p_draw_pp": -1.56,
+    "d_p_away_pp": 0.16,
+    "d_xg_home": 0.142,
+    "d_xg_away": 0.094,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "reason": "failed validation; no live features"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": -0.0,
+   "d_p_draw_pp": -0.0,
+   "d_p_away_pp": -0.0,
+   "d_xg_home": -0.0,
+   "d_xg_away": -0.0
+  },
+  "features": {
+   "rest_h": 3.0,
+   "rest_a": 4.0,
+   "n21_h": 3.0,
+   "n21_a": 3.0,
+   "travel_km": 302.0164042805449,
+   "neutral": 0.0,
+   "precip_mm_2h": 4.18,
+   "wind_ms": 3.44,
+   "temp_c": 5.5
+  }
+ },
+ "lineup_simulation": {
+  "applied": false,
+  "basis": {
+   "home": "projected",
+   "away": "projected"
+  },
+  "reason": "No player ratings exist for this league, so the lineup and formation are shown but cannot change the probabilities."
+ },
+ "confidence": {
+  "tier": "LOW",
+  "p_max": 0.48184800569476194,
+  "entropy_nats": 1.0503945104587769,
+  "text": "Most likely result has P = 48.2%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.5% \u00b1 0.4% (n=17312, mean forecast 44.7%). Backtest RPS for E1: 0.2171; exact-score top-5 hit rate 51.9% (n=1848). Overall champion RPS 0.2093 vs home/away baseline 0.2284 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-11-22, n=41,487). Outcome-certainty tier: LOW (entropy 1.050 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Blackburn: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Blackburn: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.",
+  "Charlton: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Charlton: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+ ],
+ "verdict": "Blackburn 1\u20131 Charlton is the single most probable scoreline at 13.4%: expected goals 1.50\u20130.99 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.038). Exact scores are inherently uncertain; the 1X2 split is 48.2%/27.7%/24.1%.",
+ "resolved": {
+  "home_key": "England:Blackburn",
+  "away_key": "England:Charlton",
+  "div": "E1",
+  "home_div": "E1",
+  "away_div": "E1",
+  "country": "England"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: Charlton Athletic FC at Blackburn Rovers FC\nCompetition: EFL Championship\nDate: 2026-11-28 07:30 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-11-25\n\nPRIMARY FINAL SCORE PREDICTION\n\nBlackburn Rovers FC 1 \u2013 1 Charlton Athletic FC\n(modal exact score, probability 13.4%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.50\nAway: 0.99\nExpected Total: 2.49\nMedian Total: 2\n\nRESULT PROBABILITIES\n\nHome Win: 48.2%\nDraw: 27.7%\nAway Win: 24.1%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 13.4%\n2. 1\u20130: 11.8%\n3. 2\u20131: 9.5%\n4. 2\u20130: 9.2%\n5. 0\u20130: 8.5%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 28.0%\nTotal 2 goals: 26.5%\nTotal 3 goals: 21.5%\nTotal 4 goals: 13.5%\nTotal 5+ goals: 10.5%\n\nBoth Teams Score: 50.5%\nClean sheet Blackburn Rovers FC: 36.3% \u00b7 Clean sheet Charlton Athletic FC: 21.7%\n\nMATCH INTELLIGENCE\n\n1. Charlton attack vs Blackburn defence: rate multiplier \u00d70.75 for the away side.\n2. Home advantage (England, fitted from results): \u00d71.23 on Blackburn's scoring rate.\n3. Independent results-only Elo: Blackburn 1414 vs Charlton 1336 (gap +78 before home advantage).\n\nMODEL CONFIDENCE\n\nMost likely result has P = 48.2%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.5% \u00b1 0.4% (n=17312, mean forecast 44.7%). Backtest RPS for E1: 0.2171; exact-score top-5 hit rate 51.9% (n=1848). Overall champion RPS 0.2093 vs home/away baseline 0.2284 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-11-22, n=41,487). Outcome-certainty tier: LOW (entropy 1.050 nats of max 1.099).\nParameter-uncertainty 80% bands: xG Blackburn Rovers FC 1.16\u20131.86, xG Charlton Athletic FC 0.76\u20131.25; P(home win) 38.0%\u201358.9%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0024 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nBlackburn: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-11-26 11:21 EST (4-2-3-1)\n  Aynsley Pears (G), Gady Beyuku (D), Hayden Carter (D), Sean McLoughlin (D), Harry Pickering (D), Kristi Montgomery (M), Moussa Baradji (M), Jayden Fevrier (F), Todd Cantwell (M), Oladapo Afolayan (F), Andri Gu\u00f0johnsen (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\nCharlton: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-11-26 11:21 EST (4-1-4-1)\n  Arthur Okonkwo (G), Dan McNamara (D), Tyler Bindon (D), Billy Koumetio (D), Ivan Mes\u00edk (D), Conor Coventry (M), Tyreece Campbell (F), Joe Rankin-Costello (M), Sonny Carey (M), Karlan Grant (F), Matt Godden (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nKEY ABSENCES\n\n- Blackburn: Tom Atcheson \u2014 injury, Doubtful [FotMob, 2026-11-26 11:21 EST]\n- Blackburn: Bal\u00e1zs T\u00f3th \u2014 injury, Early January 2027 [FotMob, 2026-11-26 11:21 EST]\n- Blackburn: Ryan Alebiosu \u2014 injury, Doubtful [FotMob, 2026-11-26 11:21 EST]\n- Blackburn: Adam Forshaw \u2014 injury, Early December 2026 [FotMob, 2026-11-26 11:21 EST]\n- Blackburn: Lewis Miller \u2014 injury, Unknown [FotMob, 2026-11-26 11:21 EST]\n- Charlton: Joe Rankin-Costello \u2014 injury, Doubtful [FotMob, 2026-11-26 11:21 EST]\n- Charlton: Rob Apter \u2014 injury, Unknown [FotMob, 2026-11-26 11:21 EST]\n- Charlton: Collins Sichenje \u2014 injury, Out for season [FotMob, 2026-11-26 11:21 EST]\n\nWEATHER AT VENUE\n\nEwood Park, Blackburn, Lancashire: 5.5 \u00b0C, wind 3.4 m/s, precipitation 4.2 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-11-26 11:21 EST]\n\nREST & TRAVEL\n\nBlackburn: 3 days' rest, 3 matches in previous 21 days \u00b7 Charlton: 4 days' rest, 3 in 21 days \u00b7 away travel 302.0 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 48.2% / 27.7% / 24.1%, xG 1.50\u20130.99\n- Understat xG component (validated, in ensemble): home -3.83 pp, draw +2.10 pp, away +1.73 pp; xG -0.145 / -0.011\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.97 pp, draw -0.43 pp, away -0.54 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.61 pp, draw -0.32 pp, away -0.29 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +1.40 pp, draw -1.56 pp, away +0.16 pp\n- lineup: not applied (failed validation; no live features)\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Blackburn: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Blackburn: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n- Charlton: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Charlton: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nFINAL VERDICT\n\nBlackburn 1\u20131 Charlton is the single most probable scoreline at 13.4%: expected goals 1.50\u20130.99 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.038). Exact scores are inherently uncertain; the 1X2 split is 48.2%/27.7%/24.1%.\n",
+ "refresh_id": "3dfeedb55cdd454da684aa34b1dbb4b0",
+ "frozen_at": "2026-11-26T16:21:22+00:00",
+ "sha256": "2cbb1f63a06985ad81c87a61690db4f3b1843f28ffb4658c5fa265cb97d01815"
+}

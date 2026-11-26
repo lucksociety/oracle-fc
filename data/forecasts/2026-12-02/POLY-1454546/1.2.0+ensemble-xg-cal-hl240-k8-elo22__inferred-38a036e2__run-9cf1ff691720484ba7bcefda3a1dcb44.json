@@ -1,0 +1,856 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-11-25",
+ "input_fingerprint": "e976ca17acace7441d10f71d9526eec90d3fafdfcadae3ab7f589b27b613cade",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-11-26T16:22:00+00:00",
+ "fixture": {
+  "event_id": "POLY-1454546",
+  "home_name": "Liverpool FC",
+  "away_name": "Sunderland AFC",
+  "competition": "Premier League",
+  "subcategory": "epl",
+  "kickoff_utc": "2026-12-02T19:30:00+00:00",
+  "kickoff_local": "2026-12-02 14:30 EST",
+  "home_matched": "Liverpool",
+  "away_matched": "Sunderland",
+  "match_methods": {
+   "home": {
+    "source": "Liverpool FC",
+    "matched": "Liverpool",
+    "method": "core-tokens",
+    "score": 0.97
+   },
+   "away": {
+    "source": "Sunderland AFC",
+    "matched": "Sunderland",
+    "method": "core-tokens",
+    "score": 0.97
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.6506970516834654,
+  "p_draw": 0.21098534595629811,
+  "p_away": 0.1383176023602366,
+  "xg_home": 2.0860843051514784,
+  "xg_away": 0.8767592511196858,
+  "xg_total": 2.962843556271164,
+  "median_total": 3,
+  "modal_score": {
+   "home": 2,
+   "away": 0,
+   "p": 0.11235690720908198
+  },
+  "top_scores": [
+   {
+    "home": 2,
+    "away": 0,
+    "p": 0.11235690720908198
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.10313090380408878
+   },
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.10206157712136606
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.10194285154888887
+   },
+   {
+    "home": 3,
+    "away": 0,
+    "p": 0.07782149113900758
+   }
+  ],
+  "btts": 0.5252276704405057,
+  "totals_over": {
+   "over_0.5": 0.9469992777308907,
+   "over_1.5": 0.8033949055378314,
+   "over_2.5": 0.5706198230271211,
+   "over_3.5": 0.34459408174711015,
+   "over_4.5": 0.17554212535979463,
+   "over_5.5": 0.07757864482082986,
+   "over_6.5": 0.029753759071108953
+  },
+  "total_buckets": {
+   "0-1": 0.19660509446216878,
+   "2": 0.2327750825107103,
+   "3": 0.22602574128001088,
+   "4": 0.16905195638731552,
+   "5+": 0.17554212535979463
+  },
+  "clean_sheet_home": 0.40957789354999175,
+  "clean_sheet_away": 0.11819515827861224,
+  "home_goal_dist": [
+   0.11819515827861224,
+   0.2606438037055825,
+   0.27557726591371823,
+   0.19041994637074502,
+   0.09745062543695163,
+   0.03950310555746728,
+   0.01324035784047202,
+   0.0049697368964512
+  ],
+  "away_goal_dist": [
+   0.40957789354999175,
+   0.3731111809693256,
+   0.1612628435026923,
+   0.04505607011262952,
+   0.009261133034421987,
+   0.0015038317360076805,
+   0.0002015727795880813,
+   2.5474315343152216e-05
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    4
+   ],
+   "away_goals_80": [
+    0,
+    2
+   ],
+   "total_goals_80": [
+    1,
+    5
+   ],
+   "goal_diff_80": [
+    -1,
+    3
+   ]
+  },
+  "score_grid": [
+   [
+    0.053001,
+    0.040473,
+    0.018357,
+    0.005118,
+    0.00105,
+    0.00017,
+    2.3e-05
+   ],
+   [
+    0.103131,
+    0.102062,
+    0.041143,
+    0.0115,
+    0.002366,
+    0.000384,
+    5.1e-05
+   ],
+   [
+    0.112357,
+    0.101943,
+    0.045908,
+    0.012346,
+    0.002547,
+    0.000414,
+    5.6e-05
+   ],
+   [
+    0.077821,
+    0.070808,
+    0.030685,
+    0.008987,
+    0.001784,
+    0.000291,
+    3.9e-05
+   ],
+   [
+    0.039785,
+    0.036305,
+    0.015778,
+    0.004447,
+    0.000961,
+    0.000151,
+    2e-05
+   ],
+   [
+    0.016091,
+    0.014727,
+    0.006419,
+    0.001814,
+    0.000377,
+    6.5e-05,
+    8e-06
+   ],
+   [
+    0.005379,
+    0.004938,
+    0.002159,
+    0.000612,
+    0.000128,
+    2.1e-05,
+    3e-06
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.65099,
+  "p_draw": 0.211595,
+  "p_away": 0.137415,
+  "se": [
+   0.0010658377453909202,
+   0.0009132977498466752,
+   0.0007698445225336087
+  ],
+  "max_abs_dev_vs_exact": 0.0009026023602365929,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   1.6297811152143535,
+   2.581732184661197
+  ],
+  "xg_away_80": [
+   0.6469505989301221,
+   1.124831708598859
+  ],
+  "p_home_80": [
+   0.537242746886851,
+   0.749614425178355
+  ],
+  "p_draw_80": [
+   0.1593912854553976,
+   0.25315142083940534
+  ],
+  "p_away_80": [
+   0.08783674919376722,
+   0.2095089120797836
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.18238091958593575,
+   0.20527297358584073
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.623318505572638,
+   "p_draw": 0.23135367118156705,
+   "p_away": 0.14532782324579493,
+   "xg_home": 1.813087743228563,
+   "xg_away": 0.7493479020810216,
+   "weight": 0.0077
+  },
+  "elo": {
+   "p_home": 0.6692767157668611,
+   "p_draw": 0.18829305577139036,
+   "p_away": 0.14243022846174877,
+   "xg_home": 2.2212406556519566,
+   "xg_away": 0.9185824188119363,
+   "weight": 0.3721
+  },
+  "standard_dc": {
+   "p_home": 0.6070263238841482,
+   "p_draw": 0.2432805504414159,
+   "p_away": 0.14969312567443605,
+   "xg_home": 1.7371554453356226,
+   "xg_away": 0.7392579588992859,
+   "weight": 0.0028
+  },
+  "home_away_rate": {
+   "p_home": 0.42870823668143154,
+   "p_draw": 0.24957357441149683,
+   "p_away": 0.3217181889070717,
+   "xg_home": 1.5306602225403814,
+   "xg_away": 1.2933320528772922,
+   "weight": 0.001
+  },
+  "xg_dc": {
+   "p_home": 0.6250372560871348,
+   "p_draw": 0.22073494629662546,
+   "p_away": 0.15422779761623992,
+   "xg_home": 1.9362749726537711,
+   "xg_away": 0.8497742806352891,
+   "weight": 0.6164
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Sunderland attack vs Liverpool defence: rate multiplier \u00d70.62 for the away side.",
+   "effect": 0.4773
+  },
+  {
+   "text": "Independent results-only Elo: Liverpool 1828 vs Sunderland 1594 (gap +234 before home advantage).",
+   "effect": 0.3512
+  },
+  {
+   "text": "Home advantage (England, fitted from results): \u00d71.23 on Liverpool's scoring rate.",
+   "effect": 0.2092
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.6506970516834653,
+  "p_draw": 0.2109853459562981,
+  "p_away": 0.1383176023602366,
+  "xg_home": 2.086084305151478,
+  "xg_away": 0.8767592511196857
+ },
+ "context": {
+  "fetched_at": "2026-11-26T16:22:00+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5795541",
+    "fetched_at": "2026-11-26T16:22:00+00:00"
+   },
+   {
+    "name": "Fantasy Premier League availability",
+    "url": "https://fantasy.premierleague.com/api/bootstrap-static/",
+    "fetched_at": "2026-11-26T16:22:00+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "inferred",
+    "source": null,
+    "formation": "",
+    "starters": [
+     {
+      "name": "Alisson",
+      "pos": "G"
+     },
+     {
+      "name": "Virgil van Dijk",
+      "pos": "D"
+     },
+     {
+      "name": "Milo\u0161 Kerkez",
+      "pos": "D"
+     },
+     {
+      "name": "J\u00e9r\u00e9my Jacquet",
+      "pos": "D"
+     },
+     {
+      "name": "Florian Wirtz",
+      "pos": "M"
+     },
+     {
+      "name": "Alexis Mac Allister",
+      "pos": "M"
+     },
+     {
+      "name": "Alexander Isak",
+      "pos": "F"
+     },
+     {
+      "name": "Ronald Araujo",
+      "pos": "D"
+     },
+     {
+      "name": "Bradley Barcola",
+      "pos": "F"
+     },
+     {
+      "name": "Dominik Szoboszlai",
+      "pos": "M"
+     },
+     {
+      "name": "V\u00edctor Mu\u00f1oz",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-11-26T16:22:00+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [],
+    "mean_xi_attack_index": 0.007,
+    "mean_continuity": -1.033,
+    "p_backup_gk": 0.225
+   },
+   "away": {
+    "status": "inferred",
+    "source": null,
+    "formation": "",
+    "starters": [
+     {
+      "name": "Robin Roefs",
+      "pos": "G"
+     },
+     {
+      "name": "Enzo Le F\u00e9e",
+      "pos": "M"
+     },
+     {
+      "name": "Noah Sadiki",
+      "pos": "M"
+     },
+     {
+      "name": "Reinildo",
+      "pos": "D"
+     },
+     {
+      "name": "Trai Hume",
+      "pos": "D"
+     },
+     {
+      "name": "Nordi Mukiele",
+      "pos": "D"
+     },
+     {
+      "name": "Luke O'Nien",
+      "pos": "D"
+     },
+     {
+      "name": "Thomas Meunier",
+      "pos": "D"
+     },
+     {
+      "name": "Nilson Angulo",
+      "pos": "F"
+     },
+     {
+      "name": "Chemsdine Talbi",
+      "pos": "F"
+     },
+     {
+      "name": "Wilson Isidor",
+      "pos": "F"
+     }
+    ],
+    "fetched_at": "2026-11-26T16:22:00+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [],
+    "mean_xi_attack_index": -0.046,
+    "mean_continuity": -1.119,
+    "p_backup_gk": 0.0
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "V\u00edctor Mu\u00f1oz",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795541",
+     "fetched_at": "2026-11-26T16:22:00+00:00",
+     "chance_of_playing": 75,
+     "fpl_status": "doubtful",
+     "fpl_news": "Knee injury - 75% chance of playing",
+     "fpl_news_added": "2026-11-26T03:30:05.640103Z"
+    },
+    {
+     "player": "Cody Gakpo",
+     "type": "injury",
+     "expected_return": "A few days",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795541",
+     "fetched_at": "2026-11-26T16:22:00+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Calf injury - Expected back 2 Dec",
+     "fpl_news_added": "2026-11-22T16:30:05.520808Z"
+    },
+    {
+     "player": "Ryan Gravenberch",
+     "type": "injury",
+     "expected_return": "A few days",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795541",
+     "fetched_at": "2026-11-26T16:22:00+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Foot injury - Unknown return date",
+     "fpl_news_added": "2026-11-03T17:00:09.626695Z"
+    },
+    {
+     "player": "Hugo Ekitik\u00e9",
+     "type": "injury",
+     "expected_return": "Early January 2027",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795541",
+     "fetched_at": "2026-11-26T16:22:00+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Achilles injury - Unknown return date",
+     "fpl_news_added": "2026-07-23T12:01:23.643771Z"
+    },
+    {
+     "player": "Conor Bradley",
+     "type": "injury",
+     "expected_return": "Back in training",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795541",
+     "fetched_at": "2026-11-26T16:22:00+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Knee injury - Expected back 12 Dec",
+     "fpl_news_added": "2026-07-23T12:01:23.565711Z"
+    },
+    {
+     "player": "Giovanni Leoni",
+     "type": "injury",
+     "expected_return": "Back in training",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795541",
+     "fetched_at": "2026-11-26T16:22:00+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Knee injury - Expected back 12 Dec",
+     "fpl_news_added": "2026-07-23T12:01:23.596909Z"
+    },
+    {
+     "player": "Vitezslav Jaros",
+     "type": "injured",
+     "expected_return": "Knee injury - Unknown return date",
+     "chance_of_playing": 0,
+     "source": "FPL",
+     "source_url": "https://fantasy.premierleague.com/api/bootstrap-static/",
+     "fetched_at": "2026-07-29T18:00:10.351066Z"
+    }
+   ],
+   "away": [
+    {
+     "player": "Brian Brobbey",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795541",
+     "fetched_at": "2026-11-26T16:22:00+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Muscular injury - Unknown return date",
+     "fpl_news_added": "2026-11-10T11:30:10.818854Z"
+    },
+    {
+     "player": "Granit Xhaka",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795541",
+     "fetched_at": "2026-11-26T16:22:00+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Calf injury - Unknown return date",
+     "fpl_news_added": "2026-11-08T14:30:09.504002Z"
+    },
+    {
+     "player": "Habib Diarra",
+     "type": "injury",
+     "expected_return": "Early December 2026",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795541",
+     "fetched_at": "2026-11-26T16:22:00+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Muscular injury - Unknown return date",
+     "fpl_news_added": "2026-11-01T08:30:09.264068Z"
+    },
+    {
+     "player": "Daniel Ballard",
+     "type": "injury",
+     "expected_return": "Mid December 2026",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795541",
+     "fetched_at": "2026-11-26T16:22:00+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Hamstring injury - Unknown return date",
+     "fpl_news_added": "2026-09-25T21:30:10.370384Z"
+    },
+    {
+     "player": "Romaine Mundle",
+     "type": "injury",
+     "expected_return": "Early January 2027",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795541",
+     "fetched_at": "2026-11-26T16:22:00+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Knee injury - Unknown return date",
+     "fpl_news_added": "2026-09-09T14:00:08.462705Z"
+    },
+    {
+     "player": "Kevin Danso",
+     "type": "not in squad",
+     "expected_return": "Ineligible to face parent club - Expected back 2 Dec",
+     "chance_of_playing": 0,
+     "source": "FPL",
+     "source_url": "https://fantasy.premierleague.com/api/bootstrap-static/",
+     "fetched_at": "2026-11-21T17:00:05.766153Z"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 10,
+    "n21": 1,
+    "last_match": "2026-11-22"
+   },
+   "away": {
+    "rest_days": 11,
+    "n21": 1,
+    "last_match": "2026-11-21"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 194.1
+  },
+  "venue": {
+   "name": "Anfield",
+   "city": "Liverpool",
+   "lat": 53.430827885,
+   "lon": -2.960852981
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 2.1500000000000004,
+   "temp_c": 7.6,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=53.431&longitude=-2.961",
+   "fetched_at": "2026-11-26T16:22:00+00:00",
+   "lat": 53.430827885,
+   "lon": -2.960852981
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": -2.73,
+    "d_p_draw_pp": 2.02,
+    "d_p_away_pp": 0.71,
+    "d_xg_home": -0.176,
+    "d_xg_away": -0.042
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0154,
+    "away_rate_mult": 1.005,
+    "d_p_home_pp": 0.53,
+    "d_p_draw_pp": -0.31,
+    "d_p_away_pp": -0.22,
+    "d_xg_home": 0.031,
+    "d_xg_away": 0.004,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "home_rate_mult": 0.9948,
+    "away_rate_mult": 0.9851,
+    "d_p_home_pp": 0.07,
+    "d_p_draw_pp": 0.04,
+    "d_p_away_pp": -0.11,
+    "d_xg_home": -0.009,
+    "d_xg_away": -0.012,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 10.0,
+   "rest_a": 11.0,
+   "n21_h": 1.0,
+   "n21_a": 1.0,
+   "travel_km": 194.1338051015826,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 2.1500000000000004,
+   "temp_c": 7.6
+  }
+ },
+ "lineup_simulation": {
+  "applied": true,
+  "validated": false,
+  "scale": 0.5,
+  "basis": {
+   "home": "inferred",
+   "away": "inferred"
+  },
+  "home_rate_mult": 0.9974,
+  "away_rate_mult": 0.9925,
+  "note": "Starting-XI strength, continuity and backup-keeper adjustment at half the fitted size. It did not pass the out-of-sample test, so bets are not priced from it.",
+  "p_home": 0.6511190873633672,
+  "p_draw": 0.2112043869675983,
+  "p_away": 0.1376765256690347,
+  "xg_home": 2.0811014375016703,
+  "xg_away": 0.8705157236584078,
+  "xg_total": 2.951617161160078,
+  "btts": 0.5224214652947096,
+  "totals_over": {
+   "over_0.5": 0.9463614886978104,
+   "over_1.5": 0.8016306582428692,
+   "over_2.5": 0.568009334823573,
+   "over_3.5": 0.3420528711697846,
+   "over_4.5": 0.1737157458197671,
+   "over_5.5": 0.07652885846791775,
+   "over_6.5": 0.029258418692742223
+  },
+  "modal_score": {
+   "home": 2,
+   "away": 0,
+   "p": 0.11308096494773019
+  },
+  "top_scores": [
+   {
+    "home": 2,
+    "away": 0,
+    "p": 0.11308096494773019
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.10406557977676442
+   },
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.1022220452513267
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.10181603795856735
+   },
+   {
+    "home": 3,
+    "away": 0,
+    "p": 0.07814629842349591
+   }
+  ],
+  "score_grid": [
+   [
+    0.053639,
+    0.040665,
+    0.018318,
+    0.005075,
+    0.001035,
+    0.000167,
+    2.2e-05
+   ],
+   [
+    0.104066,
+    0.102222,
+    0.040919,
+    0.011362,
+    0.002323,
+    0.000375,
+    5e-05
+   ],
+   [
+    0.113081,
+    0.101816,
+    0.04552,
+    0.012159,
+    0.002492,
+    0.000403,
+    5.4e-05
+   ],
+   [
+    0.078146,
+    0.070545,
+    0.030344,
+    0.008824,
+    0.00174,
+    0.000282,
+    3.8e-05
+   ],
+   [
+    0.039875,
+    0.036093,
+    0.015566,
+    0.004355,
+    0.000935,
+    0.000146,
+    2e-05
+   ],
+   [
+    0.016102,
+    0.014615,
+    0.00632,
+    0.001773,
+    0.000366,
+    6.2e-05,
+    8e-06
+   ],
+   [
+    0.005376,
+    0.004893,
+    0.002122,
+    0.000597,
+    0.000124,
+    2e-05,
+    3e-06
+   ]
+  ]
+ },
+ "confidence": {
+  "tier": "HIGH",
+  "p_max": 0.6506970516834654,
+  "entropy_nats": 0.8815181635369513,
+  "text": "Most likely result has P = 65.1%. In the out-of-sample backtest, favourites priced 0.60\u20130.70 won 67.2% \u00b1 0.7% (n=4035, mean forecast 64.2%). Backtest RPS for E0: 0.2018; exact-score top-5 hit rate 46.3% (n=1249). Overall champion RPS 0.2093 vs home/away baseline 0.2284 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-11-22, n=41,487). Outcome-certainty tier: HIGH (entropy 0.882 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Liverpool: no lineup published yet \u2014 XI inferred from recent minutes share minus known absences; 200 configurations simulated (start P=0.7, UNVALIDATED prior).",
+  "Sunderland: no lineup published yet \u2014 XI inferred from recent minutes share minus known absences; 200 configurations simulated (start P=0.7, UNVALIDATED prior)."
+ ],
+ "verdict": "Liverpool 2\u20130 Sunderland is the single most probable scoreline at 11.2%: expected goals 2.09\u20130.88 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.038). Exact scores are inherently uncertain; the 1X2 split is 65.1%/21.1%/13.8%.",
+ "resolved": {
+  "home_key": "England:Liverpool",
+  "away_key": "England:Sunderland",
+  "div": "E0",
+  "home_div": "E0",
+  "away_div": "E0",
+  "country": "England"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: Sunderland AFC at Liverpool FC\nCompetition: Premier League\nDate: 2026-12-02 14:30 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-11-25\n\nPRIMARY FINAL SCORE PREDICTION\n\nLiverpool FC 2 \u2013 0 Sunderland AFC\n(modal exact score, probability 11.2%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 2.09\nAway: 0.88\nExpected Total: 2.96\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 65.1%\nDraw: 21.1%\nAway Win: 13.8%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 2\u20130: 11.2%\n2. 1\u20130: 10.3%\n3. 1\u20131: 10.2%\n4. 2\u20131: 10.2%\n5. 3\u20130: 7.8%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 19.7%\nTotal 2 goals: 23.3%\nTotal 3 goals: 22.6%\nTotal 4 goals: 16.9%\nTotal 5+ goals: 17.6%\n\nBoth Teams Score: 52.5%\nClean sheet Liverpool FC: 41.0% \u00b7 Clean sheet Sunderland AFC: 11.8%\n\nMATCH INTELLIGENCE\n\n1. Sunderland attack vs Liverpool defence: rate multiplier \u00d70.62 for the away side.\n2. Independent results-only Elo: Liverpool 1828 vs Sunderland 1594 (gap +234 before home advantage).\n3. Home advantage (England, fitted from results): \u00d71.23 on Liverpool's scoring rate.\n\nMODEL CONFIDENCE\n\nMost likely result has P = 65.1%. In the out-of-sample backtest, favourites priced 0.60\u20130.70 won 67.2% \u00b1 0.7% (n=4035, mean forecast 64.2%). Backtest RPS for E0: 0.2018; exact-score top-5 hit rate 46.3% (n=1249). Overall champion RPS 0.2093 vs home/away baseline 0.2284 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-11-22, n=41,487). Outcome-certainty tier: HIGH (entropy 0.882 nats of max 1.099).\nParameter-uncertainty 80% bands: xG Liverpool FC 1.63\u20132.58, xG Sunderland AFC 0.65\u20131.12; P(home win) 53.7%\u201375.0%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0009 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nLiverpool: INFERRED, fetched 2026-11-26 11:22 EST\n  Alisson (G), Virgil van Dijk (D), Milo\u0161 Kerkez (D), J\u00e9r\u00e9my Jacquet (D), Florian Wirtz (M), Alexis Mac Allister (M), Alexander Isak (F), Ronald Araujo (D), Bradley Barcola (F), Dominik Szoboszlai (M), V\u00edctor Mu\u00f1oz (F)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs +0.007 (log) \u00b7 continuity -1.03 \u00b7 P(backup GK) 22%\nSunderland: INFERRED, fetched 2026-11-26 11:22 EST\n  Robin Roefs (G), Enzo Le F\u00e9e (M), Noah Sadiki (M), Reinildo (D), Trai Hume (D), Nordi Mukiele (D), Luke O'Nien (D), Thomas Meunier (D), Nilson Angulo (F), Chemsdine Talbi (F), Wilson Isidor (F)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs -0.046 (log) \u00b7 continuity -1.12 \u00b7 P(backup GK) 0%\n\nKEY ABSENCES\n\n- Liverpool: V\u00edctor Mu\u00f1oz \u2014 injury, Doubtful, 75% chance of playing [FotMob + FPL, 2026-11-26 11:22 EST] \u2014 FPL: Knee injury - 75% chance of playing (updated 2026-11-25 22:30 EST)\n- Liverpool: Cody Gakpo \u2014 injury, A few days, 0% chance of playing [FotMob + FPL, 2026-11-26 11:22 EST] \u2014 FPL: Calf injury - Expected back 2 Dec (updated 2026-11-22 11:30 EST)\n- Liverpool: Ryan Gravenberch \u2014 injury, A few days, 0% chance of playing [FotMob + FPL, 2026-11-26 11:22 EST] \u2014 FPL: Foot injury - Unknown return date (updated 2026-11-03 12:00 EST)\n- Liverpool: Hugo Ekitik\u00e9 \u2014 injury, Early January 2027, 0% chance of playing [FotMob + FPL, 2026-11-26 11:22 EST] \u2014 FPL: Achilles injury - Unknown return date (updated 2026-07-23 08:01 EDT)\n- Liverpool: Conor Bradley \u2014 injury, Back in training, 0% chance of playing [FotMob + FPL, 2026-11-26 11:22 EST] \u2014 FPL: Knee injury - Expected back 12 Dec (updated 2026-07-23 08:01 EDT)\n- Liverpool: Giovanni Leoni \u2014 injury, Back in training, 0% chance of playing [FotMob + FPL, 2026-11-26 11:22 EST] \u2014 FPL: Knee injury - Expected back 12 Dec (updated 2026-07-23 08:01 EDT)\n- Liverpool: Vitezslav Jaros \u2014 injured, Knee injury - Unknown return date, 0% chance of playing [FPL, 2026-07-29 14:00 EDT]\n- Sunderland: Brian Brobbey \u2014 injury, Late November 2026, 0% chance of playing [FotMob + FPL, 2026-11-26 11:22 EST] \u2014 FPL: Muscular injury - Unknown return date (updated 2026-11-10 06:30 EST)\n- Sunderland: Granit Xhaka \u2014 injury, Late November 2026, 0% chance of playing [FotMob + FPL, 2026-11-26 11:22 EST] \u2014 FPL: Calf injury - Unknown return date (updated 2026-11-08 09:30 EST)\n- Sunderland: Habib Diarra \u2014 injury, Early December 2026, 0% chance of playing [FotMob + FPL, 2026-11-26 11:22 EST] \u2014 FPL: Muscular injury - Unknown return date (updated 2026-11-01 03:30 EST)\n- Sunderland: Daniel Ballard \u2014 injury, Mid December 2026, 0% chance of playing [FotMob + FPL, 2026-11-26 11:22 EST] \u2014 FPL: Hamstring injury - Unknown return date (updated 2026-09-25 17:30 EDT)\n- Sunderland: Romaine Mundle \u2014 injury, Early January 2027, 0% chance of playing [FotMob + FPL, 2026-11-26 11:22 EST] \u2014 FPL: Knee injury - Unknown return date (updated 2026-09-09 10:00 EDT)\n- Sunderland: Kevin Danso \u2014 not in squad, Ineligible to face parent club - Expected back 2 Dec, 0% chance of playing [FPL, 2026-11-21 12:00 EST]\n\nWEATHER AT VENUE\n\nAnfield, Liverpool: 7.6 \u00b0C, wind 2.2 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-11-26 11:22 EST]\n\nREST & TRAVEL\n\nLiverpool: 10 days' rest, 1 matches in previous 21 days \u00b7 Sunderland: 11 days' rest, 1 in 21 days \u00b7 away travel 194.1 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 65.1% / 21.1% / 13.8%, xG 2.09\u20130.88\n- Understat xG component (validated, in ensemble): home -2.73 pp, draw +2.02 pp, away +0.71 pp; xG -0.176 / -0.042\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.53 pp, draw -0.31 pp, away -0.22 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- lineup: NOT APPLIED (failed out-of-sample validation); would have moved home +0.07 pp, draw +0.04 pp, away -0.11 pp\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Liverpool: no lineup published yet \u2014 XI inferred from recent minutes share minus known absences; 200 configurations simulated (start P=0.7, UNVALIDATED prior).\n- Sunderland: no lineup published yet \u2014 XI inferred from recent minutes share minus known absences; 200 configurations simulated (start P=0.7, UNVALIDATED prior).\n\nFINAL VERDICT\n\nLiverpool 2\u20130 Sunderland is the single most probable scoreline at 11.2%: expected goals 2.09\u20130.88 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.038). Exact scores are inherently uncertain; the 1X2 split is 65.1%/21.1%/13.8%.\n",
+ "refresh_id": "9cf1ff691720484ba7bcefda3a1dcb44",
+ "frozen_at": "2026-11-26T16:22:00+00:00",
+ "sha256": "2d453ba3033eb8751ce43dcc1e7a436c0b683155e981c3e4885aa6515df32525"
+}

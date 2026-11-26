@@ -1,0 +1,763 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-11-25",
+ "input_fingerprint": "e976ca17acace7441d10f71d9526eec90d3fafdfcadae3ab7f589b27b613cade",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-11-26T16:21:48+00:00",
+ "fixture": {
+  "event_id": "POLY-1437974",
+  "home_name": "AS Roma",
+  "away_name": "AC Monza",
+  "competition": "Serie A",
+  "subcategory": "sea",
+  "kickoff_utc": "2026-11-29T17:00:00+00:00",
+  "kickoff_local": "2026-11-29 12:00 EST",
+  "home_matched": "Roma",
+  "away_matched": "Monza",
+  "match_methods": {
+   "home": {
+    "source": "AS Roma",
+    "matched": "Roma",
+    "method": "core-tokens",
+    "score": 0.97
+   },
+   "away": {
+    "source": "AC Monza",
+    "matched": "Monza",
+    "method": "core-tokens",
+    "score": 0.97
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.7300530214949984,
+  "p_draw": 0.1698033499019098,
+  "p_away": 0.10014362860309177,
+  "xg_home": 2.4724939151104977,
+  "xg_away": 0.8496187024120803,
+  "xg_total": 3.3221126175225777,
+  "median_total": 3,
+  "modal_score": {
+   "home": 2,
+   "away": 0,
+   "p": 0.11140129544689209
+  },
+  "top_scores": [
+   {
+    "home": 2,
+    "away": 0,
+    "p": 0.11140129544689209
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.09601288751462833
+   },
+   {
+    "home": 3,
+    "away": 0,
+    "p": 0.09194322731244188
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.08581816846297327
+   },
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.08005328689673297
+   }
+  ],
+  "btts": 0.5341156441438121,
+  "totals_over": {
+   "over_0.5": 0.963198423800287,
+   "over_1.5": 0.8510572159036827,
+   "over_2.5": 0.6480347709171026,
+   "over_3.5": 0.4256769201489785,
+   "over_4.5": 0.23898103240298918,
+   "over_5.5": 0.11697252308470181,
+   "over_6.5": 0.05000856388254334
+  },
+  "total_buckets": {
+   "0-1": 0.14894278409631734,
+   "2": 0.20302244498657993,
+   "3": 0.2223578507681242,
+   "4": 0.1866958877459893,
+   "5+": 0.23898103240298918
+  },
+  "clean_sheet_home": 0.4240535586733821,
+  "clean_sheet_away": 0.07863237338251837,
+  "home_goal_dist": [
+   0.07863237338251837,
+   0.20779986233462674,
+   0.2631390160321319,
+   0.21722125753674015,
+   0.13240160686710487,
+   0.06372266814601756,
+   0.02527892418360843,
+   0.011804291517251818
+  ],
+  "away_goal_dist": [
+   0.4240535586733821,
+   0.3679762029945315,
+   0.15469965284739182,
+   0.04277248327339093,
+   0.008819416785714095,
+   0.0014530622295131693,
+   0.00019950371425334014,
+   2.611948182289783e-05
+  ],
+  "intervals": {
+   "home_goals_80": [
+    1,
+    5
+   ],
+   "away_goals_80": [
+    0,
+    2
+   ],
+   "total_goals_80": [
+    1,
+    6
+   ],
+   "goal_diff_80": [
+    -1,
+    4
+   ]
+  },
+  "score_grid": [
+   [
+    0.036802,
+    0.026323,
+    0.011568,
+    0.003168,
+    0.000649,
+    0.000107,
+    1.5e-05
+   ],
+   [
+    0.085818,
+    0.080053,
+    0.031234,
+    0.008591,
+    0.001767,
+    0.000291,
+    4e-05
+   ],
+   [
+    0.111401,
+    0.096013,
+    0.041886,
+    0.011107,
+    0.002294,
+    0.000378,
+    5.2e-05
+   ],
+   [
+    0.091943,
+    0.079717,
+    0.033553,
+    0.009708,
+    0.001931,
+    0.00032,
+    4.4e-05
+   ],
+   [
+    0.055852,
+    0.048712,
+    0.020612,
+    0.005749,
+    0.001247,
+    0.000199,
+    2.7e-05
+   ],
+   [
+    0.026763,
+    0.023476,
+    0.009985,
+    0.002798,
+    0.000584,
+    0.000101,
+    1.3e-05
+   ],
+   [
+    0.010569,
+    0.009323,
+    0.003985,
+    0.001121,
+    0.000235,
+    3.9e-05,
+    6e-06
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.731405,
+  "p_draw": 0.16914,
+  "p_away": 0.099455,
+  "se": [
+   0.0009910896174791662,
+   0.0008382471604485159,
+   0.0006691924348608553
+  ],
+  "max_abs_dev_vs_exact": 0.001351978505001572,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   1.9364043276952687,
+   3.0543600703571183
+  ],
+  "xg_away_80": [
+   0.6248838562655785,
+   1.0925039710039828
+  ],
+  "p_home_80": [
+   0.6163576798455858,
+   0.817505553644485
+  ],
+  "p_draw_80": [
+   0.1213929854551007,
+   0.22067677662854393
+  ],
+  "p_away_80": [
+   0.06067276977432319,
+   0.16281640105446674
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.18068500795081857,
+   0.20733008168979353
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.7538884050789496,
+   "p_draw": 0.1539236359129713,
+   "p_away": 0.09218795900807915,
+   "xg_home": 2.6193176386348465,
+   "xg_away": 0.8285770792187848,
+   "weight": 0.0077
+  },
+  "elo": {
+   "p_home": 0.7325474954840503,
+   "p_draw": 0.16993663326605585,
+   "p_away": 0.09751587124989375,
+   "xg_home": 2.2849987693979026,
+   "xg_away": 0.6984247505527712,
+   "weight": 0.3721
+  },
+  "standard_dc": {
+   "p_home": 0.8204806704457539,
+   "p_draw": 0.11567050354020571,
+   "p_away": 0.06384882601404057,
+   "xg_home": 3.16515219692269,
+   "xg_away": 0.8496821789082488,
+   "weight": 0.0028
+  },
+  "home_away_rate": {
+   "p_home": 0.39792131008064024,
+   "p_draw": 0.2656793650506407,
+   "p_away": 0.33639932486871915,
+   "xg_home": 1.3448716327717645,
+   "xg_away": 1.2143801325518926,
+   "weight": 0.001
+  },
+  "xg_dc": {
+   "p_home": 0.7078464437734726,
+   "p_draw": 0.17228512049757055,
+   "p_away": 0.11986843572895682,
+   "xg_home": 2.4788594351251048,
+   "xg_away": 0.9377957522890893,
+   "weight": 0.6164
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Roma attack vs Monza defence: time-weighted strength gap multiplies Roma's scoring rate by \u00d71.81 relative to an average pairing (from 33/32 decay-weighted matches).",
+   "effect": 0.5946
+  },
+  {
+   "text": "Independent results-only Elo: Roma 1832 vs Monza 1487 (gap +346 before home advantage).",
+   "effect": 0.5186
+  },
+  {
+   "text": "Monza attack vs Roma defence: rate multiplier \u00d70.69 for the away side.",
+   "effect": 0.3768
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.7300530214949984,
+  "p_draw": 0.1698033499019098,
+  "p_away": 0.10014362860309177,
+  "xg_home": 2.4724939151104977,
+  "xg_away": 0.8496187024120803
+ },
+ "context": {
+  "fetched_at": "2026-11-26T16:21:48+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5749760",
+    "fetched_at": "2026-11-26T16:21:48+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "3-4-2-1",
+    "starters": [
+     {
+      "name": "Mile Svilar",
+      "pos": "G",
+      "shirt": "99"
+     },
+     {
+      "name": "Gianluca Mancini",
+      "pos": "D",
+      "shirt": "23"
+     },
+     {
+      "name": "Evan N'Dicka",
+      "pos": "D",
+      "shirt": "5"
+     },
+     {
+      "name": "Mario Hermoso",
+      "pos": "D",
+      "shirt": "22"
+     },
+     {
+      "name": "Nahuel Molina",
+      "pos": "D",
+      "shirt": "20"
+     },
+     {
+      "name": "Marten de Roon",
+      "pos": "M",
+      "shirt": "15"
+     },
+     {
+      "name": "Manu Kon\u00e9",
+      "pos": "M",
+      "shirt": "17"
+     },
+     {
+      "name": "Wesley",
+      "pos": "M",
+      "shirt": "43"
+     },
+     {
+      "name": "Niccol\u00f2 Pisilli",
+      "pos": "M",
+      "shirt": "61"
+     },
+     {
+      "name": "Mat\u00edas Soul\u00e9",
+      "pos": "M",
+      "shirt": "18"
+     },
+     {
+      "name": "Santiago Castro",
+      "pos": "F",
+      "shirt": "9"
+     }
+    ],
+    "fetched_at": "2026-11-26T16:21:48+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [],
+    "mean_xi_attack_index": -0.137,
+    "mean_continuity": 0.594,
+    "p_backup_gk": 0.0
+   },
+   "away": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "3-5-2",
+    "starters": [
+     {
+      "name": "Demba Thiam",
+      "pos": "G",
+      "shirt": "20"
+     },
+     {
+      "name": "Eddy Kouadio",
+      "pos": "D",
+      "shirt": "60"
+     },
+     {
+      "name": "Saba Goglichidze",
+      "pos": "D",
+      "shirt": "2"
+     },
+     {
+      "name": "Andrea Carboni",
+      "pos": "D",
+      "shirt": "44"
+     },
+     {
+      "name": "Samuele Birindelli",
+      "pos": "M",
+      "shirt": "19"
+     },
+     {
+      "name": "Ebenezer Akinsanmiro",
+      "pos": "M",
+      "shirt": "14"
+     },
+     {
+      "name": "Leonardo Colombo",
+      "pos": "M",
+      "shirt": "21"
+     },
+     {
+      "name": "Matteo Pessina",
+      "pos": "M",
+      "shirt": "32"
+     },
+     {
+      "name": "Ricardo Mangas",
+      "pos": "M",
+      "shirt": "7"
+     },
+     {
+      "name": "Gustavo Varela",
+      "pos": "F",
+      "shirt": "9"
+     },
+     {
+      "name": "Jay Robinson",
+      "pos": "M",
+      "shirt": "46"
+     }
+    ],
+    "fetched_at": "2026-11-26T16:21:48+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [],
+    "mean_xi_attack_index": -0.131,
+    "mean_continuity": 0.12,
+    "p_backup_gk": 0.87
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Devyne Rensch",
+     "type": "injury",
+     "expected_return": "Early December 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5749760",
+     "fetched_at": "2026-11-26T16:21:48+00:00"
+    },
+    {
+     "player": "Lorenzo Pellegrini",
+     "type": "injury",
+     "expected_return": "Early December 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5749760",
+     "fetched_at": "2026-11-26T16:21:48+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "Cyril Ngonge",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5749760",
+     "fetched_at": "2026-11-26T16:21:48+00:00"
+    },
+    {
+     "player": "Yvan Kouadio Maye",
+     "type": "injury",
+     "expected_return": "Back in training",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5749760",
+     "fetched_at": "2026-11-26T16:21:48+00:00"
+    },
+    {
+     "player": "Michael Folorunsho",
+     "type": "injury",
+     "expected_return": "Early December 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5749760",
+     "fetched_at": "2026-11-26T16:21:48+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 8,
+    "n21": 1,
+    "last_match": "2026-11-21"
+   },
+   "away": {
+    "rest_days": 6,
+    "n21": 2,
+    "last_match": "2026-11-23"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 477.9
+  },
+  "venue": {
+   "name": "Stadio Olimpico",
+   "city": "Roma",
+   "lat": 41.933947912,
+   "lon": 12.454757094
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 2.67,
+   "temp_c": 10.3,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=41.934&longitude=12.455",
+   "fetched_at": "2026-11-26T16:21:48+00:00",
+   "lat": 41.933947912,
+   "lon": 12.454757094
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": -1.59,
+    "d_p_draw_pp": 0.28,
+    "d_p_away_pp": 1.31,
+    "d_xg_home": 0.119,
+    "d_xg_away": 0.15
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0251,
+    "away_rate_mult": 1.0081,
+    "d_p_home_pp": 0.82,
+    "d_p_draw_pp": -0.5,
+    "d_p_away_pp": -0.32,
+    "d_xg_home": 0.06,
+    "d_xg_away": 0.007,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "home_rate_mult": 1.0062,
+    "away_rate_mult": 0.9584,
+    "d_p_home_pp": 0.99,
+    "d_p_draw_pp": -0.37,
+    "d_p_away_pp": -0.62,
+    "d_xg_home": 0.016,
+    "d_xg_away": -0.034,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 8.0,
+   "rest_a": 6.0,
+   "n21_h": 1.0,
+   "n21_a": 2.0,
+   "travel_km": 477.9317018235895,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 2.67,
+   "temp_c": 10.3
+  }
+ },
+ "lineup_simulation": {
+  "applied": true,
+  "validated": false,
+  "scale": 0.5,
+  "basis": {
+   "home": "projected",
+   "away": "projected"
+  },
+  "home_rate_mult": 1.0031,
+  "away_rate_mult": 0.979,
+  "note": "Starting-XI strength, continuity and backup-keeper adjustment at half the fitted size. It did not pass the out-of-sample test, so bets are not priced from it.",
+  "p_home": 0.7350844453546667,
+  "p_draw": 0.16796287229858442,
+  "p_away": 0.09695268234674886,
+  "xg_home": 2.4798703363089367,
+  "xg_away": 0.832144917842381,
+  "xg_total": 3.3120152541513175,
+  "btts": 0.5273449340615417,
+  "totals_over": {
+   "over_0.5": 0.962803780879746,
+   "over_1.5": 0.8497984927827213,
+   "over_2.5": 0.6459763992976971,
+   "over_3.5": 0.4233995565492088,
+   "over_4.5": 0.23715180639269454,
+   "over_5.5": 0.11578300749671955,
+   "over_6.5": 0.04938066418259454
+  },
+  "modal_score": {
+   "home": 2,
+   "away": 0,
+   "p": 0.11319828176516693
+  },
+  "top_scores": [
+   {
+    "home": 2,
+    "away": 0,
+    "p": 0.11319828176516693
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.09550874310933125
+   },
+   {
+    "home": 3,
+    "away": 0,
+    "p": 0.09372223142596608
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.08695589024858885
+   },
+   {
+    "home": 3,
+    "away": 1,
+    "p": 0.07954316221935835
+   }
+  ],
+  "score_grid": [
+   [
+    0.037196,
+    0.026049,
+    0.01121,
+    0.003006,
+    0.000604,
+    9.7e-05,
+    1.3e-05
+   ],
+   [
+    0.086956,
+    0.079414,
+    0.03034,
+    0.008172,
+    0.001647,
+    0.000265,
+    3.6e-05
+   ],
+   [
+    0.113198,
+    0.095509,
+    0.040796,
+    0.010594,
+    0.002143,
+    0.000346,
+    4.7e-05
+   ],
+   [
+    0.093722,
+    0.079543,
+    0.032778,
+    0.009286,
+    0.001809,
+    0.000293,
+    4e-05
+   ],
+   [
+    0.057132,
+    0.048772,
+    0.020204,
+    0.005517,
+    0.001172,
+    0.000183,
+    2.5e-05
+   ],
+   [
+    0.027481,
+    0.023594,
+    0.009824,
+    0.002694,
+    0.000551,
+    9.4e-05,
+    1.2e-05
+   ],
+   [
+    0.010898,
+    0.009408,
+    0.003937,
+    0.001084,
+    0.000223,
+    3.6e-05,
+    5e-06
+   ]
+  ]
+ },
+ "confidence": {
+  "tier": "HIGH",
+  "p_max": 0.7300530214949984,
+  "entropy_nats": 0.7612287453837141,
+  "text": "Most likely result has P = 73.0%. In the out-of-sample backtest, favourites priced 0.70\u20130.80 won 76.3% \u00b1 1.1% (n=1417, mean forecast 74.2%). Backtest RPS for I1: 0.1934; exact-score top-5 hit rate 54.0% (n=1259). Overall champion RPS 0.2093 vs home/away baseline 0.2284 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-11-22, n=41,487). Outcome-certainty tier: HIGH (entropy 0.761 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Roma: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Monza: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior)."
+ ],
+ "verdict": "Roma 2\u20130 Monza is the single most probable scoreline at 11.1%: expected goals 2.47\u20130.85 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.038). Exact scores are inherently uncertain; the 1X2 split is 73.0%/17.0%/10.0%.",
+ "resolved": {
+  "home_key": "Italy:Roma",
+  "away_key": "Italy:Monza",
+  "div": "I1",
+  "home_div": "I1",
+  "away_div": "I1",
+  "country": "Italy"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: AC Monza at AS Roma\nCompetition: Serie A\nDate: 2026-11-29 12:00 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-11-25\n\nPRIMARY FINAL SCORE PREDICTION\n\nAS Roma 2 \u2013 0 AC Monza\n(modal exact score, probability 11.1%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 2.47\nAway: 0.85\nExpected Total: 3.32\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 73.0%\nDraw: 17.0%\nAway Win: 10.0%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 2\u20130: 11.1%\n2. 2\u20131: 9.6%\n3. 3\u20130: 9.2%\n4. 1\u20130: 8.6%\n5. 1\u20131: 8.0%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 14.9%\nTotal 2 goals: 20.3%\nTotal 3 goals: 22.2%\nTotal 4 goals: 18.7%\nTotal 5+ goals: 23.9%\n\nBoth Teams Score: 53.4%\nClean sheet AS Roma: 42.4% \u00b7 Clean sheet AC Monza: 7.9%\n\nMATCH INTELLIGENCE\n\n1. Roma attack vs Monza defence: time-weighted strength gap multiplies Roma's scoring rate by \u00d71.81 relative to an average pairing (from 33/32 decay-weighted matches).\n2. Independent results-only Elo: Roma 1832 vs Monza 1487 (gap +346 before home advantage).\n3. Monza attack vs Roma defence: rate multiplier \u00d70.69 for the away side.\n\nMODEL CONFIDENCE\n\nMost likely result has P = 73.0%. In the out-of-sample backtest, favourites priced 0.70\u20130.80 won 76.3% \u00b1 1.1% (n=1417, mean forecast 74.2%). Backtest RPS for I1: 0.1934; exact-score top-5 hit rate 54.0% (n=1259). Overall champion RPS 0.2093 vs home/away baseline 0.2284 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-11-22, n=41,487). Outcome-certainty tier: HIGH (entropy 0.761 nats of max 1.099).\nParameter-uncertainty 80% bands: xG AS Roma 1.94\u20133.05, xG AC Monza 0.62\u20131.09; P(home win) 61.6%\u201381.8%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0014 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nRoma: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-11-26 11:21 EST (3-4-2-1)\n  Mile Svilar (G), Gianluca Mancini (D), Evan N'Dicka (D), Mario Hermoso (D), Nahuel Molina (D), Marten de Roon (M), Manu Kon\u00e9 (M), Wesley (M), Niccol\u00f2 Pisilli (M), Mat\u00edas Soul\u00e9 (M), Santiago Castro (F)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs -0.137 (log) \u00b7 continuity +0.59 \u00b7 P(backup GK) 0%\nMonza: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-11-26 11:21 EST (3-5-2)\n  Demba Thiam (G), Eddy Kouadio (D), Saba Goglichidze (D), Andrea Carboni (D), Samuele Birindelli (M), Ebenezer Akinsanmiro (M), Leonardo Colombo (M), Matteo Pessina (M), Ricardo Mangas (M), Gustavo Varela (F), Jay Robinson (M)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs -0.131 (log) \u00b7 continuity +0.12 \u00b7 P(backup GK) 87%\n\nKEY ABSENCES\n\n- Roma: Devyne Rensch \u2014 injury, Early December 2026 [FotMob, 2026-11-26 11:21 EST]\n- Roma: Lorenzo Pellegrini \u2014 injury, Early December 2026 [FotMob, 2026-11-26 11:21 EST]\n- Monza: Cyril Ngonge \u2014 injury, Doubtful [FotMob, 2026-11-26 11:21 EST]\n- Monza: Yvan Kouadio Maye \u2014 injury, Back in training [FotMob, 2026-11-26 11:21 EST]\n- Monza: Michael Folorunsho \u2014 injury, Early December 2026 [FotMob, 2026-11-26 11:21 EST]\n\nWEATHER AT VENUE\n\nStadio Olimpico, Roma: 10.3 \u00b0C, wind 2.7 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-11-26 11:21 EST]\n\nREST & TRAVEL\n\nRoma: 8 days' rest, 1 matches in previous 21 days \u00b7 Monza: 6 days' rest, 2 in 21 days \u00b7 away travel 477.9 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 73.0% / 17.0% / 10.0%, xG 2.47\u20130.85\n- Understat xG component (validated, in ensemble): home -1.59 pp, draw +0.28 pp, away +1.31 pp; xG +0.119 / +0.150\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.82 pp, draw -0.50 pp, away -0.32 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- lineup: NOT APPLIED (failed out-of-sample validation); would have moved home +0.99 pp, draw -0.37 pp, away -0.62 pp\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Roma: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Monza: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n\nFINAL VERDICT\n\nRoma 2\u20130 Monza is the single most probable scoreline at 11.1%: expected goals 2.47\u20130.85 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.038). Exact scores are inherently uncertain; the 1X2 split is 73.0%/17.0%/10.0%.\n",
+ "refresh_id": "04cfc1156aa3444b8c05007148e4ab26",
+ "frozen_at": "2026-11-26T16:21:48+00:00",
+ "sha256": "566fbc5c703d67e1bc2af7a70446a98abd378f57b02eef7d6fdb4ff5f4ccbe8a"
+}

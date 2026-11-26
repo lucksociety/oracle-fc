@@ -1,0 +1,782 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-11-25",
+ "input_fingerprint": "e976ca17acace7441d10f71d9526eec90d3fafdfcadae3ab7f589b27b613cade",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-11-26T16:21:33+00:00",
+ "fixture": {
+  "event_id": "POLY-1433547",
+  "home_name": "Le Mans FC",
+  "away_name": "Lille OSC",
+  "competition": "Ligue 1",
+  "subcategory": "fl1",
+  "kickoff_utc": "2026-11-28T19:45:00+00:00",
+  "kickoff_local": "2026-11-28 14:45 EST",
+  "home_matched": "Le Mans",
+  "away_matched": "Lille",
+  "match_methods": {
+   "home": {
+    "source": "Le Mans FC",
+    "matched": "Le Mans",
+    "method": "core-tokens",
+    "score": 0.97
+   },
+   "away": {
+    "source": "Lille OSC",
+    "matched": "Lille",
+    "method": "alias",
+    "score": 1.0
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.24854561865358005,
+  "p_draw": 0.26409101853930517,
+  "p_away": 0.48736336280711473,
+  "xg_home": 1.0733980483347618,
+  "xg_away": 1.6010688347353426,
+  "xg_total": 2.6744668830701044,
+  "median_total": 3,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.12829535008755968
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.12829535008755968
+   },
+   {
+    "home": 0,
+    "away": 1,
+    "p": 0.10349961986134791
+   },
+   {
+    "home": 1,
+    "away": 2,
+    "p": 0.09602051546907493
+   },
+   {
+    "home": 0,
+    "away": 2,
+    "p": 0.08600818129135084
+   },
+   {
+    "home": 0,
+    "away": 0,
+    "p": 0.07184272110963683
+   }
+  ],
+  "btts": 0.5374324997368695,
+  "totals_over": {
+   "over_0.5": 0.928157278890363,
+   "over_1.5": 0.7545979162154036,
+   "over_2.5": 0.5007741573251723,
+   "over_3.5": 0.280205667872603,
+   "over_4.5": 0.13098625283034118,
+   "over_5.5": 0.05314624997156056,
+   "over_6.5": 0.018616876738802794
+  },
+  "total_buckets": {
+   "0-1": 0.24540208378459621,
+   "2": 0.2538237588902313,
+   "3": 0.22056848945256935,
+   "4": 0.14921941504226177,
+   "5+": 0.13098625283034118
+  },
+  "clean_sheet_home": 0.19980324166526528,
+  "clean_sheet_away": 0.334606979707502,
+  "home_goal_dist": [
+   0.334606979707502,
+   0.37500082959255143,
+   0.19963048077990772,
+   0.06894343193782569,
+   0.017581679400387226,
+   0.003549003371689069,
+   0.0005919291087273668,
+   9.566610140939416e-05
+  ],
+  "away_goal_dist": [
+   0.19980324166526528,
+   0.3259509110854161,
+   0.258646659583357,
+   0.13676025477863032,
+   0.05476607962391301,
+   0.017762545118516968,
+   0.004861407652040694,
+   0.001448900492860396
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    2
+   ],
+   "away_goals_80": [
+    0,
+    3
+   ],
+   "total_goals_80": [
+    1,
+    5
+   ],
+   "goal_diff_80": [
+    -3,
+    1
+   ]
+  },
+  "score_grid": [
+   [
+    0.071843,
+    0.1035,
+    0.086008,
+    0.04619,
+    0.018726,
+    0.006136,
+    0.001695
+   ],
+   [
+    0.07006,
+    0.128295,
+    0.096021,
+    0.051083,
+    0.020513,
+    0.006661,
+    0.001824
+   ],
+   [
+    0.03952,
+    0.06446,
+    0.053308,
+    0.026959,
+    0.010722,
+    0.003449,
+    0.000936
+   ],
+   [
+    0.013898,
+    0.022502,
+    0.017706,
+    0.009634,
+    0.003641,
+    0.00116,
+    0.000312
+   ],
+   [
+    0.003601,
+    0.005789,
+    0.004518,
+    0.002337,
+    0.00095,
+    0.000288,
+    7.7e-05
+   ],
+   [
+    0.000737,
+    0.001176,
+    0.000911,
+    0.000467,
+    0.00018,
+    5.9e-05,
+    1.5e-05
+   ],
+   [
+    0.000124,
+    0.000197,
+    0.000152,
+    7.7e-05,
+    2.9e-05,
+    9e-06,
+    2e-06
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.24878,
+  "p_draw": 0.265305,
+  "p_away": 0.485915,
+  "se": [
+   0.0009666656909190478,
+   0.000987213900264274,
+   0.001117590293387966
+  ],
+  "max_abs_dev_vs_exact": 0.0014483628071147447,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   0.7916656996736109,
+   1.3848878065999803
+  ],
+  "xg_away_80": [
+   1.1615855878832566,
+   2.0784173491668243
+  ],
+  "p_home_80": [
+   0.16870192241526863,
+   0.35850829547558233
+  ],
+  "p_draw_80": [
+   0.21308230267920242,
+   0.2962735419507662
+  ],
+  "p_away_80": [
+   0.355299239747992,
+   0.6098190593668456
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.22171856778106286,
+   0.21592482884065015
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.26102400457249086,
+   "p_draw": 0.284822145842094,
+   "p_away": 0.4541538495854152,
+   "xg_home": 0.9639525281846193,
+   "xg_away": 1.3593676013393272,
+   "weight": 0.0077
+  },
+  "elo": {
+   "p_home": 0.19230354083477755,
+   "p_draw": 0.22042259211658646,
+   "p_away": 0.5872738670486359,
+   "xg_home": 0.9910484414903437,
+   "xg_away": 1.9047174700262148,
+   "weight": 0.3721
+  },
+  "standard_dc": {
+   "p_home": 0.24874279004124994,
+   "p_draw": 0.32169374489882724,
+   "p_away": 0.4295634650599228,
+   "xg_home": 0.7973413816351458,
+   "xg_away": 1.1401065172748994,
+   "weight": 0.0028
+  },
+  "home_away_rate": {
+   "p_home": 0.4458870067103181,
+   "p_draw": 0.24483702415909522,
+   "p_away": 0.3092759691305866,
+   "xg_home": 1.6003218680480662,
+   "xg_away": 1.2935310559387128,
+   "weight": 0.001
+  },
+  "xg_dc": {
+   "p_home": 0.2971517197838254,
+   "p_draw": 0.2764392773481878,
+   "p_away": 0.4264090028679868,
+   "xg_home": 1.1125966470579822,
+   "xg_away": 1.3845234218930718,
+   "weight": 0.6164
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Independent results-only Elo: Le Mans 1467 vs Lille 1734 (gap -266 before home advantage).",
+   "effect": 0.3996
+  },
+  {
+   "text": "Le Mans attack vs Lille defence: time-weighted strength gap multiplies Le Mans's scoring rate by \u00d70.68 relative to an average pairing (from 23/30 decay-weighted matches).",
+   "effect": 0.3892
+  },
+  {
+   "text": "Context \u2014 Understat xG component (validated, in ensemble): home win +6.5 pp, draw +3.7 pp, away win -10.2 pp (xG +0.08 / -0.32).",
+   "effect": 0.3045
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.24854561865358005,
+  "p_draw": 0.26409101853930517,
+  "p_away": 0.48736336280711473,
+  "xg_home": 1.0733980483347618,
+  "xg_away": 1.6010688347353426
+ },
+ "context": {
+  "fetched_at": "2026-11-26T16:21:33+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5803004",
+    "fetched_at": "2026-11-26T16:21:33+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "3-1-4-2",
+    "starters": [
+     {
+      "name": "Nicolas Kocik",
+      "pos": "G",
+      "shirt": "98"
+     },
+     {
+      "name": "Rayan Bamba",
+      "pos": "D",
+      "shirt": "26"
+     },
+     {
+      "name": "Samuel Yohou",
+      "pos": "D",
+      "shirt": "17"
+     },
+     {
+      "name": "Harold Voyer",
+      "pos": "D",
+      "shirt": "5"
+     },
+     {
+      "name": "Lucas Bretelle",
+      "pos": "M",
+      "shirt": "29"
+     },
+     {
+      "name": "Lucas Buad\u00e9s",
+      "pos": "M",
+      "shirt": "18"
+     },
+     {
+      "name": "Antoine Rabillard",
+      "pos": "M",
+      "shirt": "9"
+     },
+     {
+      "name": "Daouda Traor\u00e9",
+      "pos": "M",
+      "shirt": "23"
+     },
+     {
+      "name": "Lucas Calodat",
+      "pos": "M",
+      "shirt": "22"
+     },
+     {
+      "name": "Louis Mafouta",
+      "pos": "F",
+      "shirt": "14"
+     },
+     {
+      "name": "Dame Gueye",
+      "pos": "F",
+      "shirt": "25"
+     }
+    ],
+    "fetched_at": "2026-11-26T16:21:33+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [],
+    "mean_xi_attack_index": 0.029,
+    "mean_continuity": 0.56,
+    "p_backup_gk": 0.155
+   },
+   "away": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "4-3-3",
+    "starters": [
+     {
+      "name": "Berke \u00d6zer",
+      "pos": "G",
+      "shirt": "1"
+     },
+     {
+      "name": "Maxima Goffi",
+      "pos": "D",
+      "shirt": "38"
+     },
+     {
+      "name": "Nathan Ngoy",
+      "pos": "D",
+      "shirt": "3"
+     },
+     {
+      "name": "Alexsandro Ribeiro",
+      "pos": "D",
+      "shirt": "4"
+     },
+     {
+      "name": "Calvin Verdonk",
+      "pos": "D",
+      "shirt": "24"
+     },
+     {
+      "name": "Ngal Ayel Mukau",
+      "pos": "M",
+      "shirt": "17"
+     },
+     {
+      "name": "Nabil Bentaleb",
+      "pos": "M",
+      "shirt": "6"
+     },
+     {
+      "name": "Benjamin Andr\u00e9",
+      "pos": "M",
+      "shirt": "21"
+     },
+     {
+      "name": "Ethan Mbapp\u00e9",
+      "pos": "F",
+      "shirt": "8"
+     },
+     {
+      "name": "Ayase Ueda",
+      "pos": "F",
+      "shirt": "18"
+     },
+     {
+      "name": "H\u00e1kon Arnar Haraldsson",
+      "pos": "M",
+      "shirt": "10"
+     }
+    ],
+    "fetched_at": "2026-11-26T16:21:33+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [
+     "Alexsandro Ribeiro"
+    ],
+    "mean_xi_attack_index": 0.019,
+    "mean_continuity": -0.466,
+    "p_backup_gk": 0.145
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Djibril Sidib\u00e9",
+     "type": "injury",
+     "expected_return": "Late January 2027",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5803004",
+     "fetched_at": "2026-11-26T16:21:33+00:00"
+    },
+    {
+     "player": "Th\u00e9o Eyoum",
+     "type": "injury",
+     "expected_return": "Early December 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5803004",
+     "fetched_at": "2026-11-26T16:21:33+00:00"
+    },
+    {
+     "player": "Adil Bourabaa",
+     "type": "injury",
+     "expected_return": "Early January 2027",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5803004",
+     "fetched_at": "2026-11-26T16:21:33+00:00"
+    },
+    {
+     "player": "Martin Rossignol",
+     "type": "injury",
+     "expected_return": "Early December 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5803004",
+     "fetched_at": "2026-11-26T16:21:33+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "Tanguy Nianzou",
+     "type": "injury",
+     "expected_return": "About 1-2 weeks",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5803004",
+     "fetched_at": "2026-11-26T16:21:33+00:00"
+    },
+    {
+     "player": "Tiago Santos",
+     "type": "injury",
+     "expected_return": "Late June 2027",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5803004",
+     "fetched_at": "2026-11-26T16:21:33+00:00"
+    },
+    {
+     "player": "Hamza Igamane",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5803004",
+     "fetched_at": "2026-11-26T16:21:33+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 6,
+    "n21": 2,
+    "last_match": "2026-11-22"
+   },
+   "away": {
+    "rest_days": 7,
+    "n21": 2,
+    "last_match": "2026-11-21"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 362.5
+  },
+  "venue": {
+   "name": "Stade Marie-Marvingt",
+   "city": "Le Mans",
+   "lat": 47.959223534,
+   "lon": 0.22352457
+  },
+  "weather": {
+   "precip_mm_2h": 0.1,
+   "wind_ms": 1.9449999999999998,
+   "temp_c": 8.9,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=47.959&longitude=0.224",
+   "fetched_at": "2026-11-26T16:21:33+00:00",
+   "lat": 47.959223534,
+   "lon": 0.22352457
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": 6.48,
+    "d_p_draw_pp": 3.67,
+    "d_p_away_pp": -10.15,
+    "d_xg_home": 0.076,
+    "d_xg_away": -0.324
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0219,
+    "away_rate_mult": 1.007,
+    "d_p_home_pp": 0.39,
+    "d_p_draw_pp": -0.14,
+    "d_p_away_pp": -0.25,
+    "d_xg_home": 0.023,
+    "d_xg_away": 0.011,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0022,
+    "away_rate_mult": 1.0022,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": -0.04,
+    "d_p_away_pp": 0.03,
+    "d_xg_home": 0.002,
+    "d_xg_away": 0.004,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "home_rate_mult": 1.0349,
+    "away_rate_mult": 0.9902,
+    "d_p_home_pp": 1.17,
+    "d_p_draw_pp": 0.07,
+    "d_p_away_pp": -1.24,
+    "d_xg_home": 0.037,
+    "d_xg_away": -0.015,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 6.0,
+   "rest_a": 7.0,
+   "n21_h": 2.0,
+   "n21_a": 2.0,
+   "travel_km": 362.5166072398619,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.1,
+   "wind_ms": 1.9449999999999998,
+   "temp_c": 8.9
+  }
+ },
+ "lineup_simulation": {
+  "applied": true,
+  "validated": false,
+  "scale": 0.5,
+  "basis": {
+   "home": "projected",
+   "away": "projected"
+  },
+  "home_rate_mult": 1.0173,
+  "away_rate_mult": 0.9951,
+  "note": "Starting-XI strength, continuity and backup-keeper adjustment at half the fitted size. It did not pass the out-of-sample test, so bets are not priced from it.",
+  "p_home": 0.2543198605214601,
+  "p_draw": 0.2645061644876873,
+  "p_away": 0.48117397499085274,
+  "xg_home": 1.0914710695120011,
+  "xg_away": 1.5933375435992758,
+  "xg_total": 2.6848086131112767,
+  "btts": 0.541278269508115,
+  "totals_over": {
+   "over_0.5": 0.9289270608835526,
+   "over_1.5": 0.756538635339442,
+   "over_2.5": 0.5033523124027395,
+   "over_3.5": 0.28248748481684194,
+   "over_4.5": 0.13246789726372427,
+   "over_5.5": 0.0539241564439658,
+   "over_6.5": 0.0189496447204869
+  },
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.1284591182373257
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.1284591182373257
+   },
+   {
+    "home": 0,
+    "away": 1,
+    "p": 0.10187847697062011
+   },
+   {
+    "home": 1,
+    "away": 2,
+    "p": 0.09566944832897704
+   },
+   {
+    "home": 0,
+    "away": 2,
+    "p": 0.08425365938913387
+   },
+   {
+    "home": 0,
+    "away": 0,
+    "p": 0.07107293911644756
+   }
+  ],
+  "score_grid": [
+   [
+    0.071073,
+    0.101878,
+    0.084254,
+    0.045039,
+    0.018178,
+    0.005931,
+    0.001631
+   ],
+   [
+    0.07051,
+    0.128459,
+    0.095669,
+    0.050655,
+    0.020249,
+    0.006546,
+    0.001785
+   ],
+   [
+    0.040474,
+    0.065669,
+    0.054034,
+    0.027194,
+    0.010765,
+    0.003447,
+    0.000932
+   ],
+   [
+    0.014487,
+    0.02333,
+    0.018263,
+    0.009888,
+    0.003719,
+    0.001179,
+    0.000316
+   ],
+   [
+    0.003822,
+    0.00611,
+    0.004743,
+    0.002441,
+    0.000987,
+    0.000298,
+    7.9e-05
+   ],
+   [
+    0.000796,
+    0.001264,
+    0.000973,
+    0.000497,
+    0.000191,
+    6.2e-05,
+    1.6e-05
+   ],
+   [
+    0.000137,
+    0.000216,
+    0.000165,
+    8.3e-05,
+    3.2e-05,
+    1e-05,
+    3e-06
+   ]
+  ]
+ },
+ "confidence": {
+  "tier": "LOW",
+  "p_max": 0.48736336280711473,
+  "entropy_nats": 1.047924678453771,
+  "text": "Most likely result has P = 48.7%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.5% \u00b1 0.4% (n=17312, mean forecast 44.7%). Backtest RPS for F1: 0.2074; exact-score top-5 hit rate 45.4% (n=1017). Overall champion RPS 0.2093 vs home/away baseline 0.2284 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-11-22, n=41,487). Outcome-certainty tier: LOW (entropy 1.048 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Le Mans: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Lille: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Lille: no Understat history for Alexsandro Ribeiro \u2014 rated at the positional prior."
+ ],
+ "verdict": "Le Mans 1\u20131 Lille is the single most probable scoreline at 12.8%: expected goals 1.07\u20131.60 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.038). Exact scores are inherently uncertain; the 1X2 split is 24.9%/26.4%/48.7%.",
+ "resolved": {
+  "home_key": "France:Le Mans",
+  "away_key": "France:Lille",
+  "div": "F1",
+  "home_div": "F1",
+  "away_div": "F1",
+  "country": "France"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: Lille OSC at Le Mans FC\nCompetition: Ligue 1\nDate: 2026-11-28 14:45 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-11-25\n\nPRIMARY FINAL SCORE PREDICTION\n\nLe Mans FC 1 \u2013 1 Lille OSC\n(modal exact score, probability 12.8%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.07\nAway: 1.60\nExpected Total: 2.67\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 24.9%\nDraw: 26.4%\nAway Win: 48.7%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 12.8%\n2. 0\u20131: 10.3%\n3. 1\u20132: 9.6%\n4. 0\u20132: 8.6%\n5. 0\u20130: 7.2%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 24.5%\nTotal 2 goals: 25.4%\nTotal 3 goals: 22.1%\nTotal 4 goals: 14.9%\nTotal 5+ goals: 13.1%\n\nBoth Teams Score: 53.7%\nClean sheet Le Mans FC: 20.0% \u00b7 Clean sheet Lille OSC: 33.5%\n\nMATCH INTELLIGENCE\n\n1. Independent results-only Elo: Le Mans 1467 vs Lille 1734 (gap -266 before home advantage).\n2. Le Mans attack vs Lille defence: time-weighted strength gap multiplies Le Mans's scoring rate by \u00d70.68 relative to an average pairing (from 23/30 decay-weighted matches).\n3. Context \u2014 Understat xG component (validated, in ensemble): home win +6.5 pp, draw +3.7 pp, away win -10.2 pp (xG +0.08 / -0.32).\n\nMODEL CONFIDENCE\n\nMost likely result has P = 48.7%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.5% \u00b1 0.4% (n=17312, mean forecast 44.7%). Backtest RPS for F1: 0.2074; exact-score top-5 hit rate 45.4% (n=1017). Overall champion RPS 0.2093 vs home/away baseline 0.2284 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-11-22, n=41,487). Outcome-certainty tier: LOW (entropy 1.048 nats of max 1.099).\nParameter-uncertainty 80% bands: xG Le Mans FC 0.79\u20131.38, xG Lille OSC 1.16\u20132.08; P(home win) 16.9%\u201335.9%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0014 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nLe Mans: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-11-26 11:21 EST (3-1-4-2)\n  Nicolas Kocik (G), Rayan Bamba (D), Samuel Yohou (D), Harold Voyer (D), Lucas Bretelle (M), Lucas Buad\u00e9s (M), Antoine Rabillard (M), Daouda Traor\u00e9 (M), Lucas Calodat (M), Louis Mafouta (F), Dame Gueye (F)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs +0.029 (log) \u00b7 continuity +0.56 \u00b7 P(backup GK) 16%\nLille: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-11-26 11:21 EST (4-3-3)\n  Berke \u00d6zer (G), Maxima Goffi (D), Nathan Ngoy (D), Alexsandro Ribeiro (D), Calvin Verdonk (D), Ngal Ayel Mukau (M), Nabil Bentaleb (M), Benjamin Andr\u00e9 (M), Ethan Mbapp\u00e9 (F), Ayase Ueda (F), H\u00e1kon Arnar Haraldsson (M)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs +0.019 (log) \u00b7 continuity -0.47 \u00b7 P(backup GK) 14%\n\nKEY ABSENCES\n\n- Le Mans: Djibril Sidib\u00e9 \u2014 injury, Late January 2027 [FotMob, 2026-11-26 11:21 EST]\n- Le Mans: Th\u00e9o Eyoum \u2014 injury, Early December 2026 [FotMob, 2026-11-26 11:21 EST]\n- Le Mans: Adil Bourabaa \u2014 injury, Early January 2027 [FotMob, 2026-11-26 11:21 EST]\n- Le Mans: Martin Rossignol \u2014 injury, Early December 2026 [FotMob, 2026-11-26 11:21 EST]\n- Lille: Tanguy Nianzou \u2014 injury, About 1-2 weeks [FotMob, 2026-11-26 11:21 EST]\n- Lille: Tiago Santos \u2014 injury, Late June 2027 [FotMob, 2026-11-26 11:21 EST]\n- Lille: Hamza Igamane \u2014 injury, Late November 2026 [FotMob, 2026-11-26 11:21 EST]\n\nWEATHER AT VENUE\n\nStade Marie-Marvingt, Le Mans: 8.9 \u00b0C, wind 1.9 m/s, precipitation 0.1 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-11-26 11:21 EST]\n\nREST & TRAVEL\n\nLe Mans: 6 days' rest, 2 matches in previous 21 days \u00b7 Lille: 7 days' rest, 2 in 21 days \u00b7 away travel 362.5 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 24.9% / 26.4% / 48.7%, xG 1.07\u20131.60\n- Understat xG component (validated, in ensemble): home +6.48 pp, draw +3.67 pp, away -10.15 pp; xG +0.076 / -0.324\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.39 pp, draw -0.14 pp, away -0.25 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw -0.04 pp, away +0.03 pp\n- lineup: NOT APPLIED (failed out-of-sample validation); would have moved home +1.17 pp, draw +0.07 pp, away -1.24 pp\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Le Mans: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Lille: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Lille: no Understat history for Alexsandro Ribeiro \u2014 rated at the positional prior.\n\nFINAL VERDICT\n\nLe Mans 1\u20131 Lille is the single most probable scoreline at 12.8%: expected goals 1.07\u20131.60 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.038). Exact scores are inherently uncertain; the 1X2 split is 24.9%/26.4%/48.7%.\n",
+ "refresh_id": "3dfeedb55cdd454da684aa34b1dbb4b0",
+ "frozen_at": "2026-11-26T16:21:33+00:00",
+ "sha256": "49902dc4024422cd059fec33006976ffc60fbbbc83fa5a2fd7518dab79d4ab1f"
+}
