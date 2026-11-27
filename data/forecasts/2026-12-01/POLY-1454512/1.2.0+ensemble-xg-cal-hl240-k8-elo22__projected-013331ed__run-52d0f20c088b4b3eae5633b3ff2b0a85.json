@@ -1,0 +1,616 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-11-27",
+ "input_fingerprint": "1b07be5dbe1a0f66acfcf8ff798b9c20a5a5853fa2defe66e39642713d7cce81",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-11-27T23:38:16+00:00",
+ "fixture": {
+  "event_id": "POLY-1454512",
+  "home_name": "Leyton Orient FC",
+  "away_name": "Peterborough United FC",
+  "competition": "League One",
+  "subcategory": "el1",
+  "kickoff_utc": "2026-12-01T19:00:00+00:00",
+  "kickoff_local": "2026-12-01 14:00 EST",
+  "home_matched": "Leyton Orient",
+  "away_matched": "Peterboro",
+  "match_methods": {
+   "home": {
+    "source": "Leyton Orient FC",
+    "matched": "Leyton Orient",
+    "method": "core-tokens",
+    "score": 0.97
+   },
+   "away": {
+    "source": "Peterborough United FC",
+    "matched": "Peterboro",
+    "method": "alias",
+    "score": 1.0
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.5112103700553641,
+  "p_draw": 0.2521070224112245,
+  "p_away": 0.23668260753341153,
+  "xg_home": 1.7421435908678415,
+  "xg_away": 1.1316990098383661,
+  "xg_total": 2.8738426007062077,
+  "median_total": 3,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.12097287566868947
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.12097287566868947
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.10039141546553694
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.0933944127745825
+   },
+   {
+    "home": 2,
+    "away": 0,
+    "p": 0.08475197529345974
+   },
+   {
+    "home": 1,
+    "away": 2,
+    "p": 0.06380654541246
+   }
+  ],
+  "btts": 0.5758466998196065,
+  "totals_over": {
+   "over_0.5": 0.9419461234819598,
+   "over_1.5": 0.7899847981016493,
+   "over_2.5": 0.5499885406539642,
+   "over_3.5": 0.32470250183167954,
+   "over_4.5": 0.16074849868653782,
+   "over_5.5": 0.06906559108568411,
+   "over_6.5": 0.025597061546850233
+  },
+  "total_buckets": {
+   "0-1": 0.21001520189835063,
+   "2": 0.23999625744768516,
+   "3": 0.22528603882228473,
+   "4": 0.1639540031451417,
+   "5+": 0.16074849868653782
+  },
+  "clean_sheet_home": 0.31463782321752354,
+  "clean_sheet_away": 0.16756935348090993,
+  "home_goal_dist": [
+   0.16756935348090993,
+   0.3093310270351238,
+   0.2719419624741425,
+   0.15556068014150715,
+   0.06576924402868059,
+   0.02198884691853377,
+   0.006066109820445189,
+   0.001772776100657078
+  ],
+  "away_goal_dist": [
+   0.31463782321752354,
+   0.37321526632607216,
+   0.20996738755942967,
+   0.07644103952142343,
+   0.020503411680212472,
+   0.004345889880863645,
+   0.0007599034178190476,
+   0.0001292783966560829
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    3
+   ],
+   "away_goals_80": [
+    0,
+    3
+   ],
+   "total_goals_80": [
+    1,
+    5
+   ],
+   "goal_diff_80": [
+    -1,
+    3
+   ]
+  },
+  "score_grid": [
+   [
+    0.058054,
+    0.058567,
+    0.034271,
+    0.01248,
+    0.003345,
+    0.000707,
+    0.000123
+   ],
+   [
+    0.093394,
+    0.120973,
+    0.063807,
+    0.023297,
+    0.006261,
+    0.001327,
+    0.000232
+   ],
+   [
+    0.084752,
+    0.100391,
+    0.05904,
+    0.02074,
+    0.005588,
+    0.001187,
+    0.000208
+   ],
+   [
+    0.048608,
+    0.05773,
+    0.032663,
+    0.012491,
+    0.003237,
+    0.000689,
+    0.000121
+   ],
+   [
+    0.020541,
+    0.024458,
+    0.013872,
+    0.005103,
+    0.001439,
+    0.000295,
+    5.2e-05
+   ],
+   [
+    0.006853,
+    0.00818,
+    0.004651,
+    0.001715,
+    0.000465,
+    0.000104,
+    1.8e-05
+   ],
+   [
+    0.001886,
+    0.002256,
+    0.001286,
+    0.000475,
+    0.000129,
+    2.8e-05,
+    5e-06
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.51282,
+  "p_draw": 0.25103,
+  "p_away": 0.23615,
+  "se": [
+   0.0011176664251913448,
+   0.0009695719135267894,
+   0.0009496925226092917
+  ],
+  "max_abs_dev_vs_exact": 0.0016096299446359819,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   1.3712012365118427,
+   2.1441314758586123
+  ],
+  "xg_away_80": [
+   0.8571723887797125,
+   1.4251945903670362
+  ],
+  "p_home_80": [
+   0.4068835843670575,
+   0.6204196538761696
+  ],
+  "p_draw_80": [
+   0.20990789087807335,
+   0.27680296909924795
+  ],
+  "p_away_80": [
+   0.1655776766955118,
+   0.32887435359721545
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.17723974759031016,
+   0.18868610489360654
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.5161190526704243,
+   "p_draw": 0.24105123010648055,
+   "p_away": 0.24282971722309513,
+   "xg_home": 1.7856280396588533,
+   "xg_away": 1.1597979196396038,
+   "weight": 0.0077
+  },
+  "elo": {
+   "p_home": 0.4977302524869366,
+   "p_draw": 0.25037148965672695,
+   "p_away": 0.25189825785633646,
+   "xg_home": 1.5904377535030825,
+   "xg_away": 1.0553694766701038,
+   "weight": 0.3721
+  },
+  "standard_dc": {
+   "p_home": 0.460437139335882,
+   "p_draw": 0.2566965618858237,
+   "p_away": 0.2828662987782943,
+   "xg_home": 1.6269273851191322,
+   "xg_away": 1.2294268771074015,
+   "weight": 0.0028
+  },
+  "home_away_rate": {
+   "p_home": 0.43520585367465325,
+   "p_draw": 0.25821501204348685,
+   "p_away": 0.30657913428186,
+   "xg_home": 1.4623120018651412,
+   "xg_away": 1.1847421030899639,
+   "weight": 0.001
+  },
+  "xg_dc": {
+   "p_home": 0.5154511116155387,
+   "p_draw": 0.24097003023139782,
+   "p_away": 0.24357885815306352,
+   "xg_home": 1.782007968397276,
+   "xg_away": 1.1598631639348935,
+   "weight": 0.6164
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Home advantage (England, fitted from results): \u00d71.23 on Leyton Orient's scoring rate.",
+   "effect": 0.2092
+  },
+  {
+   "text": "Leyton Orient attack vs Peterboro defence: time-weighted strength gap multiplies Leyton Orient's scoring rate by \u00d71.20 relative to an average pairing (from 37/37 decay-weighted matches).",
+   "effect": 0.182
+  },
+  {
+   "text": "Independent results-only Elo: Leyton Orient 1281 vs Peterboro 1211 (gap +70 before home advantage).",
+   "effect": 0.1043
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.5112103700553641,
+  "p_draw": 0.2521070224112245,
+  "p_away": 0.23668260753341153,
+  "xg_home": 1.7421435908678415,
+  "xg_away": 1.1316990098383661
+ },
+ "context": {
+  "fetched_at": "2026-11-27T23:38:16+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5837297",
+    "fetched_at": "2026-11-27T23:38:16+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "4-2-3-1",
+    "starters": [
+     {
+      "name": "Nathan Baxter",
+      "pos": "G",
+      "shirt": "1"
+     },
+     {
+      "name": "Fin Stevens",
+      "pos": "D",
+      "shirt": "2"
+     },
+     {
+      "name": "Alfie Gilchrist",
+      "pos": "D",
+      "shirt": "12"
+     },
+     {
+      "name": "Rarmani Edmonds-Green",
+      "pos": "D",
+      "shirt": "4"
+     },
+     {
+      "name": "Somto Boniface",
+      "pos": "D",
+      "shirt": "19"
+     },
+     {
+      "name": "Idris El Mizouni",
+      "pos": "M",
+      "shirt": "8"
+     },
+     {
+      "name": "Alex Gilbert",
+      "pos": "M",
+      "shirt": "20"
+     },
+     {
+      "name": "Aaron Connolly",
+      "pos": "F",
+      "shirt": "10"
+     },
+     {
+      "name": "Charlie Wellens",
+      "pos": "M",
+      "shirt": "25"
+     },
+     {
+      "name": "Armando Dobra",
+      "pos": "F",
+      "shirt": "17"
+     },
+     {
+      "name": "Dane Scarlett",
+      "pos": "F",
+      "shirt": "18"
+     }
+    ],
+    "fetched_at": "2026-11-27T23:38:16+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   },
+   "away": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "4-2-3-1",
+    "starters": [
+     {
+      "name": "Alex Bass",
+      "pos": "G",
+      "shirt": "1"
+     },
+     {
+      "name": "Carl Johnston",
+      "pos": "D",
+      "shirt": "2"
+     },
+     {
+      "name": "Josh Feeney",
+      "pos": "D",
+      "shirt": "12"
+     },
+     {
+      "name": "Sam Hughes",
+      "pos": "D",
+      "shirt": "5"
+     },
+     {
+      "name": "Harley Mills",
+      "pos": "D",
+      "shirt": "14"
+     },
+     {
+      "name": "Harrison Martin Jones",
+      "pos": "M",
+      "shirt": "7"
+     },
+     {
+      "name": "Harry Ashfield",
+      "pos": "M",
+      "shirt": "45"
+     },
+     {
+      "name": "Boluwatife Shofowoke",
+      "pos": "F",
+      "shirt": "19"
+     },
+     {
+      "name": "Ethan Williams",
+      "pos": "M",
+      "shirt": "10"
+     },
+     {
+      "name": "Owura Edwards",
+      "pos": "F",
+      "shirt": "11"
+     },
+     {
+      "name": "Harry Leonard",
+      "pos": "F",
+      "shirt": "9"
+     }
+    ],
+    "fetched_at": "2026-11-27T23:38:16+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   }
+  },
+  "absences": {
+   "home": [],
+   "away": [
+    {
+     "player": "Sam Hughes",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5837297",
+     "fetched_at": "2026-11-27T23:38:16+00:00"
+    },
+    {
+     "player": "Rio Adebisi",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5837297",
+     "fetched_at": "2026-11-27T23:38:16+00:00"
+    },
+    {
+     "player": "Ben Woods",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5837297",
+     "fetched_at": "2026-11-27T23:38:16+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 10,
+    "n21": 1,
+    "last_match": "2026-11-21"
+   },
+   "away": {
+    "rest_days": 10,
+    "n21": 1,
+    "last_match": "2026-11-21"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": null
+  },
+  "venue": {
+   "name": "BetWright Stadium",
+   "city": "London",
+   "lat": 51.56014496,
+   "lon": -0.012674779
+  },
+  "weather": {
+   "precip_mm_2h": 2.8,
+   "wind_ms": 3.8,
+   "temp_c": 12.7,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=51.56&longitude=-0.013",
+   "fetched_at": "2026-11-27T23:38:16+00:00",
+   "lat": 51.56014496,
+   "lon": -0.012674779
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": 1.15,
+    "d_p_draw_pp": -0.6,
+    "d_p_away_pp": -0.55,
+    "d_xg_home": 0.121,
+    "d_xg_away": 0.065
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.064,
+    "away_rate_mult": 1.064,
+    "d_p_home_pp": 0.93,
+    "d_p_draw_pp": -0.97,
+    "d_p_away_pp": 0.04,
+    "d_xg_home": 0.108,
+    "d_xg_away": 0.071,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "reason": "failed validation; no live features"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 10.0,
+   "rest_a": 10.0,
+   "n21_h": 1.0,
+   "n21_a": 1.0,
+   "travel_km": null,
+   "neutral": 0.0,
+   "precip_mm_2h": 2.8,
+   "wind_ms": 3.8,
+   "temp_c": 12.7
+  }
+ },
+ "lineup_simulation": {
+  "applied": false,
+  "basis": {
+   "home": "projected",
+   "away": "projected"
+  },
+  "reason": "No player ratings exist for this league, so the lineup and formation are shown but cannot change the probabilities."
+ },
+ "confidence": {
+  "tier": "MODERATE",
+  "p_max": 0.5112103700553641,
+  "entropy_nats": 1.0314555590903451,
+  "text": "Most likely result has P = 51.1%. In the out-of-sample backtest, favourites priced 0.50\u20130.60 won 54.6% \u00b1 0.5% (n=9745, mean forecast 54.4%). Backtest RPS for E2: 0.2164; exact-score top-5 hit rate 51.6% (n=1831). Overall champion RPS 0.2093 vs home/away baseline 0.2284 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-11-22, n=41,487). Outcome-certainty tier: MODERATE (entropy 1.031 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Leyton Orient: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Leyton Orient: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.",
+  "Peterboro: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Peterboro: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+ ],
+ "verdict": "Leyton Orient 1\u20131 Peterboro is the single most probable scoreline at 12.1%: expected goals 1.74\u20131.13 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.039). Exact scores are inherently uncertain; the 1X2 split is 51.1%/25.2%/23.7%.",
+ "resolved": {
+  "home_key": "England:Leyton Orient",
+  "away_key": "England:Peterboro",
+  "div": "E2",
+  "home_div": "E2",
+  "away_div": "E2",
+  "country": "England"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: Peterborough United FC at Leyton Orient FC\nCompetition: League One\nDate: 2026-12-01 14:00 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-11-27\n\nPRIMARY FINAL SCORE PREDICTION\n\nLeyton Orient FC 1 \u2013 1 Peterborough United FC\n(modal exact score, probability 12.1%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.74\nAway: 1.13\nExpected Total: 2.87\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 51.1%\nDraw: 25.2%\nAway Win: 23.7%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 12.1%\n2. 2\u20131: 10.0%\n3. 1\u20130: 9.3%\n4. 2\u20130: 8.5%\n5. 1\u20132: 6.4%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 21.0%\nTotal 2 goals: 24.0%\nTotal 3 goals: 22.5%\nTotal 4 goals: 16.4%\nTotal 5+ goals: 16.1%\n\nBoth Teams Score: 57.6%\nClean sheet Leyton Orient FC: 31.5% \u00b7 Clean sheet Peterborough United FC: 16.8%\n\nMATCH INTELLIGENCE\n\n1. Home advantage (England, fitted from results): \u00d71.23 on Leyton Orient's scoring rate.\n2. Leyton Orient attack vs Peterboro defence: time-weighted strength gap multiplies Leyton Orient's scoring rate by \u00d71.20 relative to an average pairing (from 37/37 decay-weighted matches).\n3. Independent results-only Elo: Leyton Orient 1281 vs Peterboro 1211 (gap +70 before home advantage).\n\nMODEL CONFIDENCE\n\nMost likely result has P = 51.1%. In the out-of-sample backtest, favourites priced 0.50\u20130.60 won 54.6% \u00b1 0.5% (n=9745, mean forecast 54.4%). Backtest RPS for E2: 0.2164; exact-score top-5 hit rate 51.6% (n=1831). Overall champion RPS 0.2093 vs home/away baseline 0.2284 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-11-22, n=41,487). Outcome-certainty tier: MODERATE (entropy 1.031 nats of max 1.099).\nParameter-uncertainty 80% bands: xG Leyton Orient FC 1.37\u20132.14, xG Peterborough United FC 0.86\u20131.43; P(home win) 40.7%\u201362.0%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0016 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nLeyton Orient: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-11-27 18:38 EST (4-2-3-1)\n  Nathan Baxter (G), Fin Stevens (D), Alfie Gilchrist (D), Rarmani Edmonds-Green (D), Somto Boniface (D), Idris El Mizouni (M), Alex Gilbert (M), Aaron Connolly (F), Charlie Wellens (M), Armando Dobra (F), Dane Scarlett (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\nPeterboro: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-11-27 18:38 EST (4-2-3-1)\n  Alex Bass (G), Carl Johnston (D), Josh Feeney (D), Sam Hughes (D), Harley Mills (D), Harrison Martin Jones (M), Harry Ashfield (M), Boluwatife Shofowoke (F), Ethan Williams (M), Owura Edwards (F), Harry Leonard (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nKEY ABSENCES\n\n- Peterboro: Sam Hughes \u2014 injury, Late November 2026 [FotMob, 2026-11-27 18:38 EST]\n- Peterboro: Rio Adebisi \u2014 injury, Late November 2026 [FotMob, 2026-11-27 18:38 EST]\n- Peterboro: Ben Woods \u2014 injury, Late November 2026 [FotMob, 2026-11-27 18:38 EST]\n\nWEATHER AT VENUE\n\nBetWright Stadium, London: 12.7 \u00b0C, wind 3.8 m/s, precipitation 2.8 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-11-27 18:38 EST]\n\nREST & TRAVEL\n\nLeyton Orient: 10 days' rest, 1 matches in previous 21 days \u00b7 Peterboro: 10 days' rest, 1 in 21 days \u00b7 away travel None km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 51.1% / 25.2% / 23.7%, xG 1.74\u20131.13\n- Understat xG component (validated, in ensemble): home +1.15 pp, draw -0.60 pp, away -0.55 pp; xG +0.121 / +0.065\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.93 pp, draw -0.97 pp, away +0.04 pp\n- lineup: not applied (failed validation; no live features)\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Leyton Orient: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Leyton Orient: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n- Peterboro: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Peterboro: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nFINAL VERDICT\n\nLeyton Orient 1\u20131 Peterboro is the single most probable scoreline at 12.1%: expected goals 1.74\u20131.13 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.039). Exact scores are inherently uncertain; the 1X2 split is 51.1%/25.2%/23.7%.\n",
+ "refresh_id": "52d0f20c088b4b3eae5633b3ff2b0a85",
+ "frozen_at": "2026-11-27T23:38:16+00:00",
+ "sha256": "978c7021f16deabb43e36ae213130983473b2b2352d6f97a96a059217057188a"
+}

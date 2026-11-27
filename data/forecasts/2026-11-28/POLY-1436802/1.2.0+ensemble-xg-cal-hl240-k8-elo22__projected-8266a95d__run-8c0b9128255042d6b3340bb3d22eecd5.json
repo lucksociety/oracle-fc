@@ -1,0 +1,591 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-11-27",
+ "input_fingerprint": "1b07be5dbe1a0f66acfcf8ff798b9c20a5a5853fa2defe66e39642713d7cce81",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-11-27T23:37:06+00:00",
+ "fixture": {
+  "event_id": "POLY-1436802",
+  "home_name": "Bristol Rovers FC",
+  "away_name": "Tranmere Rovers FC",
+  "competition": "League Two",
+  "subcategory": "el2",
+  "kickoff_utc": "2026-11-28T12:30:00+00:00",
+  "kickoff_local": "2026-11-28 07:30 EST",
+  "home_matched": "Bristol Rvs",
+  "away_matched": "Tranmere",
+  "match_methods": {
+   "home": {
+    "source": "Bristol Rovers FC",
+    "matched": "Bristol Rvs",
+    "method": "alias",
+    "score": 1.0
+   },
+   "away": {
+    "source": "Tranmere Rovers FC",
+    "matched": "Tranmere",
+    "method": "core-tokens",
+    "score": 0.97
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.4693875727019423,
+  "p_draw": 0.26808724996934175,
+  "p_away": 0.262525177328716,
+  "xg_home": 1.566677039638449,
+  "xg_away": 1.1231813591111988,
+  "xg_total": 2.6898583987496476,
+  "median_total": 3,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.1304484760077604
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.1304484760077604
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.10080818778274148
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.09706559304229133
+   },
+   {
+    "home": 2,
+    "away": 0,
+    "p": 0.0823850734197733
+   },
+   {
+    "home": 0,
+    "away": 1,
+    "p": 0.07029372679802982
+   }
+  ],
+  "btts": 0.5518620321649333,
+  "totals_over": {
+   "over_0.5": 0.930727213557712,
+   "over_1.5": 0.7596252989769408,
+   "over_2.5": 0.5058460885597381,
+   "over_3.5": 0.28311079570970055,
+   "over_4.5": 0.13172134754577702,
+   "over_5.5": 0.0529599008970748,
+   "over_6.5": 0.018263408768458857
+  },
+  "total_buckets": {
+   "0-1": 0.24037470102305925,
+   "2": 0.25377921041720264,
+   "3": 0.22273529285003763,
+   "4": 0.15138944816392352,
+   "5+": 0.13172134754577702
+  },
+  "clean_sheet_home": 0.3170938512757526,
+  "clean_sheet_away": 0.20031690300160201,
+  "home_goal_dist": [
+   0.20031690300160201,
+   0.33278894689285,
+   0.26241175298873365,
+   0.13423307087385986,
+   0.05060193781676665,
+   0.015042132274402148,
+   0.00367984935736905,
+   0.0009254067944165583
+  ],
+  "away_goal_dist": [
+   0.3170938512757526,
+   0.3739349924816605,
+   0.2086826967274276,
+   0.0752784877671376,
+   0.019983513937770342,
+   0.004184562306637861,
+   0.0007214218226162315,
+   0.00012047368099726564
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    3
+   ],
+   "away_goals_80": [
+    0,
+    3
+   ],
+   "total_goals_80": [
+    1,
+    5
+   ],
+   "goal_diff_80": [
+    -2,
+    2
+   ]
+  },
+  "score_grid": [
+   [
+    0.069273,
+    0.070294,
+    0.040946,
+    0.014851,
+    0.003957,
+    0.00083,
+    0.000143
+   ],
+   [
+    0.100808,
+    0.130448,
+    0.068434,
+    0.02482,
+    0.006612,
+    0.001387,
+    0.000239
+   ],
+   [
+    0.082385,
+    0.097066,
+    0.056665,
+    0.01972,
+    0.005253,
+    0.001102,
+    0.00019
+   ],
+   [
+    0.042384,
+    0.04993,
+    0.027968,
+    0.010569,
+    0.002702,
+    0.000567,
+    9.8e-05
+   ],
+   [
+    0.016018,
+    0.018866,
+    0.010566,
+    0.003831,
+    0.001063,
+    0.000214,
+    3.7e-05
+   ],
+   [
+    0.004766,
+    0.005612,
+    0.003143,
+    0.001139,
+    0.000303,
+    6.6e-05,
+    1.1e-05
+   ],
+   [
+    0.001166,
+    0.001373,
+    0.000769,
+    0.000279,
+    7.4e-05,
+    1.6e-05,
+    3e-06
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.471175,
+  "p_draw": 0.266195,
+  "p_away": 0.26263000000000003,
+  "se": [
+   0.0011161745369228776,
+   0.000988269249686036,
+   0.0009840108817995867
+  ],
+  "max_abs_dev_vs_exact": 0.0018922499693417305,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   1.2232079710756565,
+   1.9398362511036784
+  ],
+  "xg_away_80": [
+   0.8579335707341532,
+   1.4058637080784955
+  ],
+  "p_home_80": [
+   0.36867749388074317,
+   0.5792344761640812
+  ],
+  "p_draw_80": [
+   0.22641069351483176,
+   0.2911593915460386
+  ],
+  "p_away_80": [
+   0.18826447138134794,
+   0.3555662815680548
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.18282172335682495,
+   0.18328850080771464
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.466175019683444,
+   "p_draw": 0.2625310577148059,
+   "p_away": 0.2712939226017502,
+   "xg_home": 1.5454507159295492,
+   "xg_away": 1.1217023052550923,
+   "weight": 0.0077
+  },
+  "elo": {
+   "p_home": 0.4740190974132793,
+   "p_draw": 0.25430310865231737,
+   "p_away": 0.2716777939344033,
+   "xg_home": 1.5384244318541285,
+   "xg_away": 1.100268467328854,
+   "weight": 0.3721
+  },
+  "standard_dc": {
+   "p_home": 0.5944789545639516,
+   "p_draw": 0.2319467860449418,
+   "p_away": 0.17357425939110652,
+   "xg_home": 1.8846068137576095,
+   "xg_away": 0.9203028422605052,
+   "weight": 0.0028
+  },
+  "home_away_rate": {
+   "p_home": 0.43160405138915253,
+   "p_draw": 0.2628501292350707,
+   "p_away": 0.30554581937577674,
+   "xg_home": 1.4191749467283095,
+   "xg_away": 1.1506845231671972,
+   "weight": 0.001
+  },
+  "xg_dc": {
+   "p_home": 0.4654565142494642,
+   "p_draw": 0.26225885659480047,
+   "p_away": 0.27228462915573515,
+   "xg_home": 1.5432077553744434,
+   "xg_away": 1.1232780689709385,
+   "weight": 0.6164
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Home advantage (England, fitted from results): \u00d71.23 on Bristol Rvs's scoring rate.",
+   "effect": 0.2092
+  },
+  {
+   "text": "Independent results-only Elo: Bristol Rvs 1143 vs Tranmere 1091 (gap +52 before home advantage).",
+   "effect": 0.0776
+  },
+  {
+   "text": "Tranmere attack vs Bristol Rvs defence: rate multiplier \u00d70.93 for the away side.",
+   "effect": 0.0737
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.4693875727019423,
+  "p_draw": 0.26808724996934175,
+  "p_away": 0.262525177328716,
+  "xg_home": 1.566677039638449,
+  "xg_away": 1.1231813591111988
+ },
+ "context": {
+  "fetched_at": "2026-11-27T23:37:06+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5838051",
+    "fetched_at": "2026-11-27T23:37:06+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "4-2-3-1",
+    "starters": [
+     {
+      "name": "Brad Young",
+      "pos": "G",
+      "shirt": "1"
+     },
+     {
+      "name": "Tom James",
+      "pos": "D",
+      "shirt": "2"
+     },
+     {
+      "name": "Kofi Balmer",
+      "pos": "D",
+      "shirt": "4"
+     },
+     {
+      "name": "Alfie Kilgour",
+      "pos": "D",
+      "shirt": "5"
+     },
+     {
+      "name": "Arvin Appiah",
+      "pos": "D",
+      "shirt": "28"
+     },
+     {
+      "name": "Richard Smallwood",
+      "pos": "M",
+      "shirt": "21"
+     },
+     {
+      "name": "Clinton Mola",
+      "pos": "M",
+      "shirt": "6"
+     },
+     {
+      "name": "Shaqai Forde",
+      "pos": "F",
+      "shirt": "7"
+     },
+     {
+      "name": "Tommy Leigh",
+      "pos": "M",
+      "shirt": "24"
+     },
+     {
+      "name": "Bobby Kamwa",
+      "pos": "F",
+      "shirt": "10"
+     },
+     {
+      "name": "Ellis Harrison",
+      "pos": "F",
+      "shirt": "19"
+     }
+    ],
+    "fetched_at": "2026-11-27T23:37:06+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   },
+   "away": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "5-3-2",
+    "starters": [
+     {
+      "name": "Coniah Boyce-Clarke",
+      "pos": "G",
+      "shirt": "13"
+     },
+     {
+      "name": "Lee O'Connor",
+      "pos": "D",
+      "shirt": "22"
+     },
+     {
+      "name": "Nathan Smith",
+      "pos": "D",
+      "shirt": "5"
+     },
+     {
+      "name": "Jordan Turnbull",
+      "pos": "D",
+      "shirt": "4"
+     },
+     {
+      "name": "James Plant",
+      "pos": "D",
+      "shirt": "26"
+     },
+     {
+      "name": "Patrick Brough",
+      "pos": "D",
+      "shirt": "23"
+     },
+     {
+      "name": "Ryan Watson",
+      "pos": "M",
+      "shirt": "44"
+     },
+     {
+      "name": "Sam Finley",
+      "pos": "M",
+      "shirt": "8"
+     },
+     {
+      "name": "Oliver Scott",
+      "pos": "M",
+      "shirt": "14"
+     },
+     {
+      "name": "David Kamara",
+      "pos": "F",
+      "shirt": "24"
+     },
+     {
+      "name": "Charlie Veevers",
+      "pos": "F",
+      "shirt": "20"
+     }
+    ],
+    "fetched_at": "2026-11-27T23:37:06+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   }
+  },
+  "absences": {
+   "home": [],
+   "away": []
+  },
+  "rest": {
+   "home": {
+    "rest_days": 7,
+    "n21": 2,
+    "last_match": "2026-11-21"
+   },
+   "away": {
+    "rest_days": 7,
+    "n21": 2,
+    "last_match": "2026-11-21"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 212.1
+  },
+  "venue": {
+   "name": "Memorial Stadium",
+   "city": "Bristol, Gloucestershire",
+   "lat": 51.486225118,
+   "lon": -2.58314833
+  },
+  "weather": {
+   "precip_mm_2h": 0.7,
+   "wind_ms": 5.0,
+   "temp_c": 11.6,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=51.486&longitude=-2.583",
+   "fetched_at": "2026-11-27T23:37:06+00:00",
+   "lat": 51.486225118,
+   "lon": -2.58314833
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": -0.6,
+    "d_p_draw_pp": 0.53,
+    "d_p_away_pp": 0.08,
+    "d_xg_home": 0.001,
+    "d_xg_away": 0.015
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0162,
+    "away_rate_mult": 1.0052,
+    "d_p_home_pp": 0.49,
+    "d_p_draw_pp": -0.24,
+    "d_p_away_pp": -0.26,
+    "d_xg_home": 0.024,
+    "d_xg_away": 0.006,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0156,
+    "away_rate_mult": 1.0156,
+    "d_p_home_pp": 0.21,
+    "d_p_draw_pp": -0.25,
+    "d_p_away_pp": 0.04,
+    "d_xg_home": 0.024,
+    "d_xg_away": 0.017,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "reason": "failed validation; no live features"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 7.0,
+   "rest_a": 7.0,
+   "n21_h": 2.0,
+   "n21_a": 2.0,
+   "travel_km": 212.08176828057688,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.7,
+   "wind_ms": 5.0,
+   "temp_c": 11.6
+  }
+ },
+ "lineup_simulation": {
+  "applied": false,
+  "basis": {
+   "home": "projected",
+   "away": "projected"
+  },
+  "reason": "No player ratings exist for this league, so the lineup and formation are shown but cannot change the probabilities."
+ },
+ "confidence": {
+  "tier": "LOW",
+  "p_max": 0.4693875727019423,
+  "entropy_nats": 1.0590351220462575,
+  "text": "Most likely result has P = 46.9%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.5% \u00b1 0.4% (n=17312, mean forecast 44.7%). Backtest RPS for E3: 0.2217; exact-score top-5 hit rate 48.2% (n=1842). Overall champion RPS 0.2093 vs home/away baseline 0.2284 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-11-22, n=41,487). Outcome-certainty tier: LOW (entropy 1.059 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Bristol Rvs: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Bristol Rvs: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.",
+  "Tranmere: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Tranmere: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+ ],
+ "verdict": "Bristol Rvs 1\u20131 Tranmere is the single most probable scoreline at 13.0%: expected goals 1.57\u20131.12 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.039). Exact scores are inherently uncertain; the 1X2 split is 46.9%/26.8%/26.3%.",
+ "resolved": {
+  "home_key": "England:Bristol Rvs",
+  "away_key": "England:Tranmere",
+  "div": "E3",
+  "home_div": "E3",
+  "away_div": "E3",
+  "country": "England"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: Tranmere Rovers FC at Bristol Rovers FC\nCompetition: League Two\nDate: 2026-11-28 07:30 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-11-27\n\nPRIMARY FINAL SCORE PREDICTION\n\nBristol Rovers FC 1 \u2013 1 Tranmere Rovers FC\n(modal exact score, probability 13.0%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.57\nAway: 1.12\nExpected Total: 2.69\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 46.9%\nDraw: 26.8%\nAway Win: 26.3%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 13.0%\n2. 1\u20130: 10.1%\n3. 2\u20131: 9.7%\n4. 2\u20130: 8.2%\n5. 0\u20131: 7.0%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 24.0%\nTotal 2 goals: 25.4%\nTotal 3 goals: 22.3%\nTotal 4 goals: 15.1%\nTotal 5+ goals: 13.2%\n\nBoth Teams Score: 55.2%\nClean sheet Bristol Rovers FC: 31.7% \u00b7 Clean sheet Tranmere Rovers FC: 20.0%\n\nMATCH INTELLIGENCE\n\n1. Home advantage (England, fitted from results): \u00d71.23 on Bristol Rvs's scoring rate.\n2. Independent results-only Elo: Bristol Rvs 1143 vs Tranmere 1091 (gap +52 before home advantage).\n3. Tranmere attack vs Bristol Rvs defence: rate multiplier \u00d70.93 for the away side.\n\nMODEL CONFIDENCE\n\nMost likely result has P = 46.9%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.5% \u00b1 0.4% (n=17312, mean forecast 44.7%). Backtest RPS for E3: 0.2217; exact-score top-5 hit rate 48.2% (n=1842). Overall champion RPS 0.2093 vs home/away baseline 0.2284 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-11-22, n=41,487). Outcome-certainty tier: LOW (entropy 1.059 nats of max 1.099).\nParameter-uncertainty 80% bands: xG Bristol Rovers FC 1.22\u20131.94, xG Tranmere Rovers FC 0.86\u20131.41; P(home win) 36.9%\u201357.9%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0019 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nBristol Rvs: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-11-27 18:37 EST (4-2-3-1)\n  Brad Young (G), Tom James (D), Kofi Balmer (D), Alfie Kilgour (D), Arvin Appiah (D), Richard Smallwood (M), Clinton Mola (M), Shaqai Forde (F), Tommy Leigh (M), Bobby Kamwa (F), Ellis Harrison (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\nTranmere: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-11-27 18:37 EST (5-3-2)\n  Coniah Boyce-Clarke (G), Lee O'Connor (D), Nathan Smith (D), Jordan Turnbull (D), James Plant (D), Patrick Brough (D), Ryan Watson (M), Sam Finley (M), Oliver Scott (M), David Kamara (F), Charlie Veevers (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nKEY ABSENCES\n\n- None listed by the sources.\n\nWEATHER AT VENUE\n\nMemorial Stadium, Bristol, Gloucestershire: 11.6 \u00b0C, wind 5.0 m/s, precipitation 0.7 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-11-27 18:37 EST]\n\nREST & TRAVEL\n\nBristol Rvs: 7 days' rest, 2 matches in previous 21 days \u00b7 Tranmere: 7 days' rest, 2 in 21 days \u00b7 away travel 212.1 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 46.9% / 26.8% / 26.3%, xG 1.57\u20131.12\n- Understat xG component (validated, in ensemble): home -0.60 pp, draw +0.53 pp, away +0.08 pp; xG +0.001 / +0.015\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.49 pp, draw -0.24 pp, away -0.26 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.21 pp, draw -0.25 pp, away +0.04 pp\n- lineup: not applied (failed validation; no live features)\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Bristol Rvs: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Bristol Rvs: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n- Tranmere: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Tranmere: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nFINAL VERDICT\n\nBristol Rvs 1\u20131 Tranmere is the single most probable scoreline at 13.0%: expected goals 1.57\u20131.12 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.039). Exact scores are inherently uncertain; the 1X2 split is 46.9%/26.8%/26.3%.\n",
+ "refresh_id": "8c0b9128255042d6b3340bb3d22eecd5",
+ "frozen_at": "2026-11-27T23:37:06+00:00",
+ "sha256": "284e49f394a9e4c048839155a4f396c8e387f7b171d08ba455fab47c5c3666fc"
+}
