@@ -1,0 +1,790 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-11-27",
+ "input_fingerprint": "1b07be5dbe1a0f66acfcf8ff798b9c20a5a5853fa2defe66e39642713d7cce81",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-11-27T18:56:42+00:00",
+ "fixture": {
+  "event_id": "POLY-1460372",
+  "home_name": "Tottenham Hotspur FC",
+  "away_name": "Fulham FC",
+  "competition": "Premier League",
+  "subcategory": "epl",
+  "kickoff_utc": "2026-12-03T20:00:00+00:00",
+  "kickoff_local": "2026-12-03 15:00 EST",
+  "home_matched": "Tottenham",
+  "away_matched": "Fulham",
+  "match_methods": {
+   "home": {
+    "source": "Tottenham Hotspur FC",
+    "matched": "Tottenham",
+    "method": "core-tokens",
+    "score": 0.97
+   },
+   "away": {
+    "source": "Fulham FC",
+    "matched": "Fulham",
+    "method": "core-tokens",
+    "score": 0.97
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.4342941967233922,
+  "p_draw": 0.2696680630430464,
+  "p_away": 0.2960377402335612,
+  "xg_home": 1.5226862870049975,
+  "xg_away": 1.2256948438439024,
+  "xg_total": 2.7483811308489,
+  "median_total": 3,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.1303913023466937
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.1303913023466937
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.09403672269226276
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.09211589656427521
+   },
+   {
+    "home": 1,
+    "away": 2,
+    "p": 0.07478871526686323
+   },
+   {
+    "home": 2,
+    "away": 0,
+    "p": 0.07312372854571574
+   }
+  ],
+  "btts": 0.5703583115403685,
+  "totals_over": {
+   "over_0.5": 0.9342218321701364,
+   "over_1.5": 0.7696150872085861,
+   "over_2.5": 0.5199878159075241,
+   "over_3.5": 0.2963787471867019,
+   "over_4.5": 0.14083234452200563,
+   "over_5.5": 0.057974188231853324,
+   "over_6.5": 0.020504495323107427
+  },
+  "total_buckets": {
+   "0-1": 0.230384912791414,
+   "2": 0.24962727130106194,
+   "3": 0.22360906872082215,
+   "4": 0.15554640266469624,
+   "5+": 0.14083234452200563
+  },
+  "clean_sheet_home": 0.28579955691622927,
+  "clean_sheet_away": 0.20962029937326557,
+  "home_goal_dist": [
+   0.20962029937326557,
+   0.3382969228792843,
+   0.2589638793600155,
+   0.12853045258889495,
+   0.0470156524500592,
+   0.013567231193151126,
+   0.0032229842841462746,
+   0.0007825778711829817
+  ],
+  "away_goal_dist": [
+   0.28579955691622927,
+   0.36748316993922453,
+   0.2243900255617224,
+   0.08890525845284256,
+   0.026019987653709126,
+   0.006029109447058849,
+   0.0011543809257918913,
+   0.00021851110342116644
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    3
+   ],
+   "away_goals_80": [
+    0,
+    3
+   ],
+   "total_goals_80": [
+    1,
+    5
+   ],
+   "goal_diff_80": [
+    -2,
+    2
+   ]
+  },
+  "score_grid": [
+   [
+    0.065778,
+    0.072491,
+    0.046112,
+    0.018336,
+    0.005375,
+    0.001245,
+    0.000238
+   ],
+   [
+    0.092116,
+    0.130391,
+    0.074789,
+    0.029775,
+    0.008739,
+    0.002026,
+    0.000388
+   ],
+   [
+    0.073124,
+    0.094037,
+    0.060123,
+    0.022996,
+    0.006757,
+    0.001569,
+    0.000301
+   ],
+   [
+    0.036448,
+    0.046924,
+    0.028823,
+    0.011986,
+    0.003384,
+    0.000787,
+    0.000151
+   ],
+   [
+    0.013349,
+    0.017206,
+    0.01058,
+    0.004227,
+    0.001297,
+    0.00029,
+    5.6e-05
+   ],
+   [
+    0.00385,
+    0.004968,
+    0.003058,
+    0.001223,
+    0.000361,
+    8.8e-05,
+    1.6e-05
+   ],
+   [
+    0.000914,
+    0.00118,
+    0.000727,
+    0.000291,
+    8.6e-05,
+    2e-05,
+    4e-06
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.436125,
+  "p_draw": 0.269265,
+  "p_away": 0.29461,
+  "se": [
+   0.0011088732668231298,
+   0.0009918703538643547,
+   0.0010193501554912326
+  ],
+  "max_abs_dev_vs_exact": 0.0018308032766077842,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   1.1678803935241107,
+   1.9103073828790387
+  ],
+  "xg_away_80": [
+   0.9163174020570327,
+   1.5580572883444896
+  ],
+  "p_home_80": [
+   0.3303324538600931,
+   0.5503143975093129
+  ],
+  "p_draw_80": [
+   0.22794213235705546,
+   0.29082293274977683
+  ],
+  "p_away_80": [
+   0.20926227528884034,
+   0.4001105383774291
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.19509120908654376,
+   0.19700199308352703
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.4204174129768188,
+   "p_draw": 0.28111774036176873,
+   "p_away": 0.2984648466614127,
+   "xg_home": 1.346865413632742,
+   "xg_away": 1.092962461624568,
+   "weight": 0.0077
+  },
+  "elo": {
+   "p_home": 0.42677754728592604,
+   "p_draw": 0.24897943643065829,
+   "p_away": 0.32424301628341573,
+   "xg_home": 1.5334106657117301,
+   "xg_away": 1.305476685007187,
+   "weight": 0.3721
+  },
+  "standard_dc": {
+   "p_home": 0.3601694530207348,
+   "p_draw": 0.29824532519627633,
+   "p_away": 0.341585221782989,
+   "xg_home": 1.1655562209423427,
+   "xg_away": 1.1279802416206082,
+   "weight": 0.0028
+  },
+  "home_away_rate": {
+   "p_home": 0.42870823668143154,
+   "p_draw": 0.24957357441149683,
+   "p_away": 0.3217181889070717,
+   "xg_home": 1.5306602225403814,
+   "xg_away": 1.2933320528772922,
+   "weight": 0.001
+  },
+  "xg_dc": {
+   "p_home": 0.4415759816263426,
+   "p_draw": 0.2665316818216299,
+   "p_away": 0.2918923365520276,
+   "xg_home": 1.481932123196243,
+   "xg_away": 1.1588832510765332,
+   "weight": 0.6164
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Home advantage (England, fitted from results): \u00d71.23 on Tottenham's scoring rate.",
+   "effect": 0.2092
+  },
+  {
+   "text": "Tottenham attack vs Fulham defence: time-weighted strength gap multiplies Tottenham's scoring rate by \u00d70.90 relative to an average pairing (from 35/31 decay-weighted matches).",
+   "effect": 0.1
+  },
+  {
+   "text": "Fulham attack vs Tottenham defence: rate multiplier \u00d70.91 for the away side.",
+   "effect": 0.0997
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.4342941967233922,
+  "p_draw": 0.2696680630430464,
+  "p_away": 0.2960377402335612,
+  "xg_home": 1.5226862870049975,
+  "xg_away": 1.2256948438439024
+ },
+ "context": {
+  "fetched_at": "2026-11-27T18:56:42+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5795544",
+    "fetched_at": "2026-11-27T18:56:42+00:00"
+   },
+   {
+    "name": "Fantasy Premier League availability",
+    "url": "https://fantasy.premierleague.com/api/bootstrap-static/",
+    "fetched_at": "2026-11-27T18:56:42+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "inferred",
+    "source": null,
+    "formation": "",
+    "starters": [
+     {
+      "name": "Anton\u00edn Kinsk\u00fd",
+      "pos": "G"
+     },
+     {
+      "name": "Jan Paul van Hecke",
+      "pos": "D"
+     },
+     {
+      "name": "Sandro Tonali",
+      "pos": "M"
+     },
+     {
+      "name": "Micky van de Ven",
+      "pos": "D"
+     },
+     {
+      "name": "Mohammed Kudus",
+      "pos": "F"
+     },
+     {
+      "name": "Archie Gray",
+      "pos": "M"
+     },
+     {
+      "name": "Omar Marmoush",
+      "pos": "F"
+     },
+     {
+      "name": "Mateus Fernandes",
+      "pos": "M"
+     },
+     {
+      "name": "Dominic Solanke",
+      "pos": "F"
+     },
+     {
+      "name": "Andrew Robertson",
+      "pos": "D"
+     },
+     {
+      "name": "Pedro Porro",
+      "pos": "D"
+     }
+    ],
+    "fetched_at": "2026-11-27T18:56:42+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [],
+    "mean_xi_attack_index": 0.008,
+    "mean_continuity": -0.148,
+    "p_backup_gk": 0.3
+   },
+   "away": {
+    "status": "inferred",
+    "source": null,
+    "formation": "",
+    "starters": [
+     {
+      "name": "Bernd Leno",
+      "pos": "G"
+     },
+     {
+      "name": "Calvin Bassey",
+      "pos": "D"
+     },
+     {
+      "name": "Alex Iwobi",
+      "pos": "M"
+     },
+     {
+      "name": "Sander Berge",
+      "pos": "M"
+     },
+     {
+      "name": "Shea Charles",
+      "pos": "M"
+     },
+     {
+      "name": "Joshua King",
+      "pos": "M"
+     },
+     {
+      "name": "Oscar Bobb",
+      "pos": "F"
+     },
+     {
+      "name": "David Affengruber",
+      "pos": "D"
+     },
+     {
+      "name": "Antonee Robinson",
+      "pos": "D"
+     },
+     {
+      "name": "Gonzalo Garc\u00eda",
+      "pos": "F"
+     },
+     {
+      "name": "Timothy Castagne",
+      "pos": "D"
+     }
+    ],
+    "fetched_at": "2026-11-27T18:56:42+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [],
+    "mean_xi_attack_index": -0.036,
+    "mean_continuity": -0.897,
+    "p_backup_gk": 0.0
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "S\u00e1vio",
+     "type": "injury",
+     "expected_return": "Late January 2027",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5795544",
+     "fetched_at": "2026-11-27T18:56:42+00:00"
+    },
+    {
+     "player": "Tosin Adarabioyo",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5795544",
+     "fetched_at": "2026-11-27T18:56:42+00:00"
+    },
+    {
+     "player": "Mathys Tel",
+     "type": "injury",
+     "expected_return": "Mid December 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5795544",
+     "fetched_at": "2026-11-27T18:56:42+00:00"
+    },
+    {
+     "player": "Mykhaylo Mudryk",
+     "type": "injury",
+     "expected_return": "Early December 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5795544",
+     "fetched_at": "2026-11-27T18:56:42+00:00"
+    },
+    {
+     "player": "Xavi Simons",
+     "type": "injury",
+     "expected_return": "Mid January 2027",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5795544",
+     "fetched_at": "2026-11-27T18:56:42+00:00"
+    },
+    {
+     "player": "Wilson Odobert",
+     "type": "injury",
+     "expected_return": "Mid January 2027",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5795544",
+     "fetched_at": "2026-11-27T18:56:42+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "Joachim Andersen",
+     "type": "injury",
+     "expected_return": "Mid December 2026",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795544",
+     "fetched_at": "2026-11-27T18:56:42+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Unspecified injury - Unknown return date",
+     "fpl_news_added": "2026-11-27T13:00:06.047138Z"
+    },
+    {
+     "player": "Emile Smith Rowe",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795544",
+     "fetched_at": "2026-11-27T18:56:42+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Hip injury - Expected back 29 Nov",
+     "fpl_news_added": "2026-11-20T11:30:05.541395Z"
+    },
+    {
+     "player": "Benjamin Lecomte",
+     "type": "injury",
+     "expected_return": "Early July 2027",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795544",
+     "fetched_at": "2026-11-27T18:56:42+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Achilles injury - Unknown return date",
+     "fpl_news_added": "2026-11-20T11:30:05.525769Z"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 12,
+    "n21": 1,
+    "last_match": "2026-11-21"
+   },
+   "away": {
+    "rest_days": 12,
+    "n21": 1,
+    "last_match": "2026-11-21"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 18.0
+  },
+  "venue": {
+   "name": "Tottenham Hotspur Stadium",
+   "city": "London",
+   "lat": 51.604216666,
+   "lon": -0.066229079
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 1.35,
+   "temp_c": 4.3,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=51.604&longitude=-0.066",
+   "fetched_at": "2026-11-27T18:56:42+00:00",
+   "lat": 51.604216666,
+   "lon": -0.066229079
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": 1.0,
+    "d_p_draw_pp": 1.04,
+    "d_p_away_pp": -2.04,
+    "d_xg_home": -0.03,
+    "d_xg_away": -0.091
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0023,
+    "away_rate_mult": 1.0008,
+    "d_p_home_pp": 0.07,
+    "d_p_draw_pp": -0.03,
+    "d_p_away_pp": -0.04,
+    "d_xg_home": 0.003,
+    "d_xg_away": 0.001,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "home_rate_mult": 1.0134,
+    "away_rate_mult": 0.9814,
+    "d_p_home_pp": 1.0,
+    "d_p_draw_pp": -0.13,
+    "d_p_away_pp": -0.87,
+    "d_xg_home": 0.02,
+    "d_xg_away": -0.021,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 12.0,
+   "rest_a": 12.0,
+   "n21_h": 1.0,
+   "n21_a": 1.0,
+   "travel_km": 17.95293928141485,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 1.35,
+   "temp_c": 4.3
+  }
+ },
+ "lineup_simulation": {
+  "applied": true,
+  "validated": false,
+  "scale": 0.5,
+  "basis": {
+   "home": "inferred",
+   "away": "inferred"
+  },
+  "home_rate_mult": 1.0067,
+  "away_rate_mult": 0.9907,
+  "note": "Starting-XI strength, continuity and backup-keeper adjustment at half the fitted size. It did not pass the out-of-sample test, so bets are not priced from it.",
+  "p_home": 0.4392658228233982,
+  "p_draw": 0.26912364660771976,
+  "p_away": 0.2916105305688819,
+  "xg_home": 1.532488532416512,
+  "xg_away": 1.2149967873036056,
+  "xg_total": 2.7474853197201177,
+  "btts": 0.569200809108539,
+  "totals_over": {
+   "over_0.5": 0.9341570756756377,
+   "over_1.5": 0.769440988453339,
+   "over_2.5": 0.5197657682287045,
+   "over_3.5": 0.2961774381987661,
+   "over_4.5": 0.14070637937343508,
+   "over_5.5": 0.05790761648053318,
+   "over_6.5": 0.02047753301453303
+  },
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.13014853413031927
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.13014853413031927
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.09449422237490512
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.09282706711477816
+   },
+   {
+    "home": 2,
+    "away": 0,
+    "p": 0.0742022798584931
+   },
+   {
+    "home": 1,
+    "away": 2,
+    "p": 0.07397113030856349
+   }
+  ],
+  "score_grid": [
+   [
+    0.065843,
+    0.071889,
+    0.045324,
+    0.017871,
+    0.005197,
+    0.001194,
+    0.000227
+   ],
+   [
+    0.092827,
+    0.130149,
+    0.073971,
+    0.029194,
+    0.008498,
+    0.001955,
+    0.000371
+   ],
+   [
+    0.074202,
+    0.094494,
+    0.059853,
+    0.022689,
+    0.006611,
+    0.001522,
+    0.00029
+   ],
+   [
+    0.037252,
+    0.047482,
+    0.028887,
+    0.011903,
+    0.003331,
+    0.000768,
+    0.000146
+   ],
+   [
+    0.013746,
+    0.017536,
+    0.010678,
+    0.004226,
+    0.001286,
+    0.000285,
+    5.4e-05
+   ],
+   [
+    0.003995,
+    0.005101,
+    0.003109,
+    0.001232,
+    0.00036,
+    8.7e-05,
+    1.6e-05
+   ],
+   [
+    0.000955,
+    0.001221,
+    0.000745,
+    0.000295,
+    8.6e-05,
+    2e-05,
+    4e-06
+   ]
+  ]
+ },
+ "confidence": {
+  "tier": "LOW",
+  "p_max": 0.4342941967233922,
+  "entropy_nats": 1.0759902154021321,
+  "text": "Most likely result has P = 43.4%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.5% \u00b1 0.4% (n=17312, mean forecast 44.7%). Backtest RPS for E0: 0.2018; exact-score top-5 hit rate 46.3% (n=1249). Overall champion RPS 0.2093 vs home/away baseline 0.2284 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-11-22, n=41,487). Outcome-certainty tier: LOW (entropy 1.076 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Tottenham: no lineup published yet \u2014 XI inferred from recent minutes share minus known absences; 200 configurations simulated (start P=0.7, UNVALIDATED prior).",
+  "Fulham: no lineup published yet \u2014 XI inferred from recent minutes share minus known absences; 200 configurations simulated (start P=0.7, UNVALIDATED prior)."
+ ],
+ "verdict": "Tottenham 1\u20131 Fulham is the single most probable scoreline at 13.0%: expected goals 1.52\u20131.23 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.039). Exact scores are inherently uncertain; the 1X2 split is 43.4%/27.0%/29.6%.",
+ "resolved": {
+  "home_key": "England:Tottenham",
+  "away_key": "England:Fulham",
+  "div": "E0",
+  "home_div": "E0",
+  "away_div": "E0",
+  "country": "England"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: Fulham FC at Tottenham Hotspur FC\nCompetition: Premier League\nDate: 2026-12-03 15:00 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-11-27\n\nPRIMARY FINAL SCORE PREDICTION\n\nTottenham Hotspur FC 1 \u2013 1 Fulham FC\n(modal exact score, probability 13.0%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.52\nAway: 1.23\nExpected Total: 2.75\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 43.4%\nDraw: 27.0%\nAway Win: 29.6%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 13.0%\n2. 2\u20131: 9.4%\n3. 1\u20130: 9.2%\n4. 1\u20132: 7.5%\n5. 2\u20130: 7.3%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 23.0%\nTotal 2 goals: 25.0%\nTotal 3 goals: 22.4%\nTotal 4 goals: 15.6%\nTotal 5+ goals: 14.1%\n\nBoth Teams Score: 57.0%\nClean sheet Tottenham Hotspur FC: 28.6% \u00b7 Clean sheet Fulham FC: 21.0%\n\nMATCH INTELLIGENCE\n\n1. Home advantage (England, fitted from results): \u00d71.23 on Tottenham's scoring rate.\n2. Tottenham attack vs Fulham defence: time-weighted strength gap multiplies Tottenham's scoring rate by \u00d70.90 relative to an average pairing (from 35/31 decay-weighted matches).\n3. Fulham attack vs Tottenham defence: rate multiplier \u00d70.91 for the away side.\n\nMODEL CONFIDENCE\n\nMost likely result has P = 43.4%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.5% \u00b1 0.4% (n=17312, mean forecast 44.7%). Backtest RPS for E0: 0.2018; exact-score top-5 hit rate 46.3% (n=1249). Overall champion RPS 0.2093 vs home/away baseline 0.2284 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-11-22, n=41,487). Outcome-certainty tier: LOW (entropy 1.076 nats of max 1.099).\nParameter-uncertainty 80% bands: xG Tottenham Hotspur FC 1.17\u20131.91, xG Fulham FC 0.92\u20131.56; P(home win) 33.0%\u201355.0%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0018 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nTottenham: INFERRED, fetched 2026-11-27 13:56 EST\n  Anton\u00edn Kinsk\u00fd (G), Jan Paul van Hecke (D), Sandro Tonali (M), Micky van de Ven (D), Mohammed Kudus (F), Archie Gray (M), Omar Marmoush (F), Mateus Fernandes (M), Dominic Solanke (F), Andrew Robertson (D), Pedro Porro (D)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs +0.008 (log) \u00b7 continuity -0.15 \u00b7 P(backup GK) 30%\nFulham: INFERRED, fetched 2026-11-27 13:56 EST\n  Bernd Leno (G), Calvin Bassey (D), Alex Iwobi (M), Sander Berge (M), Shea Charles (M), Joshua King (M), Oscar Bobb (F), David Affengruber (D), Antonee Robinson (D), Gonzalo Garc\u00eda (F), Timothy Castagne (D)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs -0.036 (log) \u00b7 continuity -0.90 \u00b7 P(backup GK) 0%\n\nKEY ABSENCES\n\n- Tottenham: S\u00e1vio \u2014 injury, Late January 2027 [FotMob, 2026-11-27 13:56 EST]\n- Tottenham: Tosin Adarabioyo \u2014 injury, Doubtful [FotMob, 2026-11-27 13:56 EST]\n- Tottenham: Mathys Tel \u2014 injury, Mid December 2026 [FotMob, 2026-11-27 13:56 EST]\n- Tottenham: Mykhaylo Mudryk \u2014 injury, Early December 2026 [FotMob, 2026-11-27 13:56 EST]\n- Tottenham: Xavi Simons \u2014 injury, Mid January 2027 [FotMob, 2026-11-27 13:56 EST]\n- Tottenham: Wilson Odobert \u2014 injury, Mid January 2027 [FotMob, 2026-11-27 13:56 EST]\n- Fulham: Joachim Andersen \u2014 injury, Mid December 2026, 0% chance of playing [FotMob + FPL, 2026-11-27 13:56 EST] \u2014 FPL: Unspecified injury - Unknown return date (updated 2026-11-27 08:00 EST)\n- Fulham: Emile Smith Rowe \u2014 injury, Late November 2026, 0% chance of playing [FotMob + FPL, 2026-11-27 13:56 EST] \u2014 FPL: Hip injury - Expected back 29 Nov (updated 2026-11-20 06:30 EST)\n- Fulham: Benjamin Lecomte \u2014 injury, Early July 2027, 0% chance of playing [FotMob + FPL, 2026-11-27 13:56 EST] \u2014 FPL: Achilles injury - Unknown return date (updated 2026-11-20 06:30 EST)\n\nWEATHER AT VENUE\n\nTottenham Hotspur Stadium, London: 4.3 \u00b0C, wind 1.4 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-11-27 13:56 EST]\n\nREST & TRAVEL\n\nTottenham: 12 days' rest, 1 matches in previous 21 days \u00b7 Fulham: 12 days' rest, 1 in 21 days \u00b7 away travel 18.0 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 43.4% / 27.0% / 29.6%, xG 1.52\u20131.23\n- Understat xG component (validated, in ensemble): home +1.00 pp, draw +1.04 pp, away -2.04 pp; xG -0.030 / -0.091\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.07 pp, draw -0.03 pp, away -0.04 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- lineup: NOT APPLIED (failed out-of-sample validation); would have moved home +1.00 pp, draw -0.13 pp, away -0.87 pp\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Tottenham: no lineup published yet \u2014 XI inferred from recent minutes share minus known absences; 200 configurations simulated (start P=0.7, UNVALIDATED prior).\n- Fulham: no lineup published yet \u2014 XI inferred from recent minutes share minus known absences; 200 configurations simulated (start P=0.7, UNVALIDATED prior).\n\nFINAL VERDICT\n\nTottenham 1\u20131 Fulham is the single most probable scoreline at 13.0%: expected goals 1.52\u20131.23 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.039). Exact scores are inherently uncertain; the 1X2 split is 43.4%/27.0%/29.6%.\n",
+ "refresh_id": "a47290a1f6384c84a4194e157d31f9d4",
+ "frozen_at": "2026-11-27T18:56:42+00:00",
+ "sha256": "8a158e0274c084534538f28efb6b249becb8be70c32fdb43c68b461282a09197"
+}

@@ -1,0 +1,835 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-11-27",
+ "input_fingerprint": "1b07be5dbe1a0f66acfcf8ff798b9c20a5a5853fa2defe66e39642713d7cce81",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-11-27T18:55:05+00:00",
+ "fixture": {
+  "event_id": "POLY-1426725",
+  "home_name": "SV Werder Bremen",
+  "away_name": "Borussia M\u00f6nchengladbach",
+  "competition": "Bundesliga",
+  "subcategory": "bun",
+  "kickoff_utc": "2026-11-27T19:30:00+00:00",
+  "kickoff_local": "2026-11-27 14:30 EST",
+  "home_matched": "Werder Bremen",
+  "away_matched": "M'gladbach",
+  "match_methods": {
+   "home": {
+    "source": "SV Werder Bremen",
+    "matched": "Werder Bremen",
+    "method": "core-tokens",
+    "score": 0.97
+   },
+   "away": {
+    "source": "Borussia M\u00f6nchengladbach",
+    "matched": "M'gladbach",
+    "method": "alias",
+    "score": 1.0
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.52854145799735,
+  "p_draw": 0.2390729288509012,
+  "p_away": 0.23238561315174894,
+  "xg_home": 1.8926351116241014,
+  "xg_away": 1.2100426314762196,
+  "xg_total": 3.1026777431003207,
+  "median_total": 3,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.1117249653392947
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.1117249653392947
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.10114726653399322
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.07981489896043542
+   },
+   {
+    "home": 2,
+    "away": 0,
+    "p": 0.07958298441435299
+   },
+   {
+    "home": 2,
+    "away": 2,
+    "p": 0.0636934475057962
+   }
+  ],
+  "btts": 0.6137285737363112,
+  "totals_over": {
+   "over_0.5": 0.9542064319545231,
+   "over_1.5": 0.8253635323374673,
+   "over_2.5": 0.602992766357653,
+   "over_3.5": 0.3766750724489069,
+   "over_4.5": 0.1984716113910929,
+   "over_5.5": 0.09088405282453048,
+   "over_6.5": 0.035950442014895875
+  },
+  "total_buckets": {
+   "0-1": 0.17463646766253288,
+   "2": 0.22237076597981428,
+   "3": 0.226317693908746,
+   "4": 0.17820346105781404,
+   "5+": 0.1984716113910929
+  },
+  "clean_sheet_home": 0.28958253952156554,
+  "clean_sheet_away": 0.14248245478760047,
+  "home_goal_dist": [
+   0.14248245478760047,
+   0.2884826908975622,
+   0.27709805381826813,
+   0.17261952197824398,
+   0.07927156722734104,
+   0.028723430229853766,
+   0.00856956737257158,
+   0.002752713688558956
+  ],
+  "away_goal_dist": [
+   0.28958253952156554,
+   0.36919157413037745,
+   0.22278462228528384,
+   0.08677020688692451,
+   0.024834154738218726,
+   0.005605290972373083,
+   0.001041896060097568,
+   0.00018971540515933154
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    4
+   ],
+   "away_goals_80": [
+    0,
+    3
+   ],
+   "total_goals_80": [
+    1,
+    5
+   ],
+   "goal_diff_80": [
+    -1,
+    3
+   ]
+  },
+  "score_grid": [
+   [
+    0.045794,
+    0.049028,
+    0.031063,
+    0.012147,
+    0.003489,
+    0.000789,
+    0.000147
+   ],
+   [
+    0.079815,
+    0.111725,
+    0.063177,
+    0.024709,
+    0.007099,
+    0.001605,
+    0.000299
+   ],
+   [
+    0.079583,
+    0.101147,
+    0.063693,
+    0.023909,
+    0.00687,
+    0.001554,
+    0.000289
+   ],
+   [
+    0.049847,
+    0.063366,
+    0.038297,
+    0.015614,
+    0.004306,
+    0.000974,
+    0.000181
+   ],
+   [
+    0.022946,
+    0.029175,
+    0.017636,
+    0.006901,
+    0.002067,
+    0.000449,
+    8.4e-05
+   ],
+   [
+    0.008319,
+    0.010579,
+    0.006396,
+    0.002503,
+    0.00072,
+    0.00017,
+    3e-05
+   ],
+   [
+    0.002482,
+    0.003157,
+    0.001909,
+    0.000747,
+    0.000215,
+    4.9e-05,
+    9e-06
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.530235,
+  "p_draw": 0.23832,
+  "p_away": 0.231445,
+  "se": [
+   0.001115988003463747,
+   0.0009526898173067665,
+   0.0009430753203615287
+  ],
+  "max_abs_dev_vs_exact": 0.0016935420026500392,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   1.4612757766070494,
+   2.3629217899942714
+  ],
+  "xg_away_80": [
+   0.8996811556931209,
+   1.5441360652668825
+  ],
+  "p_home_80": [
+   0.41226104480828674,
+   0.6482023453723929
+  ],
+  "p_draw_80": [
+   0.19315676954579628,
+   0.26618814325354134
+  ],
+  "p_away_80": [
+   0.15385461217052437,
+   0.3331807030898729
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.19053791466748082,
+   0.2004709328035232
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.5389386375604512,
+   "p_draw": 0.2328046264479082,
+   "p_away": 0.22825673599164065,
+   "xg_home": 1.8810163829974007,
+   "xg_away": 1.1562301669055906,
+   "weight": 0.0077
+  },
+  "elo": {
+   "p_home": 0.5386227658120641,
+   "p_draw": 0.22262156341853134,
+   "p_away": 0.23875567076940443,
+   "xg_home": 1.9107886541801706,
+   "xg_away": 1.2041805462571333,
+   "weight": 0.3721
+  },
+  "standard_dc": {
+   "p_home": 0.5059511424742287,
+   "p_draw": 0.26319190089368477,
+   "p_away": 0.23085695663208655,
+   "xg_home": 1.5949252568284271,
+   "xg_away": 0.9994751472543704,
+   "weight": 0.0028
+  },
+  "home_away_rate": {
+   "p_home": 0.44933698870615596,
+   "p_draw": 0.23104908631343088,
+   "p_away": 0.3196139249804132,
+   "xg_home": 1.757853747349858,
+   "xg_away": 1.4527323975915198,
+   "weight": 0.001
+  },
+  "xg_dc": {
+   "p_home": 0.5169582330340914,
+   "p_draw": 0.23771020619448943,
+   "p_away": 0.24533156077141904,
+   "xg_home": 1.8194939796416612,
+   "xg_away": 1.1913979074091718,
+   "weight": 0.6164
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Home advantage (Germany, fitted from results): \u00d71.31 on Werder Bremen's scoring rate.",
+   "effect": 0.2672
+  },
+  {
+   "text": "Werder Bremen attack vs M'gladbach defence: time-weighted strength gap multiplies Werder Bremen's scoring rate by \u00d71.19 relative to an average pairing (from 28/28 decay-weighted matches).",
+   "effect": 0.176
+  },
+  {
+   "text": "Independent results-only Elo: Werder Bremen 1580 vs M'gladbach 1491 (gap +89 before home advantage).",
+   "effect": 0.134
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.52854145799735,
+  "p_draw": 0.2390729288509012,
+  "p_away": 0.23238561315174894,
+  "xg_home": 1.8926351116241014,
+  "xg_away": 1.2100426314762196
+ },
+ "context": {
+  "fetched_at": "2026-11-27T18:55:05+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5881241",
+    "fetched_at": "2026-11-27T18:55:05+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "projected",
+    "source": "FotMob projected XI (enetpulse)",
+    "formation": "4-2-3-1",
+    "starters": [
+     {
+      "name": "Karl Hein",
+      "pos": "G",
+      "shirt": "1"
+     },
+     {
+      "name": "Arthur",
+      "pos": "M",
+      "shirt": "13"
+     },
+     {
+      "name": "Amos Pieper",
+      "pos": "D",
+      "shirt": "5"
+     },
+     {
+      "name": "Marco Friedl",
+      "pos": "D",
+      "shirt": "32"
+     },
+     {
+      "name": "Olivier Deman",
+      "pos": "D",
+      "shirt": "2"
+     },
+     {
+      "name": "Youri Regeer",
+      "pos": "M",
+      "shirt": "44"
+     },
+     {
+      "name": "Ludovit Reis",
+      "pos": "M",
+      "shirt": "15"
+     },
+     {
+      "name": "Eren Dink\u00e7i",
+      "pos": "M",
+      "shirt": "18"
+     },
+     {
+      "name": "Chuki",
+      "pos": "M",
+      "shirt": "20"
+     },
+     {
+      "name": "Justin Njinmah",
+      "pos": "F",
+      "shirt": "11"
+     },
+     {
+      "name": "Niclas F\u00fcllkrug",
+      "pos": "F",
+      "shirt": "10"
+     }
+    ],
+    "fetched_at": "2026-11-27T18:55:05+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [],
+    "mean_xi_attack_index": -0.01,
+    "mean_continuity": -0.41,
+    "p_backup_gk": 0.175
+   },
+   "away": {
+    "status": "projected",
+    "source": "FotMob projected XI (enetpulse)",
+    "formation": "3-4-2-1",
+    "starters": [
+     {
+      "name": "Daniel Batz",
+      "pos": "G",
+      "shirt": "33"
+     },
+     {
+      "name": "Kevin Diks",
+      "pos": "D",
+      "shirt": "4"
+     },
+     {
+      "name": "Philipp Sander",
+      "pos": "D",
+      "shirt": "16"
+     },
+     {
+      "name": "Fabio Chiarodia",
+      "pos": "D",
+      "shirt": "2"
+     },
+     {
+      "name": "Joseph Scally",
+      "pos": "M",
+      "shirt": "29"
+     },
+     {
+      "name": "Zento Uno",
+      "pos": "M",
+      "shirt": "47"
+     },
+     {
+      "name": "Florian Neuhaus",
+      "pos": "M",
+      "shirt": "10"
+     },
+     {
+      "name": "Jens Castrop",
+      "pos": "M",
+      "shirt": "17"
+     },
+     {
+      "name": "Robin Hack",
+      "pos": "M",
+      "shirt": "25"
+     },
+     {
+      "name": "Wael Mohya",
+      "pos": "M",
+      "shirt": "36"
+     },
+     {
+      "name": "Shuto Machino",
+      "pos": "F",
+      "shirt": "18"
+     }
+    ],
+    "fetched_at": "2026-11-27T18:55:05+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [],
+    "mean_xi_attack_index": 0.032,
+    "mean_continuity": -0.038,
+    "p_backup_gk": 0.835
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Marco Gr\u00fcll",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881241",
+     "fetched_at": "2026-11-27T18:55:05+00:00"
+    },
+    {
+     "player": "Mitchell Weiser",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881241",
+     "fetched_at": "2026-11-27T18:55:05+00:00"
+    },
+    {
+     "player": "Moussa N'Diaye",
+     "type": "injury",
+     "expected_return": "Early December 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881241",
+     "fetched_at": "2026-11-27T18:55:05+00:00"
+    },
+    {
+     "player": "Felix Agu",
+     "type": "injury",
+     "expected_return": "Early December 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881241",
+     "fetched_at": "2026-11-27T18:55:05+00:00"
+    },
+    {
+     "player": "Jens Stage",
+     "type": "injury",
+     "expected_return": "Early December 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881241",
+     "fetched_at": "2026-11-27T18:55:05+00:00"
+    },
+    {
+     "player": "Skelly Alvero",
+     "type": "injury",
+     "expected_return": "Early December 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881241",
+     "fetched_at": "2026-11-27T18:55:05+00:00"
+    },
+    {
+     "player": "Keke Topp",
+     "type": "injury",
+     "expected_return": "Early January 2027",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881241",
+     "fetched_at": "2026-11-27T18:55:05+00:00"
+    },
+    {
+     "player": "Salim Musah",
+     "type": "injury",
+     "expected_return": "Early January 2027",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881241",
+     "fetched_at": "2026-11-27T18:55:05+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "Daiki Hashioka",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881241",
+     "fetched_at": "2026-11-27T18:55:05+00:00"
+    },
+    {
+     "player": "Jan Leszczy\u0144ski",
+     "type": "injury",
+     "expected_return": "Early December 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881241",
+     "fetched_at": "2026-11-27T18:55:05+00:00"
+    },
+    {
+     "player": "Lukas Ullrich",
+     "type": "injury",
+     "expected_return": "Early December 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881241",
+     "fetched_at": "2026-11-27T18:55:05+00:00"
+    },
+    {
+     "player": "Enzo Leopold",
+     "type": "injury",
+     "expected_return": "Late May 2027",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881241",
+     "fetched_at": "2026-11-27T18:55:05+00:00"
+    },
+    {
+     "player": "Hugo Bolin",
+     "type": "injury",
+     "expected_return": "About 1-2 weeks",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881241",
+     "fetched_at": "2026-11-27T18:55:05+00:00"
+    },
+    {
+     "player": "Tim Kleindienst",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881241",
+     "fetched_at": "2026-11-27T18:55:05+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 5,
+    "n21": 2,
+    "last_match": "2026-11-22"
+   },
+   "away": {
+    "rest_days": 6,
+    "n21": 2,
+    "last_match": "2026-11-21"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 268.8
+  },
+  "venue": {
+   "name": "Weserstadion",
+   "city": "Bremen",
+   "lat": 53.066427548,
+   "lon": 8.83754611
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 2.66,
+   "temp_c": 0.0,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=53.066&longitude=8.838",
+   "fetched_at": "2026-11-27T18:55:05+00:00",
+   "lat": 53.066427548,
+   "lon": 8.83754611
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": -1.38,
+    "d_p_draw_pp": 0.95,
+    "d_p_away_pp": 0.43,
+    "d_xg_home": -0.057,
+    "d_xg_away": -0.007
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0186,
+    "away_rate_mult": 1.006,
+    "d_p_home_pp": 0.61,
+    "d_p_draw_pp": -0.29,
+    "d_p_away_pp": -0.32,
+    "d_xg_home": 0.034,
+    "d_xg_away": 0.007,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 0.9878,
+    "away_rate_mult": 0.9878,
+    "d_p_home_pp": -0.18,
+    "d_p_draw_pp": 0.19,
+    "d_p_away_pp": -0.0,
+    "d_xg_home": -0.022,
+    "d_xg_away": -0.014,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "home_rate_mult": 1.0178,
+    "away_rate_mult": 1.021,
+    "d_p_home_pp": 0.18,
+    "d_p_draw_pp": -0.28,
+    "d_p_away_pp": 0.1,
+    "d_xg_home": 0.033,
+    "d_xg_away": 0.025,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 5.0,
+   "rest_a": 6.0,
+   "n21_h": 2.0,
+   "n21_a": 2.0,
+   "travel_km": 268.8167064678149,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 2.66,
+   "temp_c": 0.0
+  }
+ },
+ "lineup_simulation": {
+  "applied": true,
+  "validated": false,
+  "scale": 0.5,
+  "basis": {
+   "home": "projected",
+   "away": "projected"
+  },
+  "home_rate_mult": 1.0088,
+  "away_rate_mult": 1.0104,
+  "note": "Starting-XI strength, continuity and backup-keeper adjustment at half the fitted size. It did not pass the out-of-sample test, so bets are not priced from it.",
+  "p_home": 0.529436114507976,
+  "p_draw": 0.23770442939650524,
+  "p_away": 0.23285945609551864,
+  "xg_home": 1.908952917677191,
+  "xg_away": 1.2223972951934767,
+  "xg_total": 3.131350212870668,
+  "btts": 0.6184718976000918,
+  "totals_over": {
+   "over_0.5": 0.9555346331100912,
+   "over_1.5": 0.8292541793057466,
+   "over_2.5": 0.6092412151248666,
+   "over_3.5": 0.38319415253296685,
+   "over_4.5": 0.20349912694586028,
+   "over_5.5": 0.09396746776968368,
+   "over_6.5": 0.037499479977699125
+  },
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.11056560997525963
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.11056560997525963
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.1009770180472651
+   },
+   {
+    "home": 2,
+    "away": 0,
+    "p": 0.07864032390115304
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.07817303585544219
+   },
+   {
+    "home": 2,
+    "away": 2,
+    "p": 0.06425349817823013
+   }
+  ],
+  "score_grid": [
+   [
+    0.044465,
+    0.048107,
+    0.030807,
+    0.012179,
+    0.003537,
+    0.000809,
+    0.000152
+   ],
+   [
+    0.078173,
+    0.110566,
+    0.063185,
+    0.02498,
+    0.007256,
+    0.001659,
+    0.000312
+   ],
+   [
+    0.07864,
+    0.100977,
+    0.064253,
+    0.024377,
+    0.007081,
+    0.00162,
+    0.000305
+   ],
+   [
+    0.049706,
+    0.063829,
+    0.038977,
+    0.01606,
+    0.004477,
+    0.001024,
+    0.000193
+   ],
+   [
+    0.023095,
+    0.029659,
+    0.018112,
+    0.007162,
+    0.002168,
+    0.000476,
+    9e-05
+   ],
+   [
+    0.008453,
+    0.010857,
+    0.00663,
+    0.002622,
+    0.000762,
+    0.000182,
+    3.3e-05
+   ],
+   [
+    0.002547,
+    0.003271,
+    0.001998,
+    0.00079,
+    0.000229,
+    5.2e-05,
+    1e-05
+   ]
+  ]
+ },
+ "confidence": {
+  "tier": "MODERATE",
+  "p_max": 0.52854145799735,
+  "entropy_nats": 1.0182597950178751,
+  "text": "Most likely result has P = 52.9%. In the out-of-sample backtest, favourites priced 0.50\u20130.60 won 54.6% \u00b1 0.5% (n=9745, mean forecast 54.4%). Backtest RPS for D1: 0.1991; exact-score top-5 hit rate 42.5% (n=1008). Overall champion RPS 0.2093 vs home/away baseline 0.2284 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-11-22, n=41,487). Outcome-certainty tier: MODERATE (entropy 1.018 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Werder Bremen: lineup is PROJECTED (FotMob projected XI (enetpulse)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "M'gladbach: lineup is PROJECTED (FotMob projected XI (enetpulse)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior)."
+ ],
+ "verdict": "Werder Bremen 1\u20131 M'gladbach is the single most probable scoreline at 11.2%: expected goals 1.89\u20131.21 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.039). Exact scores are inherently uncertain; the 1X2 split is 52.9%/23.9%/23.2%.",
+ "resolved": {
+  "home_key": "Germany:Werder Bremen",
+  "away_key": "Germany:M'gladbach",
+  "div": "D1",
+  "home_div": "D1",
+  "away_div": "D1",
+  "country": "Germany"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: Borussia M\u00f6nchengladbach at SV Werder Bremen\nCompetition: Bundesliga\nDate: 2026-11-27 14:30 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-11-27\n\nPRIMARY FINAL SCORE PREDICTION\n\nSV Werder Bremen 1 \u2013 1 Borussia M\u00f6nchengladbach\n(modal exact score, probability 11.2%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.89\nAway: 1.21\nExpected Total: 3.10\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 52.9%\nDraw: 23.9%\nAway Win: 23.2%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 11.2%\n2. 2\u20131: 10.1%\n3. 1\u20130: 8.0%\n4. 2\u20130: 8.0%\n5. 2\u20132: 6.4%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 17.5%\nTotal 2 goals: 22.2%\nTotal 3 goals: 22.6%\nTotal 4 goals: 17.8%\nTotal 5+ goals: 19.8%\n\nBoth Teams Score: 61.4%\nClean sheet SV Werder Bremen: 29.0% \u00b7 Clean sheet Borussia M\u00f6nchengladbach: 14.2%\n\nMATCH INTELLIGENCE\n\n1. Home advantage (Germany, fitted from results): \u00d71.31 on Werder Bremen's scoring rate.\n2. Werder Bremen attack vs M'gladbach defence: time-weighted strength gap multiplies Werder Bremen's scoring rate by \u00d71.19 relative to an average pairing (from 28/28 decay-weighted matches).\n3. Independent results-only Elo: Werder Bremen 1580 vs M'gladbach 1491 (gap +89 before home advantage).\n\nMODEL CONFIDENCE\n\nMost likely result has P = 52.9%. In the out-of-sample backtest, favourites priced 0.50\u20130.60 won 54.6% \u00b1 0.5% (n=9745, mean forecast 54.4%). Backtest RPS for D1: 0.1991; exact-score top-5 hit rate 42.5% (n=1008). Overall champion RPS 0.2093 vs home/away baseline 0.2284 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-11-22, n=41,487). Outcome-certainty tier: MODERATE (entropy 1.018 nats of max 1.099).\nParameter-uncertainty 80% bands: xG SV Werder Bremen 1.46\u20132.36, xG Borussia M\u00f6nchengladbach 0.90\u20131.54; P(home win) 41.2%\u201364.8%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0017 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nWerder Bremen: PROJECTED \u2014 FotMob projected XI (enetpulse), fetched 2026-11-27 13:55 EST (4-2-3-1)\n  Karl Hein (G), Arthur (M), Amos Pieper (D), Marco Friedl (D), Olivier Deman (D), Youri Regeer (M), Ludovit Reis (M), Eren Dink\u00e7i (M), Chuki (M), Justin Njinmah (F), Niclas F\u00fcllkrug (F)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs -0.010 (log) \u00b7 continuity -0.41 \u00b7 P(backup GK) 18%\nM'gladbach: PROJECTED \u2014 FotMob projected XI (enetpulse), fetched 2026-11-27 13:55 EST (3-4-2-1)\n  Daniel Batz (G), Kevin Diks (D), Philipp Sander (D), Fabio Chiarodia (D), Joseph Scally (M), Zento Uno (M), Florian Neuhaus (M), Jens Castrop (M), Robin Hack (M), Wael Mohya (M), Shuto Machino (F)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs +0.032 (log) \u00b7 continuity -0.04 \u00b7 P(backup GK) 84%\n\nKEY ABSENCES\n\n- Werder Bremen: Marco Gr\u00fcll \u2014 injury, Doubtful [FotMob, 2026-11-27 13:55 EST]\n- Werder Bremen: Mitchell Weiser \u2014 injury, Late November 2026 [FotMob, 2026-11-27 13:55 EST]\n- Werder Bremen: Moussa N'Diaye \u2014 injury, Early December 2026 [FotMob, 2026-11-27 13:55 EST]\n- Werder Bremen: Felix Agu \u2014 injury, Early December 2026 [FotMob, 2026-11-27 13:55 EST]\n- Werder Bremen: Jens Stage \u2014 injury, Early December 2026 [FotMob, 2026-11-27 13:55 EST]\n- Werder Bremen: Skelly Alvero \u2014 injury, Early December 2026 [FotMob, 2026-11-27 13:55 EST]\n- Werder Bremen: Keke Topp \u2014 injury, Early January 2027 [FotMob, 2026-11-27 13:55 EST]\n- Werder Bremen: Salim Musah \u2014 injury, Early January 2027 [FotMob, 2026-11-27 13:55 EST]\n- M'gladbach: Daiki Hashioka \u2014 injury, Doubtful [FotMob, 2026-11-27 13:55 EST]\n- M'gladbach: Jan Leszczy\u0144ski \u2014 injury, Early December 2026 [FotMob, 2026-11-27 13:55 EST]\n- M'gladbach: Lukas Ullrich \u2014 injury, Early December 2026 [FotMob, 2026-11-27 13:55 EST]\n- M'gladbach: Enzo Leopold \u2014 injury, Late May 2027 [FotMob, 2026-11-27 13:55 EST]\n- M'gladbach: Hugo Bolin \u2014 injury, About 1-2 weeks [FotMob, 2026-11-27 13:55 EST]\n- M'gladbach: Tim Kleindienst \u2014 injury, Late November 2026 [FotMob, 2026-11-27 13:55 EST]\n\nWEATHER AT VENUE\n\nWeserstadion, Bremen: 0.0 \u00b0C, wind 2.7 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-11-27 13:55 EST]\n\nREST & TRAVEL\n\nWerder Bremen: 5 days' rest, 2 matches in previous 21 days \u00b7 M'gladbach: 6 days' rest, 2 in 21 days \u00b7 away travel 268.8 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 52.9% / 23.9% / 23.2%, xG 1.89\u20131.21\n- Understat xG component (validated, in ensemble): home -1.38 pp, draw +0.95 pp, away +0.43 pp; xG -0.057 / -0.007\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.61 pp, draw -0.29 pp, away -0.32 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home -0.18 pp, draw +0.19 pp, away -0.00 pp\n- lineup: NOT APPLIED (failed out-of-sample validation); would have moved home +0.18 pp, draw -0.28 pp, away +0.10 pp\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Werder Bremen: lineup is PROJECTED (FotMob projected XI (enetpulse)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- M'gladbach: lineup is PROJECTED (FotMob projected XI (enetpulse)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n\nFINAL VERDICT\n\nWerder Bremen 1\u20131 M'gladbach is the single most probable scoreline at 11.2%: expected goals 1.89\u20131.21 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.039). Exact scores are inherently uncertain; the 1X2 split is 52.9%/23.9%/23.2%.\n",
+ "refresh_id": "e593f1bfcc5943de9a251b9435346abc",
+ "frozen_at": "2026-11-27T18:55:05+00:00",
+ "sha256": "a46de8bd4359895879f6ab93aba3e65a5a7d41a2ae2b19a95bd9ccc0034c988b"
+}
