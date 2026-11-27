@@ -1,0 +1,771 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-11-25",
+ "input_fingerprint": "6f71aa8beab581724812625252707f22b55e477b60bb29c6417467304ae69dd9",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-11-27T07:59:33+00:00",
+ "fixture": {
+  "event_id": "POLY-1426855",
+  "home_name": "Levante UD",
+  "away_name": "Real Racing Club",
+  "competition": "LaLiga",
+  "subcategory": "lal",
+  "kickoff_utc": "2026-11-27T20:00:00+00:00",
+  "kickoff_local": "2026-11-27 15:00 EST",
+  "home_matched": "Levante",
+  "away_matched": "Santander",
+  "match_methods": {
+   "home": {
+    "source": "Levante UD",
+    "matched": "Levante",
+    "method": "core-tokens",
+    "score": 0.97
+   },
+   "away": {
+    "source": "Real Racing Club",
+    "matched": "Santander",
+    "method": "alias",
+    "score": 1.0
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.5153274516910855,
+  "p_draw": 0.23540327493913754,
+  "p_away": 0.2492692733697771,
+  "xg_home": 1.9779698786983835,
+  "xg_away": 1.3445808996791317,
+  "xg_total": 3.322550778377515,
+  "median_total": 3,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.10265121828498504
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.10265121828498504
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.0942947295420354
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.07070319900417056
+   },
+   {
+    "home": 2,
+    "away": 0,
+    "p": 0.06866859100022389
+   },
+   {
+    "home": 2,
+    "away": 2,
+    "p": 0.06604965950570174
+   }
+  ],
+  "btts": 0.646322017014894,
+  "totals_over": {
+   "over_0.5": 0.9576900183017464,
+   "over_1.5": 0.8402468601096358,
+   "over_2.5": 0.6382899450589066,
+   "over_3.5": 0.4247058399787642,
+   "over_4.5": 0.2446801166513289,
+   "over_5.5": 0.12516324739070978,
+   "over_6.5": 0.05640844543687708
+  },
+  "total_buckets": {
+   "0-1": 0.15975313989036422,
+   "2": 0.20195691505072938,
+   "3": 0.21358410508014222,
+   "4": 0.18002572332743533,
+   "5+": 0.2446801166513289
+  },
+  "clean_sheet_home": 0.2579547954603731,
+  "clean_sheet_away": 0.13803316922298686,
+  "home_goal_dist": [
+   0.13803316922298686,
+   0.2754804702435539,
+   0.27008033993185837,
+   0.17703065728753933,
+   0.0878533398157011,
+   0.035190635839024716,
+   0.01181957478600587,
+   0.004511812873330019
+  ],
+  "away_goal_dist": [
+   0.2579547954603731,
+   0.35353197067813547,
+   0.23656867557323355,
+   0.10497988748904619,
+   0.035007205440769205,
+   0.009376076879054493,
+   0.0020989868627078337,
+   0.00048240161668025583
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    4
+   ],
+   "away_goals_80": [
+    0,
+    3
+   ],
+   "total_goals_80": [
+    1,
+    6
+   ],
+   "goal_diff_80": [
+    -2,
+    3
+   ]
+  },
+  "score_grid": [
+   [
+    0.04231,
+    0.04674,
+    0.030637,
+    0.012899,
+    0.004109,
+    0.001058,
+    0.000229
+   ],
+   [
+    0.070703,
+    0.102651,
+    0.062872,
+    0.027309,
+    0.008946,
+    0.00236,
+    0.000521
+   ],
+   [
+    0.068669,
+    0.094295,
+    0.06605,
+    0.028309,
+    0.009498,
+    0.002555,
+    0.000573
+   ],
+   [
+    0.043518,
+    0.061632,
+    0.04259,
+    0.020298,
+    0.006663,
+    0.00182,
+    0.000413
+   ],
+   [
+    0.020926,
+    0.030462,
+    0.021548,
+    0.010045,
+    0.003635,
+    0.000964,
+    0.000221
+   ],
+   [
+    0.008153,
+    0.012146,
+    0.008756,
+    0.004143,
+    0.001455,
+    0.000423,
+    9.4e-05
+   ],
+   [
+    0.002676,
+    0.004062,
+    0.002972,
+    0.001422,
+    0.000504,
+    0.000141,
+    3.4e-05
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.51515,
+  "p_draw": 0.23540999999999998,
+  "p_away": 0.24944,
+  "se": [
+   0.0011175206429860703,
+   0.0009486625635598782,
+   0.0009675217992376193
+  ],
+  "max_abs_dev_vs_exact": 0.00017745169108551728,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   1.543124482589042,
+   2.4505200106443445
+  ],
+  "xg_away_80": [
+   1.0377575068994025,
+   1.6702991035198376
+  ],
+  "p_home_80": [
+   0.4041887374223886,
+   0.635111931287124
+  ],
+  "p_draw_80": [
+   0.19099696189956605,
+   0.2544101179220065
+  ],
+  "p_away_80": [
+   0.1709018979478226,
+   0.34623106718083374
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.18336263774880146,
+   0.1766306655863273
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.53605782140674,
+   "p_draw": 0.21398476403680028,
+   "p_away": 0.24995741455645987,
+   "xg_home": 2.1414513027019346,
+   "xg_away": 1.4254231900773524,
+   "weight": 0.0077
+  },
+  "elo": {
+   "p_home": 0.47981531506266606,
+   "p_draw": 0.2570458882637195,
+   "p_away": 0.26313879667361467,
+   "xg_home": 1.5185144644454085,
+   "xg_away": 1.0539672576055101,
+   "weight": 0.3721
+  },
+  "standard_dc": {
+   "p_home": 0.5623635014852255,
+   "p_draw": 0.20684712252253334,
+   "p_away": 0.23078937599224095,
+   "xg_home": 2.2780320629196993,
+   "xg_away": 1.4279774966695318,
+   "weight": 0.0028
+  },
+  "home_away_rate": {
+   "p_home": 0.4534949581524228,
+   "p_draw": 0.2531497119392524,
+   "p_away": 0.2933553299083248,
+   "xg_home": 1.5292489310724624,
+   "xg_away": 1.1795207557117895,
+   "weight": 0.001
+  },
+  "xg_dc": {
+   "p_home": 0.5315090464894496,
+   "p_draw": 0.21144973806355774,
+   "p_away": 0.25704121544699277,
+   "xg_home": 2.1780639301930864,
+   "xg_away": 1.4837851775890745,
+   "weight": 0.6164
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Levante attack vs Santander defence: time-weighted strength gap multiplies Levante's scoring rate by \u00d71.36 relative to an average pairing (from 34/36 decay-weighted matches).",
+   "effect": 0.31
+  },
+  {
+   "text": "Home advantage (Spain, fitted from results): \u00d71.30 on Levante's scoring rate.",
+   "effect": 0.2627
+  },
+  {
+   "text": "Santander attack vs Levante defence: rate multiplier \u00d71.18 for the away side.",
+   "effect": 0.1657
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.5153274516910854,
+  "p_draw": 0.23540327493913749,
+  "p_away": 0.24926927336977706,
+  "xg_home": 1.977969878698383,
+  "xg_away": 1.3445808996791315
+ },
+ "context": {
+  "fetched_at": "2026-11-27T07:59:33+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5868146",
+    "fetched_at": "2026-11-27T07:59:33+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "projected",
+    "source": "FotMob projected XI (enetpulse)",
+    "formation": "4-1-4-1",
+    "starters": [
+     {
+      "name": "Mathew Ryan",
+      "pos": "G",
+      "shirt": "13"
+     },
+     {
+      "name": "Nacho P\u00e9rez",
+      "pos": "D",
+      "shirt": "29"
+     },
+     {
+      "name": "A\u00efssa Mandi",
+      "pos": "D",
+      "shirt": "2"
+     },
+     {
+      "name": "Adri\u00e1n De La Fuente",
+      "pos": "D",
+      "shirt": "4"
+     },
+     {
+      "name": "Marc Santos",
+      "pos": "D",
+      "shirt": "33"
+     },
+     {
+      "name": "Oriol Rey",
+      "pos": "M",
+      "shirt": "20"
+     },
+     {
+      "name": "Roger Brugu\u00e9",
+      "pos": "F",
+      "shirt": "7"
+     },
+     {
+      "name": "Dani Requena",
+      "pos": "M",
+      "shirt": "6"
+     },
+     {
+      "name": "Jon Olasagasti",
+      "pos": "M",
+      "shirt": "8"
+     },
+     {
+      "name": "Thiago Fern\u00e1ndez",
+      "pos": "F",
+      "shirt": "24"
+     },
+     {
+      "name": "Etta Eyong",
+      "pos": "F",
+      "shirt": "21"
+     }
+    ],
+    "fetched_at": "2026-11-27T07:59:33+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [],
+    "mean_xi_attack_index": -0.034,
+    "mean_continuity": -0.322,
+    "p_backup_gk": 0.0
+   },
+   "away": {
+    "status": "projected",
+    "source": "FotMob projected XI (enetpulse)",
+    "formation": "4-2-3-1",
+    "starters": [
+     {
+      "name": "Julen Agirrezabala",
+      "pos": "G",
+      "shirt": "13"
+     },
+     {
+      "name": "Pablo Ram\u00f3n",
+      "pos": "D",
+      "shirt": "5"
+     },
+     {
+      "name": "Pedro Felipe",
+      "pos": "D",
+      "shirt": "22"
+     },
+     {
+      "name": "Jeanu\u00ebl Belocian",
+      "pos": "D",
+      "shirt": "24"
+     },
+     {
+      "name": "Jorge Salinas",
+      "pos": "D",
+      "shirt": "17"
+     },
+     {
+      "name": "Iv\u00e1n Mart\u00edn",
+      "pos": "M",
+      "shirt": "23"
+     },
+     {
+      "name": "Matteo Prati",
+      "pos": "M",
+      "shirt": "18"
+     },
+     {
+      "name": "Iker Luque",
+      "pos": "F",
+      "shirt": "19"
+     },
+     {
+      "name": "Sergio Canales",
+      "pos": "M",
+      "shirt": "20"
+     },
+     {
+      "name": "I\u00f1igo Vicente",
+      "pos": "F",
+      "shirt": "10"
+     },
+     {
+      "name": "Yassir Zabiri",
+      "pos": "F",
+      "shirt": "21"
+     }
+    ],
+    "fetched_at": "2026-11-27T07:59:33+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [],
+    "mean_xi_attack_index": 0.075,
+    "mean_continuity": -0.099,
+    "p_backup_gk": 0.0
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Petar Ratkov",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868146",
+     "fetched_at": "2026-11-27T07:59:33+00:00"
+    },
+    {
+     "player": "Jeremy Toljan",
+     "type": "injury",
+     "expected_return": "Mid December 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868146",
+     "fetched_at": "2026-11-27T07:59:33+00:00"
+    },
+    {
+     "player": "Manuel S\u00e1nchez",
+     "type": "injury",
+     "expected_return": "Out for season",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868146",
+     "fetched_at": "2026-11-27T07:59:33+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "\u00c1lvaro Mantilla",
+     "type": "injury",
+     "expected_return": "Out for season",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868146",
+     "fetched_at": "2026-11-27T07:59:33+00:00"
+    },
+    {
+     "player": "Maguette Gueye",
+     "type": "injury",
+     "expected_return": "Late December 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868146",
+     "fetched_at": "2026-11-27T07:59:33+00:00"
+    },
+    {
+     "player": "Andr\u00e9s Mart\u00edn",
+     "type": "injury",
+     "expected_return": "About 1-2 weeks",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868146",
+     "fetched_at": "2026-11-27T07:59:33+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 4,
+    "n21": 2,
+    "last_match": "2026-11-23"
+   },
+   "away": {
+    "rest_days": 5,
+    "n21": 2,
+    "last_match": "2026-11-22"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 526.8
+  },
+  "venue": {
+   "name": "Estadio Ciudad de Valencia",
+   "city": "Valencia",
+   "lat": 39.494685764,
+   "lon": -0.363820195
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 1.025,
+   "temp_c": 11.9,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=39.495&longitude=-0.364",
+   "fetched_at": "2026-11-27T07:59:33+00:00",
+   "lat": 39.494685764,
+   "lon": -0.363820195
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": 3.27,
+    "d_p_draw_pp": -2.87,
+    "d_p_away_pp": -0.39,
+    "d_xg_home": 0.418,
+    "d_xg_away": 0.273
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0171,
+    "away_rate_mult": 0.993,
+    "d_p_home_pp": 0.93,
+    "d_p_draw_pp": -0.26,
+    "d_p_away_pp": -0.66,
+    "d_xg_home": 0.034,
+    "d_xg_away": -0.008,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0263,
+    "away_rate_mult": 1.0084,
+    "d_p_home_pp": 0.89,
+    "d_p_draw_pp": -0.4,
+    "d_p_away_pp": -0.48,
+    "d_xg_home": 0.053,
+    "d_xg_away": 0.013,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "home_rate_mult": 0.9846,
+    "away_rate_mult": 1.0237,
+    "d_p_home_pp": -1.32,
+    "d_p_draw_pp": 0.2,
+    "d_p_away_pp": 1.11,
+    "d_xg_home": -0.028,
+    "d_xg_away": 0.031,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 4.0,
+   "rest_a": 5.0,
+   "n21_h": 2.0,
+   "n21_a": 2.0,
+   "travel_km": 526.7837417052448,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 1.025,
+   "temp_c": 11.9
+  }
+ },
+ "lineup_simulation": {
+  "applied": true,
+  "validated": false,
+  "scale": 0.5,
+  "basis": {
+   "home": "projected",
+   "away": "projected"
+  },
+  "home_rate_mult": 0.9923,
+  "away_rate_mult": 1.0118,
+  "note": "Starting-XI strength, continuity and backup-keeper adjustment at half the fitted size. It did not pass the out-of-sample test, so bets are not priced from it.",
+  "p_home": 0.5087514620566417,
+  "p_draw": 0.23647949053831357,
+  "p_away": 0.2547690474050447,
+  "xg_home": 1.963680725556366,
+  "xg_away": 1.3597700586433932,
+  "xg_total": 3.323450784199759,
+  "btts": 0.6481958963530017,
+  "totals_over": {
+   "over_0.5": 0.9577120046018185,
+   "over_1.5": 0.840336754445282,
+   "over_2.5": 0.6384378663164341,
+   "over_3.5": 0.4248977844230522,
+   "over_4.5": 0.24484716951724758,
+   "over_5.5": 0.12529261579731657,
+   "over_6.5": 0.05648482439679427
+  },
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.10297941506747162
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.10297941506747162
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.0938619120265855
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.0701126523531593
+   },
+   {
+    "home": 2,
+    "away": 0,
+    "p": 0.06757050418610279
+   },
+   {
+    "home": 2,
+    "away": 2,
+    "p": 0.06652223381298315
+   }
+  ],
+  "score_grid": [
+   [
+    0.042288,
+    0.047263,
+    0.031349,
+    0.013359,
+    0.004307,
+    0.001123,
+    0.000246
+   ],
+   [
+    0.070113,
+    0.102979,
+    0.063821,
+    0.028056,
+    0.009303,
+    0.002485,
+    0.000556
+   ],
+   [
+    0.067571,
+    0.093862,
+    0.066522,
+    0.028854,
+    0.009799,
+    0.002669,
+    0.000607
+   ],
+   [
+    0.042498,
+    0.060881,
+    0.042565,
+    0.020528,
+    0.00682,
+    0.001886,
+    0.000434
+   ],
+   [
+    0.020284,
+    0.029865,
+    0.021373,
+    0.010082,
+    0.003693,
+    0.000991,
+    0.00023
+   ],
+   [
+    0.007845,
+    0.01182,
+    0.00862,
+    0.004127,
+    0.001467,
+    0.000431,
+    9.7e-05
+   ],
+   [
+    0.002557,
+    0.003925,
+    0.002904,
+    0.001406,
+    0.000504,
+    0.000143,
+    3.5e-05
+   ]
+  ]
+ },
+ "confidence": {
+  "tier": "MODERATE",
+  "p_max": 0.5153274516910855,
+  "entropy_nats": 1.0284282824850377,
+  "text": "Most likely result has P = 51.5%. In the out-of-sample backtest, favourites priced 0.50\u20130.60 won 54.6% \u00b1 0.5% (n=9745, mean forecast 54.4%). Backtest RPS for SP1: 0.1930; exact-score top-5 hit rate 55.0% (n=1268). Overall champion RPS 0.2093 vs home/away baseline 0.2284 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-11-22, n=41,487). Outcome-certainty tier: MODERATE (entropy 1.028 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Levante: lineup is PROJECTED (FotMob projected XI (enetpulse)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Santander: lineup is PROJECTED (FotMob projected XI (enetpulse)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior)."
+ ],
+ "verdict": "Levante 1\u20131 Santander is the single most probable scoreline at 10.3%: expected goals 1.98\u20131.34 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.038). Exact scores are inherently uncertain; the 1X2 split is 51.5%/23.5%/24.9%.",
+ "resolved": {
+  "home_key": "Spain:Levante",
+  "away_key": "Spain:Santander",
+  "div": "SP1",
+  "home_div": "SP1",
+  "away_div": "SP1",
+  "country": "Spain"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: Real Racing Club at Levante UD\nCompetition: LaLiga\nDate: 2026-11-27 15:00 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-11-25\n\nPRIMARY FINAL SCORE PREDICTION\n\nLevante UD 1 \u2013 1 Real Racing Club\n(modal exact score, probability 10.3%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.98\nAway: 1.34\nExpected Total: 3.32\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 51.5%\nDraw: 23.5%\nAway Win: 24.9%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 10.3%\n2. 2\u20131: 9.4%\n3. 1\u20130: 7.1%\n4. 2\u20130: 6.9%\n5. 2\u20132: 6.6%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 16.0%\nTotal 2 goals: 20.2%\nTotal 3 goals: 21.4%\nTotal 4 goals: 18.0%\nTotal 5+ goals: 24.5%\n\nBoth Teams Score: 64.6%\nClean sheet Levante UD: 25.8% \u00b7 Clean sheet Real Racing Club: 13.8%\n\nMATCH INTELLIGENCE\n\n1. Levante attack vs Santander defence: time-weighted strength gap multiplies Levante's scoring rate by \u00d71.36 relative to an average pairing (from 34/36 decay-weighted matches).\n2. Home advantage (Spain, fitted from results): \u00d71.30 on Levante's scoring rate.\n3. Santander attack vs Levante defence: rate multiplier \u00d71.18 for the away side.\n\nMODEL CONFIDENCE\n\nMost likely result has P = 51.5%. In the out-of-sample backtest, favourites priced 0.50\u20130.60 won 54.6% \u00b1 0.5% (n=9745, mean forecast 54.4%). Backtest RPS for SP1: 0.1930; exact-score top-5 hit rate 55.0% (n=1268). Overall champion RPS 0.2093 vs home/away baseline 0.2284 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-11-22, n=41,487). Outcome-certainty tier: MODERATE (entropy 1.028 nats of max 1.099).\nParameter-uncertainty 80% bands: xG Levante UD 1.54\u20132.45, xG Real Racing Club 1.04\u20131.67; P(home win) 40.4%\u201363.5%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0002 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nLevante: PROJECTED \u2014 FotMob projected XI (enetpulse), fetched 2026-11-27 02:59 EST (4-1-4-1)\n  Mathew Ryan (G), Nacho P\u00e9rez (D), A\u00efssa Mandi (D), Adri\u00e1n De La Fuente (D), Marc Santos (D), Oriol Rey (M), Roger Brugu\u00e9 (F), Dani Requena (M), Jon Olasagasti (M), Thiago Fern\u00e1ndez (F), Etta Eyong (F)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs -0.034 (log) \u00b7 continuity -0.32 \u00b7 P(backup GK) 0%\nSantander: PROJECTED \u2014 FotMob projected XI (enetpulse), fetched 2026-11-27 02:59 EST (4-2-3-1)\n  Julen Agirrezabala (G), Pablo Ram\u00f3n (D), Pedro Felipe (D), Jeanu\u00ebl Belocian (D), Jorge Salinas (D), Iv\u00e1n Mart\u00edn (M), Matteo Prati (M), Iker Luque (F), Sergio Canales (M), I\u00f1igo Vicente (F), Yassir Zabiri (F)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs +0.075 (log) \u00b7 continuity -0.10 \u00b7 P(backup GK) 0%\n\nKEY ABSENCES\n\n- Levante: Petar Ratkov \u2014 injury, Doubtful [FotMob, 2026-11-27 02:59 EST]\n- Levante: Jeremy Toljan \u2014 injury, Mid December 2026 [FotMob, 2026-11-27 02:59 EST]\n- Levante: Manuel S\u00e1nchez \u2014 injury, Out for season [FotMob, 2026-11-27 02:59 EST]\n- Santander: \u00c1lvaro Mantilla \u2014 injury, Out for season [FotMob, 2026-11-27 02:59 EST]\n- Santander: Maguette Gueye \u2014 injury, Late December 2026 [FotMob, 2026-11-27 02:59 EST]\n- Santander: Andr\u00e9s Mart\u00edn \u2014 injury, About 1-2 weeks [FotMob, 2026-11-27 02:59 EST]\n\nWEATHER AT VENUE\n\nEstadio Ciudad de Valencia, Valencia: 11.9 \u00b0C, wind 1.0 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-11-27 02:59 EST]\n\nREST & TRAVEL\n\nLevante: 4 days' rest, 2 matches in previous 21 days \u00b7 Santander: 5 days' rest, 2 in 21 days \u00b7 away travel 526.8 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 51.5% / 23.5% / 24.9%, xG 1.98\u20131.34\n- Understat xG component (validated, in ensemble): home +3.27 pp, draw -2.87 pp, away -0.39 pp; xG +0.418 / +0.273\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.93 pp, draw -0.26 pp, away -0.66 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.89 pp, draw -0.40 pp, away -0.48 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- lineup: NOT APPLIED (failed out-of-sample validation); would have moved home -1.32 pp, draw +0.20 pp, away +1.11 pp\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Levante: lineup is PROJECTED (FotMob projected XI (enetpulse)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Santander: lineup is PROJECTED (FotMob projected XI (enetpulse)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n\nFINAL VERDICT\n\nLevante 1\u20131 Santander is the single most probable scoreline at 10.3%: expected goals 1.98\u20131.34 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.038). Exact scores are inherently uncertain; the 1X2 split is 51.5%/23.5%/24.9%.\n",
+ "refresh_id": "3befe00f49664cc38c818d2b43917651",
+ "frozen_at": "2026-11-27T07:59:33+00:00",
+ "sha256": "f744dd24f610013d2fa2e4adabea697795cf746c23152647c2ab119001a30e8b"
+}
