@@ -1,0 +1,591 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-11-27",
+ "input_fingerprint": "1b07be5dbe1a0f66acfcf8ff798b9c20a5a5853fa2defe66e39642713d7cce81",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-11-28T13:52:20+00:00",
+ "fixture": {
+  "event_id": "POLY-1437406",
+  "home_name": "AFC Wimbledon",
+  "away_name": "Barnsley FC",
+  "competition": "League One",
+  "subcategory": "el1",
+  "kickoff_utc": "2026-11-28T15:00:00+00:00",
+  "kickoff_local": "2026-11-28 10:00 EST",
+  "home_matched": "AFC Wimbledon",
+  "away_matched": "Barnsley",
+  "match_methods": {
+   "home": {
+    "source": "AFC Wimbledon",
+    "matched": "AFC Wimbledon",
+    "method": "exact",
+    "score": 1.0
+   },
+   "away": {
+    "source": "Barnsley FC",
+    "matched": "Barnsley",
+    "method": "core-tokens",
+    "score": 0.97
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.3854909021152705,
+  "p_draw": 0.27531902439567846,
+  "p_away": 0.33919007348905117,
+  "xg_home": 1.3982644569893625,
+  "xg_away": 1.3004007736884617,
+  "xg_total": 2.6986652306778245,
+  "median_total": 3,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.133592232959738
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.133592232959738
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.08853731549329033
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.08821622224468009
+   },
+   {
+    "home": 1,
+    "away": 2,
+    "p": 0.08167620098687639
+   },
+   {
+    "home": 0,
+    "away": 1,
+    "p": 0.08150171396728675
+   }
+  ],
+  "btts": 0.5659472099875215,
+  "totals_over": {
+   "over_0.5": 0.9311281077839931,
+   "over_1.5": 0.7610890783234161,
+   "over_2.5": 0.5079021735752395,
+   "over_3.5": 0.2851861000850542,
+   "over_4.5": 0.13313901277410314,
+   "over_5.5": 0.05377925054322949,
+   "over_6.5": 0.018625397544563764
+  },
+  "total_buckets": {
+   "0-1": 0.23891092167658395,
+   "2": 0.2531869047481766,
+   "3": 0.22271607349018535,
+   "4": 0.15204708731095098,
+   "5+": 0.13313901277410314
+  },
+  "clean_sheet_home": 0.26453132920976075,
+  "clean_sheet_away": 0.2383933530187247,
+  "home_goal_dist": [
+   0.2383933530187247,
+   0.35256124870131866,
+   0.24701786173124513,
+   0.11208444728789253,
+   0.03746042905731037,
+   0.009873979005283843,
+   0.002141997515550678,
+   0.0004666836826742459
+  ],
+  "away_goal_dist": [
+   0.26453132920976075,
+   0.3615734940296334,
+   0.23473931673786758,
+   0.098927656679493,
+   0.030793016172013354,
+   0.007582092752436132,
+   0.0015409643343416665,
+   0.00031213008445417183
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    3
+   ],
+   "away_goals_80": [
+    0,
+    3
+   ],
+   "total_goals_80": [
+    1,
+    5
+   ],
+   "goal_diff_80": [
+    -2,
+    2
+   ]
+  },
+  "score_grid": [
+   [
+    0.068872,
+    0.081502,
+    0.055103,
+    0.023372,
+    0.007303,
+    0.001802,
+    0.000367
+   ],
+   [
+    0.088537,
+    0.133592,
+    0.081676,
+    0.034624,
+    0.010814,
+    0.002666,
+    0.000542
+   ],
+   [
+    0.064492,
+    0.088216,
+    0.059978,
+    0.024385,
+    0.007612,
+    0.001876,
+    0.000381
+   ],
+   [
+    0.029452,
+    0.040263,
+    0.026254,
+    0.011585,
+    0.003468,
+    0.000854,
+    0.000174
+   ],
+   [
+    0.009879,
+    0.013497,
+    0.008796,
+    0.003723,
+    0.00121,
+    0.000286,
+    5.8e-05
+   ],
+   [
+    0.002609,
+    0.003562,
+    0.00232,
+    0.000981,
+    0.000306,
+    7.8e-05,
+    1.5e-05
+   ],
+   [
+    0.000566,
+    0.000773,
+    0.000503,
+    0.000213,
+    6.6e-05,
+    1.6e-05,
+    3e-06
+   ]
+  ],
+  "mass_check": 1.0000000000000002
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.38566,
+  "p_draw": 0.27512,
+  "p_away": 0.33922,
+  "se": [
+   0.0010884079299600864,
+   0.000998571443613325,
+   0.0010586543146844487
+  ],
+  "max_abs_dev_vs_exact": 0.00019902439567848207,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   1.087838244411664,
+   1.7359008085424614
+  ],
+  "xg_away_80": [
+   0.9972939277422802,
+   1.6229448814222287
+  ],
+  "p_home_80": [
+   0.29484067242295664,
+   0.4924536376624066
+  ],
+  "p_draw_80": [
+   0.23720303913189644,
+   0.29399743447787324
+  ],
+  "p_away_80": [
+   0.24965623779888285,
+   0.437316202204688
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.1852827322973553,
+   0.180717242136052
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.3738959935958932,
+   "p_draw": 0.26684005569914265,
+   "p_away": 0.35926395070496403,
+   "xg_home": 1.372470891324602,
+   "xg_away": 1.3406539812057197,
+   "weight": 0.0077
+  },
+  "elo": {
+   "p_home": 0.41597436573147684,
+   "p_draw": 0.2628687380377695,
+   "p_away": 0.3211568962307535,
+   "xg_home": 1.3963889079553824,
+   "xg_away": 1.1940073701164673,
+   "weight": 0.3721
+  },
+  "standard_dc": {
+   "p_home": 0.3586698400573207,
+   "p_draw": 0.2677572067460818,
+   "p_away": 0.37357295319659745,
+   "xg_home": 1.3633677408871419,
+   "xg_away": 1.3960165197623922,
+   "weight": 0.0028
+  },
+  "home_away_rate": {
+   "p_home": 0.4352058536746532,
+   "p_draw": 0.25821501204348685,
+   "p_away": 0.30657913428185996,
+   "xg_home": 1.4623120018651412,
+   "xg_away": 1.1847421030899636,
+   "weight": 0.001
+  },
+  "xg_dc": {
+   "p_home": 0.3733801141752951,
+   "p_draw": 0.2666348190889307,
+   "p_away": 0.35998506673577446,
+   "xg_home": 1.3691072962481283,
+   "xg_away": 1.3399993819041416,
+   "weight": 0.6164
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Home advantage (England, fitted from results): \u00d71.23 on AFC Wimbledon's scoring rate.",
+   "effect": 0.2092
+  },
+  {
+   "text": "Barnsley attack vs AFC Wimbledon defence: rate multiplier \u00d71.11 for the away side.",
+   "effect": 0.1043
+  },
+  {
+   "text": "AFC Wimbledon attack vs Barnsley defence: time-weighted strength gap multiplies AFC Wimbledon's scoring rate by \u00d70.92 relative to an average pairing (from 39/39 decay-weighted matches).",
+   "effect": 0.0815
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.38549090211527043,
+  "p_draw": 0.2753190243956784,
+  "p_away": 0.3391900734890511,
+  "xg_home": 1.3982644569893623,
+  "xg_away": 1.3004007736884615
+ },
+ "context": {
+  "fetched_at": "2026-11-28T13:52:20+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5837279",
+    "fetched_at": "2026-11-28T13:52:20+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "4-5-1",
+    "starters": [
+     {
+      "name": "Nathan Bishop",
+      "pos": "G",
+      "shirt": "1"
+     },
+     {
+      "name": "Steven Sessegnon",
+      "pos": "D",
+      "shirt": "2"
+     },
+     {
+      "name": "Isaac Ogundere",
+      "pos": "D",
+      "shirt": "33"
+     },
+     {
+      "name": "Ryan Johnson",
+      "pos": "D",
+      "shirt": "6"
+     },
+     {
+      "name": "Steve Seddon",
+      "pos": "D",
+      "shirt": "3"
+     },
+     {
+      "name": "Myles Hippolyte",
+      "pos": "M",
+      "shirt": "21"
+     },
+     {
+      "name": "Zack Nelson",
+      "pos": "M",
+      "shirt": "10"
+     },
+     {
+      "name": "Ollie Harrison",
+      "pos": "M",
+      "shirt": "5"
+     },
+     {
+      "name": "Callum Maycock",
+      "pos": "M",
+      "shirt": "8"
+     },
+     {
+      "name": "Aron Sasu",
+      "pos": "M",
+      "shirt": "29"
+     },
+     {
+      "name": "Harry Cornick",
+      "pos": "F",
+      "shirt": "23"
+     }
+    ],
+    "fetched_at": "2026-11-28T13:52:20+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   },
+   "away": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "4-2-3-1",
+    "starters": [
+     {
+      "name": "Cieran Slicker",
+      "pos": "G",
+      "shirt": "1"
+     },
+     {
+      "name": "Sam Gale",
+      "pos": "D",
+      "shirt": "4"
+     },
+     {
+      "name": "Arley Kay",
+      "pos": "D",
+      "shirt": "2"
+     },
+     {
+      "name": "Jack Shepherd",
+      "pos": "D",
+      "shirt": "5"
+     },
+     {
+      "name": "Ziyad Larkeche",
+      "pos": "D",
+      "shirt": "3"
+     },
+     {
+      "name": "Cameron McGeehan",
+      "pos": "M",
+      "shirt": "8"
+     },
+     {
+      "name": "Luca Connell",
+      "pos": "M",
+      "shirt": "48"
+     },
+     {
+      "name": "Tyrese Noslin",
+      "pos": "F",
+      "shirt": "11"
+     },
+     {
+      "name": "Patrick Kelly",
+      "pos": "M",
+      "shirt": "22"
+     },
+     {
+      "name": "Vimal Yoganathan",
+      "pos": "F",
+      "shirt": "45"
+     },
+     {
+      "name": "Rylan Brownlie",
+      "pos": "F",
+      "shirt": "32"
+     }
+    ],
+    "fetched_at": "2026-11-28T13:52:20+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   }
+  },
+  "absences": {
+   "home": [],
+   "away": []
+  },
+  "rest": {
+   "home": {
+    "rest_days": 7,
+    "n21": 2,
+    "last_match": "2026-11-21"
+   },
+   "away": {
+    "rest_days": 4,
+    "n21": 3,
+    "last_match": "2026-11-24"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 251.2
+  },
+  "venue": {
+   "name": "The Cherry Red Records Stadium",
+   "city": "London",
+   "lat": 51.431531,
+   "lon": -0.186707
+  },
+  "weather": {
+   "precip_mm_2h": 0.7,
+   "wind_ms": 6.0,
+   "temp_c": 7.8,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=51.432&longitude=-0.187",
+   "fetched_at": "2026-11-28T13:52:20+00:00",
+   "lat": 51.431531,
+   "lon": -0.186707
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": -2.69,
+    "d_p_draw_pp": 0.27,
+    "d_p_away_pp": 2.42,
+    "d_xg_home": -0.017,
+    "d_xg_away": 0.091
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 0.993,
+    "away_rate_mult": 1.0171,
+    "d_p_home_pp": -0.69,
+    "d_p_draw_pp": -0.05,
+    "d_p_away_pp": 0.74,
+    "d_xg_home": -0.009,
+    "d_xg_away": 0.021,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0179,
+    "away_rate_mult": 1.0058,
+    "d_p_home_pp": 0.48,
+    "d_p_draw_pp": -0.2,
+    "d_p_away_pp": -0.28,
+    "d_xg_home": 0.024,
+    "d_xg_away": 0.007,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0156,
+    "away_rate_mult": 1.0156,
+    "d_p_home_pp": 0.14,
+    "d_p_draw_pp": -0.24,
+    "d_p_away_pp": 0.1,
+    "d_xg_home": 0.021,
+    "d_xg_away": 0.02,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "reason": "failed validation; no live features"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 7.0,
+   "rest_a": 4.0,
+   "n21_h": 2.0,
+   "n21_a": 3.0,
+   "travel_km": 251.24846589727161,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.7,
+   "wind_ms": 6.0,
+   "temp_c": 7.8
+  }
+ },
+ "lineup_simulation": {
+  "applied": false,
+  "basis": {
+   "home": "projected",
+   "away": "projected"
+  },
+  "reason": "No player ratings exist for this league, so the lineup and formation are shown but cannot change the probabilities."
+ },
+ "confidence": {
+  "tier": "LOW",
+  "p_max": 0.3854909021152705,
+  "entropy_nats": 1.0893082410155057,
+  "text": "Most likely result has P = 38.5%. In the out-of-sample backtest, favourites priced 0.33\u20130.40 won 38.2% \u00b1 0.5% (n=8558, mean forecast 37.8%). Backtest RPS for E2: 0.2164; exact-score top-5 hit rate 51.6% (n=1831). Overall champion RPS 0.2093 vs home/away baseline 0.2284 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-11-22, n=41,487). Outcome-certainty tier: LOW (entropy 1.089 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "AFC Wimbledon: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "AFC Wimbledon: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.",
+  "Barnsley: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Barnsley: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+ ],
+ "verdict": "AFC Wimbledon 1\u20131 Barnsley is the single most probable scoreline at 13.4%: expected goals 1.40\u20131.30 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.039). Exact scores are inherently uncertain; the 1X2 split is 38.5%/27.5%/33.9%.",
+ "resolved": {
+  "home_key": "England:AFC Wimbledon",
+  "away_key": "England:Barnsley",
+  "div": "E2",
+  "home_div": "E2",
+  "away_div": "E2",
+  "country": "England"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: Barnsley FC at AFC Wimbledon\nCompetition: League One\nDate: 2026-11-28 10:00 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-11-27\n\nPRIMARY FINAL SCORE PREDICTION\n\nAFC Wimbledon 1 \u2013 1 Barnsley FC\n(modal exact score, probability 13.4%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.40\nAway: 1.30\nExpected Total: 2.70\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 38.5%\nDraw: 27.5%\nAway Win: 33.9%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 13.4%\n2. 1\u20130: 8.9%\n3. 2\u20131: 8.8%\n4. 1\u20132: 8.2%\n5. 0\u20131: 8.2%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 23.9%\nTotal 2 goals: 25.3%\nTotal 3 goals: 22.3%\nTotal 4 goals: 15.2%\nTotal 5+ goals: 13.3%\n\nBoth Teams Score: 56.6%\nClean sheet AFC Wimbledon: 26.5% \u00b7 Clean sheet Barnsley FC: 23.8%\n\nMATCH INTELLIGENCE\n\n1. Home advantage (England, fitted from results): \u00d71.23 on AFC Wimbledon's scoring rate.\n2. Barnsley attack vs AFC Wimbledon defence: rate multiplier \u00d71.11 for the away side.\n3. AFC Wimbledon attack vs Barnsley defence: time-weighted strength gap multiplies AFC Wimbledon's scoring rate by \u00d70.92 relative to an average pairing (from 39/39 decay-weighted matches).\n\nMODEL CONFIDENCE\n\nMost likely result has P = 38.5%. In the out-of-sample backtest, favourites priced 0.33\u20130.40 won 38.2% \u00b1 0.5% (n=8558, mean forecast 37.8%). Backtest RPS for E2: 0.2164; exact-score top-5 hit rate 51.6% (n=1831). Overall champion RPS 0.2093 vs home/away baseline 0.2284 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-11-22, n=41,487). Outcome-certainty tier: LOW (entropy 1.089 nats of max 1.099).\nParameter-uncertainty 80% bands: xG AFC Wimbledon 1.09\u20131.74, xG Barnsley FC 1.00\u20131.62; P(home win) 29.5%\u201349.2%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0002 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nAFC Wimbledon: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-11-28 08:52 EST (4-5-1)\n  Nathan Bishop (G), Steven Sessegnon (D), Isaac Ogundere (D), Ryan Johnson (D), Steve Seddon (D), Myles Hippolyte (M), Zack Nelson (M), Ollie Harrison (M), Callum Maycock (M), Aron Sasu (M), Harry Cornick (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\nBarnsley: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-11-28 08:52 EST (4-2-3-1)\n  Cieran Slicker (G), Sam Gale (D), Arley Kay (D), Jack Shepherd (D), Ziyad Larkeche (D), Cameron McGeehan (M), Luca Connell (M), Tyrese Noslin (F), Patrick Kelly (M), Vimal Yoganathan (F), Rylan Brownlie (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nKEY ABSENCES\n\n- None listed by the sources.\n\nWEATHER AT VENUE\n\nThe Cherry Red Records Stadium, London: 7.8 \u00b0C, wind 6.0 m/s, precipitation 0.7 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-11-28 08:52 EST]\n\nREST & TRAVEL\n\nAFC Wimbledon: 7 days' rest, 2 matches in previous 21 days \u00b7 Barnsley: 4 days' rest, 3 in 21 days \u00b7 away travel 251.2 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 38.5% / 27.5% / 33.9%, xG 1.40\u20131.30\n- Understat xG component (validated, in ensemble): home -2.69 pp, draw +0.27 pp, away +2.42 pp; xG -0.017 / +0.091\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home -0.69 pp, draw -0.05 pp, away +0.74 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.48 pp, draw -0.20 pp, away -0.28 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.14 pp, draw -0.24 pp, away +0.10 pp\n- lineup: not applied (failed validation; no live features)\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- AFC Wimbledon: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- AFC Wimbledon: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n- Barnsley: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Barnsley: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nFINAL VERDICT\n\nAFC Wimbledon 1\u20131 Barnsley is the single most probable scoreline at 13.4%: expected goals 1.40\u20131.30 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.039). Exact scores are inherently uncertain; the 1X2 split is 38.5%/27.5%/33.9%.\n",
+ "refresh_id": "902421ea31cc42d28278006f4fa7d573",
+ "frozen_at": "2026-11-28T13:52:20+00:00",
+ "sha256": "d9d7a2757e3f5ae51c4acf69347e8f5a3c501500ac0b973fe59b7fe79c44631c"
+}
