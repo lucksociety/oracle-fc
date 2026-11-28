@@ -1,0 +1,797 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-11-27",
+ "input_fingerprint": "1b07be5dbe1a0f66acfcf8ff798b9c20a5a5853fa2defe66e39642713d7cce81",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-11-28T17:41:05+00:00",
+ "fixture": {
+  "event_id": "POLY-1469683",
+  "home_name": "FC Barcelona",
+  "away_name": "RC Celta de Vigo",
+  "competition": "LaLiga",
+  "subcategory": "lal",
+  "kickoff_utc": "2026-12-05T20:00:00+00:00",
+  "kickoff_local": "2026-12-05 15:00 EST",
+  "home_matched": "Barcelona",
+  "away_matched": "Celta",
+  "match_methods": {
+   "home": {
+    "source": "FC Barcelona",
+    "matched": "Barcelona",
+    "method": "core-tokens",
+    "score": 0.97
+   },
+   "away": {
+    "source": "RC Celta de Vigo",
+    "matched": "Celta",
+    "method": "alias",
+    "score": 1.0
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.7890938525030547,
+  "p_draw": 0.13598155153379501,
+  "p_away": 0.07492459596315035,
+  "xg_home": 2.863314065676858,
+  "xg_away": 0.8500571114110319,
+  "xg_total": 3.71337117708789,
+  "median_total": 4,
+  "modal_score": {
+   "home": 2,
+   "away": 0,
+   "p": 0.10187787730617262
+  },
+  "top_scores": [
+   {
+    "home": 2,
+    "away": 0,
+    "p": 0.10187787730617262
+   },
+   {
+    "home": 3,
+    "away": 0,
+    "p": 0.09749867440595457
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.08559708462639973
+   },
+   {
+    "home": 3,
+    "away": 1,
+    "p": 0.08290961109021176
+   },
+   {
+    "home": 4,
+    "away": 0,
+    "p": 0.06876028011367465
+   }
+  ],
+  "btts": 0.5455371356680272,
+  "totals_over": {
+   "over_0.5": 0.9747502932581492,
+   "over_1.5": 0.8897708079395602,
+   "over_2.5": 0.7191349572197756,
+   "over_3.5": 0.5102148407239324,
+   "over_4.5": 0.3141728901538333,
+   "over_5.5": 0.17010212832765623,
+   "over_6.5": 0.08112506970999774
+  },
+  "total_buckets": {
+   "0-1": 0.1102291920604401,
+   "2": 0.17063585071978443,
+   "3": 0.2089201164958432,
+   "4": 0.1960419505700991,
+   "5+": 0.3141728901538333
+  },
+  "clean_sheet_home": 0.42718366262250423,
+  "clean_sheet_away": 0.052528908451319745,
+  "home_goal_dist": [
+   0.052528908451319745,
+   0.1611226606974665,
+   0.23744882214746157,
+   0.22840171779849203,
+   0.16238520550359287,
+   0.09124914615649868,
+   0.04229973874207609,
+   0.024563800503092606
+  ],
+  "away_goal_dist": [
+   0.42718366262250423,
+   0.3639175170952707,
+   0.1539750655068235,
+   0.04368541722633047,
+   0.009359520347510489,
+   0.0016138096030626136,
+   0.00023276085902090968,
+   3.224673947716538e-05
+  ],
+  "intervals": {
+   "home_goals_80": [
+    1,
+    5
+   ],
+   "away_goals_80": [
+    0,
+    2
+   ],
+   "total_goals_80": [
+    1,
+    6
+   ],
+   "goal_diff_80": [
+    0,
+    4
+   ]
+  },
+  "score_grid": [
+   [
+    0.02525,
+    0.017159,
+    0.007516,
+    0.002079,
+    0.000438,
+    7.5e-05,
+    1.1e-05
+   ],
+   [
+    0.067821,
+    0.061242,
+    0.023745,
+    0.006629,
+    0.001406,
+    0.000241,
+    3.5e-05
+   ],
+   [
+    0.101878,
+    0.085597,
+    0.037305,
+    0.010083,
+    0.002154,
+    0.000371,
+    5.3e-05
+   ],
+   [
+    0.097499,
+    0.08291,
+    0.035045,
+    0.010376,
+    0.002141,
+    0.00037,
+    5.4e-05
+   ],
+   [
+    0.06876,
+    0.059168,
+    0.025269,
+    0.007239,
+    0.001632,
+    0.000272,
+    3.9e-05
+   ],
+   [
+    0.038293,
+    0.033335,
+    0.014377,
+    0.004151,
+    0.000903,
+    0.000164,
+    2.3e-05
+   ],
+   [
+    0.017592,
+    0.015487,
+    0.006742,
+    0.001961,
+    0.000429,
+    7.5e-05,
+    1.1e-05
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.79065,
+  "p_draw": 0.134655,
+  "p_away": 0.074695,
+  "se": [
+   0.0009097323163986207,
+   0.0007632923128625101,
+   0.0005878590688889642
+  ],
+  "max_abs_dev_vs_exact": 0.001556147496945215,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   2.276449725637217,
+   3.4972711032263195
+  ],
+  "xg_away_80": [
+   0.6377366820182941,
+   1.077854580160132
+  ],
+  "p_home_80": [
+   0.6856075167569886,
+   0.8618850624474157
+  ],
+  "p_draw_80": [
+   0.09383809184382101,
+   0.18602790629691635
+  ],
+  "p_away_80": [
+   0.04467472681462831,
+   0.1273003069211357
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.17022960555244038,
+   0.194764214327354
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.7629797076872071,
+   "p_draw": 0.14433248851169725,
+   "p_away": 0.09268780380109556,
+   "xg_home": 2.809586301406905,
+   "xg_away": 0.9185417548255402,
+   "weight": 0.0077
+  },
+  "elo": {
+   "p_home": 0.7944485191312152,
+   "p_draw": 0.13701037939854435,
+   "p_away": 0.06854110147024059,
+   "xg_home": 2.59416387382372,
+   "xg_away": 0.6341989951618088,
+   "weight": 0.3721
+  },
+  "standard_dc": {
+   "p_home": 0.7485525699652491,
+   "p_draw": 0.16169898656204512,
+   "p_away": 0.08974844347270577,
+   "xg_home": 2.5124730182303705,
+   "xg_away": 0.7727762185632561,
+   "weight": 0.0028
+  },
+  "home_away_rate": {
+   "p_home": 0.4534949581524228,
+   "p_draw": 0.2531497119392524,
+   "p_away": 0.2933553299083248,
+   "xg_home": 1.5292489310724624,
+   "xg_away": 1.1795207557117895,
+   "weight": 0.001
+  },
+  "xg_dc": {
+   "p_home": 0.7637334037513711,
+   "p_draw": 0.14113369035463655,
+   "p_away": 0.09513290589399231,
+   "xg_home": 2.8953516270249104,
+   "xg_away": 0.9757031118362227,
+   "weight": 0.6164
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Barcelona attack vs Celta defence: time-weighted strength gap multiplies Barcelona's scoring rate by \u00d71.79 relative to an average pairing (from 40/33 decay-weighted matches).",
+   "effect": 0.5823
+  },
+  {
+   "text": "Independent results-only Elo: Barcelona 1945 vs Celta 1575 (gap +370 before home advantage).",
+   "effect": 0.5548
+  },
+  {
+   "text": "Celta attack vs Barcelona defence: rate multiplier \u00d70.76 for the away side.",
+   "effect": 0.2736
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.7890938525030546,
+  "p_draw": 0.135981551533795,
+  "p_away": 0.07492459596315035,
+  "xg_home": 2.863314065676857,
+  "xg_away": 0.8500571114110317
+ },
+ "context": {
+  "fetched_at": "2026-11-28T17:41:05+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5868154",
+    "fetched_at": "2026-11-28T17:41:05+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "inferred",
+    "source": null,
+    "formation": null,
+    "starters": [
+     {
+      "name": "Joan Garc\u00eda",
+      "pos": "G"
+     },
+     {
+      "name": "Lamine Yamal",
+      "pos": "F"
+     },
+     {
+      "name": "Pedri",
+      "pos": "M"
+     },
+     {
+      "name": "Gerard Mart\u00edn",
+      "pos": "D"
+     },
+     {
+      "name": "Raphinha",
+      "pos": "F"
+     },
+     {
+      "name": "Ferm\u00edn L\u00f3pez",
+      "pos": "M"
+     },
+     {
+      "name": "Pau Cubars\u00ed",
+      "pos": "D"
+     },
+     {
+      "name": "Eric Garc\u00eda",
+      "pos": "D"
+     },
+     {
+      "name": "Jo\u00e3o Cancelo",
+      "pos": "D"
+     },
+     {
+      "name": "Anthony Gordon",
+      "pos": "F"
+     },
+     {
+      "name": "Rodri",
+      "pos": "M"
+     }
+    ],
+    "fetched_at": "2026-11-28T17:41:05+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [],
+    "mean_xi_attack_index": -0.021,
+    "mean_continuity": -0.089,
+    "p_backup_gk": 0.3
+   },
+   "away": {
+    "status": "inferred",
+    "source": null,
+    "formation": null,
+    "starters": [
+     {
+      "name": "Ionu\u021b Radu",
+      "pos": "G"
+     },
+     {
+      "name": "Ilaix Moriba",
+      "pos": "M"
+     },
+     {
+      "name": "Yoel Lago",
+      "pos": "D"
+     },
+     {
+      "name": "Marcos Alonso",
+      "pos": "D"
+     },
+     {
+      "name": "Sergio Carreira",
+      "pos": "M"
+     },
+     {
+      "name": "Javi Rodr\u00edguez",
+      "pos": "D"
+     },
+     {
+      "name": "Hugo \u00c1lvarez",
+      "pos": "F"
+     },
+     {
+      "name": "Javi Rueda",
+      "pos": "M"
+     },
+     {
+      "name": "Ferr\u00e1n Jutgl\u00e0",
+      "pos": "F"
+     },
+     {
+      "name": "Pablo Dur\u00e1n",
+      "pos": "F"
+     },
+     {
+      "name": "Javi Gal\u00e1n",
+      "pos": "D"
+     }
+    ],
+    "fetched_at": "2026-11-28T17:41:05+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [],
+    "mean_xi_attack_index": 0.036,
+    "mean_continuity": 0.356,
+    "p_backup_gk": 0.0
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Jordi Pesquer",
+     "type": "internationalDuty",
+     "expected_return": "",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868154",
+     "fetched_at": "2026-11-28T17:41:05+00:00"
+    },
+    {
+     "player": "Marc Bernal",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868154",
+     "fetched_at": "2026-11-28T17:41:05+00:00"
+    },
+    {
+     "player": "Hamza Abdelkarim",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868154",
+     "fetched_at": "2026-11-28T17:41:05+00:00"
+    },
+    {
+     "player": "Alejandro Balde",
+     "type": "injury",
+     "expected_return": "Mid December 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868154",
+     "fetched_at": "2026-11-28T17:41:05+00:00"
+    },
+    {
+     "player": "Andreas Christensen",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868154",
+     "fetched_at": "2026-11-28T17:41:05+00:00"
+    },
+    {
+     "player": "Xavi Espart",
+     "type": "injury",
+     "expected_return": "Early January 2027",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868154",
+     "fetched_at": "2026-11-28T17:41:05+00:00"
+    },
+    {
+     "player": "Roony Bardghji",
+     "type": "injury",
+     "expected_return": "Late February 2027",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868154",
+     "fetched_at": "2026-11-28T17:41:05+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "Abdoulaye Faye",
+     "type": "injury",
+     "expected_return": "A few days",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868154",
+     "fetched_at": "2026-11-28T17:41:05+00:00"
+    },
+    {
+     "player": "Hugo Gonz\u00e1lez",
+     "type": "injury",
+     "expected_return": "About 1-2 weeks",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868154",
+     "fetched_at": "2026-11-28T17:41:05+00:00"
+    },
+    {
+     "player": "Borja Iglesias",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868154",
+     "fetched_at": "2026-11-28T17:41:05+00:00"
+    },
+    {
+     "player": "Carl Starfelt",
+     "type": "injury",
+     "expected_return": "Back in training",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868154",
+     "fetched_at": "2026-11-28T17:41:05+00:00"
+    },
+    {
+     "player": "Miguel Rom\u00e1n",
+     "type": "injury",
+     "expected_return": "Back in training",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5868154",
+     "fetched_at": "2026-11-28T17:41:05+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 13,
+    "n21": 1,
+    "last_match": "2026-11-22"
+   },
+   "away": {
+    "rest_days": 14,
+    "n21": 1,
+    "last_match": "2026-11-21"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 904.6
+  },
+  "venue": {
+   "name": "Spotify Camp Nou",
+   "city": "Barcelona",
+   "lat": 41.380890137,
+   "lon": 2.122812867
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 1.08,
+   "temp_c": 9.9,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=41.381&longitude=2.123",
+   "fetched_at": "2026-11-28T17:41:06+00:00",
+   "lat": 41.380890137,
+   "lon": 2.122812867
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": -1.82,
+    "d_p_draw_pp": 0.34,
+    "d_p_away_pp": 1.47,
+    "d_xg_home": 0.195,
+    "d_xg_away": 0.214
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0332,
+    "away_rate_mult": 1.0106,
+    "d_p_home_pp": 1.0,
+    "d_p_draw_pp": -0.63,
+    "d_p_away_pp": -0.37,
+    "d_xg_home": 0.091,
+    "d_xg_away": 0.01,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "home_rate_mult": 0.9864,
+    "away_rate_mult": 1.0311,
+    "d_p_home_pp": -1.05,
+    "d_p_draw_pp": 0.48,
+    "d_p_away_pp": 0.57,
+    "d_xg_home": -0.035,
+    "d_xg_away": 0.027,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 13.0,
+   "rest_a": 14.0,
+   "n21_h": 1.0,
+   "n21_a": 1.0,
+   "travel_km": 904.5850403441061,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 1.08,
+   "temp_c": 9.9
+  }
+ },
+ "lineup_simulation": {
+  "applied": true,
+  "validated": false,
+  "scale": 0.5,
+  "basis": {
+   "home": "inferred",
+   "away": "inferred"
+  },
+  "home_rate_mult": 0.9932,
+  "away_rate_mult": 1.0154,
+  "note": "Starting-XI strength, continuity and backup-keeper adjustment at half the fitted size. It did not pass the out-of-sample test, so bets are not priced from it.",
+  "p_home": 0.7839670948005426,
+  "p_draw": 0.13837027716927042,
+  "p_away": 0.077662628030187,
+  "xg_home": 2.845363262086629,
+  "xg_away": 0.8631198033642306,
+  "xg_total": 3.7084830654508596,
+  "btts": 0.5501807631403205,
+  "totals_over": {
+   "over_0.5": 0.9745766062168085,
+   "over_1.5": 0.8892444042595598,
+   "over_2.5": 0.7181711410450123,
+   "over_3.5": 0.5091380453034733,
+   "over_4.5": 0.31324120675765466,
+   "over_5.5": 0.1694824850585723,
+   "over_6.5": 0.0807747914124493
+  },
+  "modal_score": {
+   "home": 2,
+   "away": 0,
+   "p": 0.10109831659025138
+  },
+  "top_scores": [
+   {
+    "home": 2,
+    "away": 0,
+    "p": 0.10109831659025138
+   },
+   {
+    "home": 3,
+    "away": 0,
+    "p": 0.09609533080928237
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.0862543801908164
+   },
+   {
+    "home": 3,
+    "away": 1,
+    "p": 0.08296454989227295
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.06778219302300259
+   }
+  ],
+  "score_grid": [
+   [
+    0.025423,
+    0.01755,
+    0.007811,
+    0.002197,
+    0.000471,
+    8.2e-05,
+    1.2e-05
+   ],
+   [
+    0.067782,
+    0.062164,
+    0.024487,
+    0.006947,
+    0.001498,
+    0.000261,
+    3.8e-05
+   ],
+   [
+    0.101098,
+    0.086254,
+    0.038185,
+    0.010487,
+    0.002277,
+    0.000399,
+    5.8e-05
+   ],
+   [
+    0.096095,
+    0.082965,
+    0.035615,
+    0.010713,
+    0.002246,
+    0.000395,
+    5.8e-05
+   ],
+   [
+    0.06733,
+    0.058813,
+    0.025504,
+    0.007421,
+    0.0017,
+    0.000288,
+    4.2e-05
+   ],
+   [
+    0.037264,
+    0.032923,
+    0.014416,
+    0.004227,
+    0.000934,
+    0.000173,
+    2.4e-05
+   ],
+   [
+    0.017018,
+    0.015203,
+    0.006718,
+    0.001984,
+    0.000441,
+    7.8e-05,
+    1.2e-05
+   ]
+  ]
+ },
+ "confidence": {
+  "tier": "HIGH",
+  "p_max": 0.7890938525030547,
+  "entropy_nats": 0.6523780529724832,
+  "text": "Most likely result has P = 78.9%. In the out-of-sample backtest, favourites priced 0.70\u20130.80 won 76.3% \u00b1 1.1% (n=1417, mean forecast 74.2%). Backtest RPS for SP1: 0.1930; exact-score top-5 hit rate 55.0% (n=1268). Overall champion RPS 0.2093 vs home/away baseline 0.2284 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-11-22, n=41,487). Outcome-certainty tier: HIGH (entropy 0.652 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Barcelona: no lineup published yet \u2014 XI inferred from recent minutes share minus known absences; 200 configurations simulated (start P=0.7, UNVALIDATED prior).",
+  "Celta: no lineup published yet \u2014 XI inferred from recent minutes share minus known absences; 200 configurations simulated (start P=0.7, UNVALIDATED prior)."
+ ],
+ "verdict": "Barcelona 2\u20130 Celta is the single most probable scoreline at 10.2%: expected goals 2.86\u20130.85 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.039). Exact scores are inherently uncertain; the 1X2 split is 78.9%/13.6%/7.5%.",
+ "resolved": {
+  "home_key": "Spain:Barcelona",
+  "away_key": "Spain:Celta",
+  "div": "SP1",
+  "home_div": "SP1",
+  "away_div": "SP1",
+  "country": "Spain"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: RC Celta de Vigo at FC Barcelona\nCompetition: LaLiga\nDate: 2026-12-05 15:00 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-11-27\n\nPRIMARY FINAL SCORE PREDICTION\n\nFC Barcelona 2 \u2013 0 RC Celta de Vigo\n(modal exact score, probability 10.2%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 2.86\nAway: 0.85\nExpected Total: 3.71\nMedian Total: 4\n\nRESULT PROBABILITIES\n\nHome Win: 78.9%\nDraw: 13.6%\nAway Win: 7.5%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 2\u20130: 10.2%\n2. 3\u20130: 9.7%\n3. 2\u20131: 8.6%\n4. 3\u20131: 8.3%\n5. 4\u20130: 6.9%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 11.0%\nTotal 2 goals: 17.1%\nTotal 3 goals: 20.9%\nTotal 4 goals: 19.6%\nTotal 5+ goals: 31.4%\n\nBoth Teams Score: 54.6%\nClean sheet FC Barcelona: 42.7% \u00b7 Clean sheet RC Celta de Vigo: 5.3%\n\nMATCH INTELLIGENCE\n\n1. Barcelona attack vs Celta defence: time-weighted strength gap multiplies Barcelona's scoring rate by \u00d71.79 relative to an average pairing (from 40/33 decay-weighted matches).\n2. Independent results-only Elo: Barcelona 1945 vs Celta 1575 (gap +370 before home advantage).\n3. Celta attack vs Barcelona defence: rate multiplier \u00d70.76 for the away side.\n\nMODEL CONFIDENCE\n\nMost likely result has P = 78.9%. In the out-of-sample backtest, favourites priced 0.70\u20130.80 won 76.3% \u00b1 1.1% (n=1417, mean forecast 74.2%). Backtest RPS for SP1: 0.1930; exact-score top-5 hit rate 55.0% (n=1268). Overall champion RPS 0.2093 vs home/away baseline 0.2284 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-11-22, n=41,487). Outcome-certainty tier: HIGH (entropy 0.652 nats of max 1.099).\nParameter-uncertainty 80% bands: xG FC Barcelona 2.28\u20133.50, xG RC Celta de Vigo 0.64\u20131.08; P(home win) 68.6%\u201386.2%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0016 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nBarcelona: INFERRED, fetched 2026-11-28 12:41 EST\n  Joan Garc\u00eda (G), Lamine Yamal (F), Pedri (M), Gerard Mart\u00edn (D), Raphinha (F), Ferm\u00edn L\u00f3pez (M), Pau Cubars\u00ed (D), Eric Garc\u00eda (D), Jo\u00e3o Cancelo (D), Anthony Gordon (F), Rodri (M)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs -0.021 (log) \u00b7 continuity -0.09 \u00b7 P(backup GK) 30%\nCelta: INFERRED, fetched 2026-11-28 12:41 EST\n  Ionu\u021b Radu (G), Ilaix Moriba (M), Yoel Lago (D), Marcos Alonso (D), Sergio Carreira (M), Javi Rodr\u00edguez (D), Hugo \u00c1lvarez (F), Javi Rueda (M), Ferr\u00e1n Jutgl\u00e0 (F), Pablo Dur\u00e1n (F), Javi Gal\u00e1n (D)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs +0.036 (log) \u00b7 continuity +0.36 \u00b7 P(backup GK) 0%\n\nKEY ABSENCES\n\n- Barcelona: Jordi Pesquer \u2014 internationalDuty, return unknown [FotMob, 2026-11-28 12:41 EST]\n- Barcelona: Marc Bernal \u2014 injury, Doubtful [FotMob, 2026-11-28 12:41 EST]\n- Barcelona: Hamza Abdelkarim \u2014 injury, Doubtful [FotMob, 2026-11-28 12:41 EST]\n- Barcelona: Alejandro Balde \u2014 injury, Mid December 2026 [FotMob, 2026-11-28 12:41 EST]\n- Barcelona: Andreas Christensen \u2014 injury, Doubtful [FotMob, 2026-11-28 12:41 EST]\n- Barcelona: Xavi Espart \u2014 injury, Early January 2027 [FotMob, 2026-11-28 12:41 EST]\n- Barcelona: Roony Bardghji \u2014 injury, Late February 2027 [FotMob, 2026-11-28 12:41 EST]\n- Celta: Abdoulaye Faye \u2014 injury, A few days [FotMob, 2026-11-28 12:41 EST]\n- Celta: Hugo Gonz\u00e1lez \u2014 injury, About 1-2 weeks [FotMob, 2026-11-28 12:41 EST]\n- Celta: Borja Iglesias \u2014 injury, Doubtful [FotMob, 2026-11-28 12:41 EST]\n- Celta: Carl Starfelt \u2014 injury, Back in training [FotMob, 2026-11-28 12:41 EST]\n- Celta: Miguel Rom\u00e1n \u2014 injury, Back in training [FotMob, 2026-11-28 12:41 EST]\n\nWEATHER AT VENUE\n\nSpotify Camp Nou, Barcelona: 9.9 \u00b0C, wind 1.1 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-11-28 12:41 EST]\n\nREST & TRAVEL\n\nBarcelona: 13 days' rest, 1 matches in previous 21 days \u00b7 Celta: 14 days' rest, 1 in 21 days \u00b7 away travel 904.6 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 78.9% / 13.6% / 7.5%, xG 2.86\u20130.85\n- Understat xG component (validated, in ensemble): home -1.82 pp, draw +0.34 pp, away +1.47 pp; xG +0.195 / +0.214\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +1.00 pp, draw -0.63 pp, away -0.37 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- lineup: NOT APPLIED (failed out-of-sample validation); would have moved home -1.05 pp, draw +0.48 pp, away +0.57 pp\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Barcelona: no lineup published yet \u2014 XI inferred from recent minutes share minus known absences; 200 configurations simulated (start P=0.7, UNVALIDATED prior).\n- Celta: no lineup published yet \u2014 XI inferred from recent minutes share minus known absences; 200 configurations simulated (start P=0.7, UNVALIDATED prior).\n\nFINAL VERDICT\n\nBarcelona 2\u20130 Celta is the single most probable scoreline at 10.2%: expected goals 2.86\u20130.85 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.039). Exact scores are inherently uncertain; the 1X2 split is 78.9%/13.6%/7.5%.\n",
+ "refresh_id": "4938ac339f11428799b714bbd6b7f9ec",
+ "frozen_at": "2026-11-28T17:41:06+00:00",
+ "sha256": "b8b78f72fb16c6b43b6db7c8ceed9a59553b73dd2e62633fc5ea27a1c84c5425"
+}
