@@ -1,0 +1,641 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-11-27",
+ "input_fingerprint": "1b07be5dbe1a0f66acfcf8ff798b9c20a5a5853fa2defe66e39642713d7cce81",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-11-28T05:49:54+00:00",
+ "fixture": {
+  "event_id": "POLY-1442835",
+  "home_name": "Degerfors IF",
+  "away_name": "Orgryte IS",
+  "competition": "Allsvenskan",
+  "subcategory": "swe",
+  "kickoff_utc": "2026-11-29T14:00:00+00:00",
+  "kickoff_local": "2026-11-29 09:00 EST",
+  "home_matched": "Degerfors",
+  "away_matched": "Orgryte",
+  "match_methods": {
+   "home": {
+    "source": "Degerfors IF",
+    "matched": "Degerfors",
+    "method": "core-tokens",
+    "score": 0.97
+   },
+   "away": {
+    "source": "Orgryte IS",
+    "matched": "Orgryte",
+    "method": "alias",
+    "score": 1.0
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.3750791261558154,
+  "p_draw": 0.26785666609162523,
+  "p_away": 0.3570642077525595,
+  "xg_home": 1.4426977899533688,
+  "xg_away": 1.403407180798172,
+  "xg_total": 2.846104970751541,
+  "median_total": 3,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.1283778117134119
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.1283778117134119
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.08749380215505231
+   },
+   {
+    "home": 1,
+    "away": 2,
+    "p": 0.08499637280630695
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.07810380015076179
+   },
+   {
+    "home": 0,
+    "away": 1,
+    "p": 0.07582379601277488
+   }
+  ],
+  "btts": 0.5949148148670512,
+  "totals_over": {
+   "over_0.5": 0.9406416989106073,
+   "over_1.5": 0.7867141027470707,
+   "over_2.5": 0.5439777674949474,
+   "over_3.5": 0.3183672019037652,
+   "over_4.5": 0.15564659464072214,
+   "over_5.5": 0.06595866532999993,
+   "over_6.5": 0.024010038212649777
+  },
+  "total_buckets": {
+   "0-1": 0.2132858972529294,
+   "2": 0.24273633525212324,
+   "3": 0.22561056559118223,
+   "4": 0.16272060726304308,
+   "5+": 0.15564659464072214
+  },
+  "clean_sheet_home": 0.2369271920945532,
+  "clean_sheet_away": 0.22751629412778843,
+  "home_goal_dist": [
+   0.22751629412778843,
+   0.34782358330501784,
+   0.25181227916534826,
+   0.11799284301480457,
+   0.040720095286303444,
+   0.011086651423032121,
+   0.0024851773338325288,
+   0.0005630763438728722
+  ],
+  "away_goal_dist": [
+   0.2369271920945532,
+   0.3521518218129187,
+   0.2477552922665534,
+   0.11275567929059038,
+   0.037779286747725335,
+   0.009984052413776269,
+   0.002171886959236325,
+   0.0004747884146463924
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    3
+   ],
+   "away_goals_80": [
+    0,
+    3
+   ],
+   "total_goals_80": [
+    1,
+    5
+   ],
+   "goal_diff_80": [
+    -2,
+    2
+   ]
+  },
+  "score_grid": [
+   [
+    0.059358,
+    0.075824,
+    0.055531,
+    0.025407,
+    0.008538,
+    0.002259,
+    0.000491
+   ],
+   [
+    0.078104,
+    0.128378,
+    0.084996,
+    0.038896,
+    0.013074,
+    0.003459,
+    0.000753
+   ],
+   [
+    0.058827,
+    0.087494,
+    0.064469,
+    0.028315,
+    0.009519,
+    0.002519,
+    0.000548
+   ],
+   [
+    0.027713,
+    0.041226,
+    0.029155,
+    0.013909,
+    0.004488,
+    0.001188,
+    0.000259
+   ],
+   [
+    0.009592,
+    0.014271,
+    0.010095,
+    0.004622,
+    0.00162,
+    0.000411,
+    9e-05
+   ],
+   [
+    0.002614,
+    0.00389,
+    0.002752,
+    0.00126,
+    0.000424,
+    0.000117,
+    2.4e-05
+   ],
+   [
+    0.000586,
+    0.000872,
+    0.000617,
+    0.000283,
+    9.5e-05,
+    2.5e-05,
+    6e-06
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.376595,
+  "p_draw": 0.26719,
+  "p_away": 0.35621500000000006,
+  "se": [
+   0.0010834463668659376,
+   0.000989443034994941,
+   0.0010708078113625245
+  ],
+  "max_abs_dev_vs_exact": 0.001515873844184612,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   1.06105995902609,
+   1.865000594379544
+  ],
+  "xg_away_80": [
+   1.0146153711713444,
+   1.8262340325485074
+  ],
+  "p_home_80": [
+   0.2682491062492548,
+   0.5065748694717319
+  ],
+  "p_draw_80": [
+   0.22286501532551942,
+   0.2911867159654708
+  ],
+  "p_away_80": [
+   0.24513826381658985,
+   0.480915809952764
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.22360488048582,
+   0.21812392810164247
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.38036362764493786,
+   "p_draw": 0.26005169744262785,
+   "p_away": 0.35958467491243423,
+   "xg_home": 1.4403746845094505,
+   "xg_away": 1.3943061655689282,
+   "weight": 0.0077
+  },
+  "elo": {
+   "p_home": 0.3771763851928346,
+   "p_draw": 0.25513031008826914,
+   "p_away": 0.36769330471889616,
+   "xg_home": 1.3882147018298343,
+   "xg_away": 1.367452676749922,
+   "weight": 0.3721
+  },
+  "standard_dc": {
+   "p_home": 0.3665117184826218,
+   "p_draw": 0.27354929869416317,
+   "p_away": 0.35993898282321507,
+   "xg_home": 1.337587061078138,
+   "xg_away": 1.3234166162181735,
+   "weight": 0.0028
+  },
+  "home_away_rate": {
+   "p_home": 0.4171730416670467,
+   "p_draw": 0.2495781272932942,
+   "p_away": 0.333248831039659,
+   "xg_home": 1.5127061021427208,
+   "xg_away": 1.32626955263477,
+   "weight": 0.001
+  },
+  "xg_dc": {
+   "p_home": 0.38068399440712297,
+   "p_draw": 0.25959557129402716,
+   "p_away": 0.3597204342988498,
+   "xg_home": 1.440835443630527,
+   "xg_away": 1.394353868550512,
+   "weight": 0.6164
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Home advantage (Sweden, fitted from results): \u00d71.17 on Degerfors's scoring rate.",
+   "effect": 0.155
+  },
+  {
+   "text": "Orgryte attack vs Degerfors defence: rate multiplier \u00d71.15 for the away side.",
+   "effect": 0.1436
+  },
+  {
+   "text": "Independent results-only Elo: Degerfors 1425 vs Orgryte 1469 (gap -44 before home advantage).",
+   "effect": 0.0661
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.37507912615581535,
+  "p_draw": 0.2678566660916252,
+  "p_away": 0.35706420775255937,
+  "xg_home": 1.4426977899533686,
+  "xg_away": 1.403407180798172
+ },
+ "context": {
+  "fetched_at": "2026-11-28T05:49:54+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5107673",
+    "fetched_at": "2026-11-28T05:49:54+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "4-4-2",
+    "starters": [
+     {
+      "name": "Matvei Igonen",
+      "pos": "G",
+      "shirt": "38"
+     },
+     {
+      "name": "Daniel Sundgren",
+      "pos": "D",
+      "shirt": "6"
+     },
+     {
+      "name": "Nikolai Skuseth",
+      "pos": "D",
+      "shirt": "3"
+     },
+     {
+      "name": "Ahmad Faqa",
+      "pos": "D",
+      "shirt": "2"
+     },
+     {
+      "name": "Samba Diatara",
+      "pos": "D",
+      "shirt": "18"
+     },
+     {
+      "name": "Noel Milleskog",
+      "pos": "M",
+      "shirt": "10"
+     },
+     {
+      "name": "Bilal Hussein",
+      "pos": "M",
+      "shirt": "8"
+     },
+     {
+      "name": "Gideon Yiriyon",
+      "pos": "M",
+      "shirt": "13"
+     },
+     {
+      "name": "Nahom Girmai Netabay",
+      "pos": "M",
+      "shirt": "22"
+     },
+     {
+      "name": "Robin Dzabic",
+      "pos": "F",
+      "shirt": "23"
+     },
+     {
+      "name": "Dijan Vukojevi\u0107",
+      "pos": "F",
+      "shirt": "11"
+     }
+    ],
+    "fetched_at": "2026-11-28T05:49:54+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   },
+   "away": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "5-3-2",
+    "starters": [
+     {
+      "name": "Alex Rahm",
+      "pos": "G",
+      "shirt": "34"
+     },
+     {
+      "name": "Sebastian Lagerlund",
+      "pos": "D",
+      "shirt": "33"
+     },
+     {
+      "name": "Mikael Dyrestam",
+      "pos": "D",
+      "shirt": "6"
+     },
+     {
+      "name": "Johan Hammar",
+      "pos": "D",
+      "shirt": "25"
+     },
+     {
+      "name": "Daniel Paulson",
+      "pos": "D",
+      "shirt": "14"
+     },
+     {
+      "name": "Anton Andreasson",
+      "pos": "D",
+      "shirt": "19"
+     },
+     {
+      "name": "Rasmus Alm",
+      "pos": "M",
+      "shirt": "10"
+     },
+     {
+      "name": "Owen Parker-Price",
+      "pos": "M",
+      "shirt": "23"
+     },
+     {
+      "name": "Benjamin Laturnus",
+      "pos": "M",
+      "shirt": "8"
+     },
+     {
+      "name": "Tobias Sana",
+      "pos": "F",
+      "shirt": "22"
+     },
+     {
+      "name": "Liam Andersson",
+      "pos": "F",
+      "shirt": "9"
+     }
+    ],
+    "fetched_at": "2026-11-28T05:49:54+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Daniel Sundgren",
+     "type": "suspension",
+     "expected_return": "Late November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5107673",
+     "fetched_at": "2026-11-28T05:49:54+00:00"
+    },
+    {
+     "player": "Gideon Yiriyon",
+     "type": "suspension",
+     "expected_return": "Late November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5107673",
+     "fetched_at": "2026-11-28T05:49:54+00:00"
+    },
+    {
+     "player": "Carl-Robert Sebastian Ohlsson",
+     "type": "injury",
+     "expected_return": "Out for season",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5107673",
+     "fetched_at": "2026-11-28T05:49:54+00:00"
+    },
+    {
+     "player": "Juhani Pikkarainen",
+     "type": "injury",
+     "expected_return": "Out for season",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5107673",
+     "fetched_at": "2026-11-28T05:49:54+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "William Svensson",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5107673",
+     "fetched_at": "2026-11-28T05:49:54+00:00"
+    },
+    {
+     "player": "Aydarus Abukar",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5107673",
+     "fetched_at": "2026-11-28T05:49:54+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 8,
+    "n21": 1,
+    "last_match": "2026-11-21"
+   },
+   "away": {
+    "rest_days": 6,
+    "n21": 1,
+    "last_match": "2026-11-23"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 222.5
+  },
+  "venue": {
+   "name": "Stora Valla",
+   "city": "Degerfors",
+   "lat": 59.238234977,
+   "lon": 14.44319129
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 2.5,
+   "temp_c": -0.1,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=59.238&longitude=14.443",
+   "fetched_at": "2026-11-28T05:49:54+00:00",
+   "lat": 59.238234977,
+   "lon": 14.44319129
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": 0.22,
+    "d_p_draw_pp": 0.28,
+    "d_p_away_pp": -0.5,
+    "d_xg_home": 0.033,
+    "d_xg_away": 0.017
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0167,
+    "away_rate_mult": 1.0054,
+    "d_p_home_pp": 0.44,
+    "d_p_draw_pp": -0.17,
+    "d_p_away_pp": -0.27,
+    "d_xg_home": 0.023,
+    "d_xg_away": 0.007,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 0.9872,
+    "away_rate_mult": 0.9872,
+    "d_p_home_pp": -0.1,
+    "d_p_draw_pp": 0.19,
+    "d_p_away_pp": -0.09,
+    "d_xg_home": -0.018,
+    "d_xg_away": -0.017,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "reason": "failed validation; no live features"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 8.0,
+   "rest_a": 6.0,
+   "n21_h": 1.0,
+   "n21_a": 1.0,
+   "travel_km": 222.5207750853107,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 2.5,
+   "temp_c": -0.1
+  }
+ },
+ "lineup_simulation": {
+  "applied": false,
+  "basis": {
+   "home": "projected",
+   "away": "projected"
+  },
+  "reason": "No player ratings exist for this league, so the lineup and formation are shown but cannot change the probabilities."
+ },
+ "confidence": {
+  "tier": "LOW",
+  "p_max": 0.3750791261558154,
+  "entropy_nats": 1.0883767888523308,
+  "text": "Most likely result has P = 37.5%. In the out-of-sample backtest, favourites priced 0.33\u20130.40 won 38.2% \u00b1 0.5% (n=8558, mean forecast 37.8%). Backtest RPS for SWE: 0.2205; exact-score top-5 hit rate 45.0% (n=848). Overall champion RPS 0.2093 vs home/away baseline 0.2284 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-11-22, n=41,487). Outcome-certainty tier: LOW (entropy 1.088 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Degerfors: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Degerfors: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.",
+  "Orgryte: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Orgryte: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+ ],
+ "verdict": "Degerfors 1\u20131 Orgryte is the single most probable scoreline at 12.8%: expected goals 1.44\u20131.40 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.039). Exact scores are inherently uncertain; the 1X2 split is 37.5%/26.8%/35.7%.",
+ "resolved": {
+  "home_key": "Sweden:Degerfors",
+  "away_key": "Sweden:Orgryte",
+  "div": "SWE",
+  "home_div": "SWE",
+  "away_div": "SWE",
+  "country": "Sweden"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: Orgryte IS at Degerfors IF\nCompetition: Allsvenskan\nDate: 2026-11-29 09:00 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-11-27\n\nPRIMARY FINAL SCORE PREDICTION\n\nDegerfors IF 1 \u2013 1 Orgryte IS\n(modal exact score, probability 12.8%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.44\nAway: 1.40\nExpected Total: 2.85\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 37.5%\nDraw: 26.8%\nAway Win: 35.7%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 12.8%\n2. 2\u20131: 8.7%\n3. 1\u20132: 8.5%\n4. 1\u20130: 7.8%\n5. 0\u20131: 7.6%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 21.3%\nTotal 2 goals: 24.3%\nTotal 3 goals: 22.6%\nTotal 4 goals: 16.3%\nTotal 5+ goals: 15.6%\n\nBoth Teams Score: 59.5%\nClean sheet Degerfors IF: 23.7% \u00b7 Clean sheet Orgryte IS: 22.8%\n\nMATCH INTELLIGENCE\n\n1. Home advantage (Sweden, fitted from results): \u00d71.17 on Degerfors's scoring rate.\n2. Orgryte attack vs Degerfors defence: rate multiplier \u00d71.15 for the away side.\n3. Independent results-only Elo: Degerfors 1425 vs Orgryte 1469 (gap -44 before home advantage).\n\nMODEL CONFIDENCE\n\nMost likely result has P = 37.5%. In the out-of-sample backtest, favourites priced 0.33\u20130.40 won 38.2% \u00b1 0.5% (n=8558, mean forecast 37.8%). Backtest RPS for SWE: 0.2205; exact-score top-5 hit rate 45.0% (n=848). Overall champion RPS 0.2093 vs home/away baseline 0.2284 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-11-22, n=41,487). Outcome-certainty tier: LOW (entropy 1.088 nats of max 1.099).\nParameter-uncertainty 80% bands: xG Degerfors IF 1.06\u20131.87, xG Orgryte IS 1.01\u20131.83; P(home win) 26.8%\u201350.7%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0015 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nDegerfors: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-11-28 00:49 EST (4-4-2)\n  Matvei Igonen (G), Daniel Sundgren (D), Nikolai Skuseth (D), Ahmad Faqa (D), Samba Diatara (D), Noel Milleskog (M), Bilal Hussein (M), Gideon Yiriyon (M), Nahom Girmai Netabay (M), Robin Dzabic (F), Dijan Vukojevi\u0107 (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\nOrgryte: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-11-28 00:49 EST (5-3-2)\n  Alex Rahm (G), Sebastian Lagerlund (D), Mikael Dyrestam (D), Johan Hammar (D), Daniel Paulson (D), Anton Andreasson (D), Rasmus Alm (M), Owen Parker-Price (M), Benjamin Laturnus (M), Tobias Sana (F), Liam Andersson (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nKEY ABSENCES\n\n- Degerfors: Daniel Sundgren \u2014 suspension, Late November 2026 [FotMob, 2026-11-28 00:49 EST]\n- Degerfors: Gideon Yiriyon \u2014 suspension, Late November 2026 [FotMob, 2026-11-28 00:49 EST]\n- Degerfors: Carl-Robert Sebastian Ohlsson \u2014 injury, Out for season [FotMob, 2026-11-28 00:49 EST]\n- Degerfors: Juhani Pikkarainen \u2014 injury, Out for season [FotMob, 2026-11-28 00:49 EST]\n- Orgryte: William Svensson \u2014 injury, Late November 2026 [FotMob, 2026-11-28 00:49 EST]\n- Orgryte: Aydarus Abukar \u2014 injury, Late November 2026 [FotMob, 2026-11-28 00:49 EST]\n\nWEATHER AT VENUE\n\nStora Valla, Degerfors: -0.1 \u00b0C, wind 2.5 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-11-28 00:49 EST]\n\nREST & TRAVEL\n\nDegerfors: 8 days' rest, 1 matches in previous 21 days \u00b7 Orgryte: 6 days' rest, 1 in 21 days \u00b7 away travel 222.5 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 37.5% / 26.8% / 35.7%, xG 1.44\u20131.40\n- Understat xG component (validated, in ensemble): home +0.22 pp, draw +0.28 pp, away -0.50 pp; xG +0.033 / +0.017\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.44 pp, draw -0.17 pp, away -0.27 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home -0.10 pp, draw +0.19 pp, away -0.09 pp\n- lineup: not applied (failed validation; no live features)\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Degerfors: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Degerfors: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n- Orgryte: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Orgryte: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nFINAL VERDICT\n\nDegerfors 1\u20131 Orgryte is the single most probable scoreline at 12.8%: expected goals 1.44\u20131.40 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.039). Exact scores are inherently uncertain; the 1X2 split is 37.5%/26.8%/35.7%.\n",
+ "refresh_id": "bb247334f02b479ebd6a1d3990a8b342",
+ "frozen_at": "2026-11-28T05:49:54+00:00",
+ "sha256": "4394a6e49753ecf10b9f93807577efbe7cb9096dc1d4e167aa5c9ff6dfedfa0b"
+}
