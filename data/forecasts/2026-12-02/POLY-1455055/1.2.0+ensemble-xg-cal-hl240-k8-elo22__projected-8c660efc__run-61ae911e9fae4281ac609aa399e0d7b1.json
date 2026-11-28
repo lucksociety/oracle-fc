@@ -1,0 +1,859 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-11-27",
+ "input_fingerprint": "1b07be5dbe1a0f66acfcf8ff798b9c20a5a5853fa2defe66e39642713d7cce81",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-11-28T17:31:31+00:00",
+ "fixture": {
+  "event_id": "POLY-1455055",
+  "home_name": "Brentford FC",
+  "away_name": "Arsenal FC",
+  "competition": "Premier League",
+  "subcategory": "epl",
+  "kickoff_utc": "2026-12-02T20:15:00+00:00",
+  "kickoff_local": "2026-12-02 15:15 EST",
+  "home_matched": "Brentford",
+  "away_matched": "Arsenal",
+  "match_methods": {
+   "home": {
+    "source": "Brentford FC",
+    "matched": "Brentford",
+    "method": "core-tokens",
+    "score": 0.97
+   },
+   "away": {
+    "source": "Arsenal FC",
+    "matched": "Arsenal",
+    "method": "core-tokens",
+    "score": 0.97
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.2332875347552962,
+  "p_draw": 0.25774877224514475,
+  "p_away": 0.508963692999559,
+  "xg_home": 1.0698275619200637,
+  "xg_away": 1.6792549577318978,
+  "xg_total": 2.7490825196519615,
+  "median_total": 3,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.12499901666320726
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.12499901666320726
+   },
+   {
+    "home": 0,
+    "away": 1,
+    "p": 0.10136924270965121
+   },
+   {
+    "home": 1,
+    "away": 2,
+    "p": 0.0989386114113589
+   },
+   {
+    "home": 0,
+    "away": 2,
+    "p": 0.08850122054594292
+   },
+   {
+    "home": 0,
+    "away": 0,
+    "p": 0.06631208687429277
+   }
+  ],
+  "btts": 0.5492920845259616,
+  "totals_over": {
+   "over_0.5": 0.9336879131257074,
+   "over_1.5": 0.7686181432197636,
+   "over_2.5": 0.5195599798630415,
+   "over_3.5": 0.2966566520453271,
+   "over_4.5": 0.14166732565836154,
+   "over_5.5": 0.05868660481141374,
+   "over_6.5": 0.02097899933729585
+  },
+  "total_buckets": {
+   "0-1": 0.2313818567802365,
+   "2": 0.24905816335672215,
+   "3": 0.2229033278177143,
+   "4": 0.15498932638696553,
+   "5+": 0.14166732565836154
+  },
+  "clean_sheet_home": 0.18176891424107985,
+  "clean_sheet_away": 0.33525108810725146,
+  "home_goal_dist": [
+   0.33525108810725146,
+   0.3756559171591589,
+   0.19933387036079492,
+   0.0683886069620453,
+   0.01727154436381082,
+   0.0034434775585424366,
+   0.0005658550662055095,
+   8.964042219061952e-05
+  ],
+  "away_goal_dist": [
+   0.18176891424107985,
+   0.3169963946547599,
+   0.2660921493661764,
+   0.14705654352990802,
+   0.06078132052787155,
+   0.02010249860173037,
+   0.005550627124899313,
+   0.0016515519535744913
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    2
+   ],
+   "away_goals_80": [
+    0,
+    3
+   ],
+   "total_goals_80": [
+    1,
+    5
+   ],
+   "goal_diff_80": [
+    -3,
+    1
+   ]
+  },
+  "score_grid": [
+   [
+    0.066312,
+    0.101369,
+    0.088501,
+    0.049325,
+    0.020494,
+    0.006803,
+    0.001884
+   ],
+   [
+    0.063701,
+    0.124999,
+    0.098939,
+    0.054991,
+    0.022783,
+    0.007541,
+    0.002083
+   ],
+   [
+    0.035558,
+    0.062325,
+    0.054838,
+    0.029167,
+    0.012049,
+    0.003977,
+    0.001095
+   ],
+   [
+    0.012314,
+    0.021531,
+    0.018131,
+    0.010443,
+    0.004128,
+    0.001358,
+    0.000373
+   ],
+   [
+    0.003135,
+    0.005468,
+    0.004592,
+    0.002531,
+    0.001083,
+    0.000341,
+    9.3e-05
+   ],
+   [
+    0.000629,
+    0.001094,
+    0.000916,
+    0.000504,
+    0.000206,
+    7e-05,
+    1.8e-05
+   ],
+   [
+    0.000104,
+    0.00018,
+    0.000151,
+    8.2e-05,
+    3.4e-05,
+    1.1e-05,
+    3e-06
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.23290500000000003,
+  "p_draw": 0.259315,
+  "p_away": 0.5077799999999999,
+  "se": [
+   0.0009451461817491514,
+   0.0009799763537325786,
+   0.00111789863493968
+  ],
+  "max_abs_dev_vs_exact": 0.001566227754855265,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   0.8074809883142051,
+   1.3578572607511576
+  ],
+  "xg_away_80": [
+   1.284134896796834,
+   2.1001678801765764
+  ],
+  "p_home_80": [
+   0.16397656076244008,
+   0.33102733105689275
+  ],
+  "p_draw_80": [
+   0.21154142364992795,
+   0.2848952304500473
+  ],
+  "p_away_80": [
+   0.3911898420469553,
+   0.6171122250822116
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.20606146301144249,
+   0.18256539974845057
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.26261257507528357,
+   "p_draw": 0.2811205757262407,
+   "p_away": 0.4562668491984758,
+   "xg_home": 0.9878185019073482,
+   "xg_away": 1.3881619137162764,
+   "weight": 0.0077
+  },
+  "elo": {
+   "p_home": 0.2012950620990966,
+   "p_draw": 0.22135426415653833,
+   "p_away": 0.577350673744365,
+   "xg_home": 1.0306872157417821,
+   "xg_away": 1.9028715646021332,
+   "weight": 0.3721
+  },
+  "standard_dc": {
+   "p_home": 0.246139777840771,
+   "p_draw": 0.30134228818459274,
+   "p_away": 0.4525179339746362,
+   "xg_home": 0.8682679324133034,
+   "xg_away": 1.277150432859909,
+   "weight": 0.0028
+  },
+  "home_away_rate": {
+   "p_home": 0.42870823668143154,
+   "p_draw": 0.24957357441149683,
+   "p_away": 0.3217181889070717,
+   "xg_home": 1.5306602225403814,
+   "xg_away": 1.2933320528772922,
+   "weight": 0.001
+  },
+  "xg_dc": {
+   "p_home": 0.2677884985530249,
+   "p_draw": 0.2666261092554345,
+   "p_away": 0.46558539219154066,
+   "xg_home": 1.0813159468603726,
+   "xg_away": 1.5057768447142388,
+   "weight": 0.6164
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Brentford attack vs Arsenal defence: time-weighted strength gap multiplies Brentford's scoring rate by \u00d70.66 relative to an average pairing (from 31/40 decay-weighted matches).",
+   "effect": 0.41
+  },
+  {
+   "text": "Independent results-only Elo: Brentford 1732 vs Arsenal 1983 (gap -251 before home advantage).",
+   "effect": 0.3771
+  },
+  {
+   "text": "Context \u2014 Understat xG component (validated, in ensemble): home win +4.1 pp, draw +2.9 pp, away win -7.0 pp (xG +0.03 / -0.25).",
+   "effect": 0.21
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.2332875347552962,
+  "p_draw": 0.25774877224514475,
+  "p_away": 0.508963692999559,
+  "xg_home": 1.0698275619200637,
+  "xg_away": 1.6792549577318978
+ },
+ "context": {
+  "fetched_at": "2026-11-28T17:31:31+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5795537",
+    "fetched_at": "2026-11-28T17:31:31+00:00"
+   },
+   {
+    "name": "Fantasy Premier League availability",
+    "url": "https://fantasy.premierleague.com/api/bootstrap-static/",
+    "fetched_at": "2026-11-28T17:31:31+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "4-2-3-1",
+    "starters": [
+     {
+      "name": "Caoimh\u00edn Kelleher",
+      "pos": "G",
+      "shirt": "1"
+     },
+     {
+      "name": "Michael Kayode",
+      "pos": "D",
+      "shirt": "33"
+     },
+     {
+      "name": "Kristoffer Ajer",
+      "pos": "D",
+      "shirt": "20"
+     },
+     {
+      "name": "Sepp van den Berg",
+      "pos": "D",
+      "shirt": "4"
+     },
+     {
+      "name": "Keane Lewis-Potter",
+      "pos": "D",
+      "shirt": "23"
+     },
+     {
+      "name": "Yehor Yarmoliuk",
+      "pos": "M",
+      "shirt": "6"
+     },
+     {
+      "name": "Vitaly Janelt",
+      "pos": "M",
+      "shirt": "27"
+     },
+     {
+      "name": "Dango Ouattara",
+      "pos": "F",
+      "shirt": "11"
+     },
+     {
+      "name": "Mikkel Damsgaard",
+      "pos": "M",
+      "shirt": "24"
+     },
+     {
+      "name": "Jaidon Anthony",
+      "pos": "F",
+      "shirt": "19"
+     },
+     {
+      "name": "Callum Wilson",
+      "pos": "F",
+      "shirt": "13"
+     }
+    ],
+    "fetched_at": "2026-11-28T17:31:31+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [],
+    "mean_xi_attack_index": 0.015,
+    "mean_continuity": -0.322,
+    "p_backup_gk": 0.0
+   },
+   "away": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "4-2-3-1",
+    "starters": [
+     {
+      "name": "Kepa Arrizabalaga",
+      "pos": "G",
+      "shirt": "13"
+     },
+     {
+      "name": "Ben White",
+      "pos": "D",
+      "shirt": "4"
+     },
+     {
+      "name": "Ezri Konsa",
+      "pos": "D",
+      "shirt": "15"
+     },
+     {
+      "name": "Gabriel",
+      "pos": "D",
+      "shirt": "6"
+     },
+     {
+      "name": "Piero Hincapi\u00e9",
+      "pos": "D",
+      "shirt": "5"
+     },
+     {
+      "name": "Declan Rice",
+      "pos": "M",
+      "shirt": "41"
+     },
+     {
+      "name": "Myles Lewis-Skelly",
+      "pos": "M",
+      "shirt": "49"
+     },
+     {
+      "name": "Noni Madueke",
+      "pos": "F",
+      "shirt": "20"
+     },
+     {
+      "name": "Martin \u00d8degaard",
+      "pos": "M",
+      "shirt": "8"
+     },
+     {
+      "name": "Christos Tzolis",
+      "pos": "F",
+      "shirt": "17"
+     },
+     {
+      "name": "Viktor Gy\u00f6keres",
+      "pos": "F",
+      "shirt": "14"
+     }
+    ],
+    "fetched_at": "2026-11-28T17:31:31+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [],
+    "mean_xi_attack_index": -0.101,
+    "mean_continuity": -1.492,
+    "p_backup_gk": 0.82
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Joshua Dasilva",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5795537",
+     "fetched_at": "2026-11-28T17:31:31+00:00"
+    },
+    {
+     "player": "Aaron Hickey",
+     "type": "injury",
+     "expected_return": "Late December 2026",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795537",
+     "fetched_at": "2026-11-28T17:31:31+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Hamstring injury - Expected back 2 Dec",
+     "fpl_news_added": "2026-11-17T11:00:05.107723Z"
+    },
+    {
+     "player": "Nathan Collins",
+     "type": "injury",
+     "expected_return": "Early January 2027",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795537",
+     "fetched_at": "2026-11-28T17:31:31+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Knee injury - Expected back 2 Dec",
+     "fpl_news_added": "2026-11-16T19:00:05.204970Z"
+    },
+    {
+     "player": "Rico Henry",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795537",
+     "fetched_at": "2026-11-28T17:31:31+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Hip injury - Unknown return date",
+     "fpl_news_added": "2026-10-27T16:30:09.444144Z"
+    },
+    {
+     "player": "Antoni Milambo",
+     "type": "injury",
+     "expected_return": "Back in training",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795537",
+     "fetched_at": "2026-11-28T17:31:31+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Lack of match fitness - Expected back 5 Dec",
+     "fpl_news_added": "2026-07-23T12:01:23.384798Z"
+    },
+    {
+     "player": "Igor Thiago",
+     "type": "suspension",
+     "expected_return": "Early December 2026",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795537",
+     "fetched_at": "2026-11-28T17:31:31+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "suspended",
+     "fpl_news": "Suspended until 5 Dec",
+     "fpl_news_added": "2026-11-08T14:30:09.097484Z"
+    },
+    {
+     "player": "Kaye Furo",
+     "type": "injured",
+     "expected_return": "Unspecified injury - Unknown return date",
+     "chance_of_playing": 0,
+     "source": "FPL",
+     "source_url": "https://fantasy.premierleague.com/api/bootstrap-static/",
+     "fetched_at": "2026-09-14T14:00:09.985723Z"
+    },
+    {
+     "player": "Callum Wilson",
+     "type": "doubtful",
+     "expected_return": "Ankle injury - 75% chance of playing",
+     "chance_of_playing": 75,
+     "source": "FPL",
+     "source_url": "https://fantasy.premierleague.com/api/bootstrap-static/",
+     "fetched_at": "2026-11-28T16:30:05.448452Z"
+    }
+   ],
+   "away": [
+    {
+     "player": "David Raya",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795537",
+     "fetched_at": "2026-11-28T17:31:31+00:00",
+     "chance_of_playing": 75,
+     "fpl_status": "doubtful",
+     "fpl_news": "Shoulder injury - 75% chance of playing",
+     "fpl_news_added": "2026-11-21T19:00:05.753960Z"
+    },
+    {
+     "player": "Mart\u00edn Zubimendi",
+     "type": "injury",
+     "expected_return": "Early December 2026",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795537",
+     "fetched_at": "2026-11-28T17:31:31+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Hamstring injury - Unknown return date",
+     "fpl_news_added": "2026-11-16T19:00:05.154377Z"
+    },
+    {
+     "player": "Bukayo Saka",
+     "type": "injury",
+     "expected_return": "Back in training",
+     "source": "FotMob + FPL",
+     "source_url": "https://www.fotmob.com/match/5795537",
+     "fetched_at": "2026-11-28T17:31:31+00:00",
+     "chance_of_playing": 0,
+     "fpl_status": "injured",
+     "fpl_news": "Thigh injury - Expected back 20 Dec",
+     "fpl_news_added": "2026-10-21T20:30:09.540957Z"
+    },
+    {
+     "player": "Reiss Nelson",
+     "type": "unavailable",
+     "expected_return": "has departed the club as a free agent.",
+     "chance_of_playing": 0,
+     "source": "FPL",
+     "source_url": "https://fantasy.premierleague.com/api/bootstrap-static/",
+     "fetched_at": "2026-08-29T00:33:08.556767Z"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 9,
+    "n21": 1,
+    "last_match": "2026-11-23"
+   },
+   "away": {
+    "rest_days": 11,
+    "n21": 1,
+    "last_match": "2026-11-21"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 14.4
+  },
+  "venue": {
+   "name": "Gtech Community Stadium",
+   "city": "Brentford, Middlesex",
+   "lat": 51.490729,
+   "lon": -0.288884
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 2.6500000000000004,
+   "temp_c": 7.3,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=51.491&longitude=-0.289",
+   "fetched_at": "2026-11-28T17:31:32+00:00",
+   "lat": 51.490729,
+   "lon": -0.288884
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": 4.08,
+    "d_p_draw_pp": 2.93,
+    "d_p_away_pp": -7.0,
+    "d_xg_home": 0.032,
+    "d_xg_away": -0.246
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0019,
+    "away_rate_mult": 1.0006,
+    "d_p_home_pp": 0.03,
+    "d_p_draw_pp": -0.01,
+    "d_p_away_pp": -0.02,
+    "d_xg_home": 0.002,
+    "d_xg_away": 0.001,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "home_rate_mult": 1.0511,
+    "away_rate_mult": 0.9428,
+    "d_p_home_pp": 2.76,
+    "d_p_draw_pp": 0.82,
+    "d_p_away_pp": -3.59,
+    "d_xg_home": 0.053,
+    "d_xg_away": -0.093,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 9.0,
+   "rest_a": 11.0,
+   "n21_h": 1.0,
+   "n21_a": 1.0,
+   "travel_km": 14.38803403080628,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 2.6500000000000004,
+   "temp_c": 7.3
+  }
+ },
+ "lineup_simulation": {
+  "applied": true,
+  "validated": false,
+  "scale": 0.5,
+  "basis": {
+   "home": "projected",
+   "away": "projected"
+  },
+  "home_rate_mult": 1.0252,
+  "away_rate_mult": 0.971,
+  "note": "Starting-XI strength, continuity and backup-keeper adjustment at half the fitted size. It did not pass the out-of-sample test, so bets are not priced from it.",
+  "p_home": 0.24688813513219338,
+  "p_draw": 0.26213416528194045,
+  "p_away": 0.49097769958586623,
+  "xg_home": 1.095696295100972,
+  "xg_away": 1.631783433079011,
+  "xg_total": 2.727479728179983,
+  "btts": 0.5505811525048435,
+  "totals_over": {
+   "over_0.5": 0.9322368673817553,
+   "over_1.5": 0.7649175107549888,
+   "over_2.5": 0.5142932822502847,
+   "over_3.5": 0.2918400603002701,
+   "over_4.5": 0.13835966555191662,
+   "over_5.5": 0.056891423218855416,
+   "over_6.5": 0.02016925913417172
+  },
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.1271481327238615
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.1271481327238615
+   },
+   {
+    "home": 0,
+    "away": 1,
+    "p": 0.10057942692973228
+   },
+   {
+    "home": 1,
+    "away": 2,
+    "p": 0.09771962579876042
+   },
+   {
+    "home": 0,
+    "away": 2,
+    "p": 0.08527197132399217
+   },
+   {
+    "home": 0,
+    "away": 0,
+    "p": 0.06776313261824461
+   }
+  ],
+  "score_grid": [
+   [
+    0.067763,
+    0.100579,
+    0.085272,
+    0.046157,
+    0.018627,
+    0.006006,
+    0.001616
+   ],
+   [
+    0.06674,
+    0.127148,
+    0.09772,
+    0.052744,
+    0.021223,
+    0.006823,
+    0.001831
+   ],
+   [
+    0.038204,
+    0.065007,
+    0.055532,
+    0.02868,
+    0.011506,
+    0.003688,
+    0.000987
+   ],
+   [
+    0.01357,
+    0.023033,
+    0.018829,
+    0.01053,
+    0.004041,
+    0.001291,
+    0.000344
+   ],
+   [
+    0.003544,
+    0.006,
+    0.004892,
+    0.002617,
+    0.001088,
+    0.000332,
+    8.8e-05
+   ],
+   [
+    0.00073,
+    0.001232,
+    0.001001,
+    0.000534,
+    0.000212,
+    7e-05,
+    1.8e-05
+   ],
+   [
+    0.000124,
+    0.000208,
+    0.000169,
+    9e-05,
+    3.6e-05,
+    1.1e-05,
+    3e-06
+   ]
+  ]
+ },
+ "confidence": {
+  "tier": "MODERATE",
+  "p_max": 0.508963692999559,
+  "entropy_nats": 1.032737381026528,
+  "text": "Most likely result has P = 50.9%. In the out-of-sample backtest, favourites priced 0.50\u20130.60 won 54.6% \u00b1 0.5% (n=9745, mean forecast 54.4%). Backtest RPS for E0: 0.2018; exact-score top-5 hit rate 46.3% (n=1249). Overall champion RPS 0.2093 vs home/away baseline 0.2284 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-11-22, n=41,487). Outcome-certainty tier: MODERATE (entropy 1.033 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Brentford: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Arsenal: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior)."
+ ],
+ "verdict": "Brentford 1\u20131 Arsenal is the single most probable scoreline at 12.5%: expected goals 1.07\u20131.68 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.039). Exact scores are inherently uncertain; the 1X2 split is 23.3%/25.8%/50.9%.",
+ "resolved": {
+  "home_key": "England:Brentford",
+  "away_key": "England:Arsenal",
+  "div": "E0",
+  "home_div": "E0",
+  "away_div": "E0",
+  "country": "England"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: Arsenal FC at Brentford FC\nCompetition: Premier League\nDate: 2026-12-02 15:15 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-11-27\n\nPRIMARY FINAL SCORE PREDICTION\n\nBrentford FC 1 \u2013 1 Arsenal FC\n(modal exact score, probability 12.5%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.07\nAway: 1.68\nExpected Total: 2.75\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 23.3%\nDraw: 25.8%\nAway Win: 50.9%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 12.5%\n2. 0\u20131: 10.1%\n3. 1\u20132: 9.9%\n4. 0\u20132: 8.9%\n5. 0\u20130: 6.6%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 23.1%\nTotal 2 goals: 24.9%\nTotal 3 goals: 22.3%\nTotal 4 goals: 15.5%\nTotal 5+ goals: 14.2%\n\nBoth Teams Score: 54.9%\nClean sheet Brentford FC: 18.2% \u00b7 Clean sheet Arsenal FC: 33.5%\n\nMATCH INTELLIGENCE\n\n1. Brentford attack vs Arsenal defence: time-weighted strength gap multiplies Brentford's scoring rate by \u00d70.66 relative to an average pairing (from 31/40 decay-weighted matches).\n2. Independent results-only Elo: Brentford 1732 vs Arsenal 1983 (gap -251 before home advantage).\n3. Context \u2014 Understat xG component (validated, in ensemble): home win +4.1 pp, draw +2.9 pp, away win -7.0 pp (xG +0.03 / -0.25).\n\nMODEL CONFIDENCE\n\nMost likely result has P = 50.9%. In the out-of-sample backtest, favourites priced 0.50\u20130.60 won 54.6% \u00b1 0.5% (n=9745, mean forecast 54.4%). Backtest RPS for E0: 0.2018; exact-score top-5 hit rate 46.3% (n=1249). Overall champion RPS 0.2093 vs home/away baseline 0.2284 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-11-22, n=41,487). Outcome-certainty tier: MODERATE (entropy 1.033 nats of max 1.099).\nParameter-uncertainty 80% bands: xG Brentford FC 0.81\u20131.36, xG Arsenal FC 1.28\u20132.10; P(home win) 16.4%\u201333.1%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0016 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nBrentford: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-11-28 12:31 EST (4-2-3-1)\n  Caoimh\u00edn Kelleher (G), Michael Kayode (D), Kristoffer Ajer (D), Sepp van den Berg (D), Keane Lewis-Potter (D), Yehor Yarmoliuk (M), Vitaly Janelt (M), Dango Ouattara (F), Mikkel Damsgaard (M), Jaidon Anthony (F), Callum Wilson (F)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs +0.015 (log) \u00b7 continuity -0.32 \u00b7 P(backup GK) 0%\nArsenal: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-11-28 12:31 EST (4-2-3-1)\n  Kepa Arrizabalaga (G), Ben White (D), Ezri Konsa (D), Gabriel (D), Piero Hincapi\u00e9 (D), Declan Rice (M), Myles Lewis-Skelly (M), Noni Madueke (F), Martin \u00d8degaard (M), Christos Tzolis (F), Viktor Gy\u00f6keres (F)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs -0.101 (log) \u00b7 continuity -1.49 \u00b7 P(backup GK) 82%\n\nKEY ABSENCES\n\n- Brentford: Joshua Dasilva \u2014 injury, Late November 2026 [FotMob, 2026-11-28 12:31 EST]\n- Brentford: Aaron Hickey \u2014 injury, Late December 2026, 0% chance of playing [FotMob + FPL, 2026-11-28 12:31 EST] \u2014 FPL: Hamstring injury - Expected back 2 Dec (updated 2026-11-17 06:00 EST)\n- Brentford: Nathan Collins \u2014 injury, Early January 2027, 0% chance of playing [FotMob + FPL, 2026-11-28 12:31 EST] \u2014 FPL: Knee injury - Expected back 2 Dec (updated 2026-11-16 14:00 EST)\n- Brentford: Rico Henry \u2014 injury, Late November 2026, 0% chance of playing [FotMob + FPL, 2026-11-28 12:31 EST] \u2014 FPL: Hip injury - Unknown return date (updated 2026-10-27 12:30 EDT)\n- Brentford: Antoni Milambo \u2014 injury, Back in training, 0% chance of playing [FotMob + FPL, 2026-11-28 12:31 EST] \u2014 FPL: Lack of match fitness - Expected back 5 Dec (updated 2026-07-23 08:01 EDT)\n- Brentford: Igor Thiago \u2014 suspension, Early December 2026, 0% chance of playing [FotMob + FPL, 2026-11-28 12:31 EST] \u2014 FPL: Suspended until 5 Dec (updated 2026-11-08 09:30 EST)\n- Brentford: Kaye Furo \u2014 injured, Unspecified injury - Unknown return date, 0% chance of playing [FPL, 2026-09-14 10:00 EDT]\n- Brentford: Callum Wilson \u2014 doubtful, Ankle injury - 75% chance of playing, 75% chance of playing [FPL, 2026-11-28 11:30 EST]\n- Arsenal: David Raya \u2014 injury, Doubtful, 75% chance of playing [FotMob + FPL, 2026-11-28 12:31 EST] \u2014 FPL: Shoulder injury - 75% chance of playing (updated 2026-11-21 14:00 EST)\n- Arsenal: Mart\u00edn Zubimendi \u2014 injury, Early December 2026, 0% chance of playing [FotMob + FPL, 2026-11-28 12:31 EST] \u2014 FPL: Hamstring injury - Unknown return date (updated 2026-11-16 14:00 EST)\n- Arsenal: Bukayo Saka \u2014 injury, Back in training, 0% chance of playing [FotMob + FPL, 2026-11-28 12:31 EST] \u2014 FPL: Thigh injury - Expected back 20 Dec (updated 2026-10-21 16:30 EDT)\n- Arsenal: Reiss Nelson \u2014 unavailable, has departed the club as a free agent., 0% chance of playing [FPL, 2026-08-28 20:33 EDT]\n\nWEATHER AT VENUE\n\nGtech Community Stadium, Brentford, Middlesex: 7.3 \u00b0C, wind 2.7 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-11-28 12:31 EST]\n\nREST & TRAVEL\n\nBrentford: 9 days' rest, 1 matches in previous 21 days \u00b7 Arsenal: 11 days' rest, 1 in 21 days \u00b7 away travel 14.4 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 23.3% / 25.8% / 50.9%, xG 1.07\u20131.68\n- Understat xG component (validated, in ensemble): home +4.08 pp, draw +2.93 pp, away -7.00 pp; xG +0.032 / -0.246\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.03 pp, draw -0.01 pp, away -0.02 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- lineup: NOT APPLIED (failed out-of-sample validation); would have moved home +2.76 pp, draw +0.82 pp, away -3.59 pp\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Brentford: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Arsenal: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n\nFINAL VERDICT\n\nBrentford 1\u20131 Arsenal is the single most probable scoreline at 12.5%: expected goals 1.07\u20131.68 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.039). Exact scores are inherently uncertain; the 1X2 split is 23.3%/25.8%/50.9%.\n",
+ "refresh_id": "61ae911e9fae4281ac609aa399e0d7b1",
+ "frozen_at": "2026-11-28T17:31:32+00:00",
+ "sha256": "7da4c5146f8d9bfc24447e68e06620f2dfc1428e7414d449e3f4c4107c46279a"
+}
