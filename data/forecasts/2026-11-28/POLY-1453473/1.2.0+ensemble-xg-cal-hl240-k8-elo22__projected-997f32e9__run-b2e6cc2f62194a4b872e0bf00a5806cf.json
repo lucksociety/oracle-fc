@@ -1,0 +1,633 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-11-27",
+ "input_fingerprint": "1b07be5dbe1a0f66acfcf8ff798b9c20a5a5853fa2defe66e39642713d7cce81",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-11-28T12:51:18+00:00",
+ "fixture": {
+  "event_id": "POLY-1453473",
+  "home_name": "Queens Park Rangers FC",
+  "away_name": "Sheffield United FC",
+  "competition": "EFL Championship",
+  "subcategory": "elc",
+  "kickoff_utc": "2026-11-28T15:00:00+00:00",
+  "kickoff_local": "2026-11-28 10:00 EST",
+  "home_matched": "QPR",
+  "away_matched": "Sheffield United",
+  "match_methods": {
+   "home": {
+    "source": "Queens Park Rangers FC",
+    "matched": "QPR",
+    "method": "alias",
+    "score": 1.0
+   },
+   "away": {
+    "source": "Sheffield United FC",
+    "matched": "Sheffield United",
+    "method": "core-tokens",
+    "score": 0.97
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.4205836187149754,
+  "p_draw": 0.27429655039832723,
+  "p_away": 0.30511983088669736,
+  "xg_home": 1.4637597487926772,
+  "xg_away": 1.2185594875437453,
+  "xg_total": 2.6823192363364226,
+  "median_total": 3,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.13322855278258192
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.13322855278258192
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.09463225333928041
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.09230653208728198
+   },
+   {
+    "home": 0,
+    "away": 1,
+    "p": 0.07734842753089365
+   },
+   {
+    "home": 1,
+    "away": 2,
+    "p": 0.07608680801691191
+   }
+  ],
+  "btts": 0.5595268137500323,
+  "totals_over": {
+   "over_0.5": 0.9299664378507855,
+   "over_1.5": 0.7579857569806114,
+   "over_2.5": 0.5037790990909458,
+   "over_3.5": 0.28154599674820163,
+   "over_4.5": 0.13079917402278202,
+   "over_5.5": 0.05256798635836089,
+   "over_6.5": 0.018119218890262405
+  },
+  "total_buckets": {
+   "0-1": 0.24201424301938865,
+   "2": 0.2542066578896656,
+   "3": 0.2222331023427441,
+   "4": 0.15074682272541964,
+   "5+": 0.13079917402278202
+  },
+  "clean_sheet_home": 0.2877118444513839,
+  "clean_sheet_away": 0.2227949039477984,
+  "home_goal_dist": [
+   0.2227949039477984,
+   0.34528725750534733,
+   0.25370656678513787,
+   0.12081496522562035,
+   0.042384939676960824,
+   0.011725944757262671,
+   0.002669594983920651,
+   0.0006158271179519256
+  ],
+  "away_goal_dist": [
+   0.2877118444513839,
+   0.36814109265777933,
+   0.22347961159238547,
+   0.087948451185083,
+   0.025538361684120627,
+   0.005862884734394745,
+   0.0011105370809090442,
+   0.0002072166139438439
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    3
+   ],
+   "away_goals_80": [
+    0,
+    3
+   ],
+   "total_goals_80": [
+    1,
+    5
+   ],
+   "goal_diff_80": [
+    -2,
+    2
+   ]
+  },
+  "score_grid": [
+   [
+    0.070034,
+    0.077348,
+    0.048874,
+    0.019328,
+    0.005627,
+    0.001293,
+    0.000245
+   ],
+   [
+    0.094632,
+    0.133229,
+    0.076087,
+    0.030103,
+    0.008768,
+    0.002015,
+    0.000382
+   ],
+   [
+    0.072104,
+    0.092307,
+    0.058682,
+    0.022289,
+    0.006495,
+    0.001493,
+    0.000283
+   ],
+   [
+    0.034512,
+    0.044201,
+    0.026977,
+    0.011133,
+    0.003115,
+    0.000716,
+    0.000136
+   ],
+   [
+    0.012133,
+    0.015546,
+    0.009493,
+    0.003761,
+    0.001143,
+    0.000252,
+    4.8e-05
+   ],
+   [
+    0.003358,
+    0.004304,
+    0.002629,
+    0.001042,
+    0.000304,
+    7.3e-05,
+    1.3e-05
+   ],
+   [
+    0.000764,
+    0.00098,
+    0.000599,
+    0.000238,
+    6.9e-05,
+    1.6e-05,
+    3e-06
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.42113,
+  "p_draw": 0.27377,
+  "p_away": 0.30510000000000004,
+  "se": [
+   0.0011040369629228906,
+   0.0009970456035207217,
+   0.0010295969842613177
+  ],
+  "max_abs_dev_vs_exact": 0.0005463812850245997,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   1.1462483782260664,
+   1.8083962854297102
+  ],
+  "xg_away_80": [
+   0.9419571608169729,
+   1.5120233116281725
+  ],
+  "p_home_80": [
+   0.3274115274688818,
+   0.5263885356130706
+  ],
+  "p_draw_80": [
+   0.23587004730179406,
+   0.29350492955057644
+  ],
+  "p_away_80": [
+   0.22526579641623262,
+   0.39965445507685304
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.18076779256693748,
+   0.17562998181466086
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.4007299440738018,
+   "p_draw": 0.2621813875980736,
+   "p_away": 0.3370886683281246,
+   "xg_home": 1.4617816297763784,
+   "xg_away": 1.3217175008233322,
+   "weight": 0.0077
+  },
+  "elo": {
+   "p_home": 0.4374545147401524,
+   "p_draw": 0.26272550273943035,
+   "p_away": 0.29981998252041736,
+   "xg_home": 1.427853929294039,
+   "xg_away": 1.1348871784634003,
+   "weight": 0.3721
+  },
+  "standard_dc": {
+   "p_home": 0.3805866402272335,
+   "p_draw": 0.24995605213647748,
+   "p_away": 0.36945730763628903,
+   "xg_home": 1.5635931588300191,
+   "xg_away": 1.537908922168392,
+   "weight": 0.0028
+  },
+  "home_away_rate": {
+   "p_home": 0.4398219314814924,
+   "p_draw": 0.2598134098953398,
+   "p_away": 0.3003646586231677,
+   "xg_home": 1.4547880692970203,
+   "xg_away": 1.1555149451695135,
+   "weight": 0.001
+  },
+  "xg_dc": {
+   "p_home": 0.41412412299768037,
+   "p_draw": 0.26569279818023944,
+   "p_away": 0.32018307882207997,
+   "xg_home": 1.4510781948696925,
+   "xg_away": 1.2469617450505428,
+   "weight": 0.6164
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Home advantage (England, fitted from results): \u00d71.23 on QPR's scoring rate.",
+   "effect": 0.2092
+  },
+  {
+   "text": "Sheffield United attack vs QPR defence: rate multiplier \u00d71.09 for the away side.",
+   "effect": 0.0903
+  },
+  {
+   "text": "Context \u2014 Understat xG component (validated, in ensemble): home win -1.4 pp, draw +0.2 pp, away win +1.2 pp (xG +0.01 / +0.07).",
+   "effect": 0.0435
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.4205836187149754,
+  "p_draw": 0.27429655039832723,
+  "p_away": 0.30511983088669736,
+  "xg_home": 1.4637597487926772,
+  "xg_away": 1.2185594875437453
+ },
+ "context": {
+  "fetched_at": "2026-11-28T12:51:18+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5836964",
+    "fetched_at": "2026-11-28T12:51:18+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "4-2-3-1",
+    "starters": [
+     {
+      "name": "Pierce Charles",
+      "pos": "G",
+      "shirt": "1"
+     },
+     {
+      "name": "Kealey Adamson",
+      "pos": "D",
+      "shirt": "2"
+     },
+     {
+      "name": "Liam Morrison",
+      "pos": "D",
+      "shirt": "4"
+     },
+     {
+      "name": "Ronnie Edwards",
+      "pos": "D",
+      "shirt": "5"
+     },
+     {
+      "name": "Dennis Cirkin",
+      "pos": "D",
+      "shirt": "19"
+     },
+     {
+      "name": "Jonathan Varane",
+      "pos": "M",
+      "shirt": "40"
+     },
+     {
+      "name": "Glen Kamara",
+      "pos": "M",
+      "shirt": "18"
+     },
+     {
+      "name": "Kwame Poku",
+      "pos": "F",
+      "shirt": "17"
+     },
+     {
+      "name": "Harvey Vale",
+      "pos": "M",
+      "shirt": "20"
+     },
+     {
+      "name": "Koki Saito",
+      "pos": "F",
+      "shirt": "14"
+     },
+     {
+      "name": "Rumarn Burrell",
+      "pos": "F",
+      "shirt": "16"
+     }
+    ],
+    "fetched_at": "2026-11-28T12:51:18+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   },
+   "away": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "4-4-2",
+    "starters": [
+     {
+      "name": "Michael Cooper",
+      "pos": "G",
+      "shirt": "1"
+     },
+     {
+      "name": "Hamza Choudhury",
+      "pos": "D",
+      "shirt": "8"
+     },
+     {
+      "name": "Mark McGuinness",
+      "pos": "D",
+      "shirt": "25"
+     },
+     {
+      "name": "Liam Kitching",
+      "pos": "D",
+      "shirt": "15"
+     },
+     {
+      "name": "Harrison Burrows",
+      "pos": "D",
+      "shirt": "14"
+     },
+     {
+      "name": "Tahith Chong",
+      "pos": "M",
+      "shirt": "19"
+     },
+     {
+      "name": "Sydie Peck",
+      "pos": "M",
+      "shirt": "42"
+     },
+     {
+      "name": "Ollie Arblaster",
+      "pos": "M",
+      "shirt": "4"
+     },
+     {
+      "name": "Romelle Donovan",
+      "pos": "M",
+      "shirt": "11"
+     },
+     {
+      "name": "Thomas Cannon",
+      "pos": "F",
+      "shirt": "9"
+     },
+     {
+      "name": "Jordan Ayew",
+      "pos": "F",
+      "shirt": "10"
+     }
+    ],
+    "fetched_at": "2026-11-28T12:51:18+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Amadou Salif Mbengue",
+     "type": "injury",
+     "expected_return": "Out for season",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836964",
+     "fetched_at": "2026-11-28T12:51:18+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "Matt Doherty",
+     "type": "injury",
+     "expected_return": "About 1-2 weeks",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836964",
+     "fetched_at": "2026-11-28T12:51:18+00:00"
+    },
+    {
+     "player": "Femi Seriki",
+     "type": "injury",
+     "expected_return": "Early December 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836964",
+     "fetched_at": "2026-11-28T12:51:18+00:00"
+    },
+    {
+     "player": "Joe Rothwell",
+     "type": "injury",
+     "expected_return": "Early December 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836964",
+     "fetched_at": "2026-11-28T12:51:18+00:00"
+    },
+    {
+     "player": "Ryan On\u00e9",
+     "type": "injury",
+     "expected_return": "Early December 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5836964",
+     "fetched_at": "2026-11-28T12:51:18+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 4,
+    "n21": 3,
+    "last_match": "2026-11-24"
+   },
+   "away": {
+    "rest_days": 4,
+    "n21": 3,
+    "last_match": "2026-11-24"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 223.3
+  },
+  "venue": {
+   "name": "MATRADE Loftus Road",
+   "city": "London",
+   "lat": 51.509264976,
+   "lon": -0.232138485
+  },
+  "weather": {
+   "precip_mm_2h": 0.6000000000000001,
+   "wind_ms": 4.35,
+   "temp_c": 7.7,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=51.509&longitude=-0.232",
+   "fetched_at": "2026-11-28T12:51:18+00:00",
+   "lat": 51.509264976,
+   "lon": -0.232138485
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": -1.45,
+    "d_p_draw_pp": 0.23,
+    "d_p_away_pp": 1.22,
+    "d_xg_home": 0.014,
+    "d_xg_away": 0.068
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.01,
+    "away_rate_mult": 1.01,
+    "d_p_home_pp": 0.11,
+    "d_p_draw_pp": -0.16,
+    "d_p_away_pp": 0.05,
+    "d_xg_home": 0.014,
+    "d_xg_away": 0.012,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0167,
+    "away_rate_mult": 1.0054,
+    "d_p_home_pp": 0.47,
+    "d_p_draw_pp": -0.21,
+    "d_p_away_pp": -0.26,
+    "d_xg_home": 0.024,
+    "d_xg_away": 0.007,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0134,
+    "away_rate_mult": 1.0134,
+    "d_p_home_pp": 0.14,
+    "d_p_draw_pp": -0.21,
+    "d_p_away_pp": 0.06,
+    "d_xg_home": 0.019,
+    "d_xg_away": 0.016,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "reason": "failed validation; no live features"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 4.0,
+   "rest_a": 4.0,
+   "n21_h": 3.0,
+   "n21_a": 3.0,
+   "travel_km": 223.31950174715166,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.6000000000000001,
+   "wind_ms": 4.35,
+   "temp_c": 7.7
+  }
+ },
+ "lineup_simulation": {
+  "applied": false,
+  "basis": {
+   "home": "projected",
+   "away": "projected"
+  },
+  "reason": "No player ratings exist for this league, so the lineup and formation are shown but cannot change the probabilities."
+ },
+ "confidence": {
+  "tier": "LOW",
+  "p_max": 0.4205836187149754,
+  "entropy_nats": 1.081280266870282,
+  "text": "Most likely result has P = 42.1%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.5% \u00b1 0.4% (n=17312, mean forecast 44.7%). Backtest RPS for E1: 0.2171; exact-score top-5 hit rate 51.9% (n=1848). Overall champion RPS 0.2093 vs home/away baseline 0.2284 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-11-22, n=41,487). Outcome-certainty tier: LOW (entropy 1.081 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "QPR: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "QPR: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.",
+  "Sheffield United: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Sheffield United: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+ ],
+ "verdict": "QPR 1\u20131 Sheffield United is the single most probable scoreline at 13.3%: expected goals 1.46\u20131.22 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.039). Exact scores are inherently uncertain; the 1X2 split is 42.1%/27.4%/30.5%.",
+ "resolved": {
+  "home_key": "England:QPR",
+  "away_key": "England:Sheffield United",
+  "div": "E1",
+  "home_div": "E1",
+  "away_div": "E1",
+  "country": "England"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: Sheffield United FC at Queens Park Rangers FC\nCompetition: EFL Championship\nDate: 2026-11-28 10:00 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-11-27\n\nPRIMARY FINAL SCORE PREDICTION\n\nQueens Park Rangers FC 1 \u2013 1 Sheffield United FC\n(modal exact score, probability 13.3%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.46\nAway: 1.22\nExpected Total: 2.68\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 42.1%\nDraw: 27.4%\nAway Win: 30.5%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 13.3%\n2. 1\u20130: 9.5%\n3. 2\u20131: 9.2%\n4. 0\u20131: 7.7%\n5. 1\u20132: 7.6%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 24.2%\nTotal 2 goals: 25.4%\nTotal 3 goals: 22.2%\nTotal 4 goals: 15.1%\nTotal 5+ goals: 13.1%\n\nBoth Teams Score: 56.0%\nClean sheet Queens Park Rangers FC: 28.8% \u00b7 Clean sheet Sheffield United FC: 22.3%\n\nMATCH INTELLIGENCE\n\n1. Home advantage (England, fitted from results): \u00d71.23 on QPR's scoring rate.\n2. Sheffield United attack vs QPR defence: rate multiplier \u00d71.09 for the away side.\n3. Context \u2014 Understat xG component (validated, in ensemble): home win -1.4 pp, draw +0.2 pp, away win +1.2 pp (xG +0.01 / +0.07).\n\nMODEL CONFIDENCE\n\nMost likely result has P = 42.1%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.5% \u00b1 0.4% (n=17312, mean forecast 44.7%). Backtest RPS for E1: 0.2171; exact-score top-5 hit rate 51.9% (n=1848). Overall champion RPS 0.2093 vs home/away baseline 0.2284 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-11-22, n=41,487). Outcome-certainty tier: LOW (entropy 1.081 nats of max 1.099).\nParameter-uncertainty 80% bands: xG Queens Park Rangers FC 1.15\u20131.81, xG Sheffield United FC 0.94\u20131.51; P(home win) 32.7%\u201352.6%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0005 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nQPR: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-11-28 07:51 EST (4-2-3-1)\n  Pierce Charles (G), Kealey Adamson (D), Liam Morrison (D), Ronnie Edwards (D), Dennis Cirkin (D), Jonathan Varane (M), Glen Kamara (M), Kwame Poku (F), Harvey Vale (M), Koki Saito (F), Rumarn Burrell (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\nSheffield United: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-11-28 07:51 EST (4-4-2)\n  Michael Cooper (G), Hamza Choudhury (D), Mark McGuinness (D), Liam Kitching (D), Harrison Burrows (D), Tahith Chong (M), Sydie Peck (M), Ollie Arblaster (M), Romelle Donovan (M), Thomas Cannon (F), Jordan Ayew (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nKEY ABSENCES\n\n- QPR: Amadou Salif Mbengue \u2014 injury, Out for season [FotMob, 2026-11-28 07:51 EST]\n- Sheffield United: Matt Doherty \u2014 injury, About 1-2 weeks [FotMob, 2026-11-28 07:51 EST]\n- Sheffield United: Femi Seriki \u2014 injury, Early December 2026 [FotMob, 2026-11-28 07:51 EST]\n- Sheffield United: Joe Rothwell \u2014 injury, Early December 2026 [FotMob, 2026-11-28 07:51 EST]\n- Sheffield United: Ryan On\u00e9 \u2014 injury, Early December 2026 [FotMob, 2026-11-28 07:51 EST]\n\nWEATHER AT VENUE\n\nMATRADE Loftus Road, London: 7.7 \u00b0C, wind 4.3 m/s, precipitation 0.6 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-11-28 07:51 EST]\n\nREST & TRAVEL\n\nQPR: 4 days' rest, 3 matches in previous 21 days \u00b7 Sheffield United: 4 days' rest, 3 in 21 days \u00b7 away travel 223.3 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 42.1% / 27.4% / 30.5%, xG 1.46\u20131.22\n- Understat xG component (validated, in ensemble): home -1.45 pp, draw +0.23 pp, away +1.22 pp; xG +0.014 / +0.068\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.11 pp, draw -0.16 pp, away +0.05 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.47 pp, draw -0.21 pp, away -0.26 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.14 pp, draw -0.21 pp, away +0.06 pp\n- lineup: not applied (failed validation; no live features)\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- QPR: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- QPR: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n- Sheffield United: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Sheffield United: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nFINAL VERDICT\n\nQPR 1\u20131 Sheffield United is the single most probable scoreline at 13.3%: expected goals 1.46\u20131.22 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.039). Exact scores are inherently uncertain; the 1X2 split is 42.1%/27.4%/30.5%.\n",
+ "refresh_id": "b2e6cc2f62194a4b872e0bf00a5806cf",
+ "frozen_at": "2026-11-28T12:51:18+00:00",
+ "sha256": "d78825bd57db82a8895f25defbc307272b357f3e5257fe410b9ceceba3a75316"
+}
