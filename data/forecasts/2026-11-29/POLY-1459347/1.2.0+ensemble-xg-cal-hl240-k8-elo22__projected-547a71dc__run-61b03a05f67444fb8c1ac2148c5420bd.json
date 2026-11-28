@@ -1,0 +1,657 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-11-27",
+ "input_fingerprint": "1b07be5dbe1a0f66acfcf8ff798b9c20a5a5853fa2defe66e39642713d7cce81",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-11-28T11:13:16+00:00",
+ "fixture": {
+  "event_id": "POLY-1459347",
+  "home_name": "Silkeborg IF",
+  "away_name": "Aarhus GF",
+  "competition": "Danish Superliga",
+  "subcategory": "den",
+  "kickoff_utc": "2026-11-29T17:00:00+00:00",
+  "kickoff_local": "2026-11-29 12:00 EST",
+  "home_matched": "Silkeborg",
+  "away_matched": "Aarhus",
+  "match_methods": {
+   "home": {
+    "source": "Silkeborg IF",
+    "matched": "Silkeborg",
+    "method": "core-tokens",
+    "score": 0.97
+   },
+   "away": {
+    "source": "Aarhus GF",
+    "matched": "Aarhus",
+    "method": "alias",
+    "score": 1.0
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.25290772069616185,
+  "p_draw": 0.24373849942878104,
+  "p_away": 0.503353779875057,
+  "xg_home": 1.263285777350003,
+  "xg_away": 1.8368546560308545,
+  "xg_total": 3.1001404333808575,
+  "median_total": 3,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.11353245533456258
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.11353245533456258
+   },
+   {
+    "home": 1,
+    "away": 2,
+    "p": 0.0996938849894865
+   },
+   {
+    "home": 0,
+    "away": 1,
+    "p": 0.07751661953392794
+   },
+   {
+    "home": 0,
+    "away": 2,
+    "p": 0.07499796147971471
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.06721016462134892
+   }
+  ],
+  "btts": 0.62103548578177,
+  "totals_over": {
+   "over_0.5": 0.9541520904213853,
+   "over_1.5": 0.8251250444291364,
+   "over_2.5": 0.6025153563955455,
+   "over_3.5": 0.37613384692040147,
+   "over_4.5": 0.19794615986749686,
+   "over_5.5": 0.09053840436225277,
+   "over_6.5": 0.03574500264078867
+  },
+  "total_buckets": {
+   "0-1": 0.17487495557086363,
+   "2": 0.22260968803359077,
+   "3": 0.22638150947514413,
+   "4": 0.17818768705290458,
+   "5+": 0.19794615986749686
+  },
+  "clean_sheet_home": 0.15080899166796288,
+  "clean_sheet_away": 0.2740034321288815,
+  "home_goal_dist": [
+   0.2740034321288815,
+   0.36527088491666865,
+   0.23049816901188636,
+   0.09391038822625197,
+   0.028128571208744024,
+   0.0066463902109455296,
+   0.001293631569128866,
+   0.00024853272749309223
+  ],
+  "away_goal_dist": [
+   0.15080899166796288,
+   0.2964557906556795,
+   0.2761692786431574,
+   0.16667518254709907,
+   0.07410296905075486,
+   0.025982410326303027,
+   0.007497456197109632,
+   0.002307920911933595
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    3
+   ],
+   "away_goals_80": [
+    0,
+    4
+   ],
+   "total_goals_80": [
+    1,
+    5
+   ],
+   "goal_diff_80": [
+    -3,
+    2
+   ]
+  },
+  "score_grid": [
+   [
+    0.045848,
+    0.077517,
+    0.074998,
+    0.045527,
+    0.020299,
+    0.007125,
+    0.002057
+   ],
+   [
+    0.05151,
+    0.113532,
+    0.099694,
+    0.060513,
+    0.026979,
+    0.009468,
+    0.002733
+   ],
+   [
+    0.034079,
+    0.06721,
+    0.06567,
+    0.038247,
+    0.01705,
+    0.005983,
+    0.001727
+   ],
+   [
+    0.013951,
+    0.02751,
+    0.025791,
+    0.016311,
+    0.006977,
+    0.002448,
+    0.000706
+   ],
+   [
+    0.004196,
+    0.008273,
+    0.007755,
+    0.004706,
+    0.002186,
+    0.000736,
+    0.000212
+   ],
+   [
+    0.000994,
+    0.001959,
+    0.001836,
+    0.001114,
+    0.000496,
+    0.000181,
+    5e-05
+   ],
+   [
+    0.000194,
+    0.000382,
+    0.000358,
+    0.000217,
+    9.7e-05,
+    3.4e-05,
+    1e-05
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.25366,
+  "p_draw": 0.24443999999999996,
+  "p_away": 0.5019,
+  "se": [
+   0.000972924982719634,
+   0.0009609606818179399,
+   0.0011180259165153553
+  ],
+  "max_abs_dev_vs_exact": 0.0014537798750570152,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   0.9578580688856382,
+   1.598145640690026
+  ],
+  "xg_away_80": [
+   1.403879667789414,
+   2.2981887497931854
+  ],
+  "p_home_80": [
+   0.1782240083322621,
+   0.36266541869728075
+  ],
+  "p_draw_80": [
+   0.19954360370587446,
+   0.2672415208433976
+  ],
+  "p_away_80": [
+   0.37961231106997545,
+   0.6171924962339128
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.20295155859990271,
+   0.18291784880402473
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.2624865706513978,
+   "p_draw": 0.23888332721116043,
+   "p_away": 0.4986301021374417,
+   "xg_home": 1.2573195136566802,
+   "xg_away": 1.8054977665587761,
+   "weight": 0.0077
+  },
+  "elo": {
+   "p_home": 0.2617836810946792,
+   "p_draw": 0.23188112570831163,
+   "p_away": 0.5063351931970093,
+   "xg_home": 1.2275799826611213,
+   "xg_away": 1.7921395748605913,
+   "weight": 0.3721
+  },
+  "standard_dc": {
+   "p_home": 0.17779147946807206,
+   "p_draw": 0.21863388523473684,
+   "p_away": 0.6035746352971911,
+   "xg_home": 1.0279550804313589,
+   "xg_away": 2.0460384632729682,
+   "weight": 0.0028
+  },
+  "home_away_rate": {
+   "p_home": 0.43091886318164374,
+   "p_draw": 0.23641428179990306,
+   "p_away": 0.33266685501845317,
+   "xg_home": 1.6692976087640685,
+   "xg_away": 1.4417952940618193,
+   "weight": 0.001
+  },
+  "xg_dc": {
+   "p_home": 0.2627031419274037,
+   "p_draw": 0.23849965914307925,
+   "p_away": 0.4987971989295173,
+   "xg_home": 1.257409234574471,
+   "xg_away": 1.8054753741759741,
+   "weight": 0.6164
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Aarhus attack vs Silkeborg defence: rate multiplier \u00d71.49 for the away side.",
+   "effect": 0.402
+  },
+  {
+   "text": "Independent results-only Elo: Silkeborg 1463 vs Aarhus 1639 (gap -176 before home advantage).",
+   "effect": 0.264
+  },
+  {
+   "text": "Home advantage (Denmark, fitted from results): \u00d71.18 on Silkeborg's scoring rate.",
+   "effect": 0.1682
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.25290772069616196,
+  "p_draw": 0.2437384994287811,
+  "p_away": 0.5033537798750571,
+  "xg_home": 1.2632857773500035,
+  "xg_away": 1.836854656030855
+ },
+ "context": {
+  "fetched_at": "2026-11-28T11:13:16+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5739559",
+    "fetched_at": "2026-11-28T11:13:16+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "3-4-2-1",
+    "starters": [
+     {
+      "name": "Aske Andr\u00e9sen",
+      "pos": "G",
+      "shirt": "1"
+     },
+     {
+      "name": "Alexander Madsen",
+      "pos": "D",
+      "shirt": "24"
+     },
+     {
+      "name": "Robin \u00d8str\u00f8m",
+      "pos": "D",
+      "shirt": "3"
+     },
+     {
+      "name": "William Loekke Moeller",
+      "pos": "D",
+      "shirt": "29"
+     },
+     {
+      "name": "Villads Westh",
+      "pos": "M",
+      "shirt": "7"
+     },
+     {
+      "name": "William Kirk",
+      "pos": "M",
+      "shirt": "27"
+     },
+     {
+      "name": "Mads Larsen",
+      "pos": "M",
+      "shirt": "20"
+     },
+     {
+      "name": "Jens Martin Gammelby",
+      "pos": "D",
+      "shirt": "19"
+     },
+     {
+      "name": "Lucas Riisgaard",
+      "pos": "F",
+      "shirt": "21"
+     },
+     {
+      "name": "Kristian Kirkegaard",
+      "pos": "F",
+      "shirt": "10"
+     },
+     {
+      "name": "Oliver Ross",
+      "pos": "F",
+      "shirt": "11"
+     }
+    ],
+    "fetched_at": "2026-11-28T11:13:16+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   },
+   "away": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "3-4-2-1",
+    "starters": [
+     {
+      "name": "Mads Hedenstad Christiansen",
+      "pos": "G",
+      "shirt": "21"
+     },
+     {
+      "name": "Tobias M\u00f8lgaard",
+      "pos": "D",
+      "shirt": "14"
+     },
+     {
+      "name": "Colin R\u00f6sler",
+      "pos": "D",
+      "shirt": "25"
+     },
+     {
+      "name": "Dan\u00edel Gr\u00e9tarsson",
+      "pos": "D",
+      "shirt": "3"
+     },
+     {
+      "name": "Jacob Andersen",
+      "pos": "M",
+      "shirt": "26"
+     },
+     {
+      "name": "Kristian Arnstad",
+      "pos": "M",
+      "shirt": "10"
+     },
+     {
+      "name": "Magnus Knudsen",
+      "pos": "M",
+      "shirt": "4"
+     },
+     {
+      "name": "Gift Links",
+      "pos": "M",
+      "shirt": "11"
+     },
+     {
+      "name": "Tobias Bech",
+      "pos": "M",
+      "shirt": "31"
+     },
+     {
+      "name": "Callum McCowatt",
+      "pos": "M",
+      "shirt": "18"
+     },
+     {
+      "name": "Stefen Tchamche",
+      "pos": "F",
+      "shirt": "27"
+     }
+    ],
+    "fetched_at": "2026-11-28T11:13:16+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "William M\u00f8ller",
+     "type": "suspension",
+     "expected_return": "Early December 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5739559",
+     "fetched_at": "2026-11-28T11:13:16+00:00"
+    },
+    {
+     "player": "Mads Freundlich",
+     "type": "injury",
+     "expected_return": "Early December 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5739559",
+     "fetched_at": "2026-11-28T11:13:16+00:00"
+    },
+    {
+     "player": "Andreas Poulsen",
+     "type": "injury",
+     "expected_return": "Early December 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5739559",
+     "fetched_at": "2026-11-28T11:13:16+00:00"
+    },
+    {
+     "player": "Alexander Busch",
+     "type": "injury",
+     "expected_return": "Day to day",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5739559",
+     "fetched_at": "2026-11-28T11:13:16+00:00"
+    },
+    {
+     "player": "Pontus R\u00f6din",
+     "type": "injury",
+     "expected_return": "Day to day",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5739559",
+     "fetched_at": "2026-11-28T11:13:16+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "Frederik Tingager",
+     "type": "injury",
+     "expected_return": "Out for season",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5739559",
+     "fetched_at": "2026-11-28T11:13:16+00:00"
+    },
+    {
+     "player": "Kevin Yakob",
+     "type": "injury",
+     "expected_return": "Day to day",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5739559",
+     "fetched_at": "2026-11-28T11:13:16+00:00"
+    },
+    {
+     "player": "Janni Serra",
+     "type": "injury",
+     "expected_return": "Day to day",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5739559",
+     "fetched_at": "2026-11-28T11:13:16+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 7,
+    "n21": 1,
+    "last_match": "2026-11-22"
+   },
+   "away": {
+    "rest_days": 9,
+    "n21": 2,
+    "last_match": "2026-11-20"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": null
+  },
+  "venue": {
+   "name": "JYSK Park",
+   "city": "Silkeborg",
+   "lat": 56.184242006,
+   "lon": 9.575124656
+  },
+  "weather": {
+   "precip_mm_2h": 1.0,
+   "wind_ms": 3.5999999999999996,
+   "temp_c": 1.3,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=56.184&longitude=9.575",
+   "fetched_at": "2026-11-28T11:13:16+00:00",
+   "lat": 56.184242006,
+   "lon": 9.575124656
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": 0.07,
+    "d_p_draw_pp": 0.43,
+    "d_p_away_pp": -0.5,
+    "d_xg_home": 0.019,
+    "d_xg_away": 0.008
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": -0.0,
+    "d_p_draw_pp": -0.0,
+    "d_p_away_pp": -0.0,
+    "d_xg_home": -0.0,
+    "d_xg_away": -0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": -0.0,
+    "d_p_draw_pp": -0.0,
+    "d_p_away_pp": -0.0,
+    "d_xg_home": -0.0,
+    "d_xg_away": -0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.018,
+    "away_rate_mult": 1.018,
+    "d_p_home_pp": 0.02,
+    "d_p_draw_pp": -0.26,
+    "d_p_away_pp": 0.25,
+    "d_xg_home": 0.022,
+    "d_xg_away": 0.032,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "reason": "failed validation; no live features"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": -0.0,
+   "d_p_draw_pp": -0.0,
+   "d_p_away_pp": -0.0,
+   "d_xg_home": -0.0,
+   "d_xg_away": -0.0
+  },
+  "features": {
+   "rest_h": 7.0,
+   "rest_a": 9.0,
+   "n21_h": 1.0,
+   "n21_a": 2.0,
+   "travel_km": null,
+   "neutral": 0.0,
+   "precip_mm_2h": 1.0,
+   "wind_ms": 3.5999999999999996,
+   "temp_c": 1.3
+  }
+ },
+ "lineup_simulation": {
+  "applied": false,
+  "basis": {
+   "home": "projected",
+   "away": "projected"
+  },
+  "reason": "No player ratings exist for this league, so the lineup and formation are shown but cannot change the probabilities."
+ },
+ "confidence": {
+  "tier": "MODERATE",
+  "p_max": 0.503353779875057,
+  "entropy_nats": 1.037288964756233,
+  "text": "Most likely result has P = 50.3%. In the out-of-sample backtest, favourites priced 0.50\u20130.60 won 54.6% \u00b1 0.5% (n=9745, mean forecast 54.4%). Backtest RPS for DNK: 0.2103; exact-score top-5 hit rate 45.1% (n=661). Overall champion RPS 0.2093 vs home/away baseline 0.2284 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-11-22, n=41,487). Outcome-certainty tier: MODERATE (entropy 1.037 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Silkeborg: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Silkeborg: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.",
+  "Aarhus: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Aarhus: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+ ],
+ "verdict": "Silkeborg 1\u20131 Aarhus is the single most probable scoreline at 11.4%: expected goals 1.26\u20131.84 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.039). Exact scores are inherently uncertain; the 1X2 split is 25.3%/24.4%/50.3%.",
+ "resolved": {
+  "home_key": "Denmark:Silkeborg",
+  "away_key": "Denmark:Aarhus",
+  "div": "DNK",
+  "home_div": "DNK",
+  "away_div": "DNK",
+  "country": "Denmark"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: Aarhus GF at Silkeborg IF\nCompetition: Danish Superliga\nDate: 2026-11-29 12:00 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-11-27\n\nPRIMARY FINAL SCORE PREDICTION\n\nSilkeborg IF 1 \u2013 1 Aarhus GF\n(modal exact score, probability 11.4%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.26\nAway: 1.84\nExpected Total: 3.10\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 25.3%\nDraw: 24.4%\nAway Win: 50.3%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 11.4%\n2. 1\u20132: 10.0%\n3. 0\u20131: 7.8%\n4. 0\u20132: 7.5%\n5. 2\u20131: 6.7%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 17.5%\nTotal 2 goals: 22.3%\nTotal 3 goals: 22.6%\nTotal 4 goals: 17.8%\nTotal 5+ goals: 19.8%\n\nBoth Teams Score: 62.1%\nClean sheet Silkeborg IF: 15.1% \u00b7 Clean sheet Aarhus GF: 27.4%\n\nMATCH INTELLIGENCE\n\n1. Aarhus attack vs Silkeborg defence: rate multiplier \u00d71.49 for the away side.\n2. Independent results-only Elo: Silkeborg 1463 vs Aarhus 1639 (gap -176 before home advantage).\n3. Home advantage (Denmark, fitted from results): \u00d71.18 on Silkeborg's scoring rate.\n\nMODEL CONFIDENCE\n\nMost likely result has P = 50.3%. In the out-of-sample backtest, favourites priced 0.50\u20130.60 won 54.6% \u00b1 0.5% (n=9745, mean forecast 54.4%). Backtest RPS for DNK: 0.2103; exact-score top-5 hit rate 45.1% (n=661). Overall champion RPS 0.2093 vs home/away baseline 0.2284 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-11-22, n=41,487). Outcome-certainty tier: MODERATE (entropy 1.037 nats of max 1.099).\nParameter-uncertainty 80% bands: xG Silkeborg IF 0.96\u20131.60, xG Aarhus GF 1.40\u20132.30; P(home win) 17.8%\u201336.3%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0015 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nSilkeborg: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-11-28 06:13 EST (3-4-2-1)\n  Aske Andr\u00e9sen (G), Alexander Madsen (D), Robin \u00d8str\u00f8m (D), William Loekke Moeller (D), Villads Westh (M), William Kirk (M), Mads Larsen (M), Jens Martin Gammelby (D), Lucas Riisgaard (F), Kristian Kirkegaard (F), Oliver Ross (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\nAarhus: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-11-28 06:13 EST (3-4-2-1)\n  Mads Hedenstad Christiansen (G), Tobias M\u00f8lgaard (D), Colin R\u00f6sler (D), Dan\u00edel Gr\u00e9tarsson (D), Jacob Andersen (M), Kristian Arnstad (M), Magnus Knudsen (M), Gift Links (M), Tobias Bech (M), Callum McCowatt (M), Stefen Tchamche (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nKEY ABSENCES\n\n- Silkeborg: William M\u00f8ller \u2014 suspension, Early December 2026 [FotMob, 2026-11-28 06:13 EST]\n- Silkeborg: Mads Freundlich \u2014 injury, Early December 2026 [FotMob, 2026-11-28 06:13 EST]\n- Silkeborg: Andreas Poulsen \u2014 injury, Early December 2026 [FotMob, 2026-11-28 06:13 EST]\n- Silkeborg: Alexander Busch \u2014 injury, Day to day [FotMob, 2026-11-28 06:13 EST]\n- Silkeborg: Pontus R\u00f6din \u2014 injury, Day to day [FotMob, 2026-11-28 06:13 EST]\n- Aarhus: Frederik Tingager \u2014 injury, Out for season [FotMob, 2026-11-28 06:13 EST]\n- Aarhus: Kevin Yakob \u2014 injury, Day to day [FotMob, 2026-11-28 06:13 EST]\n- Aarhus: Janni Serra \u2014 injury, Day to day [FotMob, 2026-11-28 06:13 EST]\n\nWEATHER AT VENUE\n\nJYSK Park, Silkeborg: 1.3 \u00b0C, wind 3.6 m/s, precipitation 1.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-11-28 06:13 EST]\n\nREST & TRAVEL\n\nSilkeborg: 7 days' rest, 1 matches in previous 21 days \u00b7 Aarhus: 9 days' rest, 2 in 21 days \u00b7 away travel None km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 25.3% / 24.4% / 50.3%, xG 1.26\u20131.84\n- Understat xG component (validated, in ensemble): home +0.07 pp, draw +0.43 pp, away -0.50 pp; xG +0.019 / +0.008\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home -0.00 pp, draw -0.00 pp, away -0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home -0.00 pp, draw -0.00 pp, away -0.00 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.02 pp, draw -0.26 pp, away +0.25 pp\n- lineup: not applied (failed validation; no live features)\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Silkeborg: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Silkeborg: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n- Aarhus: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Aarhus: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nFINAL VERDICT\n\nSilkeborg 1\u20131 Aarhus is the single most probable scoreline at 11.4%: expected goals 1.26\u20131.84 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.039). Exact scores are inherently uncertain; the 1X2 split is 25.3%/24.4%/50.3%.\n",
+ "refresh_id": "61b03a05f67444fb8c1ac2148c5420bd",
+ "frozen_at": "2026-11-28T11:13:16+00:00",
+ "sha256": "5010c37daa8bd3e081e9224ea0e6bcc68f652b36f914a7fdbae94cde2b89304e"
+}

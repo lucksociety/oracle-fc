@@ -1,0 +1,591 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-11-27",
+ "input_fingerprint": "1b07be5dbe1a0f66acfcf8ff798b9c20a5a5853fa2defe66e39642713d7cce81",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-11-28T11:13:42+00:00",
+ "fixture": {
+  "event_id": "POLY-1454681",
+  "home_name": "Chesterfield FC",
+  "away_name": "Exeter City FC",
+  "competition": "League Two",
+  "subcategory": "el2",
+  "kickoff_utc": "2026-12-01T19:45:00+00:00",
+  "kickoff_local": "2026-12-01 14:45 EST",
+  "home_matched": "Chesterfield",
+  "away_matched": "Exeter",
+  "match_methods": {
+   "home": {
+    "source": "Chesterfield FC",
+    "matched": "Chesterfield",
+    "method": "core-tokens",
+    "score": 0.97
+   },
+   "away": {
+    "source": "Exeter City FC",
+    "matched": "Exeter",
+    "method": "alias",
+    "score": 1.0
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.44236836168566096,
+  "p_draw": 0.28241275491027534,
+  "p_away": 0.27521888340406353,
+  "xg_home": 1.4269462017335413,
+  "xg_away": 1.080154676739767,
+  "xg_total": 2.507100878473308,
+  "median_total": 2,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.13727358212397406
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.13727358212397406
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.11068450274728132
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.09256604375409072
+   },
+   {
+    "home": 0,
+    "away": 0,
+    "p": 0.08380549205201285
+   },
+   {
+    "home": 0,
+    "away": 1,
+    "p": 0.08194314254526022
+   }
+  ],
+  "btts": 0.5194877732183494,
+  "totals_over": {
+   "over_0.5": 0.9161945079479872,
+   "over_1.5": 0.7235668626554457,
+   "over_2.5": 0.4588940505779626,
+   "over_3.5": 0.2431898495481645,
+   "over_4.5": 0.10666137934187964,
+   "over_5.5": 0.0404145872941045,
+   "over_6.5": 0.013123028324847956
+  },
+  "total_buckets": {
+   "0-1": 0.27643313734455444,
+   "2": 0.2646728120774829,
+   "3": 0.2157042010297981,
+   "4": 0.13652847020628486,
+   "5+": 0.10666137934187964
+  },
+  "clean_sheet_home": 0.33203514964795405,
+  "clean_sheet_away": 0.23228256918570941,
+  "home_goal_dist": [
+   0.23228256918570941,
+   0.3488716691148625,
+   0.24937448342434682,
+   0.11592315492506763,
+   0.03979414550450622,
+   0.010793248982208433,
+   0.002413903516458037,
+   0.000546825346840885
+  ],
+  "away_goal_dist": [
+   0.33203514964795405,
+   0.37506491015344046,
+   0.2009331177644937,
+   0.06977504823740291,
+   0.017872565820218393,
+   0.003617773609441801,
+   0.0006039675947013373,
+   9.746717234712627e-05
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    3
+   ],
+   "away_goals_80": [
+    0,
+    2
+   ],
+   "total_goals_80": [
+    1,
+    5
+   ],
+   "goal_diff_80": [
+    -2,
+    2
+   ]
+  },
+  "score_grid": [
+   [
+    0.083805,
+    0.081943,
+    0.045607,
+    0.015878,
+    0.004068,
+    0.000822,
+    0.000137
+   ],
+   [
+    0.110685,
+    0.137274,
+    0.069115,
+    0.024112,
+    0.00619,
+    0.001253,
+    0.000209
+   ],
+   [
+    0.081792,
+    0.092566,
+    0.051997,
+    0.017444,
+    0.004488,
+    0.000911,
+    0.000152
+   ],
+   [
+    0.038145,
+    0.043258,
+    0.023366,
+    0.008531,
+    0.002111,
+    0.000429,
+    7.2e-05
+   ],
+   [
+    0.013093,
+    0.014879,
+    0.008054,
+    0.002828,
+    0.000761,
+    0.000149,
+    2.5e-05
+   ],
+   [
+    0.003545,
+    0.004037,
+    0.00219,
+    0.000771,
+    0.0002,
+    4.2e-05,
+    7e-06
+   ],
+   [
+    0.000791,
+    0.000903,
+    0.000491,
+    0.000173,
+    4.5e-05,
+    9e-06,
+    2e-06
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.443735,
+  "p_draw": 0.281695,
+  "p_away": 0.27457,
+  "se": [
+   0.0011109326032100236,
+   0.0010058402631009558,
+   0.0009979511889366133
+  ],
+  "max_abs_dev_vs_exact": 0.0013666383143390304,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   1.1193542191928953,
+   1.760634370421709
+  ],
+  "xg_away_80": [
+   0.810046299494285,
+   1.3699944122778305
+  ],
+  "p_home_80": [
+   0.3477277502335589,
+   0.5470484016046396
+  ],
+  "p_draw_80": [
+   0.24145390062368693,
+   0.30400192817605565
+  ],
+  "p_away_80": [
+   0.19608595076065974,
+   0.3681722156993116
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.17956893838394591,
+   0.19501218269235351
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.4378973693300997,
+   "p_draw": 0.2818676607301416,
+   "p_away": 0.2802349699397585,
+   "xg_home": 1.363640712663753,
+   "xg_away": 1.037046520954561,
+   "weight": 0.0077
+  },
+  "elo": {
+   "p_home": 0.45433477808192757,
+   "p_draw": 0.2575173521438943,
+   "p_away": 0.28814786977417794,
+   "xg_home": 1.4912903426127777,
+   "xg_away": 1.133227985306425,
+   "weight": 0.3721
+  },
+  "standard_dc": {
+   "p_home": 0.44737623770281865,
+   "p_draw": 0.295664105846319,
+   "p_away": 0.25695965645086233,
+   "xg_home": 1.3080878467848247,
+   "xg_away": 0.9248524030175785,
+   "weight": 0.0028
+  },
+  "home_away_rate": {
+   "p_home": 0.43160405138915253,
+   "p_draw": 0.2628501292350707,
+   "p_away": 0.30554581937577674,
+   "xg_home": 1.4191749467283095,
+   "xg_away": 1.1506845231671972,
+   "weight": 0.001
+  },
+  "xg_dc": {
+   "p_home": 0.43674731941550815,
+   "p_draw": 0.2816541176940656,
+   "p_away": 0.2815985628904264,
+   "xg_home": 1.36025253387927,
+   "xg_away": 1.038996979922913,
+   "weight": 0.6164
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Home advantage (England, fitted from results): \u00d71.23 on Chesterfield's scoring rate.",
+   "effect": 0.2092
+  },
+  {
+   "text": "Exeter attack vs Chesterfield defence: rate multiplier \u00d70.86 for the away side.",
+   "effect": 0.1525
+  },
+  {
+   "text": "Chesterfield attack vs Exeter defence: time-weighted strength gap multiplies Chesterfield's scoring rate by \u00d70.92 relative to an average pairing (from 39/39 decay-weighted matches).",
+   "effect": 0.0879
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.442368361685661,
+  "p_draw": 0.2824127549102754,
+  "p_away": 0.27521888340406364,
+  "xg_home": 1.4269462017335415,
+  "xg_away": 1.0801546767397672
+ },
+ "context": {
+  "fetched_at": "2026-11-28T11:13:42+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5838066",
+    "fetched_at": "2026-11-28T11:13:42+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "4-4-2",
+    "starters": [
+     {
+      "name": "Zachary Hemming",
+      "pos": "G",
+      "shirt": "1"
+     },
+     {
+      "name": "Remeao Hutton",
+      "pos": "D",
+      "shirt": "33"
+     },
+     {
+      "name": "Alfie Pond",
+      "pos": "D",
+      "shirt": "15"
+     },
+     {
+      "name": "Jack Simpson",
+      "pos": "D",
+      "shirt": "6"
+     },
+     {
+      "name": "Lewis Gordon",
+      "pos": "D",
+      "shirt": "19"
+     },
+     {
+      "name": "Dilan Markanday",
+      "pos": "M",
+      "shirt": "24"
+     },
+     {
+      "name": "Ryan Stirk",
+      "pos": "M",
+      "shirt": "8"
+     },
+     {
+      "name": "George McEachran",
+      "pos": "M",
+      "shirt": "20"
+     },
+     {
+      "name": "Joel Randall",
+      "pos": "M",
+      "shirt": "31"
+     },
+     {
+      "name": "Dylan Duffy",
+      "pos": "F",
+      "shirt": "11"
+     },
+     {
+      "name": "Louie Marsh",
+      "pos": "F",
+      "shirt": "18"
+     }
+    ],
+    "fetched_at": "2026-11-28T11:13:42+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   },
+   "away": {
+    "status": "projected",
+    "source": "FotMob \u2014 previous match XI (no projection published yet)",
+    "formation": "4-2-3-1",
+    "starters": [
+     {
+      "name": "Jack Bycroft",
+      "pos": "G",
+      "shirt": "1"
+     },
+     {
+      "name": "Lakyle Samuel",
+      "pos": "D",
+      "shirt": "2"
+     },
+     {
+      "name": "Jack Taylor",
+      "pos": "D",
+      "shirt": "6"
+     },
+     {
+      "name": "Jack Fitzwater",
+      "pos": "D",
+      "shirt": "5"
+     },
+     {
+      "name": "Luca Woodhouse",
+      "pos": "D",
+      "shirt": "3"
+     },
+     {
+      "name": "Jake Doyle-Hayes",
+      "pos": "M",
+      "shirt": "31"
+     },
+     {
+      "name": "Charlie Cummins",
+      "pos": "M",
+      "shirt": "16"
+     },
+     {
+      "name": "George Birch",
+      "pos": "F",
+      "shirt": "20"
+     },
+     {
+      "name": "Reece Cole",
+      "pos": "M",
+      "shirt": "12"
+     },
+     {
+      "name": "Anthony Scully",
+      "pos": "F",
+      "shirt": "25"
+     },
+     {
+      "name": "Sonny Cox",
+      "pos": "F",
+      "shirt": "19"
+     }
+    ],
+    "fetched_at": "2026-11-28T11:13:42+00:00",
+    "note": "No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+   }
+  },
+  "absences": {
+   "home": [],
+   "away": []
+  },
+  "rest": {
+   "home": {
+    "rest_days": 10,
+    "n21": 2,
+    "last_match": "2026-11-21"
+   },
+   "away": {
+    "rest_days": 10,
+    "n21": 2,
+    "last_match": "2026-11-21"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 315.0
+  },
+  "venue": {
+   "name": "SMH Group Stadium",
+   "city": "Chesterfield, Derbyshire",
+   "lat": 53.253590086,
+   "lon": -1.426194906
+  },
+  "weather": {
+   "precip_mm_2h": 2.0,
+   "wind_ms": 2.8499999999999996,
+   "temp_c": 11.4,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=53.254&longitude=-1.426",
+   "fetched_at": "2026-11-28T11:13:42+00:00",
+   "lat": 53.253590086,
+   "lon": -1.426194906
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": -1.12,
+    "d_p_draw_pp": 1.51,
+    "d_p_away_pp": -0.39,
+    "d_xg_home": -0.083,
+    "d_xg_away": -0.059
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": -0.0,
+    "d_p_draw_pp": -0.0,
+    "d_p_away_pp": -0.0,
+    "d_xg_home": -0.0,
+    "d_xg_away": -0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0203,
+    "away_rate_mult": 1.0065,
+    "d_p_home_pp": 0.59,
+    "d_p_draw_pp": -0.29,
+    "d_p_away_pp": -0.3,
+    "d_xg_home": 0.028,
+    "d_xg_away": 0.007,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0453,
+    "away_rate_mult": 1.0453,
+    "d_p_home_pp": 0.57,
+    "d_p_draw_pp": -0.73,
+    "d_p_away_pp": 0.16,
+    "d_xg_home": 0.063,
+    "d_xg_away": 0.048,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "reason": "failed validation; no live features"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": -0.0,
+   "d_p_draw_pp": -0.0,
+   "d_p_away_pp": -0.0,
+   "d_xg_home": -0.0,
+   "d_xg_away": -0.0
+  },
+  "features": {
+   "rest_h": 10.0,
+   "rest_a": 10.0,
+   "n21_h": 2.0,
+   "n21_a": 2.0,
+   "travel_km": 315.04323294381345,
+   "neutral": 0.0,
+   "precip_mm_2h": 2.0,
+   "wind_ms": 2.8499999999999996,
+   "temp_c": 11.4
+  }
+ },
+ "lineup_simulation": {
+  "applied": false,
+  "basis": {
+   "home": "projected",
+   "away": "projected"
+  },
+  "reason": "No player ratings exist for this league, so the lineup and formation are shown but cannot change the probabilities."
+ },
+ "confidence": {
+  "tier": "LOW",
+  "p_max": 0.44236836168566096,
+  "entropy_nats": 1.0729639747800286,
+  "text": "Most likely result has P = 44.2%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.5% \u00b1 0.4% (n=17312, mean forecast 44.7%). Backtest RPS for E3: 0.2217; exact-score top-5 hit rate 48.2% (n=1842). Overall champion RPS 0.2093 vs home/away baseline 0.2284 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-11-22, n=41,487). Outcome-certainty tier: LOW (entropy 1.073 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Chesterfield: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Chesterfield: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.",
+  "Exeter: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Exeter: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied."
+ ],
+ "verdict": "Chesterfield 1\u20131 Exeter is the single most probable scoreline at 13.7%: expected goals 1.43\u20131.08 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.039). Exact scores are inherently uncertain; the 1X2 split is 44.2%/28.2%/27.5%.",
+ "resolved": {
+  "home_key": "England:Chesterfield",
+  "away_key": "England:Exeter",
+  "div": "E3",
+  "home_div": "E3",
+  "away_div": "E3",
+  "country": "England"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: Exeter City FC at Chesterfield FC\nCompetition: League Two\nDate: 2026-12-01 14:45 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-11-27\n\nPRIMARY FINAL SCORE PREDICTION\n\nChesterfield FC 1 \u2013 1 Exeter City FC\n(modal exact score, probability 13.7%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.43\nAway: 1.08\nExpected Total: 2.51\nMedian Total: 2\n\nRESULT PROBABILITIES\n\nHome Win: 44.2%\nDraw: 28.2%\nAway Win: 27.5%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 13.7%\n2. 1\u20130: 11.1%\n3. 2\u20131: 9.3%\n4. 0\u20130: 8.4%\n5. 0\u20131: 8.2%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 27.6%\nTotal 2 goals: 26.5%\nTotal 3 goals: 21.6%\nTotal 4 goals: 13.7%\nTotal 5+ goals: 10.7%\n\nBoth Teams Score: 51.9%\nClean sheet Chesterfield FC: 33.2% \u00b7 Clean sheet Exeter City FC: 23.2%\n\nMATCH INTELLIGENCE\n\n1. Home advantage (England, fitted from results): \u00d71.23 on Chesterfield's scoring rate.\n2. Exeter attack vs Chesterfield defence: rate multiplier \u00d70.86 for the away side.\n3. Chesterfield attack vs Exeter defence: time-weighted strength gap multiplies Chesterfield's scoring rate by \u00d70.92 relative to an average pairing (from 39/39 decay-weighted matches).\n\nMODEL CONFIDENCE\n\nMost likely result has P = 44.2%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.5% \u00b1 0.4% (n=17312, mean forecast 44.7%). Backtest RPS for E3: 0.2217; exact-score top-5 hit rate 48.2% (n=1842). Overall champion RPS 0.2093 vs home/away baseline 0.2284 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-11-22, n=41,487). Outcome-certainty tier: LOW (entropy 1.073 nats of max 1.099).\nParameter-uncertainty 80% bands: xG Chesterfield FC 1.12\u20131.76, xG Exeter City FC 0.81\u20131.37; P(home win) 34.8%\u201354.7%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0014 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nChesterfield: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-11-28 06:13 EST (4-4-2)\n  Zachary Hemming (G), Remeao Hutton (D), Alfie Pond (D), Jack Simpson (D), Lewis Gordon (D), Dilan Markanday (M), Ryan Stirk (M), George McEachran (M), Joel Randall (M), Dylan Duffy (F), Louie Marsh (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\nExeter: PROJECTED \u2014 FotMob \u2014 previous match XI (no projection published yet), fetched 2026-11-28 06:13 EST (4-2-3-1)\n  Jack Bycroft (G), Lakyle Samuel (D), Jack Taylor (D), Jack Fitzwater (D), Luca Woodhouse (D), Jake Doyle-Hayes (M), Charlie Cummins (M), George Birch (F), Reece Cole (M), Anthony Scully (F), Sonny Cox (F)\n  No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nKEY ABSENCES\n\n- None listed by the sources.\n\nWEATHER AT VENUE\n\nSMH Group Stadium, Chesterfield, Derbyshire: 11.4 \u00b0C, wind 2.8 m/s, precipitation 2.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-11-28 06:13 EST]\n\nREST & TRAVEL\n\nChesterfield: 10 days' rest, 2 matches in previous 21 days \u00b7 Exeter: 10 days' rest, 2 in 21 days \u00b7 away travel 315.0 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 44.2% / 28.2% / 27.5%, xG 1.43\u20131.08\n- Understat xG component (validated, in ensemble): home -1.12 pp, draw +1.51 pp, away -0.39 pp; xG -0.083 / -0.059\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home -0.00 pp, draw -0.00 pp, away -0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.59 pp, draw -0.29 pp, away -0.30 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.57 pp, draw -0.73 pp, away +0.16 pp\n- lineup: not applied (failed validation; no live features)\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Chesterfield: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Chesterfield: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n- Exeter: lineup is PROJECTED (FotMob \u2014 previous match XI (no projection published yet)), not confirmed \u2014 0 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Exeter: No point-in-time player-rating history for this league (Understat covers the top-5 leagues only): lineup shown for information, NOT applied.\n\nFINAL VERDICT\n\nChesterfield 1\u20131 Exeter is the single most probable scoreline at 13.7%: expected goals 1.43\u20131.08 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.039). Exact scores are inherently uncertain; the 1X2 split is 44.2%/28.2%/27.5%.\n",
+ "refresh_id": "bb3ed33a0efd47d68d1e0deb108b7938",
+ "frozen_at": "2026-11-28T11:13:42+00:00",
+ "sha256": "71bb86b02ad35e8d6dbd2bce92b069d880934a25f2d3d8f7e12b192473b21ad9"
+}
