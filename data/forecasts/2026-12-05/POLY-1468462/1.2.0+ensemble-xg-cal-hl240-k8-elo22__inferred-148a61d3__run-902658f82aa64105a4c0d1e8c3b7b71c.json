@@ -1,0 +1,802 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-11-27",
+ "input_fingerprint": "1b07be5dbe1a0f66acfcf8ff798b9c20a5a5853fa2defe66e39642713d7cce81",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-11-28T05:05:13+00:00",
+ "fixture": {
+  "event_id": "POLY-1468462",
+  "home_name": "FC Augsburg",
+  "away_name": "1. FC K\u00f6ln",
+  "competition": "Bundesliga",
+  "subcategory": "bun",
+  "kickoff_utc": "2026-12-05T14:30:00+00:00",
+  "kickoff_local": "2026-12-05 09:30 EST",
+  "home_matched": "Augsburg",
+  "away_matched": "FC Koln",
+  "match_methods": {
+   "home": {
+    "source": "FC Augsburg",
+    "matched": "Augsburg",
+    "method": "core-tokens",
+    "score": 0.97
+   },
+   "away": {
+    "source": "1. FC K\u00f6ln",
+    "matched": "FC Koln",
+    "method": "alias",
+    "score": 1.0
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.5106966005019848,
+  "p_draw": 0.2379049665603313,
+  "p_away": 0.2513984329376838,
+  "xg_home": 1.9071778002224546,
+  "xg_away": 1.3032344552982602,
+  "xg_total": 3.2104122555207146,
+  "median_total": 3,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.10860899746351947
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.10860899746351947
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.09916976962093191
+   },
+   {
+    "home": 2,
+    "away": 0,
+    "p": 0.07245726512558252
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.07187026134142273
+   },
+   {
+    "home": 2,
+    "away": 2,
+    "p": 0.0674163052670995
+   }
+  ],
+  "btts": 0.63765452056981,
+  "totals_over": {
+   "over_0.5": 0.9589455785281822,
+   "over_1.5": 0.8397842677396224,
+   "over_2.5": 0.6263132455349804,
+   "over_3.5": 0.40121280069408216,
+   "over_4.5": 0.2174969208106558,
+   "over_5.5": 0.10264957682705568,
+   "over_6.5": 0.04189212517616017
+  },
+  "total_buckets": {
+   "0-1": 0.1602157322603775,
+   "2": 0.21347102220464215,
+   "3": 0.22510044484089814,
+   "4": 0.18371587988342644,
+   "5+": 0.2174969208106558
+  },
+  "clean_sheet_home": 0.2633037232952085,
+  "clean_sheet_away": 0.14009617760679963,
+  "home_goal_dist": [
+   0.14009617760679963,
+   0.28647057283683186,
+   0.27757532947401126,
+   0.17422321039109087,
+   0.08056458251858686,
+   0.029388395652896592,
+   0.008825016626379247,
+   0.0028567148934037683
+  ],
+  "away_goal_dist": [
+   0.2633037232952085,
+   0.3615601405028728,
+   0.23558581511386975,
+   0.09930903419149259,
+   0.030833194273138874,
+   0.0075665340181058265,
+   0.0015324816067026938,
+   0.00030907699860882604
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    4
+   ],
+   "away_goals_80": [
+    0,
+    3
+   ],
+   "total_goals_80": [
+    1,
+    6
+   ],
+   "goal_diff_80": [
+    -2,
+    3
+   ]
+  },
+  "score_grid": [
+   [
+    0.041054,
+    0.047291,
+    0.032405,
+    0.013741,
+    0.00429,
+    0.001057,
+    0.000215
+   ],
+   [
+    0.07187,
+    0.108609,
+    0.066397,
+    0.028132,
+    0.008776,
+    0.00216,
+    0.000438
+   ],
+   [
+    0.072457,
+    0.09917,
+    0.067416,
+    0.027386,
+    0.008536,
+    0.002099,
+    0.000425
+   ],
+   [
+    0.045792,
+    0.062616,
+    0.04081,
+    0.017987,
+    0.005375,
+    0.001321,
+    0.000268
+   ],
+   [
+    0.021262,
+    0.029046,
+    0.018914,
+    0.007992,
+    0.002592,
+    0.000611,
+    0.000124
+   ],
+   [
+    0.007773,
+    0.010609,
+    0.006902,
+    0.002914,
+    0.000906,
+    0.000232,
+    4.5e-05
+   ],
+   [
+    0.002338,
+    0.003187,
+    0.002072,
+    0.000874,
+    0.000271,
+    6.7e-05,
+    1.4e-05
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.511385,
+  "p_draw": 0.23740999999999998,
+  "p_away": 0.251205,
+  "se": [
+   0.0011177441160100106,
+   0.0009514370496780121,
+   0.000969796494051716
+  ],
+  "max_abs_dev_vs_exact": 0.0006883994980151353,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   1.465507329595726,
+   2.3894190023377098
+  ],
+  "xg_away_80": [
+   0.9757779055667016,
+   1.6548200351642515
+  ],
+  "p_home_80": [
+   0.39299543842576296,
+   0.6336720009427721
+  ],
+  "p_draw_80": [
+   0.19426486525779513,
+   0.26112178238572276
+  ],
+  "p_away_80": [
+   0.16665163942155303,
+   0.3562753653615817
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.193812630094235,
+   0.19602979242179094
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.5037044314785428,
+   "p_draw": 0.23933666695701838,
+   "p_away": 0.25695890156443857,
+   "xg_home": 1.8022100690319292,
+   "xg_away": 1.23128486363583,
+   "weight": 0.0077
+  },
+  "elo": {
+   "p_home": 0.5375676223089767,
+   "p_draw": 0.2228624866796663,
+   "p_away": 0.239569891011357,
+   "xg_home": 1.9078510159200939,
+   "xg_away": 1.2059395396996326,
+   "weight": 0.3721
+  },
+  "standard_dc": {
+   "p_home": 0.5696283209813715,
+   "p_draw": 0.22794160891528845,
+   "p_away": 0.20243007010334005,
+   "xg_home": 1.9621736528491434,
+   "xg_away": 1.0955965554297897,
+   "weight": 0.0028
+  },
+  "home_away_rate": {
+   "p_home": 0.4493369887061559,
+   "p_draw": 0.23104908631343088,
+   "p_away": 0.3196139249804132,
+   "xg_home": 1.7578537473498583,
+   "xg_away": 1.4527323975915198,
+   "weight": 0.001
+  },
+  "xg_dc": {
+   "p_home": 0.49032432627512884,
+   "p_draw": 0.2350480593299732,
+   "p_away": 0.2746276143948978,
+   "xg_home": 1.842002450417279,
+   "xg_away": 1.3339947101193679,
+   "weight": 0.6164
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Home advantage (Germany, fitted from results): \u00d71.31 on Augsburg's scoring rate.",
+   "effect": 0.2673
+  },
+  {
+   "text": "Augsburg attack vs FC Koln defence: time-weighted strength gap multiplies Augsburg's scoring rate by \u00d71.14 relative to an average pairing (from 28/28 decay-weighted matches).",
+   "effect": 0.1329
+  },
+  {
+   "text": "Independent results-only Elo: Augsburg 1573 vs FC Koln 1485 (gap +88 before home advantage).",
+   "effect": 0.1325
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.5106966005019848,
+  "p_draw": 0.2379049665603313,
+  "p_away": 0.2513984329376838,
+  "xg_home": 1.9071778002224546,
+  "xg_away": 1.3032344552982602
+ },
+ "context": {
+  "fetched_at": "2026-11-28T05:05:13+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5881242",
+    "fetched_at": "2026-11-28T05:05:13+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "inferred",
+    "source": null,
+    "formation": null,
+    "starters": [
+     {
+      "name": "Finn Dahmen",
+      "pos": "G"
+     },
+     {
+      "name": "Fabian Rieder",
+      "pos": "M"
+     },
+     {
+      "name": "Hennes Behrens",
+      "pos": "M"
+     },
+     {
+      "name": "Robin Fellhauer",
+      "pos": "M"
+     },
+     {
+      "name": "Anton Kade",
+      "pos": "M"
+     },
+     {
+      "name": "Michael Gregoritsch",
+      "pos": "F"
+     },
+     {
+      "name": "Arijon Ibrahimovi\u0107",
+      "pos": "M"
+     },
+     {
+      "name": "Marius Wolf",
+      "pos": "M"
+     },
+     {
+      "name": "Yannik Keitel",
+      "pos": "D"
+     },
+     {
+      "name": "Calvin Brackelmann",
+      "pos": "D"
+     },
+     {
+      "name": "Juma Bah",
+      "pos": "D"
+     }
+    ],
+    "fetched_at": "2026-11-28T05:05:13+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [],
+    "mean_xi_attack_index": 0.063,
+    "mean_continuity": -1.236,
+    "p_backup_gk": 0.0
+   },
+   "away": {
+    "status": "inferred",
+    "source": null,
+    "formation": null,
+    "starters": [
+     {
+      "name": "Marvin Schw\u00e4be",
+      "pos": "G"
+     },
+     {
+      "name": "Borna Sosa",
+      "pos": "M"
+     },
+     {
+      "name": "Jahmai Simpson-Pusey",
+      "pos": "D"
+     },
+     {
+      "name": "Jo\u00ebl Schmied",
+      "pos": "D"
+     },
+     {
+      "name": "Sa\u00efd El Mala",
+      "pos": "F"
+     },
+     {
+      "name": "Mikey Moore",
+      "pos": "M"
+     },
+     {
+      "name": "Sebastian Sebulonsen",
+      "pos": "M"
+     },
+     {
+      "name": "Paul Okon-Engstler",
+      "pos": "M"
+     },
+     {
+      "name": "Tom Krau\u00df",
+      "pos": "M"
+     },
+     {
+      "name": "Linton Maina",
+      "pos": "M"
+     },
+     {
+      "name": "Luka Lochoshvili",
+      "pos": "D"
+     }
+    ],
+    "fetched_at": "2026-11-28T05:05:13+00:00",
+    "n_configurations": 0,
+    "unmatched_players": []
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Jeffrey Gouweleeuw",
+     "type": "injury",
+     "expected_return": "About 1-2 weeks",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881242",
+     "fetched_at": "2026-11-28T05:05:13+00:00"
+    },
+    {
+     "player": "Han-Noah Massengo",
+     "type": "injury",
+     "expected_return": "About 1-2 weeks",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881242",
+     "fetched_at": "2026-11-28T05:05:13+00:00"
+    },
+    {
+     "player": "Chrislain Matsima",
+     "type": "injury",
+     "expected_return": "A few weeks",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881242",
+     "fetched_at": "2026-11-28T05:05:13+00:00"
+    },
+    {
+     "player": "Calvin Brackelmann",
+     "type": "injury",
+     "expected_return": "Doubtful",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881242",
+     "fetched_at": "2026-11-28T05:05:13+00:00"
+    },
+    {
+     "player": "Steve Mouni\u00e9",
+     "type": "injury",
+     "expected_return": "Early December 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881242",
+     "fetched_at": "2026-11-28T05:05:13+00:00"
+    },
+    {
+     "player": "Noahkai Banks",
+     "type": "injury",
+     "expected_return": "Early December 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881242",
+     "fetched_at": "2026-11-28T05:05:13+00:00"
+    },
+    {
+     "player": "Faik Sakar",
+     "type": "injury",
+     "expected_return": "Early December 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881242",
+     "fetched_at": "2026-11-28T05:05:13+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "Alessio Castro-Montes",
+     "type": "injury",
+     "expected_return": "Mid December 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881242",
+     "fetched_at": "2026-11-28T05:05:13+00:00"
+    },
+    {
+     "player": "Imad Rondi\u0107",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881242",
+     "fetched_at": "2026-11-28T05:05:13+00:00"
+    },
+    {
+     "player": "Rav van den Berg",
+     "type": "injury",
+     "expected_return": "About 1-2 weeks",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881242",
+     "fetched_at": "2026-11-28T05:05:13+00:00"
+    },
+    {
+     "player": "Ellyes Skhiri",
+     "type": "injury",
+     "expected_return": "Early January 2027",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881242",
+     "fetched_at": "2026-11-28T05:05:13+00:00"
+    },
+    {
+     "player": "Thijs Dallinga",
+     "type": "injury",
+     "expected_return": "Late June 2027",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881242",
+     "fetched_at": "2026-11-28T05:05:13+00:00"
+    },
+    {
+     "player": "Timo H\u00fcbers",
+     "type": "injury",
+     "expected_return": "Early January 2027",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5881242",
+     "fetched_at": "2026-11-28T05:05:13+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 13,
+    "n21": 1,
+    "last_match": "2026-11-22"
+   },
+   "away": {
+    "rest_days": 15,
+    "n21": 1,
+    "last_match": "2026-11-20"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 409.4
+  },
+  "venue": {
+   "name": "WWK Arena",
+   "city": "Augsburg",
+   "lat": 48.32310136,
+   "lon": 10.885949135
+  },
+  "weather": {
+   "precip_mm_2h": 0.0,
+   "wind_ms": 0.595,
+   "temp_c": 1.2,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=48.323&longitude=10.886",
+   "fetched_at": "2026-11-28T05:05:14+00:00",
+   "lat": 48.32310136,
+   "lon": 10.885949135
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": -3.03,
+    "d_p_draw_pp": 0.82,
+    "d_p_away_pp": 2.21,
+    "d_xg_home": -0.041,
+    "d_xg_away": 0.082
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0233,
+    "away_rate_mult": 1.0075,
+    "d_p_home_pp": 0.76,
+    "d_p_draw_pp": -0.34,
+    "d_p_away_pp": -0.42,
+    "d_xg_home": 0.042,
+    "d_xg_away": 0.01,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 0.9951,
+    "away_rate_mult": 0.9951,
+    "d_p_home_pp": -0.07,
+    "d_p_draw_pp": 0.07,
+    "d_p_away_pp": -0.0,
+    "d_xg_home": -0.009,
+    "d_xg_away": -0.006,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "home_rate_mult": 0.9871,
+    "away_rate_mult": 1.0204,
+    "d_p_home_pp": -1.1,
+    "d_p_draw_pp": 0.16,
+    "d_p_away_pp": 0.94,
+    "d_xg_home": -0.022,
+    "d_xg_away": 0.026,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 13.0,
+   "rest_a": 15.0,
+   "n21_h": 1.0,
+   "n21_a": 1.0,
+   "travel_km": 409.39868087637393,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.0,
+   "wind_ms": 0.595,
+   "temp_c": 1.2
+  }
+ },
+ "lineup_simulation": {
+  "applied": true,
+  "validated": false,
+  "scale": 0.5,
+  "basis": {
+   "home": "inferred",
+   "away": "inferred"
+  },
+  "home_rate_mult": 0.9935,
+  "away_rate_mult": 1.0102,
+  "note": "Starting-XI strength, continuity and backup-keeper adjustment at half the fitted size. It did not pass the out-of-sample test, so bets are not priced from it.",
+  "p_home": 0.5051858361111643,
+  "p_draw": 0.23877367124229837,
+  "p_away": 0.2560404926465374,
+  "xg_home": 1.8957351754765455,
+  "xg_away": 1.3159063787918954,
+  "xg_total": 3.211641554268441,
+  "btts": 0.6393283208397086,
+  "totals_over": {
+   "over_0.5": 0.9589804195711262,
+   "over_1.5": 0.8399179697074047,
+   "over_2.5": 0.6265415725155284,
+   "over_3.5": 0.40149223473559925,
+   "over_4.5": 0.2177305621080746,
+   "over_5.5": 0.10281259104758456,
+   "over_6.5": 0.041980068872969276
+  },
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.10888531771363635
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.10888531771363635
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.09877161014359985
+   },
+   {
+    "home": 2,
+    "away": 0,
+    "p": 0.07144383501721306
+   },
+   {
+    "home": 1,
+    "away": 0,
+    "p": 0.07132607730267514
+   },
+   {
+    "home": 2,
+    "away": 2,
+    "p": 0.06782726515693699
+   }
+  ],
+  "score_grid": [
+   [
+    0.04102,
+    0.047736,
+    0.033047,
+    0.014159,
+    0.004466,
+    0.001112,
+    0.000228
+   ],
+   [
+    0.071326,
+    0.108885,
+    0.067247,
+    0.028785,
+    0.009072,
+    0.002256,
+    0.000462
+   ],
+   [
+    0.071444,
+    0.098772,
+    0.067827,
+    0.027834,
+    0.008764,
+    0.002177,
+    0.000446
+   ],
+   [
+    0.044871,
+    0.061973,
+    0.040798,
+    0.018164,
+    0.005483,
+    0.001361,
+    0.000278
+   ],
+   [
+    0.02071,
+    0.028575,
+    0.018793,
+    0.008021,
+    0.002627,
+    0.000625,
+    0.000128
+   ],
+   [
+    0.007528,
+    0.010376,
+    0.006817,
+    0.002907,
+    0.000913,
+    0.000236,
+    4.6e-05
+   ],
+   [
+    0.002252,
+    0.0031,
+    0.002035,
+    0.000867,
+    0.000272,
+    6.7e-05,
+    1.4e-05
+   ]
+  ]
+ },
+ "confidence": {
+  "tier": "MODERATE",
+  "p_max": 0.5106966005019848,
+  "entropy_nats": 1.0318915228646062,
+  "text": "Most likely result has P = 51.1%. In the out-of-sample backtest, favourites priced 0.50\u20130.60 won 54.6% \u00b1 0.5% (n=9745, mean forecast 54.4%). Backtest RPS for D1: 0.1991; exact-score top-5 hit rate 42.5% (n=1008). Overall champion RPS 0.2093 vs home/away baseline 0.2284 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-11-22, n=41,487). Outcome-certainty tier: MODERATE (entropy 1.032 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Augsburg: no lineup published yet \u2014 XI inferred from recent minutes share minus known absences; 200 configurations simulated (start P=0.7, UNVALIDATED prior).",
+  "FC Koln: no lineup published yet \u2014 XI inferred from recent minutes share minus known absences; 0 configurations simulated (start P=0.7, UNVALIDATED prior)."
+ ],
+ "verdict": "Augsburg 1\u20131 FC Koln is the single most probable scoreline at 10.9%: expected goals 1.91\u20131.30 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.039). Exact scores are inherently uncertain; the 1X2 split is 51.1%/23.8%/25.1%.",
+ "resolved": {
+  "home_key": "Germany:Augsburg",
+  "away_key": "Germany:FC Koln",
+  "div": "D1",
+  "home_div": "D1",
+  "away_div": "D1",
+  "country": "Germany"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: 1. FC K\u00f6ln at FC Augsburg\nCompetition: Bundesliga\nDate: 2026-12-05 09:30 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-11-27\n\nPRIMARY FINAL SCORE PREDICTION\n\nFC Augsburg 1 \u2013 1 1. FC K\u00f6ln\n(modal exact score, probability 10.9%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.91\nAway: 1.30\nExpected Total: 3.21\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 51.1%\nDraw: 23.8%\nAway Win: 25.1%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 10.9%\n2. 2\u20131: 9.9%\n3. 2\u20130: 7.2%\n4. 1\u20130: 7.2%\n5. 2\u20132: 6.7%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 16.0%\nTotal 2 goals: 21.3%\nTotal 3 goals: 22.5%\nTotal 4 goals: 18.4%\nTotal 5+ goals: 21.7%\n\nBoth Teams Score: 63.8%\nClean sheet FC Augsburg: 26.3% \u00b7 Clean sheet 1. FC K\u00f6ln: 14.0%\n\nMATCH INTELLIGENCE\n\n1. Home advantage (Germany, fitted from results): \u00d71.31 on Augsburg's scoring rate.\n2. Augsburg attack vs FC Koln defence: time-weighted strength gap multiplies Augsburg's scoring rate by \u00d71.14 relative to an average pairing (from 28/28 decay-weighted matches).\n3. Independent results-only Elo: Augsburg 1573 vs FC Koln 1485 (gap +88 before home advantage).\n\nMODEL CONFIDENCE\n\nMost likely result has P = 51.1%. In the out-of-sample backtest, favourites priced 0.50\u20130.60 won 54.6% \u00b1 0.5% (n=9745, mean forecast 54.4%). Backtest RPS for D1: 0.1991; exact-score top-5 hit rate 42.5% (n=1008). Overall champion RPS 0.2093 vs home/away baseline 0.2284 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-11-22, n=41,487). Outcome-certainty tier: MODERATE (entropy 1.032 nats of max 1.099).\nParameter-uncertainty 80% bands: xG FC Augsburg 1.47\u20132.39, xG 1. FC K\u00f6ln 0.98\u20131.65; P(home win) 39.3%\u201363.4%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0007 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nAugsburg: INFERRED, fetched 2026-11-28 00:05 EST\n  Finn Dahmen (G), Fabian Rieder (M), Hennes Behrens (M), Robin Fellhauer (M), Anton Kade (M), Michael Gregoritsch (F), Arijon Ibrahimovi\u0107 (M), Marius Wolf (M), Yannik Keitel (D), Calvin Brackelmann (D), Juma Bah (D)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs +0.063 (log) \u00b7 continuity -1.24 \u00b7 P(backup GK) 0%\nFC Koln: INFERRED, fetched 2026-11-28 00:05 EST\n  Marvin Schw\u00e4be (G), Borna Sosa (M), Jahmai Simpson-Pusey (D), Jo\u00ebl Schmied (D), Sa\u00efd El Mala (F), Mikey Moore (M), Sebastian Sebulonsen (M), Paul Okon-Engstler (M), Tom Krau\u00df (M), Linton Maina (M), Luka Lochoshvili (D)\n\nKEY ABSENCES\n\n- Augsburg: Jeffrey Gouweleeuw \u2014 injury, About 1-2 weeks [FotMob, 2026-11-28 00:05 EST]\n- Augsburg: Han-Noah Massengo \u2014 injury, About 1-2 weeks [FotMob, 2026-11-28 00:05 EST]\n- Augsburg: Chrislain Matsima \u2014 injury, A few weeks [FotMob, 2026-11-28 00:05 EST]\n- Augsburg: Calvin Brackelmann \u2014 injury, Doubtful [FotMob, 2026-11-28 00:05 EST]\n- Augsburg: Steve Mouni\u00e9 \u2014 injury, Early December 2026 [FotMob, 2026-11-28 00:05 EST]\n- Augsburg: Noahkai Banks \u2014 injury, Early December 2026 [FotMob, 2026-11-28 00:05 EST]\n- Augsburg: Faik Sakar \u2014 injury, Early December 2026 [FotMob, 2026-11-28 00:05 EST]\n- FC Koln: Alessio Castro-Montes \u2014 injury, Mid December 2026 [FotMob, 2026-11-28 00:05 EST]\n- FC Koln: Imad Rondi\u0107 \u2014 injury, Late November 2026 [FotMob, 2026-11-28 00:05 EST]\n- FC Koln: Rav van den Berg \u2014 injury, About 1-2 weeks [FotMob, 2026-11-28 00:05 EST]\n- FC Koln: Ellyes Skhiri \u2014 injury, Early January 2027 [FotMob, 2026-11-28 00:05 EST]\n- FC Koln: Thijs Dallinga \u2014 injury, Late June 2027 [FotMob, 2026-11-28 00:05 EST]\n- FC Koln: Timo H\u00fcbers \u2014 injury, Early January 2027 [FotMob, 2026-11-28 00:05 EST]\n\nWEATHER AT VENUE\n\nWWK Arena, Augsburg: 1.2 \u00b0C, wind 0.6 m/s, precipitation 0.0 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-11-28 00:05 EST]\n\nREST & TRAVEL\n\nAugsburg: 13 days' rest, 1 matches in previous 21 days \u00b7 FC Koln: 15 days' rest, 1 in 21 days \u00b7 away travel 409.4 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 51.1% / 23.8% / 25.1%, xG 1.91\u20131.30\n- Understat xG component (validated, in ensemble): home -3.03 pp, draw +0.82 pp, away +2.21 pp; xG -0.041 / +0.082\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.76 pp, draw -0.34 pp, away -0.42 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home -0.07 pp, draw +0.07 pp, away -0.00 pp\n- lineup: NOT APPLIED (failed out-of-sample validation); would have moved home -1.10 pp, draw +0.16 pp, away +0.94 pp\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Augsburg: no lineup published yet \u2014 XI inferred from recent minutes share minus known absences; 200 configurations simulated (start P=0.7, UNVALIDATED prior).\n- FC Koln: no lineup published yet \u2014 XI inferred from recent minutes share minus known absences; 0 configurations simulated (start P=0.7, UNVALIDATED prior).\n\nFINAL VERDICT\n\nAugsburg 1\u20131 FC Koln is the single most probable scoreline at 10.9%: expected goals 1.91\u20131.30 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.039). Exact scores are inherently uncertain; the 1X2 split is 51.1%/23.8%/25.1%.\n",
+ "refresh_id": "902658f82aa64105a4c0d1e8c3b7b71c",
+ "frozen_at": "2026-11-28T05:05:14+00:00",
+ "sha256": "43a2e783b09983602352405532fded64ba94a44f36438797f293ff91034e094a"
+}
