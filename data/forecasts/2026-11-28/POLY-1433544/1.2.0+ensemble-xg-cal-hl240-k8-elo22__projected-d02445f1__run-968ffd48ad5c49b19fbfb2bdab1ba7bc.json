@@ -1,0 +1,787 @@
+{
+ "oracle": "ORACLE FC",
+ "model_version": "1.2.0+ensemble-xg-cal-hl240-k8-elo22",
+ "champion": "ensemble",
+ "data_cutoff": "2026-11-27",
+ "input_fingerprint": "1b07be5dbe1a0f66acfcf8ff798b9c20a5a5853fa2defe66e39642713d7cce81",
+ "identity_policy": "explicit-alias-v2",
+ "generated_at": "2026-11-28T08:09:28+00:00",
+ "fixture": {
+  "event_id": "POLY-1433544",
+  "home_name": "Le Havre AC",
+  "away_name": "RC Strasbourg Alsace",
+  "competition": "Ligue 1",
+  "subcategory": "fl1",
+  "kickoff_utc": "2026-11-28T19:45:00+00:00",
+  "kickoff_local": "2026-11-28 14:45 EST",
+  "home_matched": "Le Havre",
+  "away_matched": "Strasbourg",
+  "match_methods": {
+   "home": {
+    "source": "Le Havre AC",
+    "matched": "Le Havre",
+    "method": "core-tokens",
+    "score": 0.97
+   },
+   "away": {
+    "source": "RC Strasbourg Alsace",
+    "matched": "Strasbourg",
+    "method": "alias",
+    "score": 1.0
+   }
+  },
+  "neutral": false
+ },
+ "status": "ok",
+ "simulation": {
+  "p_home": 0.28032200967363124,
+  "p_draw": 0.2527614143683802,
+  "p_away": 0.4669165759579884,
+  "xg_home": 1.2976038309805398,
+  "xg_away": 1.7158343167225516,
+  "xg_total": 3.0134381477030914,
+  "median_total": 3,
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.11867923691469331
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.11867923691469331
+   },
+   {
+    "home": 1,
+    "away": 2,
+    "p": 0.09702047502596797
+   },
+   {
+    "home": 0,
+    "away": 1,
+    "p": 0.07950354563305288
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.07214764396704793
+   },
+   {
+    "home": 0,
+    "away": 2,
+    "p": 0.07148491820306961
+   }
+  ],
+  "btts": 0.6134355759530998,
+  "totals_over": {
+   "over_0.5": 0.9495699232042739,
+   "over_1.5": 0.8119440057268024,
+   "over_2.5": 0.582508172535166,
+   "over_3.5": 0.3564171973293275,
+   "over_4.5": 0.18352019120179883,
+   "over_5.5": 0.08217424528426912,
+   "over_6.5": 0.03175547612722132
+  },
+  "total_buckets": {
+   "0-1": 0.18805599427319747,
+   "2": 0.22943583319163624,
+   "3": 0.22609097520583873,
+   "4": 0.17289700612752862,
+   "5+": 0.18352019120179883
+  },
+  "clean_sheet_home": 0.17118456173504984,
+  "clean_sheet_away": 0.265809939107576,
+  "home_goal_dist": [
+   0.265809939107576,
+   0.36137818797663807,
+   0.23408127592307196,
+   0.09856265438157943,
+   0.03070759480229689,
+   0.00758952005709451,
+   0.0015527874551704464,
+   0.00031804029657260486
+  ],
+  "away_goal_dist": [
+   0.17118456173504984,
+   0.31330801011693077,
+   0.2717861769554318,
+   0.15273073775603654,
+   0.06322837272648939,
+   0.020647069365286874,
+   0.005549878666342626,
+   0.0015651926784319649
+  ],
+  "intervals": {
+   "home_goals_80": [
+    0,
+    3
+   ],
+   "away_goals_80": [
+    0,
+    3
+   ],
+   "total_goals_80": [
+    1,
+    5
+   ],
+   "goal_diff_80": [
+    -3,
+    2
+   ]
+  },
+  "score_grid": [
+   [
+    0.05043,
+    0.079504,
+    0.071485,
+    0.040336,
+    0.016721,
+    0.005457,
+    0.001465
+   ],
+   [
+    0.058122,
+    0.118679,
+    0.09702,
+    0.054812,
+    0.022749,
+    0.007434,
+    0.001998
+   ],
+   [
+    0.039272,
+    0.072148,
+    0.065681,
+    0.035649,
+    0.014813,
+    0.004846,
+    0.001304
+   ],
+   [
+    0.016587,
+    0.030505,
+    0.026678,
+    0.015741,
+    0.006284,
+    0.002058,
+    0.000554
+   ],
+   [
+    0.005178,
+    0.009533,
+    0.008345,
+    0.00473,
+    0.002052,
+    0.000646,
+    0.000174
+   ],
+   [
+    0.00128,
+    0.002359,
+    0.002067,
+    0.001172,
+    0.000489,
+    0.000167,
+    4.3e-05
+   ],
+   [
+    0.000262,
+    0.000483,
+    0.000423,
+    0.00024,
+    0.0001,
+    3.3e-05,
+    9e-06
+   ]
+  ],
+  "mass_check": 1.0
+ },
+ "monte_carlo": {
+  "n_sims": 200000,
+  "seed": 7,
+  "p_home": 0.27958,
+  "p_draw": 0.253175,
+  "p_away": 0.4672450000000001,
+  "se": [
+   0.001003531323875842,
+   0.0009723101855246606,
+   0.0011156323542614744
+  ],
+  "max_abs_dev_vs_exact": 0.0007420096736312498,
+  "converged": true
+ },
+ "uncertainty": {
+  "xg_home_80": [
+   0.9739066287781376,
+   1.6536012989400375
+  ],
+  "xg_away_80": [
+   1.2999627071424267,
+   2.160396252402222
+  ],
+  "p_home_80": [
+   0.1980388742591288,
+   0.3947076243918929
+  ],
+  "p_draw_80": [
+   0.21002291196636244,
+   0.27271739521641186
+  ],
+  "p_away_80": [
+   0.34560632710318473,
+   0.5835157953894051
+  ],
+  "n_draws": 400,
+  "sd_log_rate": [
+   0.20988803917617893,
+   0.18851223257853988
+  ]
+ },
+ "components": {
+  "dynamic_dc": {
+   "p_home": 0.2735936133602711,
+   "p_draw": 0.24130888725969007,
+   "p_away": 0.48509749938003877,
+   "xg_home": 1.2816231968490766,
+   "xg_away": 1.770709290520818,
+   "weight": 0.0077
+  },
+  "elo": {
+   "p_home": 0.2655072673726377,
+   "p_draw": 0.2436846879680068,
+   "p_away": 0.4908080446593557,
+   "xg_home": 1.15089968843001,
+   "xg_away": 1.6530760642650488,
+   "weight": 0.3721
+  },
+  "standard_dc": {
+   "p_home": 0.2578868064841504,
+   "p_draw": 0.2536724432472376,
+   "p_away": 0.48844075026861206,
+   "xg_home": 1.1608189326775087,
+   "xg_away": 1.677778615071289,
+   "weight": 0.0028
+  },
+  "home_away_rate": {
+   "p_home": 0.4458870067103181,
+   "p_draw": 0.24483702415909522,
+   "p_away": 0.3092759691305866,
+   "xg_home": 1.6003218680480662,
+   "xg_away": 1.2935310559387128,
+   "weight": 0.001
+  },
+  "xg_dc": {
+   "p_home": 0.3027635893124425,
+   "p_draw": 0.24440874816107788,
+   "p_away": 0.4528276625264797,
+   "xg_home": 1.3574999827164478,
+   "xg_away": 1.7033489317732546,
+   "weight": 0.6164
+  }
+ },
+ "key_factors": [
+  {
+   "text": "Strasbourg attack vs Le Havre defence: rate multiplier \u00d71.47 for the away side.",
+   "effect": 0.3828
+  },
+  {
+   "text": "Independent results-only Elo: Le Havre 1445 vs Strasbourg 1617 (gap -172 before home advantage).",
+   "effect": 0.2579
+  },
+  {
+   "text": "Home advantage (France, fitted from results): \u00d71.18 on Le Havre's scoring rate.",
+   "effect": 0.1641
+  }
+ ],
+ "base_simulation": {
+  "p_home": 0.28032200967363124,
+  "p_draw": 0.2527614143683802,
+  "p_away": 0.4669165759579884,
+  "xg_home": 1.2976038309805398,
+  "xg_away": 1.7158343167225516
+ },
+ "context": {
+  "fetched_at": "2026-11-28T08:09:28+00:00",
+  "families_applied": [],
+  "flags": [],
+  "sources": [
+   {
+    "name": "FotMob match page",
+    "url": "https://www.fotmob.com/match/5803003",
+    "fetched_at": "2026-11-28T08:09:28+00:00"
+   }
+  ],
+  "lineups": {
+   "home": {
+    "status": "projected",
+    "source": "FotMob projected XI (enetpulse)",
+    "formation": "3-4-2-1",
+    "starters": [
+     {
+      "name": "Arnaud Bodart",
+      "pos": "G",
+      "shirt": "16"
+     },
+     {
+      "name": "Vincent Sasso",
+      "pos": "D",
+      "shirt": "23"
+     },
+     {
+      "name": "Ayumu Seko",
+      "pos": "D",
+      "shirt": "15"
+     },
+     {
+      "name": "Ahmed Touba",
+      "pos": "D",
+      "shirt": "5"
+     },
+     {
+      "name": "Djibril Ouziad",
+      "pos": "M",
+      "shirt": "20"
+     },
+     {
+      "name": "Simon Ebonog",
+      "pos": "M",
+      "shirt": "26"
+     },
+     {
+      "name": "Amir Richardson",
+      "pos": "M",
+      "shirt": "7"
+     },
+     {
+      "name": "Junior Mwanga",
+      "pos": "M",
+      "shirt": "6"
+     },
+     {
+      "name": "Rayan Fofana",
+      "pos": "F",
+      "shirt": "38"
+     },
+     {
+      "name": "Kaito Mizuta",
+      "pos": "M",
+      "shirt": "17"
+     },
+     {
+      "name": "Josh Maja",
+      "pos": "F",
+      "shirt": "9"
+     }
+    ],
+    "fetched_at": "2026-11-28T08:09:28+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [],
+    "mean_xi_attack_index": 0.015,
+    "mean_continuity": 0.222,
+    "p_backup_gk": 0.0
+   },
+   "away": {
+    "status": "projected",
+    "source": "FotMob projected XI (enetpulse)",
+    "formation": "4-2-3-1",
+    "starters": [
+     {
+      "name": "Filip J\u00f6rgensen",
+      "pos": "G",
+      "shirt": "1"
+     },
+     {
+      "name": "Genesis Antwi",
+      "pos": "D",
+      "shirt": "16"
+     },
+     {
+      "name": "Isma\u00ebl Doukour\u00e9",
+      "pos": "D",
+      "shirt": "6"
+     },
+     {
+      "name": "Karim Coulibaly",
+      "pos": "D",
+      "shirt": "31"
+     },
+     {
+      "name": "Lucas H\u00f8gsberg",
+      "pos": "D",
+      "shirt": "24"
+     },
+     {
+      "name": "D\u00e1rio Essugo",
+      "pos": "M",
+      "shirt": "14"
+     },
+     {
+      "name": "Samir El Mourabet",
+      "pos": "M",
+      "shirt": "29"
+     },
+     {
+      "name": "Gessime Yassine",
+      "pos": "F",
+      "shirt": "80"
+     },
+     {
+      "name": "Sebastian Nanasi",
+      "pos": "M",
+      "shirt": "11"
+     },
+     {
+      "name": "Martial Godo",
+      "pos": "F",
+      "shirt": "20"
+     },
+     {
+      "name": "Jacobo Ortega",
+      "pos": "F",
+      "shirt": "30"
+     }
+    ],
+    "fetched_at": "2026-11-28T08:09:28+00:00",
+    "n_configurations": 200,
+    "unmatched_players": [],
+    "mean_xi_attack_index": 0.03,
+    "mean_continuity": 0.289,
+    "p_backup_gk": 0.165
+   }
+  },
+  "absences": {
+   "home": [
+    {
+     "player": "Lionel Mpasi-Nzau",
+     "type": "injury",
+     "expected_return": "Early December 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5803003",
+     "fetched_at": "2026-11-28T08:09:28+00:00"
+    },
+    {
+     "player": "Enzo Koffi",
+     "type": "suspension",
+     "expected_return": "Late November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5803003",
+     "fetched_at": "2026-11-28T08:09:28+00:00"
+    },
+    {
+     "player": "Stephan Zagadou",
+     "type": "injury",
+     "expected_return": "Early January 2027",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5803003",
+     "fetched_at": "2026-11-28T08:09:28+00:00"
+    },
+    {
+     "player": "Felix Mambimbi",
+     "type": "injury",
+     "expected_return": "Late November 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5803003",
+     "fetched_at": "2026-11-28T08:09:28+00:00"
+    },
+    {
+     "player": "Timoth\u00e9e Pemb\u00e9l\u00e9",
+     "type": "injury",
+     "expected_return": "Early December 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5803003",
+     "fetched_at": "2026-11-28T08:09:28+00:00"
+    }
+   ],
+   "away": [
+    {
+     "player": "Oso",
+     "type": "injury",
+     "expected_return": "About a week",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5803003",
+     "fetched_at": "2026-11-28T08:09:28+00:00"
+    },
+    {
+     "player": "Fabio Bald\u00e9",
+     "type": "injury",
+     "expected_return": "About 1-2 weeks",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5803003",
+     "fetched_at": "2026-11-28T08:09:28+00:00"
+    },
+    {
+     "player": "Joaqu\u00edn Panichelli",
+     "type": "injury",
+     "expected_return": "Early December 2026",
+     "source": "FotMob",
+     "source_url": "https://www.fotmob.com/match/5803003",
+     "fetched_at": "2026-11-28T08:09:28+00:00"
+    }
+   ]
+  },
+  "rest": {
+   "home": {
+    "rest_days": 8,
+    "n21": 2,
+    "last_match": "2026-11-20"
+   },
+   "away": {
+    "rest_days": 7,
+    "n21": 1,
+    "last_match": "2026-11-21"
+   },
+   "definition": "days since previous league/UCL match in ORACLE data"
+  },
+  "travel": {
+   "away_travel_km": 562.5
+  },
+  "venue": {
+   "name": "Stade CMA CGM Oc\u00e9ane",
+   "city": "Le Havre",
+   "lat": 49.498869432,
+   "lon": 0.169708751
+  },
+  "weather": {
+   "precip_mm_2h": 0.7,
+   "wind_ms": 3.5250000000000004,
+   "temp_c": 7.3,
+   "source": "Open-Meteo forecast (hourly, UTC)",
+   "source_url": "https://api.open-meteo.com/v1/forecast?latitude=49.499&longitude=0.17",
+   "fetched_at": "2026-11-28T08:09:28+00:00",
+   "lat": 49.498869432,
+   "lon": 0.169708751
+  },
+  "factor_shifts": [
+   {
+    "factor": "Understat xG component (validated, in ensemble)",
+    "applied": true,
+    "d_p_home_pp": 2.34,
+    "d_p_draw_pp": 0.1,
+    "d_p_away_pp": -2.44,
+    "d_xg_home": 0.13,
+    "d_xg_away": 0.032
+   },
+   {
+    "factor": "rest",
+    "applied": false,
+    "home_rate_mult": 1.0,
+    "away_rate_mult": 1.0,
+    "d_p_home_pp": 0.0,
+    "d_p_draw_pp": 0.0,
+    "d_p_away_pp": 0.0,
+    "d_xg_home": 0.0,
+    "d_xg_away": 0.0,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "travel",
+    "applied": false,
+    "home_rate_mult": 1.0271,
+    "away_rate_mult": 1.0087,
+    "d_p_home_pp": 0.57,
+    "d_p_draw_pp": -0.17,
+    "d_p_away_pp": -0.4,
+    "d_xg_home": 0.034,
+    "d_xg_away": 0.015,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "weather",
+    "applied": false,
+    "home_rate_mult": 1.0156,
+    "away_rate_mult": 1.0156,
+    "d_p_home_pp": 0.04,
+    "d_p_draw_pp": -0.23,
+    "d_p_away_pp": 0.19,
+    "d_xg_home": 0.02,
+    "d_xg_away": 0.026,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   },
+   {
+    "factor": "lineup",
+    "applied": false,
+    "home_rate_mult": 1.0108,
+    "away_rate_mult": 1.0118,
+    "d_p_home_pp": 0.02,
+    "d_p_draw_pp": -0.19,
+    "d_p_away_pp": 0.17,
+    "d_xg_home": 0.014,
+    "d_xg_away": 0.02,
+    "reason": "failed out-of-sample validation: NOT applied (would-be shift shown for transparency)"
+   }
+  ],
+  "total_shift": {
+   "factor": "all context",
+   "applied": true,
+   "home_rate_mult": 1.0,
+   "away_rate_mult": 1.0,
+   "d_p_home_pp": 0.0,
+   "d_p_draw_pp": 0.0,
+   "d_p_away_pp": 0.0,
+   "d_xg_home": 0.0,
+   "d_xg_away": 0.0
+  },
+  "features": {
+   "rest_h": 8.0,
+   "rest_a": 7.0,
+   "n21_h": 2.0,
+   "n21_a": 1.0,
+   "travel_km": 562.5435937208715,
+   "neutral": 0.0,
+   "precip_mm_2h": 0.7,
+   "wind_ms": 3.5250000000000004,
+   "temp_c": 7.3
+  }
+ },
+ "lineup_simulation": {
+  "applied": true,
+  "validated": false,
+  "scale": 0.5,
+  "basis": {
+   "home": "projected",
+   "away": "projected"
+  },
+  "home_rate_mult": 1.0054,
+  "away_rate_mult": 1.0059,
+  "note": "Starting-XI strength, continuity and backup-keeper adjustment at half the fitted size. It did not pass the out-of-sample test, so bets are not priced from it.",
+  "p_home": 0.28038731613173434,
+  "p_draw": 0.25186253502509165,
+  "p_away": 0.467750148843174,
+  "xg_home": 1.3045865253461069,
+  "xg_away": 1.7256270052538318,
+  "xg_total": 3.030213530599939,
+  "btts": 0.6161927562222963,
+  "totals_over": {
+   "over_0.5": 0.9504254131967418,
+   "over_1.5": 0.8143729196150257,
+   "over_2.5": 0.5862783422887289,
+   "over_3.5": 0.36022743612805924,
+   "over_4.5": 0.18637078489927072,
+   "over_5.5": 0.08387351571614382,
+   "over_6.5": 0.032585948469194326
+  },
+  "modal_score": {
+   "home": 1,
+   "away": 1,
+   "p": 0.11796379607980724
+  },
+  "top_scores": [
+   {
+    "home": 1,
+    "away": 1,
+    "p": 0.11796379607980724
+   },
+   {
+    "home": 1,
+    "away": 2,
+    "p": 0.09700147948488419
+   },
+   {
+    "home": 0,
+    "away": 1,
+    "p": 0.07861127443654183
+   },
+   {
+    "home": 2,
+    "away": 1,
+    "p": 0.07210629464636252
+   },
+   {
+    "home": 0,
+    "away": 2,
+    "p": 0.07110314704919508
+   }
+  ],
+  "score_grid": [
+   [
+    0.049575,
+    0.078611,
+    0.071103,
+    0.040364,
+    0.016835,
+    0.005529,
+    0.001494
+   ],
+   [
+    0.057441,
+    0.117964,
+    0.097001,
+    0.055129,
+    0.02302,
+    0.007569,
+    0.002047
+   ],
+   [
+    0.039028,
+    0.072106,
+    0.066024,
+    0.036046,
+    0.015068,
+    0.00496,
+    0.001343
+   ],
+   [
+    0.016579,
+    0.030662,
+    0.026968,
+    0.016005,
+    0.006427,
+    0.002117,
+    0.000574
+   ],
+   [
+    0.005207,
+    0.009639,
+    0.008485,
+    0.004837,
+    0.002111,
+    0.000668,
+    0.000181
+   ],
+   [
+    0.001295,
+    0.0024,
+    0.002114,
+    0.001206,
+    0.000506,
+    0.000174,
+    4.5e-05
+   ],
+   [
+    0.000267,
+    0.000494,
+    0.000436,
+    0.000249,
+    0.000104,
+    3.4e-05,
+    1e-05
+   ]
+  ]
+ },
+ "confidence": {
+  "tier": "LOW",
+  "p_max": 0.4669165759579884,
+  "entropy_nats": 1.0597490631369662,
+  "text": "Most likely result has P = 46.7%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.5% \u00b1 0.4% (n=17312, mean forecast 44.7%). Backtest RPS for F1: 0.2074; exact-score top-5 hit rate 45.4% (n=1017). Overall champion RPS 0.2093 vs home/away baseline 0.2284 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-11-22, n=41,487). Outcome-certainty tier: LOW (entropy 1.060 nats of max 1.099)."
+ },
+ "data_quality": [
+  "Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.",
+  "Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).",
+  "Le Havre: lineup is PROJECTED (FotMob projected XI (enetpulse)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).",
+  "Strasbourg: lineup is PROJECTED (FotMob projected XI (enetpulse)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior)."
+ ],
+ "verdict": "Le Havre 1\u20131 Strasbourg is the single most probable scoreline at 11.9%: expected goals 1.30\u20131.72 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.039). Exact scores are inherently uncertain; the 1X2 split is 28.0%/25.3%/46.7%.",
+ "resolved": {
+  "home_key": "France:Le Havre",
+  "away_key": "France:Strasbourg",
+  "div": "F1",
+  "home_div": "F1",
+  "away_div": "F1",
+  "country": "France"
+ },
+ "report_text": "ORACLE FC \u2014 MATCH FORECAST\n\nFixture: RC Strasbourg Alsace at Le Havre AC\nCompetition: Ligue 1\nDate: 2026-11-28 14:45 EST\nModel Version: 1.2.0+ensemble-xg-cal-hl240-k8-elo22\nData Cutoff: 2026-11-27\n\nPRIMARY FINAL SCORE PREDICTION\n\nLe Havre AC 1 \u2013 1 RC Strasbourg Alsace\n(modal exact score, probability 11.9%; not rounded expected goals)\n\nEXPECTED GOALS\n\nHome: 1.30\nAway: 1.72\nExpected Total: 3.01\nMedian Total: 3\n\nRESULT PROBABILITIES\n\nHome Win: 28.0%\nDraw: 25.3%\nAway Win: 46.7%\n\nFIVE MOST LIKELY EXACT SCORES\n\n1. 1\u20131: 11.9%\n2. 1\u20132: 9.7%\n3. 0\u20131: 8.0%\n4. 2\u20131: 7.2%\n5. 0\u20132: 7.1%\n\nGOALS PROBABILITIES\n\nTotal 0\u20131 goals: 18.8%\nTotal 2 goals: 22.9%\nTotal 3 goals: 22.6%\nTotal 4 goals: 17.3%\nTotal 5+ goals: 18.4%\n\nBoth Teams Score: 61.3%\nClean sheet Le Havre AC: 17.1% \u00b7 Clean sheet RC Strasbourg Alsace: 26.6%\n\nMATCH INTELLIGENCE\n\n1. Strasbourg attack vs Le Havre defence: rate multiplier \u00d71.47 for the away side.\n2. Independent results-only Elo: Le Havre 1445 vs Strasbourg 1617 (gap -172 before home advantage).\n3. Home advantage (France, fitted from results): \u00d71.18 on Le Havre's scoring rate.\n\nMODEL CONFIDENCE\n\nMost likely result has P = 46.7%. In the out-of-sample backtest, favourites priced 0.40\u20130.50 won 44.5% \u00b1 0.4% (n=17312, mean forecast 44.7%). Backtest RPS for F1: 0.2074; exact-score top-5 hit rate 45.4% (n=1017). Overall champion RPS 0.2093 vs home/away baseline 0.2284 (1.2.0+ensemble-xg-cal-hl240-k8-elo22, OOS 2023-07-01\u21922026-11-22, n=41,487). Outcome-certainty tier: LOW (entropy 1.060 nats of max 1.099).\nParameter-uncertainty 80% bands: xG Le Havre AC 0.97\u20131.65, xG RC Strasbourg Alsace 1.30\u20132.16; P(home win) 19.8%\u201339.5%.\nMonte Carlo check: 200,000 sims, max |MC \u2212 exact| = 0.0007 (sampling error only; it does not measure model error).\n\nLINEUPS\n\nLe Havre: PROJECTED \u2014 FotMob projected XI (enetpulse), fetched 2026-11-28 03:09 EST (3-4-2-1)\n  Arnaud Bodart (G), Vincent Sasso (D), Ayumu Seko (D), Ahmed Touba (D), Djibril Ouziad (M), Simon Ebonog (M), Amir Richardson (M), Junior Mwanga (M), Rayan Fofana (F), Kaito Mizuta (M), Josh Maja (F)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs +0.015 (log) \u00b7 continuity +0.22 \u00b7 P(backup GK) 0%\nStrasbourg: PROJECTED \u2014 FotMob projected XI (enetpulse), fetched 2026-11-28 03:09 EST (4-2-3-1)\n  Filip J\u00f6rgensen (G), Genesis Antwi (D), Isma\u00ebl Doukour\u00e9 (D), Karim Coulibaly (D), Lucas H\u00f8gsberg (D), D\u00e1rio Essugo (M), Samir El Mourabet (M), Gessime Yassine (F), Sebastian Nanasi (M), Martial Godo (F), Jacobo Ortega (F)\n  200 XI configuration(s) simulated \u00b7 XI attack index vs recent XIs +0.030 (log) \u00b7 continuity +0.29 \u00b7 P(backup GK) 16%\n\nKEY ABSENCES\n\n- Le Havre: Lionel Mpasi-Nzau \u2014 injury, Early December 2026 [FotMob, 2026-11-28 03:09 EST]\n- Le Havre: Enzo Koffi \u2014 suspension, Late November 2026 [FotMob, 2026-11-28 03:09 EST]\n- Le Havre: Stephan Zagadou \u2014 injury, Early January 2027 [FotMob, 2026-11-28 03:09 EST]\n- Le Havre: Felix Mambimbi \u2014 injury, Late November 2026 [FotMob, 2026-11-28 03:09 EST]\n- Le Havre: Timoth\u00e9e Pemb\u00e9l\u00e9 \u2014 injury, Early December 2026 [FotMob, 2026-11-28 03:09 EST]\n- Strasbourg: Oso \u2014 injury, About a week [FotMob, 2026-11-28 03:09 EST]\n- Strasbourg: Fabio Bald\u00e9 \u2014 injury, About 1-2 weeks [FotMob, 2026-11-28 03:09 EST]\n- Strasbourg: Joaqu\u00edn Panichelli \u2014 injury, Early December 2026 [FotMob, 2026-11-28 03:09 EST]\n\nWEATHER AT VENUE\n\nStade CMA CGM Oc\u00e9ane, Le Havre: 7.3 \u00b0C, wind 3.5 m/s, precipitation 0.7 mm over the two kickoff hours [Open-Meteo forecast (hourly, UTC), fetched 2026-11-28 03:09 EST]\n\nREST & TRAVEL\n\nLe Havre: 8 days' rest, 2 matches in previous 21 days \u00b7 Strasbourg: 7 days' rest, 1 in 21 days \u00b7 away travel 562.5 km\n\nHOW EACH FACTOR MOVED THE FORECAST (percentage points vs the team-strength base)\n\nBase (validated ensemble incl. xG, before context): 28.0% / 25.3% / 46.7%, xG 1.30\u20131.72\n- Understat xG component (validated, in ensemble): home +2.34 pp, draw +0.10 pp, away -2.44 pp; xG +0.130 / +0.032\n- rest: NOT APPLIED (failed out-of-sample validation); would have moved home +0.00 pp, draw +0.00 pp, away +0.00 pp\n- travel: NOT APPLIED (failed out-of-sample validation); would have moved home +0.57 pp, draw -0.17 pp, away -0.40 pp\n- weather: NOT APPLIED (failed out-of-sample validation); would have moved home +0.04 pp, draw -0.23 pp, away +0.19 pp\n- lineup: NOT APPLIED (failed out-of-sample validation); would have moved home +0.02 pp, draw -0.19 pp, away +0.17 pp\n- No lineup/injury/rest/travel/weather family passed validation, so none moves the probabilities (shown above for transparency only). Final probabilities = validated ensemble incl. xG.\n\nDATA QUALITY\n\n- Context families tested and NOT applied (failed validation): rest, travel, weather, lineup.\n- Understat xG component (Dixon\u2013Coles on 0.5\u00b7goals + 0.5\u00b7xG) is part of the ensemble (validated).\n- Le Havre: lineup is PROJECTED (FotMob projected XI (enetpulse)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n- Strasbourg: lineup is PROJECTED (FotMob projected XI (enetpulse)), not confirmed \u2014 200 lineup configurations simulated (each projected starter starts with P=0.85, UNVALIDATED prior).\n\nFINAL VERDICT\n\nLe Havre 1\u20131 Strasbourg is the single most probable scoreline at 11.9%: expected goals 1.30\u20131.72 under the ensemble model put the joint mode there (DC low-score dependence rho=-0.039). Exact scores are inherently uncertain; the 1X2 split is 28.0%/25.3%/46.7%.\n",
+ "refresh_id": "968ffd48ad5c49b19fbfb2bdab1ba7bc",
+ "frozen_at": "2026-11-28T08:09:28+00:00",
+ "sha256": "50f6ae451c24f548c0bee23d42e23df084352d1fc48498f273dc65440baa7415"
+}
